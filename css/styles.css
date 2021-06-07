@@ -23,7 +23,7 @@ body {
 }
 
 .site-wrapper {
-  max-width: 1440px;
+  max-width: 100%;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -1071,9 +1071,8 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 .category-btn__wrapper {
@@ -1268,7 +1267,8 @@ svg {
 }
 
 .site-header {
-  max-width: 1440px;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
 }
