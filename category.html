@@ -22,18 +22,27 @@
       <div class="top-bar topbar">
         <div class="container-fluid">
           <div class="topbar-wrapper">
-            <div class="topbar-left">
+            <div class="topbar-left search-hide">
               <div class="btn btn-white btn-tobar__phone btn-has-dropdown">
                 <div class="topbar__phone"><a href="#">(067) 888-88-88</a>
                   <div class="btn-dropdown topbar__phone-dropdown"><a href="#">(067) 888-88-88</a><a href="#">(067) 888-88-88</a></div>
                 </div><i class="grf-up"></i>
               </div><a class="btn btn-white btn-icon" href="#"><i class="grf-google"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a>
             </div>
-            <div class="topbar-logo"><a href="index.html"><img src="./img/logo.png" alt=""></a></div>
-            <div class="topbar-right"><a class="btn btn-white btn-icon" href="#"><i class="grf-search"></i></a>
+            <div class="topbar-logo search-hide"><a href="index.html"><img src="./img/logo.png" alt=""></a></div>
+            <div class="topbar-right">
+              <!-- Search form-->
+              <div class="search-form">
+                <form id="searchForm">
+                  <input id="searchFormAutoComplete" type="text" autocomplete="off">
+                </form>
+              </div>
+              <!-- Search form end-->
+              <!-- Search button--><a class="btn btn-white btn-icon data-toggle" href="#" data-target=".search-form, .topbar-left, .topbar-logo, .site-backdrop" data-classes="searchbarActive" data-backdrop="true" id="searchBtn"><i class="grf-search"></i></a>
+              <!-- Search button end-->
               <div class="btn btn-white btn-icon btn-has-dropdown btn-login"><i class="grf-login"></i>
-                <div class="btn-dropdown"><a href="#">Войти</a><a href="#">Зарегистрироваться</a></div>
-              </div><a class="btn btn-white btn-topbar__cart btn-has-dropdown" href="#">
+                <div class="btn-dropdown"><a data-bs-toggle="modal" data-bs-target="#loginModal">Войти</a><a data-bs-toggle="modal" data-bs-target="#registerModal">Зарегистрироваться</a><a href="account-logged.html">Профиль</a></div>
+              </div><a class="btn btn-white btn-topbar__cart btn-has-dropdown" href="cart.html">
                 <div class="topbar__cart"><span>3</span><span>Корзина</span></div></a>
             </div>
           </div>
@@ -46,6 +55,7 @@
     <main class="site-wrapper">
       <section class="category">
         <header class="category-header bg-black">
+          <!-- Category nav-->
           <nav class="category-nav">
             <div class="nav category-tab__nav" id="sushiTab" role="tablist">
               <div class="category-btn__wrapper active" style="background-image: url('./img/tabs/01.png')" data-bs-toggle="tab" data-bs-target="#sushi-sets-nav" role="tab" aria-controls="nav-sushi-sets" aria-selected="true">
@@ -65,9 +75,13 @@
               </div>
             </div>
           </nav>
+          <!-- Category nav end-->
         </header>
+        <!-- Category inner grid-->
         <div class="category-body">
+          <!-- Category tabs-->
           <div class="tab-content" id="sushiTabContent">
+            <!-- Category tab-->
             <div class="tab-pane fade show active" id="sushi-sets-nav" role="tabpanel" aria-labelledby="sushiSets">
               <div class="container-fluid">
                 <div class="row">
@@ -88,14 +102,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -111,6 +125,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -133,14 +148,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -156,6 +171,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -178,14 +194,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -201,6 +217,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -223,14 +240,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -246,6 +263,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -268,14 +286,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -291,6 +309,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -313,14 +332,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -336,6 +355,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -358,14 +378,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -381,6 +401,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -403,14 +424,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -426,6 +447,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -448,14 +470,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -471,6 +493,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -493,14 +516,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -516,6 +539,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -538,14 +562,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -561,6 +585,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -583,14 +608,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -606,6 +631,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -628,14 +654,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -651,6 +677,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -673,14 +700,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -696,6 +723,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -718,14 +746,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -741,6 +769,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -763,14 +792,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -786,6 +815,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -808,14 +838,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -831,6 +861,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -853,14 +884,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -876,6 +907,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -884,6 +916,8 @@
                 </div>
               </div>
             </div>
+            <!-- Category tab end-->
+            <!-- Category tab-->
             <div class="tab-pane fade" id="sushi-hot-nav" role="tabpanel" aria-labelledby="sushiHot">
               <div class="container-fluid">
                 <div class="row">
@@ -904,14 +938,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -927,6 +961,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -949,14 +984,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -972,6 +1007,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -994,14 +1030,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1017,6 +1053,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1039,14 +1076,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1062,6 +1099,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1084,14 +1122,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1107,6 +1145,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1129,14 +1168,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1152,6 +1191,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1174,14 +1214,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1197,6 +1237,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1219,14 +1260,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1242,6 +1283,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1264,14 +1306,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1287,6 +1329,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1309,14 +1352,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1332,6 +1375,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1354,14 +1398,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1377,6 +1421,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1399,14 +1444,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1422,6 +1467,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1444,14 +1490,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1467,6 +1513,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1489,14 +1536,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1512,6 +1559,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1534,14 +1582,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1557,6 +1605,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1579,14 +1628,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1602,6 +1651,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1624,14 +1674,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1647,6 +1697,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1669,14 +1720,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1692,6 +1743,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1700,6 +1752,8 @@
                 </div>
               </div>
             </div>
+            <!-- Category tab end-->
+            <!-- Category tab-->
             <div class="tab-pane fade" id="sushi-maki-nav" role="tabpanel" aria-labelledby="sushiMaki">
               <div class="container-fluid">
                 <div class="row">
@@ -1720,14 +1774,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1743,6 +1797,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1765,14 +1820,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1788,6 +1843,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1810,14 +1866,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1833,6 +1889,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1855,14 +1912,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1878,6 +1935,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1900,14 +1958,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1923,6 +1981,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1945,14 +2004,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -1968,6 +2027,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -1990,14 +2050,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2013,6 +2073,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2035,14 +2096,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2058,6 +2119,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2080,14 +2142,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2103,6 +2165,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2125,14 +2188,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2148,6 +2211,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2170,14 +2234,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2193,6 +2257,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2215,14 +2280,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2238,6 +2303,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2260,14 +2326,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2283,6 +2349,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2305,14 +2372,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2328,6 +2395,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2350,14 +2418,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2373,6 +2441,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2395,14 +2464,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2418,6 +2487,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2440,14 +2510,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2463,6 +2533,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2485,14 +2556,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2508,6 +2579,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2516,6 +2588,7 @@
                 </div>
               </div>
             </div>
+            <!-- Category tab end-->
             <div class="tab-pane fade" id="sushi-gukan-nav" role="tabpanel" aria-labelledby="sushiGukan">
               <div class="container-fluid">
                 <div class="row">
@@ -2536,14 +2609,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2559,6 +2632,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2581,14 +2655,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2604,6 +2678,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2626,14 +2701,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2649,6 +2724,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2671,14 +2747,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2694,6 +2770,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2716,14 +2793,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2739,6 +2816,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2761,14 +2839,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2784,6 +2862,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2806,14 +2885,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2829,6 +2908,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2851,14 +2931,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2874,6 +2954,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2896,14 +2977,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2919,6 +3000,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2941,14 +3023,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -2964,6 +3046,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -2986,14 +3069,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3009,6 +3092,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3031,14 +3115,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3054,6 +3138,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3076,14 +3161,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3099,6 +3184,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3121,14 +3207,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3144,6 +3230,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3166,14 +3253,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3189,6 +3276,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3211,14 +3299,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3234,6 +3322,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3256,14 +3345,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3279,6 +3368,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3301,14 +3391,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3324,6 +3414,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3332,6 +3423,7 @@
                 </div>
               </div>
             </div>
+            <!-- Category tab-->
             <div class="tab-pane fade" id="sushi-nigiri-nav" role="tabpanel" aria-labelledby="sushiNigiri">
               <div class="container-fluid">
                 <div class="row">
@@ -3352,14 +3444,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3375,6 +3467,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3397,14 +3490,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3420,6 +3513,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3442,14 +3536,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3465,6 +3559,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3487,14 +3582,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3510,6 +3605,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3532,14 +3628,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3555,6 +3651,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3577,14 +3674,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3600,6 +3697,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3622,14 +3720,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3645,6 +3743,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3667,14 +3766,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3690,6 +3789,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3712,14 +3812,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3735,6 +3835,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3757,14 +3858,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3780,6 +3881,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3802,14 +3904,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3825,6 +3927,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3847,14 +3950,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3870,6 +3973,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3892,14 +3996,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3915,6 +4019,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3937,14 +4042,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -3960,6 +4065,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -3982,14 +4088,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -4005,6 +4111,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -4027,14 +4134,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -4050,6 +4157,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -4072,14 +4180,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -4095,6 +4203,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -4117,14 +4226,14 @@
                             <!-- Product card full description end-->
                             <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                               <!-- Product card price-->
-                              <div class="product__card-hidden-price">180<span>грн.</span></div>
+                              <div class="product__card-hidden-price">108<span>грн.</span></div>
                               <!-- Product card price end-->
                               <!-- Product card weight-->
                               <div class="product__card-hidden-weight">220<span>г</span></div>
                               <!-- Product card weight end-->
                             </div>
                             <div class="product__card-order__btn">
-                              <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                              <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                             </div>
                           </div>
                         </div>
@@ -4140,6 +4249,7 @@
                         <!-- Product card weight-->
                         <div class="product__card-weight text-strong">210<span>г.</span></div>
                         <!-- Product card weight end-->
+                        <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                       </div>
                     </div>
                     <!-- Product card end-->
@@ -4148,8 +4258,11 @@
                 </div>
               </div>
             </div>
+            <!-- Category tab end-->
           </div>
+          <!-- Category tabs end-->
         </div>
+        <!-- Category inner grid end-->
       </section>
       <section class="stocks-section">
         <div class="slick-container slider">
@@ -4174,14 +4287,14 @@
                       <!-- Product card full description end-->
                       <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                         <!-- Product card price-->
-                        <div class="product__card-hidden-price">180<span>грн.</span></div>
+                        <div class="product__card-hidden-price">108<span>грн.</span></div>
                         <!-- Product card price end-->
                         <!-- Product card weight-->
                         <div class="product__card-hidden-weight">220<span>г</span></div>
                         <!-- Product card weight end-->
                       </div>
                       <div class="product__card-order__btn">
-                        <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                        <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -4197,6 +4310,7 @@
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                 </div>
               </div>
             </div>
@@ -4215,14 +4329,14 @@
                       <!-- Product card full description end-->
                       <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                         <!-- Product card price-->
-                        <div class="product__card-hidden-price">180<span>грн.</span></div>
+                        <div class="product__card-hidden-price">108<span>грн.</span></div>
                         <!-- Product card price end-->
                         <!-- Product card weight-->
                         <div class="product__card-hidden-weight">220<span>г</span></div>
                         <!-- Product card weight end-->
                       </div>
                       <div class="product__card-order__btn">
-                        <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                        <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -4238,6 +4352,7 @@
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                 </div>
               </div>
             </div>
@@ -4256,14 +4371,14 @@
                       <!-- Product card full description end-->
                       <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                         <!-- Product card price-->
-                        <div class="product__card-hidden-price">180<span>грн.</span></div>
+                        <div class="product__card-hidden-price">108<span>грн.</span></div>
                         <!-- Product card price end-->
                         <!-- Product card weight-->
                         <div class="product__card-hidden-weight">220<span>г</span></div>
                         <!-- Product card weight end-->
                       </div>
                       <div class="product__card-order__btn">
-                        <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                        <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -4279,6 +4394,7 @@
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                 </div>
               </div>
             </div>
@@ -4297,14 +4413,14 @@
                       <!-- Product card full description end-->
                       <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                         <!-- Product card price-->
-                        <div class="product__card-hidden-price">180<span>грн.</span></div>
+                        <div class="product__card-hidden-price">108<span>грн.</span></div>
                         <!-- Product card price end-->
                         <!-- Product card weight-->
                         <div class="product__card-hidden-weight">220<span>г</span></div>
                         <!-- Product card weight end-->
                       </div>
                       <div class="product__card-order__btn">
-                        <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                        <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -4320,6 +4436,7 @@
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                 </div>
               </div>
             </div>
@@ -4338,14 +4455,14 @@
                       <!-- Product card full description end-->
                       <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                         <!-- Product card price-->
-                        <div class="product__card-hidden-price">180<span>грн.</span></div>
+                        <div class="product__card-hidden-price">108<span>грн.</span></div>
                         <!-- Product card price end-->
                         <!-- Product card weight-->
                         <div class="product__card-hidden-weight">220<span>г</span></div>
                         <!-- Product card weight end-->
                       </div>
                       <div class="product__card-order__btn">
-                        <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                        <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -4361,6 +4478,7 @@
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                 </div>
               </div>
             </div>
@@ -4379,14 +4497,14 @@
                       <!-- Product card full description end-->
                       <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                         <!-- Product card price-->
-                        <div class="product__card-hidden-price">180<span>грн.</span></div>
+                        <div class="product__card-hidden-price">108<span>грн.</span></div>
                         <!-- Product card price end-->
                         <!-- Product card weight-->
                         <div class="product__card-hidden-weight">220<span>г</span></div>
                         <!-- Product card weight end-->
                       </div>
                       <div class="product__card-order__btn">
-                        <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                        <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -4402,6 +4520,7 @@
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                 </div>
               </div>
             </div>
@@ -4420,14 +4539,14 @@
                       <!-- Product card full description end-->
                       <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
                         <!-- Product card price-->
-                        <div class="product__card-hidden-price">180<span>грн.</span></div>
+                        <div class="product__card-hidden-price">108<span>грн.</span></div>
                         <!-- Product card price end-->
                         <!-- Product card weight-->
                         <div class="product__card-hidden-weight">220<span>г</span></div>
                         <!-- Product card weight end-->
                       </div>
                       <div class="product__card-order__btn">
-                        <button class="btn-border btn-green btn d-block w-100">Заказать</button>
+                        <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                       </div>
                     </div>
                   </div>
@@ -4443,15 +4562,14 @@
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </main>
-    <!-- Footer-->
-    <div class="site-wrapper">
+      <!-- Footer-->
       <footer class="site-footer bg-black">
         <div class="container">
           <div class="row">
@@ -4481,9 +4599,9 @@
           </div>
         </div>
       </footer>
-    </div>
+    </main>
     <!-- Product card modal-->
-    <div class="product-modal modal fade" id="productModal" tabindex="-1" aria-labelledby="#productModalLabel" aria-hidden="true">
+    <div class="product-modal greenRedFood-modal modal fade" id="productModal" tabindex="-1" aria-labelledby="#productModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-body p-0">
@@ -4550,11 +4668,11 @@
                             <div class="text-strong text-sm">Pepsi</div>
                             <div class="d-flex justify-content-between">
                               <div class="text-sm">88<span class="ms-1">грн</span></div>
-                              <div class="text-sm">33<span class="ms-1">грн</span></div>
+                              <div class="text-sm">0.33<span class="ms-1">л</span></div>
                             </div>
                           </div>
                         </div>
-                        <button class="btn-border btn-green btn d-block w-100">Добавить</button>
+                        <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</button>
                       </div>
                       <div class="order-info__recommend-item recommend-item bg-white">
                         <div class="recommend-item__info d-flex"><img src="./img/sandora.png" alt="Sandora 1л">
@@ -4562,11 +4680,11 @@
                             <div class="text-strong text-sm">Sandora Апельсин</div>
                             <div class="d-flex justify-content-between">
                               <div class="text-sm">88<span class="ms-1">грн</span></div>
-                              <div class="text-sm">33<span class="ms-1">грн</span></div>
+                              <div class="text-sm">1<span class="ms-1">л</span></div>
                             </div>
                           </div>
                         </div>
-                        <button class="btn-border btn-green btn d-block w-100">Добавить</button>
+                        <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</button>
                       </div>
                       <div class="order-info__recommend-item recommend-item bg-white">
                         <div class="recommend-item__info d-flex"><img src="./img/pepsi.png" alt="Pepsi 0.33л">
@@ -4574,11 +4692,11 @@
                             <div class="text-strong text-sm">Сидр Sommersby</div>
                             <div class="d-flex justify-content-between">
                               <div class="text-sm">88<span class="ms-1">грн</span></div>
-                              <div class="text-sm">33<span class="ms-1">грн</span></div>
+                              <div class="text-sm">0.5<span class="ms-1">л</span></div>
                             </div>
                           </div>
                         </div>
-                        <button class="btn-border btn-green btn d-block w-100">Добавить</button>
+                        <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</button>
                       </div>
                     </div>
                   </div>
@@ -4590,6 +4708,87 @@
       </div>
     </div>
     <!-- Product card modal end-->
+    <!-- Login modal-->
+    <div class="authorization-modal greenRedFood-modal modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center text-strong text-uppercase m-0" id="loginModalLabel">Войти</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
+          </div>
+          <div class="modal-body">
+            <form class="authorization-form authorization-modal__form needs-validation" id="loginForm" novalidate>
+              <div class="form-inner d-flex jusify-content-between">
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="loginEmail">email</label>
+                  <input class="form-control form-input" id="loginEmail" type="email" required>
+                  <div class="invalid-feedback">Пожалуйста введите email</div>
+                </div>
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="loginPassword">пароль</label>
+                  <input class="form-control form-input" id="loginPassword" type="password" required>
+                  <div class="invalid-feedback">Пожалуйста введите пароль</div>
+                </div>
+              </div>
+              <div class="authorization-form-btns d-flex justify-content-between">
+                <button class="btn btn-border btn-black-border text-strong text-uppercase" type="submit">Войти</button>
+                <button class="btn btn-border btn-black-border text-strong text-uppercase" type="button" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" aria-label="Close">Зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer flex-column">
+            <h5 class="modal-title text-center text-strong text-uppercase m-0">Войти через соц. сети</h5>
+            <div class="modal-socials d-flex justify-content-center"><a class="btn btn-grey btn-icon" href="#"><i class="grf-facebook"></i></a><a class="btn btn-grey btn-icon" href="#"><i class="grf-google"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login modal  end-->
+    <!-- Registration modal-->
+    <div class="authorization-modal greenRedFood-modal modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center text-strong text-uppercase m-0" id="registerModalLabel">Зарегистрироваться</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
+          </div>
+          <div class="modal-body">
+            <form class="authorization-form authorization-modal__form needs-validation" id="registerForm" novalidate>
+              <div class="form-inner d-flex jusify-content-between">
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="registerName">Имя</label>
+                  <input class="form-control auth-form-input" id="registerName" type="text" required>
+                  <div class="invalid-feedback">Пожалуйста введите имя</div>
+                </div>
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="loginEmail">email</label>
+                  <input class="form-control auth-form-input" id="registerEmail" type="email" required>
+                  <div class="invalid-feedback">Пожалуйста введите email</div>
+                </div>
+              </div>
+              <div class="authorization-form-btns d-flex justify-content-between">
+                <button class="btn btn-border btn-black-border text-strong text-uppercase" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal" aria-label="Close">Войти</button>
+                <button class="btn btn-border btn-black-border text-strong text-uppercase" type="submit">Зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer flex-column">
+            <h5 class="modal-title text-center text-strong text-uppercase m-0">Регистрация через соц. сети</h5>
+            <div class="modal-socials d-flex justify-content-center"><a class="btn btn-grey btn-icon" href="#"><i class="grf-facebook"></i></a><a class="btn btn-grey btn-icon" href="#"><i class="grf-google"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Registration modal end-->
+    <!-- Order completed modal-->
+    <div class="greenRedFood-modal order-complete-modal modal fade" id="orderCompleteModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <h5 class="modal-title text-center text-strong text-uppercase text-lg" id="orderCompleteModalLabel">Ваш заказ принят</h5><a class="btn btn-border btn-black-border btn-black text-strong text-uppercase active" href="index.html" type="button">На главную</a>
+        </div>
+      </div>
+    </div>
+    <!-- Order completed modal end-->
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>

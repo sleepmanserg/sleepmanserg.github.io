@@ -1,0 +1,294 @@
+
+<!--Menu Item--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>404
+    </title>
+    <!-- Mobile Specific Meta Tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Vendor Styles including: Bootstrap, Font Icons, Plugins, etc.-->
+    <link rel="stylesheet" media="screen" href="css/vendor.min.css">
+    <!-- Main Template Styles-->
+    <link rel="stylesheet" media="screen" href="css/styles.min.css">
+  </head>
+  <!-- Body-->
+  <body>
+    <div class="site-backdrop"></div>
+    <!-- Mobile Menu-->
+    <!-- Site Header-->
+    <header class="site-header">
+      <!-- Top bar navigation-->
+      <div class="top-bar topbar">
+        <div class="container-fluid">
+          <div class="topbar-wrapper">
+            <div class="topbar-left search-hide">
+              <div class="btn btn-white btn-tobar__phone btn-has-dropdown">
+                <div class="topbar__phone"><a href="#">(067) 888-88-88</a>
+                  <div class="btn-dropdown topbar__phone-dropdown"><a href="#">(067) 888-88-88</a><a href="#">(067) 888-88-88</a></div>
+                </div><i class="grf-up"></i>
+              </div><a class="btn btn-white btn-icon" href="#"><i class="grf-google"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a>
+            </div>
+            <div class="topbar-logo search-hide"><a href="index.html"><img src="./img/logo.png" alt=""></a></div>
+            <div class="topbar-right">
+              <!-- Search form-->
+              <div class="search-form">
+                <form id="searchForm">
+                  <input id="searchFormAutoComplete" type="text" autocomplete="off">
+                </form>
+              </div>
+              <!-- Search form end-->
+              <!-- Search button--><a class="btn btn-white btn-icon data-toggle" href="#" data-target=".search-form, .topbar-left, .topbar-logo, .site-backdrop" data-classes="searchbarActive" data-backdrop="true" id="searchBtn"><i class="grf-search"></i></a>
+              <!-- Search button end-->
+              <div class="btn btn-white btn-icon btn-has-dropdown btn-login"><i class="grf-login"></i>
+                <div class="btn-dropdown"><a data-bs-toggle="modal" data-bs-target="#loginModal">Войти</a><a data-bs-toggle="modal" data-bs-target="#registerModal">Зарегистрироваться</a><a href="account-logged.html">Профиль</a></div>
+              </div><a class="btn btn-white btn-topbar__cart btn-has-dropdown" href="cart.html">
+                <div class="topbar__cart"><span>3</span><span>Корзина</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="main-nav"><a class="main-nav__link" href="home.html"><span class="name">Акции</span></a><a class="main-nav__link" href="category.html"><span class="name">Суши</span></a><a class="main-nav__link" href="#">Пицца</a><a class="main-nav__link" href="#">Бургеры</a><a class="main-nav__link" href="#">Боксы</a><a class="main-nav__link" href="#">Десерты</a><a class="main-nav__link" href="#">Напитки</a>
+      </nav>
+      <div class="menu-toggle"><span></span><span></span><span></span></div>
+    </header>
+    <main class="site-wrapper">
+      <section class="error-page">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="error-page__header d-flex justify-content-between align-items-center">
+                <div class="error-page__message"><strong>Упс!</strong> Здесь ничего нет!</div><a class="btn btn-border btn-white btn-green text-uppercase text-strong px-5" href="index.html">На главную</a>
+              </div>
+              <div class="error-page__404">
+                <h1>404</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer-->
+      <footer class="site-footer bg-black">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <ul class="site-footer__list">
+                <li><a class="site-footer__link" href="#">(067) 888-88-88</a></li>
+                <li><a class="site-footer__link" href="#">(067) 888-88-88</a></li>
+                <li><a class="site-footer__link" href="#">(067) 888-88-88</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <ul class="site-footer__nav">
+                <li><a class="site-footer__link" href="#">Акции</a></li>
+                <li><a class="site-footer__link" href="#">Оплата и доставка</a></li>
+                <li><a class="site-footer__link" href="#">Контакты</a></li>
+                <li><a class="site-footer__link" href="#">Отзывы</a></li>
+                <li><a class="site-footer__link" href="#">Вакансии</a></li>
+                <li><a class="site-footer__link" href="#">О нас</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <ul class="site-footer__actions">
+                <li><a class="btn btn-white btn-icon" href="#"><i class="grf-phone"></i><span>Обратный звонок</span></a></li>
+                <li><a class="btn btn-white btn-icon" href="#"><i class="grf-login"></i><span>Личный кабинет</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- Product card modal-->
+    <div class="product-modal greenRedFood-modal modal fade" id="productModal" tabindex="-1" aria-labelledby="#productModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="product-modal__thumb"><img src="./img/product-modal/01.png" alt=""></div>
+                  <div class="product-modal__description">
+                    <h4 class="text-black text-strong text-lg mb-3">Ямато</h4>
+                    <p>Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</p>
+                    <div class="product-modal__extra-info d-flex">
+                      <div class="product-modal__weight me-4"><span class="text-strong text-sm">120</span><span class="ms-1 text-xs">г.</span></div>
+                      <div class="product-modal__quant me-4"><span class="text-strong text-sm">8</span><span class="ms-1 text-xs">шт.</span></div>
+                    </div>
+                  </div>
+                  <div class="product-modal__consist product-consist d-flex flex-wrap">
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/01.png" alt="Лосось">
+                      <h5 class="text-xs text-black text-uppercase">Лосось</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/02.png" alt="Снежный краб">
+                      <h5 class="text-xs text-black text-uppercase">Снежный краб</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/03.png" alt="Авокадо">
+                      <h5 class="text-xs text-black text-uppercase">Авокадо</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/04.png" alt="Сыр филадельфия">
+                      <h5 class="text-xs text-black text-uppercase">Сыр филадельфия</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/05.png" alt="Огурец">
+                      <h5 class="text-xs text-black text-uppercase">Огурец</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/06.png" alt="Кунжут">
+                      <h5 class="text-xs text-black text-uppercase">Кунжут</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/07.png" alt="Соус-унаги">
+                      <h5 class="text-xs text-black text-uppercase">Соус-унаги</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/08.png" alt="Унаги">
+                      <h5 class="text-xs text-black text-uppercase">Унаги</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/09.png" alt="Рис">
+                      <h5 class="text-xs text-black text-uppercase">Рис</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 p-0">
+                  <div class="product-modal__order-info order-info">
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="order-info__wrapper">
+                      <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                        <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                      </div>
+                      <div class="d-flex justify-content-between flex-wrap align-item-end">
+                        <div class="order-info__price text-white text-strong text-lg">888<span class="text-sm ms-1">грн.</span></div>
+                        <div class="order-info__weight text-white text-strong text-md d-flex align-items-end mb-1">8<span class="text-sm ms-1">шт.</span></div>
+                      </div>
+                      <button class="order-info__btn btn btn-border btn-white d-block w-100 text-uppercase text-strong">Заказать</button>
+                    </div>
+                    <div class="order-info__recommend">
+                      <div class="text-uppercase text-white text-strong text-center mb-3">Рекомендуем к заказу</div>
+                      <div class="order-info__recommend-item recommend-item bg-white">
+                        <div class="recommend-item__info d-flex"><img src="./img/pepsi.png" alt="Pepsi 0.33л">
+                          <div class="d-flex flex-column justify-content-between w-100 ms-2 mt-2 mb-2">
+                            <div class="text-strong text-sm">Pepsi</div>
+                            <div class="d-flex justify-content-between">
+                              <div class="text-sm">88<span class="ms-1">грн</span></div>
+                              <div class="text-sm">0.33<span class="ms-1">л</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</button>
+                      </div>
+                      <div class="order-info__recommend-item recommend-item bg-white">
+                        <div class="recommend-item__info d-flex"><img src="./img/sandora.png" alt="Sandora 1л">
+                          <div class="d-flex flex-column justify-content-between w-100 ms-2 mt-2 mb-2">
+                            <div class="text-strong text-sm">Sandora Апельсин</div>
+                            <div class="d-flex justify-content-between">
+                              <div class="text-sm">88<span class="ms-1">грн</span></div>
+                              <div class="text-sm">1<span class="ms-1">л</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</button>
+                      </div>
+                      <div class="order-info__recommend-item recommend-item bg-white">
+                        <div class="recommend-item__info d-flex"><img src="./img/pepsi.png" alt="Pepsi 0.33л">
+                          <div class="d-flex flex-column justify-content-between w-100 ms-2 mt-2 mb-2">
+                            <div class="text-strong text-sm">Сидр Sommersby</div>
+                            <div class="d-flex justify-content-between">
+                              <div class="text-sm">88<span class="ms-1">грн</span></div>
+                              <div class="text-sm">0.5<span class="ms-1">л</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product card modal end-->
+    <!-- Login modal-->
+    <div class="authorization-modal greenRedFood-modal modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center text-strong text-uppercase m-0" id="loginModalLabel">Войти</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
+          </div>
+          <div class="modal-body">
+            <form class="authorization-form authorization-modal__form needs-validation" id="loginForm" novalidate>
+              <div class="form-inner d-flex jusify-content-between">
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="loginEmail">email</label>
+                  <input class="form-control form-input" id="loginEmail" type="email" required>
+                  <div class="invalid-feedback">Пожалуйста введите email</div>
+                </div>
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="loginPassword">пароль</label>
+                  <input class="form-control form-input" id="loginPassword" type="password" required>
+                  <div class="invalid-feedback">Пожалуйста введите пароль</div>
+                </div>
+              </div>
+              <div class="authorization-form-btns d-flex justify-content-between">
+                <button class="btn btn-border btn-black-border text-strong text-uppercase" type="submit">Войти</button>
+                <button class="btn btn-border btn-black-border text-strong text-uppercase" type="button" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" aria-label="Close">Зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer flex-column">
+            <h5 class="modal-title text-center text-strong text-uppercase m-0">Войти через соц. сети</h5>
+            <div class="modal-socials d-flex justify-content-center"><a class="btn btn-grey btn-icon" href="#"><i class="grf-facebook"></i></a><a class="btn btn-grey btn-icon" href="#"><i class="grf-google"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login modal  end-->
+    <!-- Registration modal-->
+    <div class="authorization-modal greenRedFood-modal modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center text-strong text-uppercase m-0" id="registerModalLabel">Зарегистрироваться</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
+          </div>
+          <div class="modal-body">
+            <form class="authorization-form authorization-modal__form needs-validation" id="registerForm" novalidate>
+              <div class="form-inner d-flex jusify-content-between">
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="registerName">Имя</label>
+                  <input class="form-control auth-form-input" id="registerName" type="text" required>
+                  <div class="invalid-feedback">Пожалуйста введите имя</div>
+                </div>
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="loginEmail">email</label>
+                  <input class="form-control auth-form-input" id="registerEmail" type="email" required>
+                  <div class="invalid-feedback">Пожалуйста введите email</div>
+                </div>
+              </div>
+              <div class="authorization-form-btns d-flex justify-content-between">
+                <button class="btn btn-border btn-black-border text-strong text-uppercase" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal" aria-label="Close">Войти</button>
+                <button class="btn btn-border btn-black-border text-strong text-uppercase" type="submit">Зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer flex-column">
+            <h5 class="modal-title text-center text-strong text-uppercase m-0">Регистрация через соц. сети</h5>
+            <div class="modal-socials d-flex justify-content-center"><a class="btn btn-grey btn-icon" href="#"><i class="grf-facebook"></i></a><a class="btn btn-grey btn-icon" href="#"><i class="grf-google"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Registration modal end-->
+    <!-- Order completed modal-->
+    <div class="greenRedFood-modal order-complete-modal modal fade" id="orderCompleteModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <h5 class="modal-title text-center text-strong text-uppercase text-lg" id="orderCompleteModalLabel">Ваш заказ принят</h5><a class="btn btn-border btn-black-border btn-black text-strong text-uppercase active" href="index.html" type="button">На главную</a>
+        </div>
+      </div>
+    </div>
+    <!-- Order completed modal end-->
+    <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>
