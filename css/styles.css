@@ -440,6 +440,11 @@ select.form-select {
   transition: all 0.3s;
 }
 
+.btn span {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
 .btn:focus {
   -webkit-box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0);
   box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0);
@@ -447,6 +452,10 @@ select.form-select {
 
 .btn-white {
   background-color: #FFFFFF;
+}
+
+.btn-white:hover span {
+  opacity: 0.5;
 }
 
 .btn-icon {
