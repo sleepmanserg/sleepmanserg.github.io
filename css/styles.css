@@ -438,6 +438,7 @@ select.form-select {
   position: relative;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  -webkit-appearance: none;
 }
 
 .btn span {
@@ -1012,6 +1013,10 @@ select.form-select {
 .slider__header {
   color: #FFFFFF;
   padding: 42px 0;
+}
+
+.slider .slide a {
+  outline: none;
 }
 
 .slider__title {
@@ -1940,14 +1945,28 @@ select.form-select {
 .cart-footer {
   padding: 17px 150px;
   background-color: #24AB70;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   width: 100%;
   z-index: 99;
   max-width: 1920px;
   bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .cart-footer {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+@supports not ((position: -webkit-sticky) or (position: sticky)) {
+  .cart-footer {
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
 }
 
 .cart-full-price {
@@ -2107,11 +2126,6 @@ select.form-select {
   transition: color .25s;
 }
 
-.site-footer__actions a:hover span {
-  color: #24AB70;
-}
-
 .site-footer__actions a:hover i {
-  color: #24AB70;
-  opacity: 1;
+  opacity: .5;
 }
