@@ -1929,12 +1929,16 @@ select.form-select {
 }
 
 .cart-footer {
-  padding: 15px 0;
+  padding: 17px 150px;
   background-color: #24AB70;
   position: fixed;
   width: 100%;
   z-index: 99;
+  max-width: 1920px;
   bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .cart-full-price {
