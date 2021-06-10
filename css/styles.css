@@ -1954,26 +1954,76 @@ select.form-select {
   justify-content: center;
 }
 
-.cart-footer {
+.cart-footer, .cart-header-msg {
   padding: 17px 150px;
   background-color: #24AB70;
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 100;
+  max-width: 1920px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.cart-footer.active, .cart-header-msg.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.cart-footer .btn, .cart-header-msg .btn {
+  min-width: 210px;
+}
+
+.cart-header-msg {
+  top: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.cart-footer {
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.cart-footer-cart-not-empty {
   position: -webkit-sticky;
   position: sticky;
-  width: 100%;
+  bottom: 0;
   z-index: 99;
   max-width: 1920px;
-  bottom: 0;
+  padding: 17px 150px;
+  background-color: #24AB70;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
-  .cart-footer {
+  .cart-footer-cart-not-empty {
     position: -webkit-sticky;
     position: sticky;
   }
 }
 
 @supports not ((position: -webkit-sticky) or (position: sticky)) {
-  .cart-footer {
+  .cart-footer-cart-not-empty {
     position: fixed;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -1987,6 +2037,24 @@ select.form-select {
 
 .cart-full-price span {
   margin-left: 5px;
+}
+
+.cart-not-empty .cart-footer-cart-not-empty {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.cart.has-items {
+  z-index: 99;
+}
+
+.cart.has-items .cart-footer-cart-not-empty {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .error-page {
