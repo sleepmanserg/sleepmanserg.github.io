@@ -15,22 +15,6 @@
   <!-- Body-->
   <body>
     <div class="site-backdrop"></div>
-    <div class="cart-header-msg">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="cart-footer-price d-flex align-items-center"><span class="text-strong text-white text-lg">Блюдо добавлено к заказу</span></div>
-        <div class="cart-submit"><a class="btn btn-white text-strong text-uppercase" href="cart.html"><span>Корзина</span></a></div>
-      </div>
-    </div>
-    <div class="cart-footer">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="cart-footer-price d-flex align-items-center"><span class="text-strong text-white text-lg">Сумма заказа:</span>
-          <div class="cart-full-price text-lg text-white text-strong">8888<span class="text-white text-strong">грн.</span></div>
-        </div>
-        <div class="cart-submit">
-          <button class="btn btn-white text-strong text-uppercase" id="cartSubmit" type="submit"><span>Оформить заказ</span></button>
-        </div>
-      </div>
-    </div>
     <!-- Mobile Menu-->
     <!-- Site Header-->
     <header class="site-header">
@@ -54,65 +38,174 @@
                 </form>
               </div>
               <!-- Search form end-->
-              <!-- Search button--><a class="btn btn-white btn-icon data-toggle" href="#" data-target=".search-form, .topbar-left, .topbar-logo, .site-backdrop" data-classes="searchbarActive" data-backdrop="true" id="searchBtn"><i class="grf-search"></i></a>
+              <!-- Search button--><a class="btn btn-white btn-icon data-toggle" href="#" data-target=".search-form, .topbar-left, .topbar-logo, .site-backdrop" data-classes="searchBarActive" data-backdrop="true" id="searchBtn"><i class="grf-search"></i></a>
               <!-- Search button end-->
-              <div class="btn btn-white btn-icon btn-has-dropdown btn-login"><i class="grf-login"></i>
-                <div class="btn-dropdown"><a data-bs-toggle="modal" data-bs-target="#loginModal">Войти</a><a data-bs-toggle="modal" data-bs-target="#registerModal">Зарегистрироваться</a><a href="account-logged.html">Профиль</a></div>
-              </div><a class="btn btn-white btn-topbar__cart btn-has-dropdown" href="cart.html">
-                <div class="topbar__cart"><span>3</span><span>Корзина</span></div></a>
+              <div class="btn btn-white btn-icon btn-has-dropdown btn-login" type="button" data-target=".mobile-login" data-classes="active" data-backdrop="true" data-overflow="true"><i class="grf-login"></i>
+                <div class="btn-dropdown"><a data-bs-toggle="modal" data-bs-target="#loginModal">Вход</a><a data-bs-toggle="modal" data-bs-target="#registerModal">Регистрация</a><a href="account-logged.html">Профиль</a></div>
+              </div>
+              <button class="btn btn-white btn-topbar__cart d-block" type="button" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <div class="topbar__cart"><span>3</span><span class="topbar__cart-text">Корзина</span></div>
+              </button>
+              <button class="btn btn-white btn-icon menu-toggle" type="button" data-target=".main-nav" data-classes="active" data-backdrop="true" data-overflow="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0H8V8H0V0ZM0 10H8V18H0V10ZM10 0H18V8H10V0ZM10 10H18V18H10V10ZM12 2V6H16V2H12ZM12 12V16H16V12H12ZM2 2V6H6V2H2ZM2 12V16H6V12H2Z" fill="black"></path>
+                </svg><span class="text-strong">Меню</span>
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <nav class="main-nav"><a class="main-nav__link" href="home.html"><span class="name">Акции</span></a><a class="main-nav__link" href="category.html"><span class="name">Суши</span></a><a class="main-nav__link" href="#">Пицца</a><a class="main-nav__link" href="#">Бургеры</a><a class="main-nav__link" href="#">Боксы</a><a class="main-nav__link" href="#">Десерты</a><a class="main-nav__link" href="#">Напитки</a>
+      <div class="mobile-login"><a class="login-link" data-bs-toggle="modal" data-bs-target="#loginModal">Вход</a><a class="login-link" data-bs-toggle="modal" data-bs-target="#registerModal">Регистрация</a><a href="account-logged.html">Профиль</a>
+        <div class="login-mobile-menu"><a href="#">Выход</a>
+          <button class="btn btn-green btn-icon" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal"><i class="grf-phone"></i><span>Обратный звонок</span></button>
+          <ul class="p-0 m-0 mt-5">
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Оплата и доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Вакансии</a></li>
+            <li><a href="#">О нас</a></li>
+          </ul>
+          <div class="d-flex"><a class="btn btn-white btn-icon" href="#"><i class="grf-google"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a></div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <div class="mobile-nav d-lg-none">
+          <div class="mobile-nav-title text-center text-white">Меню</div>
+          <button class="btn mobile-nav-close"><i class="grf-close text-white"></i></button>
+          <div class="mobile-nav-search">
+            <input type="text" placeholder="Поиск в меню">
+          </div>
+        </div><a class="main-nav__link" href="index.html"><strong class="main-nav__link-text">Главная</strong></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Акции</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link active" href="category.html"><strong class="main-nav__link-text">Суши</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Пицца</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Бургеры</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Боксы</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Десерты</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Напитки</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a>
       </nav>
-      <div class="menu-toggle"><span></span><span></span><span></span></div>
     </header>
+    <!-- Cart-->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog cart">
+        <div class="modal-content">
+          <header class="cart-header">
+            <div class="cart-header-top d-flex justify-content-between align-items-center">
+              <h2 class="text-strong text-uppercase cart-title m-0">Ваша корзина</h2>
+              <button class="btn cart-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
+            </div>
+            <div class="cart-header-actions d-flex justify-content-between align-items-center"><span>Товары</span>
+              <button class="btn p-0" type="button" data-bs-dismiss="modal" aria-label="Close">Продолжить покупки</button>
+            </div>
+          </header>
+          <div class="cart-body">
+            <div class="cart-container">
+              <div class="cart-item d-flex">
+                <div class="cart-item__thumb"><img src="./img/slider/01.png" alt="">
+                  <label class="product__card-discount">- 10%</label>
+                </div>
+                <div class="cart-item__body d-flex justify-content-between">
+                  <div class="cart-item__info">
+                    <div class="cart-item__name text-strong text-md">Филадельфия классик</div>
+                    <div class="cart-item__descr text-sm">Нежный ролл с сыром Филадельфия и свежим лососем Нежный ролл с сыром Филадельфия и свежим лососем</div>
+                    <div class="d-flex align-items-center">
+                      <div class="cart-item__weight text-strong text-sm me-4">8<span class="ms-1">шт.</span></div>
+                      <div class="cart-item__weight text-strong text-sm me-4">8888<span class="ms-1">г</span></div>
+                    </div>
+                  </div>
+                  <div class="cart-item__meta-wrapper">
+                    <div class="cart-item__meta d-flex align-items-center">
+                      <div class="cart-qty">
+                        <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                          <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product__card-price-discount d-flex flex-column justify-content-center">
+                      <div class="product__card-price-old">5543<span>грн</span></div>
+                      <div class="product__card-price-new text-strong">5543<span>грн</span></div>
+                    </div>
+                    <div class="cart-item__remove">
+                      <button class="btn btn-border btn-black-border"><i class="grf-close"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-item d-flex">
+                <div class="cart-item__thumb"><img src="./img/slider/01.png" alt=""></div>
+                <div class="cart-item__body d-flex">
+                  <div class="cart-item__info">
+                    <div class="cart-item__name text-strong text-md">Филадельфия классик</div>
+                    <div class="cart-item__descr text-sm">Нежный ролл с сыром Филадельфия и свежим лососем Нежный ролл с сыром Филадельфия и свежим лососем</div>
+                    <div class="d-flex align-items-center">
+                      <div class="cart-item__weight text-strong text-sm me-4">8<span class="ms-1">шт.</span></div>
+                      <div class="cart-item__weight text-strong text-sm me-4">8888<span class="ms-1">г</span></div>
+                    </div>
+                  </div>
+                  <div class="cart-item__meta-wrapper">
+                    <div class="cart-item__meta d-flex align-items-center">
+                      <div class="cart-qty">
+                        <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                          <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-item__price d-flex align-items-center">5543<span>грн</span></div>
+                    <div class="cart-item__remove">
+                      <button class="btn btn-border btn-black-border"><i class="grf-close"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-footer">
+            <div class="cart-footer-price d-flex align-items-center justify-content-between px-5"><span>Сумма заказа:</span>
+              <div class="cart-full-price text-lg text-strong">8888<span class="text-strong">грн.</span></div>
+            </div>
+            <div class="cart-footer-order px-5">
+              <button class="btn btn-green btn-solid btn-icon text-strong text-uppercase d-block"><span class="text-white">Оформить заказ</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <main class="site-wrapper">
       <!-- - Hero banner section-->
       <section class="hero-banner"><img src="./img/hero-banner.jpg" alt=""></section>
       <div class="container-fluid">
         <section class="info-section info">
-          <ul class="info-list d-flex">
-            <li class="info-list__item"><strong class="text-green text-big text-strong">24<span>/7</span></strong>
-              <p class="info-list__subtitle text-sm">Звоните</p>
-              <ul class="info-list__phones">
-                <li><a class="text-xs text-black" href="#"><span class="text-strong">(048)</span> 888-88-88</a></li>
-                <li><a class="text-xs text-black" href="#"><span class="text-strong">(050)</span> 888-88-88</a></li>
-                <li><a class="text-xs text-black" href="#"><span class="text-strong">(067)</span> 888-88-88</a></li>
-                <li><a class="text-xs text-black" href="#"><span class="text-strong">(063)</span> 888-88-88</a></li>
-              </ul>
-            </li>
-            <li class="info-list__item"><strong class="text-black text-big text-strong">10<span>%</span></strong>
-              <p class="info-list__subtitle text-sm">Скидка</p>
-              <p class="text-xs">При самовывозе и при<br>заказе<b class="text-strong"> с 00:00 до 07:00</b></p>
-            </li>
-            <li class="info-list__item"><strong class="text-black text-big text-strong">888<span>грн.</span></strong>
-              <p class="info-list__subtitle text-sm">Минимальный заказ</p>
-              <p class="text-xs m-0">По кухне — 888 грн.</p>
-              <p class="text-xs m-0">По бару — 888 грн.</p>
-            </li>
-            <li class="info-list__item"><strong class="text-black text-big text-strong"><span>От</span>888<span>грн.</span></strong>
-              <p class="info-list__subtitle text-sm">Бесплатная доставка</p>
-              <p class="text-xs m-0">от 888 грн. и 888 грн.</p>
-              <p class="text-xs m-0">по какому-нибудь району</p>
-            </li>
-          </ul>
+          <div class="info-slider">
+            <div class="info-slide">
+              <div class="info-slide__header"><strong class="text-uppercase">График работы<span class="text-strong d-block">с 10:00 до 23:00</span></strong></div>
+              <div class="info-slide__body"><a class="d-block" href="tel:+380933708223">+380 93 370 82 23</a><a class="d-block" href="tel:+380980688161">+380 98 068 81 61</a></div>
+            </div>
+            <div class="info-slide">
+              <div class="info-slide__header"><strong class="text-uppercase">Скидка 10%</strong></div>
+              <div class="info-slide__body"><span class="d-block">При самовывозе и призаказе</span><strong>с 00:00 до 07:00</strong></div>
+            </div>
+            <div class="info-slide">
+              <div class="info-slide__header"><strong class="text-uppercase">Минимальный заказ<br> 888 грн</strong></div>
+              <div class="info-slide__body"><span class="d-block">По кухне — 888 грн.</span><span class="d-block">По бару — 888 грн.</span></div>
+            </div>
+            <div class="info-slide">
+              <div class="info-slide__header"><strong class="text-uppercase">Бесплатная доставка<br>от 888 грн</strong></div>
+            </div>
+          </div>
         </section>
       </div>
       <section class="stocks-section">
         <div class="slick-container slider">
-          <div class="slider__header d-flex justify-content-center align-items-center bg-black">
+          <div class="slider__header d-flex align-items-center bg-black">
             <button class="slider__btn prev-arrow" type="button"><i class="grf-arrow-l"></i></button>
             <h2 class="slider__title">Акции</h2>
             <button class="slider__btn next-arrow" type="button"><i class="grf-arrow-r"></i></button>
           </div>
-          <div class="slick-carousel" data-slick="{			&quot;dots&quot;: false, 			&quot;slidesToShow&quot;: 6, 			&quot;slidesToScroll&quot;: 2, 			&quot;prevArrow&quot;: &quot;.prev-arrow&quot;, 			&quot;nextArrow&quot;: &quot;.next-arrow&quot;, 			&quot;infinite&quot;: true, 			&quot;draggable&quot;: false 		}">
+          <div class="stocks-carousel">
             <div class="slide">
               <div class="product__card">
                 <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
                 <!-- Product card image end-->
                 <div class="product__card-body">
+                  <!-- Product discount-->
+                  <div class="product__card-discount-wrapper">
+                    <label class="product__card-discount">- 10%</label>
+                  </div>
+                  <!-- Product discount end-->
                   <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
                   <!-- Product card name end-->
                   <!-- Product card hidden content with full description-->
@@ -131,6 +224,11 @@
                       </div>
                       <div class="product__card-order__btn">
                         <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                        <div class="cart-qty">
+                          <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                            <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -139,14 +237,20 @@
                   <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
                   <!-- Product card short desctiption end-->
                 </div>
-                <div class="product__card-footer d-flex justify-content-between">
+                <div class="product__card-footer d-flex justify-content-between align-items-end">
                   <!-- Product card price-->
                   <div class="product__card-price text-strong">122<span>грн.</span></div>
                   <!-- Product card price end-->
+                  <!-- Product card price with discount-->
+                  <div class="product__card-price-discount d-none">
+                    <div class="product__card-price-old">120<span>грн</span></div>
+                    <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                  </div>
+                  <!-- Product card price with discount end-->
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
-                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a></div>
                 </div>
               </div>
             </div>
@@ -155,6 +259,11 @@
                 <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
                 <!-- Product card image end-->
                 <div class="product__card-body">
+                  <!-- Product discount-->
+                  <div class="product__card-discount-wrapper">
+                    <label class="product__card-discount">- 10%</label>
+                  </div>
+                  <!-- Product discount end-->
                   <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
                   <!-- Product card name end-->
                   <!-- Product card hidden content with full description-->
@@ -173,6 +282,11 @@
                       </div>
                       <div class="product__card-order__btn">
                         <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                        <div class="cart-qty">
+                          <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                            <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -181,14 +295,20 @@
                   <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
                   <!-- Product card short desctiption end-->
                 </div>
-                <div class="product__card-footer d-flex justify-content-between">
+                <div class="product__card-footer d-flex justify-content-between align-items-end">
                   <!-- Product card price-->
                   <div class="product__card-price text-strong">122<span>грн.</span></div>
                   <!-- Product card price end-->
+                  <!-- Product card price with discount-->
+                  <div class="product__card-price-discount d-none">
+                    <div class="product__card-price-old">120<span>грн</span></div>
+                    <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                  </div>
+                  <!-- Product card price with discount end-->
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
-                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a></div>
                 </div>
               </div>
             </div>
@@ -197,6 +317,11 @@
                 <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
                 <!-- Product card image end-->
                 <div class="product__card-body">
+                  <!-- Product discount-->
+                  <div class="product__card-discount-wrapper">
+                    <label class="product__card-discount">- 10%</label>
+                  </div>
+                  <!-- Product discount end-->
                   <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
                   <!-- Product card name end-->
                   <!-- Product card hidden content with full description-->
@@ -215,6 +340,11 @@
                       </div>
                       <div class="product__card-order__btn">
                         <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                        <div class="cart-qty">
+                          <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                            <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -223,14 +353,20 @@
                   <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
                   <!-- Product card short desctiption end-->
                 </div>
-                <div class="product__card-footer d-flex justify-content-between">
+                <div class="product__card-footer d-flex justify-content-between align-items-end">
                   <!-- Product card price-->
                   <div class="product__card-price text-strong">122<span>грн.</span></div>
                   <!-- Product card price end-->
+                  <!-- Product card price with discount-->
+                  <div class="product__card-price-discount d-none">
+                    <div class="product__card-price-old">120<span>грн</span></div>
+                    <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                  </div>
+                  <!-- Product card price with discount end-->
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
-                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a></div>
                 </div>
               </div>
             </div>
@@ -239,6 +375,11 @@
                 <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
                 <!-- Product card image end-->
                 <div class="product__card-body">
+                  <!-- Product discount-->
+                  <div class="product__card-discount-wrapper">
+                    <label class="product__card-discount">- 10%</label>
+                  </div>
+                  <!-- Product discount end-->
                   <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
                   <!-- Product card name end-->
                   <!-- Product card hidden content with full description-->
@@ -257,6 +398,11 @@
                       </div>
                       <div class="product__card-order__btn">
                         <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                        <div class="cart-qty">
+                          <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                            <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -265,14 +411,20 @@
                   <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
                   <!-- Product card short desctiption end-->
                 </div>
-                <div class="product__card-footer d-flex justify-content-between">
+                <div class="product__card-footer d-flex justify-content-between align-items-end">
                   <!-- Product card price-->
                   <div class="product__card-price text-strong">122<span>грн.</span></div>
                   <!-- Product card price end-->
+                  <!-- Product card price with discount-->
+                  <div class="product__card-price-discount d-none">
+                    <div class="product__card-price-old">120<span>грн</span></div>
+                    <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                  </div>
+                  <!-- Product card price with discount end-->
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
-                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a></div>
                 </div>
               </div>
             </div>
@@ -281,6 +433,11 @@
                 <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
                 <!-- Product card image end-->
                 <div class="product__card-body">
+                  <!-- Product discount-->
+                  <div class="product__card-discount-wrapper">
+                    <label class="product__card-discount">- 10%</label>
+                  </div>
+                  <!-- Product discount end-->
                   <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
                   <!-- Product card name end-->
                   <!-- Product card hidden content with full description-->
@@ -299,6 +456,11 @@
                       </div>
                       <div class="product__card-order__btn">
                         <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                        <div class="cart-qty">
+                          <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                            <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -307,14 +469,20 @@
                   <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
                   <!-- Product card short desctiption end-->
                 </div>
-                <div class="product__card-footer d-flex justify-content-between">
+                <div class="product__card-footer d-flex justify-content-between align-items-end">
                   <!-- Product card price-->
                   <div class="product__card-price text-strong">122<span>грн.</span></div>
                   <!-- Product card price end-->
+                  <!-- Product card price with discount-->
+                  <div class="product__card-price-discount d-none">
+                    <div class="product__card-price-old">120<span>грн</span></div>
+                    <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                  </div>
+                  <!-- Product card price with discount end-->
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
-                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a></div>
                 </div>
               </div>
             </div>
@@ -323,6 +491,11 @@
                 <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
                 <!-- Product card image end-->
                 <div class="product__card-body">
+                  <!-- Product discount-->
+                  <div class="product__card-discount-wrapper">
+                    <label class="product__card-discount">- 10%</label>
+                  </div>
+                  <!-- Product discount end-->
                   <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
                   <!-- Product card name end-->
                   <!-- Product card hidden content with full description-->
@@ -341,6 +514,11 @@
                       </div>
                       <div class="product__card-order__btn">
                         <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                        <div class="cart-qty">
+                          <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                            <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -349,14 +527,20 @@
                   <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
                   <!-- Product card short desctiption end-->
                 </div>
-                <div class="product__card-footer d-flex justify-content-between">
+                <div class="product__card-footer d-flex justify-content-between align-items-end">
                   <!-- Product card price-->
                   <div class="product__card-price text-strong">122<span>грн.</span></div>
                   <!-- Product card price end-->
+                  <!-- Product card price with discount-->
+                  <div class="product__card-price-discount d-none">
+                    <div class="product__card-price-old">120<span>грн</span></div>
+                    <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                  </div>
+                  <!-- Product card price with discount end-->
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
-                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a></div>
                 </div>
               </div>
             </div>
@@ -365,6 +549,11 @@
                 <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
                 <!-- Product card image end-->
                 <div class="product__card-body">
+                  <!-- Product discount-->
+                  <div class="product__card-discount-wrapper">
+                    <label class="product__card-discount">- 10%</label>
+                  </div>
+                  <!-- Product discount end-->
                   <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
                   <!-- Product card name end-->
                   <!-- Product card hidden content with full description-->
@@ -383,6 +572,11 @@
                       </div>
                       <div class="product__card-order__btn">
                         <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                        <div class="cart-qty">
+                          <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                            <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -391,14 +585,20 @@
                   <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
                   <!-- Product card short desctiption end-->
                 </div>
-                <div class="product__card-footer d-flex justify-content-between">
+                <div class="product__card-footer d-flex justify-content-between align-items-end">
                   <!-- Product card price-->
                   <div class="product__card-price text-strong">122<span>грн.</span></div>
                   <!-- Product card price end-->
+                  <!-- Product card price with discount-->
+                  <div class="product__card-price-discount d-none">
+                    <div class="product__card-price-old">120<span>грн</span></div>
+                    <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                  </div>
+                  <!-- Product card price with discount end-->
                   <!-- Product card weight-->
                   <div class="product__card-weight text-strong">210<span>г.</span></div>
                   <!-- Product card weight end-->
-                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</a></div>
+                  <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a></div>
                 </div>
               </div>
             </div>
@@ -407,46 +607,54 @@
       </section>
       <section class="promo bg-black">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-3">
+          <div class="row promo-slider">
+            <div class="col-lg-3 col-md-6">
               <div class="promo-banner">
                 <div class="promo-banner__header">
                   <h3 class="promo-banner__title text-strong">Promo title</h3>
                 </div>
-                <div class="promo-banner__body"><img src="./img/promo/01.jpg" alt=""></div>
+                <div class="promo-banner__body"><img src="./img/promo/01.jpg" alt="">
+                  <h3 class="promo-banner__title text-strong">Promo image</h3>
+                </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6">
               <div class="promo-banner">
                 <div class="promo-banner__header">
                   <h3 class="promo-banner__title text-strong">Promo title</h3>
                 </div>
-                <div class="promo-banner__body"><img src="./img/promo/01.jpg" alt=""></div>
+                <div class="promo-banner__body"><img src="./img/promo/02.jpg" alt="">
+                  <h3 class="promo-banner__title text-strong">Promo image</h3>
+                </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6">
               <div class="promo-banner">
                 <div class="promo-banner__header">
                   <h3 class="promo-banner__title text-strong">Promo title</h3>
                 </div>
-                <div class="promo-banner__body"><img src="./img/promo/01.jpg" alt=""></div>
+                <div class="promo-banner__body"><img src="./img/promo/03.jpg" alt="">
+                  <h3 class="promo-banner__title text-strong">Promo image</h3>
+                </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6">
               <div class="promo-banner">
                 <div class="promo-banner__header">
                   <h3 class="promo-banner__title text-strong">Promo title</h3>
                 </div>
-                <div class="promo-banner__body"><img src="./img/promo/01.jpg" alt=""></div>
+                <div class="promo-banner__body"><img src="./img/promo/04.jpg" alt="">
+                  <h3 class="promo-banner__title text-strong">Promo image</h3>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section class="subscribe">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
-            <div class="col-8 offset-2">
+            <div class="col-12">
               <div class="subscribe-inner">
                 <form class="subscribe-form">
                   <div class="d-flex align-items-center">
@@ -457,7 +665,7 @@
                     </div>
                   </div>
                 </form>
-                <div class="subscribe-socials"><a class="btn btn-white btn-icon me-5" href="#"><i class="grf-facebook"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a></div>
+                <div class="subscribe-socials"><a class="btn btn-white btn-icon" href="#"><i class="grf-facebook"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a></div>
               </div>
             </div>
           </div>
@@ -467,14 +675,13 @@
       <footer class="site-footer bg-black">
         <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-sm-6 col-md-4">
               <ul class="site-footer__list">
-                <li><a class="site-footer__link" href="#">(067) 888-88-88</a></li>
-                <li><a class="site-footer__link" href="#">(067) 888-88-88</a></li>
-                <li><a class="site-footer__link" href="#">(067) 888-88-88</a></li>
+                <li><a class="site-footer__link" href="tel:+380933708223">+380 93 370 82 23</a></li>
+                <li><a class="site-footer__link" href="tel:+380933708223">+380 93 370 82 23</a></li>
               </ul>
             </div>
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-6 col-sm-6 col-md-8">
               <ul class="site-footer__nav">
                 <li><a class="site-footer__link" href="#">Акции</a></li>
                 <li><a class="site-footer__link" href="#">Оплата и доставка</a></li>
@@ -484,9 +691,11 @@
                 <li><a class="site-footer__link" href="#">О нас</a></li>
               </ul>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-12">
               <ul class="site-footer__actions">
-                <li><a class="btn btn-white btn-icon" href="#"><i class="grf-phone"></i><span>Обратный звонок</span></a></li>
+                <li>
+                  <button class="btn btn-white btn-icon" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal"><i class="grf-phone"></i><span>Обратный звонок</span></button>
+                </li>
                 <li><a class="btn btn-white btn-icon" href="#"><i class="grf-login"></i><span>Личный кабинет</span></a></li>
               </ul>
             </div>
@@ -503,6 +712,7 @@
               <div class="row">
                 <div class="col-md-8">
                   <div class="product-modal__thumb"><img src="./img/product-modal/01.png" alt=""></div>
+                  <div class="product-modal__mobile"></div>
                   <div class="product-modal__description">
                     <h4 class="text-black text-strong text-lg mb-3">Ямато</h4>
                     <p>Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</p>
@@ -511,7 +721,7 @@
                       <div class="product-modal__quant me-4"><span class="text-strong text-sm">8</span><span class="ms-1 text-xs">шт.</span></div>
                     </div>
                   </div>
-                  <div class="product-modal__consist product-consist d-flex flex-wrap">
+                  <div class="product-modal__consist product-consist d-flex">
                     <div class="product-consist__item text-center"><img src="./img/product-modal/consist/01.png" alt="Лосось">
                       <h5 class="text-xs text-black text-uppercase">Лосось</h5>
                     </div>
@@ -543,54 +753,56 @@
                 </div>
                 <div class="col-md-4 p-0">
                   <div class="product-modal__order-info order-info">
-                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="order-info__wrapper">
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" data-da=".product-modal__thumb, 767.98, 1"></button>
+                    <div class="order-info__wrapper" data-da=".product-modal__mobile, 767.98, 1">
                       <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
                         <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
                       </div>
-                      <div class="d-flex justify-content-between flex-wrap align-item-end">
+                      <div class="order-info__price-wrap d-flex justify-content-between flex-wrap align-item-end" data-da=".product-modal__description, 767.98, 1">
                         <div class="order-info__price text-white text-strong text-lg">888<span class="text-sm ms-1">грн.</span></div>
                         <div class="order-info__weight text-white text-strong text-md d-flex align-items-end mb-1">8<span class="text-sm ms-1">шт.</span></div>
                       </div>
                       <button class="order-info__btn btn btn-border btn-white d-block w-100 text-uppercase text-strong"><span>Заказать</span></button>
                     </div>
                     <div class="order-info__recommend">
-                      <div class="text-uppercase text-white text-strong text-center mb-3">Рекомендуем к заказу</div>
-                      <div class="order-info__recommend-item recommend-item bg-white">
-                        <div class="recommend-item__info d-flex"><img src="./img/pepsi.png" alt="Pepsi 0.33л">
-                          <div class="d-flex flex-column justify-content-between w-100 ms-2 mt-2 mb-2">
-                            <div class="text-strong text-sm">Pepsi</div>
-                            <div class="d-flex justify-content-between">
-                              <div class="text-sm">88<span class="ms-1">грн</span></div>
-                              <div class="text-sm">0.33<span class="ms-1">л</span></div>
+                      <div class="text-white mb-3">Рекомендуем к заказу</div>
+                      <div class="order-info__recommend-wrap">
+                        <div class="order-info__recommend-item recommend-item bg-white">
+                          <div class="recommend-item__info d-flex"><img src="./img/pepsi.png" alt="Pepsi 0.33л">
+                            <div class="d-flex flex-column justify-content-between w-100 ms-2 mt-2 mb-2">
+                              <div class="text-strong text-sm">Pepsi</div>
+                              <div class="d-flex justify-content-between">
+                                <div class="text-sm">88<span class="ms-1">грн</span></div>
+                                <div class="text-sm">0.33<span class="ms-1">л</span></div>
+                              </div>
                             </div>
                           </div>
+                          <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                         </div>
-                        <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</button>
-                      </div>
-                      <div class="order-info__recommend-item recommend-item bg-white">
-                        <div class="recommend-item__info d-flex"><img src="./img/sandora.png" alt="Sandora 1л">
-                          <div class="d-flex flex-column justify-content-between w-100 ms-2 mt-2 mb-2">
-                            <div class="text-strong text-sm">Sandora Апельсин</div>
-                            <div class="d-flex justify-content-between">
-                              <div class="text-sm">88<span class="ms-1">грн</span></div>
-                              <div class="text-sm">1<span class="ms-1">л</span></div>
+                        <div class="order-info__recommend-item recommend-item bg-white">
+                          <div class="recommend-item__info d-flex"><img src="./img/sandora.png" alt="Sandora 1л">
+                            <div class="d-flex flex-column justify-content-between w-100 ms-2 mt-2 mb-2">
+                              <div class="text-strong text-sm">Sandora Апельсин</div>
+                              <div class="d-flex justify-content-between">
+                                <div class="text-sm">88<span class="ms-1">грн</span></div>
+                                <div class="text-sm">1<span class="ms-1">л</span></div>
+                              </div>
                             </div>
                           </div>
+                          <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                         </div>
-                        <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</button>
-                      </div>
-                      <div class="order-info__recommend-item recommend-item bg-white">
-                        <div class="recommend-item__info d-flex"><img src="./img/pepsi.png" alt="Pepsi 0.33л">
-                          <div class="d-flex flex-column justify-content-between w-100 ms-2 mt-2 mb-2">
-                            <div class="text-strong text-sm">Сидр Sommersby</div>
-                            <div class="d-flex justify-content-between">
-                              <div class="text-sm">88<span class="ms-1">грн</span></div>
-                              <div class="text-sm">0.5<span class="ms-1">л</span></div>
+                        <div class="order-info__recommend-item recommend-item bg-white">
+                          <div class="recommend-item__info d-flex"><img src="./img/pepsi.png" alt="Pepsi 0.33л">
+                            <div class="d-flex flex-column justify-content-between w-100 ms-2 mt-2 mb-2">
+                              <div class="text-strong text-sm">Сидр Sommersby</div>
+                              <div class="d-flex justify-content-between">
+                                <div class="text-sm">88<span class="ms-1">грн</span></div>
+                                <div class="text-sm">0.5<span class="ms-1">л</span></div>
+                              </div>
                             </div>
                           </div>
+                          <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
                         </div>
-                        <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Добавить</button>
                       </div>
                     </div>
                   </div>
@@ -683,6 +895,23 @@
       </div>
     </div>
     <!-- Order completed modal end-->
+    <!-- Callback modal-->
+    <div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-primary" type="button">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Callback modal end-->
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
     <script src="js/scripts.min.js"></script>
