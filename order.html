@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>404
+    <title>Суши
     </title>
     <!-- Mobile Specific Meta Tag-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -165,15 +165,185 @@
       </div>
     </div>
     <main class="site-wrapper">
-      <section class="error-page">
+      <section class="order">
         <div class="container">
           <div class="row">
-            <div class="col-12">
-              <div class="error-page__header d-flex justify-content-between align-items-center">
-                <div class="error-page__message"><strong>Упс!</strong> Здесь ничего нет!</div><a class="btn btn-border btn-white btn-green text-uppercase text-strong px-5" href="index.html">На главную</a>
+            <div class="col-lg-7">
+              <h1 class="profile__title text-strong text-lg text-uppercase">Оформление заказа</h1>
+              <ul class="nav nav-tabs profile-nav profile__tabs-nav" id="orderTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-border btn-black-border text-strong text-uppercase active" id="new-user-tab" data-bs-toggle="tab" data-bs-target="#new-user" type="button" role="tab" aria-controls="new-user" aria-selected="true">Я новый пользователь</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="btn btn-border btn-black-border text-strong text-uppercase" id="has-account-tab" data-bs-toggle="tab" data-bs-target="#has-account" type="button" role="tab" aria-controls="has-account" aria-selected="false">У меня есть аккаунт</button>
+                </li>
+                <li class="nav-item" role="presentation"></li>
+              </ul>
+              <div class="tab-content" id="orderAccountContent">
+                <div class="tab-pane fade show active" id="new-user" role="tabpanel" aria-labelledby="new-user-tab">
+                  <div class="cart__form">
+                    <form action="">
+                      <div class="accordion order-accordion" id="orderAccordion">
+                        <div class="accordion-item">
+                          <button class="accordion-button" id="headingOne" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Личные данные</button>
+                          <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne">
+                            <div class="accordion-body">
+                              <div class="row">
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="firstName">Имя</label>
+                                  <input class="form-control form-input" id="firstName" type="text" aria-label="First name" required>
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="surName">Фамилия</label>
+                                  <input class="form-control form-input" id="surName" type="text" aria-label="surName" required>
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formNumber">Телефон</label>
+                                  <input class="form-control form-input" id="formNumber" type="tel" aria-label="Телефон" required>
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formEmail">email</label>
+                                  <input class="form-control form-input" id="formEmail" type="email" aria-label="email">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button class="accordion-button" id="headingTwo" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Дополнительно</button>
+                          <div class="accordion-collapse collapse show" id="collapseTwo" aria-labelledby="headingTwo">
+                            <div class="accordion-body">
+                              <div class="row">
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formPersons">Количество персон</label>
+                                  <select class="form-select form-input" id="formPersons" aria-label="Количество персон">
+                                    <option selected="">1</option>
+                                    <option value="1">2</option>
+                                    <option value="2">3</option>
+                                    <option value="3">4</option>
+                                  </select>
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formSticks"> Палочки</label>
+                                  <select class="form-select form-input" id="formSticks" aria-label="Палочки">
+                                    <option selected="">Стандартные</option>
+                                    <option value="1">Учебные</option>
+                                  </select>
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formTimeDelivery">Время доставки</label>
+                                  <select class="form-select form-input" id="formTimeDelivery" aria-label="Время доставки">
+                                    <option selected="">К определенному времени</option>
+                                  </select>
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formDate">Дата</label>
+                                  <select class="form-select form-input w-100" id="formDate" aria-label="Дата">
+                                    <option selected="">Сегодня</option>
+                                    <option value="1">Завтра</option>
+                                    <option value="2">11.07.21</option>
+                                    <option value="3">12.07.21</option>
+                                  </select>
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formTime">Время</label>
+                                  <select class="form-select form-input w-100" id="formTime" aria-label="Время">
+                                    <option selected="">14:45</option>
+                                    <option value="1">15:00</option>
+                                    <option value="2">15:15</option>
+                                    <option value="3">15:30</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button class="accordion-button" id="headingThree" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Адрес доставки</button>
+                          <div class="accordion-collapse collapse show" id="collapseThree" aria-labelledby="headingThree">
+                            <div class="accordion-body">
+                              <div class="row">
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formAddress">Улица</label>
+                                  <input class="form-control form-input" id="formAddress" type="text" aria-label="Улица">
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formHomeNum">Номер дома</label>
+                                  <input class="form-control form-input" id="formHomeNum" type="number" aria-label="Номер дома">
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formAptNumb">Квартира</label>
+                                  <input class="form-control form-input" id="formAptNumb" type="number" aria-label="Квартира">
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formIntercom">Домофон</label>
+                                  <input class="form-control form-input" id="formIntercom" type="number" aria-label="Домофон">
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formFloor">Этаж</label>
+                                  <input class="form-control form-input" id="formFloor" type="number" aria-label="Этаж">
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formComment">Комментарий</label>
+                                  <input class="form-control form-input" id="formComment" type="text" aria-label="Комментарий">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button class="accordion-button" id="headingFour" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Оплата</button>
+                          <div class="accordion-collapse collapse show" id="collapseFour" aria-labelledby="headingFour">
+                            <div class="accordion-body">
+                              <div class="row">
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formPayment">Способ оплаты</label>
+                                  <select class="form-select form-input" id="formPayment" aria-label="Способ оплаты">
+                                    <option selected="">Наличными при получении</option>
+                                    <option value="1">Банковской картой</option>
+                                  </select>
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formDelivery">Способ доставки</label>
+                                  <select class="form-select form-input" id="formDelivery" aria-label="Способ доставки">
+                                    <option selected="">Курьером</option>
+                                    <option value="1">Самовывоз</option>
+                                  </select>
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formRestMoney">Нужна сдача с</label>
+                                  <input class="form-control form-input" id="formRestMoney" type="text" aria-label="Сдача с">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="has-account" role="tabpanel" aria-labelledby="has-account-tab">У меня есть</div>
               </div>
-              <div class="error-page__404">
-                <h1>404</h1>
+            </div>
+            <div class="col-lg-5">
+              <div class="order-card">
+                <div class="order-card__header">
+                  <div class="d-flex justify-content-between">
+                    <div class="order-card__header-title mb-4">Ваш заказ</div><a class="order-card__header-edit mb-4" href="#">Редактировать</a>
+                  </div>
+                  <p>3 товара на сумму 8888 грн.</p>
+                </div>
+                <div class="order-card__body">
+                  <div class="d-flex justify-content-between">
+                    <p>Доставка:</p>
+                    <p>0 грн</p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="mb-5">Сумма заказа:</p>
+                    <p class="text-strong mb-5">8888 грн</p>
+                  </div>
+                  <button class="btn btn-solid d-block w-100 text-strong text-uppercase">Заказа подтверждаю</button>
+                </div>
               </div>
             </div>
           </div>
