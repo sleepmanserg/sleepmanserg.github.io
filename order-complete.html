@@ -171,26 +171,22 @@
             <div class="col-lg-5">
               <h2 class="text-lg text-uppercase mb-4">Спасибо за заказ</h2>
               <p class="order-complete-text">Мы готовим для вас заказ, копию заказа мы отправили вам на почту, так же информацию о заказе  вы можете посмотреть в моих заказах.</p>
-              <section class="subscribe">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="subscribe-inner">
-                        <form class="subscribe-form">
-                          <div class="d-flex align-items-center w-100">
-                            <label class="form-label text-strong" for="subscribeMail">Подпишитесь на новости и акции</label>
-                            <div class="subscribe-form__input d-flex">
-                              <input class="form-control" id="subscribeMail" type="email" aria-describedby="emailSubscribe" placeholder="Введите e-mail">
-                              <button class="btn btn-border btn-turq text-strong" type="submit">Подписаться</button>
-                            </div>
-                          </div>
-                        </form>
-                        <div class="subscribe-socials"><a class="btn btn-white btn-icon" href="#"><i class="grf-facebook"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a></div>
+              <div class="col-12">
+                <div class="subscribe-inner subscribe-order-complete subscribe">
+                  <label class="form-label text-strong" for="subscribeMail">Подпишитесь на новости и акции</label>
+                  <div class="d-flex justify-content-between w-100">
+                    <form class="subscribe-form">
+                      <div class="d-flex align-items-center w-100">
+                        <div class="subscribe-form__input d-flex">
+                          <input class="form-control" id="subscribeMail" type="email" aria-describedby="emailSubscribe" placeholder="Введите e-mail">
+                          <button class="btn btn-border btn-turq text-strong" type="submit">Подписаться</button>
+                        </div>
                       </div>
-                    </div>
+                    </form>
+                    <div class="subscribe-socials"><a class="btn btn-white btn-icon" href="#"><i class="grf-facebook"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a></div>
                   </div>
                 </div>
-              </section>
+              </div>
             </div>
             <div class="col-lg-6">
               <div class="order-card">
@@ -376,9 +372,9 @@
               <div class="authorization-form-btns d-flex justify-content-between">
                 <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit">Войти</button>
               </div>
-              <div class="forgot d-flex justify-content-between">
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" aria-label="Close">Зарегистрироваться</button>
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
+              <div class="forgot d-flex">
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" aria-label="Close">Регистрация</button>
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
               </div>
             </form>
           </div>
@@ -395,7 +391,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title text-center text-strong text-uppercase m-0" id="registerModalLabel">Зарегистрироваться</h5>
+            <h5 class="modal-title text-center text-strong text-uppercase m-0" id="registerModalLabel">Регистрация</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
           </div>
           <div class="modal-body">
@@ -413,11 +409,11 @@
                 </div>
               </div>
               <div class="authorization-form-btns d-flex justify-content-between">
-                <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit">Зарегистрироваться</button>
+                <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit">Регистрация</button>
               </div>
-              <div class="forgot d-flex justify-content-between">
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal" aria-label="Close">Войти</button>
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
+              <div class="forgot d-flex">
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal" aria-label="Close">Войти</button>
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
               </div>
             </form>
           </div>

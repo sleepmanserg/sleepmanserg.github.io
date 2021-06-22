@@ -179,13 +179,13 @@
           <div class="profile-personal-info personal-info tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
             <div class="container profile__container">
               <div class="row">
-                <div class="col-3">
+                <div class="col-lg-3 col-md-3">
                   <div class="personal-info__avatar"><img src="./img/avatar.png" alt="Аватар">
                     <div class="info-avatar__logged"><i class="grf-facebook"></i></div>
                   </div>
                   <div class="personal-info__name text-strong">Константин</div>
                 </div>
-                <div class="col-8 offset-1">
+                <div class="col-lg-8 col-md-8 offset-md-1 offset-lg-1">
                   <h2 class="personal-info__title text-strong text-md text-uppercase">Ваши данные</h2>
                   <div class="personal-info__data profile-data d-flex justify-content-between flex-wrap">
                     <div class="profile-data__inner">
@@ -206,8 +206,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-3"></div>
-                <div class="col-8 offset-1">
+                <div class="col-lg-8 col-md-8 offset-md-4 offset-lg-4">
                   <h2 class="personal-info__title text-strong text-md text-uppercase">Адрес доставки</h2>
                   <div class="personal-info__data profile-data d-flex justify-content-between flex-wrap">
                     <div class="profile-data__inner">
@@ -236,8 +235,8 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-lg-8 col-md-8 offset-lg-4 offset-md-4 d-flex justify-content-center"><a class="btn btn-border btn-black-border text-strong text-uppercase w-100" href="account-edit.html">Изменить данные</a></div>
               </div>
-              <div class="d-flex justify-content-center"><a class="btn btn-border btn-black-border text-strong text-uppercase active" href="#">Изменить данные</a></div>
             </div>
           </div>
           <div class="tab-pane fade order-history" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">
@@ -603,9 +602,9 @@
               <div class="authorization-form-btns d-flex justify-content-between">
                 <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit">Войти</button>
               </div>
-              <div class="forgot d-flex justify-content-between">
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" aria-label="Close">Зарегистрироваться</button>
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
+              <div class="forgot d-flex">
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" aria-label="Close">Регистрация</button>
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
               </div>
             </form>
           </div>
@@ -622,7 +621,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title text-center text-strong text-uppercase m-0" id="registerModalLabel">Зарегистрироваться</h5>
+            <h5 class="modal-title text-center text-strong text-uppercase m-0" id="registerModalLabel">Регистрация</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
           </div>
           <div class="modal-body">
@@ -640,11 +639,11 @@
                 </div>
               </div>
               <div class="authorization-form-btns d-flex justify-content-between">
-                <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit">Зарегистрироваться</button>
+                <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit">Регистрация</button>
               </div>
-              <div class="forgot d-flex justify-content-between">
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal" aria-label="Close">Войти</button>
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
+              <div class="forgot d-flex">
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal" aria-label="Close">Войти</button>
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
               </div>
             </form>
           </div>

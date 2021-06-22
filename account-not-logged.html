@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>404
+    <title>
     </title>
     <!-- Mobile Specific Meta Tag-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -165,15 +165,272 @@
       </div>
     </div>
     <main class="site-wrapper">
-      <section class="error-page">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="error-page__header d-flex justify-content-between align-items-center">
-                <div class="error-page__message"><strong>Упс!</strong> Здесь ничего нет!</div><a class="btn btn-border btn-white btn-green text-uppercase text-strong px-5" href="index.html">На главную</a>
-              </div>
-              <div class="error-page__404">
-                <h1>404</h1>
+      <section class="profile">
+        <div class="profile__header">
+          <h1 class="profile__title text-strong text-lg text-center text-uppercase">Личный кабинет</h1>
+          <nav class="profile__nav">
+            <div class="profile__tabs-nav nav nav-tabs d-flex justify-content-center flex-wrap" id="nav-tab" role="tablist">
+              <button class="btn btn-border btn-black-border text-strong text-uppercase active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="true">Личные данные</button>
+              <button class="btn btn-border btn-black-border text-strong text-uppercase" id="nav-history-tab" data-bs-toggle="tab" data-bs-target="#nav-history" type="button" role="tab" aria-controls="nav-history" aria-selected="false">История заказов</button>
+            </div>
+          </nav>
+        </div>
+        <div class="tab-content profile-content" id="profile-tabContent">
+          <div class="profile-personal-info personal-info tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="container profile__container">
+              <form class="row profile-edit-form" action="" id="profileEditForm">
+                <div class="col-3">
+                  <div class="personal-info__avatar"><img src="./img/avatar.png" alt="Аватар">
+                    <div class="info-avatar__logged"><i class="grf-facebook"></i></div>
+                  </div>
+                  <div class="personal-info__name text-strong">Константин</div>
+                </div>
+                <div class="col-8 offset-1">
+                  <h2 class="personal-info__title text-strong text-md text-uppercase">Ваши данные</h2>
+                  <div class="personal-info__data profile-data d-flex justify-content-between flex-wrap">
+                    <div class="profile-data__inner">
+                      <label class="profile-data__label text-sm form-label">Имя</label>
+                      <input class="profile-data__info text-strong text-sm form-input" type="text">
+                    </div>
+                    <div class="profile-data__inner">
+                      <label class="profile-data__label text-sm ms-auto form-label">Фамилия</label>
+                      <input class="profile-data__info text-strong text-sm form-input" type="text">
+                    </div>
+                    <div class="profile-data__inner">
+                      <label class="profile-data__label text-sm form-label">Телефон</label>
+                      <input class="profile-data__info text-strong text-sm form-input" type="tel">
+                    </div>
+                    <div class="profile-data__inner">
+                      <label class="profile-data__label text-sm form-label">email</label>
+                      <input class="profile-data__info text-strong text-sm form-input" type="text">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-8 offset-4">
+                  <h2 class="personal-info__title text-strong text-md text-uppercase">Адрес доставки</h2>
+                  <div class="personal-info__data profile-data d-flex justify-content-between flex-wrap">
+                    <div class="profile-data__inner">
+                      <label class="profile-data__label text-sm form-label">Улица</label>
+                      <input class="profile-data__info text-strong text-sm form-input" type="text">
+                    </div>
+                    <div class="profile-data__inner">
+                      <label class="profile-data__label text-sm ms-auto form-label">Номер дома</label>
+                      <input class="profile-data__info text-strong text-sm form-input" type="number">
+                    </div>
+                    <div class="profile-data__inner">
+                      <label class="profile-data__label text-sm form-label">Квартира</label>
+                      <input class="profile-data__info text-strong text-sm form-input" type="number">
+                    </div>
+                    <div class="profile-data__inner">
+                      <label class="profile-data__label text-sm form-label">Этаж</label>
+                      <input class="profile-data__info text-strong text-sm form-input" type="number">
+                    </div>
+                    <div class="profile-data__inner">
+                      <label class="profile-data__label text-sm form-label">Домофон</label>
+                      <input class="profile-data__info text-strong text-sm form-input" type="number">
+                    </div>
+                    <div class="profile-data__inner">
+                      <label class="profile-data__label text-sm form-label">Комменатарий</label>
+                      <textarea class="profile-data__info text-strong text-sm form-input" type="text" rows="1"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-8 offset-4">
+                  <div class="d-flex justify-content-center"><a class="btn btn-grey text-strong text-uppercase active text-white px-5 w-100" href="#">Сохранить изменения</a></div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="tab-pane fade order-history" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="d-flex justify-content-between">
+                    <nav class="nav nav-tabs flex-column" id="orderHistoryTab" role="tablist">
+                      <div class="text-strong text-uppercase text-md mb-4">Ваши заказы</div>
+                      <button class="order-history-btn active" id="order-history-tab_01" data-bs-toggle="tab" data-bs-target="#orderHistory_01" type="button" role="tab" aria-controls="orderHistory_01" aria-selected="true"><span class="text-sm">Заказ №</span><span class="text-sm">728</span><span class="d-block text-strong text-sm mt-3">28 сентября 2021</span></button>
+                      <button class="order-history-btn" id="order-history-tab_02" data-bs-toggle="tab" data-bs-target="#orderHistory_02" type="button" role="tab" aria-controls="orderHistory_02" aria-selected="false"><span class="text-sm">Заказ №</span><span class="text-sm">105</span><span class="d-block text-strong text-sm mt-3">17 июля 2021</span></button>
+                      <button class="order-history-btn" id="order-history-tab_03" data-bs-toggle="tab" data-bs-target="#orderHistory_03" type="button" role="tab" aria-controls="orderHistory_03" aria-selected="false"><span class="text-sm">Заказ №</span><span class="text-sm">504</span><span class="d-block text-strong text-sm mt-3">3 июля 2021</span></button>
+                    </nav>
+                    <div class="tab-content" id="orderHistoryTabContent">
+                      <div class="tab-pane fade show active" id="orderHistory_01" role="tabpanel" aria-labelledby="order-history-tab_01">
+                        <div class="order-history-tab-header d-flex">
+                          <div class="text-strong text-uppercase text-24 me-3">Заказ №<span class="text-strong text-24">728</span></div>
+                          <div class="text-md">28 сентября 2021</div>
+                        </div>
+                        <div class="order-history-item">
+                          <div class="cart-item d-flex align-items-center">
+                            <div class="cart-item__thumb"><img src="./img/slider/01.png" alt=""></div>
+                            <div class="cart-item__body d-flex">
+                              <div class="cart-item__info">
+                                <div class="d-flex justify-content-between flex-wrap">
+                                  <div class="cart-item__name text-strong text-md">Филадельфия классик</div>
+                                </div>
+                                <div class="cart-item__descr text-sm">Нежный ролл с сыром Филадельфия и свежим лососем</div>
+                                <div class="d-flex">
+                                  <div class="cart-item__weight text-strong text-sm me-5">120<span class="ms-1">грн</span></div>
+                                  <div class="cart-item__name text-strong text-sm text-lowercase me-5">8 шт.</div>
+                                  <div class="cart-item__weight text-strong text-sm me-5">8888<span class="ms-1">г</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cart-item d-flex align-items-center">
+                            <div class="cart-item__thumb"><img src="./img/slider/02.png" alt=""></div>
+                            <div class="cart-item__body d-flex">
+                              <div class="cart-item__info">
+                                <div class="cart-item__name text-strong text-md">
+                                  <div class="d-flex justify-content-between flex-wrap">
+                                    <div class="cart-item__name text-strong text-md">Филадельфия классик</div>
+                                  </div>
+                                </div>
+                                <div class="cart-item__descr text-sm">Нежный ролл с сыром Филадельфия и свежим лососем</div>
+                                <div class="d-flex">
+                                  <div class="cart-item__weight text-strong text-sm me-5">120<span class="ms-1">грн</span></div>
+                                  <div class="cart-item__name text-strong text-sm text-lowercase me-5">8 шт.</div>
+                                  <div class="cart-item__weight text-strong text-sm me-5">8888<span class="ms-1">г</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cart-item d-flex align-items-center">
+                            <div class="cart-item__thumb"><img src="./img/slider/01.png" alt=""></div>
+                            <div class="cart-item__body d-flex">
+                              <div class="cart-item__info">
+                                <div class="cart-item__name text-strong text-md">
+                                  <div class="d-flex justify-content-between flex-wrap">
+                                    <div class="cart-item__name text-strong text-md">Филадельфия классик</div>
+                                  </div>
+                                </div>
+                                <div class="cart-item__descr text-sm">Нежный ролл с сыром Филадельфия и свежим лососем</div>
+                                <div class="d-flex">
+                                  <div class="cart-item__weight text-strong text-sm me-5">120<span class="ms-1">грн</span></div>
+                                  <div class="cart-item__name text-strong text-sm text-lowercase me-5">8 шт.</div>
+                                  <div class="cart-item__weight text-strong text-sm me-5">8888<span class="ms-1">г</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="order-history-tab-footer d-flex justify-content-between align-items-start">
+                          <div class="cart-footer-price d-flex align-items-center"><span class="text-strong text-lg">Сумма заказа:</span>
+                            <div class="cart-full-price text-strong">8888<span class="text-strong">грн.</span></div>
+                          </div>
+                          <div class="cart-submit">
+                            <button class="btn btn-green btn-solid btn-icon text-strong text-uppercase"><span class="text-white">Повторить заказ</span></button>
+                            <div class="text-sm mt-3">Повторяя заказ вы можете изменить его при оформлении</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="orderHistory_02" role="tabpanel" aria-labelledby="order-history-tab_02">
+                        <div class="order-history-tab-header d-flex">
+                          <div class="text-strong text-uppercase text-24 me-3">Заказ №<span class="text-strong text-24">105</span></div>
+                          <div class="text-md">17 июля 2021</div>
+                        </div>
+                        <div class="order-history-item">
+                          <div class="cart-item d-flex align-items-center">
+                            <div class="cart-item__thumb"><img src="./img/slider/02.png" alt=""></div>
+                            <div class="cart-item__body d-flex">
+                              <div class="cart-item__info">
+                                <div class="cart-item__name text-strong text-md">
+                                  <div class="d-flex justify-content-between flex-wrap">
+                                    <div class="cart-item__name text-strong text-md">Филадельфия классик</div>
+                                  </div>
+                                </div>
+                                <div class="cart-item__descr text-sm">Нежный ролл с сыром Филадельфия и свежим лососем</div>
+                                <div class="d-flex">
+                                  <div class="cart-item__weight text-strong text-sm me-5">120<span class="ms-1">грн</span></div>
+                                  <div class="cart-item__name text-strong text-sm text-lowercase me-5">8 шт.</div>
+                                  <div class="cart-item__weight text-strong text-sm me-5">8888<span class="ms-1">г</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cart-item d-flex align-items-center">
+                            <div class="cart-item__thumb"><img src="./img/slider/01.png" alt=""></div>
+                            <div class="cart-item__body d-flex">
+                              <div class="cart-item__info">
+                                <div class="cart-item__name text-strong text-md">
+                                  <div class="d-flex justify-content-between flex-wrap">
+                                    <div class="cart-item__name text-strong text-md">Филадельфия классик</div>
+                                  </div>
+                                </div>
+                                <div class="cart-item__descr text-sm">Нежный ролл с сыром Филадельфия и свежим лососем</div>
+                                <div class="d-flex">
+                                  <div class="cart-item__weight text-strong text-sm me-5">120<span class="ms-1">грн</span></div>
+                                  <div class="cart-item__name text-strong text-sm text-lowercase me-5">8 шт.</div>
+                                  <div class="cart-item__weight text-strong text-sm me-5">8888<span class="ms-1">г</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="cart-item d-flex align-items-center">
+                            <div class="cart-item__thumb"><img src="./img/slider/02.png" alt=""></div>
+                            <div class="cart-item__body d-flex">
+                              <div class="cart-item__info">
+                                <div class="cart-item__name text-strong text-md">
+                                  <div class="d-flex justify-content-between flex-wrap">
+                                    <div class="cart-item__name text-strong text-md">Филадельфия классик</div>
+                                  </div>
+                                </div>
+                                <div class="cart-item__descr text-sm">Нежный ролл с сыром Филадельфия и свежим лососем</div>
+                                <div class="d-flex">
+                                  <div class="cart-item__weight text-strong text-sm me-5">120<span class="ms-1">грн</span></div>
+                                  <div class="cart-item__name text-strong text-sm text-lowercase me-5">8 шт.</div>
+                                  <div class="cart-item__weight text-strong text-sm me-5">8888<span class="ms-1">г</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="order-history-tab-footer d-flex justify-content-between align-items-start">
+                          <div class="cart-footer-price d-flex align-items-center"><span class="text-strong text-lg">Сумма заказа:</span>
+                            <div class="cart-full-price text-strong">5555<span class="text-strong">грн.</span></div>
+                          </div>
+                          <div class="cart-submit">
+                            <button class="btn btn-green btn-solid btn-icon text-strong text-uppercase"><span class="text-white">Повторить заказ</span></button>
+                            <div class="text-sm mt-3">Повторяя заказ вы можете изменить его при оформлении</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="orderHistory_03" role="tabpanel" aria-labelledby="order-history-tab_03">
+                        <div class="order-history-tab-header d-flex">
+                          <div class="text-strong text-uppercase text-24 me-3">Заказ №<span class="text-strong text-24">504</span></div>
+                          <div class="text-md">3 июля 2021</div>
+                        </div>
+                        <div class="order-history-item">
+                          <div class="cart-item d-flex align-items-center">
+                            <div class="cart-item__thumb"><img src="./img/slider/01.png" alt=""></div>
+                            <div class="cart-item__body d-flex">
+                              <div class="cart-item__info">
+                                <div class="cart-item__name text-strong text-md">
+                                  <div class="d-flex justify-content-between flex-wrap">
+                                    <div class="cart-item__name text-strong text-md">Филадельфия классик</div>
+                                  </div>
+                                </div>
+                                <div class="cart-item__descr text-sm">Нежный ролл с сыром Филадельфия и свежим лососем</div>
+                                <div class="d-flex">
+                                  <div class="cart-item__weight text-strong text-sm me-5">120<span class="ms-1">грн</span></div>
+                                  <div class="cart-item__name text-strong text-sm text-lowercase me-5">8 шт.</div>
+                                  <div class="cart-item__weight text-strong text-sm me-5">8888<span class="ms-1">г</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="order-history-tab-footer d-flex justify-content-between align-items-start">
+                          <div class="d-flex align-items-center"><span class="text-strong text-lg">Сумма заказа:</span>
+                            <div class="cart-full-price text-strong text-24">7777<span class="text-strong">грн.</span></div>
+                          </div>
+                          <div class="cart-submit">
+                            <button class="btn btn-green btn-solid btn-icon text-strong text-uppercase"><span class="text-white">Повторить заказ</span></button>
+                            <div class="text-sm mt-3">Повторяя заказ вы можете изменить его при оформлении</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

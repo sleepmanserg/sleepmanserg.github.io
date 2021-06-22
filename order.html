@@ -1,9 +1,8 @@
-
-<!--Menu Item--><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Суши
+    <title>
     </title>
     <!-- Mobile Specific Meta Tag-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -16,70 +15,19 @@
   <body>
     <div class="site-backdrop"></div>
     <!-- Mobile Menu-->
-    <!-- Site Header-->
-    <header class="site-header">
-      <!-- Top bar navigation-->
-      <div class="top-bar topbar">
-        <div class="topbar-inner">
-          <div class="container-fluid">
-            <div class="topbar-wrapper">
-              <div class="topbar-left search-hide">
-                <div class="btn btn-white btn-tobar__phone btn-has-dropdown">
-                  <div class="topbar__phone"><a href="#">(067) 888-88-88</a>
-                    <div class="btn-dropdown topbar__phone-dropdown"><a href="#">(067) 888-88-88</a><a href="#">(067) 888-88-88</a></div>
-                  </div><i class="grf-up"></i>
-                </div><a class="btn btn-white btn-icon" href="#"><i class="grf-google"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a>
-              </div>
-              <div class="topbar-logo search-hide"><a href="index.html"><img src="./img/logo.png" alt=""></a></div>
-              <div class="topbar-right">
-                <!-- Search form-->
-                <div class="search-form">
-                  <form id="searchForm">
-                    <input id="searchFormAutoComplete" type="text" autocomplete="off">
-                  </form>
-                </div>
-                <!-- Search form end-->
-                <!-- Search button--><a class="btn btn-white btn-icon data-toggle" href="#" data-target=".search-form, .topbar-left, .topbar-logo, .site-backdrop" data-classes="searchBarActive" data-backdrop="true" id="searchBtn"><i class="grf-search"></i></a>
-                <!-- Search button end-->
-                <div class="btn btn-white btn-icon btn-has-dropdown btn-login" type="button" data-target=".mobile-login" data-classes="active" data-backdrop="true" data-overflow="true"><i class="grf-login"></i>
-                  <div class="btn-dropdown"><a data-bs-toggle="modal" data-bs-target="#loginModal">Вход</a><a data-bs-toggle="modal" data-bs-target="#registerModal">Регистрация</a><a href="account-logged.html">Профиль</a></div>
-                </div>
-                <button class="btn btn-white btn-topbar__cart d-block" type="button" data-bs-toggle="modal" data-bs-target="#cartModal">
-                  <div class="topbar__cart"><span>3</span><span class="topbar__cart-text">Корзина</span></div>
-                </button>
-                <button class="btn btn-white btn-icon menu-toggle" type="button" data-target=".main-nav" data-classes="active" data-backdrop="true" data-overflow="true">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0H8V8H0V0ZM0 10H8V18H0V10ZM10 0H18V8H10V0ZM10 10H18V18H10V10ZM12 2V6H16V2H12ZM12 12V16H16V12H12ZM2 2V6H6V2H2ZM2 12V16H6V12H2Z" fill="black"></path>
-                  </svg><span class="text-strong">Меню</span>
-                </button>
-              </div>
+    <header class="order-header">
+      <div class="container">
+        <div class="order-header__inner"><a class="order-header-btn" href="index.html"><i class="grf-up"></i><span>Вернуться назад</span></a>
+          <div class="topbar-logo"><a href="index.html"><img src="./img/logo.png" alt=""></a></div>
+          <div class="topbar-left">
+            <div class="btn btn-white btn-tobar__phone btn-has-dropdown m-0">
+              <div class="topbar__phone"><a href="#">(067) 888-88-88</a>
+                <div class="btn-dropdown topbar__phone-dropdown"><a href="#">(067) 888-88-88</a><a href="#">(067) 888-88-88</a></div>
+              </div><i class="grf-up"></i>
             </div>
           </div>
         </div>
       </div>
-      <div class="mobile-login"><a class="login-link" data-bs-toggle="modal" data-bs-target="#loginModal">Вход</a><a class="login-link" data-bs-toggle="modal" data-bs-target="#registerModal">Регистрация</a><a href="account-logged.html">Профиль</a>
-        <div class="login-mobile-menu"><a href="#">Выход</a>
-          <button class="btn btn-green btn-icon" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal"><i class="grf-phone"></i><span>Обратный звонок</span></button>
-          <ul class="p-0 m-0 mt-5">
-            <li><a href="#">Акции</a></li>
-            <li><a href="#">Оплата и доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">Отзывы</a></li>
-            <li><a href="#">Вакансии</a></li>
-            <li><a href="#">О нас</a></li>
-          </ul>
-          <div class="d-flex"><a class="btn btn-white btn-icon" href="#"><i class="grf-google"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a></div>
-        </div>
-      </div>
-      <nav class="main-nav">
-        <div class="mobile-nav d-lg-none">
-          <div class="mobile-nav-title text-center text-white">Меню</div>
-          <button class="btn mobile-nav-close"><i class="grf-close text-white"></i></button>
-          <div class="mobile-nav-search">
-            <input type="text" placeholder="Поиск в меню">
-          </div>
-        </div><a class="main-nav__link" href="index.html"><strong class="main-nav__link-text">Главная</strong></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Акции</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link active" href="category.html"><strong class="main-nav__link-text">Суши</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Пицца</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Бургеры</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Боксы</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Десерты</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Напитки</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a>
-      </nav>
     </header>
     <!-- Cart-->
     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
@@ -259,6 +207,33 @@
                           </div>
                         </div>
                         <div class="accordion-item">
+                          <button class="accordion-button" id="headingFour" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Оплата</button>
+                          <div class="accordion-collapse collapse show" id="collapseFour" aria-labelledby="headingFour">
+                            <div class="accordion-body">
+                              <div class="row">
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formPayment">Способ оплаты</label>
+                                  <select class="form-select form-input" id="formPayment" aria-label="Способ оплаты">
+                                    <option selected="">Наличными при получении</option>
+                                    <option value="1">Банковской картой</option>
+                                  </select>
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formDelivery">Способ доставки</label>
+                                  <select class="form-select form-input" id="formDelivery" aria-label="Способ доставки">
+                                    <option selected="">Курьером</option>
+                                    <option value="1">Самовывоз</option>
+                                  </select>
+                                </div>
+                                <div class="col-6 mb-4">
+                                  <label class="form-label" for="formRestMoney">Нужна сдача с</label>
+                                  <input class="form-control form-input" id="formRestMoney" type="text" aria-label="Сдача с">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
                           <button class="accordion-button" id="headingThree" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Адрес доставки</button>
                           <div class="accordion-collapse collapse show" id="collapseThree" aria-labelledby="headingThree">
                             <div class="accordion-body">
@@ -291,33 +266,6 @@
                             </div>
                           </div>
                         </div>
-                        <div class="accordion-item">
-                          <button class="accordion-button" id="headingFour" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Оплата</button>
-                          <div class="accordion-collapse collapse show" id="collapseFour" aria-labelledby="headingFour">
-                            <div class="accordion-body">
-                              <div class="row">
-                                <div class="col-6 mb-4">
-                                  <label class="form-label" for="formPayment">Способ оплаты</label>
-                                  <select class="form-select form-input" id="formPayment" aria-label="Способ оплаты">
-                                    <option selected="">Наличными при получении</option>
-                                    <option value="1">Банковской картой</option>
-                                  </select>
-                                </div>
-                                <div class="col-6 mb-4">
-                                  <label class="form-label" for="formDelivery">Способ доставки</label>
-                                  <select class="form-select form-input" id="formDelivery" aria-label="Способ доставки">
-                                    <option selected="">Курьером</option>
-                                    <option value="1">Самовывоз</option>
-                                  </select>
-                                </div>
-                                <div class="col-6 mb-4">
-                                  <label class="form-label" for="formRestMoney">Нужна сдача с</label>
-                                  <input class="form-control form-input" id="formRestMoney" type="text" aria-label="Сдача с">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </form>
                   </div>
@@ -341,46 +289,45 @@
                   <div class="d-flex justify-content-between">
                     <p class="mb-5">Сумма заказа:</p>
                     <p class="text-strong mb-5">8888 грн</p>
-                  </div>
-                  <button class="btn btn-solid d-block w-100 text-strong text-uppercase">Заказа подтверждаю</button>
+                  </div><a class="btn btn-solid d-block w-100 text-strong text-uppercase" href="order-complete.html">Заказа подтверждаю</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- Footer-->
-      <footer class="site-footer bg-black">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-sm-6 col-md-4">
-              <ul class="site-footer__list">
-                <li><a class="site-footer__link" href="tel:+380933708223">+380 93 370 82 23</a></li>
-                <li><a class="site-footer__link" href="tel:+380933708223">+380 93 370 82 23</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-6 col-sm-6 col-md-8">
-              <ul class="site-footer__nav">
-                <li><a class="site-footer__link" href="#">Акции</a></li>
-                <li><a class="site-footer__link" href="#">Оплата и доставка</a></li>
-                <li><a class="site-footer__link" href="#">Контакты</a></li>
-                <li><a class="site-footer__link" href="#">Отзывы</a></li>
-                <li><a class="site-footer__link" href="#">Вакансии</a></li>
-                <li><a class="site-footer__link" href="#">О нас</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-12">
-              <ul class="site-footer__actions">
-                <li>
-                  <button class="btn btn-white btn-icon" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal"><i class="grf-phone"></i><span>Обратный звонок</span></button>
-                </li>
-                <li><a class="btn btn-white btn-icon" href="#"><i class="grf-login"></i><span>Личный кабинет</span></a></li>
-              </ul>
-            </div>
+    </main>
+    <!-- Footer-->
+    <footer class="site-footer bg-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 col-md-4">
+            <ul class="site-footer__list">
+              <li><a class="site-footer__link" href="tel:+380933708223">+380 93 370 82 23</a></li>
+              <li><a class="site-footer__link" href="tel:+380933708223">+380 93 370 82 23</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-sm-6 col-md-8">
+            <ul class="site-footer__nav">
+              <li><a class="site-footer__link" href="#">Акции</a></li>
+              <li><a class="site-footer__link" href="#">Оплата и доставка</a></li>
+              <li><a class="site-footer__link" href="#">Контакты</a></li>
+              <li><a class="site-footer__link" href="#">Отзывы</a></li>
+              <li><a class="site-footer__link" href="#">Вакансии</a></li>
+              <li><a class="site-footer__link" href="#">О нас</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <ul class="site-footer__actions">
+              <li>
+                <button class="btn btn-white btn-icon" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal"><i class="grf-phone"></i><span>Обратный звонок</span></button>
+              </li>
+              <li><a class="btn btn-white btn-icon" href="#"><i class="grf-login"></i><span>Личный кабинет</span></a></li>
+            </ul>
           </div>
         </div>
-      </footer>
-    </main>
+      </div>
+    </footer>
     <!-- Product card modal-->
     <div class="product-modal greenRedFood-modal modal fade" id="productModal" tabindex="-1" aria-labelledby="#productModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -517,9 +464,9 @@
               <div class="authorization-form-btns d-flex justify-content-between">
                 <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit">Войти</button>
               </div>
-              <div class="forgot d-flex justify-content-between">
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" aria-label="Close">Зарегистрироваться</button>
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
+              <div class="forgot d-flex">
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" aria-label="Close">Регистрация</button>
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
               </div>
             </form>
           </div>
@@ -536,7 +483,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title text-center text-strong text-uppercase m-0" id="registerModalLabel">Зарегистрироваться</h5>
+            <h5 class="modal-title text-center text-strong text-uppercase m-0" id="registerModalLabel">Регистрация</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
           </div>
           <div class="modal-body">
@@ -554,11 +501,11 @@
                 </div>
               </div>
               <div class="authorization-form-btns d-flex justify-content-between">
-                <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit">Зарегистрироваться</button>
+                <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit">Регистрация</button>
               </div>
-              <div class="forgot d-flex justify-content-between">
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal" aria-label="Close">Войти</button>
-                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
+              <div class="forgot d-flex">
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal" aria-label="Close">Войти</button>
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
               </div>
             </form>
           </div>
