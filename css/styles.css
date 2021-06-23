@@ -1943,6 +1943,7 @@ select.form-select {
 @media (max-width: 767.98px) {
   .product__card .cart-qty {
     min-height: 50px;
+    max-height: 50px;
   }
 }
 
