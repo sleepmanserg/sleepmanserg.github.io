@@ -1765,6 +1765,8 @@ select.form-select {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-bottom: 16px;
+  position: relative;
+  z-index: 3;
 }
 
 @media (max-width: 767.98px) {

@@ -257,6 +257,7 @@
         el.css('display', 'none');
 
         addMessage.fadeIn("slow").delay(1000).fadeOut("slow");
+
       });
     },
     toggler: () => {
