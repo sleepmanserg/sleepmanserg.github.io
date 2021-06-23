@@ -1,0 +1,1064 @@
+
+<!--Menu Item--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Home
+    </title>
+    <!-- Mobile Specific Meta Tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Vendor Styles including: Bootstrap, Font Icons, Plugins, etc.-->
+    <link rel="stylesheet" media="screen" href="css/vendor.min.css">
+    <!-- Main Template Styles-->
+    <link rel="stylesheet" media="screen" href="css/styles.min.css">
+  </head>
+  <!-- Body-->
+  <body>
+    <div class="site-backdrop"></div>
+    <!-- Mobile Menu-->
+    <!-- Site Header-->
+    <header class="site-header">
+      <!-- Top bar navigation-->
+      <div class="top-bar topbar">
+        <div class="topbar-inner">
+          <div class="container-fluid">
+            <div class="topbar-wrapper">
+              <div class="topbar-left search-hide">
+                <div class="btn btn-white btn-tobar__phone btn-has-dropdown">
+                  <div class="topbar__phone"><a href="#">(067) 888-88-88</a>
+                    <div class="btn-dropdown topbar__phone-dropdown"><a href="#">(067) 888-88-88</a><a href="#">(067) 888-88-88</a></div>
+                  </div><i class="grf-up"></i>
+                </div><a class="btn btn-white btn-icon" href="#"><i class="grf-google"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a>
+              </div>
+              <div class="topbar-logo search-hide"><a href="index.html"><img src="./img/logo.png" alt=""></a></div>
+              <div class="topbar-right">
+                <!-- Search form-->
+                <div class="search-form">
+                  <form id="searchForm">
+                    <input id="searchFormAutoComplete" type="text" autocomplete="off">
+                  </form>
+                </div>
+                <!-- Search form end-->
+                <!-- Search button--><a class="btn btn-white btn-icon data-toggle" href="#" data-target=".search-form, .topbar-left, .topbar-logo, .site-backdrop" data-classes="searchBarActive" data-backdrop="true" id="searchBtn"><i class="grf-search"></i></a>
+                <!-- Search button end-->
+                <div class="btn btn-white btn-icon btn-has-dropdown btn-login" type="button" data-target=".mobile-login" data-classes="active" data-backdrop="true" data-overflow="true"><i class="grf-login"></i>
+                  <div class="btn-dropdown"><a data-bs-toggle="modal" data-bs-target="#loginModal">Вход</a><a data-bs-toggle="modal" data-bs-target="#registerModal">Регистрация</a><a href="account-logged.html">Профиль</a></div>
+                </div>
+                <button class="btn btn-white btn-topbar__cart d-block" type="button" data-bs-toggle="modal" data-bs-target="#cartModal">
+                  <div class="topbar__cart"><span>3</span><span class="topbar__cart-text">Корзина</span></div>
+                </button>
+                <button class="btn btn-white btn-icon menu-toggle" type="button" data-target=".main-nav" data-classes="active" data-backdrop="true" data-overflow="true">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H8V8H0V0ZM0 10H8V18H0V10ZM10 0H18V8H10V0ZM10 10H18V18H10V10ZM12 2V6H16V2H12ZM12 12V16H16V12H12ZM2 2V6H6V2H2ZM2 12V16H6V12H2Z" fill="black"></path>
+                  </svg><span class="text-strong">Меню</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-login"><a class="login-link" data-bs-toggle="modal" data-bs-target="#loginModal">Вход</a><a class="login-link" data-bs-toggle="modal" data-bs-target="#registerModal">Регистрация</a><a href="account-logged.html">Профиль</a>
+        <div class="login-mobile-menu"><a href="#">Выход</a>
+          <button class="btn btn-green btn-icon" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal"><i class="grf-phone"></i><span>Обратный звонок</span></button>
+          <ul class="p-0 m-0 mt-5">
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Оплата и доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Вакансии</a></li>
+            <li><a href="#">О нас</a></li>
+          </ul>
+          <div class="d-flex"><a class="btn btn-white btn-icon" href="#"><i class="grf-google"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a></div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <div class="mobile-nav d-lg-none">
+          <div class="mobile-nav-title text-center text-white">Меню</div>
+          <button class="btn mobile-nav-close"><i class="grf-close text-white"></i></button>
+          <div class="mobile-nav-search">
+            <input type="text" placeholder="Поиск в меню">
+          </div>
+        </div><a class="main-nav__link" href="index.html"><strong class="main-nav__link-text">Главная</strong></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Акции</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link active" href="category.html"><strong class="main-nav__link-text">Суши</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Пицца</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Бургеры</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Боксы</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Десерты</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a><a class="main-nav__link" href="#"><strong class="main-nav__link-text">Напитки</strong><span class="d-lg-none main-nav__link-mobile">25 позиций</span></a>
+      </nav>
+    </header>
+    <!-- Cart-->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog cart">
+        <div class="modal-content">
+          <header class="cart-header">
+            <div class="cart-header-top d-flex justify-content-between align-items-center">
+              <h2 class="text-strong text-uppercase cart-title m-0">Ваша корзина</h2>
+              <button class="btn cart-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
+            </div>
+            <div class="cart-header-actions d-flex justify-content-between align-items-center"><span>Товары</span>
+              <button class="btn p-0" type="button" data-bs-dismiss="modal" aria-label="Close">Продолжить покупки</button>
+            </div>
+          </header>
+          <div class="cart-body">
+            <div class="cart-container">
+              <div class="cart-item d-flex">
+                <div class="cart-item__thumb"><img src="./img/slider/01.png" alt="">
+                  <label class="product__card-discount">- 10%</label>
+                </div>
+                <div class="cart-item__body d-flex justify-content-between">
+                  <div class="cart-item__info">
+                    <div class="cart-item__name text-strong text-md">Филадельфия классик</div>
+                    <div class="cart-item__descr text-sm">Нежный ролл с сыром Филадельфия и свежим лососем Нежный ролл с сыром Филадельфия и свежим лососем</div>
+                    <div class="d-flex align-items-center">
+                      <div class="cart-item__weight text-strong text-sm me-4">8<span class="ms-1">шт.</span></div>
+                      <div class="cart-item__weight text-strong text-sm me-4">8888<span class="ms-1">г</span></div>
+                    </div>
+                  </div>
+                  <div class="cart-item__meta-wrapper">
+                    <div class="cart-item__meta d-flex align-items-center">
+                      <div class="cart-qty">
+                        <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                          <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product__card-price-discount d-flex flex-column justify-content-center">
+                      <div class="product__card-price-old">5543<span>грн</span></div>
+                      <div class="product__card-price-new text-strong">5543<span>грн</span></div>
+                    </div>
+                    <div class="cart-item__remove">
+                      <button class="btn btn-border btn-black-border"><i class="grf-close"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-item d-flex">
+                <div class="cart-item__thumb"><img src="./img/slider/01.png" alt=""></div>
+                <div class="cart-item__body d-flex">
+                  <div class="cart-item__info">
+                    <div class="cart-item__name text-strong text-md">Филадельфия классик</div>
+                    <div class="cart-item__descr text-sm">Нежный ролл с сыром Филадельфия и свежим лососем Нежный ролл с сыром Филадельфия и свежим лососем</div>
+                    <div class="d-flex align-items-center">
+                      <div class="cart-item__weight text-strong text-sm me-4">8<span class="ms-1">шт.</span></div>
+                      <div class="cart-item__weight text-strong text-sm me-4">8888<span class="ms-1">г</span></div>
+                    </div>
+                  </div>
+                  <div class="cart-item__meta-wrapper">
+                    <div class="cart-item__meta d-flex align-items-center">
+                      <div class="cart-qty">
+                        <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                          <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-item__price d-flex align-items-center">5543<span>грн</span></div>
+                    <div class="cart-item__remove">
+                      <button class="btn btn-border btn-black-border"><i class="grf-close"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-footer">
+            <div class="cart-footer-price d-flex align-items-center justify-content-between px-5"><span>Сумма заказа:</span>
+              <div class="cart-full-price text-lg text-strong">8888<span class="text-strong">грн.</span></div>
+            </div>
+            <div class="cart-footer-order px-5"><a class="btn btn-green btn-solid btn-icon text-strong text-uppercase d-block" href="order.html"><span class="text-white">Оформить заказ</span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="site-wrapper">
+      <!-- - Hero banner section-->
+      <section class="hero-banner">
+        <div class="inner-container">
+          <div class="hero-carousel">
+            <div class="hero-slide"><img src="./img/hero-banner.jpg" alt=""></div>
+            <div class="hero-slide"><img src="./img/hero-banner.jpg" alt=""></div>
+            <div class="hero-slide"><img src="./img/hero-banner.jpg" alt=""></div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <section class="info-section info">
+          <div class="info-slider">
+            <div class="info-slide">
+              <div class="info-slide__header"><strong class="text-uppercase">График работы<span class="text-strong d-block">с 10:00 до 23:00</span></strong></div>
+              <div class="info-slide__body"><a class="d-block" href="tel:+380933708223">+380 93 370 82 23</a><a class="d-block" href="tel:+380980688161">+380 98 068 81 61</a></div>
+            </div>
+            <div class="info-slide">
+              <div class="info-slide__header"><strong class="text-uppercase">Скидка 10%</strong></div>
+              <div class="info-slide__body"><span class="d-block">При самовывозе и призаказе</span><strong>с 00:00 до 07:00</strong></div>
+            </div>
+            <div class="info-slide">
+              <div class="info-slide__header"><strong class="text-uppercase">Минимальный заказ<br> 888 грн</strong></div>
+              <div class="info-slide__body"><span class="d-block">По кухне — 888 грн.</span><span class="d-block">По бару — 888 грн.</span></div>
+            </div>
+            <div class="info-slide">
+              <div class="info-slide__header"><strong class="text-uppercase">Бесплатная<br>доставка</strong></div>
+              <div class="info-slide__body"><span class="d-block">- Черноморск при заказе от 150 грн</span><span class="d-block">- Александровка, Малая/Большая<br>Долина от 350 грн</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="stocks-section">
+        <div class="slick-container slider">
+          <div class="slider__header bg-black">
+            <div class="container d-flex align-items-center">
+              <button class="slider__btn prev-arrow" type="button"><i class="grf-arrow-l"></i></button>
+              <h2 class="slider__title">Акции</h2>
+              <button class="slider__btn next-arrow" type="button"><i class="grf-arrow-r"></i></button>
+            </div>
+          </div>
+          <div class="container p-0">
+            <div class="stocks-carousel">
+              <div class="slide">
+                <div class="product__card">
+                  <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
+                  <!-- Product card image end-->
+                  <div class="product__card-body">
+                    <!-- Product discount-->
+                    <div class="product__card-discount-wrapper">
+                      <label class="product__card-discount">- 10%</label>
+                    </div>
+                    <!-- Product discount end-->
+                    <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
+                    <!-- Product card name end-->
+                    <!-- Product card hidden content with full description-->
+                    <div class="product__card-holder">
+                      <div class="product__card-hidden">
+                        <!-- Product card full description-->
+                        <div class="product__card-hidden-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                        <!-- Product card full description end-->
+                        <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
+                          <!-- Product card price-->
+                          <div class="product__card-hidden-price">108<span>грн.</span></div>
+                          <!-- Product card price end-->
+                          <!-- Product card weight-->
+                          <div class="product__card-hidden-weight">220<span>г</span></div>
+                          <!-- Product card weight end-->
+                        </div>
+                        <div class="product__card-order__btn">
+                          <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                          <div class="cart-qty">
+                            <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                              <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Product card hidden content with full description end-->
+                    <!-- Product card short desctiption-->
+                    <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                    <!-- Product card short desctiption end-->
+                  </div>
+                  <div class="product__card-footer d-flex justify-content-between align-items-end">
+                    <!-- Product card price-->
+                    <div class="product__card-price text-strong">122<span>грн.</span></div>
+                    <!-- Product card price end-->
+                    <!-- Product card price with discount-->
+                    <div class="product__card-price-discount d-none">
+                      <div class="product__card-price-old">120<span>грн</span></div>
+                      <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                    </div>
+                    <!-- Product card price with discount end-->
+                    <!-- Product card weight-->
+                    <div class="product__card-weight text-strong">210<span>г.</span></div>
+                    <!-- Product card weight end-->
+                    <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a>
+                      <div class="cart-qty">
+                        <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                          <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product__card">
+                  <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
+                  <!-- Product card image end-->
+                  <div class="product__card-body">
+                    <!-- Product discount-->
+                    <div class="product__card-discount-wrapper">
+                      <label class="product__card-discount">- 10%</label>
+                    </div>
+                    <!-- Product discount end-->
+                    <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
+                    <!-- Product card name end-->
+                    <!-- Product card hidden content with full description-->
+                    <div class="product__card-holder">
+                      <div class="product__card-hidden">
+                        <!-- Product card full description-->
+                        <div class="product__card-hidden-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                        <!-- Product card full description end-->
+                        <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
+                          <!-- Product card price-->
+                          <div class="product__card-hidden-price">108<span>грн.</span></div>
+                          <!-- Product card price end-->
+                          <!-- Product card weight-->
+                          <div class="product__card-hidden-weight">220<span>г</span></div>
+                          <!-- Product card weight end-->
+                        </div>
+                        <div class="product__card-order__btn">
+                          <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                          <div class="cart-qty">
+                            <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                              <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Product card hidden content with full description end-->
+                    <!-- Product card short desctiption-->
+                    <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                    <!-- Product card short desctiption end-->
+                  </div>
+                  <div class="product__card-footer d-flex justify-content-between align-items-end">
+                    <!-- Product card price-->
+                    <div class="product__card-price text-strong">122<span>грн.</span></div>
+                    <!-- Product card price end-->
+                    <!-- Product card price with discount-->
+                    <div class="product__card-price-discount d-none">
+                      <div class="product__card-price-old">120<span>грн</span></div>
+                      <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                    </div>
+                    <!-- Product card price with discount end-->
+                    <!-- Product card weight-->
+                    <div class="product__card-weight text-strong">210<span>г.</span></div>
+                    <!-- Product card weight end-->
+                    <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a>
+                      <div class="cart-qty">
+                        <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                          <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product__card">
+                  <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
+                  <!-- Product card image end-->
+                  <div class="product__card-body">
+                    <!-- Product discount-->
+                    <div class="product__card-discount-wrapper">
+                      <label class="product__card-discount">- 10%</label>
+                    </div>
+                    <!-- Product discount end-->
+                    <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
+                    <!-- Product card name end-->
+                    <!-- Product card hidden content with full description-->
+                    <div class="product__card-holder">
+                      <div class="product__card-hidden">
+                        <!-- Product card full description-->
+                        <div class="product__card-hidden-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                        <!-- Product card full description end-->
+                        <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
+                          <!-- Product card price-->
+                          <div class="product__card-hidden-price">108<span>грн.</span></div>
+                          <!-- Product card price end-->
+                          <!-- Product card weight-->
+                          <div class="product__card-hidden-weight">220<span>г</span></div>
+                          <!-- Product card weight end-->
+                        </div>
+                        <div class="product__card-order__btn">
+                          <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                          <div class="cart-qty">
+                            <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                              <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Product card hidden content with full description end-->
+                    <!-- Product card short desctiption-->
+                    <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                    <!-- Product card short desctiption end-->
+                  </div>
+                  <div class="product__card-footer d-flex justify-content-between align-items-end">
+                    <!-- Product card price-->
+                    <div class="product__card-price text-strong">122<span>грн.</span></div>
+                    <!-- Product card price end-->
+                    <!-- Product card price with discount-->
+                    <div class="product__card-price-discount d-none">
+                      <div class="product__card-price-old">120<span>грн</span></div>
+                      <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                    </div>
+                    <!-- Product card price with discount end-->
+                    <!-- Product card weight-->
+                    <div class="product__card-weight text-strong">210<span>г.</span></div>
+                    <!-- Product card weight end-->
+                    <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a>
+                      <div class="cart-qty">
+                        <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                          <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product__card">
+                  <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
+                  <!-- Product card image end-->
+                  <div class="product__card-body">
+                    <!-- Product discount-->
+                    <div class="product__card-discount-wrapper">
+                      <label class="product__card-discount">- 10%</label>
+                    </div>
+                    <!-- Product discount end-->
+                    <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
+                    <!-- Product card name end-->
+                    <!-- Product card hidden content with full description-->
+                    <div class="product__card-holder">
+                      <div class="product__card-hidden">
+                        <!-- Product card full description-->
+                        <div class="product__card-hidden-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                        <!-- Product card full description end-->
+                        <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
+                          <!-- Product card price-->
+                          <div class="product__card-hidden-price">108<span>грн.</span></div>
+                          <!-- Product card price end-->
+                          <!-- Product card weight-->
+                          <div class="product__card-hidden-weight">220<span>г</span></div>
+                          <!-- Product card weight end-->
+                        </div>
+                        <div class="product__card-order__btn">
+                          <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                          <div class="cart-qty">
+                            <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                              <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Product card hidden content with full description end-->
+                    <!-- Product card short desctiption-->
+                    <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                    <!-- Product card short desctiption end-->
+                  </div>
+                  <div class="product__card-footer d-flex justify-content-between align-items-end">
+                    <!-- Product card price-->
+                    <div class="product__card-price text-strong">122<span>грн.</span></div>
+                    <!-- Product card price end-->
+                    <!-- Product card price with discount-->
+                    <div class="product__card-price-discount d-none">
+                      <div class="product__card-price-old">120<span>грн</span></div>
+                      <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                    </div>
+                    <!-- Product card price with discount end-->
+                    <!-- Product card weight-->
+                    <div class="product__card-weight text-strong">210<span>г.</span></div>
+                    <!-- Product card weight end-->
+                    <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a>
+                      <div class="cart-qty">
+                        <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                          <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product__card">
+                  <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
+                  <!-- Product card image end-->
+                  <div class="product__card-body">
+                    <!-- Product discount-->
+                    <div class="product__card-discount-wrapper">
+                      <label class="product__card-discount">- 10%</label>
+                    </div>
+                    <!-- Product discount end-->
+                    <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
+                    <!-- Product card name end-->
+                    <!-- Product card hidden content with full description-->
+                    <div class="product__card-holder">
+                      <div class="product__card-hidden">
+                        <!-- Product card full description-->
+                        <div class="product__card-hidden-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                        <!-- Product card full description end-->
+                        <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
+                          <!-- Product card price-->
+                          <div class="product__card-hidden-price">108<span>грн.</span></div>
+                          <!-- Product card price end-->
+                          <!-- Product card weight-->
+                          <div class="product__card-hidden-weight">220<span>г</span></div>
+                          <!-- Product card weight end-->
+                        </div>
+                        <div class="product__card-order__btn">
+                          <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                          <div class="cart-qty">
+                            <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                              <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Product card hidden content with full description end-->
+                    <!-- Product card short desctiption-->
+                    <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                    <!-- Product card short desctiption end-->
+                  </div>
+                  <div class="product__card-footer d-flex justify-content-between align-items-end">
+                    <!-- Product card price-->
+                    <div class="product__card-price text-strong">122<span>грн.</span></div>
+                    <!-- Product card price end-->
+                    <!-- Product card price with discount-->
+                    <div class="product__card-price-discount d-none">
+                      <div class="product__card-price-old">120<span>грн</span></div>
+                      <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                    </div>
+                    <!-- Product card price with discount end-->
+                    <!-- Product card weight-->
+                    <div class="product__card-weight text-strong">210<span>г.</span></div>
+                    <!-- Product card weight end-->
+                    <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a>
+                      <div class="cart-qty">
+                        <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                          <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product__card">
+                  <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
+                  <!-- Product card image end-->
+                  <div class="product__card-body">
+                    <!-- Product discount-->
+                    <div class="product__card-discount-wrapper">
+                      <label class="product__card-discount">- 10%</label>
+                    </div>
+                    <!-- Product discount end-->
+                    <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
+                    <!-- Product card name end-->
+                    <!-- Product card hidden content with full description-->
+                    <div class="product__card-holder">
+                      <div class="product__card-hidden">
+                        <!-- Product card full description-->
+                        <div class="product__card-hidden-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                        <!-- Product card full description end-->
+                        <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
+                          <!-- Product card price-->
+                          <div class="product__card-hidden-price">108<span>грн.</span></div>
+                          <!-- Product card price end-->
+                          <!-- Product card weight-->
+                          <div class="product__card-hidden-weight">220<span>г</span></div>
+                          <!-- Product card weight end-->
+                        </div>
+                        <div class="product__card-order__btn">
+                          <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                          <div class="cart-qty">
+                            <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                              <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Product card hidden content with full description end-->
+                    <!-- Product card short desctiption-->
+                    <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                    <!-- Product card short desctiption end-->
+                  </div>
+                  <div class="product__card-footer d-flex justify-content-between align-items-end">
+                    <!-- Product card price-->
+                    <div class="product__card-price text-strong">122<span>грн.</span></div>
+                    <!-- Product card price end-->
+                    <!-- Product card price with discount-->
+                    <div class="product__card-price-discount d-none">
+                      <div class="product__card-price-old">120<span>грн</span></div>
+                      <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                    </div>
+                    <!-- Product card price with discount end-->
+                    <!-- Product card weight-->
+                    <div class="product__card-weight text-strong">210<span>г.</span></div>
+                    <!-- Product card weight end-->
+                    <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a>
+                      <div class="cart-qty">
+                        <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                          <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="product__card">
+                  <!-- Product card image--><a class="product__card-thumb" data-bs-toggle="modal" data-bs-target="#productModal"><img src="./img/slider/01.png" alt=""></a>
+                  <!-- Product card image end-->
+                  <div class="product__card-body">
+                    <!-- Product discount-->
+                    <div class="product__card-discount-wrapper">
+                      <label class="product__card-discount">- 10%</label>
+                    </div>
+                    <!-- Product discount end-->
+                    <!-- Product card name--><a class="text-strong product__card-title" data-bs-toggle="modal" data-bs-target="#productModal">Калифорния в тобике</a>
+                    <!-- Product card name end-->
+                    <!-- Product card hidden content with full description-->
+                    <div class="product__card-holder">
+                      <div class="product__card-hidden">
+                        <!-- Product card full description-->
+                        <div class="product__card-hidden-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                        <!-- Product card full description end-->
+                        <div class="product__card-hidden-info d-flex justify-content-between align-items-end">
+                          <!-- Product card price-->
+                          <div class="product__card-hidden-price">108<span>грн.</span></div>
+                          <!-- Product card price end-->
+                          <!-- Product card weight-->
+                          <div class="product__card-hidden-weight">220<span>г</span></div>
+                          <!-- Product card weight end-->
+                        </div>
+                        <div class="product__card-order__btn">
+                          <button class="btn-border btn-green btn addToCartBtn" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                          <div class="cart-qty">
+                            <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                              <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Product card hidden content with full description end-->
+                    <!-- Product card short desctiption-->
+                    <div class="product__card-descr text-sm">Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</div>
+                    <!-- Product card short desctiption end-->
+                  </div>
+                  <div class="product__card-footer d-flex justify-content-between align-items-end">
+                    <!-- Product card price-->
+                    <div class="product__card-price text-strong">122<span>грн.</span></div>
+                    <!-- Product card price end-->
+                    <!-- Product card price with discount-->
+                    <div class="product__card-price-discount d-none">
+                      <div class="product__card-price-old">120<span>грн</span></div>
+                      <div class="product__card-price-new text-strong">99<span>грн</span></div>
+                    </div>
+                    <!-- Product card price with discount end-->
+                    <!-- Product card weight-->
+                    <div class="product__card-weight text-strong">210<span>г.</span></div>
+                    <!-- Product card weight end-->
+                    <div class="product__card-order__btn w-100 mt-4"><a class="btn-border btn-green btn addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</a>
+                      <div class="cart-qty">
+                        <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                          <input type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="promo bg-black">
+        <div class="inner-container container-fluid">
+          <div class="row promo-slider">
+            <div class="col-lg-3 col-md-6">
+              <div class="promo-banner">
+                <div class="promo-banner__header">
+                  <h3 class="promo-banner__title text-strong">Promo title</h3>
+                </div>
+                <div class="promo-banner__body"><img src="./img/promo/01.jpg" alt="">
+                  <h3 class="promo-banner__title text-strong">Promo image</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="promo-banner">
+                <div class="promo-banner__header">
+                  <h3 class="promo-banner__title text-strong">Promo title</h3>
+                </div>
+                <div class="promo-banner__body"><img src="./img/promo/02.jpg" alt="">
+                  <h3 class="promo-banner__title text-strong">Promo image</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="promo-banner">
+                <div class="promo-banner__header">
+                  <h3 class="promo-banner__title text-strong">Promo title</h3>
+                </div>
+                <div class="promo-banner__body"><img src="./img/promo/03.jpg" alt="">
+                  <h3 class="promo-banner__title text-strong">Promo image</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="promo-banner">
+                <div class="promo-banner__header">
+                  <h3 class="promo-banner__title text-strong">Promo title</h3>
+                </div>
+                <div class="promo-banner__body"><img src="./img/promo/04.jpg" alt="">
+                  <h3 class="promo-banner__title text-strong">Promo image</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="subscribe-inner">
+                <label class="form-label text-strong mb-4" for="subscribeMail">Подпишитесь на новости и акции</label>
+                <form class="subscribe-form mb-4">
+                  <div class="d-flex align-items-center w-100">
+                    <div class="subscribe-form__input d-flex">
+                      <input class="form-control" id="subscribeMail" type="email" aria-describedby="emailSubscribe" placeholder="Введите e-mail">
+                      <button class="btn btn-border btn-turq text-strong" type="submit">Подписаться</button>
+                    </div>
+                  </div>
+                </form>
+                <div class="subscribe-socials mb-4"><a class="btn btn-white btn-icon" href="#"><i class="grf-facebook"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="seo-text">
+        <div class="container">
+          <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Знаках своих даже заглавных. За если города букв грамматики буквоград вдали пустился путь все языком грустный до напоивший, собрал которой жизни буквенных силуэт, что безопасную толку свое рукопись послушавшись необходимыми там. Большого переулка города переписывается родного предупреждал продолжил, знаках дал.</p>
+        </div>
+      </section>
+      <!-- Footer-->
+      <footer class="site-footer bg-black">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-sm-6 col-md-4">
+              <ul class="site-footer__list">
+                <li><a class="site-footer__link" href="tel:+380933708223">+380 93 370 82 23</a></li>
+                <li><a class="site-footer__link" href="tel:+380933708223">+380 93 370 82 23</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-8">
+              <ul class="site-footer__nav">
+                <li><a class="site-footer__link" href="#">Акции</a></li>
+                <li><a class="site-footer__link" href="#">Оплата и доставка</a></li>
+                <li><a class="site-footer__link" href="#">Контакты</a></li>
+                <li><a class="site-footer__link" href="#">Отзывы</a></li>
+                <li><a class="site-footer__link" href="#">Вакансии</a></li>
+                <li><a class="site-footer__link" href="#">О нас</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-12">
+              <ul class="site-footer__actions">
+                <li>
+                  <button class="btn btn-white btn-icon" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal"><i class="grf-phone"></i><span>Обратный звонок</span></button>
+                </li>
+                <li><a class="btn btn-white btn-icon" href="#"><i class="grf-login"></i><span>Личный кабинет</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- Product card modal-->
+    <div class="product-modal greenRedFood-modal modal fade" id="productModal" tabindex="-1" aria-labelledby="#productModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="product-modal__thumb"><img src="./img/product-modal/01.png" alt=""></div>
+                  <div class="product-modal__mobile"></div>
+                  <div class="product-modal__description">
+                    <h4 class="text-black text-strong text-lg mb-3">Ямато</h4>
+                    <p>Тёплый ролл, обжаренный в темпурном кляре, со снежным крабом, свежим огурцом, икрой Масаго, сыром Филадельфия и твёрдым сыром</p>
+                    <div class="product-modal__extra-info d-flex">
+                      <div class="product-modal__weight me-4"><span class="text-strong text-sm">120</span><span class="ms-1 text-xs">г.</span></div>
+                      <div class="product-modal__quant me-4"><span class="text-strong text-sm">8</span><span class="ms-1 text-xs">шт.</span></div>
+                    </div>
+                  </div>
+                  <div class="product-modal__consist product-consist d-flex">
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/01.png" alt="Лосось">
+                      <h5 class="text-xs text-black text-uppercase">Лосось</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/02.png" alt="Снежный краб">
+                      <h5 class="text-xs text-black text-uppercase">Снежный краб</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/03.png" alt="Авокадо">
+                      <h5 class="text-xs text-black text-uppercase">Авокадо</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/04.png" alt="Сыр филадельфия">
+                      <h5 class="text-xs text-black text-uppercase">Сыр филадельфия</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/05.png" alt="Огурец">
+                      <h5 class="text-xs text-black text-uppercase">Огурец</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/06.png" alt="Кунжут">
+                      <h5 class="text-xs text-black text-uppercase">Кунжут</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/07.png" alt="Соус-унаги">
+                      <h5 class="text-xs text-black text-uppercase">Соус-унаги</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/08.png" alt="Унаги">
+                      <h5 class="text-xs text-black text-uppercase">Унаги</h5>
+                    </div>
+                    <div class="product-consist__item text-center"><img src="./img/product-modal/consist/09.png" alt="Рис">
+                      <h5 class="text-xs text-black text-uppercase">Рис</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 p-0">
+                  <div class="product-modal__order-info order-info">
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" data-da=".product-modal__thumb, 767.98, 1"></button>
+                    <div class="order-info__wrapper" data-da=".product-modal__mobile, 767.98, 1">
+                      <div class="order-info__quant number-form"><span class="minus"><i class="grf-minus"></i></span>
+                        <input class="text-white" type="text" value="1"><span class="plus"><i class="grf-plus"></i></span>
+                      </div>
+                      <div class="order-info__price-wrap d-flex justify-content-between flex-wrap align-item-end" data-da=".product-modal__description, 767.98, 1">
+                        <div class="order-info__price text-white text-strong text-lg">888<span class="text-sm ms-1">грн.</span></div>
+                        <div class="order-info__weight text-white text-strong text-md d-flex align-items-end mb-1">8<span class="text-sm ms-1">шт.</span></div>
+                      </div>
+                      <button class="order-info__btn btn btn-border btn-white d-block w-100 text-uppercase text-strong"><span>Заказать</span></button>
+                    </div>
+                    <div class="order-info__recommend">
+                      <div class="text-white mb-3">Рекомендуем к заказу</div>
+                      <div class="order-info__recommend-wrap">
+                        <div class="order-info__recommend-item recommend-item bg-white">
+                          <div class="recommend-item__info d-flex"><img src="./img/pepsi.png" alt="Pepsi 0.33л">
+                            <div class="d-flex flex-column justify-content-between w-100 ms-2 mt-2 mb-2">
+                              <div class="text-strong text-sm">Pepsi</div>
+                              <div class="d-flex justify-content-between">
+                                <div class="text-sm">88<span class="ms-1">грн</span></div>
+                                <div class="text-sm">0.33<span class="ms-1">л</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                        </div>
+                        <div class="order-info__recommend-item recommend-item bg-white">
+                          <div class="recommend-item__info d-flex"><img src="./img/sandora.png" alt="Sandora 1л">
+                            <div class="d-flex flex-column justify-content-between w-100 ms-2 mt-2 mb-2">
+                              <div class="text-strong text-sm">Sandora Апельсин</div>
+                              <div class="d-flex justify-content-between">
+                                <div class="text-sm">88<span class="ms-1">грн</span></div>
+                                <div class="text-sm">1<span class="ms-1">л</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                        </div>
+                        <div class="order-info__recommend-item recommend-item bg-white">
+                          <div class="recommend-item__info d-flex"><img src="./img/pepsi.png" alt="Pepsi 0.33л">
+                            <div class="d-flex flex-column justify-content-between w-100 ms-2 mt-2 mb-2">
+                              <div class="text-strong text-sm">Сидр Sommersby</div>
+                              <div class="d-flex justify-content-between">
+                                <div class="text-sm">88<span class="ms-1">грн</span></div>
+                                <div class="text-sm">0.5<span class="ms-1">л</span></div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn-border btn-green btn d-block addToCartBtn w-100" data-text-original="Заказать" data-text-swap="Добавлено">Заказать</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product card modal end-->
+    <!-- Login modal-->
+    <div class="authorization-modal greenRedFood-modal modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center text-strong text-uppercase m-0" id="loginModalLabel">Войти</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
+          </div>
+          <div class="modal-body">
+            <form class="authorization-form authorization-modal__form needs-validation" id="loginForm" novalidate>
+              <div class="form-inner d-flex jusify-content-between">
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="loginEmail">email</label>
+                  <input class="form-control form-input" id="loginEmail" type="email" required>
+                  <div class="invalid-feedback">Пожалуйста введите email</div>
+                </div>
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="loginPassword">пароль</label>
+                  <input class="form-control form-input" id="loginPassword" type="password" required>
+                  <div class="invalid-feedback">Пожалуйста введите пароль</div>
+                </div>
+              </div>
+              <div class="authorization-form-btns d-flex justify-content-between">
+                <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit">Войти</button>
+              </div>
+              <div class="forgot d-flex">
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal" aria-label="Close">Регистрация</button>
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer flex-column">
+            <h5 class="modal-title text-center text-strong text-uppercase m-0">Войти через соц. сети</h5>
+            <div class="modal-socials d-flex justify-content-center"><a class="btn btn-grey btn-icon" href="#"><i class="grf-facebook"></i></a><a class="btn btn-grey btn-icon" href="#"><i class="grf-google"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login modal  end-->
+    <!-- Registration modal-->
+    <div class="authorization-modal greenRedFood-modal modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center text-strong text-uppercase m-0" id="registerModalLabel">Регистрация</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
+          </div>
+          <div class="modal-body">
+            <form class="authorization-form authorization-modal__form needs-validation" id="registerForm" novalidate>
+              <div class="form-inner d-flex jusify-content-between">
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="registerName">Имя</label>
+                  <input class="form-control form-input" id="registerName" type="text" required>
+                  <div class="invalid-feedback">Пожалуйста введите имя</div>
+                </div>
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="loginEmail">email</label>
+                  <input class="form-control form-input" id="registerEmail" type="email" required>
+                  <div class="invalid-feedback">Пожалуйста введите email</div>
+                </div>
+              </div>
+              <div class="authorization-form-btns d-flex justify-content-between">
+                <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit">Регистрация</button>
+              </div>
+              <div class="forgot d-flex">
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal" aria-label="Close">Войти</button>
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer flex-column">
+            <h5 class="modal-title text-center text-strong text-uppercase m-0">Регистрация через соц. сети</h5>
+            <div class="modal-socials d-flex justify-content-center"><a class="btn btn-grey btn-icon" href="#"><i class="grf-facebook"></i></a><a class="btn btn-grey btn-icon" href="#"><i class="grf-google"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Registration modal end-->
+    <!-- Forgot modal-->
+    <div class="authorization-modal greenRedFood-modal modal fade" id="forgotModal" tabindex="-1" aria-labelledby="forgotModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-strong text-uppercase m-0" id="forgotModalLabel">Восстановить пароль</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
+          </div>
+          <div class="modal-body">
+            <p>Мы вышлем инструкцию по восстановлению пароля на вашу почту.</p>
+            <form class="authorization-form authorization-modal__form needs-validation" id="forgotForm" novalidate>
+              <div class="form-inner">
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="forgotEmail">email</label>
+                  <input class="form-control form-input" id="forgotEmail" type="email" required>
+                  <div class="invalid-feedback">Пожалуйста введите email</div>
+                </div>
+              </div>
+              <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Forgot modal end-->
+    <!-- Callback modal-->
+    <div class="authorization-modal greenRedFood-modal modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-strong text-uppercase m-0" id="callbackModalLabel">Обратный звонок</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
+          </div>
+          <div class="modal-body">
+            <p>Оставьте ваши контактные данные и мы вам перезвоним как можно скорей.</p>
+            <form class="authorization-form authorization-modal__form needs-validation" id="callbackForm" novalidate>
+              <div class="form-inner d-flex jusify-content-between">
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="callbackName">Имя</label>
+                  <input class="form-control form-input" id="callbackName" type="text" required>
+                  <div class="invalid-feedback">Пожалуйста введите имя</div>
+                </div>
+                <div class="form-input-wrapper">
+                  <label class="form-label" for="callbackPhone">Телефон</label>
+                  <input class="form-control form-input" id="callbackPhone" type="tel" required>
+                  <div class="invalid-feedback">Пожалуйста введите телефон</div>
+                </div>
+              </div>
+              <div class="authorization-form-btns d-flex justify-content-between">
+                <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="submit" data-bs-toggle="modal" data-bs-target="#callbackConfirmModal" data-bs-dismiss="modal" aria-label="Close">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Callback modal end-->
+    <div class="authorization-modal greenRedFood-modal modal fade" id="callbackConfirmModal" tabindex="-1" aria-labelledby="callbackConfirmModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-strong m-0" id="callbackConfrimModalLabel">Спасибо, контакты получены</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="grf-close"></i></button>
+          </div>
+          <div class="modal-body">
+            <p>Наш менеджер перезвонит вам в течении получаса.</p>
+            <button class="btn btn-border btn-solid text-strong text-uppercase w-100" type="button" data-bs-dismiss="modal" aria-label="Close">Хорошо спасибо</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Order completed modal-->
+    <div class="greenRedFood-modal order-complete-modal modal fade" id="orderCompleteModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <h5 class="modal-title text-center text-strong text-uppercase text-lg" id="orderCompleteModalLabel">Ваш заказ принят</h5><a class="btn btn-border btn-black-border btn-black text-strong text-uppercase active" href="index.html" type="button">На главную</a>
+        </div>
+      </div>
+    </div>
+    <!-- Order completed modal end-->
+    <!-- Callback modal-->
+    <div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-primary" type="button">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Callback modal end-->
+    <div class="add-message">
+      <div class="d-flex align-items-center justify-content-center">
+        <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.364 9.193L15.556 0L16.971 1.414L6.364 12.021L0 5.657L1.414 4.243L6.364 9.193Z" fill="#24AB70"></path>
+        </svg>
+        <p class="mb-0">Товар добавлен в корзину</p>
+      </div>
+    </div>
+    <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+doctype html
+html(lang="en")
+	block link
+		//- -var selected = 'home'; //default
+		//- -var menu = { 'home': '/home', 'blog': '/blog', 'contact': '/contact' };
+		//- head.pug template
+		include ./partials/head
+
+		// Body
+		body
+			.site-backdrop
+			include ./partials/mobileMenu
+
+			header.order-header
+				.container
+					.order-header__inner
+						a(href="index.html").order-header-btn
+							i.grf-up
+							span Вернуться назад
+						.topbar-logo
+							a(href="index.html")
+								img(src="./img/logo.png", alt="")
+						.topbar-left
+							.btn.btn-white.btn-tobar__phone.btn-has-dropdown.m-0
+								.topbar__phone
+									a(href="#") (067) 888-88-88
+									.btn-dropdown.topbar__phone-dropdown
+										a(href="#") (067) 888-88-88
+										a(href="#") (067) 888-88-88
+								i.grf-up
+
+			include ./partials/cart
+
+			main.site-wrapper
+				block content
+
+					section.order
+						.container
+							.row
+								.col-lg-7
+									h1.profile__title.text-strong.text-lg.text-uppercase Оформление заказа
+									ul#orderTab.nav.nav-tabs.profile-nav.profile__tabs-nav(role='tablist')
+										li.nav-item(role='presentation')
+											button#new-user-tab.btn.btn-border.btn-black-border.text-strong.text-uppercase.active.mb-4(data-bs-toggle='tab' data-bs-target='#new-user' type='button' role='tab' aria-controls='new-user' aria-selected='true') Я новый пользователь
+										li.nav-item(role='presentation')
+											button#has-account-tab.btn.btn-border.btn-black-border.text-strong.text-uppercase.mb-4(data-bs-toggle='tab' data-bs-target='#has-account' type='button' role='tab' aria-controls='has-account' aria-selected='false') У меня есть аккаунт
+										li.nav-item(role='presentation')
+									#orderAccountContent.tab-content
+										#new-user.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='new-user-tab')
+											include ./partials/cart-form
+										#has-account.tab-pane.fade(role='tabpanel' aria-labelledby='has-account-tab') У меня есть
+
+								.col-lg-5.order-card__wrapper
+									.order-card
+										.order-card__header
+											.d-flex.justify-content-between
+												.order-card__header-title.mb-4 Ваш заказ
+												a.order-card__header-edit.mb-4(href="#") Редактировать
+											p 3 товара на сумму 8888 грн.
+										.order-card__body
+											.d-flex.justify-content-between
+												p Доставка:
+												p 0 грн
+											.d-flex.justify-content-between
+												p.mb-5 Сумма заказа:
+												p.text-strong.mb-5 8888 грн
+
+											a(href="order-complete.html").btn.btn-solid.d-block.w-100.text-strong.text-uppercase Заказа подтверждаю
+
+			include ./partials/footer
+
+			include ./partials/modals
+
+			// JavaScript (jQuery) libraries, plugins and custom scripts
+			script()&attributes(isNestedFile ? {'src': '../js/vendor.min.js'} : {'src': 'js/vendor.min.js'})
+			script()&attributes(isNestedFile ? {'src': '../js/scripts.min.js'} : {'src': 'js/scripts.min.js'})

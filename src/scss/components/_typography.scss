@@ -1,0 +1,42 @@
+.text-green {
+	color: $green-accent;
+}
+
+.text-black {
+	color: $black;
+}
+
+.text-strong {
+	font-weight: bold;
+	letter-spacing: 0.05em;
+}
+
+.text-big {
+	font-size: 48px;
+	line-height: 60px;
+}
+
+.text-xs {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.text-sm {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.text-md {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.text-24 {
+	font-size: 24px;
+	letter-spacing: 0.05em;
+}
+
+.text-lg {
+	font-size: 32px;
+	line-height: 36px;
+}

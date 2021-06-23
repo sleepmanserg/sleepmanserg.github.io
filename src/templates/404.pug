@@ -1,0 +1,27 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	- var pageTitle = '404'
+	- var whatPage = '404'
+	- var PageName = "404"
+	- var PageID = '404';
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	section.error-page
+		.container
+			.row
+				.col-12
+					.error-page__header.d-flex.justify-content-between.align-items-center
+						.error-page__message.mb-4
+							strong Упс!
+							|  Здесь ничего нет!
+						a(href="index.html").btn.btn-border.btn-white.btn-green.text-uppercase.text-strong.px-5.mb-4 На главную
+					.error-page__404
+						h1 404

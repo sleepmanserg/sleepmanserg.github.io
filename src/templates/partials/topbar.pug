@@ -1,0 +1,66 @@
+// Top bar navigation
+.top-bar.topbar
+	.topbar-inner
+		.container-fluid
+			.topbar-wrapper
+				.topbar-left.search-hide
+					.btn.btn-white.btn-tobar__phone.btn-has-dropdown
+						.topbar__phone
+							a(href="#") (067) 888-88-88
+							.btn-dropdown.topbar__phone-dropdown
+								a(href="#") (067) 888-88-88
+								a(href="#") (067) 888-88-88
+						i.grf-up
+					a(href="#").btn.btn-white.btn-icon
+						i.grf-google
+					a(href="#").btn.btn-white.btn-icon
+						i.grf-instagram
+				.topbar-logo.search-hide
+					a(href="index.html")
+						img(src="./img/logo.png", alt="")
+				.topbar-right
+					include search
+					.btn.btn-white.btn-icon.btn-has-dropdown.btn-login(type="button" data-target='.mobile-login' data-classes='active' data-backdrop="true" data-overflow="true")
+						i.grf-login
+						.btn-dropdown
+							a(data-bs-toggle="modal" data-bs-target="#loginModal") Вход
+							a(data-bs-toggle="modal" data-bs-target="#registerModal") Регистрация
+							a(href="account-logged.html") Профиль
+					button.btn.btn-white.btn-topbar__cart.d-block(type='button' data-bs-toggle='modal' data-bs-target='#cartModal')
+
+						.topbar__cart
+							span 3
+							span.topbar__cart-text Корзина
+
+					include mobileToggle
+
+.mobile-login
+	a.login-link(data-bs-toggle="modal" data-bs-target="#loginModal") Вход
+	a.login-link(data-bs-toggle="modal" data-bs-target="#registerModal") Регистрация
+	a(href="account-logged.html") Профиль
+
+	.login-mobile-menu
+		a(href="#") Выход
+		button.btn.btn-green.btn-icon(type='button' data-bs-toggle='modal' data-bs-target='#callbackModal')
+			i.grf-phone
+			span Обратный звонок
+
+		ul.p-0.m-0.mt-5
+			li
+				a(href="#") Акции
+			li
+				a(href="#") Оплата и доставка
+			li
+				a(href="#") Контакты
+			li
+				a(href="#") Отзывы
+			li
+				a(href="#") Вакансии
+			li
+				a(href="#") О нас
+
+		.d-flex
+			a(href="#").btn.btn-white.btn-icon
+				i.grf-google
+			a(href="#").btn.btn-white.btn-icon
+				i.grf-instagram

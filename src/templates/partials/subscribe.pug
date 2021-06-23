@@ -1,0 +1,16 @@
+section.subscribe
+	.container-fluid
+		.row
+			.col-12
+				.subscribe-inner
+					label.form-label.text-strong.mb-4(for='subscribeMail') Подпишитесь на новости и акции
+					form.subscribe-form.mb-4
+						div.d-flex.align-items-center.w-100
+							.subscribe-form__input.d-flex
+								input#subscribeMail.form-control(type='email' aria-describedby='emailSubscribe' placeholder="Введите e-mail")
+								button.btn.btn-border.btn-turq.text-strong(type="submit") Подписаться
+					.subscribe-socials.mb-4
+						a(href="#").btn.btn-white.btn-icon
+							i.grf-facebook
+						a(href="#").btn.btn-white.btn-icon
+							i.grf-instagram

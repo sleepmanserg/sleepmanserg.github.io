@@ -1,0 +1,147 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+  //- ********** Settings **********
+  //- ==============================
+  -var pageTitle = 'Home'
+  -var whatPage = 'Home'
+  //- ==============================
+  //- ********* Settings END *******
+
+//- Page Content
+block content
+  // - Hero banner section
+  section.hero-banner
+    .inner-container
+      .hero-carousel
+        .hero-slide
+          img(src="./img/hero-banner.jpg", alt="")
+        .hero-slide
+          img(src="./img/hero-banner.jpg", alt="")
+        .hero-slide
+          img(src="./img/hero-banner.jpg", alt="")
+  //- Advantages info section
+  .container
+    section.info-section.info
+      .info-slider
+        .info-slide
+          .info-slide__header
+            strong.text-uppercase График работы
+              span.text-strong.d-block с 10:00 до 23:00
+          .info-slide__body
+            a(href="tel:+380933708223").d-block +380 93 370 82 23
+            a(href="tel:+380980688161").d-block +380 98 068 81 61
+        .info-slide
+          .info-slide__header
+            strong.text-uppercase Скидка 10%
+          .info-slide__body
+            span.d-block При самовывозе и призаказе
+            strong с 00:00 до 07:00
+        .info-slide
+          .info-slide__header
+            strong.text-uppercase
+              | Минимальный заказ
+              br
+              |  888 грн
+          .info-slide__body
+            span.d-block По кухне — 888 грн.
+            span.d-block По бару — 888 грн.
+        .info-slide
+          .info-slide__header
+            strong.text-uppercase
+              | Бесплатная
+              br
+              | доставка
+          .info-slide__body
+            span.d-block - Черноморск при заказе от 150 грн
+            span.d-block - Александровка, Малая/Большая
+              br
+              | Долина от 350 грн
+
+      //- ul.info-list.d-flex
+      //-   li.info-list__item
+      //-     strong.text-green.text-big.text-strong
+      //-       | 24
+      //-       span /7
+      //-     p.info-list__subtitle.text-sm Звоните
+      //-     ul.info-list__phones
+      //-       li
+      //-         a(href="#").text-xs.text-black
+      //-           span.text-strong (048)
+      //-           |  888-88-88
+      //-       li
+      //-         a(href="#").text-xs.text-black
+      //-           span.text-strong (050)
+      //-           |  888-88-88
+      //-       li
+      //-         a(href="#").text-xs.text-black
+      //-           span.text-strong (067)
+      //-           |  888-88-88
+      //-       li
+      //-         a(href="#").text-xs.text-black
+      //-           span.text-strong (063)
+      //-           |  888-88-88
+      //-   li.info-list__item
+      //-     strong.text-black.text-big.text-strong
+      //-       | 10
+      //-       span %
+      //-     p.info-list__subtitle.text-sm Скидка
+      //-     p.text-xs При самовывозе и при
+      //-       br
+      //-       | заказе
+      //-       b.text-strong  с 00:00 до 07:00
+      //-   li.info-list__item
+      //-     strong.text-black.text-big.text-strong
+      //-       | 888
+      //-       span грн.
+      //-     p.info-list__subtitle.text-sm Минимальный заказ
+      //-     p.text-xs.m-0 По кухне — 888 грн.
+      //-     p.text-xs.m-0 По бару — 888 грн.
+      //-   li.info-list__item
+      //-     strong.text-black.text-big.text-strong
+      //-       span От
+      //-       | 888
+      //-       span грн.
+      //-     p.info-list__subtitle.text-sm Бесплатная доставка
+      //-     p.text-xs.m-0 от 888 грн. и 888 грн.
+      //-     p.text-xs.m-0 по какому-нибудь району
+  //- Stocks slider section
+  include ./partials/stocks
+  section.promo.bg-black
+    .inner-container.container-fluid
+      .row.promo-slider
+        .col-lg-3.col-md-6
+          .promo-banner
+            .promo-banner__header
+              h3.promo-banner__title.text-strong Promo title
+            .promo-banner__body
+              img(src="./img/promo/01.jpg", alt="")
+              h3.promo-banner__title.text-strong Promo image
+        .col-lg-3.col-md-6
+          .promo-banner
+            .promo-banner__header
+              h3.promo-banner__title.text-strong Promo title
+            .promo-banner__body
+              img(src="./img/promo/02.jpg", alt="")
+              h3.promo-banner__title.text-strong Promo image
+        .col-lg-3.col-md-6
+          .promo-banner
+            .promo-banner__header
+              h3.promo-banner__title.text-strong Promo title
+            .promo-banner__body
+              img(src="./img/promo/03.jpg", alt="")
+              h3.promo-banner__title.text-strong Promo image
+        .col-lg-3.col-md-6
+          .promo-banner
+            .promo-banner__header
+              h3.promo-banner__title.text-strong Promo title
+            .promo-banner__body
+              img(src="./img/promo/04.jpg", alt="")
+              h3.promo-banner__title.text-strong Promo image
+  include ./partials/subscribe
+
+  section.seo-text
+    .container
+      p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Знаках своих даже заглавных. За если города букв грамматики буквоград вдали пустился путь все языком грустный до напоивший, собрал которой жизни буквенных силуэт, что безопасную толку свое рукопись послушавшись необходимыми там. Большого переулка города переписывается родного предупреждал продолжил, знаках дал.

@@ -1,0 +1,38 @@
+//- Include config.pug file that holds all variables
+block config
+  include ../helpers/config
+
+//- Mixins - reusable code snippets
+include ../helpers/mixins
+
+
+doctype html
+html(lang="en")
+  block link
+    //- -var selected = 'home'; //default
+    //- -var menu = { 'home': '/home', 'blog': '/blog', 'contact': '/contact' };
+  //- head.pug template
+  include head
+
+  // Body
+  body
+    .site-backdrop
+    include mobileMenu
+
+    include header
+
+    include cart
+
+    main.site-wrapper
+      block content
+
+      include footer
+
+    include modals
+
+    include addToCartMessage
+
+    // JavaScript (jQuery) libraries, plugins and custom scripts
+    script()&attributes(isNestedFile ? {'src': '../js/vendor.min.js'} : {'src': 'js/vendor.min.js'})
+    script()&attributes(isNestedFile ? {'src': '../js/scripts.min.js'} : {'src': 'js/scripts.min.js'})
+

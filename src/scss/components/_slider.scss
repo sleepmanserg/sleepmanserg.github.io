@@ -1,0 +1,128 @@
+.hero-carousel {
+	.slick-dots {
+		position: absolute;
+		bottom: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		@media (max-width: 767.98px) {
+			bottom: 20px;
+		}
+		button {
+			border-color: $white;
+		}
+	}
+	.slick-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 50px;
+		height: 50px;
+		border-radius: 50px;
+		border: 2px solid $white;
+		background-color: transparent;
+		z-index: 1;
+		background-repeat: no-repeat;
+		background-position: center center;
+		&.next-arrow {
+			right: 75px;
+			background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0L8.2375 1.7625L15.2125 8.75H0V11.25H15.2125L8.2375 18.2375L10 20L20 10L10 0Z' fill='white'/%3E%3C/svg%3E%0A");
+		}
+		&.prev-arrow {
+			left: 75px;
+			background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 8.75H4.7875L11.775 1.7625L10 0L0 10L10 20L11.7625 18.2375L4.7875 11.25H20V8.75Z' fill='white'/%3E%3C/svg%3E%0A");
+		}
+		@media (max-width: 767.98px) {
+			&.next-arrow {
+				right: 25px;
+			}
+			&.prev-arrow {
+				left: 25px;
+			}
+		}
+	}
+	.slick-slide {
+		img {
+			min-height: 30vh;
+			object-fit: cover;
+		}
+	}
+}
+
+.slider {
+	&__header {
+		color: $white;
+		padding: 42px 0;
+		justify-content: center;
+		@media (max-width: 479.98px) {
+			padding: 16px;
+			justify-content: space-between;
+		}
+		.container {
+			justify-content: center;
+			@media (max-width: 575.98px) {
+				justify-content: space-between;
+			}
+		}
+	}
+	.slide {
+		a {
+			outline: none;
+		}
+	}
+	&__title {
+		text-transform: uppercase;
+		font-size: 32px;
+		line-height: 36px;
+		font-weight: bold;
+		letter-spacing: 0.05em;
+		margin-bottom: 0;
+		padding: 0 100px;
+		@media (max-width: 479.98px) {
+			padding: 0;
+		}
+
+	}
+	&__btn {
+		background: none;
+		border: 2px solid $white;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		color: $white;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		i {
+			font-size: 20px;
+		}
+	}
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		padding: 10px;
+		button {
+			outline: none;
+			box-shadow: none;
+		}
+		&.slick-active {
+			button {
+				border-color: $green-accent;
+				background-color: $green-accent;
+			}
+		}
+	}
+	button {
+		background-color: transparent;
+		border: 2px solid $black;
+		height: 16px;
+		width: 16px;
+		font-size: 0;
+		border-radius: 50%;
+	}
+}

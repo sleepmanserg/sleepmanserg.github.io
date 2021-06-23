@@ -1,0 +1,78 @@
+//
+// Scaffolding
+// --------------------------------------------------
+html * {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  // overflow-x: hidden;
+}
+
+body {
+  background-color: #fff;
+  height: 100%;
+  font-family: 'Geometria', sans-serif;
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.site-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 991.98px) {
+    margin-top: 60px;
+  }
+}
+
+.inner-container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1920px;
+}
+
+img { width: 100%;}
+
+svg { display: block;}
+
+@media (max-width: 991.98px) {
+  .site-backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s linear;
+    cursor: pointer;
+  }
+
+  .site-backdrop.active {
+    opacity: .5;
+    visibility: visible;
+    transition: opacity 0.15s linear;
+    background-color: #333;
+    z-index: 100;
+  }
+
+
+  .site-backdrop.searchBarActive {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: visible;
+  }
+}

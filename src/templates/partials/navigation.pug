@@ -1,0 +1,43 @@
+//- - var NavItems = [{'url':'category','title':'Суши','key':'category'}];
+
+
+
+nav.main-nav
+	.mobile-nav.d-lg-none
+		.mobile-nav-title.text-center.text-white Меню
+		button.btn.mobile-nav-close
+			i.grf-close.text-white
+
+		.mobile-nav-search
+			input(type="text" placeholder="Поиск в меню")
+	//- each page,i in NavItems
+	//- 	if PageID === page.url
+	//- 		a.main-nav__link(class="active", href= + page.url + '.html')
+	//- 			span.name= page.title
+	//- 	else
+	//- 		a.main-nav__link(href= page.url + '.html')
+	//- 			span.name= page.title
+	a(href="index.html").main-nav__link
+		strong.main-nav__link-text Главная
+	a(href="#").main-nav__link
+		strong.main-nav__link-text Акции
+		span.d-lg-none.main-nav__link-mobile 25 позиций
+	a(href="category.html").main-nav__link.active
+		strong.main-nav__link-text Суши
+		span.d-lg-none.main-nav__link-mobile 25 позиций
+	a(href="#").main-nav__link
+		strong.main-nav__link-text Пицца
+		span.d-lg-none.main-nav__link-mobile 25 позиций
+	a(href="#").main-nav__link
+		strong.main-nav__link-text Бургеры
+		span.d-lg-none.main-nav__link-mobile 25 позиций
+	a(href="#").main-nav__link
+		strong.main-nav__link-text Боксы
+		span.d-lg-none.main-nav__link-mobile 25 позиций
+	a(href="#").main-nav__link
+		strong.main-nav__link-text Десерты
+		span.d-lg-none.main-nav__link-mobile 25 позиций
+	a(href="#").main-nav__link
+		strong.main-nav__link-text Напитки
+		span.d-lg-none.main-nav__link-mobile 25 позиций
+

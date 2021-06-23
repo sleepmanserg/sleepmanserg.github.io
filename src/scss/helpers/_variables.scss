@@ -1,0 +1,33 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors
+// --------------------------------------------------
+
+$turquoise: #EAF8F2;
+$green-accent: #24AB70;
+$black: #191E28;
+
+$white: #FFFFFF;
+$gray-light: #F0F0F0;
+$gray-darker: #C4C4C4;
+$red: #BF2330;
+
+
+//== Font Family
+// --------------------------------------------------
+
+// $font-family-serif:          'Geometria Regular', sans-serif;
+$font-family-body:           'Geometria', sans-serif;
+//== Media queries (responsive breakpoints)
+// -------------------------------------------------------
+
+$desktop:   		   '1200px';
+$tablet-land:      '991px';
+$tablet-port:    	 '768px';
+$mobile-land:		 	 '480px';
+$mobile-port:		 	 '360px';
+$menu-collapse: 	 $tablet-land;
+
+$transition: .3s;
