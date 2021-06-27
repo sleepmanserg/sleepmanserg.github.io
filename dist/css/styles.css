@@ -33,11 +33,13 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  min-height: calc(100vh - 161px);
 }
 
 @media (max-width: 991.98px) {
   .site-wrapper {
     margin-top: 60px;
+    min-height: 100%;
   }
 }
 
@@ -3177,6 +3179,16 @@ select.form-select {
   left: 0;
 }
 
+.order-history-mobile-accordion {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .order-history-mobile-accordion {
+    display: block;
+  }
+}
+
 /** Order history */
 .order-history {
   padding: 0 75px;
@@ -4739,6 +4751,7 @@ select.form-select {
 .site-footer {
   padding: 56px 75px;
   position: relative;
+  margin-top: auto;
 }
 
 .site-footer .container {

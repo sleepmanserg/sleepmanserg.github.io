@@ -221,6 +221,13 @@
 	}
 }
 
+.order-history-mobile-accordion {
+	display: none;
+	@media (max-width: 767.98px) {
+		display: block;
+	}
+}
+
 
 /** Order history */
 
