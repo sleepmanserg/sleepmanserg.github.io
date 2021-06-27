@@ -54,6 +54,7 @@
       theme.toggler();
       theme.loginToggler();
       theme.infoListSlider();
+      theme.paymentSlider();
       theme.promoSlider();
       theme.productActive();
       theme.inputPlusMinus();
@@ -96,6 +97,43 @@
     infoListSlider: () => {
       // setup
       let sliderElem = $(".info-slider"),
+      sliderBool = false,
+      sliderBreakpoint = 768,
+
+      sliderSettings = {
+          arrows: false,
+          dots: true,
+          mobileFirst: true,
+          responsive: [
+              {
+                  breakpoint: sliderBreakpoint,
+                  settings: "unslick"
+              }
+          ]
+      };
+      function sliderInit() {
+      if (window.innerWidth <= sliderBreakpoint) {
+        if (sliderBool == false) {
+            sliderElem.slick(sliderSettings);
+            sliderBool = true;
+        }
+      } else {
+          sliderBool = false;
+        }
+      }
+
+      // resize
+      $(window).resize(function () {
+        sliderInit();
+      });
+      if (window.innerWidth <= sliderBreakpoint) {
+        sliderInit();
+      }
+    },
+    /** Payment list slider */
+    paymentSlider: () => {
+      // setup
+      let sliderElem = $(".payment-slider"),
       sliderBool = false,
       sliderBreakpoint = 768,
 

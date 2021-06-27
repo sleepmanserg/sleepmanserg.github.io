@@ -1,0 +1,40 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	- var PageName = "Оплата и доставка"
+	- var PageID = 'payment';
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	section.payment-delivery
+		.profile__header
+			h1.profile__title.text-strong.text-lg.text-center.text-uppercase Оплата и доставка
+
+		.payment-slider
+			.info-slide
+				.info-slide__header
+					strong.text-uppercase Оплата
+				.info-slide__body.text-left
+					span.d-block Оплата курьеру
+					span.d-block Оплата картой
+			.info-slide
+				.info-slide__header
+					strong.text-uppercase Доставка
+				.info-slide__body
+					span.d-block
+						| Самовывоз ул. Хантадзе, 14
+						br
+						| тел.: +380 93 370 82 23
+					a(href="#").btn.btn-green.btn-border.text-upeprcase.text-strong На карте
+			.info-slide
+				.info-slide__header
+					strong.text-uppercase Бесплатная доставка
+				.info-slide__body
+					span.d-block Черноморск при заказе от 150 грн
+					span.d-block Александровка, Малая/Большая Долина от 350 грн

@@ -116,7 +116,7 @@
       <section class="order">
         <div class="container">
           <div class="row">
-            <div class="col-lg-7">
+            <div class="col-lg-7 col-md-12 mobile-order-card-header">
               <h1 class="profile__title text-strong text-lg text-uppercase">Оформление заказа</h1>
               <ul class="nav nav-tabs profile-nav profile__tabs-nav" id="orderTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -270,18 +270,51 @@
                     </form>
                   </div>
                 </div>
-                <div class="tab-pane fade" id="has-account" role="tabpanel" aria-labelledby="has-account-tab">У меня есть</div>
+                <div class="tab-pane fade" id="has-account" role="tabpanel" aria-labelledby="has-account-tab">
+                  <h2 class="personal-info__title text-strong text-md-lg text-uppercase pb-4 pt-3">Вход в аккаунт</h2>
+                  <form class="authorization-form authorization-modal__form needs-validation" id="registerForm" novalidate>
+                    <div class="form-inner d-flex jusify-content-between">
+                      <div class="form-input-wrapper w-100">
+                        <label class="form-label" for="registerName">Имя</label>
+                        <input class="form-control form-input" id="registerName" type="text" required>
+                        <div class="invalid-feedback">Пожалуйста введите имя</div>
+                      </div>
+                      <div class="form-input-wrapper w-100">
+                        <label class="form-label" for="loginEmail">email</label>
+                        <input class="form-control form-input" id="registerEmail" type="email" required>
+                        <div class="invalid-feedback">Пожалуйста введите email</div>
+                      </div>
+                    </div>
+                    <div class="authorization-form-btns d-flex justify-content-between">
+                      <button class="btn btn-border btn-solid text-strong text-uppercase w-100 mx-4" type="submit">Войти</button>
+                    </div>
+                    <div class="forgot d-flex justify-content-end">
+                      <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal" aria-label="Close">Забыли пароль?</button>
+                    </div>
+                  </form>
+                  <div class="order-register-socials">
+                    <div class="text-strong text-md-lg text-uppercase">Войти через соц.сети</div>
+                    <div class="subscribe-socials"><a class="btn btn-white btn-icon" href="#"><i class="grf-facebook"></i></a><a class="btn btn-white btn-icon" href="#"><i class="grf-instagram"></i></a></div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-5 order-card__wrapper">
+            <div class="col-lg-5 col-md-12 order-card__wrapper">
               <div class="order-card">
-                <div class="order-card__header">
-                  <div class="d-flex justify-content-between">
+                <div class="order-card__header" data-da=".mobile-order-card-header, 767.98, 2">
+                  <div class="d-flex justify-content-between flex-wrap">
                     <div class="order-card__header-title mb-4">Ваш заказ</div><a class="order-card__header-edit mb-4" href="#">Редактировать</a>
                   </div>
                   <p>3 товара на сумму 8888 грн.</p>
                 </div>
                 <div class="order-card__body">
+                  <div class="order-card__coupon d-flex justify-content-between">
+                    <div class="form-group">
+                      <label class="d-block" for="couponInput">Есть купон?</label>
+                      <input class="form-control form-input" id="couponInput" type="text">
+                    </div>
+                    <button class="btn btn-border btn-grey-border text-uppercase text-strong" type="submit">Применить</button>
+                  </div>
                   <div class="d-flex justify-content-between">
                     <p>Доставка:</p>
                     <p>0 грн</p>
@@ -301,23 +334,19 @@
     <footer class="site-footer bg-black">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 col-sm-6 col-md-4">
+          <div class="col-lg-3 col-sm-6 col-md-3">
             <ul class="site-footer__list">
               <li><a class="site-footer__link" href="tel:+380933708223">+380 93 370 82 23</a></li>
               <li><a class="site-footer__link" href="tel:+380933708223">+380 93 370 82 23</a></li>
             </ul>
           </div>
-          <div class="col-lg-6 col-sm-6 col-md-8">
+          <div class="col-lg-3 col-sm-6 col-md-4">
             <ul class="site-footer__nav">
-              <li><a class="site-footer__link" href="#">Акции</a></li>
-              <li><a class="site-footer__link" href="#">Оплата и доставка</a></li>
-              <li><a class="site-footer__link" href="#">Контакты</a></li>
-              <li><a class="site-footer__link" href="#">Отзывы</a></li>
-              <li><a class="site-footer__link" href="#">Вакансии</a></li>
-              <li><a class="site-footer__link" href="#">О нас</a></li>
+              <li><a class="site-footer__link" href="promotions.html">Акции</a></li>
+              <li><a class="site-footer__link" href="payment.html">Оплата и доставка</a></li>
             </ul>
           </div>
-          <div class="col-lg-3 col-md-12">
+          <div class="col-lg-6 col-md-5">
             <ul class="site-footer__actions">
               <li>
                 <button class="btn btn-white btn-icon" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal"><i class="grf-phone"></i><span>Обратный звонок</span></button>

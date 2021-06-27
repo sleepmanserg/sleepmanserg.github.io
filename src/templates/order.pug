@@ -37,7 +37,7 @@ html(lang="en")
 					section.order
 						.container
 							.row
-								.col-lg-7
+								.col-lg-7.col-md-12.mobile-order-card-header
 									h1.profile__title.text-strong.text-lg.text-uppercase Оформление заказа
 									ul#orderTab.nav.nav-tabs.profile-nav.profile__tabs-nav(role='tablist')
 										li.nav-item(role='presentation')
@@ -48,16 +48,45 @@ html(lang="en")
 									#orderAccountContent.tab-content
 										#new-user.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='new-user-tab')
 											include ./partials/cart-form
-										#has-account.tab-pane.fade(role='tabpanel' aria-labelledby='has-account-tab') У меня есть
+										#has-account.tab-pane.fade(role='tabpanel' aria-labelledby='has-account-tab')
+											h2.personal-info__title.text-strong.text-md-lg.text-uppercase.pb-4.pt-3 Вход в аккаунт
+											form#registerForm.authorization-form.authorization-modal__form.needs-validation(novalidate)
+												.form-inner.d-flex.jusify-content-between
+													.form-input-wrapper.w-100
+														label.form-label(for='registerName') Имя
+														input#registerName.form-control.form-input(type='text' required)
+														.invalid-feedback Пожалуйста введите имя
+													.form-input-wrapper.w-100
+														label.form-label(for='loginEmail') email
+														input#registerEmail.form-control.form-input(type='email' required)
+														.invalid-feedback Пожалуйста введите email
+												.authorization-form-btns.d-flex.justify-content-between
+													button.btn.btn-border.btn-solid.text-strong.text-uppercase.w-100.mx-4(type='submit') Войти
+												.forgot.d-flex.justify-content-end
+													button.btn.btn-link(type='button' data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss='modal' aria-label='Close') Забыли пароль?
 
-								.col-lg-5.order-card__wrapper
+											.order-register-socials
+												.text-strong.text-md-lg.text-uppercase Войти через соц.сети
+												.subscribe-socials
+													a(href="#").btn.btn-white.btn-icon
+														i.grf-facebook
+													a(href="#").btn.btn-white.btn-icon
+														i.grf-instagram
+
+
+								.col-lg-5.col-md-12.order-card__wrapper
 									.order-card
-										.order-card__header
-											.d-flex.justify-content-between
+										.order-card__header(data-da=".mobile-order-card-header, 767.98, 2")
+											.d-flex.justify-content-between.flex-wrap
 												.order-card__header-title.mb-4 Ваш заказ
 												a.order-card__header-edit.mb-4(href="#") Редактировать
 											p 3 товара на сумму 8888 грн.
 										.order-card__body
+											.order-card__coupon.d-flex.justify-content-between
+												.form-group
+													label.d-block(for="couponInput") Есть купон?
+													input#couponInput.form-control.form-input(type="text")
+												button.btn.btn-border.btn-grey-border.text-uppercase.text-strong(type="submit") Применить
 											.d-flex.justify-content-between
 												p Доставка:
 												p 0 грн
@@ -66,6 +95,7 @@ html(lang="en")
 												p.text-strong.mb-5 8888 грн
 
 											a(href="order-complete.html").btn.btn-solid.d-block.w-100.text-strong.text-uppercase Заказа подтверждаю
+											//- a(href="order-complete.html").btn.btn-solid.d-block.w-100.text-strong.text-uppercase.disabled Заказа подтверждаю //!!!!!!! class .disabled if not logged in
 
 			include ./partials/footer
 

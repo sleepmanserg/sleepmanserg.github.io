@@ -49,16 +49,48 @@
 	.tab-content {
 		padding-top: 54px;
 	}
+	.btn.disabled {
+		background-color: #DFDFDF;
+		border-color: #DFDFDF !important;
+		opacity: 1;
+	}
 
-
+	.order-register-socials {
+		background-color: #FBFBFB;
+		padding: 35px 40px 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 35px;
+		.btn {
+			background-color: #F0F0F0;
+		}
+		.text-md-lg {
+			margin-bottom: 16px;
+			margin-right: 15px;
+		}
+		.subscribe-socials {
+			margin: 0 auto 16px;
+		}
+		@media (max-width: 991.98px) {
+			text-align: center;
+			flex-direction: column;
+		}
+	}
 	&-accordion {
 		.accordion-item {
 			border-radius: 0;
 			border: none;
+			.form-input {
+				max-width: 100%;
+			}
 		}
 		.accordion-body,
 		.accordion-button {
 			padding-left: 0;
+			@media (max-width: 767.98px) {
+				padding-right: 0;
+			}
 		}
 		.accordion-button {
 			font-weight: bold;
@@ -123,6 +155,16 @@
 		&__body {
 			padding: 30px 40px 40px;
 		}
+		&__coupon {
+			margin-bottom: 33px;
+			.form-group {
+				width: 100%;
+				margin-right: 20px;
+			}
+			.btn {
+				max-width: 165px;
+			}
+		}
 		@media (max-width: 767.98px) {
 			box-shadow: none;
 			background: $turquoise;
@@ -130,10 +172,27 @@
 				padding: 0;
 			}
 			&__header {
-				display: none;
+				box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.2);
+				padding: 19px 16px 23px;
+				&::after {
+					display: none;
+				}
 			}
 			&__body {
 				padding: 20px 15px 29px;
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		.mobile-order-card-header {
+			overflow-x: hidden;
+			.nav-item {
+				width: 50%;
+				text-align: center;
+			}
+			.profile__title {
+				text-align: center;
 			}
 		}
 	}

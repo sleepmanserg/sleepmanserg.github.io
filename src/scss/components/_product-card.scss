@@ -320,6 +320,15 @@
 	height: 20px;
 	min-width: 42px;
 	font-size: 12px;
+	&.blue-bg {
+		background-color: #23B6BF;
+	}
+	&.green-bg {
+		background-color: #8DBF23;
+	}
+	&.dark-blue-bg {
+		background-color: #2361BF;
+	}
 }
 
 .inner-page-header {

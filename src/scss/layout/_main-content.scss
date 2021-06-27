@@ -20,3 +20,149 @@
 		padding-top: 36px;
 	}
 }
+
+.payment-delivery {
+	.profile__header {
+		padding: 60px 0 54px;
+		@media (max-width: 991.98px) {
+			padding-top: 40px;
+			padding-bottom: 0;
+		}
+	}
+	.profile__title {
+		margin-bottom: 0;
+	}
+	.payment-slider {
+		padding: 60px 0;
+		display: flex;
+		justify-content: center;
+		max-width: 1100px;
+		margin: 0 auto;
+		.info-slide {
+			padding: 0 44px;
+			&__header {
+				margin-bottom: 22px;
+			}
+			&__body {
+				span {
+					font-size: 14px;
+					line-height: 21px;
+				}
+			}
+			.btn {
+				margin-top: 13px;
+				width: 143px;
+				height: 50px;
+				padding-top: 15px;
+			}
+		}
+		@media (max-width: 991.98px) {
+			justify-content: space-around;
+			.info-slide {
+				padding: 0 15px;
+			}
+		}
+		@media (max-width: 767.98px) {
+			flex-direction: column;
+			.slick-dots {
+				margin-top: 36px;
+			}
+			.info-slide {
+				&__header {
+					text-align: center;
+				}
+				&__body {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+.promotions {
+	&-header {
+		padding: 42px 0;
+	}
+	&-column {
+		flex: 0 0 20%;
+		max-width: 20%;
+		padding: 0;
+		@media (max-width: 1100px) {
+			flex: 0 0 25%;
+			max-width: 25%;
+		}
+		@media (max-width: 991.98px) {
+			flex: 0 0 33.3333%;
+			max-width: 33.3333%;
+		}
+		@media (max-width: 767.98px) {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+	.product__card {
+		height: 100%;
+		&:hover {
+			cursor: initial;
+		}
+		@media (max-width: 767.98px) {
+			padding-top: 10px;
+		}
+		&-body {
+			padding: 0 31px 18px;
+			@media (max-width: 767.98px) {
+				padding: 0 17px 10px;
+			}
+		}
+		&-title {
+			padding-left: 0;
+			margin-bottom: 8px;
+			padding-bottom: 0;
+			padding-top: 28px;
+			&:hover {
+				cursor: initial;
+				color: $black;
+			}
+			@media (max-width: 767.98px) {
+				padding-top: 60px;
+			}
+		}
+		&-discount {
+			top: -10px;
+			@media (max-width: 767.98px) {
+				top: 20px;
+			}
+		}
+	}
+	.product__card-thumb {
+		padding: 31px 30px 25px;
+		&:hover {
+			cursor: initial;
+		}
+		img {
+			max-width: 200px;
+			width: 100%;
+			max-height: 139px;
+			object-fit: cover;
+		}
+		@media (max-width: 991.98px) {
+			&::before {
+				padding-bottom: 36%;
+				padding-top: 36%;
+			}
+		}
+		@media (max-width: 767.98px) {
+			&::before {
+				padding-bottom: 20%;
+				padding-top: 30%;
+			}
+			img {
+				max-height: 91px;
+				max-width: 150px;
+			}
+		}
+	}
+	&-text {
+		margin-bottom: 8px;
+	}
+}
