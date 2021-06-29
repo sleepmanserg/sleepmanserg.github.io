@@ -8,6 +8,7 @@
 	}
 	.promo-banner {
 		margin-bottom: 20px;
+		text-decoration: none;
 		&__header {
 			background-color: $green-accent;
 			padding: 16px 0;
@@ -37,6 +38,69 @@
 	.slick-dots {
 		button {
 			border-color: $white;
+		}
+	}
+}
+
+.promotion-single {
+	.profile__title {
+		margin-bottom: 18px;
+	}
+	&__discount-label {
+		position: relative;
+		left: 0;
+		top: 0;
+		margin-left: 0;
+		margin-right: 29px;
+	}
+	.inner-header {
+		.container {
+			padding-left: 95px;
+			padding-right: 75px;
+		}
+		@media (max-width: 1440px) {
+			.container {
+				padding-left: 45px;
+				padding-right: 25px;
+			}
+		}
+		@media (max-width: 991.98px) {
+			background-color: $black;
+		}
+		@media (max-width: 767.98px) {
+			.promotion-single__title {
+				padding-top: 40px;
+			}
+		}
+	}
+	&__container {
+		padding: 75px;
+		max-width: 1920px;
+		margin: 0 auto;
+		@media (max-width: 1440px) {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+		@media (max-width: 1200px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	&__info {
+		padding-left: 85px;
+		.btn {
+			margin-top: 85px;
+			@media (max-width: 991.98px) {
+				margin-top: 40px;
+			}
+		}
+		@media (max-width: 1440px) {
+			padding-left: 0;
+		}
+	}
+	&__thumb {
+		@media (max-width: 767.98px) {
+			margin-bottom: 50px;
 		}
 	}
 }

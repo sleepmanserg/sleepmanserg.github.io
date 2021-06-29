@@ -102,8 +102,17 @@
 	}
 	.product__card {
 		height: 100%;
-		&:hover {
-			cursor: initial;
+		cursor: pointer;
+		text-decoration: none;
+		outline: none !important;
+		&:focus {
+			box-shadow: none;
+			outline: none;
+		}
+		&:hover
+		&.active {
+			cursor: pointer;
+			text-decoration: none;
 		}
 		@media (max-width: 767.98px) {
 			padding-top: 10px;
@@ -120,7 +129,7 @@
 			padding-bottom: 0;
 			padding-top: 28px;
 			&:hover {
-				cursor: initial;
+				cursor: pointer;
 				color: $black;
 			}
 			@media (max-width: 767.98px) {
@@ -137,7 +146,7 @@
 	.product__card-thumb {
 		padding: 31px 30px 25px;
 		&:hover {
-			cursor: initial;
+			cursor: pointer;
 		}
 		img {
 			max-width: 200px;
@@ -164,5 +173,75 @@
 	}
 	&-text {
 		margin-bottom: 8px;
+		color: $black;
+	}
+}
+
+.inner-header {
+	background-color: $turquoise;
+	padding: 45px 0 33px;
+	.order-header-btn {
+		padding-left: 70px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 50px;
+			height: 50px;
+			border: 2px solid $black;
+			border-radius: 50px;
+			background-repeat: no-repeat;
+			background-position: center center;
+			transition: border-color .25s;
+		}
+		.back-arrow {
+			position: absolute;
+			left: 15px;
+			svg {
+				path {
+					transition: fill .25s;
+				}
+			}
+		}
+		@media (min-width: 992px) {
+			&:hover {
+				&::before {
+					border-color: $green-accent;
+				}
+				.back-arrow {
+					svg {
+						path {
+							fill: $green-accent;
+						}
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 991.98px) {
+		.profile__title,
+		span {
+			color: $white;
+		}
+		.order-header-btn {
+			color: $white;
+			&::before {
+				border-color: $white;
+			}
+			.back-arrow {
+				position: absolute;
+				left: 15px;
+				svg {
+					path {
+						fill: $white;
+					}
+				}
+			}
+		}
 	}
 }

@@ -135,6 +135,10 @@
 		font-weight: bold;
 		letter-spacing: 0.05em;
 		border: none;
+		@media (max-width: 1200px) {
+			padding-right: 22px;
+			padding-left: 60px;
+		}
 		span {
 			transition: opacity $transition;
 			&:first-of-type {
@@ -273,5 +277,25 @@
 @media (max-width: 991.98px) {
 	#searchBtn {
 		display: none;
+	}
+}
+
+.copyBtn-wrap {
+	position: relative;
+	overflow-x: hidden;
+}
+
+.copyButton {
+	background-color: $black;
+	color: $white;
+	&:hover {
+		background-color: $green-accent;
+		border-color: $green-accent;
+		color: $white;
+	}
+	&.active {
+		pointer-events: none;
+		background-color: $green-accent;
+		border-color: $green-accent;
 	}
 }

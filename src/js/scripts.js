@@ -31,7 +31,7 @@
           {
             breakpoint: 992,
             settings: {
-              slidesToShow: 3
+              slidesToShow: 3,
             }
           },
           {
@@ -46,10 +46,21 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-        nextArrow: '<button class="slide-arrow next-arrow"></button>',
-        dots: true
+        prevArrow: '<button class="slide-arrow prev-hero-arrow"></button>',
+        nextArrow: '<button class="slide-arrow next-hero-arrow"></button>',
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive : [
+          {
+            breakpoint: 992,
+            settings: {
+              arrows: false
+            }
+          }
+        ]
       });
+      theme.copyPromocode();
       theme.checkDevice();
       theme.toggler();
       theme.loginToggler();
@@ -62,6 +73,21 @@
       theme.floatingSearchBar();
       theme.autocomplete();
       theme.addToCartBtn();
+    },
+    copyPromocode: () => {
+      let copyBtn = $('.copyButton');
+      copyBtn.on("click", function() {
+        let el = $(this);
+        el.siblings('input.linkToCopy').select();
+        document.execCommand("copy");
+
+        el.toggleClass('active');
+        el.text() == el.data("text-swap")
+          ? el.text(el.data("text-original"))
+          : el.text(el.data("text-swap"));
+
+
+      });
     },
     checkDevice: () => {
       /** If mobile or pc */
