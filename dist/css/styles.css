@@ -4822,8 +4822,25 @@ select.form-select {
   }
 }
 
+.promotions {
+  padding-bottom: 40px;
+}
+
+@media (max-width: 767.98px) {
+  .promotions {
+    padding-bottom: 0;
+  }
+}
+
 .promotions-header {
   padding: 42px 0;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 767.98px) {
+  .promotions-header {
+    margin-bottom: 0;
+  }
 }
 
 .promotions-column {
@@ -4831,10 +4848,12 @@ select.form-select {
   -ms-flex: 0 0 20%;
   flex: 0 0 20%;
   max-width: 20%;
-  padding: 0;
+  margin-bottom: 24px;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .promotions-column {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 25%;
@@ -4858,6 +4877,8 @@ select.form-select {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
+    padding: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -4866,6 +4887,14 @@ select.form-select {
   cursor: pointer;
   text-decoration: none;
   outline: none !important;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .promotions .product__card:focus {
@@ -4879,19 +4908,18 @@ select.form-select {
   text-decoration: none;
 }
 
-@media (max-width: 767.98px) {
-  .promotions .product__card {
-    padding-top: 10px;
-  }
-}
-
 .promotions .product__card-body {
+  border: 1px solid #F0F0F0;
+  border-top: 0;
   padding: 0 31px 18px;
+  padding-top: 68px;
+  height: 100%;
 }
 
 @media (max-width: 767.98px) {
   .promotions .product__card-body {
     padding: 0 17px 10px;
+    padding-top: 60px;
   }
 }
 
@@ -4899,7 +4927,7 @@ select.form-select {
   padding-left: 0;
   margin-bottom: 8px;
   padding-bottom: 0;
-  padding-top: 28px;
+  padding-top: 0;
 }
 
 .promotions .product__card-title:hover {
@@ -4907,14 +4935,8 @@ select.form-select {
   color: #191E28;
 }
 
-@media (max-width: 767.98px) {
-  .promotions .product__card-title {
-    padding-top: 60px;
-  }
-}
-
 .promotions .product__card-discount {
-  top: -10px;
+  top: 30px;
 }
 
 @media (max-width: 767.98px) {
@@ -4924,37 +4946,25 @@ select.form-select {
 }
 
 .promotions .product__card-thumb {
-  padding: 31px 30px 25px;
+  padding: 0;
 }
 
 .promotions .product__card-thumb:hover {
   cursor: pointer;
 }
 
+.promotions .product__card-thumb::before {
+  padding-top: 0;
+  padding-bottom: 80%;
+}
+
 .promotions .product__card-thumb img {
-  max-width: 200px;
+  max-width: 100%;
   width: 100%;
-  max-height: 139px;
+  height: 100%;
+  max-height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-}
-
-@media (max-width: 991.98px) {
-  .promotions .product__card-thumb::before {
-    padding-bottom: 36%;
-    padding-top: 36%;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .promotions .product__card-thumb::before {
-    padding-bottom: 20%;
-    padding-top: 30%;
-  }
-  .promotions .product__card-thumb img {
-    max-height: 91px;
-    max-width: 150px;
-  }
 }
 
 .promotions-text {

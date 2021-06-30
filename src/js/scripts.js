@@ -57,6 +57,13 @@
             settings: {
               arrows: false
             }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              arrows: false,
+              dots: false,
+            }
           }
         ]
       });

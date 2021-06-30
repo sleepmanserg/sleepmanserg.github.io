@@ -80,14 +80,23 @@
 }
 
 .promotions {
+	padding-bottom: 40px;
+	@media (max-width: 767.98px) {
+		padding-bottom: 0;
+	}
 	&-header {
 		padding: 42px 0;
+		margin-bottom: 60px;
+		@media (max-width: 767.98px) {
+			margin-bottom: 0;
+		}
 	}
 	&-column {
 		flex: 0 0 20%;
 		max-width: 20%;
-		padding: 0;
-		@media (max-width: 1100px) {
+		margin-bottom: 24px;
+		flex-shrink: 1;
+		@media (max-width: 1200px) {
 			flex: 0 0 25%;
 			max-width: 25%;
 		}
@@ -98,6 +107,8 @@
 		@media (max-width: 767.98px) {
 			flex: 0 0 50%;
 			max-width: 50%;
+			padding: 0;
+			margin-bottom: 0;
 		}
 	}
 	.product__card {
@@ -105,6 +116,9 @@
 		cursor: pointer;
 		text-decoration: none;
 		outline: none !important;
+		border: none;
+		display: flex;
+		flex-direction: column;
 		&:focus {
 			box-shadow: none;
 			outline: none;
@@ -115,60 +129,66 @@
 			text-decoration: none;
 		}
 		@media (max-width: 767.98px) {
-			padding-top: 10px;
 		}
 		&-body {
+			border: 1px solid #F0F0F0;
+			border-top: 0;
 			padding: 0 31px 18px;
+			padding-top: 68px;
+			height: 100%;
 			@media (max-width: 767.98px) {
 				padding: 0 17px 10px;
+				padding-top: 60px;
 			}
 		}
 		&-title {
 			padding-left: 0;
 			margin-bottom: 8px;
 			padding-bottom: 0;
-			padding-top: 28px;
+			padding-top: 0;
 			&:hover {
 				cursor: pointer;
 				color: $black;
 			}
-			@media (max-width: 767.98px) {
-				padding-top: 60px;
-			}
 		}
 		&-discount {
-			top: -10px;
+			top: 30px;
 			@media (max-width: 767.98px) {
 				top: 20px;
 			}
 		}
 	}
 	.product__card-thumb {
-		padding: 31px 30px 25px;
+		padding: 0;
 		&:hover {
 			cursor: pointer;
 		}
+		&::before {
+			padding-top: 0;
+			padding-bottom: 80%;
+		}
 		img {
-			max-width: 200px;
+			max-width: 100%;
 			width: 100%;
-			max-height: 139px;
+			height: 100%;
+			max-height: 100%;
 			object-fit: cover;
 		}
 		@media (max-width: 991.98px) {
-			&::before {
-				padding-bottom: 36%;
-				padding-top: 36%;
-			}
+			// &::before {
+			// 	padding-bottom: 36%;
+			// 	padding-top: 36%;
+			// }
 		}
 		@media (max-width: 767.98px) {
-			&::before {
-				padding-bottom: 20%;
-				padding-top: 30%;
-			}
-			img {
-				max-height: 91px;
-				max-width: 150px;
-			}
+			// &::before {
+			// 	padding-bottom: 20%;
+			// 	padding-top: 30%;
+			// }
+			// img {
+			// 	max-height: 91px;
+			// 	max-width: 150px;
+			// }
 		}
 	}
 	&-text {
