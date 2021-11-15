@@ -1,2 +1,2 @@
-# sleepmanserg.github.io
+# sleepmanserg.github.io/dist
 CelesteTrade Test
