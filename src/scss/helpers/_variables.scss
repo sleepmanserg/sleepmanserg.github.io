@@ -1,0 +1,32 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors
+// --------------------------------------------------
+
+$white-clr:                #FFFFFF;
+$black-clr:                #111111;
+$black-lighter-clr:        #313131;
+$accent-clr:               #28B3A1;
+$beige-clr:                #BEBFB8;
+$grey-light-clr:           #F9F9F9;
+$grey-lighter-clr:         #BCBCBC;
+$grey-darker-clr:          #F6F6F6;
+
+
+//== Font Family
+// --------------------------------------------------
+
+$font-family-helvetica:          'Helvetica', sans-serif;
+$font-family-proba:           	 'Proba Pro', sans-serif;
+
+//== Media queries (responsive breakpoints)
+// -------------------------------------------------------
+
+$desktop:   		   '1200px';
+$tablet-land:      '1024px';
+$tablet-port:    	 '767px';
+$mobile-land:		 	 '479px';
+$mobile-port:		 	 '364px';
+$menu-collapse: 	 $tablet-land;

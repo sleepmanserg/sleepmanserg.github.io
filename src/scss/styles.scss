@@ -1,0 +1,26 @@
+// All partial styles import
+
+// Core variables, mixins and placeholders
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/placeholders';
+@import 'helpers/utilities';
+@import 'helpers/scaffolding';
+@import 'helpers/font-import';
+
+// Components
+@import 'components/typography';
+@import 'components/slider';
+@import 'components/promotions-card';
+@import 'components/forms';
+@import 'components/button';
+@import 'components/navigation';
+@import 'components/mobileToggle';
+@import 'components/dots';
+
+// Layout
+@import 'layout/header';
+@import 'layout/main-content';
+@import 'layout/footer';
+
+// Modules

@@ -1,0 +1,14 @@
+.title-big { font-size: clamp(36px, 5vw, 72px); }
+.text-64 { font-size: clamp(28px, 4vw, 64px); }
+.text-48 { font-size: clamp(24px, 3vw, 48px); }
+.text-36 { font-size: clamp(24px, 3vw, 36px); }
+.text-24 { font-size: clamp(18px, 2vw, 24px); }
+.text-18 { font-size: clamp(14px, 1.8vw, 18px); }
+.text-16 { font-size: 16px; }
+.text-14 { font-size: 14px; }
+.lh-36 {
+	line-height: 36px;
+	@media (max-width: 575px) {
+		line-height: 27px;
+	}
+}
