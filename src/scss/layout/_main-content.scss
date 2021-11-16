@@ -132,6 +132,11 @@
 
 .fantom {
 	position: relative;
+	background-color: #f2f2f2;
+	.fantom-slider {
+		max-width: 1920px;
+		margin: 0 auto;
+	}
 }
 
 .fantom-slider {
