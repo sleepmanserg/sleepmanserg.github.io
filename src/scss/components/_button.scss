@@ -1,0 +1,25 @@
+.btn {
+	color: currentColor;
+	text-decoration: none;
+	border: none;
+	background-color: transparent;
+	font-size: 14px;
+	font-family: $font-family-helvetica;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+	height: 42px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	transition: .25s;
+	&.btn-accent {
+		background-color: $accent-clr;
+		color: $white-clr;
+		padding: 0 25px;
+		border-radius: 4px;
+		&:hover {
+			background-color: darken($accent-clr, 5%);
+		}
+	}
+}

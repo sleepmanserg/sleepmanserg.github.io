@@ -9,6 +9,14 @@ $(document).ready(function () {
 				theme.heroSLider();
 				theme.fantomSLider();
 				theme.productsSlider();
+				theme.stepsSlider();
+				theme.scrollAnim();
+			},
+
+			scrollAnim: () => {
+				AOS.init({
+					// once: true
+				});
 			},
 
 			toggler: () => {
@@ -103,6 +111,45 @@ $(document).ready(function () {
 						dots: true,
 						mobileFirst: true,
 						slidesToShow: 1,
+						responsive: [
+								{
+										breakpoint: sliderBreakpoint,
+										settings: "unslick"
+								}
+						]
+				};
+				function sliderInit() {
+				if (window.innerWidth <= sliderBreakpoint) {
+					if (sliderBool == false) {
+							sliderElem.slick(sliderSettings);
+							sliderBool = true;
+					}
+				} else {
+						sliderBool = false;
+					}
+				}
+
+				// resize
+				$(window).resize(function () {
+					sliderInit();
+				});
+				if (window.innerWidth <= sliderBreakpoint) {
+					sliderInit();
+				}
+			},
+
+			stepsSlider: () => {
+				// setup
+				let sliderElem = $(".steps-row"),
+				sliderBool = false,
+				sliderBreakpoint = 575,
+
+				sliderSettings = {
+						arrows: false,
+						dots: true,
+						mobileFirst: true,
+						slidesToShow: 1,
+						centerMode: true,
 						responsive: [
 								{
 										breakpoint: sliderBreakpoint,
