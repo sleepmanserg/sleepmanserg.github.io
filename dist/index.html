@@ -133,10 +133,33 @@
           <div class="header-logo"><a class="logo-link" href="index.html"><img src="./img/logo.png" alt="Celeste Trade"></a></div>
           <div class="header-right">
             <div class="header-lang">
-              <div class="header-lang-wrapper header-dropdown-wrapper"><a class="d-flex align-items-center" href="№"><span class="text-uppercase">Рус</span><i class="icon-chevron-down"></i></a>
+              <div class="header-lang-wrapper header-dropdown-wrapper"><a class="d-flex align-items-center" href="#"><span class="text-uppercase">Рус</span><i class="icon-chevron-down"></i></a>
                 <div class="header-dropdown"><a class="d-flex align-items-center" href="#"><span class="text-uppercase">Укр</span></a><a class="d-flex align-items-center" href="#"><span class="text-uppercase">Eng</span></a></div>
               </div>
-            </div><a href="#">Кабинет дилера</a>
+            </div>
+            <div class="header-login header-dropdown-wrapper"><a class="d-flex align-items-center" href="#"><i class="icon-login"></i><span>Кабинет дилера</span></a>
+              <div class="header-dropdown">
+                <div class="header-login__title">Кабинет дилера</div>
+                <form action="">
+                  <div class="form-wrapper">
+                    <div class="form-group mb-3">
+                      <input class="form-control form-input-grey" type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" required="" id="id_username" placeholder="Логин или почта">
+                    </div>
+                    <div class="form-group mb-0">
+                      <input class="form-control form-input-grey" type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="Пароль">
+                      <button class="header-login__pasword-toggle" id="togglePassword" type="button"><i class="icon-eye"></i></button>
+                    </div>
+                    <div class="password-forget-wrapper"><a class="password-forget p-0" href="#">Забыли пароль?</a></div>
+                    <button class="btn btn-accent d-block w-100" type="submit">Вход</button>
+                  </div>
+                </form>
+                <div class="header-login__footer">
+                  <div class="text-18 mb-3">Как стать дилером?</div>
+                  <div class="header-login__email header-login__info"><span>Напишите нам на почту:</span><a href="mailto:dlr@celestetrade.ua">dlr@celestetrade.ua</a></div>
+                  <div class="header-login__phone header-login__info"><span>или позвоните по номеру</span><a href="tel:+380487567474">+38 048 756 74 74</a></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -420,7 +443,7 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Телефон или почта">
+                        <input class="form-control" type="text" placeholder="Телефон или почта" required>
                       </div>
                     </div>
                     <div class="col-12">

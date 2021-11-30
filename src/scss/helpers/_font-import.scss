@@ -48,6 +48,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-eye:before {
+  content: "\e907";
+}
 .icon-chevron-right:before {
   content: "\e900";
 }
@@ -69,4 +72,3 @@
 .icon-instagram:before {
   content: "\e906";
 }
-

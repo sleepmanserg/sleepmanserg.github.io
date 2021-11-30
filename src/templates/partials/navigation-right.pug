@@ -1,7 +1,7 @@
 .header-right
 	.header-lang
 		.header-lang-wrapper.header-dropdown-wrapper
-			a(href="№").d-flex.align-items-center
+			a(href="#").d-flex.align-items-center
 				span.text-uppercase Рус
 				i.icon-chevron-down
 			.header-dropdown
@@ -9,4 +9,30 @@
 					span.text-uppercase Укр
 				a(href="#").d-flex.align-items-center
 					span.text-uppercase Eng
-	a(href="#") Кабинет дилера
+	.header-login.header-dropdown-wrapper
+		a(href="#").d-flex.align-items-center
+			i.icon-login
+			span Кабинет дилера
+		.header-dropdown
+			.header-login__title Кабинет дилера
+			form(action="")
+				.form-wrapper
+					.form-group.mb-3
+						input(type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" required="" id="id_username" placeholder="Логин или почта").form-control.form-input-grey
+						//- .form-error Такой аккаунт не зарегистрирован
+					.form-group.mb-0
+						input(type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="Пароль").form-control.form-input-grey
+						button.header-login__pasword-toggle#togglePassword(type="button")
+							i.icon-eye
+					.password-forget-wrapper
+						a(href="#").password-forget.p-0 Забыли пароль?
+					button(type="submit").btn.btn-accent.d-block.w-100 Вход
+			.header-login__footer
+				.text-18.mb-3 Как стать дилером?
+
+				.header-login__email.header-login__info
+					span Напишите нам на почту:
+					a(href="mailto:dlr@celestetrade.ua") dlr@celestetrade.ua
+				.header-login__phone.header-login__info
+					span или позвоните по номеру
+					a(href="tel:+380487567474") +38 048 756 74 74
