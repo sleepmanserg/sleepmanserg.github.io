@@ -46,6 +46,7 @@
 	cursor: pointer;
 	transform: scale(1);
 	transition: .5s ease;
+	color: $black-clr;
 	@include hover {
 		background-color: darken($white-clr, 10%);
 		transform: scale(1.1);
@@ -59,5 +60,24 @@
 	.basic-slider__caption {
 		padding-top: 95px;
 		padding-bottom: 98px;
+	}
+}
+
+@media (max-width: 575px) {
+	.basic-slider__caption {
+		max-width: 260px;
+	}
+	.basic-slider__nav {
+		display: none;
+	}
+	.basic-slider__controls {
+		bottom: 50px;
+	}
+	.basic-slider__title {
+		margin-bottom: 15px;
+		max-width: 272px;
+	}
+	.basic-slider__text {
+		max-width: 260px;
 	}
 }

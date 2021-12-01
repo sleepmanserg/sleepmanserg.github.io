@@ -21,6 +21,9 @@
   background:transparent;
   z-index: 101;
   position: relative;
+  span {
+    pointer-events: none;
+  }
 	@include hover {
 		opacity: 0.7;
 		.hamburger-inner {
@@ -90,6 +93,19 @@
       display: block;
       bottom: -9px;
 			transition: background-color .25s;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-toggle {
+    width: 60px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    margin-left: -1rem;
+    .hamburger-box {
+      width: 27px;
     }
   }
 }

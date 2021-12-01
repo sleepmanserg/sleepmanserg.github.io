@@ -352,6 +352,15 @@
 	}
 }
 
+@media (max-width: 1439px) {
+  .form-section {
+    .form-wrapper {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .steps {
     .steps-row {
@@ -384,10 +393,100 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .form-section {
+    padding: 0;
+    &::before,
+    &::after {
+      display: none;
+    }
+    .form-section-info {
+      padding: 43px 1rem 50px;
+      background-color: $beige-clr;
+    }
+    .form-section-title,
+    .form-title {
+      margin-bottom: 25px;
+    }
+    .container {
+      padding: 0;
+    }
+    .row {
+      margin: 0;
+    }
+    [class*="col-"] {
+      padding: 0;
+    }
+    .form-wrapper {
+      padding: 43px 1rem 50px;
+      background-color: $black-clr;
+      .form-group {
+        margin-bottom: 1rem;
+      }
+      .row {
+        margin: 0 -1rem;
+      }
+      [class*="col-"] {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
 @media (max-width: 991px) {
+  .hero {
+    padding-top: 56px;
+  }
   .about-us {
     .about-us__description {
       padding-right: 70px;
+    }
+  }
+  .promotions {
+    overflow: hidden;
+    padding: 43px 0 20px;
+    .promotions-inner {
+      margin-bottom: 30px;
+    }
+  }
+  .promotions-card {
+    flex-direction: column-reverse;
+    .promotions-card__text {
+      flex: 0;
+      margin: -30px auto 0;
+      max-width: 90%;
+      width: 100%;
+    }
+    .promotions-card__text {
+      padding-top: 0;
+    }
+    .promotions-card__text-inner {
+      padding: 57px 49px 32px 24px;
+    }
+    .promotions-card__text-duration,
+    .promotions-card__text-description,
+    .promotions-card__text-icon {
+      text-align: left;
+    }
+    .promotions-card__text-icon {
+      img {
+        transform: rotate(0);
+      }
+    }
+  }
+  .promotions-card.promotions-card-reverse {
+    flex-direction: column-reverse;
+    .promotions-card__text {
+      margin-left: 0;
+      margin: -30px auto 0;
+    }
+    .promotions-card__text-inner {
+      padding: 57px 49px 32px 24px;
+    }
+    .promotions-card__text-icon {
+      img {
+        transform: rotate(0);
+      }
     }
   }
 }

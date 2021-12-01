@@ -12,6 +12,59 @@ $(document).ready(function () {
 				theme.stepsSlider();
 				theme.scrollAnim();
 				theme.passwordShow();
+				theme.touchDevice();
+				theme.dynamicAdaptive();
+				theme.vhMobFix();
+			},
+
+			/** VH mobile fix */
+
+			vhMobFix: () => {
+				// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+				let vh = window.innerHeight * 0.01;
+				// Then we set the value in the --vh custom property to the root of the document
+				document.documentElement.style.setProperty('--vh', `${vh}px`);
+			},
+
+			/** Dyneamic adaptive */
+
+			dynamicAdaptive: () => {
+				const da = new DynamicAdapt("max");
+				da.init();
+			},
+
+			touchDevice: () => {
+				function isTouchScreendevice() {
+					return (('ontouchstart' in window) ||
+					(navigator.maxTouchPoints > 0) ||
+					(navigator.msMaxTouchPoints > 0));
+				};
+				if (isTouchScreendevice()) {
+					document.querySelector('body').classList.toggle('is-touch');
+				} else {
+					document.querySelector('body').classList.toggle('not-touch');
+				}
+			},
+
+			/* Add or remove active */
+			addRemoveActive: () => {
+				document.addEventListener('click', e => {
+					const isTargetButton = e.target.matches('[data-target-button]');
+					if (!isTargetButton && e.target.closest('[data-active]') != null) return;
+					let currentTarget;
+					if (isTargetButton) {
+						currentTarget = e.target.closest('[data-active]');
+						currentTarget.classList.toggle('active');
+						document.querySelector('body').classList.toggle('overflow-hidden');
+						document.querySelector('body').classList.toggle('backdrop');
+					}
+					document.querySelectorAll('[data-active].active').forEach(item => {
+						if (item == currentTarget) return;
+						item.classList.remove('active');
+						document.querySelector('body').classList.toggle('overflow-hidden');
+						document.querySelector('body').classList.toggle('backdrop');
+					});
+				});
 			},
 
 			passwordShow: () => {
@@ -59,6 +112,10 @@ $(document).ready(function () {
 						closeDisable();
 					});
 
+					$('.data-toggle').on('click', function () {
+						closeDisable();
+					});
+
 					return false;
 				});
 
@@ -67,23 +124,6 @@ $(document).ready(function () {
 					$('body, html').removeClass('overflow-hidden');
 					$('body').removeClass('menu-active');
 				}
-			},
-
-			/* Add or remove active */
-			addRemoveActive: () => {
-				document.addEventListener('click', e => {
-					const isTargetButton = e.target.matches('[data-target-button]');
-					if (!isTargetButton && e.target.closest('[data-active]') != null) return;
-					let currentTarget;
-					if (isTargetButton) {
-						currentTarget = e.target.closest('[data-active]');
-						currentTarget.classList.toggle('active');
-					}
-					document.querySelectorAll('[data-active].active').forEach(item => {
-						if (item == currentTarget) return;
-						item.classList.remove('active');
-					});
-				});
 			},
 
 			/** Hero slider */

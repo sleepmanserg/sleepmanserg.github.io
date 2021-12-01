@@ -34,6 +34,12 @@
 	}
 }
 
+@media (max-width: 575px) {
+	.slider-controls__row {
+		justify-content: center;
+	}
+}
+
 @media (max-width: 374px) {
 	.slick-dots  {
 		li {
@@ -47,4 +53,15 @@
 			}
 		}
 	}
+}
+
+.steps {
+	.slick-dots {
+		li:not(.slick-active) {
+			button {
+				background-color: $grey-darker-clr;
+			}
+		}
+	}
+
 }

@@ -41,6 +41,7 @@
 		transition: .25s;
 		span {
 			pointer-events: none;
+			max-width: 85%;
 		}
 		@include hover {
 			color: $accent-clr;

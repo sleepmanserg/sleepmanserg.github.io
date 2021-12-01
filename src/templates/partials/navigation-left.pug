@@ -1,156 +1,171 @@
 .header-left
-	.header-menu-button
-		button.menu-toggle.data-toggle(type='button' data-target='.main-nav-wrapper, .menu-toggle' data-classes='active' data-backdrop='true' data-overflow='true')
+	.header-menu-button(data-active)
+		button.menu-toggle(data-target-button)
 			span.hamburger-box
 				span.hamburger-inner
 
-	.main-nav-wrapper
-		nav.main-nav
-			ul.main-nav__list
-				li.main-nav__list-item.has-child
-					a(href="#" ).main-nav__link.nav-link.text-18
-						img.main-nav__link-img(src="./img/categories/handles.png", alt="Иконка категории")
-						span Дверные ручки
+		.main-nav-wrapper
+			.main-nav-wrapper__inner
+				nav.main-nav
+					ul.main-nav__list
+						li.main-nav__list-item.has-child
+							a(href="#" ).main-nav__link.nav-link.text-18
+								img.main-nav__link-img(src="./img/categories/handles.png", alt="Иконка категории")
+								span Дверные ручки
 
-					ul.main-nav__submenu
-						li.main-nav__submenu-item
-							ul.main-nav__submenu-inner__list
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link На розетке
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Без розетки
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link На планке
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Для раздвижных
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Скобы
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Кнобы
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Кнокеры
-							ul.main-nav__submenu-inner__list
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Аксессуары
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Оконнные ручки
-				li.main-nav__list-item.has-child
-					a(href="#" ).main-nav__link.nav-link.text-18
-						img.main-nav__link-img(src="./img/categories/petli.png", alt="Иконка категории")
-						span Петли для дверей
+							ul.main-nav__submenu
+								li.main-nav__submenu-item
+									ul.main-nav__submenu-inner__list
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link На розетке
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Без розетки
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link На планке
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Для раздвижных
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Скобы
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Кнобы
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Кнокеры
+									ul.main-nav__submenu-inner__list
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Аксессуары
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Оконнные ручки
+						li.main-nav__list-item.has-child
+							a(href="#" ).main-nav__link.nav-link.text-18
+								img.main-nav__link-img(src="./img/categories/petli.png", alt="Иконка категории")
+								span Петли для дверей
 
-					ul.main-nav__submenu
-						li.main-nav__submenu-item
-							ul.main-nav__submenu-inner__list
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Для входных дверей
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Для межкомнатных дверей
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Аксессуары
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Скрытые петли
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Ввертные петли
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Осевые петли
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Накладные
-				li.main-nav__list-item.has-child
-					a(href="#" ).main-nav__link.nav-link.text-18
-						img.main-nav__link-img(src="./img/categories/cylinder.png", alt="Иконка категории")
-						span Цилиндры дверные
+							ul.main-nav__submenu
+								li.main-nav__submenu-item
+									ul.main-nav__submenu-inner__list
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Для входных дверей
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Для межкомнатных дверей
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Аксессуары
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Скрытые петли
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Ввертные петли
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Осевые петли
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Накладные
+						li.main-nav__list-item.has-child
+							a(href="#" ).main-nav__link.nav-link.text-18
+								img.main-nav__link-img(src="./img/categories/cylinder.png", alt="Иконка категории")
+								span Цилиндры дверные
 
-					ul.main-nav__submenu
-						li.main-nav__submenu-item
-							ul.main-nav__submenu-inner__list
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Ключ поворотник
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Ключ-ключ
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Ключ-половинка
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Ключ-шток
-				li.main-nav__list-item.has-child
-					a(href="#" ).main-nav__link.nav-link.text-18
-						img.main-nav__link-img(src="./img/categories/locks.png", alt="Иконка категории")
-						span Замки для межкомнатных дверей
+							ul.main-nav__submenu
+								li.main-nav__submenu-item
+									ul.main-nav__submenu-inner__list
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Ключ поворотник
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Ключ-ключ
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Ключ-половинка
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Ключ-шток
+						li.main-nav__list-item.has-child
+							a(href="#" ).main-nav__link.nav-link.text-18
+								img.main-nav__link-img(src="./img/categories/locks.png", alt="Иконка категории")
+								span Замки для межкомнатных дверей
 
-					ul.main-nav__submenu
-						li.main-nav__submenu-item
-							ul.main-nav__submenu-inner__list
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Замки 1
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Замки 2
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Замки 3
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Замки 4
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Замки 5
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Замки 6
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Замки 7
-							ul.main-nav__submenu-inner__list
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Аксессуары
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Оконнные ручки
-				li.main-nav__list-item.has-child
-					a(href="#" ).main-nav__link.nav-link.text-18
-						img.main-nav__link-img(src="./img/categories/accessories.png", alt="Иконка категории")
-						span Аксессуары
+							ul.main-nav__submenu
+								li.main-nav__submenu-item
+									ul.main-nav__submenu-inner__list
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Замки 1
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Замки 2
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Замки 3
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Замки 4
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Замки 5
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Замки 6
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Замки 7
+									ul.main-nav__submenu-inner__list
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Аксессуары
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Оконнные ручки
+						li.main-nav__list-item.has-child
+							a(href="#" ).main-nav__link.nav-link.text-18
+								img.main-nav__link-img(src="./img/categories/accessories.png", alt="Иконка категории")
+								span Аксессуары
 
-					ul.main-nav__submenu
-						li.main-nav__submenu-item
-							ul.main-nav__submenu-inner__list
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Бренд
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Стопы (Отбойники)
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Другое
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Для ручек
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Для петель
-				li.main-nav__list-item.has-child
-					a(href="#" ).main-nav__link.nav-link.text-18
-						img.main-nav__link-img(src="./img/categories/brands.png", alt="Иконка категории")
-						span Бренды
+							ul.main-nav__submenu
+								li.main-nav__submenu-item
+									ul.main-nav__submenu-inner__list
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Бренд
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Стопы (Отбойники)
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Другое
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Для ручек
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Для петель
+						li.main-nav__list-item.has-child
+							a(href="#" ).main-nav__link.nav-link.text-18
+								img.main-nav__link-img(src="./img/categories/brands.png", alt="Иконка категории")
+								span Бренды
 
-					ul.main-nav__submenu
-						li.main-nav__submenu-item
-							ul.main-nav__submenu-inner__list
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Бренд 1
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Бренд 2
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Бренд 3
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Бренд 4
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Бренд 5
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Бренд 6
-								li
-									a(href="#").text-18.main-nav__submenu-inner-link Бренд 7
-		nav.main-nav
-			a(href="#").main-nav__link.nav-link.text-18 Партнерам
-			a(href="#").main-nav__link.nav-link.text-18 О компании
-			a(href="#").main-nav__link.nav-link.text-18 Новости
-			a(href="#").main-nav__link.nav-link.text-18 Где купить (карта дилеров)
-			a(href="#").main-nav__link.nav-link.text-18 Контакты
+							ul.main-nav__submenu
+								li.main-nav__submenu-item
+									ul.main-nav__submenu-inner__list
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Бренд 1
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Бренд 2
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Бренд 3
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Бренд 4
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Бренд 5
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Бренд 6
+										li
+											a(href="#").text-18.main-nav__submenu-inner-link Бренд 7
+				nav.main-nav.main-nav__pages
+					a(href="#").main-nav__link.nav-link.text-18 Партнерам
+					a(href="#").main-nav__link.nav-link.text-18 О компании
+					a(href="#").main-nav__link.nav-link.text-18 Новости
+					a(href="#").main-nav__link.nav-link.text-18 Где купить (карта дилеров)
+					a(href="#").main-nav__link.nav-link.text-18 Контакты
 
-	.header-socials.d-flex.align-items-center
+				.mobile-callback-button
+					a(href="#").btn.btn-accent Обратный звонок
+				.mobile-language-switcher.language-switcher
+					ul.language-switcher-list
+						li.language-switcher-list__item
+							a(href="#") Укр
+						li.language-switcher-list__item.language-active
+							a(href="#") Рус
+						li.language-switcher-list__item
+							a(href="#") Eng
+
+	.header-socials(data-da=".main-nav__pages,1024,last")
+		.header-socials-title Социальные сети
 		a(href="#").header-socials__link
 			i.icon-instagram
+			span Celeste_trade
 		a(href="#").header-socials__link
 			i.icon-youtube
+			span Celestetrade
 
 	.header-phones
 		.header-phones-wrapper.header-dropdown-wrapper

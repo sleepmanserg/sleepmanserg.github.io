@@ -7,11 +7,17 @@ html * {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   background-color: #fff;
   font-family: $font-family-helvetica;
   font-weight: 400;
   line-height: 1;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 img { width: 100%;}
@@ -19,7 +25,11 @@ img { width: 100%;}
 svg { display: block;}
 
 .overflow-hidden {
-  overflow: hidden;
+  position:relative;
+  overflow:hidden;
+  .main-wrapper {
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 1309px) {
@@ -28,6 +38,10 @@ svg { display: block;}
     padding-right: 1rem;
     padding-left: 1rem;
   }
+}
+
+.main-wrapper {
+  overflow-x: hidden;
 }
 
 .site-backdrop {
@@ -42,12 +56,14 @@ svg { display: block;}
   cursor: pointer;
 }
 
-.site-backdrop.active {
-  opacity: .6;
-  visibility: visible;
-  transition: opacity .35s ease;
-  background: rgba(169, 169, 169, 0.7);
-  z-index: 98;
+.backdrop {
+  .site-backdrop {
+    opacity: .6;
+    visibility: visible;
+    transition: opacity .35s ease;
+    background: rgba(169, 169, 169, 0.7);
+    z-index: 98;
+  }
 }
-@media (max-width: 1100px) {
-}
+
+
