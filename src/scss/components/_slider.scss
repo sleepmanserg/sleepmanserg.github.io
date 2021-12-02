@@ -85,6 +85,9 @@
 /* History slider */
 
 .history-slider {
+	.history-slider__item {
+		outline: none !important;
+	}
 	.slick-slide.slick-current {
 		.history-slider__year-title {
 			opacity: 1;
@@ -160,11 +163,14 @@
 }
 
 .history-slider__year {
+	&:focus {
+		outline: none !important;
+	}
 	.history-slider__year-btn {
 		border: none;
 		background-color: transparent;
-		outline: none;
-		box-shadow: none;
+		outline: none !important;
+		box-shadow: none !important;
 		padding: 0;
 		color: #dfdfdf;
 		font-weight: bold;

@@ -407,6 +407,10 @@ svg {
 }
 
 /* History slider */
+.history-slider .history-slider__item {
+  outline: none !important;
+}
+
 .history-slider .slick-slide.slick-current .history-slider__year-title {
   opacity: 1;
   visibility: visible;
@@ -478,12 +482,16 @@ svg {
   border-bottom-left-radius: 10px;
 }
 
+.history-slider__year:focus {
+  outline: none !important;
+}
+
 .history-slider__year .history-slider__year-btn {
   border: none;
   background-color: transparent;
-  outline: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
   padding: 0;
   color: #dfdfdf;
   font-weight: bold;
