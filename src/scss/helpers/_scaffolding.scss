@@ -18,6 +18,12 @@ body {
   line-height: 1;
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-wrapper {
+  flex: 1;
 }
 
 img { width: 100%;}

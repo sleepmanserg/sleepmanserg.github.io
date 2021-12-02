@@ -352,6 +352,142 @@
 	}
 }
 
+/* About page */
+
+.about-hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  .about-hero__caption {
+    padding-top: 364px;
+    padding-bottom: 140px;
+    max-width: 845px;
+    .title-big {
+      line-height: 1;
+      margin-bottom: 44px;
+    }
+  }
+}
+
+.history {
+  padding: 154px 0 104px;
+  position: relative;
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  &::before {
+    bottom: 25px;
+    left: 0;
+    width: 230px;
+    height: 230px;
+    background-image: url('../img/history-poly.svg');
+  }
+  &::after {
+    bottom: 0;
+    right: 0;
+    background-image: url('../img/history-poly2.svg');
+    width: 362px;
+    height: 362px;
+  }
+  .products-title {
+    margin-bottom: 38px;
+  }
+}
+
+.team {
+  position: relative;
+  padding: 150px 0;
+  .products-title {
+    margin-bottom: 63px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(213.71deg, rgba(190, 191, 184, 0) 0%, #BEBFB8 100%);
+    opacity: 0.5;
+    z-index: -1;
+  }
+  .team-slider__wrapper {
+    margin-bottom: 70px;
+    .basic-slider__controls {
+      padding-right: 64px;
+      padding-left: 70px;
+    }
+  }
+  [class*="col-"] {
+    padding: 0;
+  }
+}
+
+.team-card {
+  .team-card__body {
+    border: 5px solid $accent-clr;
+    margin: -35px 35px 0;
+    z-index: 2;
+    position: relative;
+  }
+  .team-card__body-inner {
+    padding: 71px 35px 45px;
+    display: block;
+    text-decoration: none;
+    transition: .25s;
+    @include hover {
+      background-color: $accent-clr;
+      .team-card__body-text {
+        color: $white-clr;
+      }
+      .team-item__body-icon {
+        filter: invert(100%);
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .team-card__body-text {
+    color: $black-clr;
+    font-weight: bold;
+    margin-bottom: 35px;
+    transition: .25s;
+  }
+  .team-item__body-icon {
+    width: 16px;
+    height: 16px;
+    transition: .25s;
+  }
+}
+
+.write-us {
+  .write-us__inner {
+    display: flex;
+    justify-content: space-between;
+    .proba-family {
+      line-height: 1;
+      max-width: 350px;
+    }
+    p {
+      line-height: 27px;
+      max-width: 522px;
+    }
+    .write-us__btn {
+      .btn {
+        height: 56px;
+        width: 220px;
+      }
+    }
+  }
+  padding: 148px 0 93px;
+}
+
+
+/* About page */
+
 @media (max-width: 1439px) {
   .form-section {
     .form-wrapper {

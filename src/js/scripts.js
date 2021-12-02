@@ -15,6 +15,8 @@ $(document).ready(function () {
 				theme.touchDevice();
 				theme.dynamicAdaptive();
 				theme.vhMobFix();
+				theme.aboutSlider();
+				theme.teamSlider();
 			},
 
 			/** VH mobile fix */
@@ -228,6 +230,38 @@ $(document).ready(function () {
 					sliderInit();
 				}
 			},
+
+			aboutSlider: () => {
+				$('.history-slider').slick({
+					slidesToShow: 7,
+					slidesToScroll: 0,
+					asNavFor: '.history-slider__description',
+					dots: false,
+					centerMode: true,
+					focusOnSelect: true,
+					draggable: false
+				});
+				$('.history-slider__description').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					draggable: false,
+					fade: true,
+					asNavFor: '.history-slider'
+				});
+			},
+
+			teamSlider: () => {
+				$('.team-slider').slick({
+					slidesToShow: 1,
+					arrows: true,
+					speed: 500,
+					dots: true,
+					appendDots: '.team-slider__dots',
+					nextArrow: '.team-controls__next',
+					prevArrow: '.team-controls__prev'
+				});
+			}
 
 		}
 		theme.init();
