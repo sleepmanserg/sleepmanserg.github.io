@@ -2183,6 +2183,7 @@ svg {
   .main-nav-wrapper .main-nav-wrapper__inner {
     -webkit-transform: translateY(0);
     transform: translateY(0);
+    min-height: calc(100vh - 50px);
   }
   .main-nav-wrapper .main-nav__list {
     padding-bottom: 32px;

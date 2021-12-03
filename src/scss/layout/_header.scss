@@ -429,6 +429,7 @@
 			}
 		.main-nav-wrapper__inner {
 			transform: translateY(0);
+			min-height: calc(100vh - 50px);
 		}
 		.main-nav__list {
 			padding-bottom: 32px;
