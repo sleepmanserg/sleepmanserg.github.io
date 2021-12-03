@@ -4,27 +4,26 @@ $(document).ready(function () {
 
 		const theme = {
 			init: () => {
-				theme.toggler();
+				// theme.toggler();
+				theme.menuHeight();
 				theme.addRemoveActive();
 				theme.heroSLider();
 				theme.fantomSLider();
 				theme.productsSlider();
 				theme.stepsSlider();
-				theme.scrollAnim();
 				theme.passwordShow();
 				theme.touchDevice();
 				theme.dynamicAdaptive();
 				theme.vhMobFix();
 				theme.aboutSlider();
 				theme.teamSlider();
+				theme.scrollAnim();
 			},
 
 			/** VH mobile fix */
 
 			vhMobFix: () => {
-				// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 				let vh = window.innerHeight * 0.01;
-				// Then we set the value in the --vh custom property to the root of the document
 				document.documentElement.style.setProperty('--vh', `${vh}px`);
 			},
 
@@ -52,7 +51,9 @@ $(document).ready(function () {
 			addRemoveActive: () => {
 				document.addEventListener('click', e => {
 					const isTargetButton = e.target.matches('[data-target-button]');
-					if (!isTargetButton && e.target.closest('[data-active]') != null) return;
+					if (!isTargetButton && e.target.closest('[data-active]') != null) {
+						return;
+					}
 					let currentTarget;
 					if (isTargetButton) {
 						currentTarget = e.target.closest('[data-active]');
@@ -65,6 +66,7 @@ $(document).ready(function () {
 						item.classList.remove('active');
 						document.querySelector('body').classList.toggle('overflow-hidden');
 						document.querySelector('body').classList.toggle('backdrop');
+
 					});
 				});
 			},
@@ -89,12 +91,10 @@ $(document).ready(function () {
 			toggler: () => {
 				$(document).on('click', '.data-toggle', function () {
 					let $target = $($(this).data('target'));
-					let navItem = $('.scroll');
 					let classes = $(this).data('classes');
 					let backdrop = $(this).data('backdrop');
 					let overflow = $(this).data('overflow');
 					let siteBackdrop = $('.site-backdrop');
-					let navClose = $('.main-nav-close');
 
 					$target.toggleClass(classes);
 
@@ -102,29 +102,25 @@ $(document).ready(function () {
 						siteBackdrop.toggleClass('active');
 					}
 					if (overflow === true) {
-						$('body').toggleClass('overflow-hidden menu-active');
-						$('html').toggleClass('overflow-hidden');
+						$('body').toggleClass('overflow-hidden');
 					}
 
 					siteBackdrop.on('click', function () {
 						closeDisable();
 					});
 
-					navItem.on('click', function () {
-						closeDisable();
-					});
-
-					$('.data-toggle').on('click', function () {
-						closeDisable();
-					});
+					// $('.data-toggle').on('click', function () {
+					// 	closeDisable();
+					// });
 
 					return false;
 				});
 
 				function closeDisable() {
-					$('.site-backdrop, .main-nav-wrapper, .menu-toggle').removeClass('active');
-					$('body, html').removeClass('overflow-hidden');
-					$('body').removeClass('menu-active');
+					$('.site-backdrop').removeClass('active');
+					$('.menu-toggle').removeClass('active');
+					$('.main-nav-wrapper').removeClass('active');
+					$('body').removeClass('overflow-hidden');
 				}
 			},
 
@@ -261,6 +257,18 @@ $(document).ready(function () {
 					nextArrow: '.team-controls__next',
 					prevArrow: '.team-controls__prev'
 				});
+			},
+
+			/** Menu height */
+
+			menuHeight: () => {
+				$(window).on("resize", function() {
+
+					let winHeight = $(window).height();
+					let headerHeight = $(".header").height();
+					$('.main-nav-wrapper__inner').height(winHeight - headerHeight);
+				});
+				$(window).trigger('resize');
 			}
 
 		}

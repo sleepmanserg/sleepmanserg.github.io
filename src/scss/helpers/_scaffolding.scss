@@ -60,7 +60,15 @@ svg { display: block;}
   visibility: hidden;
   transition: opacity .35s ease;
   cursor: pointer;
+  &.active {
+    opacity: .6;
+    visibility: visible;
+    transition: opacity .35s ease;
+    background: rgba(169, 169, 169, 0.7);
+    z-index: 98;
+  }
 }
+
 
 .backdrop {
   .site-backdrop {
