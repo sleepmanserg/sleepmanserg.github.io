@@ -33,6 +33,7 @@
   font-display: block;
 }
 
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -48,6 +49,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-reverse:before {
+  content: "\e910";
+}
+.icon-check:before {
+  content: "\e908";
+}
+.icon-clock:before {
+  content: "\e909";
+}
+.icon-close:before {
+  content: "\e90a";
+}
+.icon-created:before {
+  content: "\e90b";
+}
+.icon-list:before {
+  content: "\e90c";
+}
+.icon-np:before {
+  content: "\e90d";
+}
+.icon-plane:before {
+  content: "\e90e";
+}
+.icon-truck:before {
+  content: "\e90f";
+}
 .icon-eye:before {
   content: "\e907";
 }
@@ -72,3 +100,4 @@
 .icon-instagram:before {
   content: "\e906";
 }
+

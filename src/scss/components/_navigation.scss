@@ -11,6 +11,7 @@
 	z-index: 111;
 	opacity: 0;
 	visibility: hidden;
+	pointer-events: none;
 	&::before {
 		content: '';
 		position: absolute;
@@ -97,17 +98,25 @@
 		border-radius: 4px;
 		@include hover {
 			background: rgba(40, 179, 161, 0.1);
-			.main-nav__submenu {
-				opacity: 1;
-				visibility: visible;
-			}
+			// .main-nav__submenu {
+			// 	opacity: 1;
+			// 	visibility: visible;
+			// }
 			.main-nav__link {
 				color: $accent-clr;
 			}
 		}
 		&.active {
+			background-color: rgba(40,179,161,0.1);
+			.main-nav__link {
+				color: $accent-clr;
+				&::after {
+					color: $accent-clr;
+				}
+			}
 			.main-nav__submenu {
-				display: flex;
+				opacity: 1;
+				visibility: visible;
 			}
 		}
 	}
@@ -172,6 +181,7 @@
 		opacity: 1;
 		visibility: visible;
 		transform: translateX(0);
+		pointer-events: all;
 		.main-nav-wrapper__inner {
 			transform: translateY(0);
 		}

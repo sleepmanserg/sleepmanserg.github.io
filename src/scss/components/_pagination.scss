@@ -1,0 +1,99 @@
+.pagination {
+	.pagination-inner {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+	.pagination-body {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		max-width: 80%;
+	}
+	.pagination-list {
+		list-style: none;
+		padding-left: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: 0 -4px;
+		margin-right: 8px;
+	}
+	.pagaination-list__item {
+		padding: 0 4px;
+		margin-bottom: 8px;
+		&.active {
+			a {
+				background-color: $accent-clr;
+				color: $white-clr;
+				@include hover {
+					background-color: $accent-clr;
+					color: $white-clr;
+				}
+			}
+		}
+		a {
+			display: block;
+			width: 40px;
+			height: 40px;
+			background-color: $white-clr;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $black-clr;
+			text-decoration: none;
+			font-weight: bold;
+			border-radius: 4px;
+			transition: .25s;
+			@include hover {
+				background-color: rgba(40,179,161,0.1);
+			}
+		}
+	}
+	.pagination-load-more {
+		margin: 0 auto 8px;
+	}
+	.load-more-btn {
+		padding: 10px 1rem 10px;
+		border-radius: 4px;
+		background-color: $white-clr;
+		text-decoration: none;
+		font-size: 14px;
+		line-height: 1;
+		color: $black-clr;
+		display: flex;
+		align-items: center;
+		transition: .25s;
+		i {
+			color: $accent-clr;
+			margin-right: 12px;
+			font-size: 20px;
+			transition: .25s;
+		}
+		@include hover {
+			background-color: rgba(40,179,161,0.1);
+			i {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	.pagination-btn {
+		width: 40px;
+		height: 40px;
+		background-color: $white-clr;
+		border-radius: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $grey-lighter-clr;
+		text-decoration: none;
+		transition: .25s;
+		i {
+			transition: .25s;
+		}
+		@include hover {
+			background-color: rgba(40,179,161,0.1);
+			color: $black-clr;
+		}
+	}
+}

@@ -2,7 +2,6 @@
 
 .hero {
   position: relative;
-  padding-top: 108px;
 }
 
 /* Products */
@@ -429,15 +428,20 @@
   .write-us__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     .proba-family {
       line-height: 1;
       max-width: 350px;
+      margin-bottom: 24px;
     }
     p {
       line-height: 27px;
       max-width: 522px;
+      padding: 0 15px;
+      margin-bottom: 24px;
     }
     .write-us__btn {
+      margin-bottom: 24px;
       .btn {
         height: 56px;
         width: 220px;
@@ -521,9 +525,100 @@
   }
 }
 
-
-
 /* About page */
+
+/* Catalog page */
+
+.catalog {
+	background-color: $grey-light-clr;
+  padding-bottom: 88px;
+}
+
+// .catalog-wrapper {
+//   .col-lg-3 {
+//     flex: 0 0 300px;
+//   }
+//   .col-lg-9 {
+//     flex: 0 0 calc(100% - 300px);
+//     max-width: calc(100% - 300px);
+//   }
+// }
+
+.catalog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 -15px 15px;
+  .catalog-header__title,
+  .catalog-header__sorting {
+    padding: 0 15px;
+  }
+}
+
+.catalog-tags {
+  margin-bottom: 24px;
+  .catalog-tags__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 -8px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.catalog-tags__item {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+  font-size: 14px;
+  line-height: 1;
+  .catalog-tags__name {
+    padding-right: 1rem;
+  }
+}
+.catalog-tags__link {
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  padding: 11px 1rem;
+  background-color: $white-clr;
+  border-radius: 4px;
+  color: $black-clr;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .35s;
+  @include hover {
+    background-color: rgba(40,179,161,0.1);
+    text-decoration: none;
+    color: $black-clr;
+  }
+  i {
+    font-size: 13px;
+    color: $grey-lighter-clr;
+  }
+  &.catalog-tags__filter-reset {
+    appearance: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    color: $red-lighter-clr;
+    span {
+      padding: 0;
+    }
+  }
+}
+
+.catalog-products__row {
+  [class*="col-"] {
+    margin-bottom: 40px;
+  }
+}
+
+/* Catalog page */
 
 @media (max-width: 1439px) {
   .form-section {
@@ -604,12 +699,16 @@
       }
     }
   }
+  .history {
+    padding: 90px 0;
+  }
+  .principles-wrapper {
+    column-count: 2;
+    padding: 90px 0;
+  }
 }
 
 @media (max-width: 991px) {
-  .hero {
-    padding-top: 56px;
-  }
   .about-us {
     .about-us__description {
       padding-right: 70px;
@@ -659,6 +758,44 @@
     .promotions-card__text-icon {
       img {
         transform: rotate(0);
+      }
+    }
+  }
+  .about-hero {
+    .about-hero__caption {
+      padding-top: 150px;
+      padding-bottom: 80px;
+    }
+  }
+  .history-slider {
+    .slick-slide.slick-current {
+      .history-slider__year-btn {
+        font-size: 62px;
+      }
+    }
+  }
+  .team {
+    padding: 90px 0;
+    .team-slider__wrapper {
+      margin: 0 -1rem 70px;
+      width: calc(100vw + 1rem);
+    }
+  }
+  .team-card {
+    .team-card__body {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .team-card__body-inner {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .write-us {
+    padding: 90px 0;
+    .write-us__inner {
+      p {
+        padding-left: 0;
       }
     }
   }
@@ -732,6 +869,127 @@
       margin-bottom: 25px;
     }
   }
+  .about-hero {
+    .about-hero__caption {
+      padding-top: 88px;
+      padding-bottom: 43px;
+    }
+  }
+  .history {
+    padding: 43px 0 46px;
+    &::before {
+      display: none;
+    }
+    .products-title {
+      margin-bottom: 15px;
+    }
+  }
+  .history-slider {
+
+    .slick-slide.slick-current.slick-active {
+      .history-slider__year-btn {
+        font-size: 48px;
+        &::before {
+          background-image: none;
+          width: 44px;
+          height: 44px;
+          border-radius: 44px;
+          bottom: -18px;
+          left: 0;
+          transform: translateX(0);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      .history-slider__year-title {
+        transform: translate3d(0, 0);
+      }
+    }
+    .history-slider__year-btn {
+      justify-content: flex-start;
+      &::before {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .history-slider__year-title {
+      margin: 48px 0 0;
+      width: calc(100vw - 2rem);
+      transform: translateY(0);
+      transform: translateX(40px);
+      img {
+        display: none;
+      }
+      .history-slider-title {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  .history-slider__description-item {
+    padding-top: 23px;
+    p {
+      font-size: 18px;
+      line-height: 27px;
+      text-align: left;
+    }
+  }
+  .team {
+    padding: 43px 0 20px;
+    .products-title {
+      margin-bottom: 1rem;
+    }
+    .team-slider__wrapper {
+      margin-bottom: 48px;
+    }
+  }
+  .team-card {
+    margin-bottom: 30px;
+    .team-card__body {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+    .team-card__body-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 57px 25px 35px;
+    }
+  }
+  .principles-wrapper {
+    column-count: 1;
+    padding: 43px 0 20px;
+    display: flex;
+    flex-direction: column;
+    .principles-card {
+      margin-bottom: 30px;
+      padding: 30px 1rem 24px;
+    }
+    .principles-grid {
+      .products-title {
+        margin-bottom: 17px;
+      }
+    }
+    .principles-card__title {
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 15px;
+    }
+    .princinples-card__list-item,
+    .principles-card__text {
+      font-size: 14px;
+      line-height: 21px;
+    }
+    .principles-card {
+      .card-icon {
+        margin-bottom: 18px;
+      }
+    }
+  }
+  .write-us {
+    padding: 48px 0 25px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -749,6 +1007,16 @@
     }
     .steps-card__text {
       margin-top: -3px;
+    }
+  }
+  .history-slider {
+    .slick-slide.slick-current.slick-active {
+      .history-slider__year-btn {
+        justify-content: flex-start;
+      }
+    }
+    .history-slider__year-btn {
+      justify-content: center;
     }
   }
 }

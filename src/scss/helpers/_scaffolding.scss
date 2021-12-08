@@ -20,10 +20,15 @@ body {
   min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .main-wrapper {
   flex: 1;
+  padding-top: 108px;
+  @media (max-width: 991px) {
+    padding-top: 56px;
+  }
 }
 
 img { width: 100%;}
@@ -33,6 +38,8 @@ svg { display: block;}
 .overflow-hidden {
   position:relative;
   overflow:hidden;
+  touch-action: none;
+  -ms-touch-action: none;
   .main-wrapper {
     overflow: hidden;
   }
