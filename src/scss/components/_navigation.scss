@@ -171,8 +171,12 @@
 			position: relative;
 		}
 	}
-	&.active {
-
+	.main-nav-pages {
+		.main-nav__link {
+			&::after {
+				display: none;
+			}
+		}
 	}
 }
 

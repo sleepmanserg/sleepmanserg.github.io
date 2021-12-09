@@ -9,6 +9,7 @@
 		align-items: center;
 		flex-wrap: wrap;
 		max-width: 80%;
+		padding: 0 1rem;
 	}
 	.pagination-list {
 		list-style: none;
@@ -94,6 +95,48 @@
 		@include hover {
 			background-color: rgba(40,179,161,0.1);
 			color: $black-clr;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.pagination {
+		padding-top: 12px;
+		.pagination-list {
+			margin-right: 0;
+			padding: 0 1rem;
+			width: 100%;
+			max-width: 80%;
+			justify-content: center;
+		}
+		.pagination-inner {
+			align-items: flex-end;
+			position: relative;
+			.pagination-prev,
+			.pagination-next {
+				position: absolute;
+				margin-bottom: 8px;
+			}
+			.pagination-prev {
+				left: 0;
+			}
+			.pagination-next {
+				right: 0;
+			}
+		}
+		.pagination-body {
+			flex-direction: column-reverse;
+			width: 100%;
+			padding: 0;
+			max-width: 100%;
+		}
+		.pagination-load-more {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.load-more-btn {
+			width: 100%;
+			justify-content: center;
 		}
 	}
 }

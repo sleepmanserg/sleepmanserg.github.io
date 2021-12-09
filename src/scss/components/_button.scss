@@ -13,6 +13,8 @@
 	justify-content: center;
 	line-height: 1;
 	transition: .25s;
+	outline: none !important;
+	box-shadow: none !important;
 	&.btn-accent {
 		background-color: $accent-clr;
 		color: $white-clr;

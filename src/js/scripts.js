@@ -4,7 +4,7 @@ $(document).ready(function () {
 		let currentTarget;
 		const theme = {
 			init: () => {
-				// theme.toggler();
+				theme.toggler();
 				theme.menuHeight();
 				theme.addRemoveActive();
 				theme.subMenu();
@@ -20,7 +20,7 @@ $(document).ready(function () {
 				theme.teamSlider();
 				theme.scrollAnim();
 				theme.filterMore();
-				theme.colorCount();
+				theme.checkboxCheck();
 			},
 
 			/** Category submenu */
@@ -127,6 +127,7 @@ $(document).ready(function () {
 					let backdrop = $(this).data('backdrop');
 					let overflow = $(this).data('overflow');
 					let siteBackdrop = $('.site-backdrop');
+					let closeBtn = $('.sidebar-header__close .btn');
 
 					$target.toggleClass(classes);
 
@@ -135,11 +136,16 @@ $(document).ready(function () {
 					}
 					if (overflow === true) {
 						$('body').toggleClass('overflow-hidden');
+						$('body').toggleClass('sidebar-active');
 					}
 
 					siteBackdrop.on('click', function () {
 						closeDisable();
 					});
+					closeBtn.on('click', function () {
+						closeDisable();
+					});
+
 
 					// $('.data-toggle').on('click', function () {
 					// 	closeDisable();
@@ -150,9 +156,9 @@ $(document).ready(function () {
 
 				function closeDisable() {
 					$('.site-backdrop').removeClass('active');
-					$('.menu-toggle').removeClass('active');
-					$('.main-nav-wrapper').removeClass('active');
+					$('.sidebar').removeClass('active');
 					$('body').removeClass('overflow-hidden');
+					$('body').removeClass('sidebar-active');
 				}
 			},
 
@@ -359,8 +365,15 @@ $(document).ready(function () {
 
 			/** Color count */
 
-			colorCount: () => {
-
+			checkboxCheck: () => {
+				$(".sidebar-checkbox .check__input").click(function() {
+					$(this).toggleClass('active');
+					if($(".sidebar-checkbox .check__input").hasClass('active')) {
+						$('.filter-submit__btn').addClass('is-visible');
+					} else {
+						$('.filter-submit__btn').removeClass('is-visible');
+					}
+				});
 			},
 
 		}

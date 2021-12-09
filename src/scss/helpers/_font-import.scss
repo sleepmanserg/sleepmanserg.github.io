@@ -49,6 +49,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-clear:before {
+  content: "\e911";
+}
+.icon-filter:before {
+  content: "\e90d";
+}
 .icon-reverse:before {
   content: "\e910";
 }
@@ -66,9 +72,6 @@
 }
 .icon-list:before {
   content: "\e90c";
-}
-.icon-np:before {
-  content: "\e90d";
 }
 .icon-plane:before {
   content: "\e90e";
@@ -100,4 +103,3 @@
 .icon-instagram:before {
   content: "\e906";
 }
-
