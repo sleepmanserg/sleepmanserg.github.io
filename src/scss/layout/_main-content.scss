@@ -622,6 +622,44 @@
   }
 }
 
+/* Similar slider */
+.similar-title {
+  font-size: 24px;
+  line-height: 27px;
+  margin-bottom: 32px;
+}
+.similar-slider__wrapper {
+  .slick-slide {
+    margin: 0 16px;
+  }
+  /* the parent */
+  .slick-list {
+    margin: 0 -16px;
+  }
+  .basic-slider__controls {
+    position: relative;
+    transform: none;
+    left: 0;
+    bottom: 0;
+  }
+  padding-bottom: 90px;
+  .slider-controls {
+    padding-top: 33px;
+    .slick-dots {
+      li {
+        &.slick-active {
+          button {
+            background-color: $accent-clr;
+          }
+        }
+        button {
+          background-color: #E0E0E0;
+        }
+      }
+    }
+  }
+}
+
 /* Catalog page */
 
 @media (max-width: 1439px) {

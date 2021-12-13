@@ -12,12 +12,15 @@ $(document).ready(function () {
 				theme.fantomSLider();
 				theme.productsSlider();
 				theme.stepsSlider();
+				theme.similarSlider();
 				theme.passwordShow();
 				theme.touchDevice();
 				theme.dynamicAdaptive();
 				theme.vhMobFix();
 				theme.aboutSlider();
 				theme.teamSlider();
+				theme.productCardSlider();
+				theme.productZoom();
 				theme.scrollAnim();
 				theme.filterMore();
 				theme.checkboxCheck();
@@ -265,6 +268,18 @@ $(document).ready(function () {
 				}
 			},
 
+			similarSlider: () => {
+				$('.similar-slider').slick({
+					slidesToShow: 4,
+					slidesToScroll: 2,
+					arrows: true,
+					dots: true,
+					nextArrow: '.similar-controls__next',
+					prevArrow: '.similar-controls__prev',
+					appendDots: '.similar-slider__dots',
+				});
+			},
+
 			aboutSlider: () => {
 				$('.history-slider').slick({
 					slidesToShow: 7,
@@ -375,6 +390,146 @@ $(document).ready(function () {
 					}
 				});
 			},
+
+			/** Product card slider */
+
+			productCardSlider: () => {
+				$('.product-slider').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: false,
+					fade: true,
+					asNavFor: '.product-slider__thumbs',
+					draggable: false,
+				});
+				$('.product-slider__thumbs').slick({
+					slidesToShow: 6,
+					slidesToScroll: 1,
+					asNavFor: '.product-slider',
+					dots: false,
+					arrows: false,
+					focusOnSelect: true,
+					// centerMode: true,
+					// centerPadding: 0,
+					draggable: false
+				});
+			},
+
+			/** Product card zoom */
+
+			productZoom: () => {
+				$('.img-zoom').izoomify({
+					magnify: 1.4,
+					duration: 0,
+					touch: true,
+				});
+			},
+
+			/** Custom select */
+
+			// productCardSelect: () => {
+
+			// 	/** Селект цвета */
+			// 	function formatStateColor (state) {
+			// 		if (!state.id) {
+			// 			return state.text;
+			// 		}
+			// 		var baseUrl = "../img/card-colors/";
+			// 		var $stateImg = $(
+			// 			'<div class="card-color-img"><span class="state-title">Цвет</span><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
+			// 		);
+			// 		$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
+			// 		return $stateImg;
+			// 	};
+			// 	function formatStateColorInner (state) {
+			// 		if (!state.id) {
+			// 			return state.text;
+			// 		}
+			// 		var baseUrl = "../img/card-colors/";
+			// 		var $stateImg = $(
+			// 			'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наличии</span>' + '</div>' + '</div>'
+			// 		);
+			// 		$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
+			// 		return $stateImg;
+			// 	};
+
+			// 	/** Селект цвета */
+
+			// 	/** Селект Покрытия */
+			// 	function formatStateCover (state) {
+			// 		if (!state.id) {
+			// 			return state.text;
+			// 		}
+			// 		var baseUrl = "../img/card-colors/";
+			// 		var $stateImg = $(
+			// 			'<div class="card-color-img"><span class="state-title">Покрытие</span><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
+			// 		);
+			// 		$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
+			// 		return $stateImg;
+			// 	};
+			// 	function formatStateCoverInner (state) {
+			// 		if (!state.id) {
+			// 			return state.text;
+			// 		}
+			// 		var baseUrl = "../img/card-colors/";
+			// 		var $stateImg = $(
+			// 			'<div class="card-color-img"><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
+			// 		);
+			// 		var $stateImg = $(
+			// 			'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наличии</span>' + '</div>' + '</div>'
+			// 		);
+			// 		return $stateImg;
+			// 	};
+			// 	/** Селект Покрытия */
+
+			// 	/** Селект Комплектация */
+			// 	function formatStateEquip (state) {
+			// 		if (!state.id) {
+			// 			return state.text;
+			// 		}
+			// 		var baseUrl = "../img/card-colors/";
+			// 		var $stateImg = $(
+			// 			'<div class="card-color-img"><span class="state-title">Комплектация</span><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
+			// 		);
+			// 		$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
+			// 		return $stateImg;
+			// 	};
+			// 	function formatStateEquipInner (state) {
+			// 		if (!state.id) {
+			// 			return state.text;
+			// 		}
+			// 		var baseUrl = "../img/card-colors/";
+			// 		var $stateImg = $(
+			// 			'<div class="card-color-img"><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
+			// 		);
+			// 		var $stateImg = $(
+			// 			'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наличии</span>' + '</div>' + '</div>'
+			// 		);
+			// 		return $stateImg;
+			// 	};
+			// 	/** Селект Комплектация */
+
+			// 	$('.select-color').select2({
+			// 		minimumResultsForSearch: -1,
+			// 		templateResult: formatStateColorInner,
+			// 		templateSelection: formatStateColor,
+			// 		theme: "select-dropdown",
+			// 	});
+			// 	$('.select-cover').select2({
+			// 		minimumResultsForSearch: -1,
+			// 		templateResult: formatStateCoverInner,
+			// 		templateSelection: formatStateCover,
+			// 		theme: "select-dropdown",
+			// 	});
+			// 	$('.select-equipment').select2({
+			// 		minimumResultsForSearch: -1,
+			// 		templateResult: formatStateEquipInner,
+			// 		templateSelection: formatStateEquip,
+			// 		theme: "select-dropdown",
+			// 	});
+
+			// },
 
 		}
 		theme.init();
