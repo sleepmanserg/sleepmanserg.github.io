@@ -24,7 +24,7 @@ $(document).ready(function () {
 				theme.scrollAnim();
 				theme.filterMore();
 				theme.checkboxCheck();
-				theme.productCardSelect();
+				// theme.productCardSelect();
 			},
 
 			/** Category submenu */
