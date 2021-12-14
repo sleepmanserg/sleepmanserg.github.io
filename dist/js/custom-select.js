@@ -3,7 +3,7 @@ function formatStateColor(state) {
 	if (!state.id) {
 		return state.text;
 	}
-	var baseUrl = "../img/card-colors/";
+	var baseUrl = "../img/card-colors";
 	var $stateImg = $(
 		'<div class="card-color-img"><span class="state-title">Цвет</span><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
 	);
