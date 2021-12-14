@@ -42,7 +42,7 @@
 			left: 50%;
 			transform: translateX(-50%);
 			width: 230px;
-			background-color: #F0F0F0;
+			background-color: $grey-superlight-clr;
 			height: 1px;
 		}
 	}
@@ -116,7 +116,7 @@
 		}
 		.sidebar-header {
 			font-family: $font-family-proba;
-			border-bottom: 1px solid #F0F0F0;
+			border-bottom: 1px solid $grey-superlight-clr;
 			padding: 6px 0 0;
 			position: sticky;
 			top: 0;
@@ -127,7 +127,7 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			border-bottom: 1px solid #F0F0F0;
+			border-bottom: 1px solid $grey-superlight-clr;
 			padding: 0 4px 7px;
 		}
 		.sidebar-header__title {

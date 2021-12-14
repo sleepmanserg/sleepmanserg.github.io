@@ -3,6 +3,8 @@
 	margin: 0;
 	display: flex;
 	padding: 24px 0;
+	white-space: nowrap;
+	overflow: auto;
 	.breadcrumbs-item {
 		color: $black-clr;
 		display: flex;
@@ -43,5 +45,8 @@
 				color: $accent-clr;
 			}
 		}
+	}
+	@media (max-width: 767px) {
+		padding: 8px 0 7px;
 	}
 }

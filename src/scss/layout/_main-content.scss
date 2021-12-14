@@ -879,6 +879,22 @@
       }
     }
   }
+  .similar-slider__wrapper {
+    padding-bottom: 50px;
+    .product-tile {
+      .colors-list__item {
+        flex: 0 0 16.66666667%;
+      }
+    }
+  }
+  .similar-slider__wrapper {
+    .slick-slide {
+      margin: 0 10px;
+    }
+    .slick-list {
+      margin: 0 -10px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -1069,6 +1085,13 @@
   }
   .write-us {
     padding: 48px 0 25px;
+  }
+  .similar-slider__wrapper {
+    .product-tile {
+      .colors-list__item {
+        flex: 0 0 38px;
+      }
+    }
   }
 }
 

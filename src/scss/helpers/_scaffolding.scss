@@ -30,6 +30,10 @@ body {
   }
 }
 
+.btn:focus {
+  box-shadow: none !important;
+}
+
 img { width: 100%;}
 
 svg { display: block;}
