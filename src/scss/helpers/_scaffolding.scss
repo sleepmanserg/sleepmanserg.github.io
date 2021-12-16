@@ -25,6 +25,7 @@ body {
 .main-wrapper {
   flex: 1;
   padding-top: 108px;
+  background: $grey-light-clr;
   @media (max-width: 991px) {
     padding-top: 56px;
   }

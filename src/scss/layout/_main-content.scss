@@ -27,6 +27,10 @@
   .products-item {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    .product-item__body {
+      flex: 1;
+    }
 		.product-item__body-icon {
 			transition: .25s;
 		}
@@ -115,6 +119,7 @@
 		display: block;
 		color: $black-clr;
 		text-decoration: none;
+    height: 100%;
 		transition: .25s;
 		@include hover {
 			background-color: $accent-clr;
@@ -228,9 +233,6 @@
     padding: 40px 40px 65px;
     height: 100%;
   }
-  .steps-card__icon {
-
-  }
   .slick-list {
     padding: 0 16% 0 0 !important;
   }
@@ -286,7 +288,6 @@
 /* Form section */
 
 .form-section {
-	// background: linear-gradient(90deg, $beige-clr 50%, #1B1B1B 50%);
 	position: relative;
 	padding: 90px 0 68px;
 	&::before,
@@ -296,7 +297,7 @@
 		width: 50%;
 		height: 100%;
 		top: 0;
-		z-index: -1;
+		z-index: 1;
 	}
 	&::before {
 		background-color: $beige-clr;
@@ -308,6 +309,11 @@
 		background-size: cover;
 		right: 0;
 	}
+  .form-section-info,
+  form {
+    position: relative;
+    z-index: 2;
+  }
 	.form-section-title {
 		margin-bottom: 51px;
 	}
@@ -345,7 +351,6 @@
     content: '';
     position: absolute;
     background-repeat: no-repeat;
-    z-index: -1;
   }
   &::before {
     bottom: 25px;
@@ -353,6 +358,7 @@
     width: 230px;
     height: 230px;
     background-image: url('../img/history-poly.svg');
+    z-index: 2;
   }
   &::after {
     bottom: 0;
@@ -453,6 +459,7 @@
 
 .principles {
   position: relative;
+  background-color: $white-clr;
   &::after {
     content: '';
     position: absolute;
@@ -661,6 +668,31 @@
 }
 
 /* Catalog page */
+
+/* Brands page */
+.brands {
+  background-color: $grey-light-clr;
+  padding-bottom: 35px;
+  .brands-header__title {
+    font-size: 36px;
+    line-height: 1;
+    margin-right: 70px;
+  }
+  .brands-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+  .brands-header__left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .catalog-sorting {
+      margin-left: auto;
+    }
+  }
+}
 
 @media (max-width: 1439px) {
   .form-section {
@@ -1093,6 +1125,29 @@
       }
     }
   }
+  .brands {
+    .brands-header__left {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .brands-header__title {
+        order: 1;
+        margin-bottom: 15px;
+      }
+      .catalog-sorting {
+        order: 2;
+        margin-left: 0;
+      }
+      .brands-header__search {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+        .input-group {
+          width: 100%;
+          max-width: 275px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 575px) {
@@ -1149,6 +1204,32 @@
   .catalog-products__row {
     [class*="col-"] {
       margin-bottom: 8px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .brands {
+    .brands-header__left {
+      .brands-header__title,
+      .brands-header__search,
+      .catalog-sorting {
+        width: 100%;
+        select {
+          width: 100%;
+        }
+      }
+      .brands-header__search {
+        margin-right: 0;
+        .input-group {
+          max-width: 100%;
+          display: flex;
+          align-items: center;
+        }
+        .brand-search {
+          width: calc(100% - 60px);
+        }
+      }
     }
   }
 }

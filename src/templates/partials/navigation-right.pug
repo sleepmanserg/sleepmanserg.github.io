@@ -2,39 +2,39 @@
 	.header-lang
 		.header-lang-wrapper.header-dropdown-wrapper(data-active)
 			button(type="button" data-target-button).d-flex.align-items-center
-				span.text-uppercase Рус
+				span.text-uppercase Укр
 				i.icon-chevron-down
 			.header-dropdown
 				a(href="#").d-flex.align-items-center
-					span.text-uppercase Укр
+					span.text-uppercase Рус
 				a(href="#").d-flex.align-items-center
 					span.text-uppercase Eng
 	.header-login.header-dropdown-wrapper(data-active)
 		button(type="button" data-target-button).d-flex.align-items-center
 			i.icon-login
-			span Кабинет дилера
+			span Кабінет дилера
 		.header-dropdown
 			.header-dropdown-inner
-				.header-login__title Кабинет дилера
+				.header-login__title Кабінет дилера
 				.header-login__body
 					form(action="")
 						.form-wrapper
 							.form-group.mb-3
-								input(type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" required="" id="id_username" placeholder="Логин или почта").form-control.form-input-grey
+								input(type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" required="" id="id_username" placeholder="Логін або e-mail").form-control.form-input-grey
 								//- .form-error Такой аккаунт не зарегистрирован
 							.form-group.mb-0
 								input(type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="Пароль").form-control.form-input-grey
 								button.header-login__pasword-toggle#togglePassword(type="button")
 									i.icon-eye
 							.password-forget-wrapper
-								a(href="#").password-forget.p-0 Забыли пароль?
-							button(type="submit").btn.btn-accent.d-block.w-100 Вход
+								a(href="#").password-forget.p-0 Забули пароль?
+							button(type="submit").btn.btn-accent.d-block.w-100 Вхід
 				.header-login__footer
-					.text-18.mb-3 Как стать дилером?
+					.text-18.mb-3 Як стати дилером?
 
 					.header-login__email.header-login__info
-						span Напишите нам на почту:
+						span Напишіть нам на пошту:
 						a(href="mailto:dlr@celestetrade.ua") dlr@celestetrade.ua
 					.header-login__phone.header-login__info
-						span или позвоните по номеру
+						span або зателефонуйте за номером
 						a(href="tel:+380487567474") +38 048 756 74 74

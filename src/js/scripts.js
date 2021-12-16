@@ -24,7 +24,7 @@ $(document).ready(function () {
 				theme.scrollAnim();
 				theme.filterMore();
 				theme.checkboxCheck();
-				// theme.productCardSelect();
+				theme.productCardSelect();
 			},
 
 			/** Category submenu */
@@ -476,7 +476,7 @@ $(document).ready(function () {
 					}
 					var baseUrl = "../img/card-colors/";
 					var $stateImg = $(
-						'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наличии</span>' + '</div>' + '</div>'
+						'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наявності</span>' + '</div>' + '</div>'
 					);
 					$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
 					return $stateImg;
@@ -505,7 +505,7 @@ $(document).ready(function () {
 						'<div class="card-color-img"><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
 					);
 					var $stateImg = $(
-						'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наличии</span>' + '</div>' + '</div>'
+						'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наявності</span>' + '</div>' + '</div>'
 					);
 					return $stateImg;
 				};
@@ -532,7 +532,7 @@ $(document).ready(function () {
 						'<div class="card-color-img"><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
 					);
 					var $stateImg = $(
-						'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наличии</span>' + '</div>' + '</div>'
+						'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наявності</span>' + '</div>' + '</div>'
 					);
 					return $stateImg;
 				};

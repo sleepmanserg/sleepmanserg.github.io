@@ -179,6 +179,7 @@
 
 .catalog-sorting {
 	position: relative;
+	display: inline-block;
 	&::after {
 		content: '\e900';
 		font-family: 'icomoon';
@@ -204,5 +205,41 @@
 	}
 	.select {
 		height: 48px;
+	}
+}
+
+.brands-header__search {
+	margin-right: 1rem;
+	.input-group {
+		border: 1px solid $grey-superlight-clr;
+		border-radius: 4px;
+	}
+	.brand-search {
+		border: none;
+		background-color: transparent;
+		padding: 0 16px;
+		height: 44px;
+		&::placeholder {
+			color: #c4c4c4;
+			font-size: 14px;
+		}
+		&:focus {
+			outline: none;
+			box-shadow: none;
+		}
+	}
+	.brand-search-btn {
+		appearance: none;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		box-shadow: none;
+		cursor: pointer;
+		padding: 0 16px 0 0;
+		color: $grey-lighter-clr;
+		font-size: 14px;
+		font-weight: bold;
+		height: 44px;
+		display: block;
 	}
 }
