@@ -1,4 +1,6 @@
-/**Hover styling for all devices and browsers*/
+/**
+Hover styling for all devices and browsers
+ */
 @mixin hover() {
 	@media (hover: none) {
 			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);

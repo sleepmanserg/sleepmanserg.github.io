@@ -1,0 +1,51 @@
+.four-zero-four {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@media (max-width: 767px) {
+		> .container {
+			padding: 0;
+		}
+	}
+	svg {
+		margin: 0 auto;
+		display: block;
+		position: relative;
+	}
+	.four-zero-four__body {
+		overflow: hidden;
+		position: relative;
+	}
+	.four-zero-four__title {
+		font-weight: bold;
+		font-size: clamp(160px, 7vw, 288px);
+		white-space: nowrap;
+		margin: 0 auto;
+		text-align: center;
+		animation: textScroll 7s linear infinite alternate;
+		z-index: 1;
+		position: absolute;
+		left: 0;
+		top: 150px;
+	}
+	.sun-404 {
+		animation: sunAnim 3s linear infinite alternate;
+	}
+	.leaf1-404 {
+		animation: leafAnim 2s linear infinite alternate;
+		transform-origin: top top;
+	}
+}
+
+@keyframes textScroll {
+	0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+@keyframes sunAnim {
+	0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(10%, 0, 0); }
+}
+@keyframes leafAnim {
+	0% { transform: rotate(0) }
+  100% { transform: rotate(-2deg) }
+}

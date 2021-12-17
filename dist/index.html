@@ -3,511 +3,361 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>World Spa
+    <title>Home
     </title>
     <!-- Mobile Specific Meta Tag-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Favicons-->
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="alternate icon" href="/favicon.ico">
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="apple-touch-icon" href="/icon.png">
     <!-- Vendor Styles including: Bootstrap, Font Icons, Plugins, etc.-->
     <link rel="stylesheet" media="screen" href="css/vendor.min.css">
     <!-- Main Template Styles-->
     <link rel="stylesheet" media="screen" href="css/styles.min.css">
   </head>
   <!-- Body-->
-  <body class="content is-loading">
-    <div id="preloader"></div>
-    <div class="site-backdrop"></div>
+  <body>
     <!-- Mobile Menu-->
     <!-- Site Header-->
     <header class="header">
-      <button class="btn menu-toggle hamburger--spin stagger data-toggle" type="button" data-target=".main-nav, .menu-toggle" data-classes="active" data-backdrop="true" data-overflow="true"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="logo-mob" href="/"><img src="./img/logo.svg" alt="World Spa logo"></a>
-      <div class="container container-header">
+      <div class="container">
         <div class="header-wrapper">
-          <nav class="header-nav main-nav">
-            <button class="main-nav-close hamburger--spin data-toggle" type="button" data-target=".main-nav, .menu-toggle" data-classes="active" data-backdrop="true" data-overflow="true"></button>
-            <div class="header__action" data-active>
-              <button class="main-nav__link" type="button" data-target-button>About</button>
-              <div class="header__dropdown"><a class="main-nav__link" href="our-story.html">Our story</a><a class="main-nav__link scroll" href="admissions.html">Admissions</a><a class="main-nav__link scroll" href="press.html">Press</a><a class="main-nav__link" href="parking.html">Parking</a><a class="main-nav__link" href="hours.html">hours &#38; directions</a><a class="main-nav__link" href="gallery.html">gallery</a><a class="main-nav__link" href="faq.html">FAQs</a><a class="main-nav__link" href="360.html">360 tour</a></div>
-            </div><a class="main-nav__link scroll" href="#experience">Experience</a><a class="main-nav__link scroll" href="spa-treatments.html">Spa treatments</a><a class="header-logo" href="/"><img class="logo" src="./img/logo.svg" alt="World Spa logo"><img class="logo-fixed" src="./img/logo-fixed.svg" alt="World Spa logo"></a><a class="main-nav__link scroll" href="dining.html">Dining</a><a class="main-nav__link scroll" href="#member">Memberships</a><a class="main-nav__link scroll" href="#shop">Shop</a><a class="main-nav__link scroll main-nav__login-link" href="#"><img src="./img/user.svg" alt="Login icon"><span>Login</span></a>
-          </nav>
-          <button class="main-nav__link main-nav__book-link btn" type="button" data-toggle="modal" data-target="#bookingModal"><span>Book</span></button>
+          <div class="header-left">
+            <div class="header-menu-button" data-active>
+              <button class="menu-toggle data-toggle" data-target-button><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+            </div>
+            <div class="main-nav-wrapper">
+              <div class="main-nav-wrapper__inner">
+                <ul class="main-nav__list">
+                  <li class="main-nav__list-item has-child" data-submenu><a class="main-nav__link nav-link text-18" href="catalog.html" data-submenu-target><img class="main-nav__link-img" src="./img/categories/handles.png" alt="Значок категорії"><span>Дверні ручки</span></a>
+                    <ul class="main-nav__submenu">
+                      <li class="main-nav__submenu-item">
+                        <ul class="main-nav__submenu-inner__list">
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">На розетці</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Без розетки</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">На планці</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Для розсувних</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Скоби</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Кноби</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Кнокери</a></li>
+                        </ul>
+                        <ul class="main-nav__submenu-inner__list">
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Аксесуари</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Віконні ручки</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__list-item has-child" data-submenu><a class="main-nav__link nav-link text-18" href="catalog.html" data-submenu-target><img class="main-nav__link-img" src="./img/categories/petli.png" alt="Значок категорії"><span>Петлі для дверей</span></a>
+                    <ul class="main-nav__submenu">
+                      <li class="main-nav__submenu-item">
+                        <ul class="main-nav__submenu-inner__list">
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Для входных дверей</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Для межкомнатных дверей</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Аксессуары</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Скрытые петли</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Ввертные петли</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Осевые петли</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Накладные</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__list-item has-child" data-submenu><a class="main-nav__link nav-link text-18" href="catalog.html" data-submenu-target><img class="main-nav__link-img" src="./img/categories/cylinder.png" alt="Значок категорії"><span>Циліндри дверні</span></a>
+                    <ul class="main-nav__submenu">
+                      <li class="main-nav__submenu-item">
+                        <ul class="main-nav__submenu-inner__list">
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Ключ поворотник</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Ключ-ключ</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Ключ-половинка</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Ключ-шток</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__list-item has-child" data-submenu><a class="main-nav__link nav-link text-18" href="catalog.html" data-submenu-target><img class="main-nav__link-img" src="./img/categories/locks.png" alt="Значок категорії"><span>Замки для міжкімнатних дверей</span></a>
+                    <ul class="main-nav__submenu">
+                      <li class="main-nav__submenu-item">
+                        <ul class="main-nav__submenu-inner__list">
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Замки 1</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Замки 2</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Замки 3</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Замки 4</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Замки 5</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Замки 6</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Замки 7</a></li>
+                        </ul>
+                        <ul class="main-nav__submenu-inner__list">
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Аксесуари</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Віконні ручки</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__list-item has-child" data-submenu><a class="main-nav__link nav-link text-18" href="catalog.html" data-submenu-target><img class="main-nav__link-img" src="./img/categories/accessories.png" alt="Значок категорії"><span>Аксесуари</span></a>
+                    <ul class="main-nav__submenu">
+                      <li class="main-nav__submenu-item">
+                        <ul class="main-nav__submenu-inner__list">
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Бренд</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Стопи (відбійники)</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Інше</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Для ручок</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="#">Для петель</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__list-item has-child" data-submenu><a class="main-nav__link nav-link text-18" href="brands.html" data-submenu-target><img class="main-nav__link-img" src="./img/categories/brands.png" alt="Значок категорії"><span>Бренди</span></a>
+                    <ul class="main-nav__submenu">
+                      <li class="main-nav__submenu-item">
+                        <ul class="main-nav__submenu-inner__list">
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="brands-single.html">Бренд 1</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="brands-single.html">Бренд 2</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="brands-single.html">Бренд 3</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="brands-single.html">Бренд 4</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="brands-single.html">Бренд 5</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="brands-single.html">Бренд 6</a></li>
+                          <li><a class="text-18 main-nav__submenu-inner-link" href="brands-single.html">Бренд 7</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <div class="main-nav-pages">
+                    <li class="main-nav__list-item"><a class="main-nav__link nav-link text-18" href="#">Партнерам</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__link nav-link text-18" href="about.html">Про компанію</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__link nav-link text-18" href="#">Новини</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__link nav-link text-18" href="#">Де придбати (карта дилерів)</a></li>
+                    <li class="main-nav__list-item"><a class="main-nav__link nav-link text-18" href="#">Контакти</a></li>
+                  </div>
+                  <div class="mobile-callback-button"><a class="btn btn-accent" href="#">Зворотний дзвінок</a></div>
+                  <div class="mobile-language-switcher language-switcher">
+                    <ul class="language-switcher-list">
+                      <li class="language-switcher-list__item language-active"><a href="#">Укр</a></li>
+                      <li class="language-switcher-list__item"><a href="#">Рус</a></li>
+                      <li class="language-switcher-list__item"><a href="#">Eng</a></li>
+                    </ul>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="header-socials" data-da=".main-nav__list,1024,last">
+              <div class="header-socials-title">Соціальні мережі</div><a class="header-socials__link" href="#"><i class="icon-instagram"></i><span>Celeste_trade</span></a><a class="header-socials__link" href="#"><i class="icon-youtube"></i><span>Celestetrade</span></a>
+            </div>
+            <div class="header-phones">
+              <div class="header-phones-wrapper header-dropdown-wrapper"><a class="d-flex align-items-center" href="tel:+380447656578"><i class="icon-flag"></i><span>+38 044 765 65 78</span><i class="icon-chevron-down"></i></a>
+                <div class="header-dropdown"><a class="d-flex align-items-center" href="tel:+380447656578"><span>+38 044 765 65 78</span></a><a class="d-flex align-items-center" href="tel:+380447656578"><span>+38 044 765 65 78</span></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="header-logo"><a class="logo-link" href="index.html"><img src="./img/logo.png" alt="Celeste Trade"></a></div>
+          <div class="header-right">
+            <div class="header-lang">
+              <div class="header-lang-wrapper header-dropdown-wrapper" data-active>
+                <button class="d-flex align-items-center" type="button" data-target-button><span class="text-uppercase">Укр</span><i class="icon-chevron-down"></i></button>
+                <div class="header-dropdown"><a class="d-flex align-items-center" href="#"><span class="text-uppercase">Рус</span></a><a class="d-flex align-items-center" href="#"><span class="text-uppercase">Eng</span></a></div>
+              </div>
+            </div>
+            <div class="header-login header-dropdown-wrapper" data-active>
+              <button class="d-flex align-items-center" type="button" data-target-button><i class="icon-login"></i><span>Кабінет дилера</span></button>
+              <div class="header-dropdown">
+                <div class="header-dropdown-inner">
+                  <div class="header-login__title">Кабінет дилера</div>
+                  <div class="header-login__body">
+                    <form action="">
+                      <div class="form-wrapper">
+                        <div class="form-group mb-3">
+                          <input class="form-control form-input-grey" type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" required="" id="id_username" placeholder="Логін або e-mail">
+                        </div>
+                        <div class="form-group mb-0">
+                          <input class="form-control form-input-grey" type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="Пароль">
+                          <button class="header-login__pasword-toggle" id="togglePassword" type="button"><i class="icon-eye"></i></button>
+                        </div>
+                        <div class="password-forget-wrapper"><a class="password-forget p-0" href="#">Забули пароль?</a></div>
+                        <button class="btn btn-accent d-block w-100" type="submit">Вхід</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="header-login__footer">
+                    <div class="text-18 mb-3">Як стати дилером?</div>
+                    <div class="header-login__email header-login__info"><span>Напишіть нам на пошту:</span><a href="mailto:dlr@celestetrade.ua">dlr@celestetrade.ua</a></div>
+                    <div class="header-login__phone header-login__info"><span>або зателефонуйте за номером</span><a href="tel:+380487567474">+38 048 756 74 74</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
-    <main>
-      <section class="hero-section"><img src="./img/hero-bg.jpg" alt=""></section>
-      <section class="about">
-        <div class="container container-about">
-          <div class="textReveal overflow-hidden">
-            <h1 class="about-title text-family-silk text">Lorem ipsum dolor sit amet, consect etur adipiscing elit</h1>
-          </div>
-          <div class="about-admission admission">
-            <div class="overflow-hidden">
-              <div class="textReveal">
-                <div class="text">
-                  <h5 class="admission-title text-family-silk">Admission</h5>
-                  <p class="admission-text text-family-basis">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint Sed ut perspiciatis unde.</p>
-                  <div class="text-underline"></div>
-                </div>
-              </div>
-            </div>
-            <div class="admission-price">
-              <div class="admission-price__col">
-                <div class="textReveal">
-                  <div class="text">
-                    <div class="admission-price__title text-family-basis">Weekends</div>
-                    <div class="admission-price__value text-family-silk"><span class="admission-price__currency">$</span><span class="admission-price__number">85</span><span class="admission-price__person d-block text-family-basis">Adult</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="admission-price__col">
-                <div class="textReveal">
-                  <div class="text">
-                    <div class="admission-price__title text-family-basis">Holidays</div>
-                    <div class="admission-price__value text-family-silk"><span class="admission-price__currency">$</span><span class="admission-price__number">85</span><span class="admission-price__person d-block text-family-basis">Adult</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="textReveal">
-              <div class="text">
-                <p class="admission-text text-family-basis text-13 mb-4 pb-1 text-center">View our admission and pricing details, along with our Holiday scheduling</p>
-              </div>
-            </div>
-            <div class="textReveal">
-              <div class="text">
-                <div class="admission-btn d-flex justify-content-center">
-                  <button class="btn border-btn"><span>Book</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                      <rect fill="none" height="24" width="24"></rect>
-                      <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                    </svg>
-                  </button>
-                </div>
+    <main class="main-wrapper">
+      <section class="hero">
+        <div class="basic-slider hero-slider">
+          <div class="basic-slider__item hero-slider__item" style="background-image: url('./img/hero-slider/hero-slide1.jpg')">
+            <div class="container">
+              <div class="basic-slider__caption hero-slider__caption">
+                <h1 class="title-big basic-slider__title hero-slider__title proba-family">Ми відкриваємо двері</h1>
+                <p class="text-24 basic-slider__text hero-slider__text"><span class="text-accent d-block lh-36">Celeste Trade</span><span class="lh-36">Дистриб’ютор дверної фурнітури в Україні</span></p>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-1">
-              <div class="overflow-hidden">
-                <div class="admission-img reveal"><img src="./img/bucket.jpg" alt=""></div>
+          <div class="basic-slider__item hero-slider__item" style="background-image: url('./img/hero-slider/hero-slide1.jpg')">
+            <div class="container">
+              <div class="basic-slider__caption hero-slider__caption">
+                <h1 class="title-big basic-slider__title hero-slider__title proba-family">Ми відкриваємо двері</h1>
+                <p class="text-24 basic-slider__text hero-slider__text"><span class="text-accent d-block lh-36">Celeste Trade</span><span class="lh-36">Дистриб’ютор дверної фурнітури в Україні</span></p>
               </div>
             </div>
-            <div class="col-lg-5 col-md-8 offset-md-2 offset-lg-0">
-              <div class="admission-info">
-                <div class="overflow-hidden">
-                  <div class="textReveal">
-                    <p class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p class="pb-2 text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi.</p>
-                  </div>
-                </div>
-                <div class="textReveal">
-                  <button class="btn border-btn text"><span>View virtual tour</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                      <rect fill="none" height="24" width="24"></rect>
-                      <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                    </svg>
-                  </button>
-                </div>
+          </div>
+          <div class="basic-slider__item hero-slider__item" style="background-image: url('./img/hero-slider/hero-slide1.jpg')">
+            <div class="container">
+              <div class="basic-slider__caption hero-slider__caption">
+                <h1 class="title-big basic-slider__title hero-slider__title proba-family">Ми відкриваємо двері</h1>
+                <p class="text-24 basic-slider__text hero-slider__text"><span class="text-accent d-block lh-36">Celeste Trade</span><span class="lh-36">Дистриб’ютор дверної фурнітури в Україні</span></p>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="basic-slider__controls hero-slider__controls slider-controls container">
+          <div class="slider-controls__row">
+            <div class="basic-slider__dots hero-slider__dots"></div>
+            <div class="basic-slider__nav hero-slider__nav">
+              <button class="basic-controls__prev hero-controls__prev hero-control basic-slider__arrow"><i class="icon-chevron-left"></i></button>
+              <button class="basic-controls__next hero-controls__next hero-control basic-slider__arrow"><i class="icon-chevron-right"></i></button>
             </div>
           </div>
         </div>
       </section>
-      <section class="experience" id="experience">
-        <div class="container container-about">
-          <div class="overflow-hidden">
-            <div class="textReveal">
-              <div class="text">
-                <h2 class="section-title text-center text-family-silk">Experience</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container-fluid container-slider">
-          <div class="row">
-            <div class="col-lg-5">
-              <div class="slider-info">
-                <div class="overflow-hidden">
-                  <div class="textReveal">
-                    <div class="text">
-                      <p class="pb-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      <div class="textReveal">
-                        <button class="btn border-btn text"><span>Learn more</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                            <rect fill="none" height="24" width="24"></rect>
-                            <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="big-slider__wrapper">
-              <div class="exprience-slider big-slider">
-                <div class="big-slider__item">
-                  <div class="reveal">
-                    <div class="admission-img pr-0"><img src="./img/hamam.jpg" alt="Hamam image"></div>
-                  </div>
-                  <div class="big-slider__text">
-                    <h3 class="big-slider__item-title">Hamam</h3>
-                  </div>
-                </div>
-                <div class="big-slider__item"><img src="./img/girl.jpg" alt="Hamam image">
-                  <div class="big-slider__text">
-                    <h3 class="big-slider__item-title">Girl</h3>
-                  </div>
-                </div>
-                <div class="big-slider__item"><img src="./img/hamam.jpg" alt="Hamam image">
-                  <div class="big-slider__text">
-                    <h3 class="big-slider__item-title">Hamam</h3>
-                  </div>
-                </div>
-                <div class="big-slider__item"><img src="./img/girl.jpg" alt="Hamam image">
-                  <div class="big-slider__text">
-                    <h3 class="big-slider__item-title">Something</h3>
-                  </div>
-                </div>
-                <div class="big-slider__item"><img src="./img/hamam.jpg" alt="Hamam image">
-                  <div class="big-slider__text">
-                    <h3 class="big-slider__item-title">Hamam</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="map-floor">
+      <section class="products">
         <div class="container">
-          <div class="overflow-hidden">
-            <div class="reveal">
-              <div class="admission-img pr-0"><img src="./img/map.jpg" alt=""></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="girl trigger">
-        <div class="overflow-hidden">
-          <div class="reveal">
-            <div class="admission-img pr-0"><img src="./img/girl.jpg" alt="Photo of girl"></div>
-          </div>
-        </div>
-      </section>
-      <section class="spa-treatments" id="spa">
-        <div class="container spa-container">
-          <div class="spa-treatments__header">
-            <div class="overflow-hidden">
-              <div class="textReveal">
-                <div class="text">
-                  <h3 class="section-title">Spa Treatments</h3>
-                </div>
+          <h3 class="text-48 proba-family products-title">Продукція</h3>
+          <div class="row products-slider">
+            <div class="col-lg-4 col-md-6">
+              <div class="products-item">
+                <div class="product-item__thumb" data-aos="fade-down" data-aos-duration="700"><img src="./img/products/cylinder.png" alt="Фото Продукція"></div>
+                <div class="product-item__body" data-aos="fade-up" data-aos-duration="700"><a class="product-item__body-inner" href="catalog.html">
+                    <div class="product-item__body-title text-24">Циліндри</div>
+                    <div class="product-item__body-subtitle text-24">Захист на будь який смак.</div>
+                    <div class="product-item__body-text text-18">Ідеальне рішення для кожної двері.</div>
+                    <div class="product-item__body-icon"><img src="./img/arrow.svg" alt=""></div></a></div>
               </div>
             </div>
-            <div class="textReveal">
-              <div class="text">
-                <button class="btn border-btn"><span>View all treatments</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
+            <div class="col-lg-4 col-md-6">
+              <div class="products-item">
+                <div class="product-item__thumb" data-aos="fade-down" data-aos-duration="700"><img src="./img/products/handles.png" alt="Фото Продукція"></div>
+                <div class="product-item__body" data-aos="fade-up" data-aos-duration="700"><a class="product-item__body-inner" href="catalog.html">
+                    <div class="product-item__body-title text-24">Ручки</div>
+                    <div class="product-item__body-subtitle text-24">Ми відкриваємо двері.</div>
+                    <div class="product-item__body-text text-18">Додайте комфорту та стилю вашій оселі.</div>
+                    <div class="product-item__body-icon"><img src="./img/arrow.svg" alt=""></div></a></div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="spa-slider">
-          <div class="spa-slider__item">
-            <div class="spa-slider__card">
-              <div class="spa-slider__card-img">
-                <div class="reveal">
-                  <div class="admission-img pr-0"><img src="./img/treatment1.jpg" alt="Treatment"></div>
-                </div>
-              </div>
-              <div class="spa-slider__card-info">
-                <h5 class="spa-slider__card-title text-family-silk">Body Massages</h5>
-                <button class="btn btn-learn"><span>Learn more</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
-                <button class="btn border-btn"><span>Book</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
+            <div class="col-lg-4 col-md-6">
+              <div class="products-item">
+                <div class="product-item__thumb" data-aos="fade-down" data-aos-duration="700"><img src="./img/products/loops.png" alt="Фото Продукція"></div>
+                <div class="product-item__body" data-aos="fade-up" data-aos-duration="700"><a class="product-item__body-inner" href="catalog.html">
+                    <div class="product-item__body-title text-24">Петлі</div>
+                    <div class="product-item__body-subtitle text-24">Тримають ваші двері.</div>
+                    <div class="product-item__body-text text-18">Такі різні, непомітні та функціональні.</div>
+                    <div class="product-item__body-icon"><img src="./img/arrow.svg" alt=""></div></a></div>
               </div>
             </div>
-          </div>
-          <div class="spa-slider__item">
-            <div class="spa-slider__card">
-              <div class="spa-slider__card-img">
-                <div class="reveal">
-                  <div class="admission-img pr-0"><img src="./img/treatment2.png" alt="Treatment"></div>
-                </div>
-              </div>
-              <div class="spa-slider__card-info">
-                <h5 class="spa-slider__card-title text-family-silk">Spa Journeys</h5>
-                <button class="btn btn-learn"><span>Learn more</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
-                <button class="btn border-btn"><span>Book</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
+            <div class="col-lg-4 col-md-6">
+              <div class="products-item products-item__reverse">
+                <div class="product-item__thumb" data-aos="fade-up" data-aos-duration="700"><img src="./img/products/accessories.png" alt="Фото Продукція"></div>
+                <div class="product-item__body" data-aos="fade-down" data-aos-duration="700"><a class="product-item__body-inner" href="catalog.html">
+                    <div class="product-item__body-title text-24">Аксессуари для дверей</div>
+                    <div class="product-item__body-subtitle text-24">Все в порядку.</div>
+                    <div class="product-item__body-text text-18">Надійні та такі зручні, що ви навіть не звертаєте на них увагу.</div>
+                    <div class="product-item__body-icon"><img src="./img/arrow.svg" alt=""></div></a></div>
               </div>
             </div>
-          </div>
-          <div class="spa-slider__item">
-            <div class="spa-slider__card">
-              <div class="spa-slider__card-img">
-                <div class="reveal">
-                  <div class="admission-img pr-0"><img src="./img/treatment3.png" alt="Treatment"></div>
-                </div>
-              </div>
-              <div class="spa-slider__card-info">
-                <h5 class="spa-slider__card-title text-family-silk">Spa Journeys</h5>
-                <button class="btn btn-learn"><span>Learn more</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
-                <button class="btn border-btn"><span>Book</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
+            <div class="col-lg-4 col-md-6">
+              <div class="products-item products-item__reverse">
+                <div class="product-item__thumb" data-aos="fade-up" data-aos-duration="700"><img src="./img/products/locks.png" alt="Фото Продукція"></div>
+                <div class="product-item__body" data-aos="fade-down" data-aos-duration="700"><a class="product-item__body-inner" href="catalog.html">
+                    <div class="product-item__body-title text-24">Замки</div>
+                    <div class="product-item__body-subtitle text-24">Все в порядку.</div>
+                    <div class="product-item__body-text text-18">Надійні та такі зручні, що ви навіть не звертаєте на них увагу.</div>
+                    <div class="product-item__body-icon"><img src="./img/arrow.svg" alt=""></div></a></div>
               </div>
             </div>
-          </div>
-          <div class="spa-slider__item">
-            <div class="spa-slider__card">
-              <div class="spa-slider__card-img">
-                <div class="reveal">
-                  <div class="admission-img pr-0"><img src="./img/treatment2.png" alt="Treatment"></div>
-                </div>
-              </div>
-              <div class="spa-slider__card-info">
-                <h5 class="spa-slider__card-title text-family-silk">Body Massages</h5>
-                <button class="btn btn-learn"><span>Learn more</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
-                <button class="btn border-btn"><span>Book</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="spa-slider__item">
-            <div class="spa-slider__card">
-              <div class="spa-slider__card-img">
-                <div class="reveal">
-                  <div class="admission-img pr-0"><img src="./img/treatment3.png" alt="Treatment"></div>
-                </div>
-              </div>
-              <div class="spa-slider__card-info">
-                <h5 class="spa-slider__card-title text-family-silk">Spa Journeys</h5>
-                <button class="btn btn-learn"><span>Learn more</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
-                <button class="btn border-btn"><span>Book</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="spa-slider__item">
-            <div class="spa-slider__card">
-              <div class="spa-slider__card-img">
-                <div class="reveal">
-                  <div class="admission-img pr-0"><img src="./img/treatment1.jpg" alt="Treatment"></div>
-                </div>
-              </div>
-              <div class="spa-slider__card-info">
-                <h5 class="spa-slider__card-title text-family-silk">Spa Journeys</h5>
-                <button class="btn btn-learn"><span>Learn more</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
-                <button class="btn border-btn"><span>Book</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
+            <div class="col-lg-4 col-md-6">
+              <div class="products-item products-item__reverse">
+                <div class="product-item__thumb" data-aos="fade-up" data-aos-duration="700"><img src="./img/products/closet.png" alt="Фото Продукція"></div>
+                <div class="product-item__body" data-aos="fade-down" data-aos-duration="700"><a class="product-item__body-inner" href="catalog.html">
+                    <div class="product-item__body-title text-24 product-item__title-white">Розсувні системи</div>
+                    <div class="product-item__body-subtitle text-24">Все в порядку.</div>
+                    <div class="product-item__body-text text-18">Надійні та такі зручні, що ви навіть не звертаєте на них увагу.</div>
+                    <div class="product-item__body-icon"><img src="./img/arrow.svg" alt=""></div></a></div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="experience dining" id="dining">
-        <div class="container-dining">
-          <div class="overflow-hidden">
-            <div class="textReveal">
-              <div class="text">
-                <h2 class="section-title text-family-silk">Dining at World Spa</h2>
+      <section class="fantom">
+        <div class="basic-slider fantom-slider">
+          <div class="basic-slider__item" style="background-image: url('./img/fantoms-slider/fantom1.jpg')">
+            <div class="container">
+              <div class="basic-slider__caption">
+                <h2 class="title-big basic-slider__title proba-family">Fantom Hardware</h2>
+                <p class="text-24 basic-slider__text"><span class="d-block lh-36">Магнітний дверний стопор</span><span class="lh-36">Поєднання безпеки та унікальності</span></p>
               </div>
             </div>
           </div>
-          <div class="dining-slider">
-            <div class="dining-slider__item">
-              <div class="dining-slider__info admission-info pl-2">
-                <div class="overflow-hidden">
-                  <div class="textReveal">
-                    <div class="text">
-                      <p class="pb-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="textReveal">
-                  <div class="text d-flex flex-column">
-                    <button class="btn btn-learn pl-0 text-left justify-content-start mb-4"><span>Learn more</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                        <rect fill="none" height="24" width="24"></rect>
-                        <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                      </svg>
-                    </button>
-                    <button class="btn border-btn"><span>Reserve</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                        <rect fill="none" height="24" width="24"></rect>
-                        <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="dining-slider__img">
-                <div class="reveal">
-                  <div class="admission-img pr-0"><img src="./img/food.jpg" alt=""></div>
-                </div>
-                <div class="big-slider__text">
-                  <h3 class="big-slider__item-title">Ren Restaurant</h3>
-                </div>
-              </div>
-            </div>
-            <div class="dining-slider__item">
-              <div class="dining-slider__info admission-info pl-2">
-                <div class="overflow-hidden">
-                  <div class="textReveal">
-                    <div class="text">
-                      <p class="pb-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="textReveal">
-                  <div class="text d-flex flex-column">
-                    <button class="btn btn-learn pl-0 text-left justify-content-start mb-4"><span>Learn more</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                        <rect fill="none" height="24" width="24"></rect>
-                        <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                      </svg>
-                    </button>
-                    <button class="btn border-btn"><span>Reserve</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                        <rect fill="none" height="24" width="24"></rect>
-                        <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="dining-slider__img"><img src="./img/girl.jpg" alt="">
-                <div class="big-slider__text">
-                  <h3 class="big-slider__item-title">WorldSpa Lounge</h3>
-                </div>
-              </div>
-            </div>
-            <div class="dining-slider__item">
-              <div class="dining-slider__info admission-info pl-2">
-                <div class="overflow-hidden">
-                  <div class="textReveal">
-                    <div class="text">
-                      <p class="pb-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="textReveal">
-                  <div class="text d-flex flex-column">
-                    <button class="btn btn-learn pl-0 text-left justify-content-start mb-4"><span>Learn more</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                        <rect fill="none" height="24" width="24"></rect>
-                        <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                      </svg>
-                    </button>
-                    <button class="btn border-btn"><span>Reserve</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                        <rect fill="none" height="24" width="24"></rect>
-                        <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="dining-slider__img"><img src="./img/food.jpg" alt="">
-                <div class="big-slider__text">
-                  <h3 class="big-slider__item-title">Ren Restaurant</h3>
-                </div>
+          <div class="basic-slider__item" style="background-image: url('./img/fantoms-slider/fantom1.jpg')">
+            <div class="container">
+              <div class="basic-slider__caption">
+                <h2 class="title-big basic-slider__title proba-family">Fantom Hardware</h2>
+                <p class="text-24 basic-slider__text"><span class="d-block lh-36">Магнітний дверний стопор</span><span class="lh-36">Поєднання безпеки та унікальності</span></p>
               </div>
             </div>
           </div>
         </div>
+        <div class="basic-slider__controls slider-controls container">
+          <div class="slider-controls__row">
+            <div class="basic-slider__dots fantom-slider__dots"></div>
+            <div class="basic-slider__nav fantom-slider__nav">
+              <button class="basic-controls__prev fantom-controls__prev basic-slider__arrow"><i class="icon-chevron-left"></i></button>
+              <button class="basic-controls__next fantom-controls__next basic-slider__arrow"><i class="icon-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="member" id="member">
-        <div class="container container-member">
+      <section class="promotions">
+        <div class="container">
           <div class="row">
-            <div class="col-lg-5 col-md-8 offset-md-2 offset-lg-1">
-              <div class="overflow-hidden">
-                <div class="reveal">
-                  <div class="member-info__img admission-img"><img src="./img/girls.jpg" alt="Girls in hamam photo"></div>
+            <div class="col-lg-12">
+              <div class="promotions-inner">
+                <div class="promotions-inner__header">
+                  <h3 class="text-48 proba-family products-title">Акції</h3>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-5 col-md-8 offset-md-2 offset-lg-0">
-              <div class="member-info">
-                <div class="overflow-hidden">
-                  <div class="textReveal">
-                    <div class="text">
-                      <p class="member-info__text"><a href="#">Become a member</a><br>to experience all the privileges and open up a whole new world of relaxation.</p>
+                <div class="promotions-inner__card promotions-card">
+                  <div class="promotions-card__text">
+                    <div class="promotions-card__text-inner" data-aos="fade-right">
+                      <div class="promotions-card__text-description">Рушай за мрією разом з Celeste Trade</div>
+                      <div class="promotions-card__text-duration">Aкція діє з 01.07-31.12</div>
+                      <div class="promotions-card__text-icon"><img src="./img/arrow.svg" alt=""></div>
+                    </div>
+                  </div>
+                  <div class="promotions-card__img">
+                    <div class="promotions-card__img__inner"><img src="./img/promotions/promotion1.png" alt="Изображение акции">
+                      <div class="promtions-card__title">Світ без меж</div>
                     </div>
                   </div>
                 </div>
-                <div class="textReveal">
-                  <div class="text">
-                    <button class="btn border-btn"><span>Join now</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                        <rect fill="none" height="24" width="24"></rect>
-                        <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                      </svg>
-                    </button>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="promotions-inner">
+                <div class="promotions-inner__card promotions-card promotions-card-reverse">
+                  <div class="promotions-card__text">
+                    <div class="promotions-card__text-inner" data-aos="fade-left">
+                      <div class="promotions-card__text-description">Рушай за мрією разом з Celeste Trade</div>
+                      <div class="promotions-card__text-duration">Aкція діє з 01.07-31.12</div>
+                      <div class="promotions-card__text-icon"><img src="./img/arrow.svg" alt=""></div>
+                    </div>
+                  </div>
+                  <div class="promotions-card__img">
+                    <div class="promotions-card__img__inner"><img src="./img/promotions/promotion2.png" alt="Изображение акции">
+                      <div class="promtions-card__title">Чорна п'ятниця</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -515,229 +365,166 @@
           </div>
         </div>
       </section>
-      <section class="shop" id="shop">
-        <div class="container container-shop">
-          <div class="shop-header">
-            <div class="overflow-hidden">
-              <div class="textReveal">
-                <div class="text">
-                  <h2 class="section-title text-family-silk">Gift Shop</h2>
+      <section class="about-us">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-7">
+              <div class="about-us__description">
+                <h3 class="text-48 proba-family products-title">Про нас</h3>
+                <div class="about-us__text">
+                  <p class="text-18">Компанія<strong> Celeste Trade</strong> - дистриб'ютор європейської дверної фурнітури в  Україні.</p>
+                  <p class="text-18">Ми працюємо з сотнями партнерів по всій країні та входимо у ТОП постачальників дверної фурнітури в сегменті medium+ та vip.</p>
+                  <p class="text-18">Наша мета - створюючи успішний бізнес, покращувати життя навколо себе: відкриваючи нові можливості; створюючи гармонійні відносини з командою, партнерами, споживачами; надаючи найкращий сервіс та кращий продукт за чесною ціною.</p>
+                  <p class="text-18">Ми планомірно працюємо в цьому напрямку, вже понад 13 років пропонуючи високоякісну, стильну і сучасну фурнітуру провідних європейських виробників на ринку України</p>
+                </div><a class="btn btn-accent" href="about.html">Узнать больше</a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-5">
+              <div class="about-us__img"><img src="./img/about-us.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="steps bg-grey">
+        <div class="container">
+          <h3 class="text-48 proba-family products-title">Етапи співпраці</h3>
+          <div class="steps-row">
+            <div class="steps-col">
+              <div class="steps-card">
+                <div class="card-icon steps-card__icon card__icon-1" data-aos="rotate-anim"><img src="./img/steps/friendship.svg" alt=""></div>
+                <div class="steps-card__body">
+                  <div class="steps-card__number"><span>1</span></div>
+                  <div class="steps-card__text text-18">Обговорюємо з вами умови роботи та домовляємося про партнерство</div>
                 </div>
               </div>
             </div>
-            <div class="textReveal">
-              <div class="text">
-                <button class="btn border-btn"><span>View all</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                    <rect fill="none" height="24" width="24"></rect>
-                    <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                  </svg>
-                </button>
+            <div class="steps-col">
+              <div class="steps-card">
+                <div class="card-icon steps-card__icon card__icon-2" data-aos="rotate-anim"><img src="./img/steps/badges.svg" alt=""></div>
+                <div class="steps-card__body">
+                  <div class="steps-card__number"><span>2</span></div>
+                  <div class="steps-card__text text-18">Надаємо вам зразки та рекламні матеріали для успішного продажу</div>
+                </div>
+              </div>
+            </div>
+            <div class="steps-col">
+              <div class="steps-card">
+                <div class="card-icon steps-card__icon card__icon-3" data-aos="rotate-anim"><img src="./img/steps/person.svg" alt=""></div>
+                <div class="steps-card__body">
+                  <div class="steps-card__number"><span>3</span></div>
+                  <div class="steps-card__text text-18">Навчаємо ваш персонал роботі з продуктом</div>
+                </div>
+              </div>
+            </div>
+            <div class="steps-col">
+              <div class="steps-card">
+                <div class="card-icon steps-card__icon card__icon-4" data-aos="rotate-anim"><img src="./img/steps/callcenter.svg" alt=""></div>
+                <div class="steps-card__body">
+                  <div class="steps-card__number"><span>4</span></div>
+                  <div class="steps-card__text text-18">Консультуємо Вас на всіх етапах оформлення замовлення</div>
+                </div>
+              </div>
+            </div>
+            <div class="steps-col">
+              <div class="steps-card">
+                <div class="card-icon steps-card__icon card__icon-5" data-aos="rotate-anim"><img src="./img/steps/shield.svg" alt=""></div>
+                <div class="steps-card__body">
+                  <div class="steps-card__number"><span>5</span></div>
+                  <div class="steps-card__text text-18">Захищаємо вас від демпінгу та гарантуємо вашу вигоду від співпраці з нами</div>
+                </div>
+              </div>
+            </div>
+            <div class="steps-col">
+              <div class="steps-card">
+                <div class="card-icon steps-card__icon card__icon-6" data-aos="rotate-anim"><img src="./img/steps/handshake.svg" alt=""></div>
+                <div class="steps-card__body">
+                  <div class="steps-card__number"><span>6</span></div>
+                  <div class="steps-card__text text-18">Підтримуємо вас з будь-якого питання</div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="form-section">
+        <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-6">
-              <div class="overflow-hidden">
-                <div class="textReveal pl-2">
-                  <div class="text">
-                    <div class="shop-card"><a class="shop-card__img" href="#"><img src="./img/gift1.png" alt="Shop product"></a>
-                      <div class="shop-card__body">
-                        <div class="shop-card__title">Item Name 1</div>
-                        <button class="btn btn-learn pl-0"><span>Learn more</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                            <rect fill="none" height="24" width="24"></rect>
-                            <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-lg-6">
+              <div class="form-section-info">
+                <h3 class="text-36 proba-family form-section-title">Стати нашим партнером</h3>
+                <p class="text-18 lh-27 form-section-text">Приєднуйтесь до нас і ознайомтесь з широкими можливостями, які ми надаємо нашим партнерам. Ми будуємо довгострокові відносини на основі відкритого діалогу та взаємної довіри.</p><a class="btn btn-accent" href="about-us.html">Узнать больше</a>
               </div>
             </div>
-            <div class="col-lg-3 col-6">
-              <div class="overflow-hidden">
-                <div class="textReveal pl-2">
-                  <div class="text">
-                    <div class="shop-card"><a class="shop-card__img" href="#"><img src="./img/gift2.png" alt="Shop product"></a>
-                      <div class="shop-card__body">
-                        <div class="shop-card__title">Item Name 2</div>
-                        <button class="btn btn-learn pl-0"><span>Learn more</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                            <rect fill="none" height="24" width="24"></rect>
-                            <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                          </svg>
-                        </button>
+            <div class="col-lg-6">
+              <form class="form" action="">
+                <div class="form-wrapper">
+                  <h3 class="text-36 proba-family text-white form-title">Зворотній зв'язок</h3>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Ім'я" required>
                       </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Телефон або e-mail" required>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <textarea class="form-control" name="" cols="30" rows="8"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-accent" type="submit">Написати нам</button>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-6">
-              <div class="overflow-hidden">
-                <div class="textReveal pl-2">
-                  <div class="text">
-                    <div class="shop-card"><a class="shop-card__img" href="#"><img src="./img/gift3.png" alt="Shop product"></a>
-                      <div class="shop-card__body">
-                        <div class="shop-card__title">Item Name 3</div>
-                        <button class="btn btn-learn pl-0"><span>Learn more</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                            <rect fill="none" height="24" width="24"></rect>
-                            <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-6">
-              <div class="overflow-hidden">
-                <div class="textReveal pl-2">
-                  <div class="text">
-                    <div class="shop-card"><a class="shop-card__img" href="#"><img src="./img/gift4.png" alt="Shop product"></a>
-                      <div class="shop-card__body">
-                        <div class="shop-card__title">Item Name 4</div>
-                        <button class="btn btn-learn pl-0"><span>Learn more</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-                            <rect fill="none" height="24" width="24"></rect>
-                            <path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <!-- Booking Modal-->
-    <div class="booking-modal modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title text-family-silk" id="exampleModalLabel">Make a Reservation</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
-          </div>
-          <div class="modal-body">
-            <div class="booking">
-              <div class="container container-booking">
-                <div class="row">
-                  <div class="col-12 booking-col">
-                    <div class="booking__intro-title">1 Select one*</div>
-                    <div class="booking-services">
-                      <div class="booking-services__nav">
-                        <button class="book-link" href="#"><span>Admissions</span></button>
-                        <div class="booking-services__dropdown-wrapper">
-                          <select id="treatment">
-                            <option value="hide">Treatment</option>
-                            <option value="Body Massages">Body Massages</option>
-                            <option value="Facials">Facials</option>
-                            <option value="Body Scrubs">Body Scrubs</option>
-                            <option value="Reflexology">Reflexology</option>
-                            <option value="Couples">Couples</option>
-                          </select>
-                        </div>
-                        <div class="booking-services__dropdown-wrapper">
-                          <select id="dining">
-                            <option value="hide">Dining</option>
-                            <option value="Ren Restaurant">Ren Restaurant</option>
-                            <option value="WorldSpa Lounge">WorldSpa Lounge</option>
-                            <option value="WorldSpa Club">WorldSpa Club</option>
-                          </select>
-                        </div>
-                        <button class="book-link" href="#"><span>Become a member</span></button>
-                      </div>
-                    </div>
-                    <button class="btn btn-white" type="submit"><span>Reserve</span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="site-backdrop"></div>
     <!-- Footer-->
     <footer class="footer">
-      <div class="container container-member">
-        <div class="footer-row">
-          <div class="footer-col footer-col-big footer-col-form">
-            <form class="form" action="">
-              <div class="form-group form-group__input">
-                <input class="footer-input" type="text" placeholder="Email Adress">
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" id="formCheck1" type="checkbox">
-                <label class="form-check-label" for="formCheck1">Subscribe to receive communications from World Spa about our products and services. By subscribing, you confirm you have read and accept our<a href="#">privacy policy.</a></label>
-              </div>
-            </form>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
+            <div class="footer-column">
+              <div class="footer-column__title">Каталог</div>
+              <nav class="footer-nav footer-nav-categories"><a class="footer-nav__link" href="#">Дверні ручки</a><a class="footer-nav__link" href="#">Циліндри дверні</a><a class="footer-nav__link" href="#">Замки для міжкімнатних дверей</a><a class="footer-nav__link" href="#">Петлі для міжкімнатних дверей</a><a class="footer-nav__link" href="#">Аксесуари</a></nav>
+            </div>
           </div>
-          <div class="footer-col footer-col-list">
-            <ul class="footer-list">
-              <li class="footer-list__title">About</li>
-              <li class="footer-list__item"><a class="footer-list__link-icon" href="#">Memberships</a></li>
-              <li class="footer-list__item"><a href="#">Our story</a></li>
-              <li class="footer-list__item"><a href="#">Press</a></li>
-              <li class="footer-list__item"><a href="#">Gallery</a></li>
-              <li class="footer-list__item"><a href="#">Covid-19</a></li>
-              <li class="footer-list__item"><a href="#">Legal</a></li>
-            </ul>
+          <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+            <div class="footer-column">
+              <nav class="footer-nav footer-nav-pages pt-38"><a class="footer-nav__link" href="#">Де придбати?</a><a class="footer-nav__link" href="#">Новини</a><a class="footer-nav__link" href="#">Акції</a><a class="footer-nav__link" href="about.html">Про нас</a><a class="footer-nav__link" href="#">Партнерам</a></nav>
+            </div>
           </div>
-          <div class="footer-col footer-col-list">
-            <ul class="footer-list">
-              <li class="footer-list__title">Experiences</li>
-              <li class="footer-list__item"><a href="#">Saunas</a></li>
-              <li class="footer-list__item"><a href="#">Hydrotherapies</a></li>
-              <li class="footer-list__item"><a href="#">Rooms</a></li>
-              <li class="footer-list__item"><a href="#">Dining</a></li>
-              <li class="footer-list__item"><a href="#">Spa treatments</a></li>
-            </ul>
+          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6">
+            <div class="footer-column">
+              <div class="footer-column__title">Контакти</div>
+              <div class="footer-phones"><a class="footer-nav__link" href="#">+38 044 765 65 78</a><a class="footer-nav__link" href="#">+38 044 765 65 78</a></div>
+            </div>
           </div>
-          <div class="footer-col footer-col-list">
-            <ul class="footer-list">
-              <li class="footer-list__title">Visit and support</li>
-              <li class="footer-list__item"><a href="#">FAQs</a></li>
-              <li class="footer-list__item"><a href="#">Contact us</a></li>
-              <li class="footer-list__item"><a href="#">Addimissions &#38; policies</a></li>
-              <li class="footer-list__item"><a href="#">Parking</a></li>
-              <li class="footer-list__item"><a href="#">Hours &#38; directions</a></li>
-              <li class="footer-list__item"><a href="#">360 tour</a></li>
-            </ul>
+          <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+            <div class="footer-column">
+              <div class="footer-column__title">Соціальні мережі</div><a class="footer-nav__link footer-nav__social-link" href="#"><i class="icon-instagram"></i><span>Celester_trade</span></a><a class="footer-nav__link footer-nav__social-link" href="#"><i class="icon-youtube"></i><span>Celestetrade</span></a>
+            </div>
           </div>
-          <div class="footer-col footer-col-big footer-col-address">
-            <div class="footer-address"><a href="#">1571 McDonald Ave, Brooklyn, NY 11230</a><br><a href="#">718 316 9452</a></div>
-          </div>
-          <div class="footer-col footer-col-list">
-            <ul class="footer-list pt-0">
-              <li class="footer-list__title">Shop</li>
-              <li class="footer-list__item"><a href="#">Gift card</a></li>
-              <li class="footer-list__item"><a href="#">10 pack treatments</a></li>
-              <li class="footer-list__item"><a href="#">Our products</a></li>
-            </ul>
-          </div>
-          <div class="footer-col footer-col-list">
-            <ul class="footer-list pt-0">
-              <li class="footer-list__title">Social media</li>
-              <li class="footer-list__item"><a class="footer-list__link-icon" href="#">Instagram</a></li>
-              <li class="footer-list__item"><a class="footer-list__link-icon" href="#">Facebook</a></li>
-              <li class="footer-list__item"><a class="footer-list__link-icon" href="#">Youtube</a></li>
-            </ul>
-          </div>
-          <div class="footer-col footer-col-big footer-col-copyright">
-            <div class="footer-copyright">Copyright<span class="mx-1" id="copyright"></span>© World Spa. All Rights Reserved.</div>
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="footer-column">
+              <div class="footer-logo"><a class="footer-logo__link" href="#"><img src="./img/logo.svg" alt="Celeste Trade"></a></div>
+              <div class="footer-dealer-btn"><a class="btn btn-accent" href="#">Кабінет дилера</a></div>
+            </div>
           </div>
         </div>
       </div>
     </footer>
     <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
     <script src="js/vendor.min.js"></script>
+    <script src="js/custom-select.js"></script>
     <script src="js/scripts.min.js"></script>
   </body>
 </html>

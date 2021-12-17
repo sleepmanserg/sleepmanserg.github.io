@@ -1,84 +1,43 @@
 // Footer
 footer.footer
-	.container.container-member
-		.footer-row
-			.footer-col.footer-col-big.footer-col-form
-				form.form(action="")
-					.form-group.form-group__input
-						input.footer-input(type="text" placeholder="Email Adress")
-					.form-check
-						input#formCheck1.form-check-input(type='checkbox')
-						label.form-check-label(for='formCheck1') Subscribe to receive communications from World Spa about our products and services. By subscribing, you confirm you have read and accept our
-							a(href="#") privacy policy.
-			.footer-col.footer-col-list
-				ul.footer-list
-					li.footer-list__title About
-					li.footer-list__item
-						a.footer-list__link-icon(href="#") Memberships
-					li.footer-list__item
-						a(href="#") Our story
-					li.footer-list__item
-						a(href="#") Press
-					li.footer-list__item
-						a(href="#") Gallery
-					li.footer-list__item
-						a(href="#") Covid-19
-					li.footer-list__item
-						a(href="#") Legal
-			.footer-col.footer-col-list
-				ul.footer-list
-					li.footer-list__title Experiences
-					li.footer-list__item
-						a(href="#") Saunas
-					li.footer-list__item
-						a(href="#") Hydrotherapies
-					li.footer-list__item
-						a(href="#") Rooms
-					li.footer-list__item
-						a(href="#") Dining
-					li.footer-list__item
-						a(href="#") Spa treatments
-			.footer-col.footer-col-list
-				ul.footer-list
-					li.footer-list__title Visit and support
-					li.footer-list__item
-						a(href="#") FAQs
-					li.footer-list__item
-						a(href="#") Contact us
-					li.footer-list__item
-						a(href="#") Addimissions &#38; policies
-					li.footer-list__item
-						a(href="#") Parking
-					li.footer-list__item
-						a(href="#") Hours &#38; directions
-					li.footer-list__item
-						a(href="#") 360 tour
-
-			.footer-col.footer-col-big.footer-col-address
-				.footer-address
-					a(href="#") 1571 McDonald Ave, Brooklyn, NY 11230
-					br
-					a(href="#") 718 316 9452
-			.footer-col.footer-col-list
-				ul.footer-list.pt-0
-					li.footer-list__title Shop
-					li.footer-list__item
-						a(href="#") Gift card
-					li.footer-list__item
-						a(href="#") 10 pack treatments
-					li.footer-list__item
-						a(href="#") Our products
-			.footer-col.footer-col-list
-				ul.footer-list.pt-0
-					li.footer-list__title Social media
-					li.footer-list__item
-						a.footer-list__link-icon(href="#") Instagram
-					li.footer-list__item
-						a.footer-list__link-icon(href="#") Facebook
-					li.footer-list__item
-						a.footer-list__link-icon(href="#") Youtube
-			.footer-col.footer-col-big.footer-col-copyright
-				.footer-copyright Copyright
-					span#copyright.mx-1
-					| © World Spa. All Rights Reserved.
-
+	.container
+		.row
+			.col-xl-3.col-lg-3.col-md-5.col-sm-7
+				.footer-column
+					.footer-column__title Каталог
+					nav.footer-nav.footer-nav-categories
+						a(href="#").footer-nav__link Дверні ручки
+						a(href="#").footer-nav__link Циліндри дверні
+						a(href="#").footer-nav__link Замки для міжкімнатних дверей
+						a(href="#").footer-nav__link Петлі для міжкімнатних дверей
+						a(href="#").footer-nav__link Аксесуари
+			.col-xl-2.col-lg-2.col-md-4.col-sm-5
+				.footer-column
+					nav.footer-nav.footer-nav-pages.pt-38
+						a(href="#").footer-nav__link Де придбати?
+						a(href="#").footer-nav__link Новини
+						a(href="#").footer-nav__link Акції
+						a(href="about.html").footer-nav__link Про нас
+						a(href="#").footer-nav__link Партнерам
+			.col-xl-2.col-lg-2.col-md-3.col-sm-6
+				.footer-column
+					.footer-column__title Контакти
+					.footer-phones
+						a(href="#").footer-nav__link +38 044 765 65 78
+						a(href="#").footer-nav__link +38 044 765 65 78
+			.col-xl-2.col-lg-2.col-md-4.col-sm-6
+				.footer-column
+					.footer-column__title Соціальні мережі
+					a(href="#").footer-nav__link.footer-nav__social-link
+						i.icon-instagram
+						span Celester_trade
+					a(href="#").footer-nav__link.footer-nav__social-link
+						i.icon-youtube
+						span Celestetrade
+			.col-xl-3.col-lg-3.col-md-4.col-sm-6
+				.footer-column
+					.footer-logo
+						a(href="#").footer-logo__link
+							img(src="./img/logo.svg", alt="Celeste Trade")
+					.footer-dealer-btn
+						a(href="#").btn.btn-accent Кабінет дилера

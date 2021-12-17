@@ -9,11 +9,23 @@
 @import 'helpers/font-import';
 
 // Components
-// @import 'components/typography';
+@import 'components/typography';
+@import 'components/slider';
+@import 'components/promotions-card';
 @import 'components/forms';
 @import 'components/button';
+@import 'components/card-icon';
 @import 'components/navigation';
 @import 'components/mobileToggle';
+@import 'components/dots';
+@import 'components/language-switcher';
+@import 'components/sidebar';
+@import 'components/breadcrumbs';
+@import 'components/pagination';
+@import 'components/product-tile';
+@import 'components/product-card';
+@import 'components/brand-item';
+@import 'components/404';
 
 // Layout
 @import 'layout/header';
