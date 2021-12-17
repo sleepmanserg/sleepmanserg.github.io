@@ -1,0 +1,107 @@
+extends partials/dummy-layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'World Spa'
+	-var whatPage = 'Home'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	section.hero-section
+		img(src="./img/hero-bg.jpg" alt="")
+
+	section.about.dummy-about
+		.container.container-about
+			.textReveal.overflow-hidden
+				h2.about-title.text-family-silk.text.mb-5 Opening March 2022
+				h2.about-title.text-family-silk.text Welcome to world spa
+			.about-admission.admission
+				.overflow-hidden
+					.textReveal
+						.text
+							h5.admission-title.text-family-silk Admission
+							p.admission-text.text-family-basis General Admission grants you access to our extensive facilities, along with a complimentary robe and unlimited towels to utilize during your visit to WORLD SPA, plus assigned locker storage for your belongings and use of our complimentary signature WORLD SPA luxurious spa toiletries located in our locker-rooms. Please check booking calendar for all available dates and rates.
+							.text-underline
+				.admission-price
+					.admission-price__col
+						.textReveal
+							.text
+								.admission-price__title.text-family-basis Weekdays
+								.admission-price__value.text-family-silk
+									span.admission-price__currency $
+									span.admission-price__number 65
+									span.admission-price__person.d-block.text-family-basis Adult
+					.admission-price__col
+						.textReveal
+							.text
+								.admission-price__title.text-family-basis Weekends &#38; Holidays
+								.admission-price__value.text-family-silk
+									span.admission-price__currency $
+									span.admission-price__number 80
+									span.admission-price__person.d-block.text-family-basis Adult
+
+				.textReveal
+					.text
+						p.admission-text.text-family-basis.text-13.mb-4.pb-1.text-center Guarantee your spa trip by selecting your one-hour check-in window and purchasing your General Admission ahead of time
+
+			.row
+				.col-lg-6.col-md-8.offset-md-2.offset-lg-1
+					.overflow-hidden
+						.admission-img.reveal
+							img(src="./img/bucket.jpg", alt="")
+				.col-lg-5.col-md-8.offset-md-2.offset-lg-0
+					.admission-info
+						.overflow-hidden
+							.textReveal
+								p.text
+									b.mr-2 WORLD SPA
+									| is New York City’s premiere, largest, and most diverse Spa Destination in a class by itself located in the heart of Brooklyn. WORLD SPA is the first of its kind to offer a global, authentic, and unmatched spa experience by preserving ancient practices and uniting various culturally authentic sauna, bathing, and spa treatments in one destination.
+								p.text World Spa preserves ancient practices by uniting various culturally authentic sauna and spa experiences in one destination.
+								p.pb-2.text Natural wood, organic materials, and meticulous attention to cleanliness come together to create the expansive establishment’s homey feel. Generous men’s and women’s facilities ensure privacy, while a traditional and elevated aesthetic provides guests with a sense of space that is both vast and cozy.
+
+	section.experience.dummy-experience#experience
+		.container.container-about
+			.overflow-hidden
+				.textReveal
+					.text
+						h2.section-title.text-center.text-family-silk Experience
+		.container-fluid.container-slider
+			.row.overflow-hidden
+				.col-lg-5
+					.slider-info
+						.overflow-hidden
+							.textReveal
+								.text
+									p.pb-2 To meet the demand of Brooklyn’s eclectic culture, rooted and rich in European, Nordic, and Asian traditions, World Spa team tapped leading European designers, Feng Shui consultants, New York’s best masseurs, and the visionaries behind saunas constructed for heads of state and premier global spa destinations throughout the world.
+				.col-lg-7
+					.big-slider__wrapper.position-relative
+						.reveal
+							.admission-img.pr-0
+								img(src="./img/hamam.jpg", alt="Hamam image")
+
+	section.girl.trigger
+		.overflow-hidden
+			.reveal
+				.admission-img.pr-0
+					img(src="./img/girl.jpg", alt="Photo of girl")
+	section.experience.dining.dummy-experience#dining
+		.container-dining
+			.row.overflow-hidden
+				.col-lg-5
+					.overflow-hidden
+						.textReveal
+							.text
+								h2.section-title.text-family-silk.ml-0 Dining at World Spa
+					.overflow-hidden
+						.textReveal
+							.text
+								p.pt-2.pr-5 Enjoy exquisite meals and drinks from a myriad of menu choices at any of our food outlets. Feast on international food options while enjoying your Spa experience at the World Spa Lounge. Unwind and live for the thrill of the evening while enjoying bespoke cocktails and freshest meals at Ren Restaurant. Lastly, appreciate the exclusivity of our private banyas with banquet feast available.
+				.col-lg-7
+					.reveal
+						.admission-img.pr-0.mb-5
+							img(src="./img/food.jpg", alt="")

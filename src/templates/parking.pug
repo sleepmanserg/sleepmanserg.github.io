@@ -1,0 +1,34 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'World Spa - About - Parking'
+	-var whatPage = 'Parking'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	section.hero-section
+		img(src="./img/admissions/admissions-hero.png" alt="")
+
+	section.about.admissions
+		.container.admissions-container
+			.row
+				.col-lg-6
+					.overflow-hidden
+						.textReveal
+							h1.about-title.text-family-silk.text.text-capitalize.admissions-title Parking
+
+				.col-lg-6
+					.overflow-hidden
+						.textReveal
+							p.mw-555 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in. culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde.
+
+				.col-12.pt-lg-9.pb-lg-10.pt-0.pb-5
+					.overflow-hidden
+						.admission-img.reveal.pr-0
+							img(src="./img/parking-bg.png", alt="")

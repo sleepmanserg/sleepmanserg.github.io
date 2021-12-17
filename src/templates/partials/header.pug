@@ -1,9 +1,38 @@
 // Site Header
 header.header
-	.container
+	button.btn.menu-toggle.hamburger--spin.stagger.data-toggle(type='button' data-target='.main-nav, .menu-toggle' data-classes='active' data-backdrop='true' data-overflow='true')
+		span.hamburger-box
+			span.hamburger-inner
+	a.logo-mob(href="/")
+		img(src="./img/logo.svg", alt="World Spa logo")
+	.container.container-header
 		.header-wrapper
-			include navigation-left
-			.header-logo
-				a(href='index.html').logo-link
-					img(src="./img/logo.png", alt="Celeste Trade")
-			include navigation-right
+			nav.header-nav.main-nav
+				button.main-nav-close.hamburger--spin.data-toggle(type='button' data-target='.main-nav, .menu-toggle' data-classes='active' data-backdrop='true' data-overflow='true')
+				.header__action(data-active)
+					button.main-nav__link(type="button" data-target-button) About
+					.header__dropdown
+						a.main-nav__link(href="our-story.html") Our story
+						a.main-nav__link.scroll(href="admissions.html") Admissions
+						a.main-nav__link.scroll(href="press.html") Press
+						a.main-nav__link(href="parking.html") Parking
+						a.main-nav__link(href="hours.html") hours &#38; directions
+						a.main-nav__link(href="gallery.html") gallery
+						a.main-nav__link(href="faq.html") FAQs
+						a.main-nav__link(href="360.html") 360 tour
+
+				a.main-nav__link.scroll(href="#experience") Experience
+				a.main-nav__link.scroll(href="spa-treatments.html") Spa treatments
+				a(href="/").header-logo
+					img.logo(src="./img/logo.svg", alt="World Spa logo")
+					img.logo-fixed(src="./img/logo-fixed.svg", alt="World Spa logo")
+				a.main-nav__link.scroll(href="dining.html") Dining
+				a.main-nav__link.scroll(href="#member") Memberships
+				a.main-nav__link.scroll(href="#shop") Shop
+				a.main-nav__link.scroll.main-nav__login-link(href="#")
+					img(src="./img/user.svg", alt="Login icon")
+					span Login
+			button.main-nav__link.main-nav__book-link.btn(type="button" data-toggle="modal" data-target="#bookingModal")
+				span Book
+
+

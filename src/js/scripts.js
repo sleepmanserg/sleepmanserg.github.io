@@ -1,137 +1,198 @@
 $(document).ready(function () {
 	(function ($) {
 		'use strict';
-		let currentTarget;
+
 		const theme = {
 			init: () => {
+				// theme.preloader();
 				theme.toggler();
-				theme.menuHeight();
+				theme.smoothScroll();
+				// theme.mainNav();
 				theme.addRemoveActive();
-				theme.subMenu();
-				theme.heroSLider();
-				theme.fantomSLider();
-				theme.productsSlider();
-				theme.stepsSlider();
-				theme.similarSlider();
-				theme.passwordShow();
-				theme.touchDevice();
-				theme.dynamicAdaptive();
-				theme.vhMobFix();
-				theme.aboutSlider();
-				theme.teamSlider();
-				theme.productCardSlider();
-				theme.productZoom();
-				theme.scrollAnim();
-				theme.filterMore();
-				theme.checkboxCheck();
-				theme.productCardSelect();
+				theme.stickyHeader();
+				theme.spaSlider();
+				theme.expSlider();
+				theme.diningSlider();
+				theme.storySlider();
+				theme.scrollReveal();
+				theme.gallerySlider();
+				theme.fullYear();
+				theme.customSelect();
 			},
 
-			/** Category submenu */
-			subMenu: () => {
-				document.addEventListener('mouseover', e => {
-					const isTargetButton = e.target.matches('[data-submenu-target]');
-					if (!isTargetButton && e.target.closest('[data-submenu]') != null) {
-						return;
+			customSelect: () => {
+				$('select').each(function(){
+					let $this = $(this), numberOfOptions = $(this).children('option').length;
+
+					$this.addClass('select-hidden');
+					$this.wrap('<div class="select"></div>');
+					$this.after('<div class="select-styled"></div>');
+
+					let $styledSelect = $this.next('div.select-styled');
+					$styledSelect.text($this.children('option').eq(0).text());
+
+					let $list = $('<ul />', {
+							'class': 'select-options'
+					}).insertAfter($styledSelect);
+
+					for (let i = 0; i < numberOfOptions; i++) {
+							$('<li />', {
+									text: $this.children('option').eq(i).text(),
+									rel: $this.children('option').eq(i).val()
+							}).appendTo($list);
 					}
 
-					if (isTargetButton) {
-						currentTarget = e.target.closest('[data-submenu]');
-						currentTarget.classList.toggle('active');
+					let $listItems = $list.children('li');
+
+
+					$styledSelect.click(function(e) {
+							e.stopPropagation();
+							$('div.select-styled.active').not(this).each(function(){
+									$(this).removeClass('active').next('ul.select-options').hide();
+									$(this).closest($('.booking-services__dropdown-wrapper')).removeClass('active');
+							});
+							$(this).toggleClass('active').next('ul.select-options').toggle();
+							$(this).closest($('.booking-services__dropdown-wrapper')).addClass('active');
+					});
+
+					$listItems.click(function(e) {
+							e.stopPropagation();
+							$styledSelect.text($(this).text()).removeClass('active');
+							$this.val($(this).attr('rel'));
+							$list.hide();
+							$(this).closest($('.booking-services__dropdown-wrapper')).removeClass('active');
+							$(this).closest($('.booking-services__dropdown-wrapper')).addClass('selected');
+
+							if($(this).closest($('.booking-services__dropdown-wrapper')).hasClass('selected')) {
+								$($(this).closest($('.booking-services__dropdown-wrapper')).siblings().removeClass('selected'));
+								$(this).closest($('.booking-services__dropdown-wrapper')).siblings($('.book-link')).removeClass('active');
+								defaultTextFunc();
+							}
+					});
+
+					let defaultTextFunc = function() {
+						$('.booking-services__dropdown-wrapper').each(function() {
+							if (!$(this).hasClass("selected")) {
+								let defaultText = $(this).find('.select-styled').next($list).children().first().text();
+								$(this).find('.select-styled').text(defaultText);
+							}
+						});
 					}
-					document.querySelectorAll('[data-submenu].active').forEach(item => {
-						if (item == currentTarget) return;
-						item.classList.remove('active');
+
+					let links = $('.book-link');
+
+					links.each(function() {
+						$(this).click(function() {
+							$(this).addClass('active').siblings().removeClass('active');
+							$(this).addClass('active').siblings($('.booking-services__dropdown-wrapper')).removeClass('selected');
+							defaultTextFunc();
+							// $($(this).find($('.booking-services__dropdown-wrapper')).removeClass('selected'));
+						});
+					});
+
+					$(document).click(function() {
+						$styledSelect.removeClass('active');
+						$list.hide();
+						$('.booking-services__dropdown-wrapper').removeClass('active');
+					});
+
+				});
+			},
+
+			scrollReveal: () => {
+
+				gsap.registerPlugin(ScrollTrigger);
+
+				let revealContainers = document.querySelectorAll(".reveal");
+
+				revealContainers.forEach((container) => {
+					let image = container.querySelector("img");
+					let tl = gsap.timeline({
+						scrollTrigger: {
+							trigger: container,
+							start: "bottom bottom",
+							end: "+=20" ,
+							// toggleActions: "restart none none reset",
+						}
+					});
+
+					tl.set(container, { autoAlpha: 1 });
+					tl.from(container, 1.5, {
+						yPercent: -100,
+						ease: Power4.out,
+					});
+					tl.from(image, 1.5, {
+						yPercent: 100,
+						delay: -1.5,
+						ease: Power4.out
 					});
 				});
 
-				// let menuParents = document.querySelectorAll('[data-submenu]');
+				let textContainers = document.querySelectorAll(".textReveal");
 
-				// menuParents.forEach(item => {
-				// 	item.addEventListener('mouseenter', e => {
-				// 		item.classList.add('active');
-				// 	});
-				// 	item.addEventListener('mouseleave', e => {
-				// 		item.classList.remove('active');
-				// 	});
-				// });
-
-
-
-			},
-
-			/** VH mobile fix */
-
-			vhMobFix: () => {
-				let vh = window.innerHeight * 0.01;
-				document.documentElement.style.setProperty('--vh', `${vh}px`);
-			},
-
-			/** Dyneamic adaptive */
-
-			dynamicAdaptive: () => {
-				const da = new DynamicAdapt("max");
-				da.init();
-			},
-			touchDevice: () => {
-				function isTouchScreendevice() {
-					return (('ontouchstart' in window) ||
-					(navigator.maxTouchPoints > 0) ||
-					(navigator.msMaxTouchPoints > 0));
-				};
-				if (isTouchScreendevice()) {
-					document.querySelector('body').classList.toggle('is-touch');
-				} else {
-					document.querySelector('body').classList.toggle('not-touch');
-				}
-			},
-
-			/* Add or remove active */
-			addRemoveActive: () => {
-				document.addEventListener('click', e => {
-					const isTargetButton = e.target.matches('[data-target-button]');
-					if (!isTargetButton && e.target.closest('[data-active]') != null) {
-						return;
-					}
-					if (isTargetButton) {
-						currentTarget = e.target.closest('[data-active]');
-						currentTarget.classList.toggle('active');
-						document.querySelector('body').classList.toggle('overflow-hidden');
-						document.querySelector('body').classList.toggle('backdrop');
-					}
-					document.querySelectorAll('[data-active].active').forEach(item => {
-						if (item == currentTarget) return;
-						item.classList.remove('active');
-						document.querySelector('body').classList.toggle('overflow-hidden');
-						document.querySelector('body').classList.toggle('backdrop');
+				textContainers.forEach((container) => {
+					let text = container.querySelector(".text");
+					let tl = gsap.timeline({
+						scrollTrigger: {
+							trigger: container,
+							start: "bottom bottom",
+							end: "+=10",
+							// toggleActions: "restart none none reset",
+						}
 					});
-				});
-			},
 
-			passwordShow: () => {
-				const togglePassword = document.querySelector('#togglePassword');
-				const password = document.querySelector('#id_password');
-				togglePassword.addEventListener('click', function (e) {
-					const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-					password.setAttribute('type', type);
-					this.classList.toggle('active');
+					tl.set(container, { autoAlpha: 1 });
+					tl.from(container, 1, {
+						y: '-50%',
+						ease: Power1.out,
+						opacity: 0,
+					});
+					tl.from(text, 1, {
+						y: '0',
+						// delay: -.8,
+						ease: Power1.out,
+						opacity: 1,
+					});
+					tl.pause();
 				});
-			},
 
-			scrollAnim: () => {
-				AOS.init({
-					// once: true
+				let widthContainers = document.querySelectorAll(".underlineReveal");
+
+				widthContainers.forEach((container) => {
+					let text = container.querySelector(".text-underline-spa");
+					let tl4 = gsap.timeline({
+						scrollTrigger: {
+							trigger: container,
+						}
+					});
+
+					tl4.set(container, { autoAlpha: 1 });
+					tl4.from(text, 1, {
+						width: 0,
+						ease: Power1.out,
+					});
+					tl4.to(text, {width: '100%', duration: 1.5, opacity: 1, delay: .1, ease: Power1.out,});
 				});
+
+				let tl = gsap.timeline({
+					scrollTrigger: {
+						trigger: ".admission",
+					}
+				})
+
+				tl.to('.text-underline', {width: '100%', duration: 1.5, opacity: 1, delay: 1, ease: Power1.out,});
+
 			},
 
 			toggler: () => {
 				$(document).on('click', '.data-toggle', function () {
 					let $target = $($(this).data('target'));
+					let navItem = $('.scroll');
 					let classes = $(this).data('classes');
 					let backdrop = $(this).data('backdrop');
 					let overflow = $(this).data('overflow');
 					let siteBackdrop = $('.site-backdrop');
-					let closeBtn = $('.sidebar-header__close .btn');
+					let navClose = $('.main-nav-close');
 
 					$target.toggleClass(classes);
 
@@ -139,428 +200,250 @@ $(document).ready(function () {
 						siteBackdrop.toggleClass('active');
 					}
 					if (overflow === true) {
-						$('body').toggleClass('overflow-hidden');
-						$('body').toggleClass('sidebar-active');
+						$('body').toggleClass('overflow-hidden menu-active');
+						$('html').toggleClass('overflow-hidden');
 					}
 
 					siteBackdrop.on('click', function () {
 						closeDisable();
 					});
-					closeBtn.on('click', function () {
+
+					navItem.on('click', function () {
 						closeDisable();
 					});
-
-
-					// $('.data-toggle').on('click', function () {
-					// 	closeDisable();
-					// });
 
 					return false;
 				});
 
 				function closeDisable() {
-					$('.site-backdrop').removeClass('active');
-					$('.sidebar').removeClass('active');
-					$('body').removeClass('overflow-hidden');
-					$('body').removeClass('sidebar-active');
+					$('.site-backdrop, .main-nav, .menu-toggle').removeClass('active');
+					$('body, html').removeClass('overflow-hidden');
+					$('body').removeClass('menu-active');
 				}
 			},
 
-			/** Hero slider */
-			heroSLider: () => {
-				$('.hero-slider').slick({
-					slidesToShow: 1,
-					arrows: true,
-					speed: 500,
-					dots: true,
-					appendDots: '.hero-slider__dots',
-					nextArrow: '.hero-controls__next',
-					prevArrow: '.hero-controls__prev'
-				});
-			},
-
-			fantomSLider: () => {
-				$('.fantom-slider').slick({
-					slidesToShow: 1,
-					arrows: true,
-					speed: 500,
-					dots: true,
-					appendDots: '.fantom-slider__dots',
-					nextArrow: '.fantom-controls__next',
-					prevArrow: '.fantom-controls__prev'
-				});
-			},
-
-			/** Products home slider */
-			productsSlider: () => {
-				// setup
-				let sliderElem = $(".products-slider"),
-				sliderBool = false,
-				sliderBreakpoint = 768,
-
-				sliderSettings = {
-						arrows: false,
-						dots: true,
-						mobileFirst: true,
-						slidesToShow: 1,
-						responsive: [
-								{
-										breakpoint: sliderBreakpoint,
-										settings: "unslick"
-								}
-						]
-				};
-				function sliderInit() {
-					if (window.innerWidth <= sliderBreakpoint) {
-						if (sliderBool == false) {
-								sliderElem.slick(sliderSettings);
-								sliderBool = true;
+			/** Smooth scroll **/
+			smoothScroll: () => {
+				$('a.scroll').click(function() {
+					if (
+						window.location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&  window.location.hostname == this.hostname
+					) {
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+						if (target.length) {
+								$('html,body').animate({
+										scrollTop: target.offset().top - 70
+								}, 1000);
+								return false;
 						}
-					} else {
-						sliderBool = false;
 					}
-				}
-
-				// resize
-				$(window).resize(function () {
-					sliderInit();
 				});
-				if (window.innerWidth <= sliderBreakpoint) {
-					sliderInit();
-				}
+			},
+			/* Add or remove active */
+			addRemoveActive: () => {
+				document.addEventListener('click', e => {
+					const isTargetButton = e.target.matches('[data-target-button]');
+					if (!isTargetButton && e.target.closest('[data-active]') != null) return;
+					let currentTarget;
+					if (isTargetButton) {
+						currentTarget = e.target.closest('[data-active]');
+						currentTarget.classList.toggle('active');
+					}
+					document.querySelectorAll('[data-active].active').forEach(item => {
+						if (item == currentTarget) return;
+						item.classList.remove('active');
+					});
+
+				});
 			},
 
-			stepsSlider: () => {
-				// setup
-				let sliderElem = $(".steps-row"),
-				sliderBool = false,
-				sliderBreakpoint = 575,
+			/** Sticky header on scroll */
+			stickyHeader: () => {
 
-				sliderSettings = {
-						arrows: false,
-						dots: true,
-						mobileFirst: true,
-						slidesToShow: 1,
-						centerMode: true,
-						responsive: [
-								{
-										breakpoint: sliderBreakpoint,
-										settings: "unslick"
-								}
-						]
-				};
-				function sliderInit() {
-				if (window.innerWidth <= sliderBreakpoint) {
-					if (sliderBool == false) {
-							sliderElem.slick(sliderSettings);
-							sliderBool = true;
-					}
-				} else {
-						sliderBool = false;
-					}
-				}
+				let header  = document.querySelector('.header');
 
-				// resize
-				$(window).resize(function () {
-					sliderInit();
+				window.addEventListener('scroll', function () {
+						let getScrollposition = window.scrollY;
+						if (getScrollposition > 130) {
+								header.classList.add('is-fixed')
+						} else {
+							header.classList.remove('is-fixed')
+						}
 				});
-				if (window.innerWidth <= sliderBreakpoint) {
-					sliderInit();
-				}
+
+				/********* IF VIDEO BACKGROUND */
+
+				// let videos = document.getElementsByTagName("video"),
+				// fraction = 0.5;
+				// function checkScroll() {
+				// 	for(let i = 0; i < videos.length; i++) {
+				// 		let video = videos[i];
+				// 		let x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w, //right
+				// 			b = y + h, //bottom
+				// 			visibleX, visibleY, visible;
+
+				// 			visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+				// 			visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+
+				// 			visible = visibleX * visibleY / (w * h);
+
+				// 			if (visible > fraction) {
+				// 					video.play();
+				// 			} else {
+				// 					video.pause();
+				// 			}
+				// 	}
+				// }
+				// window.addEventListener('scroll', checkScroll, false);
+				// window.addEventListener('resize', checkScroll, false);
+
+				/********* IF VIDEO BACKGROUND */
+
 			},
 
-			similarSlider: () => {
-				$('.similar-slider').slick({
-					slidesToShow: 4,
-					slidesToScroll: 2,
+			/** Spa slider */
+			spaSlider: () => {
+				$('.spa-slider').slick({
+					slidesToShow: 2,
 					arrows: true,
-					dots: true,
-					nextArrow: '.similar-controls__next',
-					prevArrow: '.similar-controls__prev',
-					appendDots: '.similar-slider__dots',
+					infinite: false,
 					responsive: [
-						{
-							breakpoint: 1330,
-							settings: {
-								slidesToShow: 3,
-								slidesToScroll: 1,
-								draggable: true,
-							}
-						},
-						{
-							breakpoint: 768,
-							settings: {
-								slidesToShow: 2,
-								slidesToScroll: 1,
-								infinite: true,
-							}
-						},
-						{
-							breakpoint: 480,
-							settings: {
-								slidesToShow: 1,
-								slidesToScroll: 1,
-								infinite: true,
-								arrows: false
-							}
-						},
-					]
-				});
-			},
-
-			aboutSlider: () => {
-				$('.history-slider').slick({
-					slidesToShow: 7,
-					slidesToScroll: 0,
-					asNavFor: '.history-slider__description',
-					dots: false,
-					centerMode: true,
-					focusOnSelect: true,
-					draggable: false,
-					responsive: [
-						{
-							breakpoint: 991,
-							settings: {
-								slidesToShow: 4,
-								slidesToScroll: 1,
-								infinite: true,
-								draggable: true,
-								dots: false,
-								arrows: false,
-							}
-						},
 						{
 							breakpoint: 767,
 							settings: {
-								slidesToShow: 3,
+								slidesToShow: 2,
 								slidesToScroll: 1,
-								infinite: true,
-								draggable: true,
-								dots: false,
-								arrows: false,
-								centerMode: false,
+							}
+						},
+						{
+							breakpoint: 576,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1,
 							}
 						},
 					]
 				});
-				$('.history-slider__description').slick({
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					arrows: false,
-					draggable: false,
-					fade: true,
-					asNavFor: '.history-slider',
-					responsive: [
-						{
-							breakpoint: 991,
-							settings: {
-								slidesToShow: 1,
-								slidesToScroll: 1,
-								infinite: true,
-								draggable: true,
-								dots: false,
-								arrows: false,
-								fade: false
-							}
-						}
-					]
-				});
 			},
 
-			teamSlider: () => {
-				$('.team-slider').slick({
+			/** Experience slider */
+
+			expSlider: () => {
+				$('.exprience-slider').slick({
 					slidesToShow: 1,
 					arrows: true,
-					speed: 500,
-					dots: true,
-					appendDots: '.team-slider__dots',
-					nextArrow: '.team-controls__next',
-					prevArrow: '.team-controls__prev'
-				});
-			},
-
-			/** Filter more btn */
-
-			filterMore: () => {
-				document.addEventListener('click', e => {
-					const isTargetButton = e.target.matches('[data-more]');
-					if (!isTargetButton && e.target.closest('[data-active-list]') != null) {
-						return;
-					}
-					if (isTargetButton) {
-						currentTarget = e.target.closest('[data-active-list]');
-						currentTarget.classList.toggle('active');
-					}
-				});
-			},
-
-			/** Menu height */
-
-			menuHeight: () => {
-				$(window).on("resize", function() {
-
-					let winHeight = $(window).height();
-					let headerHeight = $(".header").height();
-					$('.main-nav-wrapper__inner').height(winHeight - headerHeight);
-				});
-				$(window).trigger('resize');
-			},
-
-			/** Color count */
-
-			checkboxCheck: () => {
-				$(".sidebar-checkbox .check__input").click(function() {
-					$(this).toggleClass('active');
-					if($(".sidebar-checkbox .check__input").hasClass('active')) {
-						$('.filter-submit__btn').addClass('is-visible');
-					} else {
-						$('.filter-submit__btn').removeClass('is-visible');
-					}
-				});
-			},
-
-			/** Product card slider */
-
-			productCardSlider: () => {
-				$('.product-slider').slick({
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					arrows: false,
-					dots: false,
+					infinite: false,
 					fade: true,
-					asNavFor: '.product-slider__thumbs',
 					draggable: false,
-				});
-				$('.product-slider__thumbs').slick({
-					slidesToShow: 6,
-					slidesToScroll: 1,
-					asNavFor: '.product-slider',
-					dots: false,
-					arrows: false,
-					focusOnSelect: true,
-					// centerMode: true,
-					// centerPadding: 0,
-					draggable: false
+					speed: 700
 				});
 			},
 
-			/** Product card zoom */
-
-			productZoom: () => {
-				$('.img-zoom').izoomify({
-					magnify: 1.4,
-					duration: 0,
-					touch: true,
+			/** Dining slider **/
+			diningSlider: () => {
+				$('.dining-slider').slick({
+					slidesToShow: 1,
+					arrows: true,
+					infinite: false,
+					fade: true,
+					draggable: false,
+					speed: 700
 				});
 			},
 
-			/** Custom select */
+			/** Our story slider **/
 
-			productCardSelect: () => {
-
-				/** Селект цвета */
-				function formatStateColor (state) {
-					if (!state.id) {
-						return state.text;
-					}
-					var baseUrl = "../img/card-colors/";
-					var $stateImg = $(
-						'<div class="card-color-img"><span class="state-title">Цвет</span><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
-					);
-					$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
-					return $stateImg;
-				};
-				function formatStateColorInner (state) {
-					if (!state.id) {
-						return state.text;
-					}
-					var baseUrl = "../img/card-colors/";
-					var $stateImg = $(
-						'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наявності</span>' + '</div>' + '</div>'
-					);
-					$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
-					return $stateImg;
-				};
-
-				/** Селект цвета */
-
-				/** Селект Покрытия */
-				function formatStateCover (state) {
-					if (!state.id) {
-						return state.text;
-					}
-					var baseUrl = "../img/card-colors/";
-					var $stateImg = $(
-						'<div class="card-color-img"><span class="state-title">Покрытие</span><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
-					);
-					$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
-					return $stateImg;
-				};
-				function formatStateCoverInner (state) {
-					if (!state.id) {
-						return state.text;
-					}
-					var baseUrl = "../img/card-colors/";
-					var $stateImg = $(
-						'<div class="card-color-img"><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
-					);
-					var $stateImg = $(
-						'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наявності</span>' + '</div>' + '</div>'
-					);
-					return $stateImg;
-				};
-				/** Селект Покрытия */
-
-				/** Селект Комплектация */
-				function formatStateEquip (state) {
-					if (!state.id) {
-						return state.text;
-					}
-					var baseUrl = "../img/card-colors/";
-					var $stateImg = $(
-						'<div class="card-color-img"><span class="state-title">Комплектация</span><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
-					);
-					$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
-					return $stateImg;
-				};
-				function formatStateEquipInner (state) {
-					if (!state.id) {
-						return state.text;
-					}
-					var baseUrl = "../img/card-colors/";
-					var $stateImg = $(
-						'<div class="card-color-img"><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
-					);
-					var $stateImg = $(
-						'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наявності</span>' + '</div>' + '</div>'
-					);
-					return $stateImg;
-				};
-				/** Селект Комплектация */
-
-				$('.select-color').select2({
-					minimumResultsForSearch: -1,
-					templateResult: formatStateColorInner,
-					templateSelection: formatStateColor,
-					theme: "select-dropdown",
+			storySlider: () => {
+				$('.our-story-slider').slick({
+					slidesToShow: 1,
+					arrows: true,
+					infinite: false,
+					draggable: true,
+					speed: 700
 				});
-				$('.select-cover').select2({
-					minimumResultsForSearch: -1,
-					templateResult: formatStateCoverInner,
-					templateSelection: formatStateCover,
-					theme: "select-dropdown",
-				});
-				$('.select-equipment').select2({
-					minimumResultsForSearch: -1,
-					templateResult: formatStateEquipInner,
-					templateSelection: formatStateEquip,
-					theme: "select-dropdown",
-				});
-
 			},
 
+			/** Get full year */
+
+			/* Gallery slider */
+
+			gallerySlider: () => {
+				$('.gallery-slider').slick({
+					slidesToShow: 1,
+					arrows: true,
+					infinite: false,
+					draggable: true,
+					speed: 700,
+					centerMode: false,
+				});
+			},
+
+			fullYear: () => {
+				function fullYearFunction() {
+					let date = new Date();
+					let year = date.getFullYear();
+					document.getElementById("copyright").innerHTML = year;
+				}
+				fullYearFunction();
+			},
 		}
+
 		theme.init();
+
 	})(jQuery);
 
 });
+
+/** Preloader */
+
+document.addEventListener("DOMContentLoaded", function(event) {
+
+	let header = document.querySelector('.header');
+	let preloader = document.querySelector('#preloader');
+	const lockPaddingValue = window.innerWidth - document.querySelector('.content').offsetWidth + 'px';
+	document.body.style.paddingRight = lockPaddingValue;
+	header.style.paddingRight = lockPaddingValue;
+	document.body.style.overflow = 'hidden';
+
+	$('.modal').on('show.bs.modal', function () {
+		header.style.paddingRight = lockPaddingValue;
+		document.body.style.paddingRight = lockPaddingValue;
+		document.body.style.overflow = 'hidden';
+	});
+	$('.modal').on('hidden.bs.modal', function (e) {
+		header.style.paddingRight = 0;
+		document.body.style.overflowY = 'auto';
+		document.body.style.paddingRight = 0;
+	});
+
+	function add_img() {
+		let img = document.createElement('img');
+			img.src = '../img/logo-preloader.gif';
+		document.getElementById('preloader').appendChild(img);
+	}
+	add_img();
+	let gifSource = $('#preloader img').attr('src');
+	$('#preloader img').attr('src', "");
+	$('#preloader img').attr('src', gifSource+"?"+new Date().getTime());
+	window.onload = function() {
+		window.requestAnimationFrame(function() {
+			let intro = gsap.timeline({
+				paused: false
+			});
+			intro.to("#preloader", 1, {
+				opacity: 0,
+				ease: "easeInOut",
+				delay: 3.8,
+				onComplete:function(){
+					document.querySelector('.content').classList.remove('is-loading');
+					header.style.paddingRight = 0;
+					document.body.style.paddingRight = 0;
+					preloader.style.marginRight = 0;
+					document.body.style.overflowY = 'auto';
+				}
+			});
+		});
+	};
+
+});
+

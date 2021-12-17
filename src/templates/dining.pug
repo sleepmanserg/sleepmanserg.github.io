@@ -1,0 +1,233 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'World Spa - Dining'
+	-var whatPage = 'Dining'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	section.hero-section
+		img(src="./img/dining/dining-hero.png" alt="")
+
+	section.about.admissions
+		.spa-treatments__section-container
+			.row
+				.col-lg-6
+					.overflow-hidden
+						.textReveal
+							h1.about-title.text-family-silk.text.text-capitalize.admissions-title Dining
+
+				.col-lg-6
+					.overflow-hidden
+						.textReveal
+							p.mw-555 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+	section.spa-treatments
+		.spa-treatments__section
+			.overflow-hidden.d-lg-none
+				.textReveal
+					h1.section-title Ren Restaurant
+			.spa-treatments__section-content
+				.spa-treatments__section-container
+					.spa-treatments__section-body
+						.underlineReveal.d-none.d-lg-block
+							.text-underline-spa
+						.overflow-hidden.d-none.d-lg-block
+							.textReveal
+								h1.section-title Ren Restaurant
+						.overflow-hidden
+							.textReveal
+								p.about-text.text-family-basis Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						.textReveal
+							.text.d-flex.flex-column.mb-lg-2
+								a(href="#").btn.btn-learn.pl-0.text-left.justify-content-start.mb-4.mb-lg-2
+									span.text-bold Learn more
+									svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+										rect(fill='none' height='24' width='24')
+										path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+						.textReveal
+							.text
+								.admission-btn.d-flex
+									button.btn.border-btn
+										span Make a Reservation
+										svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+											rect(fill='none' height='24' width='24')
+											path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+			.spa-treatments__section-image
+				.reveal
+					.admission-img.our-story__girls.pr-0
+						img(src="./img/dining/dining1.png", alt="")
+
+		.spa-treatments__section.spa-treatments__section-reverse
+			.overflow-hidden.d-lg-none
+				.textReveal
+					h1.section-title World Spa Lounge
+			.spa-treatments__section-image
+				.reveal
+					.admission-img.our-story__girls.pr-0
+						img(src="./img/dining/dining2.png", alt="")
+			.spa-treatments__section-content
+				.spa-treatments__section-container
+					.spa-treatments__section-body
+						.underlineReveal.d-none.d-lg-block
+							.text-underline-spa
+						.overflow-hidden.d-none.d-lg-block
+							.textReveal
+								h1.section-title World Spa Lounge
+						.overflow-hidden
+							.textReveal
+								p.about-text.text-family-basis Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						.textReveal
+							.text.d-flex.flex-column.mb-lg-2
+								a(href="#").btn.btn-learn.pl-0.text-left.justify-content-start.mb-4.mb-lg-2
+									span.text-bold Learn more
+									svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+										rect(fill='none' height='24' width='24')
+										path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+						.textReveal
+							.text
+								.admission-btn.d-flex
+									button.btn.border-btn
+										span Make a Reservation
+										svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+											rect(fill='none' height='24' width='24')
+											path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+
+		.spa-treatments__section
+			.overflow-hidden.d-lg-none
+				.textReveal
+					h1.section-title Club
+			.spa-treatments__section-content
+				.spa-treatments__section-container
+					.spa-treatments__section-body
+						.underlineReveal.d-none.d-lg-block
+							.text-underline-spa
+						.overflow-hidden.d-none.d-lg-block
+							.textReveal
+								h1.section-title Club
+						.overflow-hidden
+							.textReveal
+								p.about-text.text-famaily-basis Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						.textReveal
+							.text.d-flex.flex-column.mb-lg-2
+								a(href="#").btn.btn-learn.pl-0.text-left.justify-content-start.mb-4.mb-lg-2
+									span.text-bold Learn more
+									svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+										rect(fill='none' height='24' width='24')
+										path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+			.spa-treatments__section-image
+				.reveal
+					.admission-img.our-story__girls.pr-0
+						img(src="./img/dining/dining3.png", alt="")
+
+		.spa-treatments__section.spa-treatments__section-reverse
+			.overflow-hidden.d-lg-none
+				.textReveal
+					h1.section-title Cabana Rentals
+			.spa-treatments__section-image
+				.reveal
+					.admission-img.our-story__girls.pr-0
+						img(src="./img/dining/dining4.png", alt="")
+			.spa-treatments__section-content
+				.spa-treatments__section-container
+					.spa-treatments__section-body
+						.underlineReveal.d-none.d-lg-block
+							.text-underline-spa
+						.overflow-hidden.d-none.d-lg-block
+							.textReveal
+								h1.section-title Cabana Rentals
+						.overflow-hidden
+							.textReveal
+								p.about-text.text-family-basis Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						.textReveal
+							.text.d-flex.flex-column.mb-lg-2
+								a(href="#").btn.btn-learn.pl-0.text-left.justify-content-start.mb-4.mb-lg-2
+									span.text-bold Learn more
+									svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+										rect(fill='none' height='24' width='24')
+										path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+						.textReveal
+							.text
+								.admission-btn.d-flex
+									button.btn.border-btn
+										span Make a Reservation
+										svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+											rect(fill='none' height='24' width='24')
+											path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+
+		.spa-treatments__section
+			.overflow-hidden.d-lg-none
+				.textReveal
+					h1.section-title Banquet
+			.spa-treatments__section-content
+				.spa-treatments__section-container
+					.spa-treatments__section-body
+						.underlineReveal.d-none.d-lg-block
+							.text-underline-spa
+						.overflow-hidden.d-none.d-lg-block
+							.textReveal
+								h1.section-title Banquet
+						.overflow-hidden
+							.textReveal
+								p.about-text.text-family-basis Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						.textReveal
+							.text.d-flex.flex-column.mb-lg-2
+								a(href="#").btn.btn-learn.pl-0.text-left.justify-content-start.mb-4.mb-lg-2
+									span.text-bold Learn more
+									svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+										rect(fill='none' height='24' width='24')
+										path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+						.textReveal
+							.text
+								.admission-btn.d-flex
+									button.btn.border-btn
+										span Request for proposal
+										svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+											rect(fill='none' height='24' width='24')
+											path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+			.spa-treatments__section-image
+				.reveal
+					.admission-img.our-story__girls.pr-0
+						img(src="./img/dining/dining5.png", alt="")
+
+		.spa-treatments__section.spa-treatments__section-reverse
+			.overflow-hidden.d-lg-none
+				.textReveal
+					h1.section-title Events
+			.spa-treatments__section-image
+				.reveal
+					.admission-img.our-story__girls.pr-0
+						img(src="./img/dining/dining6.png", alt="")
+			.spa-treatments__section-content
+				.spa-treatments__section-container
+					.spa-treatments__section-body
+						.underlineReveal.d-none.d-lg-block
+							.text-underline-spa
+						.overflow-hidden.d-none.d-lg-block
+							.textReveal
+								h1.section-title Events
+						.overflow-hidden
+							.textReveal
+								p.about-text.text-family-basis Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						.textReveal
+							.text.d-flex.flex-column.mb-lg-2
+								a(href="#").btn.btn-learn.pl-0.text-left.justify-content-start.mb-4.mb-lg-2
+									span.text-bold Learn more
+									svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+										rect(fill='none' height='24' width='24')
+										path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+						.textReveal
+							.text
+								.admission-btn.d-flex
+									button.btn.border-btn
+										span Request for proposal
+										svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+											rect(fill='none' height='24' width='24')
+											path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+

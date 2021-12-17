@@ -5,245 +5,436 @@ append config
 
   //- ********** Settings **********
   //- ==============================
-  -var pageTitle = 'Home'
+  -var pageTitle = 'World Spa'
   -var whatPage = 'Home'
   //- ==============================
   //- ********* Settings END *******
 
 //- Page Content
 block content
-  section.hero
-    .basic-slider.hero-slider
-      .basic-slider__item.hero-slider__item(style="background-image: url('./img/hero-slider/hero-slide1.jpg')")
-        .container
-          .basic-slider__caption.hero-slider__caption
-            h1.title-big.basic-slider__title.hero-slider__title.proba-family Ми відкриваємо двері
-            p.text-24.basic-slider__text.hero-slider__text
-              span.text-accent.d-block.lh-36 Celeste Trade
-              span.lh-36 Дистриб’ютор дверної фурнітури в Україні
-      .basic-slider__item.hero-slider__item(style="background-image: url('./img/hero-slider/hero-slide1.jpg')")
-        .container
-          .basic-slider__caption.hero-slider__caption
-            h1.title-big.basic-slider__title.hero-slider__title.proba-family Ми відкриваємо двері
-            p.text-24.basic-slider__text.hero-slider__text
-              span.text-accent.d-block.lh-36 Celeste Trade
-              span.lh-36 Дистриб’ютор дверної фурнітури в Україні
-      .basic-slider__item.hero-slider__item(style="background-image: url('./img/hero-slider/hero-slide1.jpg')")
-        .container
-          .basic-slider__caption.hero-slider__caption
-            h1.title-big.basic-slider__title.hero-slider__title.proba-family Ми відкриваємо двері
-            p.text-24.basic-slider__text.hero-slider__text
-              span.text-accent.d-block.lh-36 Celeste Trade
-              span.lh-36 Дистриб’ютор дверної фурнітури в Україні
+  section.hero-section
+    img(src="./img/hero-bg.jpg" alt="")
 
-    .basic-slider__controls.hero-slider__controls.slider-controls.container
-      .slider-controls__row
-        .basic-slider__dots.hero-slider__dots
-        .basic-slider__nav.hero-slider__nav
-          button.basic-controls__prev.hero-controls__prev.hero-control.basic-slider__arrow
-            i.icon-chevron-left
-          button.basic-controls__next.hero-controls__next.hero-control.basic-slider__arrow
-            i.icon-chevron-right
+  section.about
+    .container.container-about
+      .textReveal.overflow-hidden
+        h1.about-title.text-family-silk.text Lorem ipsum dolor sit amet, consect etur adipiscing elit
+      .about-admission.admission
+        .overflow-hidden
+          .textReveal
+            .text
+              h5.admission-title.text-family-silk Admission
+              p.admission-text.text-family-basis Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint Sed ut perspiciatis unde.
+              .text-underline
+        .admission-price
+          .admission-price__col
+            .textReveal
+              .text
+                .admission-price__title.text-family-basis Weekends
+                .admission-price__value.text-family-silk
+                  span.admission-price__currency $
+                  span.admission-price__number 85
+                  span.admission-price__person.d-block.text-family-basis Adult
+          .admission-price__col
+            .textReveal
+              .text
+                .admission-price__title.text-family-basis Holidays
+                .admission-price__value.text-family-silk
+                  span.admission-price__currency $
+                  span.admission-price__number 85
+                  span.admission-price__person.d-block.text-family-basis Adult
 
-  section.products
-    .container
-      h3.text-48.proba-family.products-title Продукція
-      .row.products-slider
-        .col-lg-4.col-md-6
-          .products-item
-            .product-item__thumb(data-aos="fade-down" data-aos-duration="700")
-              img(src="./img/products/cylinder.png", alt="Фото Продукція")
-            .product-item__body(data-aos="fade-up" data-aos-duration="700")
-              a(href="catalog.html").product-item__body-inner
-                .product-item__body-title.text-24 Циліндри
-                .product-item__body-subtitle.text-24 Захист на будь який смак.
-                .product-item__body-text.text-18 Ідеальне рішення для кожної двері.
-                .product-item__body-icon
-                  img(src="./img/arrow.svg", alt="")
-        .col-lg-4.col-md-6
-          .products-item
-            .product-item__thumb(data-aos="fade-down" data-aos-duration="700")
-              img(src="./img/products/handles.png", alt="Фото Продукція")
-            .product-item__body(data-aos="fade-up" data-aos-duration="700")
-              a(href="catalog.html").product-item__body-inner
-                .product-item__body-title.text-24 Ручки
-                .product-item__body-subtitle.text-24 Ми відкриваємо двері.
-                .product-item__body-text.text-18 Додайте комфорту та стилю вашій оселі.
-                .product-item__body-icon
-                  img(src="./img/arrow.svg", alt="")
-        .col-lg-4.col-md-6
-          .products-item
-            .product-item__thumb(data-aos="fade-down" data-aos-duration="700")
-              img(src="./img/products/loops.png", alt="Фото Продукція")
-            .product-item__body(data-aos="fade-up" data-aos-duration="700")
-              a(href="catalog.html").product-item__body-inner
-                .product-item__body-title.text-24 Петлі
-                .product-item__body-subtitle.text-24 Тримають ваші двері.
-                .product-item__body-text.text-18 Такі різні, непомітні та функціональні.
-                .product-item__body-icon
-                  img(src="./img/arrow.svg", alt="")
-        .col-lg-4.col-md-6
-          .products-item.products-item__reverse
-            .product-item__thumb(data-aos="fade-up" data-aos-duration="700")
-              img(src="./img/products/accessories.png", alt="Фото Продукція")
-            .product-item__body(data-aos="fade-down" data-aos-duration="700")
-              a(href="catalog.html").product-item__body-inner
-                .product-item__body-title.text-24 Аксессуари для дверей
-                .product-item__body-subtitle.text-24 Все в порядку.
-                .product-item__body-text.text-18 Надійні та такі зручні, що ви навіть не звертаєте на них увагу.
-                .product-item__body-icon
-                  img(src="./img/arrow.svg", alt="")
-        .col-lg-4.col-md-6
-          .products-item.products-item__reverse
-            .product-item__thumb(data-aos="fade-up" data-aos-duration="700")
-              img(src="./img/products/locks.png", alt="Фото Продукція")
-            .product-item__body(data-aos="fade-down" data-aos-duration="700")
-              a(href="catalog.html").product-item__body-inner
-                .product-item__body-title.text-24 Замки
-                .product-item__body-subtitle.text-24 Все в порядку.
-                .product-item__body-text.text-18 Надійні та такі зручні, що ви навіть не звертаєте на них увагу.
-                .product-item__body-icon
-                  img(src="./img/arrow.svg", alt="")
-        .col-lg-4.col-md-6
-          .products-item.products-item__reverse
-            .product-item__thumb(data-aos="fade-up" data-aos-duration="700")
-              img(src="./img/products/closet.png", alt="Фото Продукція")
-            .product-item__body(data-aos="fade-down" data-aos-duration="700")
-              a(href="catalog.html").product-item__body-inner
-                .product-item__body-title.text-24.product-item__title-white Розсувні системи
-                .product-item__body-subtitle.text-24 Все в порядку.
-                .product-item__body-text.text-18 Надійні та такі зручні, що ви навіть не звертаєте на них увагу.
-                .product-item__body-icon
-                  img(src="./img/arrow.svg", alt="")
+        .textReveal
+          .text
+            p.admission-text.text-family-basis.text-13.mb-4.pb-1.text-center View our admission and pricing details, along with our Holiday scheduling
 
-  section.fantom
-    .basic-slider.fantom-slider
-      .basic-slider__item(style="background-image: url('./img/fantoms-slider/fantom1.jpg')")
-        .container
-          .basic-slider__caption
-            h2.title-big.basic-slider__title.proba-family Fantom Hardware
-            p.text-24.basic-slider__text
-              span.d-block.lh-36 Магнітний дверний стопор
-              span.lh-36 Поєднання безпеки та унікальності
-      .basic-slider__item(style="background-image: url('./img/fantoms-slider/fantom1.jpg')")
-        .container
-          .basic-slider__caption
-            h2.title-big.basic-slider__title.proba-family Fantom Hardware
-            p.text-24.basic-slider__text
-              span.d-block.lh-36 Магнітний дверний стопор
-              span.lh-36 Поєднання безпеки та унікальності
+        .textReveal
+          .text
+            .admission-btn.d-flex.justify-content-center
+              button.btn.border-btn
+                span Book
+                svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                  rect(fill='none' height='24' width='24')
+                  path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
 
-    .basic-slider__controls.slider-controls.container
-      .slider-controls__row
-        .basic-slider__dots.fantom-slider__dots
-        .basic-slider__nav.fantom-slider__nav
-          button.basic-controls__prev.fantom-controls__prev.basic-slider__arrow
-            i.icon-chevron-left
-          button.basic-controls__next.fantom-controls__next.basic-slider__arrow
-            i.icon-chevron-right
-
-  section.promotions
-    .container
       .row
-        .col-lg-12
-          .promotions-inner
-            .promotions-inner__header
-              h3.text-48.proba-family.products-title Акції
-            .promotions-inner__card.promotions-card
-              .promotions-card__text
-                .promotions-card__text-inner(data-aos="fade-right")
-                  .promotions-card__text-description Рушай за мрією разом з Celeste Trade
-                  .promotions-card__text-duration Aкція діє з 01.07-31.12
-                  .promotions-card__text-icon
-                    img(src="./img/arrow.svg", alt="")
-              .promotions-card__img
-                .promotions-card__img__inner
-                  img(src="./img/promotions/promotion1.png", alt="Изображение акции")
-                  .promtions-card__title Світ без меж
-        .col-lg-12
-          .promotions-inner
-            .promotions-inner__card.promotions-card.promotions-card-reverse
-              .promotions-card__text
-                .promotions-card__text-inner(data-aos="fade-left")
-                  .promotions-card__text-description Рушай за мрією разом з Celeste Trade
-                  .promotions-card__text-duration Aкція діє з 01.07-31.12
-                  .promotions-card__text-icon
-                    img(src="./img/arrow.svg", alt="")
-              .promotions-card__img
-                .promotions-card__img__inner
-                  img(src="./img/promotions/promotion2.png", alt="Изображение акции")
-                  .promtions-card__title Чорна п'ятниця
+        .col-lg-6.col-md-8.offset-md-2.offset-lg-1
+          .overflow-hidden
+            .admission-img.reveal
+              img(src="./img/bucket.jpg", alt="")
+        .col-lg-5.col-md-8.offset-md-2.offset-lg-0
+          .admission-info
+            .overflow-hidden
+              .textReveal
+                p.text Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                p.pb-2.text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi.
+            .textReveal
+              button.btn.border-btn.text
+                span View virtual tour
+                svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                  rect(fill='none' height='24' width='24')
+                  path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
 
-  section.about-us
-    .container
+  section.experience#experience
+    .container.container-about
+      .overflow-hidden
+        .textReveal
+          .text
+            h2.section-title.text-center.text-family-silk Experience
+    .container-fluid.container-slider
       .row
-        .col-lg-6.col-md-7
-          .about-us__description
-            h3.text-48.proba-family.products-title Про нас
-            .about-us__text
-              p.text-18 Компанія
-                strong  Celeste Trade
-                |  - дистриб'ютор європейської дверної фурнітури в  Україні.
-              p.text-18 Ми працюємо з сотнями партнерів по всій країні та входимо у ТОП постачальників дверної фурнітури в сегменті medium+ та vip.
-              p.text-18 Наша мета - створюючи успішний бізнес, покращувати життя навколо себе: відкриваючи нові можливості; створюючи гармонійні відносини з командою, партнерами, споживачами; надаючи найкращий сервіс та кращий продукт за чесною ціною.
-              p.text-18 Ми планомірно працюємо в цьому напрямку, вже понад 13 років пропонуючи високоякісну, стильну і сучасну фурнітуру провідних європейських виробників на ринку України
-            a(href="about.html").btn.btn-accent Узнать больше
-        .col-lg-6.col-md-5
-          .about-us__img
-            img(src="./img/about-us.png", alt="")
+        .col-lg-5
+          .slider-info
+            .overflow-hidden
+              .textReveal
+                .text
+                  p.pb-2 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  .textReveal
+                    button.btn.border-btn.text
+                      span Learn more
+                      svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                        rect(fill='none' height='24' width='24')
+                        path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
 
-  section.steps.bg-grey
+        .big-slider__wrapper
+          .exprience-slider.big-slider
+            .big-slider__item
+              .reveal
+                .admission-img.pr-0
+                  img(src="./img/hamam.jpg", alt="Hamam image")
+              .big-slider__text
+                h3.big-slider__item-title Hamam
+            .big-slider__item
+              img(src="./img/girl.jpg", alt="Hamam image")
+              .big-slider__text
+                h3.big-slider__item-title Girl
+            .big-slider__item
+              img(src="./img/hamam.jpg", alt="Hamam image")
+              .big-slider__text
+                h3.big-slider__item-title Hamam
+            .big-slider__item
+              img(src="./img/girl.jpg", alt="Hamam image")
+              .big-slider__text
+                h3.big-slider__item-title Something
+            .big-slider__item
+              img(src="./img/hamam.jpg", alt="Hamam image")
+              .big-slider__text
+                h3.big-slider__item-title Hamam
+
+  section.map-floor
     .container
-      h3.text-48.proba-family.products-title Етапи співпраці
-      .steps-row
-        .steps-col
-          .steps-card
-            .card-icon.steps-card__icon.card__icon-1(data-aos="rotate-anim")
-              img(src="./img/steps/friendship.svg", alt="")
-            .steps-card__body
-              .steps-card__number
-                span 1
-              .steps-card__text.text-18 Обговорюємо з вами умови роботи та домовляємося про партнерство
-        .steps-col
-          .steps-card
-            .card-icon.steps-card__icon.card__icon-2(data-aos="rotate-anim")
-              img(src="./img/steps/badges.svg", alt="")
-            .steps-card__body
-              .steps-card__number
-                span 2
-              .steps-card__text.text-18 Надаємо вам зразки та рекламні матеріали для успішного продажу
-        .steps-col
-          .steps-card
-            .card-icon.steps-card__icon.card__icon-3(data-aos="rotate-anim")
-              img(src="./img/steps/person.svg", alt="")
-            .steps-card__body
-              .steps-card__number
-                span 3
-              .steps-card__text.text-18 Навчаємо ваш персонал роботі з продуктом
-        .steps-col
-          .steps-card
-            .card-icon.steps-card__icon.card__icon-4(data-aos="rotate-anim")
-              img(src="./img/steps/callcenter.svg", alt="")
-            .steps-card__body
-              .steps-card__number
-                span 4
-              .steps-card__text.text-18 Консультуємо Вас на всіх етапах оформлення замовлення
-        .steps-col
-          .steps-card
-            .card-icon.steps-card__icon.card__icon-5(data-aos="rotate-anim")
-              img(src="./img/steps/shield.svg", alt="")
-            .steps-card__body
-              .steps-card__number
-                span 5
-              .steps-card__text.text-18 Захищаємо вас від демпінгу та гарантуємо вашу вигоду від співпраці з нами
-        .steps-col
-          .steps-card
-            .card-icon.steps-card__icon.card__icon-6(data-aos="rotate-anim")
-              img(src="./img/steps/handshake.svg", alt="")
-            .steps-card__body
-              .steps-card__number
-                span 6
-              .steps-card__text.text-18 Підтримуємо вас з будь-якого питання
+      .overflow-hidden
+        .reveal
+          .admission-img.pr-0
+            img(src="./img/map.jpg", alt="")
 
-  include ./partials/form-section
+
+  section.girl.trigger
+    .overflow-hidden
+      .reveal
+        .admission-img.pr-0
+          img(src="./img/girl.jpg", alt="Photo of girl")
+  section.spa-treatments#spa
+    .container.spa-container
+      .spa-treatments__header
+        .overflow-hidden
+          .textReveal
+            .text
+              h3.section-title Spa Treatments
+        .textReveal
+          .text
+            button.btn.border-btn
+              span View all treatments
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+    .spa-slider
+      .spa-slider__item
+        .spa-slider__card
+          .spa-slider__card-img
+            .reveal
+              .admission-img.pr-0
+                img(src="./img/treatment1.jpg", alt="Treatment")
+          .spa-slider__card-info
+            h5.spa-slider__card-title.text-family-silk Body Massages
+            button.btn.btn-learn
+              span Learn more
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+            button.btn.border-btn
+              span Book
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+      .spa-slider__item
+        .spa-slider__card
+          .spa-slider__card-img
+            .reveal
+              .admission-img.pr-0
+                img(src="./img/treatment2.png", alt="Treatment")
+          .spa-slider__card-info
+            h5.spa-slider__card-title.text-family-silk Spa Journeys
+            button.btn.btn-learn
+              span Learn more
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+            button.btn.border-btn
+              span Book
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+      .spa-slider__item
+        .spa-slider__card
+          .spa-slider__card-img
+            .reveal
+              .admission-img.pr-0
+                img(src="./img/treatment3.png", alt="Treatment")
+          .spa-slider__card-info
+            h5.spa-slider__card-title.text-family-silk Spa Journeys
+            button.btn.btn-learn
+              span Learn more
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+            button.btn.border-btn
+              span Book
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+      .spa-slider__item
+        .spa-slider__card
+          .spa-slider__card-img
+            .reveal
+              .admission-img.pr-0
+                img(src="./img/treatment2.png", alt="Treatment")
+          .spa-slider__card-info
+            h5.spa-slider__card-title.text-family-silk Body Massages
+            button.btn.btn-learn
+              span Learn more
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+            button.btn.border-btn
+              span Book
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+      .spa-slider__item
+        .spa-slider__card
+          .spa-slider__card-img
+            .reveal
+              .admission-img.pr-0
+                img(src="./img/treatment3.png", alt="Treatment")
+          .spa-slider__card-info
+            h5.spa-slider__card-title.text-family-silk Spa Journeys
+            button.btn.btn-learn
+              span Learn more
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+            button.btn.border-btn
+              span Book
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+      .spa-slider__item
+        .spa-slider__card
+          .spa-slider__card-img
+            .reveal
+              .admission-img.pr-0
+                img(src="./img/treatment1.jpg", alt="Treatment")
+          .spa-slider__card-info
+            h5.spa-slider__card-title.text-family-silk Spa Journeys
+            button.btn.btn-learn
+              span Learn more
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+            button.btn.border-btn
+              span Book
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+
+  section.experience.dining#dining
+    .container-dining
+      .overflow-hidden
+        .textReveal
+          .text
+            h2.section-title.text-family-silk Dining at World Spa
+
+      .dining-slider
+        .dining-slider__item
+          .dining-slider__info.admission-info.pl-2
+            .overflow-hidden
+              .textReveal
+                .text
+                  p.pb-2 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .textReveal
+              .text.d-flex.flex-column
+                button.btn.btn-learn.pl-0.text-left.justify-content-start.mb-4
+                  span Learn more
+                  svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                    rect(fill='none' height='24' width='24')
+                    path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+                button.btn.border-btn
+                  span Reserve
+                  svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                    rect(fill='none' height='24' width='24')
+                    path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+          .dining-slider__img
+            .reveal
+              .admission-img.pr-0
+                img(src="./img/food.jpg", alt="")
+            .big-slider__text
+              h3.big-slider__item-title Ren Restaurant
+        .dining-slider__item
+          .dining-slider__info.admission-info.pl-2
+            .overflow-hidden
+              .textReveal
+                .text
+                  p.pb-2 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .textReveal
+              .text.d-flex.flex-column
+                button.btn.btn-learn.pl-0.text-left.justify-content-start.mb-4
+                  span Learn more
+                  svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                    rect(fill='none' height='24' width='24')
+                    path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+                button.btn.border-btn
+                  span Reserve
+                  svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                    rect(fill='none' height='24' width='24')
+                    path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+          .dining-slider__img
+            img(src="./img/girl.jpg", alt="")
+            .big-slider__text
+              h3.big-slider__item-title WorldSpa Lounge
+        .dining-slider__item
+          .dining-slider__info.admission-info.pl-2
+            .overflow-hidden
+              .textReveal
+                .text
+                  p.pb-2 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .textReveal
+              .text.d-flex.flex-column
+                button.btn.btn-learn.pl-0.text-left.justify-content-start.mb-4
+                  span Learn more
+                  svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                    rect(fill='none' height='24' width='24')
+                    path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+                button.btn.border-btn
+                  span Reserve
+                  svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                    rect(fill='none' height='24' width='24')
+                    path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+          .dining-slider__img
+            img(src="./img/food.jpg", alt="")
+            .big-slider__text
+              h3.big-slider__item-title Ren Restaurant
+
+
+  section.member#member
+    .container.container-member
+      .row
+        .col-lg-5.col-md-8.offset-md-2.offset-lg-1
+          .overflow-hidden
+            .reveal
+              .member-info__img.admission-img
+                img(src="./img/girls.jpg", alt="Girls in hamam photo")
+        .col-lg-5.col-md-8.offset-md-2.offset-lg-0
+          .member-info
+            .overflow-hidden
+              .textReveal
+                .text
+                  p.member-info__text
+                    a(href="#") Become a member
+                    br
+                    | to experience all the privileges and open up a whole new world of relaxation.
+            .textReveal
+              .text
+                button.btn.border-btn
+                  span Join now
+                  svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                    rect(fill='none' height='24' width='24')
+                    path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+
+  section.shop#shop
+    .container.container-shop
+      .shop-header
+        .overflow-hidden
+          .textReveal
+            .text
+              h2.section-title.text-family-silk Gift Shop
+        .textReveal
+          .text
+            button.btn.border-btn
+              span View all
+              svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                rect(fill='none' height='24' width='24')
+                path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+
+      .row
+        .col-lg-3.col-6
+          .overflow-hidden
+            .textReveal.pl-2
+              .text
+                .shop-card
+                  a.shop-card__img(href="#")
+                    img(src="./img/gift1.png", alt="Shop product")
+                  .shop-card__body
+                    .shop-card__title Item Name 1
+
+                    button.btn.btn-learn.pl-0
+                      span Learn more
+                      svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                        rect(fill='none' height='24' width='24')
+                        path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+        .col-lg-3.col-6
+          .overflow-hidden
+            .textReveal.pl-2
+              .text
+                .shop-card
+                  a.shop-card__img(href="#")
+                    img(src="./img/gift2.png", alt="Shop product")
+                  .shop-card__body
+                    .shop-card__title Item Name 2
+
+                    button.btn.btn-learn.pl-0
+                      span Learn more
+                      svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                        rect(fill='none' height='24' width='24')
+                        path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+        .col-lg-3.col-6
+          .overflow-hidden
+            .textReveal.pl-2
+              .text
+                .shop-card
+                  a.shop-card__img(href="#")
+                    img(src="./img/gift3.png", alt="Shop product")
+                  .shop-card__body
+                    .shop-card__title Item Name 3
+
+                    button.btn.btn-learn.pl-0
+                      span Learn more
+                      svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                        rect(fill='none' height='24' width='24')
+                        path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+        .col-lg-3.col-6
+          .overflow-hidden
+            .textReveal.pl-2
+              .text
+                .shop-card
+                  a.shop-card__img(href="#")
+                    img(src="./img/gift4.png", alt="Shop product")
+                  .shop-card__body
+                    .shop-card__title Item Name 4
+
+                    button.btn.btn-learn.pl-0
+                      span Learn more
+                      svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+                        rect(fill='none' height='24' width='24')
+                        path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
 

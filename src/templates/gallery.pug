@@ -1,0 +1,21 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'World Spa - About - Gallery'
+	-var whatPage = 'Gallery'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	section.hero-section
+		.gallery-slider
+			.gallery-slider-item
+				img(src="./img/hero-bg.jpg" alt="")
+			.gallery-slider-item
+				img(src="./img/admissions/admissions-hero.png" alt="")
+

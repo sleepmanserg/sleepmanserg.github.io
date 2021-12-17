@@ -1,90 +1,90 @@
 //
 // Scaffolding
 // --------------------------------------------------
-html * {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-html {
-  height: -webkit-fill-available;
-}
+// html * {
+//   text-rendering: optimizeLegibility;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
 
 body {
-  background-color: #fff;
-  font-family: $font-family-helvetica;
-  font-weight: 400;
-  line-height: 1;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  display: flex;
-  flex-direction: column;
+  background-color: $beige;
+  color: $black-text;
+  overflow-x: hidden;
 }
 
-.main-wrapper {
-  flex: 1;
-  padding-top: 108px;
-  background: $grey-light-clr;
-  @media (max-width: 991px) {
-    padding-top: 56px;
+.is-loading {
+  // overflow: hidden;
+}
+
+.modal-open {
+  // overflow: hidden !important;
+  .header {
+    // padding-right: 15px !important;
   }
 }
 
-.btn:focus {
-  box-shadow: none !important;
+main {
+  overflow-x: hidden;
+}
+.overflow-hidden {
+  overflow: hidden;
 }
 
 img { width: 100%;}
 
 svg { display: block;}
 
-.overflow-hidden {
-  position:relative;
-  overflow:hidden;
-  touch-action: none;
-  -ms-touch-action: none;
-  .main-wrapper {
-    overflow: hidden;
-  }
+.container-custom {
+  max-width: 1170px;
 }
 
-@media (max-width: 1309px) {
-  .container {
-    max-width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-}
-
-.site-backdrop {
-  position: fixed;
-  width: 100%;
+.container-header {
+  max-width: 1295px;
   height: 100%;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .35s ease;
-  cursor: pointer;
-  &.active {
-    opacity: .6;
-    visibility: visible;
-    transition: opacity .35s ease;
-    background: rgba(169, 169, 169, 0.7);
-    z-index: 98;
-  }
 }
 
-
-.backdrop {
-  .site-backdrop {
-    opacity: .6;
-    visibility: visible;
-    transition: opacity .35s ease;
-    background: rgba(169, 169, 169, 0.7);
-    z-index: 98;
-  }
+.container-about {
+  max-width: 1030px;
 }
 
+.container-member {
+  max-width: 1440px;
+}
 
+.container-shop {
+  max-width: 1350px;
+}
+
+.container-dining {
+  max-width: 1250px;
+  padding: 0 10px;
+  padding-right: 0;
+  margin-left: auto;
+}
+
+.container-booking {
+  max-width: 1200px;
+}
+
+// @media (max-width: 1100px) {
+//   .site-backdrop {
+//     position: fixed;
+//     width: 100%;
+//     height: 100%;
+//     left: 0;
+//     top: 0;
+//     opacity: 0;
+//     visibility: hidden;
+//     transition: opacity 0.15s ease-in;
+//     cursor: pointer;
+//   }
+
+//   .site-backdrop.active {
+//     opacity: .6;
+//     visibility: visible;
+//     transition: opacity 0.15s ease-in;
+//     background-color: #333;
+//     z-index: 1;
+//   }
+// }

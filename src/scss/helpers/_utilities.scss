@@ -2,43 +2,112 @@
 // Utilities
 // --------------------------------------------------
 
-.helvetica-family { font-family: $font-family-helvetica;}
-.proba-family { font-family: $font-family-proba;}
+.text-family-silk {
+  font-family: $font-family-silk;
+}
+
+.text-family-basis {
+  font-family: $font-family-basis;
+}
+
+.text-dark {
+  color: $black-text;
+}
 
 .text-thin { font-weight: 300;}
 .text-normal { font-weight: 500;}
 .text-semi-bold { font-weight: 600;}
 .text-bold { font-weight: bold;}
 
-.text-dark { color: $black-clr;}
-.text-accent{ color: $accent-clr; }
-
-.text-sm {
-  font-weight: 300;
-  font-size: 21px;
-  line-height: 1.43;
-  letter-spacing: -0.4px;
+.text-13 {
+  font-size: 13px !important;
 }
 
-.text-lead {
-  font-size: 53px;
-  font-weight: 500;
-  line-height: 1.1;
+.text-30 {
+  font-size: 30px;
+  line-height: 38px;
 }
-.text-lg { font-size: 24px;}
+
+.text-underline {
+  position: relative;
+  width: 0;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $black;
+    // transition: 1s ease;
+    // transition-delay: 1s;
+  }
+}
+.text-underline-spa {
+  position: relative;
+  width: 0;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $black;
+  }
+}
+
+.section-title {
+  font-size: 64px;
+  font-family: $font-family-silk;
+  color: $black-text;
+  @media (max-width: 767px) {
+    font-size: 44px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1025px) {
+  .pb-lg-10 {
+    padding-bottom: 100px !important;
+  }
+
+  .pt-lg-9 {
+    padding-top: 90px !important;
+  }
+}
+
+.pl-180 {
+  padding-left: 180px !important;
+}
+.pt-110 {
+  padding-top: 110px;
+}
+
+.pt-85 {
+  padding-top: 85px;
+}
+
+.pb-80 {
+  padding-bottom: 80px;
+}
+
+.mw-430 {
+  max-width: 430px;
+}
+
+.mw-630 {
+  max-width: 630px;
+}
+
+.mw-415 {
+  max-width: 415px;
+}
+
+.mw-555 {
+  max-width: 555px;
+}
 
 @media (max-width: $tablet-port) {
   .mobile-mt-0 { margin-top: 0 !important;}
-}
-
-.bg-grey {
-  background-color: $grey-light-clr;
-}
-
-.bg-black {
-  background-color: $black-clr;
-}
-
-.pt-38 {
-  padding-top: 38px;
 }

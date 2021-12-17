@@ -1,108 +1,13 @@
-// Font Import
-// --------------------------------------------------
 @font-face {
-	font-family: 'Helvetica', sans-serif;
-	src: 	local('Helvetica Regular'), local('helvetica_regular'),
-				url('../fonts/Helvetica/helvetica_regular.woff2') format('woff2');
+	font-family: 'Silk Serif';
+	src: local('Silk Serif Light'), local('Silk-Serif-Light'),
+			url('../fonts/SilkSerif-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Basis Grotesque';
+	src: url('../fonts/basis-grotesque.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
-}
-@font-face {
-	font-family: 'Helvetica', sans-serif;
-	src: local('Helvetica Bold'), local('helvetica_bold'),
-				url('../fonts/Helvetica/helvetica_bold.woff2') format('woff2');
-	font-weight: bold;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Proba Pro';
-	src: local('ProbaPro Bold'), local('Proba-Pro-Bold'),
-			url('../fonts/Proba/ProbaPro-Bold.woff2') format('woff2');
-	font-weight: 700;
-	font-style: normal;
-}
-
-@font-face {
-  font-family: 'icomoon';
-  src:
-    url('../fonts/icon-font/icomoon.ttf?lt38un') format('truetype'),
-    url('../fonts/icon-font/icomoon.woff?lt38un') format('woff'),
-    url('../fonts/icon-font/icomoon.svg?lt38un#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-chevron-down-sm:before {
-  content: "\e912";
-}
-.icon-clear:before {
-  content: "\e911";
-}
-.icon-filter:before {
-  content: "\e90d";
-}
-.icon-reverse:before {
-  content: "\e910";
-}
-.icon-check:before {
-  content: "\e908";
-}
-.icon-clock:before {
-  content: "\e909";
-}
-.icon-close:before {
-  content: "\e90a";
-}
-.icon-created:before {
-  content: "\e90b";
-}
-.icon-list:before {
-  content: "\e90c";
-}
-.icon-plane:before {
-  content: "\e90e";
-}
-.icon-truck:before {
-  content: "\e90f";
-}
-.icon-eye:before {
-  content: "\e907";
-}
-.icon-chevron-right:before {
-  content: "\e900";
-}
-.icon-chevron-left:before {
-  content: "\e901";
-}
-.icon-login:before {
-  content: "\e902";
-}
-.icon-chevron-down:before {
-  content: "\e903";
-}
-.icon-flag:before {
-  content: "\e904";
-}
-.icon-youtube:before {
-  content: "\e905";
-}
-.icon-instagram:before {
-  content: "\e906";
 }

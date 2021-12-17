@@ -1,0 +1,72 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'World Spa - About - Hours and Directions'
+	-var whatPage = 'Hours and Directions'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	section.hero-section
+		img(src="./img/admissions/admissions-hero.png" alt="")
+
+	section.about.admissions.pb-lg-10.pb-5
+		.container.admissions-container
+			.row
+				.col-lg-6.pb-lg-10
+					.overflow-hidden
+						.textReveal
+							h1.about-title.text-family-silk.text.text-capitalize.admissions-title Hours &#38; Directions
+
+				.col-lg-6.pb-lg-10
+					.overflow-hidden
+						.textReveal
+							p.mw-555.mb-md-3 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+							.hours.mb-4
+								p.mb-0 Weekdays
+								p.mb-0 Saturday – Sundays
+								p.mb-0 00:00am – 00:00pm
+							.hours.mb-lg-4.mb-5
+								p.mb-0 Weekends
+								p.mb-0 Saturday – Sundays
+								p.mb-0 00:00am – 00:00pm
+				.col-lg-7
+					.overflow-hidden
+						.admission-img.reveal.px-0.pr-lg-5.mb-lg-0.mb-5
+							img(src="./img/map-img.png", alt="")
+				.col-lg-5
+					.textReveal
+						h2.text-family-silk.text.text-capitalize.mb-5 How to Get Here
+					.textReveal
+						p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					.textReveal
+						.footer-address.text-dark.mw-100
+							a(href="#").text-dark.text-bold 1571 McDonald Ave, Brooklyn, NY 11230
+
+					.textReveal
+						.text.d-flex.flex-column.mb-lg-2
+							button.btn.btn-learn.pl-0.text-left.justify-content-start.mb-4
+								span.text-bold Get Directions
+								svg(xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' height='24px' viewBox='0 0 24 24' width='24px' fill='#333333')
+									rect(fill='none' height='24' width='24')
+									path(d='M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z')
+					.textReveal
+						p.mb-0 Driving Directions
+						p.mb-4 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+
+						p.mb-0 MTA Subway
+						p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+
+
+
+
+				//- .col-12.pt-lg-9.pb-lg-10.pt-0.pb-5
+				//- 	.overflow-hidden
+				//- 		.admission-img.reveal
+				//- 			img(src="./img/parking-bg.png", alt="")

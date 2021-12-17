@@ -9,21 +9,62 @@ include ../helpers/mixins
 doctype html
 html(lang="en")
 
-  //- head.pug template
   include head
 
   // Body
-  body
+  body.content.is-loading
+    #preloader
+    .site-backdrop
     include mobileMenu
 
     include header
 
-    main.main-wrapper
+    main
       block content
-    .site-backdrop
+
+
+    // Booking Modal
+    #bookingModal.booking-modal.modal.fade(tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            h5#exampleModalLabel.modal-title.text-family-silk Make a Reservation
+            button.close(type='button' data-dismiss='modal' aria-label='Close')
+              span(aria-hidden='true')
+              span(aria-hidden='true')
+          .modal-body
+            .booking
+              .container.container-booking
+                .row
+                  .col-12.booking-col
+                    .booking__intro-title 1 Select one*
+                    .booking-services
+                      .booking-services__nav
+                        button.book-link(href="#")
+                          span Admissions
+                        .booking-services__dropdown-wrapper
+                          select#treatment
+                            option(value="hide") Treatment
+                            option(value="Body Massages") Body Massages
+                            option(value="Facials") Facials
+                            option(value="Body Scrubs") Body Scrubs
+                            option(value="Reflexology") Reflexology
+                            option(value="Couples") Couples
+                        .booking-services__dropdown-wrapper
+                          select#dining
+                            option(value="hide") Dining
+                            option(value="Ren Restaurant") Ren Restaurant
+                            option(value="WorldSpa Lounge") WorldSpa Lounge
+                            option(value="WorldSpa Club") WorldSpa Club
+                        button.book-link(href="#")
+                          span Become a member
+
+                    button.btn.btn-white(type="submit")
+                      span Reserve
     include footer
 
     // JavaScript (jQuery) libraries, plugins and custom scripts
+    //- script()&attributes(isNestedFile ? {'src': '../js/gsap.min.js'} : {'src': 'js/gsap.min.js'})
     script()&attributes(isNestedFile ? {'src': '../js/vendor.min.js'} : {'src': 'js/vendor.min.js'})
-    script()&attributes(isNestedFile ? {'src': '../js/custom-select.js'} : {'src': 'js/custom-select.js'})
+
     script()&attributes(isNestedFile ? {'src': '../js/scripts.min.js'} : {'src': 'js/scripts.min.js'})
