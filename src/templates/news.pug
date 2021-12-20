@@ -1,0 +1,129 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'Новини'
+	-var whatPage = 'News'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	.catalog
+		.container
+			ul.breadcrumbs
+				li.breadcrumbs-item
+					a(href="/") Головна
+				li.breadcrumbs-item
+					span Новини
+			.row.catalog-wrapper
+				.col-12
+					.catalog-products
+						.catalog-header.news-header
+							.catalog-header__title.news-header__title
+								h1.catalog-title.proba-family Новини
+								.news-header__filter(data__dropdown-parent)
+									button(type="button" data__dropdown).btn.news-btn
+										i.icon-filter
+										span Показати фільтри
+									.news-header__filter-dropdown
+										.sidebar-list
+											.sidebar-list__head Фільтри
+											.sidebar-list__body
+												ul.sidebar-filter.checkbox-filter
+													li.sidebar-filter__item
+														a(href="#").sidebar-checkbox.checkbox-filter__link
+															label.check.option
+																input(type="checkbox").check__input
+																span.check__box
+																span.check__text Розетка кругла
+													li.sidebar-filter__item
+														a(href="#").sidebar-checkbox.checkbox-filter__link
+															label.check.option
+																input(type="checkbox").check__input
+																span.check__box
+																span.check__text Розетка кругла
+													li.sidebar-filter__item
+														a(href="#").sidebar-checkbox.checkbox-filter__link
+															label.check.option
+																input(type="checkbox").check__input
+																span.check__box
+																span.check__text Розетка кругла
+													li.sidebar-filter__item
+														a(href="#").sidebar-checkbox.checkbox-filter__link
+															label.check.option
+																input(type="checkbox").check__input
+																span.check__box
+																span.check__text Розетка кругла
+													li.sidebar-filter__item
+														a(href="#").sidebar-checkbox.checkbox-filter__link
+															label.check.option
+																input(type="checkbox").check__input
+																span.check__box
+																span.check__text Розетка кругла
+													li.sidebar-filter__item
+														a(href="#").sidebar-checkbox.checkbox-filter__link
+															label.check.option
+																input(type="checkbox").check__input
+																span.check__box
+																span.check__text Розетка кругла
+													li.sidebar-filter__item
+														a(href="#").sidebar-checkbox.checkbox-filter__link
+															label.check.option
+																input(type="checkbox").check__input
+																span.check__box
+																span.check__text Розетка кругла
+													li.sidebar-filter__item
+														a(href="#").sidebar-checkbox.checkbox-filter__link
+															label.check.option
+																input(type="checkbox").check__input
+																span.check__box
+																span.check__text Розетка кругла
+								.news-header__archive
+									a(href="#").btn.news-btn
+										span Архів новин
+							.news-header__sorting.d-flex
+								.catalog-header__sorting
+									.catalog-sorting.pr-md-3.pr-sm-0
+										label(for="sorting").sorting-label Сортування:
+										select#sorting.select
+											option Тип сортування
+											option Ціна
+											option Ціна
+											option Ціна
+									.catalog-sorting.catalog-sorting-num
+										select#sortin-count.select
+											option 50
+											option 75
+											option 100
+											option 125
+
+						.catalog-tags
+							ul.catalog-tags__list
+								li.catalog-tags__item
+									a(href="#").catalog-tags__link
+										span.catalog-tags__name Розетка кругла
+										i.icon-close
+								li.catalog-tags__item
+									a(href="#").catalog-tags__link
+										span.catalog-tags__name Кноби
+										i.icon-close
+								li.catalog-tags__item
+									button(href="#").catalog-tags__link.catalog-tags__filter-reset
+										span.catalog-tags__name Очистити фільтри
+
+
+			.row.news-wrapper
+				.col-12
+					.news
+						include ./partials/news-card
+						include ./partials/news-card
+						include ./partials/news-card
+						include ./partials/news-card
+						include ./partials/news-card
+						include ./partials/news-card
+
+			include ./partials/pagination

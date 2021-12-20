@@ -24,4 +24,20 @@
 			background-color: darken($accent-clr, 5%);
 		}
 	}
+	&.news-btn {
+		border: 1px solid $input-grey;
+		border-radius: 4px;
+		padding: 0 17px;
+		span,
+		i {
+			pointer-events: none;
+		}
+		i {
+			margin-right: 15px;
+			font-size: 18px;
+		}
+		@include hover {
+			color: $accent-clr;
+		}
+	}
 }

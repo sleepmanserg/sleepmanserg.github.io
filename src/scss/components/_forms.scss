@@ -184,7 +184,7 @@
 		content: '\e900';
 		font-family: 'icomoon';
 		position: absolute;
-		right: 17px;
+		right: 25px;
 		top: 50%;
 		transform: translateY(-50%) rotate(90deg);
 		color: $grey-lighter-clr;
@@ -194,6 +194,16 @@
 		font-size: 14px;
 		line-height: 1;
 		margin-right: 17px;
+	}
+	&.catalog-sorting-num {
+		max-width: 70px;
+		select {
+			min-width: auto;
+			padding-right: 38px;
+		}
+		&::after {
+			right: 0px;
+		}
 	}
 }
 

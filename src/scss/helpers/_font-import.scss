@@ -49,6 +49,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-facebook:before {
+  content: "\e913";
+}
 .icon-chevron-down-sm:before {
   content: "\e912";
 }

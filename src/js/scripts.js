@@ -7,6 +7,7 @@ $(document).ready(function () {
 				theme.toggler();
 				theme.menuHeight();
 				theme.addRemoveActive();
+				theme.dropdownClick();
 				theme.subMenu();
 				theme.heroSLider();
 				theme.fantomSLider();
@@ -121,6 +122,22 @@ $(document).ready(function () {
 						item.classList.remove('active');
 						document.querySelector('body').classList.toggle('overflow-hidden');
 						document.querySelector('body').classList.toggle('backdrop');
+					});
+				});
+			},
+
+			dropdownClick: () => {
+				document.addEventListener('click', e => {
+					const isTargetButton = e.target.matches('[data__dropdown]');
+					if (!isTargetButton && e.target.closest('[data__dropdown-parent]') != null) return;
+					let currentTarget;
+					if (isTargetButton) {
+						currentTarget = e.target.closest('[data__dropdown-parent]');
+						currentTarget.classList.toggle('active');
+					}
+					document.querySelectorAll('[data__dropdown-parent].active').forEach(item => {
+						if (item == currentTarget) return;
+						item.classList.remove('active');
 					});
 				});
 			},
