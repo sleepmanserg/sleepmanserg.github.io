@@ -610,6 +610,9 @@
 				min-height: -webkit-fill-available;
 				display: flex;
 				flex-direction: column;
+				@media (max-width: 575px) {
+					min-height: calc(100vh - 160px);
+				}
 			}
 			.header-login__body {
 				flex: 1;

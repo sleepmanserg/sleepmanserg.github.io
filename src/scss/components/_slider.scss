@@ -184,6 +184,9 @@
 		position: relative;
 		padding-bottom: 41px;
 		transition: .35s;
+		@media (max-width: 575px) {
+			font-size: 30px;
+		}
 		@include hover {
 			color: $accent-clr;
 		}

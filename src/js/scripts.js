@@ -27,6 +27,7 @@ $(document).ready(function () {
 				theme.checkboxCheck();
 				theme.productCardSelect();
 				theme.stickyHeader();
+				theme.phoneMask();
 			},
 
 			/** Sticky header on scroll */
@@ -591,6 +592,10 @@ $(document).ready(function () {
 					theme: "select-dropdown",
 				});
 
+			},
+
+			phoneMask: () => {
+				$('.phone-input').inputmask({"mask": "+38 (999) 999-99-99"});
 			},
 
 		}

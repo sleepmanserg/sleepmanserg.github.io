@@ -222,11 +222,17 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -35px;
+    .slick-list {
+      outline: none !important;
+      box-shadow: none !important;
+    }
   }
   .steps-col {
     flex: 0 0 33.3333%;
     padding: 0 35px;
     margin-bottom: 70px;
+    outline: none !important;
+    box-shadow: none !important;
   }
   .steps-card {
     background-color: $grey-darker-clr;
@@ -272,6 +278,9 @@
       border-radius: 4px;
       font-size: 14px;
       font-weight: 700;
+      @media (max-width: 480px) {
+        line-height: 1;
+      }
     }
   }
   .steps-card__text {
