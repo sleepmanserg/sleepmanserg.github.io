@@ -220,9 +220,17 @@
 
 .brands-header__search {
 	margin-right: 1rem;
+	@media (max-width: 767px) {
+		margin-right: 0;
+	}
 	.input-group {
 		border: 1px solid $grey-superlight-clr;
 		border-radius: 4px;
+		background-color: $white-clr;
+		flex-wrap: nowrap;
+		@media (max-width: 767px) {
+			width: 100%;
+		}
 	}
 	.brand-search {
 		border: none;
@@ -230,12 +238,15 @@
 		padding: 0 16px;
 		height: 44px;
 		&::placeholder {
-			color: #c4c4c4;
+			color: $black-lighter-clr;
 			font-size: 14px;
 		}
 		&:focus {
 			outline: none;
 			box-shadow: none;
+		}
+		@media (max-width: 767px) {
+			width: calc(100% - 81px);
 		}
 	}
 	.brand-search-btn {
