@@ -157,7 +157,9 @@ gulp.task('concat:js', () => {
 
 gulp.task('move:js', () => {
   return gulp.src([
-      path.src_js_vendor + '/modernizr-custom.js'
+      path.src_js_vendor + '/modernizr-custom.js',
+      path.src_js + '/select2.js',
+      path.src_js + '/scripts.js',
     ])
     .pipe(gulp.dest(path.dist_js));
 });
