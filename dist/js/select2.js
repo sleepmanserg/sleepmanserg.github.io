@@ -1,102 +1,128 @@
-/** Селект цвета */
-function formatStateColor(state) {
+let stateOutput;
+
+/** Селект тип цилиндра */
+function formatStateType(state) {
 	if (!state.id) {
 		return state.text;
 	}
-	var baseUrl = "img/card-colors";
-	var $stateImg = $(
-		'<div class="card-color-img"><span class="state-title">Цвет</span><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
-	);
-	$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
-	return $stateImg;
+	let baseUrl;
+	baseUrl = "img/card-colors";
+
+	stateOutput = $(`
+		<ul class="card-select-list">
+			<li class="state-title">Тип циліндра</li>
+			<li class="state-img-wrapper">
+				<img class="img-flag" src="${ baseUrl } + '/' + ${state.element.value.toLowerCase()} + '.png'" />
+				<span class="state-text">${state.text}</span>
+			</li>
+		</ul>
+	`);
+
+	stateOutput.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
+	return stateOutput;
 };
 
-function formatStateColorInner(state) {
+function formatStateTypeInner(state) {
 	if (!state.id) {
 		return state.text;
 	}
-	var baseUrl = "img/card-colors";
-	var $stateImg = $(
-		'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наявності</span>' + '</div>' + '</div>'
-	);
-	$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
-	return $stateImg;
+	let baseUrl;
+	baseUrl = "img/card-colors";
+	stateOutput = $(`
+		<ul class="card-select-list card-select-list__type">
+			<li class="state-img-wrapper">
+				<img class="img-flag" src="${ baseUrl } + '/' + ${state.element.value.toLowerCase()} + '.png'" />
+				<span class="state-text">${state.text}</span>
+				<span class="product-availability__stock product-availability__status">${ $(state.element).attr("data-text") }</span>
+			</li>
+		</ul>
+	`);
+	stateOutput.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
+	return stateOutput;
 };
 
-/** Селект цвета */
+/** Селект тип цилиндра */
 
 /** Селект Покрытия */
-function formatStateCover(state) {
+function formatStateLength(state) {
 	if (!state.id) {
 		return state.text;
 	}
-	var baseUrl = "img/card-colors";
-	var $stateImg = $(
-		'<div class="card-color-img"><span class="state-title">Покрытие</span><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
-	);
-	$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
-	return $stateImg;
+	stateOutput = $(`
+		<ul class="card-select-list">
+			<li class="state-title">Довжина</li>
+			<li class="state-img-wrapper">
+				<span class="state-text">${state.text}</span>
+			</li>
+		</ul>
+	`);
+	return stateOutput;
 };
 
-function formatStateCoverInner(state) {
+function formatStateLengthInner(state) {
 	if (!state.id) {
 		return state.text;
 	}
-	var baseUrl = "img/card-colors";
-	var $stateImg = $(
-		'<div class="card-color-img"><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
-	);
-	var $stateImg = $(
-		'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наявності</span>' + '</div>' + '</div>'
-	);
-	return $stateImg;
+	stateOutput = $(`
+		<ul class="card-select-list">
+			<li class="state-img-wrapper">
+				<span class="state-text">${state.text}</span>
+			</li>
+			<li class="product-availability__stock product-availability__status">${ $(state.element).attr("data-text") }</li>
+		</ul>
+	`);
+	return stateOutput;
 };
 /** Селект Покрытия */
 
-/** Селект Комплектация */
-function formatStateEquip(state) {
+/** Селект Симметрия */
+function formatStateSymmetry(state) {
 	if (!state.id) {
 		return state.text;
 	}
-	var baseUrl = "img/card-colors";
-	var $stateImg = $(
-		'<div class="card-color-img"><span class="state-title">Комплектация</span><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
-		);
-	$stateImg.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".png");
-	return $stateImg;
+	stateOutput = $(`
+		<ul class="card-select-list">
+			<li class="state-title">Симетрія</li>
+			<li class="state-img-wrapper">
+				<span class="state-text">${state.text}</span>
+			</li>
+		</ul>
+	`);
+	return stateOutput;
 };
 
-function formatStateEquipInner(state) {
+function formatStateSymmetryInner(state) {
 	if (!state.id) {
 		return state.text;
 	}
-	var baseUrl = "img/card-colors";
-	var $stateImg = $(
-		'<div class="card-color-img"><div class="state-img-wrapper"><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span></div>' + '<i class="icon-chevron-down-sm">' + '</i>' + '</div>'
-	);
-	var $stateImg = $(
-		'<div class="card-color-img"><div><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + '<span class="state-text">' + state.text + '</span>' + '</div>' + '<div class="product-availability__stock product-availability__status">' + '<span>В наявності</span>' + '</div>' + '</div>'
-	);
-	return $stateImg;
+	stateOutput = $(`
+		<ul class="card-select-list">
+			<li class="state-img-wrapper">
+				<span class="state-text">${state.text}</span>
+			</li>
+			<li class="product-availability__stock product-availability__status">${ $(state.element).attr("data-text") }</li>
+		</ul>
+	`);
+	return stateOutput;
 };
-/** Селект Комплектация */
+/** Селект Симметрия */
 
-$('.select-color').select2({
+$('.select-cylinder-type').select2({
 	minimumResultsForSearch: -1,
-	templateResult: formatStateColorInner,
-	templateSelection: formatStateColor,
+	templateResult: formatStateTypeInner,
+	templateSelection: formatStateType,
 	theme: "select-dropdown",
 });
-$('.select-cover').select2({
+$('.select-length').select2({
 	minimumResultsForSearch: -1,
-	templateResult: formatStateCoverInner,
-	templateSelection: formatStateCover,
+	templateResult: formatStateLengthInner,
+	templateSelection: formatStateLength,
 	theme: "select-dropdown",
 });
-$('.select-equipment').select2({
+$('.select-symmetry').select2({
 	minimumResultsForSearch: -1,
-	templateResult: formatStateEquipInner,
-	templateSelection: formatStateEquip,
+	templateResult: formatStateSymmetryInner,
+	templateSelection: formatStateSymmetry,
 	theme: "select-dropdown",
 });
 

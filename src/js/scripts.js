@@ -28,6 +28,7 @@ $(document).ready(function () {
 				// theme.productCardSelect();
 				theme.stickyHeader();
 				theme.phoneMask();
+				theme.partnersSlider();
 			},
 
 			/** Sticky header on scroll */
@@ -468,15 +469,38 @@ $(document).ready(function () {
 				});
 				$('.product-slider__thumbs').slick({
 					slidesToShow: 6,
-					slidesToScroll: 1,
+					slidesToScroll: 3,
 					asNavFor: '.product-slider',
 					dots: false,
 					arrows: false,
 					focusOnSelect: true,
 					// centerMode: true,
 					// centerPadding: 0,
-					draggable: false
+					// draggable: false,
+					responsive: [
+						{
+							breakpoint: 600,
+							settings: {
+								slidesToShow: 7,
+								slidesToScroll: 3,
+								infinite: true,
+								arrows: false,
+								dots: false
+							}
+						},
+						{
+							breakpoint: 420,
+							settings: {
+								slidesToShow: 6,
+								slidesToScroll: 3,
+								infinite: true,
+								arrows: false,
+								dots: false
+							}
+						},
+					]
 				});
+
 			},
 
 			/** Product card zoom */
@@ -491,6 +515,20 @@ $(document).ready(function () {
 
 			phoneMask: () => {
 				$('.phone-input').inputmask({"mask": "+38 (999) 999-99-99"});
+			},
+
+			partnersSlider: () => {
+				$('.partners-slider').slick({
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					arrows: true,
+					dots: false,
+					prevArrow: $('.partners-prev .parnters-arrow__btn'),
+					nextArrow: $('.partners-next .parnters-arrow__btn'),
+					centerMode: true,
+					centerPadding: '0%'
+					variableWidth: true,
+				});
 			},
 
 		}

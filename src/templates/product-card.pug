@@ -28,9 +28,9 @@ block content
 					.product-slider-wrapper
 						.product-slider
 							.product-slider__item.img-zoom
-								img(src="./img/product-thumbs/1.png", alt="")
+								img(src="./img/product-thumbs/10.png", alt="")
 							.product-slider__item.img-zoom
-								img(src="./img/product-thumbs/2.png", alt="")
+								img(src="./img/product-thumbs/11.png", alt="")
 							.product-slider__item.img-zoom
 								img(src="./img/product-thumbs/3.png", alt="")
 							.product-slider__item.img-zoom
@@ -47,9 +47,9 @@ block content
 								img(src="./img/product-thumbs/9.png", alt="")
 						.product-slider__thumbs
 							.product-slider__thumbs-item
-								img(src="./img/product-thumbs/1.png", alt="")
+								img(src="./img/product-thumbs/10.png", alt="")
 							.product-slider__thumbs-item
-								img(src="./img/product-thumbs/2.png", alt="")
+								img(src="./img/product-thumbs/11.png", alt="")
 							.product-slider__thumbs-item
 								img(src="./img/product-thumbs/3.png", alt="")
 							.product-slider__thumbs-item
@@ -67,9 +67,9 @@ block content
 
 				.product-card__right
 					.product-card__about
-						.product-card__about-header(data-da=".product-card__row,767,first")
-							p.product-card__title Ручка дверна
-								span  DND Quattro
+						.product-card__about-header(data-da=".product-card__row,1024,first")
+							p.product-card__title Циліндр
+								span.ml-2 AGB mod. 600
 							.product-card__id
 								p.id-text
 									span арт.:
@@ -81,28 +81,36 @@ block content
 									.product-availability__stock.product-availability__status
 										i.icon-check
 										span В наявності
+						.product-card__colors.card-colors
+							ul.card-colors__list
+								li.card-colors__item
+									a(href="#" title="Хром Хром Хромований Матовий").card-colors__option-color
+										img(src="./img/card-colors/color1.png", alt="Кольор")
+								li.card-colors__item
+									a(href="#" title="Хром").card-colors__option-color
+										img(src="./img/card-colors/color2.png", alt="Кольор")
+								li.card-colors__item
+									a(href="#" title="Пурпурний").card-colors__option-color
+										img(src="./img/card-colors/color3.png", alt="Кольор")
+								li.card-colors__item
+									a(href="#" title="Рожевий").card-colors__option-color
+										img(src="./img/card-colors/color4.png", alt="Кольор")
+								li.card-colors__item
+									a(href="#" title="Золотий").card-colors__option-color
+										img(src="./img/card-colors/color5.png", alt="Кольор")
+
 						.product-card__selects
-							select.select-color(name='state')
-								option(value='chrome') Матовий хром
-								option(value='black') Чорний
-								option(value='nickel') Нікель
-								option(value='white') Білий
-								option(value='brass') Латунь
-								option(value='graphite') Графіт
-							select.select-cover(name='state')
-								option(value='chrome') Матовий хром
-								option(value='black') Чорний
-								option(value='nickel') Нікель
-								option(value='white') Білий
-								option(value='brass') Латунь
-								option(value='graphite') Графіт
-							select.select-equipment(name='state')
-								option(value='wc') з накладкою WC
-								option(value='black') Чорний
-								option(value='nickel') Нікель
-								option(value='white') Білий
-								option(value='brass') Латунь
-								option(value='graphite') Графіт
+							select.select-cylinder-type(name='state')
+								option(value='chrome' data-text="В наявності") ключ-тумблер
+								option(value='black' data-text="Під замовлення") ключ-тумблер
+								option(value='nickel' data-text="Немає в наявності") ключ-тумблер
+							select.select-length(name='state')
+								option(value='chrome' data-text="Під замовлення") 1 мм
+								option(value='black' data-text="В наявності") 2 мм
+								option(value='nickel' data-text="Немає в наявності") 3 мм
+							select.select-symmetry(name='state')
+								option(value='wc' data-text="В наявності") так
+								option(value='black' data-text="Під замовлення") ні
 						.product-card__description
 							#descrAccordion
 								.produc-card__description-item.product-description
