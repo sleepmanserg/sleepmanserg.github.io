@@ -5,8 +5,8 @@ append config
 
 	//- ********** Settings **********
 	//- ==============================
-	-var pageTitle = 'Карточка товара'
-	-var whatPage = 'Product'
+	-var pageTitle = 'Партнери'
+	-var whatPage = 'Partners'
 	//- ==============================
 	//- ********* Settings END *******
 
@@ -19,8 +19,8 @@ block content
 			li.breadcrumbs-item
 				span Партнерам
 
-	.container
-		section.partners
+	section.partners
+		.container
 			.partners-header
 				h1.title-big.proba-family.text-center Співпраця
 				h2.subtitle.text-center Вже понад 13 років Celeste Trade є одним за провідних національних дистриб’юторів дверної фурнітури преміум якості.
@@ -68,7 +68,31 @@ block content
 
 					p.partners-text Наразі наші товари представлені у 36 населених пунктах України, а кількість партнерів налічує вже більше 300 компаній. Ми цінуємо наших партнерів і пропонуємо вам долучитись до команди та розділити з нами успіх в майбутньому.
 
-		section.become-partner
+	section.become-partner
+		.container
+			h2.text-36.proba-family.text-center Хочу стати партнером
+			.become-partner__form
+				form(action="")#becomePartner
+					.d-flex
+						.form-group
+							label(for='becomeParnterName').visually-hidden ПІБ
+							input#becomeParnterName.form-control(type='text' placeholder='ПІБ')
+						.form-group
+							label(for='becomeParnterName').visually-hidden Телефон
+							input#becomeParnterName.form-control.phone-input(type='tel' placeholder='Телефон')
+					.form-group
+						label(for='exampleFormControlTextarea1').visually-hidden Коментар
+						textarea#exampleFormControlTextarea1.form-control(rows='6' placeholder="Коментар")
+					button(type="submit").btn.btn-accent Написати нам
+	section.write-us.bg-black
+		.container
+			.write-us__inner
+				h4.text-36.text-white.proba-family Напишіть нам, давно з'ясовано, що за
+				p.text-18.text-white Давно з'ясовано, що при оцінці дизайну та композиції текст, що читається, заважає зосередитися.
+				.write-us__btn
+					a(href="#").btn.btn-accent Напишіть нам
+
+
 
 
 

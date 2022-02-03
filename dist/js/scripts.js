@@ -520,12 +520,30 @@ $(document).ready(function () {
 			partnersSlider: () => {
 				$('.partners-slider').slick({
 					slidesToShow: 1,
-					slidesToScroll: 1,
+					slidesToScroll: 2,
 					arrows: true,
 					dots: false,
 					prevArrow: $('.partners-prev .parnters-arrow__btn'),
 					nextArrow: $('.partners-next .parnters-arrow__btn'),
-					initialSlide: 2
+					centerMode: true,
+					// centerPadding: '0%',
+					initialSlide: 1,
+					variableWidth: true,
+					responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 2,
+								infinite: true,
+								arrows: true,
+								dots: false,
+								centerMode: true,
+								// centerPadding: '20%',
+								initialSlide: 0,
+							}
+						},
+					]
 				});
 			},
 

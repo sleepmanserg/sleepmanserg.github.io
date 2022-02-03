@@ -69,6 +69,20 @@ Hover styling for all devices and browsers
   padding-top: 38px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 html * {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -1163,6 +1177,60 @@ svg {
   font-weight: bold;
   height: 44px;
   display: block;
+}
+
+/* Become partner form */
+.become-partner__form {
+  max-width: 510px;
+  margin: 0 auto;
+}
+
+.become-partner__form form {
+  width: 100%;
+}
+
+.become-partner__form form .d-flex {
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .become-partner__form form .d-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.become-partner__form .form-control {
+  border-color: #E3E3E3;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 27px;
+  padding: 14px 16px 13px;
+  resize: none;
+}
+
+.become-partner__form .form-control:focus {
+  -webkit-box-shadow: 0 0 0 .2rem #28B3A145;
+  box-shadow: 0 0 0 .2rem #28B3A145;
+}
+
+.become-partner__form .form-group {
+  width: 100%;
+}
+
+.become-partner__form .btn {
+  margin: 70px auto 0;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .become-partner__form .btn {
+    margin: 28px 0 auto;
+    width: 100%;
+  }
 }
 
 .btn {
@@ -6907,6 +6975,7 @@ svg {
 .partners {
   padding-top: 100px;
   padding-bottom: 115px;
+  overflow: hidden;
 }
 
 .partners .title-big {
@@ -6934,12 +7003,6 @@ svg {
   position: relative;
 }
 
-.partners .partners-slider__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .partners .partners-arrows {
   position: absolute;
   left: 50%;
@@ -6959,6 +7022,14 @@ svg {
   justify-content: space-between;
 }
 
+.partners .slick-slide {
+  margin: 0 35px;
+}
+
+.partners .slick-list {
+  margin: 0 -35px;
+}
+
 .partners .partners-prev .parnters-arrow__btn {
   margin-left: -20px;
 }
@@ -6976,6 +7047,68 @@ svg {
   line-height: 36px;
   margin-bottom: 20px;
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .partners {
+    padding-top: 20px;
+    padding-bottom: 45px;
+  }
+  .partners .title-big {
+    margin-bottom: 20px;
+  }
+  .partners .subtitle {
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 550px;
+  }
+  .partners .partners-header {
+    margin-bottom: 0;
+  }
+  .partners .partners-body {
+    padding-top: 20px;
+  }
+  .partners .partners-text-wrapper {
+    padding-top: 44px;
+  }
+  .partners .partners-text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners .partners-prev .parnters-arrow__btn {
+    margin-left: 0;
+  }
+  .partners .partners-next .parnters-arrow__btn {
+    margin-right: 0;
+  }
+  .partners .slick-slide {
+    margin: 0 20px;
+  }
+  .partners .slick-list {
+    margin: 0 -20px;
+    padding-right: 50% !important;
+    padding-left: 0 !important;
+  }
+}
+
+.become-partner {
+  background-color: #FFFFFF;
+  padding-top: 100px;
+  padding-bottom: 90px;
+}
+
+.become-partner .text-36 {
+  margin-bottom: 47px;
+}
+
+@media (max-width: 1024px) {
+  .become-partner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .footer {
