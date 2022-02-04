@@ -1572,7 +1572,13 @@
 }
 
 .partners-documents {
-  padding-bottom: 45px;
+  padding-bottom: 70px;
+  @media (max-width: 1024px) {
+    padding-bottom: 50px;
+  }
+  .sidebar {
+    height: 100%;
+  }
   .partners-header {
     margin-bottom: 1rem;
     @media (max-width: 575px) {

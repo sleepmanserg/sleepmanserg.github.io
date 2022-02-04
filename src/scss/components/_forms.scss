@@ -153,7 +153,32 @@
 	.check__input:checked:disabled + .check__box {
 		opacity: .3;
 	}
+	.check__input[type="radio"] + .check__box {
+		border-radius: 50%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		&::before {
+			content: '';
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: $accent-clr;
+			display: block;
+			opacity: 0;
+			visibility: hidden;
+			transition: .25s;
+		}
+	}
+	.check__input[type="radio"]:checked + .check__box {
+		background: none;
+		&::before {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 }
+
 
 .option {
 	display: block;
@@ -166,7 +191,6 @@
 	border: none;
 	border-radius: 4px;
 	height: 36px;
-	min-width: 178px;
 	padding: 0 46px 0 15px;
 	color: $black-clr;
 	font-weight: bold;
@@ -300,5 +324,60 @@
 			margin: 28px 0 auto;
 			width: 100%;
 		}
+	}
+}
+
+.admin-products__select {
+	border: none;
+	background-color: transparent;
+	// appearance: none;
+	text-align: right;
+}
+
+.number-form {
+	display: flex;
+	align-items: center;
+	position: relative;
+	border: 1px solid $grey-superlight-clr;
+	border-radius: 4px;
+	transition: .25s;
+	@include hover {
+		background-color: #EBFFFC;
+		input {
+			background-color: #EBFFFC;
+		}
+	}
+	span {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		font-size: 22px;
+		color: #A9A9A9;
+		transition: .25s;
+		user-select: none;
+		@include hover {
+			color: $accent-clr;
+		}
+	}
+	.minus {
+		left: 1rem;
+	}
+	.plus {
+		right: 1rem;
+	}
+	input {
+		max-width: 100px;
+		margin: 0 auto;
+		border: none;
+		appearance: none;
+		outline: none;
+		text-align: center;
+		height: 36px;
+		padding: 0 .8rem;
+		background-color: #fff;
+		transition: .25s;
+		font-size: 14px;
+		font-weight: bold;
 	}
 }

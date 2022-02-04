@@ -5,8 +5,8 @@ append config
 
 	//- ********** Settings **********
 	//- ==============================
-	-var pageTitle = 'Каталог'
-	-var whatPage = 'Каталог'
+	-var pageTitle = 'Админ Каталог'
+	-var whatPage = 'Admin Catalog'
 	//- ==============================
 	//- ********* Settings END *******
 
@@ -18,12 +18,10 @@ block content
 				li.breadcrumbs-item
 					a(href="/") Головна
 				li.breadcrumbs-item
-					a(href="catalog.html") Каталог
-				li.breadcrumbs-item
-					span Дверні ручки
+					span Оптова форма замовлення
 			.row.catalog-wrapper
 				.col-lg-3
-					.catalog-sidebar.sidebar
+					.sidebar
 						.sidebar-header.d-lg-none
 							.sidebar-header__top
 								.sidebar-header__close
@@ -45,6 +43,47 @@ block content
 											i.icon-close
 
 						.sidebar-inner
+							.sidebar-list
+								.sidebar-list__head Продукт
+								.sidebar-list__body
+									ul.sidebar-filter.checkbox-filter
+										li.sidebar-filter__item
+											a(href="#").sidebar-checkbox.checkbox-filter__link
+												label.check.option(for="radioBtn1")
+													input(type="radio" autocomplete="off" name="btnradio")#radioBtn1.check__input
+													span.check__box
+													span.check__text Циліндри
+										li.sidebar-filter__item
+											a(href="#").sidebar-checkbox.checkbox-filter__link
+												label.check.option(for="radioBtn2")
+													input(type="radio" autocomplete="off" name="btnradio")#radioBtn2.check__input
+													span.check__box
+													span.check__text Ручки
+										li.sidebar-filter__item
+											a(href="#").sidebar-checkbox.checkbox-filter__link
+												label.check.option(for="radioBtn3")
+													input(type="radio" autocomplete="off" name="btnradio")#radioBtn3.check__input
+													span.check__box
+													span.check__text Циліндри
+										li.sidebar-filter__item
+											a(href="#").sidebar-checkbox.checkbox-filter__link
+												label.check.option(for="radioBtn4")
+													input(type="radio" autocomplete="off" name="btnradio")#radioBtn4.check__input
+													span.check__box
+													span.check__text Замки
+										li.sidebar-filter__item
+											a(href="#").sidebar-checkbox.checkbox-filter__link
+												label.check.option(for="radioBtn5")
+													input(type="radio" autocomplete="off" name="btnradio")#radioBtn5.check__input
+													span.check__box
+													span.check__text Розсувні системи
+										li.sidebar-filter__item
+											a(href="#").sidebar-checkbox.checkbox-filter__link
+												label.check.option(for="radioBtn6")
+													input(type="radio" autocomplete="off" name="btnradio")#radioBtn6.check__input
+													span.check__box
+													span.check__text Аксесуари для дверей
+
 							.sidebar-list
 								.sidebar-list__head Тип
 								.sidebar-list__body
@@ -97,6 +136,7 @@ block content
 													input(type="checkbox").check__input
 													span.check__box
 													span.check__text Розетка кругла
+
 							.sidebar-list
 								.sidebar-list__head Аксесуари до дверних ручок
 								.sidebar-list__body
@@ -249,10 +289,10 @@ block content
 							.filter-submit__btn.d-lg-none
 								a(href="#").btn.btn-accent.w-100 Застосувати
 				.col-lg-9
-					.catalog-products
+					.catalog-products.admin-catalog
 						.catalog-header
 							.catalog-header__title
-								h1.catalog-title.proba-family Дверні ручки
+								h1.catalog-title.proba-family Оптова форма
 							.catalog-header__sorting
 								.filter-sidebar-btn
 									.catalog-tags__item
@@ -260,12 +300,10 @@ block content
 											span.catalog-tags__name Фільтри
 											i.icon-filter
 								.catalog-sorting
-									label(for="sorting").sorting-label Сортування:
 									select#sorting.select
-										option Тип сортування
-										option Ціна
-										option Ціна
-										option Ціна
+										option 50
+										option 100
+										option 200
 						.catalog-tags.tags
 							ul.catalog-tags__list
 								li.catalog-tags__item
@@ -280,195 +318,163 @@ block content
 									button(href="#").catalog-tags__link.catalog-tags__filter-reset
 										span.catalog-tags__name Очистити фільтри
 
-						.row.catalog-products__row
-							.col-xl-4.col-lg-6.col-md-6.col-sm-6
-								.catalog-products__tile.product-tile
-									.product-tile__thumb
-										a(href="product-card.html").product-tile__picture
-											img(src="./img/product-thumbs/1.png", alt="Ручка дверная").product-tile__img
-									.product-tile__colors.colors
-										ul.colors-list
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#28B3A1;")
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:rgba(160, 157, 214, 1);")
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#E196E8")
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#C4C4C4;")
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#3A71FF;")
-											li.colors-list__item.colors-item__count
-												a(href="#").colors-slider__item.color
-													.color-item
-														span +27
-									.products-tile__info
-										a(href="product-card.html").product-tile__title Ручка дверна
-											span.product-tile__brand.ml-1 DND Quattro
-										.product-tile__availability.product-availability
-											.product-availability__stock.product-availability__status
+						.row.admin-catalog__row
+							.admin-products
+								.admin-products__header
+									.text-14.text-grey Товар
+									select.admin-products__select.text-grey.text-14
+										option(value="") РРЦ
+										option(value="") РРЦ
+										option(value="") РРЦ
+									select.admin-products__select.text-grey.text-14
+										option(value="") Ваша ціна
+										option(value="") РРЦ
+										option(value="") РРЦ
+								.admin-products__item
+									.admin-products__item-img
+										a(href="product-card.html")
+											img(src="./img/product-thumbs/1.png", alt="")
+											.admin-products__item-tooltip
+												img(src="./img/product-thumbs/1.png", alt="")
+									a(href="#").admin-products__item-name.proba-family
+										| Ручка дверна Ручка дверна Ручка дверна Ручка дверна
+										span.text-accent.ml-1 DND Quattro
+									.admin-products__item-about
+										.admin-products__item-info
+											.admin-products__item-availability.available.text-grey
 												i.icon-check
 												span В наявності
-							.col-xl-4.col-lg-6.col-md-6.col-sm-6
-								.catalog-products__tile.product-tile
-									.product-tile__thumb
-										a(href="product-card.html").product-tile__picture
-											img(src="./img/product-thumbs/3.png", alt="Ручка дверная").product-tile__img
-									.product-tile__colors.colors
-										ul.colors-list
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#28B3A1;")
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:rgba(160, 157, 214, 1);")
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#E196E8")
-									.products-tile__info
-										a(href="product-card.html").product-tile__title Довга назва ручки яка таки на двері
-											span.product-tile__brand.ml-1 DND Quattro
-										.product-tile__availability.product-availability
-											.product-availability__stock.product-availability__status
-												i.icon-check
-												span В наявності
-							.col-xl-4.col-lg-6.col-md-6.col-sm-6
-								.catalog-products__tile.product-tile
-									.product-tile__thumb
-										a(href="product-card.html").product-tile__picture
-											img(src="./img/product-thumbs/4.png", alt="Ручка дверная").product-tile__img
-									.product-tile__colors.colors
-										ul.colors-list
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#3C3C3C;")
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#B8B9B8;")
-									.products-tile__info
-										a(href="product-card.html").product-tile__title Довга назва ручки яка таки на двері
-											span.product-tile__brand.ml-1 DND Quattro
-										.product-tile__availability.product-availability
-											.product-availability__stock.product-availability__status
-												i.icon-check
-												span В наявності
-							.col-xl-4.col-lg-6.col-md-6.col-sm-6
-								.catalog-products__tile.product-tile
-									.product-tile__thumb
-										a(href="product-card.html").product-tile__picture
-											img(src="./img/product-thumbs/5.png", alt="Ручка дверная").product-tile__img
-									.product-tile__colors.colors
-										ul.colors-list
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#3C3C3C;")
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#B8B9B8;")
-									.products-tile__info
-										a(href="product-card.html").product-tile__title Довга назва ручки яка таки на двері
-											span.product-tile__brand.ml-1 DND Quattro
-										.product-tile__availability.product-availability
-											.product-availability__stock.product-availability__status
-												i.icon-check
-												span В наявності
-							.col-xl-4.col-lg-6.col-md-6.col-sm-6
-								.catalog-products__tile.product-tile
-									.product-tile__thumb
-										a(href="product-card.html").product-tile__picture
-											img(src="./img/product-thumbs/6.png", alt="Ручка дверная").product-tile__img
-									.product-tile__colors.colors
-										ul.colors-list
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#3C3C3C;")
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#B8B9B8;")
-									.products-tile__info
-										a(href="product-card.html").product-tile__title Довга назва ручки яка таки на двері
-											span.product-tile__brand.ml-1 DND Quattro
-										.product-tile__availability.product-availability
-											.product-availability__order.product-availability__status
+											.admin-products__item-art.text-grey арт. 45475758
+											.admin-products__item-id.text-grey Код:00000
+											.admin-products__item-brand
+												span.text-grey.mr-2 Бренд:
+												a(href="brands-single.html").text-accent Kommet
+									.admin-products__item-price.retail-price.proba-family
+										label.text-grey РРЦ
+										span 35620₴
+									.admin-products__item-price.your-price.proba-family
+										label.text-grey Ваша ціна
+										span 32000₴
+									.admin-products__item-actions
+										button(type="button").admin-products__cart-btn
+											i.icon-cart
+											span.text-accent.text-bold Замовити
+										.admin-products__item-add
+											.number-form
+												span.minus -
+												input(type='text' value='1')
+												span.plus +
+											.admin-products__item-delete
+												button(type="button").cart-delete
+													i.icon-bucket
+								.admin-products__item
+									.admin-products__item-img
+										a(href="product-card.html")
+											img(src="./img/product-thumbs/2.png", alt="")
+											.admin-products__item-tooltip
+												img(src="./img/product-thumbs/2.png", alt="")
+									a(href="#").admin-products__item-name.proba-family
+										| Ручка дверна
+										span.text-accent.ml-1 DND Quattro
+									.admin-products__item-about
+										.admin-products__item-info
+											.admin-products__item-availability.text-grey.order
 												i.icon-truck
 												span Під замовлення
-							.col-xl-4.col-lg-6.col-md-6.col-sm-6
-								.catalog-products__tile.product-tile
-									.product-tile__thumb
-										a(href="product-card.html").product-tile__picture
-											img(src="./img/product-thumbs/7.png", alt="Ручка дверная").product-tile__img
-									.product-tile__colors.colors
-										ul.colors-list
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#3C3C3C;")
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#B8B9B8;")
-									.products-tile__info
-										a(href="product-card.html").product-tile__title Довга назва ручки яка таки на двері
-											span.product-tile__brand.ml-1 DND Quattro
-										.product-tile__availability.product-availability
-											.product-availability__stock.product-availability__status
-												i.icon-check
-												span В наявності
-							.col-xl-4.col-lg-6.col-md-6.col-sm-6
-								.catalog-products__tile.product-tile
-									.product-tile__thumb
-										a(href="product-card.html").product-tile__picture
-											img(src="./img/product-thumbs/8.png", alt="Ручка дверная").product-tile__img
-									.product-tile__colors.colors
-										ul.colors-list
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#3C3C3C;")
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#B8B9B8;")
-									.products-tile__info
-										a(href="product-card.html").product-tile__title Довга назва ручки яка таки на двері
-											span.product-tile__brand.ml-1 DND Quattro
-										.product-tile__availability.product-availability
-											.product-availability__stock.product-availability__status
-												i.icon-check
-												span В наявності
-							.col-xl-4.col-lg-6.col-md-6.col-sm-6
-								.catalog-products__tile.product-tile
-									.product-tile__thumb
-										a(href="product-card.html").product-tile__picture
-											img(src="./img/product-thumbs/9.png", alt="Ручка дверная").product-tile__img
-									.product-tile__colors.colors
-										ul.colors-list
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#3C3C3C;")
-											li.colors-list__item
-												a(href="#").colors-slider__item.color
-													.color-item(style="background-color:#B8B9B8;")
-									.products-tile__info
-										a(href="product-card.html").product-tile__title Довга назва ручки яка таки на двері
-											span.product-tile__brand.ml-1 DND Quattro
-										.product-tile__availability.product-availability
-											.product-availability__stock.product-availability__status
-												i.icon-check
-												span В наявності
-							.col-xl-4.col-lg-6.col-md-6.col-sm-6
-								.catalog-products__tile.product-tile.product-tile__not-available
-									.product-tile__thumb
-										a(href="product-card.html").product-tile__picture
-											img(src="./img/product-thumbs/2.png", alt="Ручка дверная").product-tile__img
-									.products-tile__info
-										a(href="product-card.html").product-tile__title Дверна ручка
-											span.product-tile__brand.ml-1 DND Quattro
-										.product-tile__availability.product-availability
-											.product-availability__not.product-availability__status
+											.admin-products__item-art.text-grey арт. 45475758
+											.admin-products__item-id.text-grey Код:00000
+											.admin-products__item-brand
+												span.text-grey.mr-2 Бренд:
+												a(href="brands-single.html").text-accent Kommet
+									.admin-products__item-price.retail-price.proba-family
+										label.text-grey РРЦ
+										span 356₴
+									.admin-products__item-price.your-price.proba-family
+										label.text-grey Ваша ціна
+										span 245₴
+									.admin-products__item-actions
+										//- button(type="button").admin-products__cart-btn
+										//- 	i.icon-cart
+										//- 	span.text-accent.text-bold Замовити
+										.admin-products__item-add.is-visible
+											.number-form
+												span.minus -
+												input(type='text' value='1')
+												span.plus +
+											.admin-products__item-delete
+												button(type="button").cart-delete
+													i.icon-bucket
+								.admin-products__item
+									.admin-products__item-img
+										a(href="product-card.html")
+											img(src="./img/product-thumbs/2.png", alt="")
+											.admin-products__item-tooltip
+												img(src="./img/product-thumbs/2.png", alt="")
+									a(href="#").admin-products__item-name.proba-family
+										| Ручка дверна
+										span.text-accent.ml-1 DND Quattro
+									.admin-products__item-about
+										.admin-products__item-info
+											.admin-products__item-availability.text-grey.order
+												i.icon-truck
+												span Під замовлення
+											.admin-products__item-art.text-grey арт. 45475758
+											.admin-products__item-id.text-grey Код:00000
+											.admin-products__item-brand
+												span.text-grey.mr-2 Бренд:
+												a(href="brands-single.html").text-accent Kommet
+									.admin-products__item-price.retail-price.proba-family
+										label.text-grey РРЦ
+										span 356₴
+									.admin-products__item-price.your-price.proba-family
+										label.text-grey Ваша ціна
+										span 245₴
+									.admin-products__item-actions
+										button(type="button").admin-products__cart-btn
+											i.icon-cart
+											span.text-accent.text-bold Замовити
+										.admin-products__item-add
+											.number-form
+												span.minus -
+												input(type='text' value='1')
+												span.plus +
+											.admin-products__item-delete
+												button(type="button").cart-delete
+													i.icon-bucket
+								.admin-products__item
+									.admin-products__item-img
+										a(href="product-card.html")
+											img(src="./img/product-thumbs/2.png", alt="")
+											.admin-products__item-tooltip
+												img(src="./img/product-thumbs/2.png", alt="")
+									a(href="#").admin-products__item-name.proba-family
+										| Ручка дверна
+										span.text-accent.ml-1 DND Quattro
+									.admin-products__item-about
+										.admin-products__item-info
+											.admin-products__item-availability.text-grey.not-available
 												i.icon-close
 												span Знято з виробництва
+											.admin-products__item-art.text-grey арт. 45475758
+											.admin-products__item-id.text-grey Код:00000
+											.admin-products__item-brand
+												span.text-grey.mr-2 Бренд:
+												a(href="brands-single.html").text-accent Длинное название бренда
+									.admin-products__item-price.retail-price.proba-family
+										label.text-grey РРЦ
+										span 356₴
+									.admin-products__item-price.your-price.proba-family
+										label.text-grey Ваша ціна
+										span 245₴
+									.admin-products__item-actions
+										button(type="button").admin-products__cart-btn.d-none
+											i.icon-cart
+											span.text-accent.text-bold Замовити
+
+
+
+
+
 
 						include ./partials/pagination
 
