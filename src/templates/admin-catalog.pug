@@ -441,7 +441,7 @@ block content
 											.admin-products__item-delete
 												button(type="button").cart-delete
 													i.icon-bucket
-								.admin-products__item
+								.admin-products__item.admin-products__item-disabled
 									.admin-products__item-img
 										a(href="product-card.html")
 											img(src="./img/product-thumbs/2.png", alt="")
@@ -470,7 +470,43 @@ block content
 										button(type="button").admin-products__cart-btn.d-none
 											i.icon-cart
 											span.text-accent.text-bold Замовити
-
+								.admin-products__item
+										.admin-products__item-img
+											a(href="product-card.html")
+												img(src="./img/product-thumbs/1.png", alt="")
+												.admin-products__item-tooltip
+													img(src="./img/product-thumbs/1.png", alt="")
+										a(href="#").admin-products__item-name.proba-family
+											| Ручка дверна Ручка дверна Ручка дверна Ручка дверна
+											span.text-accent.ml-1 DND Quattro
+										.admin-products__item-about
+											.admin-products__item-info
+												.admin-products__item-availability.available.text-grey
+													i.icon-check
+													span В наявності
+												.admin-products__item-art.text-grey арт. 45475758
+												.admin-products__item-id.text-grey Код:00000
+												.admin-products__item-brand
+													span.text-grey.mr-2 Бренд:
+													a(href="brands-single.html").text-accent Kommet
+										.admin-products__item-price.retail-price.proba-family
+											label.text-grey РРЦ
+											span 35620₴
+										.admin-products__item-price.your-price.proba-family
+											label.text-grey Ваша ціна
+											span 32000₴
+										.admin-products__item-actions
+											button(type="button").admin-products__cart-btn
+												i.icon-cart
+												span.text-accent.text-bold Замовити
+											.admin-products__item-add
+												.number-form
+													span.minus -
+													input(type='text' value='1')
+													span.plus +
+												.admin-products__item-delete
+													button(type="button").cart-delete
+														i.icon-bucket
 
 
 
