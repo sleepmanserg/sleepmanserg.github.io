@@ -39,6 +39,25 @@
   background-color: $black-clr;
 }
 
+.bg-beige {
+  background-color: $beige-clr;
+}
+
+.text-grey {
+  color: $grey-lighter-clr;
+}
+
+
+.text-crop {
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
 .pt-38 {
   padding-top: 38px;
 }

@@ -49,6 +49,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-document:before {
+  content: "\e914";
+}
+.icon-download:before {
+  content: "\e915";
+}
 .icon-facebook:before {
   content: "\e913";
 }
