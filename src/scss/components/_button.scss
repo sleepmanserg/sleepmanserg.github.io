@@ -72,3 +72,21 @@
 		}
 	}
 }
+
+.cart-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 4px;
+	color: $grey-lighter-clr;
+	transition: background-color .25s, color .25s;
+	border: none;
+	appearance: none;
+	@include hover {
+		background-color: $accent-clr-lighter;
+		color: $accent-clr;
+		text-decoration: none;
+	}
+}

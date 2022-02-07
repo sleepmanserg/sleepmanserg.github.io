@@ -297,7 +297,7 @@
 			// 	display: none;
 			// }
 			@include hover {
-				background-color: #EBFFFC;
+				background-color: $accent-clr-lighter;
 			}
 			.card-select-list {
 				display: flex;

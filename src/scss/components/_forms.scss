@@ -213,6 +213,7 @@
 		transform: translateY(-50%) rotate(90deg);
 		color: $grey-lighter-clr;
 		font-size: 10px;
+		pointer-events: none;
 	}
 	.sorting-label {
 		font-size: 14px;
@@ -342,9 +343,9 @@
 	border-radius: 4px;
 	transition: .25s;
 	@include hover {
-		background-color: #EBFFFC;
+		background-color: $accent-clr-lighter;
 		input {
-			background-color: #EBFFFC;
+			background-color: $accent-clr-lighter;
 		}
 	}
 	span {
@@ -356,6 +357,8 @@
 		color: #A9A9A9;
 		transition: .25s;
 		user-select: none;
+		width: 20px;
+		text-align: center;
 		@include hover {
 			color: $accent-clr;
 		}
@@ -379,5 +382,70 @@
 		transition: .25s;
 		font-size: 14px;
 		font-weight: bold;
+	}
+}
+
+.admin-catalog__select {
+	position: relative;
+	select {
+		appearance: none;
+		border: none;
+		background-color: transparent;
+		color: #565656;
+	}
+	&::before {
+		content: '\e900';
+		font-family: 'icomoon';
+		position: absolute;
+		right: 23px;
+		top: 50%;
+		transform: translateY(-50%) rotate(90deg);
+		color: $grey-lighter-clr;
+		font-size: 10px;
+		pointer-events: none;
+	}
+}
+
+.admin-search__form {
+	display: flex;
+	align-items: center;
+	.form-group {
+		margin-bottom: 0;
+		width: 100%;
+	}
+	.form-control {
+		border: none;
+		width: 100%;
+		font-size: 14px;
+		outline: none !important;
+		box-shadow: none !important;
+		padding: 0;
+		padding-right: 10px;
+		padding-left: 1rem;
+		@media (max-width: 1439px) {
+			&::placeholder {
+				font-size: 12px;
+			}
+		}
+	}
+	.admin-search__btn {
+		border: none;
+		background-color: transparent;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border: none;
+		height: 44px;
+		padding: 0 16px;
+		cursor: pointer;
+		font-size: 14px;
+		font-weight: bold;
+		color: $grey-lighter-clr;
+		outline: none !important;
+		box-shadow: none !important;
+		transition: background-color .25s, color .25s;
+		@include hover {
+			background-color: $accent-clr-lighter;
+			color: $black-clr;
+		}
 	}
 }

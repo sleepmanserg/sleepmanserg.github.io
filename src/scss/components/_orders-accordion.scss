@@ -1,0 +1,321 @@
+.orders-accordion {
+
+}
+
+.accordion-card {
+	border: 1px solid $grey-superlight-clr;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+	border-radius: 4px;
+	margin-bottom: 8px;
+	.accordion-card__header-info {
+		span {
+			font-size: 14px;
+			color: $grey-lighter-clr;
+			display: inline-block;
+			margin-right: 24px;
+		}
+	}
+	.accordion-card__id {
+		font-weight: bold;
+		font-family: $font-family-proba;
+		font-size: 18px;
+		line-height: 1;
+		margin-bottom: 10px;
+	}
+	&[data-order-status="in-process"] {
+		.accordion-card__id {
+			color: $process;
+		}
+		.accordion-card__status {
+			.accordion-card__status-icon {
+				&::before {
+					content: "\e90b";
+					color: $process;
+				}
+				@include hover {
+					border-color: $process;
+					background-color: $process;
+					&::before {
+						color: $white-clr;
+					}
+				}
+			}
+		}
+	}
+	&[data-order-status="reserve"] {
+		.accordion-card__id {
+			color: $reserve;
+		}
+		.accordion-card__status {
+			.accordion-card__status-icon {
+				&::before {
+					content: "\e914";
+					color: $reserve;
+				}
+				@include hover {
+					border-color: $reserve;
+					background-color: $reserve;
+					&::before {
+						color: $white-clr;
+					}
+				}
+			}
+		}
+	}
+	&[data-order-status="shipped"] {
+		.accordion-card__id {
+			color: $shipped;
+		}
+		.accordion-card__status {
+			.accordion-card__status-icon {
+				&::before {
+					content: "\e90f";
+					color: $shipped;
+				}
+				@include hover {
+					border-color: $shipped;
+					background-color: $shipped;
+					&::before {
+						color: $white-clr;
+					}
+				}
+			}
+		}
+	}
+	&[data-order-status="decline"] {
+		.accordion-card__id {
+			color: $decline;
+		}
+		.accordion-card__status {
+			.accordion-card__status-icon {
+				&::before {
+					content: "\e90a";
+					color: $decline;
+					font-size: 11px;
+				}
+				@include hover {
+					border-color: $decline;
+					background-color: $decline;
+					&::before {
+						color: $white-clr;
+					}
+				}
+			}
+		}
+	}
+	&[data-order-status="warehouse-reserve"] {
+		.accordion-card__id {
+			color: $warehouse;
+		}
+		.accordion-card__status {
+			.accordion-card__status-icon {
+				&::before {
+					content: "\e909";
+					color: $warehouse;
+				}
+				@include hover {
+					border-color: $warehouse;
+					background-color: $warehouse;
+					&::before {
+						color: $white-clr;
+					}
+				}
+			}
+		}
+	}
+	&[data-order-status="warehouse-shipped"] {
+		.accordion-card__id {
+			color: $warehouse-shipped;
+		}
+		.accordion-card__status {
+			.accordion-card__status-icon {
+				&::before {
+					content: "\e908";
+					color: $warehouse-shipped;
+				}
+				@include hover {
+					border-color: $warehouse-shipped;
+					background-color: $warehouse-shipped;
+					&::before {
+						color: $white-clr;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.accordion-card__btn {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	padding: 16px 0;
+	padding-right: 24px;
+	padding-left: 61px;
+	position: relative;
+	background-color: $white-clr;
+	&::before {
+		content: "\e912";
+		position: absolute;
+		left: 24px;
+		top: 50%;
+		transform: translateY(-50%) rotate(180deg);
+		width: 12px;
+		height: 8px;
+		font-family: 'icomoon' !important;
+		font-size: 10px;
+		color: $grey-lighter-clr;
+		transform-origin: center center;
+		transition: .25s;
+	}
+	&.collapsed {
+		&::before {
+			transform: translateY(-50%) rotate(0);
+		}
+	}
+}
+
+.accordion-card__photos {
+	display: flex;
+	column-gap: 8px;
+	row-gap: 8px;
+	flex-wrap: wrap;
+	max-width: 400px;
+	.accordion-card__thumb {
+		display: block;
+		width: 50px;
+		height: 50px;
+		overflow: hidden;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		img {
+			width: 50px;
+			height: 50px;
+			object-fit: cover;
+		}
+		span {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 4px;
+			border: 1px solid $grey-superlight-clr;
+			font-weight: bold;
+			font-size: 14px;
+		}
+	}
+}
+
+.accordion-card__prices {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 20px;
+	margin-top: auto;
+}
+
+.accordion-card__price {
+	position: relative;
+	span,
+	label {
+		color: $grey-lighter-clr;
+	}
+	span {
+		font-size: 18px;
+		display: inline-block;
+	}
+	label {
+		position: absolute;
+		right: 0;
+		top: -30px;
+		font-size: 14px;
+	}
+	.text-bold {
+		color: $black-clr;
+		margin-left: 10px;
+	}
+}
+
+.accordion-card__status {
+	position: relative;
+	&.active {
+		.accordion-card__status-tooltip {
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(-50%) translateY(0);
+		}
+	}
+	.accordion-card__status-icon {
+		width: 44px;
+		height: 44px;
+		border: 1px solid $grey-superlight-clr;
+		border-radius: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: .25s;
+		cursor: pointer;
+		@include hover {
+			+ .accordion-card__status-tooltip {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(-50%) translateY(0);
+			}
+		}
+		&::before {
+			font-family: 'icomoon' !important;
+			width: 22px;
+			height: 22px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: .35s;
+		}
+	}
+	.accordion-card__status-tooltip {
+		width: 190px;
+		position: absolute;
+		bottom: calc(100% + 15px);
+		left: 50%;
+		transform: translateX(-50%) translateY(10px);
+		background-color: $white-clr;
+		border: 1px solid $grey-superlight-clr;
+		padding: 14px 16px 17px;
+		border-radius: 4px;
+		pointer-events: none;
+		opacity: 0;
+		visibility: hidden;
+		transition: .25s;
+		&::before {
+			content: "";
+			bottom: -20px;
+			display: block;
+			height: 20px;
+			left: 86px;
+			position: absolute;
+			border-color: $grey-superlight-clr transparent transparent transparent;
+			border-style: solid;
+			border-width: 8px;
+		}
+		&::after {
+			border-left: solid transparent 7px;
+			border-right: solid transparent 7px;
+			border-top: solid $white-clr 7px;
+			bottom: -7px;
+			content: " ";
+			height: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			// margin-left: -13px;
+			position: absolute;
+			width: 0;
+		}
+		span {
+			font-size: 14px;
+			line-height: 21px;
+		}
+	}
+}

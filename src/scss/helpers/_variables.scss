@@ -9,6 +9,7 @@ $white-clr:                #FFFFFF;
 $black-clr:                #111111;
 $black-lighter-clr:        #313131;
 $accent-clr:               #28B3A1;
+$accent-clr-lighter:       #EBFFFC;
 $beige-clr:                #BEBFB8;
 $grey-light-clr:           #F9F9F9;
 $grey-lighter-clr:         #BCBCBC;
@@ -18,6 +19,13 @@ $red-clr:                  #FF4F4F;
 $red-lighter-clr:          #E89696;
 $input-grey:               #E3E3E3;
 $grey-super-dark-clr:			 #737373;
+
+$process:                   #6DC0D2;
+$reserve:                   #E196E8;
+$shipped:                   #F9A800;
+$decline:                   $grey-lighter-clr;
+$warehouse:                   #A09DD6;
+$warehouse-shipped:					$accent-clr;
 
 
 //== Font Family

@@ -1,0 +1,305 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'Історія замовлень'
+	-var whatPage = 'Admin Orders'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	.catalog
+		.container
+			ul.breadcrumbs
+				li.breadcrumbs-item
+					a(href="/") Головна
+				li.breadcrumbs-item
+					span Історія замовлень
+			.row.catalog-wrapper
+				.col-lg-12
+					.admin-catalog
+						.admin-catalog__header
+							.admin-catalog__header-title
+								h1.catalog-title.proba-family Історія замовлень
+							.admin-catalog__header-sorting
+								.admin-catalog__sorting
+									.admin-catalog__header-prices.mr-5
+										label.mb-0 Ваш баланс:
+										span.text-bold 22 245₴
+										span.text-bold $2 245
+										span.text-bold €1 750
+									.admin-catalog__sorting-select.ml-5
+										select#sorting.select.pr-5
+											option Тип сортировки
+											option 100
+											option 200
+						.admin-catalog__row
+							.orders
+								#ordersAccordion.orders-accordion
+									.orders-accordion__card.accordion-card(data-order-status="in-process")
+										#headingOne.accordion-card__header
+											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+												.accordion-card__info
+													.accordion-card__header-info
+														.accordion-card__id №09877868374
+														span 18.10.2021 10:00
+														span Павлов Л.А.
+												.accordion-card__photos
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/1.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/2.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/3.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/4.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/5.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/6.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/7.png", alt="")
+												.accordion-card__prices
+													.accordion-card__price.accordion-card__price-retail
+														span РРЦ:
+														span.text-bold.proba-family 356₴
+													.accordion-card__price.accordion-card__sum
+														label 7 товарів
+														span Сума:
+														span.text-bold.proba-family 356₴
+												.accordion-card__status(data__dropdown-parent)
+													.accordion-card__status-icon(data__dropdown)
+													.accordion-card__status-tooltip
+														span Замовлення в обробці у менеджера
+												.accordion-card__repeat
+													a(href="#").admin-products__cart-btn
+														span.text-accent.text-bold Повторити замовлення
+
+										#collapseOne.collapse(aria-labelledby='headingOne' data-parent='#ordersAccordion')
+											.accordion-card__body
+												| Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the
+												code .show
+												|  class.
+
+									.orders-accordion__card.accordion-card(data-order-status="reserve")
+										#headingTwo.accordion-card__header
+											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+												.accordion-card__info
+													.accordion-card__header-info
+														.accordion-card__id №09877868374
+														span 18.10.2021 10:00
+														span Павлов Л.А.
+												.accordion-card__photos
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/1.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/2.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/3.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/4.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/5.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/6.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/7.png", alt="")
+												.accordion-card__prices
+													.accordion-card__price.accordion-card__price-retail
+														span РРЦ:
+														span.text-bold.proba-family 356₴
+													.accordion-card__price.accordion-card__sum
+														label 7 товарів
+														span Сума:
+														span.text-bold.proba-family 356₴
+												.accordion-card__status(data__dropdown-parent)
+													.accordion-card__status-icon(data__dropdown)
+													.accordion-card__status-tooltip
+														span Товар зарезервований в очікуваному постачанні
+												.accordion-card__repeat
+													a(href="#").admin-products__cart-btn
+														span.text-accent.text-bold Повторити замовлення
+										#collapseTwo.collapse(aria-labelledby='headingTwo' data-parent='#ordersAccordion')
+											.accordion-card__body
+												| Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the
+												code .show
+												|  class.
+									.orders-accordion__card.accordion-card(data-order-status="shipped")
+										#headingThree.accordion-card__header
+											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
+												.accordion-card__info
+													.accordion-card__header-info
+														.accordion-card__id №09877868374
+														span 18.10.2021 10:00
+														span Павлов Л.А.
+												.accordion-card__photos
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/1.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/2.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/3.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/4.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/5.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/6.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/7.png", alt="")
+												.accordion-card__prices
+													.accordion-card__price.accordion-card__price-retail
+														span РРЦ:
+														span.text-bold.proba-family 356₴
+													.accordion-card__price.accordion-card__sum
+														label 7 товарів
+														span Сума:
+														span.text-bold.proba-family 356₴
+												.accordion-card__status(data__dropdown-parent)
+													.accordion-card__status-icon(data__dropdown)
+													.accordion-card__status-tooltip
+														span Товар відвантажено
+												.accordion-card__repeat
+													a(href="#").admin-products__cart-btn
+														span.text-accent.text-bold Повторити замовлення
+										#collapseThree.collapse(aria-labelledby='headingThree' data-parent='#ordersAccordion')
+											.accordion-card__body
+												| Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the
+												code .show
+												|  class.
+									.orders-accordion__card.accordion-card(data-order-status="decline")
+										#headingFour.accordion-card__header
+											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseFour' aria-expanded='false' aria-controls='collapseFour')
+												.accordion-card__info
+													.accordion-card__header-info
+														.accordion-card__id №09877868374
+														span 18.10.2021 10:00
+														span Павлов Л.А.
+												.accordion-card__photos
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/1.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/2.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/3.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/4.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/5.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/6.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/7.png", alt="")
+												.accordion-card__prices
+													.accordion-card__price.accordion-card__price-retail
+														span РРЦ:
+														span.text-bold.proba-family 356₴
+													.accordion-card__price.accordion-card__sum
+														label 7 товарів
+														span Сума:
+														span.text-bold.proba-family 356₴
+												.accordion-card__status(data__dropdown-parent)
+													.accordion-card__status-icon(data__dropdown)
+													.accordion-card__status-tooltip
+														span Замовлення скасовано, уточнюйте деталі у менеджера
+												.accordion-card__repeat
+													a(href="#").admin-products__cart-btn
+														span.text-accent.text-bold Повторити замовлення
+										#collapseFour.collapse(aria-labelledby='headingFour' data-parent='#ordersAccordion')
+											.accordion-card__body
+												| Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the
+												code .show
+												|  class.
+									.orders-accordion__card.accordion-card(data-order-status="warehouse-reserve")
+										#headingFive.accordion-card__header
+											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseFive' aria-expanded='false' aria-controls='collapseFive')
+												.accordion-card__info
+													.accordion-card__header-info
+														.accordion-card__id №09877868374
+														span 18.10.2021 10:00
+														span Павлов Л.А.
+												.accordion-card__photos
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/1.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/2.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/3.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/4.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/5.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/6.png", alt="")
+													.accordion-card__thumb
+														span +27
+												.accordion-card__prices
+													.accordion-card__price.accordion-card__price-retail
+														span РРЦ:
+														span.text-bold.proba-family 356₴
+													.accordion-card__price.accordion-card__sum
+														label 7 товарів
+														span Сума:
+														span.text-bold.proba-family 356₴
+												.accordion-card__status(data__dropdown-parent)
+													.accordion-card__status-icon(data__dropdown)
+													.accordion-card__status-tooltip
+														span Товар зарезервований на складі
+												.accordion-card__repeat
+													a(href="#").admin-products__cart-btn
+														span.text-accent.text-bold Повторити замовлення
+										#collapseFive.collapse(aria-labelledby='headingFive' data-parent='#ordersAccordion')
+											.accordion-card__body
+												| Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the
+												code .show
+												|  class.
+									.orders-accordion__card.accordion-card(data-order-status="warehouse-shipped")
+										#headingSix.accordion-card__header
+											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseSix' aria-expanded='false' aria-controls='collapseSix')
+												.accordion-card__info
+													.accordion-card__header-info
+														.accordion-card__id №09877868374
+														span 18.10.2021 10:00
+														span Павлов Л.А.
+												.accordion-card__photos
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/1.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/2.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/3.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/4.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/5.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/6.png", alt="")
+													.accordion-card__thumb
+														img(src="./img/product-thumbs/7.png", alt="")
+												.accordion-card__prices
+													.accordion-card__price.accordion-card__price-retail
+														span РРЦ:
+														span.text-bold.proba-family 356₴
+													.accordion-card__price.accordion-card__sum
+														label 7 товарів
+														span Сума:
+														span.text-bold.proba-family 356₴
+												.accordion-card__status(data__dropdown-parent)
+													.accordion-card__status-icon(data__dropdown)
+													.accordion-card__status-tooltip
+														span Замовлення відвантажено зі складу
+												.accordion-card__repeat
+													a(href="#").admin-products__cart-btn
+														span.text-accent.text-bold Повторити замовлення
+										#collapseSix.collapse(aria-labelledby='headingSix' data-parent='#ordersAccordion')
+											.accordion-card__body
+												| Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the
+												code .show
+												|  class.
+
+						include ./partials/pagination
+

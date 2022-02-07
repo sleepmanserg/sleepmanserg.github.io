@@ -29,6 +29,9 @@ $(document).ready(function () {
 				theme.stickyHeader();
 				theme.phoneMask();
 				theme.partnersSlider();
+				theme.inputPlusMinus();
+				theme.cartAddRemove();
+				// theme.imageTooltip();
 			},
 
 			/** Sticky header on scroll */
@@ -546,6 +549,43 @@ $(document).ready(function () {
 					]
 				});
 			},
+
+			/** Input +/- increment */
+			inputPlusMinus: () => {
+				$('.minus').on('click', function () {
+					let $input = $(this).parent().find('input');
+					let count = parseInt($input.val()) - 1;
+					count = count < 1 ? 1 : count;
+					$input.val(count);
+					$input.change();
+					return false;
+				});
+
+				$('.plus').on('click', function () {
+					let $input = $(this).parent().find('input');
+					$input.val(parseInt($input.val()) + 1);
+					$input.change();
+					return false;
+				});
+			},
+
+			/** Cart add / remove  */
+
+			cartAddRemove: () => {
+
+				// let cartAdd = document.querySelectorAll('.admin-products__cart-btn');
+				// cartAdd.forEach(btn => {
+				// 	btn.addEventListener('click', (e) =>  {
+				// 		btn.classList.add('is-hidden');
+				// 	})
+				// });
+			}
+
+
+
+			// imageTooltip: () => {
+			// 	$('[data-toggle="tooltip"]').tooltip();
+			// }
 
 		}
 		theme.init();
