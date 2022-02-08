@@ -325,7 +325,7 @@
 			.accordion-card__status-tooltip {
 				padding: 14px;
 				left: calc(-50% - 10px);
-				bottom: calc(100% - 5px);
+				bottom: calc(100% + 10px);
 				&::after {
 					transform: translateX(0);
 					left: auto;

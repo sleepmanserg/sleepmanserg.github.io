@@ -1402,6 +1402,12 @@ svg {
   font-weight: bold;
 }
 
+select {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
 .admin-catalog__select {
   position: relative;
 }
@@ -1413,6 +1419,9 @@ svg {
   border: none;
   background-color: transparent;
   color: #565656;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .admin-catalog__select::before {
@@ -5761,7 +5770,7 @@ svg {
   .accordion-card__btn .accordion-card__status .accordion-card__status-tooltip {
     padding: 14px;
     left: calc(-50% - 10px);
-    bottom: calc(100% - 5px);
+    bottom: calc(100% + 10px);
   }
   .accordion-card__btn .accordion-card__status .accordion-card__status-tooltip::after {
     -webkit-transform: translateX(0);

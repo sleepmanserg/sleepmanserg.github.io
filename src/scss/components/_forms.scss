@@ -385,6 +385,11 @@
 	}
 }
 
+select {
+	box-shadow: none !important;
+	outline: none !important;
+}
+
 .admin-catalog__select {
 	position: relative;
 	select {
@@ -392,6 +397,8 @@
 		border: none;
 		background-color: transparent;
 		color: #565656;
+		box-shadow: none !important;
+		outline: none !important;
 	}
 	&::before {
 		content: '\e900';
