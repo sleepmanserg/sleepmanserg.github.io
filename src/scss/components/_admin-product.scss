@@ -18,45 +18,6 @@
 												'product-image product-about product-price-one'
 												'product-image product-about product-price-two'
 												'product-action product-action product-action';
-	.admin-products__item-img {
-		grid-area: product-image;
-		width: 73px;
-		height: 73px;
-		background-color: $white-clr;
-		position: relative;
-		border-top-left-radius: 4px;
-		border-bottom-left-radius: 4px;
-		margin: 3px;
-		a {
-			display: block;
-		}
-		img {
-			width: 100%;
-			height: 100%;
-			display: block;
-		}
-		@include hover {
-			.admin-products__item-tooltip {
-				opacity: 1;
-				visibility: visible;
-			}
-		}
-		.admin-products__item-tooltip {
-			position: absolute;
-			top: 22px;
-			left: calc(100% + 10px);
-			width: 250px;
-			height: 250px;
-			background-color: $white-clr;
-			box-shadow: 3px 6px 3px rgba(0, 0, 0, 0.06);
-			border: 1px solid #DADADA;
-			opacity: 0;
-			visibility: hidden;
-			pointer-events: none;
-			transition: .25s;
-			z-index: 2;
-		}
-	}
 	.admin-products__item-about {
 		grid-area: product-about;
 		display: grid;
@@ -158,6 +119,52 @@
 	}
 }
 
+.admin-products__item-img {
+	grid-area: product-image;
+	width: 73px;
+	height: 73px;
+	flex: 0 0 73px;
+	background-color: $white-clr;
+	position: relative;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	margin: 3px;
+	a {
+		display: block;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	@include hover {
+		.admin-products__item-tooltip {
+			opacity: 1;
+			visibility: visible;
+			display: block;
+		}
+	}
+	.admin-products__item-tooltip {
+		position: absolute;
+		top: 22px;
+		left: calc(100% + 10px);
+		width: 250px;
+		height: 250px;
+		background-color: $white-clr;
+		box-shadow: 3px 6px 3px rgba(0, 0, 0, 0.06);
+		border: 1px solid #DADADA;
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: .25s;
+		z-index: 2;
+		@media (max-width: 768px) {
+			display: none !important;
+		}
+	}
+}
+
 .admin-products__cart-btn {
 	text-decoration: none;
 	background-color: transparent;
@@ -246,6 +253,7 @@
 		.admin-products__item-img {
 			width: 60px;
 			height: 60px;
+			flex: 0 0 60px;
 		}
 	}
 }

@@ -19,7 +19,7 @@ block content
 					a(href="/") Головна
 				li.breadcrumbs-item
 					span Історія замовлень
-			.row.catalog-wrapper
+			.row.orders-wrapper
 				.col-lg-12
 					.admin-catalog
 						.admin-catalog__header
@@ -47,7 +47,7 @@ block content
 													.accordion-card__header-info
 														.accordion-card__id №09877868374
 														span 18.10.2021 10:00
-														span Павлов Л.А.
+
 												.accordion-card__photos
 													.accordion-card__thumb
 														img(src="./img/product-thumbs/1.png", alt="")
@@ -64,13 +64,14 @@ block content
 													.accordion-card__thumb
 														img(src="./img/product-thumbs/7.png", alt="")
 												.accordion-card__prices
+													.accordion-card__price.accordion-card__price-label
+														label 7 товарів
 													.accordion-card__price.accordion-card__price-retail
 														span РРЦ:
-														span.text-bold.proba-family 356₴
+														span.text-bold.proba-family 3562₴
 													.accordion-card__price.accordion-card__sum
-														label 7 товарів
 														span Сума:
-														span.text-bold.proba-family 356₴
+														span.text-bold.proba-family 35622₴
 												.accordion-card__status(data__dropdown-parent)
 													.accordion-card__status-icon(data__dropdown)
 													.accordion-card__status-tooltip
@@ -81,9 +82,81 @@ block content
 
 										#collapseOne.collapse(aria-labelledby='headingOne' data-parent='#ordersAccordion')
 											.accordion-card__body
-												| Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the
-												code .show
-												|  class.
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/1.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/1.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Ручка дверна
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/2.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/2.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Длинное название ручки которая таки на дверь
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/3.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/3.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Ручка дверна
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-footer
+													.accordion-card__body-left
+														p.m-0.text-dark.text-14.text-bold Доставка:
+														span.text-14 г. Одесса, ул. Филатова, 45б кв.7
+													.accordion-card__body-right
+														.accordion-card__body-prices
+															.accordion-card__retail
+																span РРЦ:
+																span.proba-family.text-bold.text-dark.text-18 2136₴
+															.accordion-card__retail
+																span Повна вартість замовлення:
+																span.proba-family.text-bold.text-dark.text-18 2136₴
 
 									.orders-accordion__card.accordion-card(data-order-status="reserve")
 										#headingTwo.accordion-card__header
@@ -92,7 +165,7 @@ block content
 													.accordion-card__header-info
 														.accordion-card__id №09877868374
 														span 18.10.2021 10:00
-														span Павлов Л.А.
+
 												.accordion-card__photos
 													.accordion-card__thumb
 														img(src="./img/product-thumbs/1.png", alt="")
@@ -112,8 +185,9 @@ block content
 													.accordion-card__price.accordion-card__price-retail
 														span РРЦ:
 														span.text-bold.proba-family 356₴
-													.accordion-card__price.accordion-card__sum
+													.accordion-card__price.accordion-card__price-label
 														label 7 товарів
+													.accordion-card__price.accordion-card__sum
 														span Сума:
 														span.text-bold.proba-family 356₴
 												.accordion-card__status(data__dropdown-parent)
@@ -125,9 +199,82 @@ block content
 														span.text-accent.text-bold Повторити замовлення
 										#collapseTwo.collapse(aria-labelledby='headingTwo' data-parent='#ordersAccordion')
 											.accordion-card__body
-												| Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the
-												code .show
-												|  class.
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/1.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/1.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Ручка дверна
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/2.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/2.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Длинное название ручки которая таки на дверь
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/3.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/3.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Ручка дверна
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-footer
+													.accordion-card__body-left
+														p.m-0.text-dark.text-14.text-bold Доставка:
+														span.text-14 г. Одесса, ул. Филатова, 45б кв.7
+													.accordion-card__body-right
+														.accordion-card__body-prices
+															.accordion-card__retail
+																span РРЦ:
+																span.proba-family.text-bold.text-dark.text-18 2136₴
+															.accordion-card__retail
+																span Повна вартість замовлення:
+																span.proba-family.text-bold.text-dark.text-18 2136₴
+
 									.orders-accordion__card.accordion-card(data-order-status="shipped")
 										#headingThree.accordion-card__header
 											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
@@ -135,7 +282,7 @@ block content
 													.accordion-card__header-info
 														.accordion-card__id №09877868374
 														span 18.10.2021 10:00
-														span Павлов Л.А.
+
 												.accordion-card__photos
 													.accordion-card__thumb
 														img(src="./img/product-thumbs/1.png", alt="")
@@ -155,8 +302,9 @@ block content
 													.accordion-card__price.accordion-card__price-retail
 														span РРЦ:
 														span.text-bold.proba-family 356₴
-													.accordion-card__price.accordion-card__sum
+													.accordion-card__price.accordion-card__price-label
 														label 7 товарів
+													.accordion-card__price.accordion-card__sum
 														span Сума:
 														span.text-bold.proba-family 356₴
 												.accordion-card__status(data__dropdown-parent)
@@ -168,9 +316,82 @@ block content
 														span.text-accent.text-bold Повторити замовлення
 										#collapseThree.collapse(aria-labelledby='headingThree' data-parent='#ordersAccordion')
 											.accordion-card__body
-												| Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the
-												code .show
-												|  class.
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/1.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/1.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Ручка дверна
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/2.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/2.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Длинное название ручки которая таки на дверь
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/3.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/3.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Ручка дверна
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-footer
+													.accordion-card__body-left
+														p.m-0.text-dark.text-14.text-bold Доставка:
+														span.text-14 г. Одесса, ул. Филатова, 45б кв.7
+													.accordion-card__body-right
+														.accordion-card__body-prices
+															.accordion-card__retail
+																span РРЦ:
+																span.proba-family.text-bold.text-dark.text-18 2136₴
+															.accordion-card__retail
+																span Повна вартість замовлення:
+																span.proba-family.text-bold.text-dark.text-18 2136₴
+
 									.orders-accordion__card.accordion-card(data-order-status="decline")
 										#headingFour.accordion-card__header
 											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseFour' aria-expanded='false' aria-controls='collapseFour')
@@ -178,7 +399,7 @@ block content
 													.accordion-card__header-info
 														.accordion-card__id №09877868374
 														span 18.10.2021 10:00
-														span Павлов Л.А.
+
 												.accordion-card__photos
 													.accordion-card__thumb
 														img(src="./img/product-thumbs/1.png", alt="")
@@ -198,8 +419,9 @@ block content
 													.accordion-card__price.accordion-card__price-retail
 														span РРЦ:
 														span.text-bold.proba-family 356₴
-													.accordion-card__price.accordion-card__sum
+													.accordion-card__price.accordion-card__price-label
 														label 7 товарів
+													.accordion-card__price.accordion-card__sum
 														span Сума:
 														span.text-bold.proba-family 356₴
 												.accordion-card__status(data__dropdown-parent)
@@ -211,9 +433,82 @@ block content
 														span.text-accent.text-bold Повторити замовлення
 										#collapseFour.collapse(aria-labelledby='headingFour' data-parent='#ordersAccordion')
 											.accordion-card__body
-												| Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the
-												code .show
-												|  class.
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/1.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/1.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Ручка дверна
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/2.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/2.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Длинное название ручки которая таки на дверь
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/3.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/3.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Ручка дверна
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-footer
+													.accordion-card__body-left
+														p.m-0.text-dark.text-14.text-bold Доставка:
+														span.text-14 г. Одесса, ул. Филатова, 45б кв.7
+													.accordion-card__body-right
+														.accordion-card__body-prices
+															.accordion-card__retail
+																span РРЦ:
+																span.proba-family.text-bold.text-dark.text-18 2136₴
+															.accordion-card__retail
+																span Повна вартість замовлення:
+																span.proba-family.text-bold.text-dark.text-18 2136₴
+
 									.orders-accordion__card.accordion-card(data-order-status="warehouse-reserve")
 										#headingFive.accordion-card__header
 											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseFive' aria-expanded='false' aria-controls='collapseFive')
@@ -221,7 +516,7 @@ block content
 													.accordion-card__header-info
 														.accordion-card__id №09877868374
 														span 18.10.2021 10:00
-														span Павлов Л.А.
+
 												.accordion-card__photos
 													.accordion-card__thumb
 														img(src="./img/product-thumbs/1.png", alt="")
@@ -241,8 +536,9 @@ block content
 													.accordion-card__price.accordion-card__price-retail
 														span РРЦ:
 														span.text-bold.proba-family 356₴
-													.accordion-card__price.accordion-card__sum
+													.accordion-card__price.accordion-card__price-label
 														label 7 товарів
+													.accordion-card__price.accordion-card__sum
 														span Сума:
 														span.text-bold.proba-family 356₴
 												.accordion-card__status(data__dropdown-parent)
@@ -254,9 +550,82 @@ block content
 														span.text-accent.text-bold Повторити замовлення
 										#collapseFive.collapse(aria-labelledby='headingFive' data-parent='#ordersAccordion')
 											.accordion-card__body
-												| Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the
-												code .show
-												|  class.
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/1.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/1.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Ручка дверна
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/2.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/2.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Длинное название ручки которая таки на дверь
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/3.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/3.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Ручка дверна
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-footer
+													.accordion-card__body-left
+														p.m-0.text-dark.text-14.text-bold Доставка:
+														span.text-14 г. Одесса, ул. Филатова, 45б кв.7
+													.accordion-card__body-right
+														.accordion-card__body-prices
+															.accordion-card__retail
+																span РРЦ:
+																span.proba-family.text-bold.text-dark.text-18 2136₴
+															.accordion-card__retail
+																span Повна вартість замовлення:
+																span.proba-family.text-bold.text-dark.text-18 2136₴
+
 									.orders-accordion__card.accordion-card(data-order-status="warehouse-shipped")
 										#headingSix.accordion-card__header
 											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseSix' aria-expanded='false' aria-controls='collapseSix')
@@ -264,7 +633,7 @@ block content
 													.accordion-card__header-info
 														.accordion-card__id №09877868374
 														span 18.10.2021 10:00
-														span Павлов Л.А.
+
 												.accordion-card__photos
 													.accordion-card__thumb
 														img(src="./img/product-thumbs/1.png", alt="")
@@ -283,11 +652,12 @@ block content
 												.accordion-card__prices
 													.accordion-card__price.accordion-card__price-retail
 														span РРЦ:
-														span.text-bold.proba-family 356₴
-													.accordion-card__price.accordion-card__sum
+														span.text-bold.proba-family 35226₴
+													.accordion-card__price.accordion-card__price-label
 														label 7 товарів
+													.accordion-card__price.accordion-card__sum
 														span Сума:
-														span.text-bold.proba-family 356₴
+														span.text-bold.proba-family 352226₴
 												.accordion-card__status(data__dropdown-parent)
 													.accordion-card__status-icon(data__dropdown)
 													.accordion-card__status-tooltip
@@ -297,9 +667,82 @@ block content
 														span.text-accent.text-bold Повторити замовлення
 										#collapseSix.collapse(aria-labelledby='headingSix' data-parent='#ordersAccordion')
 											.accordion-card__body
-												| Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the
-												code .show
-												|  class.
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/1.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/1.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Ручка дверна
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/2.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/2.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Длинное название ручки которая таки на дверь
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-inner-item
+													.admin-products__item-img
+														a(href="product-card.html")
+															img(src="./img/product-thumbs/3.png", alt="")
+															.admin-products__item-tooltip
+																img(src="./img/product-thumbs/3.png", alt="")
+													.accordion-card__body-product
+														a(href="product-card.html").accordion-card__body-product-name.proba-family
+															| Ручка дверна
+															span.text-accent DND Quattro
+													.accordion-card__body-prices
+														.accordion-card__retail
+															span РРЦ:
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 1 шт.
+															span.proba-family.text-bold.text-dark 356₴
+														.accordion-card__count
+															span 2 шт.
+															span.proba-family.text-bold.text-dark.text-18 712₴
+
+												.accordion-card__body-footer
+													.accordion-card__body-left
+														p.m-0.text-dark.text-14.text-bold Доставка:
+														span.text-14 г. Одесса, ул. Филатова, 45б кв.7
+													.accordion-card__body-right
+														.accordion-card__body-prices
+															.accordion-card__retail
+																span РРЦ:
+																span.proba-family.text-bold.text-dark.text-18 2136₴
+															.accordion-card__retail
+																span Повна вартість замовлення:
+																span.proba-family.text-bold.text-dark.text-18 2136₴
+
 
 						include ./partials/pagination
 
