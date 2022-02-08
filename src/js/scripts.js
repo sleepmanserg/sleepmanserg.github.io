@@ -468,6 +468,7 @@ $(document).ready(function () {
 					fade: true,
 					asNavFor: '.product-slider__thumbs',
 					draggable: false,
+					swipe: false
 				});
 				$('.product-slider__thumbs').slick({
 					slidesToShow: 6,
