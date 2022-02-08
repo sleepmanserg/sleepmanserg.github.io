@@ -5359,10 +5359,6 @@ svg {
   overflow: hidden;
 }
 
-.orders {
-  background-color: #FFFFFF;
-}
-
 .accordion-card {
   border: 1px solid #F0F0F0;
   -webkit-box-sizing: border-box;
@@ -5638,6 +5634,8 @@ svg {
 .accordion-card__header {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
+  padding: 16px 0;
+  background-color: #FFFFFF;
 }
 
 .accordion-card__btn {
@@ -5660,14 +5658,6 @@ svg {
   background-color: #FFFFFF;
   -webkit-column-gap: 15px;
   column-gap: 15px;
-}
-
-.accordion-card__btn .accordion-card__info {
-  padding-top: 16px;
-}
-
-.accordion-card__btn .accordion-card__repeat {
-  padding-top: 16px;
 }
 
 .accordion-card__btn::before {
@@ -5731,7 +5721,7 @@ svg {
     padding-left: 16px;
   }
   .accordion-card__btn::before {
-    top: 27px;
+    top: 19px;
     left: 16px;
   }
   .accordion-card__btn.collapsed {
@@ -5790,6 +5780,9 @@ svg {
     grid-template-columns: repeat(2, 50%);
     row-gap: 10px;
     padding-right: 1rem;
+  }
+  .accordion-card__btn::before {
+    top: 8px;
   }
   .accordion-card__btn .accordion-card__info {
     -webkit-box-ordinal-group: 2;
@@ -5933,7 +5926,6 @@ svg {
   column-gap: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-bottom: 16px;
 }
 
 @media (max-width: 1300px) {
@@ -6053,7 +6045,6 @@ svg {
 
 .accordion-card__status {
   position: relative;
-  padding-top: 16px;
 }
 
 .accordion-card__status.active .accordion-card__status-tooltip {
@@ -6282,21 +6273,15 @@ svg {
   }
 }
 
-.accordion-card__body-prices .accordion-card__count,
-.accordion-card__body-prices .accordion-card__retail {
-  -webkit-column-gap: 5px;
-  column-gap: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.accordion-card__body-prices .accordion-card__count span,
+.accordion-card__body-prices .accordion-card__retail span {
+  display: inline-block;
 }
 
 .accordion-card__body-prices .accordion-card__count span:not(.text-dark),
 .accordion-card__body-prices .accordion-card__retail span:not(.text-dark) {
   color: #565656;
+  margin-right: 5px;
 }
 
 .accordion-card__body-prices .accordion-card__retail span:not(.text-dark) {

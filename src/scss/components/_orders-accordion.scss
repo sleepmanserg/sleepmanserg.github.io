@@ -8,7 +8,7 @@
 }
 
 .orders {
-	background-color: $white-clr;
+	// background-color: $white-clr;
 }
 
 .accordion-card {
@@ -213,6 +213,8 @@
 .accordion-card__header {
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
+	padding: 16px 0;
+	background-color: $white-clr;
 }
 
 .accordion-card__btn {
@@ -220,7 +222,6 @@
 	align-items: center;
 	justify-content: space-between;
 	cursor: pointer;
-	// padding-bottom: 16px;
 	padding-right: 24px;
 	padding-left: 61px;
 	position: relative;
@@ -230,10 +231,12 @@
 	background-color: $white-clr;
 	column-gap: 15px;
 	.accordion-card__info {
-		padding-top: 16px;
+		// padding-top: 16px;
+		// padding-bottom: 16px;
 	}
 	.accordion-card__repeat {
-		padding-top: 16px;
+		// padding-top: 16px;
+		// padding-bottom: 16px;
 	}
 	&::before {
 		content: "\e912";
@@ -286,7 +289,7 @@
 		row-gap: 16px;
 		padding-left: 16px;
 		&::before {
-			top: 27px;
+			top: 19px;
 			left: 16px;
 		}
 		&.collapsed {
@@ -339,6 +342,9 @@
 		grid-template-columns: repeat(2, 50%);
 		row-gap: 10px;
 		padding-right: 1rem;
+		&::before {
+			top: 8px;
+		}
 		.accordion-card__info {
 			order: 1;
 			grid-column-start: 1;
@@ -447,7 +453,6 @@
 	column-gap: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	padding-bottom: 16px;
 	@media (max-width: 1300px) {
 		grid-template-columns: 1fr;
 		margin-left: auto;
@@ -530,7 +535,7 @@
 
 .accordion-card__status {
 	position: relative;
-	padding-top: 16px;
+	// padding-top: 16px;
 	&.active {
 		.accordion-card__status-tooltip {
 			opacity: 1;
@@ -691,13 +696,15 @@
 	}
 	.accordion-card__count,
 	.accordion-card__retail {
-		column-gap: 5px;
-		display: flex;
-		align-items: center;
 		span {
+			display: inline-block;
 			&:not(.text-dark) {
 				color: #565656;
+				margin-right: 5px;
 			}
+		}
+		span.text-dark {
+			// line-height: 1.3;
 		}
 	}
 	.accordion-card__retail {
