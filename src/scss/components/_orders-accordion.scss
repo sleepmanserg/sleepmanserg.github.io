@@ -7,6 +7,10 @@
 	overflow: hidden;
 }
 
+.orders {
+	background-color: $white-clr;
+}
+
 .accordion-card {
 	border: 1px solid $grey-superlight-clr;
 	box-sizing: border-box;
@@ -216,7 +220,7 @@
 	align-items: center;
 	justify-content: space-between;
 	cursor: pointer;
-	padding: 16px 0;
+	// padding-bottom: 16px;
 	padding-right: 24px;
 	padding-left: 61px;
 	position: relative;
@@ -225,6 +229,12 @@
 	border-radius: 4px;
 	background-color: $white-clr;
 	column-gap: 15px;
+	.accordion-card__info {
+		padding-top: 16px;
+	}
+	.accordion-card__repeat {
+		padding-top: 16px;
+	}
 	&::before {
 		content: "\e912";
 		position: absolute;
@@ -312,7 +322,7 @@
 			.accordion-card__status-tooltip {
 				padding: 14px;
 				left: calc(-50% - 10px);
-				bottom: calc(100% + 10px);
+				bottom: calc(100% - 5px);
 				&::after {
 					transform: translateX(0);
 					left: auto;
@@ -437,6 +447,7 @@
 	column-gap: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	padding-bottom: 16px;
 	@media (max-width: 1300px) {
 		grid-template-columns: 1fr;
 		margin-left: auto;
@@ -519,6 +530,7 @@
 
 .accordion-card__status {
 	position: relative;
+	padding-top: 16px;
 	&.active {
 		.accordion-card__status-tooltip {
 			opacity: 1;

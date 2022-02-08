@@ -72,6 +72,8 @@
 		display: flex;
 		align-items: center;
 		overflow: hidden;
+		outline: none !important;
+		box-shadow: none !important;
 		@media (max-width: 600px) {
 			height: 38px;
 		}
@@ -150,6 +152,10 @@
 		width: 100% !important;
 		border-radius: 8px;
 		background-color: $white-clr;
+		* {
+			outline: none !important;
+			box-shadow: none !important;
+		}
 		.select2-results__option--selectable {
 			display: flex;
 		}
@@ -358,6 +364,7 @@
 			line-height: 27px;
 			letter-spacing: 0;
 			text-decoration: none;
+			color: $black-clr;
 			@include hover {
 				color: $accent-clr;
 			}

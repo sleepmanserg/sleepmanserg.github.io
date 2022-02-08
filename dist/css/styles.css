@@ -3243,6 +3243,9 @@ svg {
   -ms-flex-align: center;
   align-items: center;
   overflow: hidden;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 @media (max-width: 600px) {
@@ -3355,6 +3358,12 @@ svg {
   width: 100% !important;
   border-radius: 8px;
   background-color: #FFFFFF;
+}
+
+.product-card__about .select2 * {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .product-card__about .select2 .select2-results__option--selectable {
@@ -3625,6 +3634,7 @@ svg {
   line-height: 27px;
   letter-spacing: 0;
   text-decoration: none;
+  color: #111111;
 }
 
 @media (hover: none) {
@@ -5349,6 +5359,10 @@ svg {
   overflow: hidden;
 }
 
+.orders {
+  background-color: #FFFFFF;
+}
+
 .accordion-card {
   border: 1px solid #F0F0F0;
   -webkit-box-sizing: border-box;
@@ -5637,7 +5651,6 @@ svg {
   -ms-flex-pack: justify;
   justify-content: space-between;
   cursor: pointer;
-  padding: 16px 0;
   padding-right: 24px;
   padding-left: 61px;
   position: relative;
@@ -5647,6 +5660,14 @@ svg {
   background-color: #FFFFFF;
   -webkit-column-gap: 15px;
   column-gap: 15px;
+}
+
+.accordion-card__btn .accordion-card__info {
+  padding-top: 16px;
+}
+
+.accordion-card__btn .accordion-card__repeat {
+  padding-top: 16px;
 }
 
 .accordion-card__btn::before {
@@ -5750,7 +5771,7 @@ svg {
   .accordion-card__btn .accordion-card__status .accordion-card__status-tooltip {
     padding: 14px;
     left: calc(-50% - 10px);
-    bottom: calc(100% + 10px);
+    bottom: calc(100% - 5px);
   }
   .accordion-card__btn .accordion-card__status .accordion-card__status-tooltip::after {
     -webkit-transform: translateX(0);
@@ -5912,6 +5933,7 @@ svg {
   column-gap: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-bottom: 16px;
 }
 
 @media (max-width: 1300px) {
@@ -6031,6 +6053,7 @@ svg {
 
 .accordion-card__status {
   position: relative;
+  padding-top: 16px;
 }
 
 .accordion-card__status.active .accordion-card__status-tooltip {
