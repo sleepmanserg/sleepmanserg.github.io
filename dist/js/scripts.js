@@ -30,7 +30,6 @@ $(document).ready(function () {
 				theme.phoneMask();
 				theme.partnersSlider();
 				theme.inputPlusMinus();
-				theme.cartAddRemove();
 				// theme.imageTooltip();
 			},
 
@@ -568,24 +567,6 @@ $(document).ready(function () {
 					return false;
 				});
 			},
-
-			/** Cart add / remove  */
-
-			cartAddRemove: () => {
-
-				// let cartAdd = document.querySelectorAll('.admin-products__cart-btn');
-				// cartAdd.forEach(btn => {
-				// 	btn.addEventListener('click', (e) =>  {
-				// 		btn.classList.add('is-hidden');
-				// 	})
-				// });
-			}
-
-
-
-			// imageTooltip: () => {
-			// 	$('[data-toggle="tooltip"]').tooltip();
-			// }
 
 		}
 		theme.init();

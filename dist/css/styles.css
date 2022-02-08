@@ -3006,6 +3006,15 @@ svg {
   font-size: 14px;
   font-weight: bold;
   color: #111111;
+  overflow: hidden;
+}
+
+.product-tile .color-item img {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 @media (hover: none) {
