@@ -230,6 +230,9 @@
 	border-radius: 4px;
 	background-color: $white-clr;
 	column-gap: 15px;
+	border: none;
+	appearance: none;
+	-webkit-appearance: none;
 	.accordion-card__info {
 		// padding-top: 16px;
 		// padding-bottom: 16px;
@@ -453,6 +456,9 @@
 	column-gap: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	max-width: 270px;
+	width: 100%;
+	text-align: right;
 	@media (max-width: 1300px) {
 		grid-template-columns: 1fr;
 		margin-left: auto;

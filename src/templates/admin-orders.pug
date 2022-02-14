@@ -1,4 +1,4 @@
-extends partials/layout
+extends partials/layout-admin
 
 //- Override default config variables
 append config
@@ -42,7 +42,7 @@ block content
 								#ordersAccordion.orders-accordion
 									.orders-accordion__card.accordion-card(data-order-status="in-process")
 										#headingOne.accordion-card__header
-											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
+											.accordion-card__btn.accordion__btn.collapsed(data-toggle='collapse' data-target='#collapseOne' aria-expanded='false' aria-controls='collapseOne')
 												.accordion-card__info
 													.accordion-card__header-info
 														.accordion-card__id №09877868374
@@ -73,7 +73,7 @@ block content
 														span Сума:
 														span.text-bold.proba-family 35622₴
 												.accordion-card__status(data__dropdown-parent)
-													.accordion-card__status-icon(data__dropdown)
+													.accordion-card__status-icon.accordion-inner-btn(data__dropdown)
 													.accordion-card__status-tooltip
 														span Замовлення в обробці у менеджера
 												.accordion-card__repeat
@@ -160,7 +160,7 @@ block content
 
 									.orders-accordion__card.accordion-card(data-order-status="reserve")
 										#headingTwo.accordion-card__header
-											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+											.accordion-card__btn.accordion__btn.collapsed(data-toggle='collapse' data-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
 												.accordion-card__info
 													.accordion-card__header-info
 														.accordion-card__id №09877868374
@@ -191,7 +191,7 @@ block content
 														span Сума:
 														span.text-bold.proba-family 356₴
 												.accordion-card__status(data__dropdown-parent)
-													.accordion-card__status-icon(data__dropdown)
+													.accordion-card__status-icon.accordion-inner-btn(data__dropdown)
 													.accordion-card__status-tooltip
 														span Товар зарезервований в очікуваному постачанні
 												.accordion-card__repeat
@@ -277,7 +277,7 @@ block content
 
 									.orders-accordion__card.accordion-card(data-order-status="shipped")
 										#headingThree.accordion-card__header
-											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
+											.accordion-card__btn.accordion__btn.collapsed(data-toggle='collapse' data-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
 												.accordion-card__info
 													.accordion-card__header-info
 														.accordion-card__id №09877868374
@@ -308,7 +308,7 @@ block content
 														span Сума:
 														span.text-bold.proba-family 356₴
 												.accordion-card__status(data__dropdown-parent)
-													.accordion-card__status-icon(data__dropdown)
+													.accordion-card__status-icon.accordion-inner-btn(data__dropdown)
 													.accordion-card__status-tooltip
 														span Товар відвантажено
 												.accordion-card__repeat
@@ -394,7 +394,7 @@ block content
 
 									.orders-accordion__card.accordion-card(data-order-status="decline")
 										#headingFour.accordion-card__header
-											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseFour' aria-expanded='false' aria-controls='collapseFour')
+											.accordion-card__btn.accordion__btn.collapsed(data-toggle='collapse' data-target='#collapseFour' aria-expanded='false' aria-controls='collapseFour')
 												.accordion-card__info
 													.accordion-card__header-info
 														.accordion-card__id №09877868374
@@ -425,7 +425,7 @@ block content
 														span Сума:
 														span.text-bold.proba-family 356₴
 												.accordion-card__status(data__dropdown-parent)
-													.accordion-card__status-icon(data__dropdown)
+													.accordion-card__status-icon.accordion-inner-btn(data__dropdown)
 													.accordion-card__status-tooltip
 														span Замовлення скасовано, уточнюйте деталі у менеджера
 												.accordion-card__repeat
@@ -511,7 +511,7 @@ block content
 
 									.orders-accordion__card.accordion-card(data-order-status="warehouse-reserve")
 										#headingFive.accordion-card__header
-											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseFive' aria-expanded='false' aria-controls='collapseFive')
+											.accordion-card__btn.accordion__btn.collapsed(data-toggle='collapse' data-target='#collapseFive' aria-expanded='false' aria-controls='collapseFive')
 												.accordion-card__info
 													.accordion-card__header-info
 														.accordion-card__id №09877868374
@@ -542,7 +542,7 @@ block content
 														span Сума:
 														span.text-bold.proba-family 356₴
 												.accordion-card__status(data__dropdown-parent)
-													.accordion-card__status-icon(data__dropdown)
+													.accordion-card__status-icon.accordion-inner-btn(data__dropdown)
 													.accordion-card__status-tooltip
 														span Товар зарезервований на складі
 												.accordion-card__repeat
@@ -628,7 +628,7 @@ block content
 
 									.orders-accordion__card.accordion-card(data-order-status="warehouse-shipped")
 										#headingSix.accordion-card__header
-											.accordion-card__btn.collapsed(type='button' data-toggle='collapse' data-target='#collapseSix' aria-expanded='false' aria-controls='collapseSix')
+											.accordion-card__btn.accordion__btn.collapsed(data-toggle='collapse' data-target='#collapseSix' aria-expanded='false' aria-controls='collapseSix')
 												.accordion-card__info
 													.accordion-card__header-info
 														.accordion-card__id №09877868374
@@ -659,7 +659,7 @@ block content
 														span Сума:
 														span.text-bold.proba-family 352226₴
 												.accordion-card__status(data__dropdown-parent)
-													.accordion-card__status-icon(data__dropdown)
+													.accordion-card__status-icon.accordion-inner-btn(data__dropdown)
 													.accordion-card__status-tooltip
 														span Замовлення відвантажено зі складу
 												.accordion-card__repeat

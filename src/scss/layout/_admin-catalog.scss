@@ -3,6 +3,13 @@
 	padding-bottom: 47px;
 }
 
+.checkbox-filter__link {
+	text-decoration: none;
+	@include hover {
+		text-decoration: none;
+	}
+}
+
 .admin-catalog__header {
 	display: flex;
 	align-items: center;
@@ -86,7 +93,7 @@
 	}
 	.check {
 		.check__box {
-			top: 12px;
+			top: 14px;
 		}
 		.check__text {
 			margin-top: 4px;

@@ -30,6 +30,7 @@ $(document).ready(function () {
 				theme.phoneMask();
 				theme.partnersSlider();
 				theme.inputPlusMinus();
+				theme.preventAccordionOpen();
 				// theme.imageTooltip();
 			},
 
@@ -89,12 +90,13 @@ $(document).ready(function () {
 				document.documentElement.style.setProperty('--vh', `${vh}px`);
 			},
 
-			/** Dyneamic adaptive */
+			/** Dynamic adaptive */
 
 			dynamicAdaptive: () => {
 				const da = new DynamicAdapt("max");
 				da.init();
 			},
+
 			touchDevice: () => {
 				function isTouchScreendevice() {
 					return (('ontouchstart' in window) ||
@@ -149,11 +151,13 @@ $(document).ready(function () {
 			passwordShow: () => {
 				const togglePassword = document.querySelector('#togglePassword');
 				const password = document.querySelector('#id_password');
-				togglePassword.addEventListener('click', function (e) {
-					const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-					password.setAttribute('type', type);
-					this.classList.toggle('active');
-				});
+				if(togglePassword) {
+					togglePassword.addEventListener('click', function (e) {
+						const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+						password.setAttribute('type', type);
+						this.classList.toggle('active');
+					});
+				}
 			},
 
 			scrollAnim: () => {
@@ -566,6 +570,23 @@ $(document).ready(function () {
 					$input.val(parseInt($input.val()) + 1);
 					$input.change();
 					return false;
+				});
+			},
+
+			preventAccordionOpen: () => {
+				$('.accordion__btn').on('click', '.accordion-inner-btn', function(e) {
+					e.stopPropagation();
+					const isTargetButton = e.target.matches('[data__dropdown]');
+					if (!isTargetButton && e.target.closest('[data__dropdown-parent]') != null) return;
+					let currentTarget;
+					if (isTargetButton) {
+						currentTarget = e.target.closest('[data__dropdown-parent]');
+						currentTarget.classList.toggle('active');
+					}
+					document.querySelectorAll('[data__dropdown-parent].active').forEach(item => {
+						if (item == currentTarget) return;
+						item.classList.remove('active');
+					});
 				});
 			},
 

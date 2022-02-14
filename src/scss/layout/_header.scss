@@ -64,10 +64,16 @@
 	.header-phone {
 		flex: 0 0 40%;
 	}
-	.header-socials {
-		flex: 0 0 40%;
-		display: flex;
-		justify-content: center;
+	.header-left {
+		> .header-socials {
+			flex: 0 0 40%;
+			display: flex;
+			justify-content: center;
+			list-style: none;
+			@media (max-width: 1024px) {
+				display: none;
+			}
+		}
 	}
 	.header-menu-button {
 		flex: 0 0 10%;
@@ -96,24 +102,26 @@
 			}
 		}
 	}
-	.header-socials {
-		z-index: 102;
-		position: relative;
-		margin: 0 -16px;
-		span,
-		.header-socials-title {
-			display: none;
-		}
-		a {
-			color: $grey-lighter-clr;
-			text-decoration: none;
-			padding: 20px 16px;
-			i {
-				transition: .25s;
+	.header-left {
+		> .header-socials {
+			z-index: 102;
+			position: relative;
+			margin: 0 -16px;
+			span,
+			.header-socials-title {
+				display: none;
 			}
-			@include hover {
+			a {
+				color: $grey-lighter-clr;
+				text-decoration: none;
+				padding: 20px 16px;
 				i {
-					color: $accent-clr;
+					transition: .25s;
+				}
+				@include hover {
+					i {
+						color: $accent-clr;
+					}
 				}
 			}
 		}
@@ -449,11 +457,12 @@
 			min-height: calc(100vh - 50px);
 		}
 		.main-nav__list {
-			padding-bottom: 32px;
-		}
-		.main-nav__list {
 			height: 100%;
 			width: 100%;
+			padding-bottom: 100px;
+			@media (max-width: 991px) {
+				padding-bottom: 40px;
+			}
 			.main-nav__list-item {
 				&:last-of-type {
 					.main-nav__link {
@@ -465,6 +474,8 @@
 		.main-nav-pages {
 			position: relative;
 			padding: 25px 0;
+			list-style: none;
+			margin-bottom: 0;
 			.main-nav__link {
 				border: none;
 				padding: 7px 1rem;
@@ -534,9 +545,13 @@
 			width: 180px;
 		}
 		.header-lang,
-		.header-phones,
-		.header-socials {
+		.header-phones {
 			display: none;
+		}
+		.header-left {
+			> .header-socials {
+				display: none;
+			}
 		}
 		.header-wrapper {
 			padding: 0;

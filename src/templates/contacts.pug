@@ -1,0 +1,67 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'Контакти'
+	-var whatPage = 'Contacts'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	.container
+		ul.breadcrumbs
+			li.breadcrumbs-item
+				a(href="/") Головна
+			li.breadcrumbs-item
+				span Контакти
+		.row.contacts
+			.col-12
+				h1.catalog-title.proba-family.text-36 Контакти
+			.col-12
+				.contacts-card.contacts-card__top
+					.contacts-card__column
+						.contacts-card__title Адреса
+						.contacts-card__text вулиця Льва Толстого, 12, Одеса, Одеська область, 65000
+						a(href="https://www.google.com/maps/place/L'va+Tolstoho+St,+12,+Odesa,+Odes'ka+oblast,+65000/@46.4820913,30.7252411,17z/data=!3m1!4b1!4m5!3m4!1s0x40c631915f412b17:0x77a116527d409b6c!8m2!3d46.4820913!4d30.7274298" target="_blank").btn.btn-accent На карті
+					.contacts-card__column
+						.contacts-card__title Пошта
+						a(href="mailto:celeste.trade.odessa@gmail.com").contacts-card__text celeste.trade.odessa@gmail.com
+					.contacts-card__column
+						.contacts-card__title Телефон
+						a(href="tel:+380487375865").contacts-card__text +380487375865
+					.contacts-card__column
+						.contacts-card__title Соц. мережі
+						ul.contacts-socials.pl-0.m-0
+							li
+								a(href="#").contacts-socials__link
+									i.icon-instagram
+									span celeste_trade
+							li
+								a(href="#").contacts-socials__link
+									i.icon-facebook
+									span Celeste.trade.com.ua
+
+			.col-lg-7.col-md-6.col-12.mb-3.mb-md-0
+				.contacts-img
+					img(src="img/contacts.jpg", alt="")
+			.col-lg-5.col-md-6.col-12
+				.contacts-card
+					.contacts-form
+						form(action="")
+							.contacts-form__title.text-bold Напишіть нам
+							.form-group
+								input.form-control(type="text" placeholder="Ім'я")
+							.form-group
+								input.form-control(type="text" placeholder="Телефон або пошта")
+							.form-group
+								textarea.form-control(type="text" placeholder="Коментар" cols="30", rows="6")
+							button(type="submit").btn.btn-accent.w-100 Надіслати повідомлення
+					.contacts-form__success.d-none
+						i.icon-check.d-block
+						h5.contacts-form__success-title.proba-family.text-bold Лист відправлено
+						p.contacts-form__success-text Ми намагаємось обробляти ваші замовлення максимально швидко. Наш менеджер зв'яжеться з вами найближчим часом
+						.btn.btn-accent спасибі

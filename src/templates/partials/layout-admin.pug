@@ -1,0 +1,29 @@
+//- Include config.pug file that holds all variables
+block config
+  include ../helpers/config
+
+//- Mixins - reusable code snippets
+include ../helpers/mixins
+
+
+doctype html
+html(lang="en")
+
+  //- head.pug template
+  include head
+
+  // Body
+  body
+    include mobileMenu
+
+    include header-admin
+
+    main.main-wrapper
+      block content
+    .site-backdrop
+    include footer-admin
+
+    // JavaScript (jQuery) libraries, plugins and custom scripts
+    script()&attributes(isNestedFile ? {'src': '../js/vendor.min.js'} : {'src': 'js/vendor.min.js'})
+    script()&attributes(isNestedFile ? {'src': '../js/select2.js'} : {'src': 'js/select2.js'})
+    script()&attributes(isNestedFile ? {'src': '../js/scripts.min.js'} : {'src': 'js/scripts.min.js'})

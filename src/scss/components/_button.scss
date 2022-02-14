@@ -40,6 +40,16 @@
 			color: $accent-clr;
 		}
 	}
+	&.btn-grey {
+		background-color: $grey-light-clr;
+		color: $accent-clr;
+		text-align: center;
+		letter-spacing: normal;
+		@include hover {
+			background-color: $accent-clr;
+			color: $white-clr;
+		}
+	}
 }
 
 .cart-delete {
@@ -86,6 +96,31 @@
 	appearance: none;
 	@include hover {
 		background-color: $accent-clr-lighter;
+		color: $accent-clr;
+		text-decoration: none;
+	}
+}
+
+.cart-back__btn {
+	text-decoration: none;
+	border: 1px solid $grey-superlight-clr;
+	border-radius: 4px;
+	display: inline-flex;
+	background-color: $white-clr;
+	align-items: center;
+	color: $black-clr;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 36px;
+	letter-spacing: 0.1em;
+	padding: 0 17px;
+	column-gap: 15px;
+	transition: .25s;
+	span {
+		display: inline-block;
+		transition: .25s;
+	}
+	@include hover {
 		color: $accent-clr;
 		text-decoration: none;
 	}
