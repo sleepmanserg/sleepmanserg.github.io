@@ -33,26 +33,26 @@ block content
 							.col-12
 								.checkout-input
 									span.d-block.checkout-input__label Назва дилера
-									input(type="text" value="Ruslan-2345" disabled)
+									input.admin-input(type="text" value="Ruslan-2345" disabled)
 							.col-md-6
 								.checkout-input
 									span.d-block.checkout-input__label Ім'я
-									input(type="text" value="Ruslan-2345" disabled)
+									input.admin-input(type="text" value="Ruslan-2345" disabled)
 							.col-md-6
 								.checkout-input
 									span.d-block.checkout-input__label Прізвище
-									input(type="text" value="Ruslan-2345" disabled)
+									input.admin-input(type="text" value="Ruslan-2345" disabled)
 							.col-12
 								.checkout-input
 									span.d-block.checkout-input__label Email
-									input(type="email" value="mail@mail.com" disabled)
+									input.admin-input(type="email" value="mail@mail.com" disabled)
 							.col-12
 								.checkout-input
 									span.d-block.checkout-input__label Телефон
-									input(type="tel" value="+380 68 567 65 67" disabled)
+									input.admin-input(type="tel" value="+380 68 567 65 67" disabled)
 						.row.checkout-card__delivery.checkout-delivery
 							.col-12
-								.checkout-delivery__title.text-bold.text-dark Доставка
+								.admin-settings__title.text-bold.text-dark Доставка
 									.checkout-delivery__item
 										a(href="#").sidebar-checkbox.checkbox-filter__link
 											label.check.option.check-rounded(for="radioBtn1")
@@ -77,8 +77,8 @@ block content
 											input(type="checkbox").check__input
 											span.check__box
 											span.check__text.text-dark На відділення перевізника
-									.checkout-delivery__carrier
-										span.d-block.checkout-delivery__label
+									.admin-settings__select
+										span.d-block.admin-settings__label
 											| Перевізник
 											span *
 										select#carrier(name="")
@@ -90,15 +90,15 @@ block content
 									label.d-block.checkout-input__label(for="order-city")
 										| Місто
 										span *
-									input(type="text")#order-city
+									input.admin-input(type="text")#order-city
 							.col-md-6
 								.checkout-input
 									label.d-block.checkout-input__label(for="order-department")
 										| Відділення
 										span *
-									input(type="number")#order-department
+									input.admin-input(type="number")#order-department
 							.col-12
-								.checkout-delivery__title.text-bold.text-dark Коментар до замовлення
+								.admin-settings__title.text-bold.text-dark Коментар до замовлення
 								.checkout-input.checkout-textarea
 									textarea(name="", cols="30", rows="8")
 

@@ -1,6 +1,6 @@
 
 <!--Menu Item--><!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="utf-8">
     <title>Оформлення попереднього замовлення
@@ -161,6 +161,20 @@
             </div>
             <div class="header-login header-dropdown-wrapper" data-active>
               <button class="d-flex align-items-center" type="button" data-target-button><i class="icon-login"></i><span>Светлана</span></button>
+              <div class="header-dropdown">
+                <div class="header-dropdown-inner">
+                  <div class="header-login__title">Вітаємо,<span class="d-block">Світлано!</span></div>
+                  <div class="header-login__body">
+                    <ul class="header-login__list">
+                      <li class="header-login__list-item"><a href="admin-catalog.html"><i class="icon-window"></i><span>Оптова форма замовлення</span></a></li>
+                      <li class="header-login__list-item"><a href="admin-cart.html"><i class="icon-cart"></i><span>Кошик</span></a></li>
+                      <li class="header-login__list-item"><a href="admin-orders.html"><i class="icon-timer"></i><span>Історія замовлень</span></a></li>
+                      <li class="header-login__list-item"><a href="settings.html"><i class="icon-setting"></i><span>Налаштування</span></a></li>
+                      <li class="header-login__list-item header-logout"><a href="admin-catalog.html"><i class="icon-exit"></i><span>Вихід</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -185,33 +199,33 @@
                 <div class="row checkout-card__contacts checkout-contacts">
                   <div class="col-12">
                     <div class="checkout-input"><span class="d-block checkout-input__label">Назва дилера</span>
-                      <input type="text" value="Ruslan-2345" disabled>
+                      <input class="admin-input" type="text" value="Ruslan-2345" disabled>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="checkout-input"><span class="d-block checkout-input__label">Ім'я</span>
-                      <input type="text" value="Ruslan-2345" disabled>
+                      <input class="admin-input" type="text" value="Ruslan-2345" disabled>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="checkout-input"><span class="d-block checkout-input__label">Прізвище</span>
-                      <input type="text" value="Ruslan-2345" disabled>
+                      <input class="admin-input" type="text" value="Ruslan-2345" disabled>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="checkout-input"><span class="d-block checkout-input__label">Email</span>
-                      <input type="email" value="mail@mail.com" disabled>
+                      <input class="admin-input" type="email" value="mail@mail.com" disabled>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="checkout-input"><span class="d-block checkout-input__label">Телефон</span>
-                      <input type="tel" value="+380 68 567 65 67" disabled>
+                      <input class="admin-input" type="tel" value="+380 68 567 65 67" disabled>
                     </div>
                   </div>
                 </div>
                 <div class="row checkout-card__delivery checkout-delivery">
                   <div class="col-12">
-                    <div class="checkout-delivery__title text-bold text-dark">Доставка
+                    <div class="admin-settings__title text-bold text-dark">Доставка
                       <div class="checkout-delivery__item"><a class="sidebar-checkbox checkbox-filter__link" href="#">
                           <label class="check option check-rounded" for="radioBtn1">
                             <input class="check__input" type="radio" autocomplete="off" name="btnradio" checked id="radioBtn1"><span class="check__box"></span><span class="check__box-big"></span><span class="check__text">ул. Пироговский шлях, 34, офис. 17 корпус 2, этаж 4</span>
@@ -230,7 +244,7 @@
                         <label class="check option check-rounded">
                           <input class="check__input" type="checkbox"><span class="check__box"></span><span class="check__text text-dark">На відділення перевізника</span>
                         </label></a>
-                      <div class="checkout-delivery__carrier"><span class="d-block checkout-delivery__label">Перевізник<span>*</span></span>
+                      <div class="admin-settings__select"><span class="d-block admin-settings__label">Перевізник<span>*</span></span>
                         <select id="carrier" name="">
                           <option value="">Нова пошта</option>
                           <option value="">Гюнсел</option>
@@ -242,17 +256,17 @@
                   <div class="col-md-6">
                     <div class="checkout-input">
                       <label class="d-block checkout-input__label" for="order-city">Місто<span>*</span></label>
-                      <input type="text" id="order-city">
+                      <input class="admin-input" type="text" id="order-city">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="checkout-input">
                       <label class="d-block checkout-input__label" for="order-department">Відділення<span>*</span></label>
-                      <input type="number" id="order-department">
+                      <input class="admin-input" type="number" id="order-department">
                     </div>
                   </div>
                   <div class="col-12">
-                    <div class="checkout-delivery__title text-bold text-dark">Коментар до замовлення</div>
+                    <div class="admin-settings__title text-bold text-dark">Коментар до замовлення</div>
                     <div class="checkout-input checkout-textarea">
                       <textarea name="" cols="30" rows="8"></textarea>
                     </div>

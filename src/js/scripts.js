@@ -37,15 +37,15 @@ $(document).ready(function () {
 			/** Sticky header on scroll */
 			stickyHeader: () => {
 
-				let header  = document.querySelector('.header');
+				let header = document.querySelector('.header');
 
 				window.addEventListener('scroll', function () {
-						let getScrollposition = window.scrollY;
-						if (getScrollposition > 130) {
-								header.classList.add('is-fixed')
-						} else {
-							header.classList.remove('is-fixed')
-						}
+					let getScrollposition = window.scrollY;
+					if (getScrollposition > 130) {
+						header.classList.add('is-fixed')
+					} else {
+						header.classList.remove('is-fixed')
+					}
 				});
 
 			},
@@ -100,8 +100,8 @@ $(document).ready(function () {
 			touchDevice: () => {
 				function isTouchScreendevice() {
 					return (('ontouchstart' in window) ||
-					(navigator.maxTouchPoints > 0) ||
-					(navigator.msMaxTouchPoints > 0));
+						(navigator.maxTouchPoints > 0) ||
+						(navigator.msMaxTouchPoints > 0));
 				};
 				if (isTouchScreendevice()) {
 					document.querySelector('body').classList.toggle('is-touch');
@@ -149,15 +149,23 @@ $(document).ready(function () {
 			},
 
 			passwordShow: () => {
-				const togglePassword = document.querySelector('#togglePassword');
-				const password = document.querySelector('#id_password');
-				if(togglePassword) {
-					togglePassword.addEventListener('click', function (e) {
-						const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-						password.setAttribute('type', type);
-						this.classList.toggle('active');
+				function togglePassword(checkbox, field) {
+					field.type = checkbox.checked ? 'text' : 'password';
+				}
+
+				function handleChange(event) {
+					if (!event.target.matches('[data-toggle]')) return;
+					// Get all password fields inside this form
+					const passwords = Array.from(
+						event.target.form.querySelectorAll('[data-password]')
+					);
+
+					// Toggle the password fields
+					passwords.forEach(function (password) {
+						togglePassword(event.target, password);
 					});
 				}
+				document.body.addEventListener('change', handleChange);
 			},
 
 			scrollAnim: () => {
@@ -237,26 +245,26 @@ $(document).ready(function () {
 			productsSlider: () => {
 				// setup
 				let sliderElem = $(".products-slider"),
-				sliderBool = false,
-				sliderBreakpoint = 768,
+					sliderBool = false,
+					sliderBreakpoint = 768,
 
-				sliderSettings = {
+					sliderSettings = {
 						arrows: false,
 						dots: true,
 						mobileFirst: true,
 						slidesToShow: 1,
 						responsive: [
-								{
-										breakpoint: sliderBreakpoint,
-										settings: "unslick"
-								}
+							{
+								breakpoint: sliderBreakpoint,
+								settings: "unslick"
+							}
 						]
-				};
+					};
 				function sliderInit() {
 					if (window.innerWidth <= sliderBreakpoint) {
 						if (sliderBool == false) {
-								sliderElem.slick(sliderSettings);
-								sliderBool = true;
+							sliderElem.slick(sliderSettings);
+							sliderBool = true;
 						}
 					} else {
 						sliderBool = false;
@@ -275,29 +283,29 @@ $(document).ready(function () {
 			stepsSlider: () => {
 				// setup
 				let sliderElem = $(".steps-row"),
-				sliderBool = false,
-				sliderBreakpoint = 575,
+					sliderBool = false,
+					sliderBreakpoint = 575,
 
-				sliderSettings = {
+					sliderSettings = {
 						arrows: false,
 						dots: true,
 						mobileFirst: true,
 						slidesToShow: 1,
 						centerMode: true,
 						responsive: [
-								{
-										breakpoint: sliderBreakpoint,
-										settings: "unslick"
-								}
+							{
+								breakpoint: sliderBreakpoint,
+								settings: "unslick"
+							}
 						]
-				};
+					};
 				function sliderInit() {
-				if (window.innerWidth <= sliderBreakpoint) {
-					if (sliderBool == false) {
+					if (window.innerWidth <= sliderBreakpoint) {
+						if (sliderBool == false) {
 							sliderElem.slick(sliderSettings);
 							sliderBool = true;
-					}
-				} else {
+						}
+					} else {
 						sliderBool = false;
 					}
 				}
@@ -439,7 +447,7 @@ $(document).ready(function () {
 			/** Menu height */
 
 			menuHeight: () => {
-				$(window).on("resize", function() {
+				$(window).on("resize", function () {
 
 					let winHeight = $(window).height();
 					let headerHeight = $(".header").height();
@@ -451,9 +459,9 @@ $(document).ready(function () {
 			/** Color count */
 
 			checkboxCheck: () => {
-				$(".sidebar-checkbox .check__input").click(function() {
+				$(".sidebar-checkbox .check__input").click(function () {
 					$(this).toggleClass('active');
-					if($(".sidebar-checkbox .check__input").hasClass('active')) {
+					if ($(".sidebar-checkbox .check__input").hasClass('active')) {
 						$('.filter-submit__btn').addClass('is-visible');
 					} else {
 						$('.filter-submit__btn').removeClass('is-visible');
@@ -521,7 +529,7 @@ $(document).ready(function () {
 			},
 
 			phoneMask: () => {
-				$('.phone-input').inputmask({"mask": "+38 (999) 999-99-99"});
+				$('.phone-input').inputmask({ "mask": "+38 (999) 999-99-99" });
 			},
 
 			partnersSlider: () => {
@@ -574,7 +582,7 @@ $(document).ready(function () {
 			},
 
 			preventAccordionOpen: () => {
-				$('.accordion__btn').on('click', '.accordion-inner-btn', function(e) {
+				$('.accordion__btn').on('click', '.accordion-inner-btn', function (e) {
 					e.stopPropagation();
 					const isTargetButton = e.target.matches('[data__dropdown]');
 					if (!isTargetButton && e.target.closest('[data__dropdown-parent]') != null) return;

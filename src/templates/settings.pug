@@ -1,0 +1,203 @@
+extends partials/layout-admin
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'Налаштування'
+	-var whatPage = 'Admin Settings'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	.admin-settings__wrapper
+		.container
+			ul.breadcrumbs
+				li.breadcrumbs-item
+					a(href="/") Головна
+				li.breadcrumbs-item
+					span Налаштування
+			form(action="").row.settings-form
+				.col-12
+					h1.catalog-title.proba-family Налаштування
+				.col-12
+					.preorder-checkout__card.checkout-card
+						.row
+							.col-lg-6
+								.admin-settings__title.text-bold.text-dark Контактні дані
+								.row.checkout-card__contacts.checkout-contacts
+									.col-12
+										.checkout-input
+											span.d-block.checkout-input__label Найменування партнера
+											input.admin-input(type="text" value="Ruslan-2345")
+									.col-md-6
+										.checkout-input
+											span.d-block.checkout-input__label Ім'я
+											input.admin-input(type="text" value="Ruslan-2345")
+									.col-md-6
+										.checkout-input
+											span.d-block.checkout-input__label Прізвище
+											input.admin-input(type="text" value="Ruslan-2345")
+									.col-12
+										.checkout-input
+											span.d-block.checkout-input__label Дата народження (необов'язкове поле)
+											input.admin-input(type="date" value="26.08.1965")
+									.col-md-6
+										.checkout-input
+											span.d-block.checkout-input__label Email
+											input.admin-input(type="email" value="mail@mail.com")
+									.col-md-6
+										.checkout-input
+											span.d-block.checkout-input__label Телефон
+											input.admin-input(type="tel" value="+380 68 567 65 67")
+									.col-12
+										.admin-settings__password
+											.admin-settings__title.text-bold.text-dark.mb-0 Пароль
+											button.btn.p-0(type='button' data-toggle='modal' data-target='#passwordChangeModal') Редагувати
+									.col-12
+										a(href="#").checkbox-filter__link.mt-3
+											label.check.option
+												input(type="checkbox").check__input
+												span.check__box
+												span.check__text.text-bold.text-dark Відображати за замовчуванням ціни з ПДВ
+							.col-lg-6
+								.admin-settings__title.text-bold.text-dark Доставка
+								.row
+									.col-12
+										.checkout-input
+											.settings-delivery
+												.settings-delivery__address ул. Пироговский шлях, 34, офис. 17 корпус 2, этаж 4
+												button.settings-delivery__address-edit Вилучити
+										.checkout-input
+											.settings-delivery
+												.settings-delivery__address ул. Пироговский шлях, 34, офис. 17 корпус 2, этаж 4
+												button.settings-delivery__address-edit Вилучити
+										.checkout-delivery__add.mt-4
+											// Button trigger modal
+											button.btn.btn-grey.w-100(type='button' data-toggle='modal' data-target='#addAdressModal') Додати адресу
+							.col-12
+								.admin-settings__save
+									button(type="submit").btn.btn-accent Зберегти
+
+			// Modal address
+			#addAdressModal.modal.admin-modal.fade(tabindex='-1' aria-labelledby='addAdressModalLabel' aria-hidden='true')
+				.modal-dialog.modal-dialog-centered
+					.modal-content
+						.modal-header
+							h5#addAdressModalLabel.modal-title.proba-family.mb-0 Нова адреса доставки
+							button.close(type='button' data-dismiss='modal' aria-label='Close')
+								span(aria-hidden='true')
+									i.icon-close
+						.modal-body
+							.row
+								a(href="#").checkbox-filter__link.col-12
+									label.check.option.check-rounded(for="addressDelivery")
+										input(type="radio" name="btnradio")#addressDelivery.check__input
+										span.check__box
+										span.check__text.text-dark Адресна доставка
+								.row
+									.col-md-6
+										.admin-settings__select.admin-settings__select-no-label.mt-4
+											select(name="")
+												option(value="")
+													| Область
+													span *
+												option(value="") Одеська
+												option(value="") Днепропетровська
+									.col-md-6
+										.admin-settings__select.admin-settings__select-no-label.mt-4
+											select(name="")
+												option(value="")
+													| Місто
+													span *
+												option(value="") Одеса
+												option(value="") Дніпро
+									.col-12
+										.checkout-input
+											span.d-block.checkout-input__label
+												| Вулиця
+												span *
+											input.admin-input(type="text")
+									.col-lg-3.col-md-6
+										.checkout-input
+											span.d-block.checkout-input__label
+												| Буд
+												span *
+											input.admin-input(type="text")
+									.col-lg-3.col-md-6
+										.checkout-input
+											span.d-block.checkout-input__label
+												| Корпус
+											input.admin-input(type="text")
+									.col-lg-3.col-md-6
+										.checkout-input
+											span.d-block.checkout-input__label
+												| Офіс
+												span *
+											input.admin-input(type="text")
+									.col-lg-3.col-md-6
+										.checkout-input
+											span.d-block.checkout-input__label
+												| Поверх
+												span *
+											input.admin-input(type="text")
+								.col-12
+									a(href="#").checkbox-filter__link.d-block.mb-3.mt-3
+										label.check.option.check-rounded(for="deliveryCarrier")
+											input(type="radio" name="btnradio")#deliveryCarrier.check__input
+											span.check__box
+											span.check__text.text-dark Доставка за допомогою перевізника
+								.col-12
+									.admin-settings__select
+										span.d-block.admin-settings__label
+											| Перевізник
+											span *
+										select#carrier(name="")
+											option(value="") Нова пошта
+											option(value="") Гюнсел
+											option(value="") Автолюкс
+								.col-md-6
+									.checkout-input
+										span.d-block.checkout-input__label
+											| Місто
+											span *
+										input.admin-input(type="text")
+								.col-md-6
+									.checkout-input
+										span.d-block.checkout-input__label
+											| Відділення*
+											span *
+										input.admin-input(type="text")
+
+						.modal-footer
+							button.btn.btn-accent.w-100 Зберегти
+
+			// Modal password change
+			#passwordChangeModal.modal.admin-modal.password-modal.fade(tabindex='-1' aria-labelledby='passwordChangeModal' aria-hidden='true')
+				.modal-dialog.modal-dialog-centered
+					.modal-content
+						.modal-header
+							h5#passwordChangeModal.modal-title.proba-family.mb-0 Зміна пароля
+							button.close(type='button' data-dismiss='modal' aria-label='Close')
+								span(aria-hidden='true')
+									i.icon-close
+						.modal-body
+							form(action="#")
+								.form-wrapper
+									.form-group
+										input#passwordOld.form-control.password.form-input-grey(type='password' name='password' placeholder='Старий пароль' data-password='')
+										label.login__pasword-toggle(for='passwordToggle')
+											i.icon-eye
+										input#passwordToggle.visually-hidden(type='checkbox' data-toggle='')
+									.form-group
+										input#passwordNew.form-control.password.form-input-grey(type='password' name='password' placeholder='Новий пароль' data-password='')
+										label.login__pasword-toggle(for='passwordToggle2')
+											i.icon-eye
+										input#passwordToggle2.visually-hidden(type='checkbox' data-toggle='')
+						.modal-footer
+							button.btn.btn-grey.m-0(type='button' data-dismiss='modal') Відміна
+							button.btn.btn-accent.m-0(type='submit') Зберегти
+
+

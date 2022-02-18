@@ -2,16 +2,32 @@
 // Utilities
 // --------------------------------------------------
 
-.helvetica-family { font-family: $font-family-helvetica;}
-.proba-family { font-family: $font-family-proba;}
+.helvetica-family {
+  font-family: $font-family-helvetica;
+}
+.proba-family {
+  font-family: $font-family-proba;
+}
 
-.text-thin { font-weight: 300;}
-.text-normal { font-weight: 500;}
-.text-semi-bold { font-weight: 600;}
-.text-bold { font-weight: bold;}
+.text-thin {
+  font-weight: 300;
+}
+.text-normal {
+  font-weight: 500;
+}
+.text-semi-bold {
+  font-weight: 600;
+}
+.text-bold {
+  font-weight: bold;
+}
 
-.text-dark { color: $black-clr;}
-.text-accent{ color: $accent-clr; }
+.text-dark {
+  color: $black-clr;
+}
+.text-accent {
+  color: $accent-clr;
+}
 
 .text-sm {
   font-weight: 300;
@@ -25,11 +41,22 @@
   font-weight: 500;
   line-height: 1.1;
 }
-.text-lg { font-size: 24px;}
-.text-36 { font-size: 36px !important; }
+.text-lg {
+  font-size: 24px;
+}
+.text-36 {
+  font-size: 36px !important;
+}
+
+.text-14 {
+  font-size: 14px;
+  line-height: 21px;
+}
 
 @media (max-width: $tablet-port) {
-  .mobile-mt-0 { margin-top: 0 !important;}
+  .mobile-mt-0 {
+    margin-top: 0 !important;
+  }
 }
 
 .bg-grey {
@@ -47,7 +74,9 @@
 .text-grey {
   color: $grey-lighter-clr;
 }
-
+.text-grey-dark {
+  color: #565656;
+}
 
 .text-crop {
   -ms-text-overflow: ellipsis;
@@ -74,4 +103,8 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.border-none {
+  border: none !important;
 }

@@ -588,7 +588,7 @@ $(document).ready(function () {
 						item.classList.remove('active');
 					});
 				});
-			}
+			},
 
 		}
 		theme.init();

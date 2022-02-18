@@ -23,9 +23,10 @@
 								input(type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" required="" id="id_username" placeholder="Логін або e-mail").form-control.form-input-grey
 								//- .form-error Такой аккаунт не зарегистрирован
 							.form-group.mb-0
-								input(type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="Пароль").form-control.form-input-grey
-								button.header-login__pasword-toggle#togglePassword(type="button")
+								input#password.form-control.password.form-input-grey(type='password' name='password' placeholder='Пароль' data-password='')
+								label.login__pasword-toggle(for='passwordToggle')
 									i.icon-eye
+								input#passwordToggle.visually-hidden(type='checkbox' data-toggle='')
 							.password-forget-wrapper
 								a(href="#").password-forget.p-0 Забули пароль?
 							button(type="submit").btn.btn-accent.d-block.w-100 Вхід

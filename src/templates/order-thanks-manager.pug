@@ -1,0 +1,74 @@
+extends partials/layout-admin
+
+//- Override default config variables
+append config
+
+	//- ********** Settings **********
+	//- ==============================
+	-var pageTitle = 'Дякуємо за замовлення Менедже'
+	-var whatPage = 'Manager Thanks'
+	//- ==============================
+	//- ********* Settings END *******
+
+//- Page Content
+block content
+	.preorder-wrapper
+		.container
+			ul.breadcrumbs
+				li.breadcrumbs-item
+					a(href="/") Головна
+				li.breadcrumbs-item
+					span Дякуємо за замовлення
+			.row.preorder-thanks
+				.col-12
+					h1.catalog-title.proba-family Дякуємо за замовлення
+				.col-lg-7.mb-4.order-2.order-md-1
+					.preorder-thanks__inner
+						p.text-grey-dark.text-14.w-75.pt-4.pb-3 Ми намагаємось обробляти ваші замовлення якнайшвидше. Наш менеджер зв'яжеться з вами найближчим часом.
+						hr
+						h6.text-bold.mb-1.mt-4 Підпишіться на новини
+						p.text-grey-dark.text-14.w-75.pt-4.pb-3 Будьте в курсі наших новин. Акції, знижки, новинки асортименту та яскраві події - все для вас.
+
+						form(action="")
+							.form-wrapper.row
+								.form-group.col-md-8
+									input(type="email" placeholder="Email").form-control.form-input-grey.bg-transparent
+								.form-group.col-md-4
+									button(type="submit").btn.btn-white.w-100 Підписатись
+
+						.preorder-thanks__socials
+							h6.text-14.text-bold Ми в соціальних мережах
+							.preorder-thanks__socials-links
+								a(href="#").accent-social
+									i.icon-youtube
+								a(href="#").accent-social
+									i.icon-instagram
+
+				.col-lg-5.checkout-price.mb-4.order-1.order-md-2
+					.checkout-card.checkout-card__prices
+						.checkout-card__prices-header.border-none
+							.text-bold.text-dark Попереднє замовлення №3453535
+
+						.preorder-thanks__item
+							.preorder-thanks__name Товарів:
+							.preorder-thanks__value 15
+						.preorder-thanks__item
+							.preorder-thanks__name Телефон:
+							.preorder-thanks__value +380786746546
+						.preorder-thanks__item
+							.preorder-thanks__name Отримувач:
+							.preorder-thanks__value Светлана Громова
+						.preorder-thanks__item
+							.preorder-thanks__name Адреса:
+							.preorder-thanks__value ул. Пироговский шлях, 34
+						.preorder-thanks__item
+							.preorder-thanks__name Коментар:
+							.preorder-thanks__value Супер важливий коментар
+						.preorder-thanks__item
+							.preorder-thanks__name Разом в РРЦ:
+							.preorder-thanks__value.proba-family 6744₴
+						.preorder-thanks__button.pb-4.pt-3
+							a(href="#").btn.btn-accent.w-100 Перейти у замовлення
+
+
+

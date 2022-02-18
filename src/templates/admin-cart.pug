@@ -584,7 +584,11 @@ block content
 										.cart-item__footer-quant
 											| Сума до сплати:
 											span 245555₴
-
+	.container.d-block.d-md-none
+		.cart-back.mt-5
+			a(href="#").cart-back__btn
+				i.icon-chevron-left
+				span Повернутись
 	.cart-receipt
 		.container
 			.cart-receipt__inner
@@ -594,11 +598,22 @@ block content
 						span Повернутись
 				.cart-receipt__info
 					.cart-receipt__title Разом до сплати:
-					.cart-receipt__count
-						| Разом в РРЦ:
-						span 767555₴
-					.cart-receipt__count
-						| Сума:
-						span 767555₴
+					ul.cart-receipt__info-list
+						li
+							.cart-receipt__count
+								| Разом в ₴ (гривня):
+								span.proba-family 767555₴
+						li
+							.cart-receipt__count
+								| Разом в $ (доллар):
+								span.proba-family 767555₴
+						li
+							.cart-receipt__count
+								| Разом в $ (евро):
+								span.proba-family 767555₴
+						li
+							.cart-receipt__count
+								| Разом РРЦ:
+								span.proba-family 767555₴
 					.cart-receipt__buy
 						a(href="preorder.html").btn.btn-accent Оформити замовлення

@@ -1,6 +1,6 @@
 
 <!--Menu Item--><!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="utf-8">
     <title>Новини - Дверна ручка
@@ -171,8 +171,9 @@
                           <input class="form-control form-input-grey" type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" required="" id="id_username" placeholder="Логін або e-mail">
                         </div>
                         <div class="form-group mb-0">
-                          <input class="form-control form-input-grey" type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="Пароль">
-                          <button class="header-login__pasword-toggle" id="togglePassword" type="button"><i class="icon-eye"></i></button>
+                          <input class="form-control password form-input-grey" id="password" type="password" name="password" placeholder="Пароль" data-password="">
+                          <label class="login__pasword-toggle" for="passwordToggle"><i class="icon-eye"></i></label>
+                          <input class="visually-hidden" id="passwordToggle" type="checkbox" data-toggle="">
                         </div>
                         <div class="password-forget-wrapper"><a class="password-forget p-0" href="#">Забули пароль?</a></div>
                         <button class="btn btn-accent d-block w-100" type="submit">Вхід</button>

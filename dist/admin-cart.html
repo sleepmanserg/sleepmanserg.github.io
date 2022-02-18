@@ -1,6 +1,6 @@
 
 <!--Menu Item--><!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="utf-8">
     <title>Админ Корзина
@@ -161,6 +161,20 @@
             </div>
             <div class="header-login header-dropdown-wrapper" data-active>
               <button class="d-flex align-items-center" type="button" data-target-button><i class="icon-login"></i><span>Светлана</span></button>
+              <div class="header-dropdown">
+                <div class="header-dropdown-inner">
+                  <div class="header-login__title">Вітаємо,<span class="d-block">Світлано!</span></div>
+                  <div class="header-login__body">
+                    <ul class="header-login__list">
+                      <li class="header-login__list-item"><a href="admin-catalog.html"><i class="icon-window"></i><span>Оптова форма замовлення</span></a></li>
+                      <li class="header-login__list-item"><a href="admin-cart.html"><i class="icon-cart"></i><span>Кошик</span></a></li>
+                      <li class="header-login__list-item"><a href="admin-orders.html"><i class="icon-timer"></i><span>Історія замовлень</span></a></li>
+                      <li class="header-login__list-item"><a href="settings.html"><i class="icon-setting"></i><span>Налаштування</span></a></li>
+                      <li class="header-login__list-item header-logout"><a href="admin-catalog.html"><i class="icon-exit"></i><span>Вихід</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -599,14 +613,29 @@
           </div>
         </div>
       </div>
+      <div class="container d-block d-md-none">
+        <div class="cart-back mt-5"><a class="cart-back__btn" href="#"><i class="icon-chevron-left"></i><span>Повернутись</span></a></div>
+      </div>
       <div class="cart-receipt">
         <div class="container">
           <div class="cart-receipt__inner">
             <div class="cart-back"><a class="cart-back__btn" href="#"><i class="icon-chevron-left"></i><span>Повернутись</span></a></div>
             <div class="cart-receipt__info">
               <div class="cart-receipt__title">Разом до сплати:</div>
-              <div class="cart-receipt__count">Разом в РРЦ:<span>767555₴</span></div>
-              <div class="cart-receipt__count">Сума:<span>767555₴</span></div>
+              <ul class="cart-receipt__info-list">
+                <li>
+                  <div class="cart-receipt__count">Разом в ₴ (гривня):<span class="proba-family">767555₴</span></div>
+                </li>
+                <li>
+                  <div class="cart-receipt__count">Разом в $ (доллар):<span class="proba-family">767555₴</span></div>
+                </li>
+                <li>
+                  <div class="cart-receipt__count">Разом в $ (евро):<span class="proba-family">767555₴</span></div>
+                </li>
+                <li>
+                  <div class="cart-receipt__count">Разом РРЦ:<span class="proba-family">767555₴</span></div>
+                </li>
+              </ul>
               <div class="cart-receipt__buy"><a class="btn btn-accent" href="preorder.html">Оформити замовлення</a></div>
             </div>
           </div>
