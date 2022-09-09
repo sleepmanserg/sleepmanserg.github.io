@@ -19,7 +19,7 @@
 }
 
 @font-face {
-  font-family: "Manrope", sans-serif;
+  font-family: Manrope;
   font-display: swap;
   src: url("../fonts/Manrope-Regular.woff2") format("woff2");
   font-weight: 400;
@@ -27,7 +27,7 @@
 }
 
 @font-face {
-  font-family: "Manrope", sans-serif;
+  font-family: Manrope;
   font-display: swap;
   src: url("../fonts/Manrope-Medium.woff2") format("woff2");
   font-weight: 500;
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-  font-family: "Manrope", sans-serif;
+  font-family: Manrope;
   font-display: swap;
   src: url("../fonts/Manrope-SemiBold.woff2") format("woff2");
   font-weight: 600;
@@ -43,7 +43,7 @@
 }
 
 @font-face {
-  font-family: "Manrope", sans-serif;
+  font-family: Manrope;
   font-display: swap;
   src: url("../fonts/Manrope-Bold.woff2") format("woff2");
   font-weight: 700;
@@ -215,7 +215,7 @@ body {
 body {
   color: #000;
   line-height: 1;
-  font-family: "Manrope", sans-serif;
+  font-family: "Manrope";
   font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -227,7 +227,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Manrope", sans-serif;
+  font-family: "Manrope";
   font-size: inherit;
 }
 
@@ -528,24 +528,6 @@ body {
   padding-right: 1px;
 }
 
-.layout.layout-no-sidebar .product-slider__wrapper .product-item__dosage-options {
-  margin: 0 -4px;
-  gap: 0;
-  row-gap: 8px;
-}
-
-.layout.layout-no-sidebar .product-slider__wrapper .product-item__dosage-options .check {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 16.6666666667%;
-          flex: 0 0 16.6666666667%;
-  padding: 0 4px;
-}
-
-.layout.layout-no-sidebar .product-slider__wrapper .product-item__dosage-options .check__box {
-  width: 100%;
-  height: 32px;
-}
-
 .layout .content {
   min-width: 0;
 }
@@ -617,9 +599,7 @@ body {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
-  -webkit-transition: 0.25s;
-  -o-transition: 0.25s;
-  transition: 0.25s;
+  font-size: 14px;
 }
 
 .sidebar .sidebar-categories__item-header:hover,
@@ -832,7 +812,7 @@ body {
 
 .option {
   display: block;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
 }
 
 /* Check */
@@ -858,7 +838,7 @@ body {
 }
 
 .check__box {
-  width: 26px;
+  width: 100%;
   height: 32px;
   display: block;
   border-radius: 6px;
@@ -1007,6 +987,10 @@ body {
   padding: 1rem;
 }
 
+.product-item .product-item__dosage-options {
+  margin-bottom: 12px;
+}
+
 .product-item .product-item__name {
   display: block;
   font-weight: var(--fw-600);
@@ -1030,12 +1014,11 @@ body {
 }
 
 .product-item .product-item__dosage-options {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 7px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
 }
 
 .product-item .product-item__dosage-title {
@@ -1542,6 +1525,24 @@ body {
   background-color: var(--blue-color);
 }
 
+.catalog-wrapper .layout.layout-sidebar {
+  -ms-grid-columns: 250px 1fr;
+  grid-template-columns: 250px 1fr;
+}
+
+.catalog-tiles {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 60px;
+}
+
+.catalog-tiles .product-item__name {
+  height: 47px;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -1958,7 +1959,6 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -12px;
 }
 
 .footer-contacts .footer-contacts__column {
