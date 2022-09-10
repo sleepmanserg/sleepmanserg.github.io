@@ -16,6 +16,11 @@
             }));
         }));
     }
+    let descriptionListItems = document.querySelectorAll(".number-list li span");
+    for (let i = 0; i < descriptionListItems.length; i++) {
+        descriptionListItems[i].index = i;
+        descriptionListItems[i].innerHTML = i + 1;
+    }
     function changePrice() {
         const radioButtons = document.querySelectorAll('.check__input[type="radio"]');
         radioButtons.forEach((radioButton => {
@@ -3170,7 +3175,7 @@
         images: core_images
     };
     const extendedDefaults = {};
-    class core_Swiper {
+    class Swiper {
         constructor() {
             let el;
             let params;
@@ -3185,7 +3190,7 @@
                     const newParams = utils_extend({}, params, {
                         el: containerEl
                     });
-                    swipers.push(new core_Swiper(newParams));
+                    swipers.push(new Swiper(newParams));
                 }));
                 return swipers;
             }
@@ -3526,26 +3531,26 @@
             return defaults;
         }
         static installModule(mod) {
-            if (!core_Swiper.prototype.__modules__) core_Swiper.prototype.__modules__ = [];
-            const modules = core_Swiper.prototype.__modules__;
+            if (!Swiper.prototype.__modules__) Swiper.prototype.__modules__ = [];
+            const modules = Swiper.prototype.__modules__;
             if ("function" === typeof mod && modules.indexOf(mod) < 0) modules.push(mod);
         }
         static use(module) {
             if (Array.isArray(module)) {
-                module.forEach((m => core_Swiper.installModule(m)));
-                return core_Swiper;
+                module.forEach((m => Swiper.installModule(m)));
+                return Swiper;
             }
-            core_Swiper.installModule(module);
-            return core_Swiper;
+            Swiper.installModule(module);
+            return Swiper;
         }
     }
     Object.keys(prototypes).forEach((prototypeGroup => {
         Object.keys(prototypes[prototypeGroup]).forEach((protoMethod => {
-            core_Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
+            Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
         }));
     }));
-    core_Swiper.use([ Resize, Observer ]);
-    const core = core_Swiper;
+    Swiper.use([ Resize, Observer ]);
+    const core = Swiper;
     function create_element_if_not_defined_createElementIfNotDefined(swiper, originalParams, params, checkProps) {
         const document = ssr_window_esm_getDocument();
         if (swiper.params.createElements) Object.keys(checkProps).forEach((key => {
@@ -3703,6 +3708,7 @@
                     modules: [ Navigation ],
                     slidesPerView: 4,
                     spaceBetween: 16,
+                    grabCursor: true,
                     navigation: {
                         nextEl: ".main-slider__next",
                         prevEl: ".main-slider__prev"
@@ -3719,6 +3725,39 @@
                     }
                 });
             }
+            new core(".product-card__slider", {
+                modules: [ Navigation ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                grabCursor: true,
+                navigation: {
+                    prevEl: ".product-card__slider-prev",
+                    nextEl: ".product-card__slider-next"
+                }
+            });
+            new core(".popular-slider", {
+                modules: [ Navigation ],
+                slidesPerView: 4,
+                spaceBetween: 16,
+                grabCursor: true,
+                navigation: {
+                    nextEl: ".popular-slider__next",
+                    prevEl: ".popular-slider__prev"
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 16
+                    },
+                    1200: {
+                        slidesPerView: 5,
+                        spaceBetween: 16
+                    }
+                }
+            });
         }
     }
     window.addEventListener("load", (function(e) {
