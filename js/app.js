@@ -33,6 +33,15 @@
             }));
         }));
     }
+    document.addEventListener("click", handle);
+    function handle(evt) {
+        if ("button" === evt.target.type) return handleBtn(evt.target);
+    }
+    function handleBtn(btn) {
+        const elem = document.querySelector(`#${btn.dataset.for}`);
+        const nwValue = +elem.value + ("-" === btn.value ? -1 : 1);
+        elem.value = nwValue >= +elem.min ? nwValue : elem.min;
+    }
     function isWebp() {
         function testWebP(callback) {
             let webP = new Image;
