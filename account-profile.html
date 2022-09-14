@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Инструкции</title>
+	<title>Данные профиля</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 
@@ -141,205 +141,130 @@
 							<a href="#" class="breadcrumb-link">Главная</a>
 						</li>
 						<li class="breadcrumbs-item active">
-							<a href="#" class="breadcrumb-link">Инструкции</a>
-						</li>
-						<li class="breadcrumbs-item active">
-							<span class="breadcrumb-link">Силденафил инструкция по применению</span>
+							<span class="breadcrumb-link">Аккаунт</span>
 						</li>
 					</ul>
 				</div>
 				<div class="layout">
 					<section class="content">
-						<article class="inner-article">
-							<h1 class="section-title-big">
-								Силденафил инструкция по применению
-							</h1>
-							<div class="instruction-single-header">
-								<picture><source srcset="img/viagra-sm.webp" type="image/webp"><img src="img/viagra-sm.webp" alt="Viagra" width="360" height="150" /></picture>
-								<div>
-									<div class="description-title">
-										Vidalista 20 mg против эректильной дисфункции
+						<div class="account">
+							<div class="account-row">
+								<div class="account-nav-col">
+									<div class="account-info">
+										<div class="account-info__header">
+											<div>Приветствуем, <span>Андрей!</span></div>
+										</div>
+										<div class="header-account__dropdown-email account-info__email">
+											Вы вошли как <span>andrey@gmail.com</span>
+										</div>
+										<ul class="account-info__list">
+											<li class="account-info__item active">
+												<a href="account-profile.html" class="account-info__link">
+													<i class="icon-account"></i>
+													<span>Детали профиля</span>
+												</a>
+											</li>
+											<li class="account-info__item">
+												<a href="account-orders.html" class="account-info__link">
+													<i class="icon-orders"></i>
+													<span>Мои заказы</span>
+												</a>
+											</li>
+											<li class="account-info__item">
+												<a href="" class="account-info__link">
+													<i class="icon-truck"></i>
+													<span>Мои адреса доставки</span>
+												</a>
+											</li>
+											<li class="account-info__item">
+												<a href="" class="account-info__link">
+													<i class="icon-payment"></i>
+													<span>Платежные реквизиты</span>
+												</a>
+											</li>
+										</ul>
 									</div>
-									<p class="section-text">
-										Эректильная дисфункция одна из самых распространенных
-										мужских болезней в XXI веке. Как оказалось, основная
-										причина ее развития - это малоподвижный образ жизни,
-										который ухудшает кровообращение в органах малого таза и
-										приводит к застоям. Окруженные комфортом современного
-										мира, мы и не задумываемся о таком пагубном влиянии, что
-										еще сильней усугубляет проблему. Благо, XXI век принес нам
-										не только прогресс эректильной дисфункции, но и лекарство
-										от нее. Одним из лучших среди таких лекарств является
-										препарат Vidalista.
-									</p>
+								</div>
+								<div class="account-info-col">
+									<h1 class="account-heading">Данные профиля</h1>
+									<form action="">
+										<div class="account-personal-data personal-data">
+											<ul class="personal-data__list">
+												<li class="personal-data__item">
+													<label class="personal-data__label">Имя</label>
+													<p class="personal-data__value">Андрей</p>
+												</li>
+												<li class="personal-data__item">
+													<label class="personal-data__label">Фамилия</label>
+													<p class="personal-data__value">Петров</p>
+												</li>
+												<li class="personal-data__item">
+													<label class="personal-data__label">Телефон</label>
+													<p class="personal-data__value">+380682224433</p>
+												</li>
+												<li class="personal-data__item">
+													<label class="personal-data__label">E-mail</label>
+													<p class="personal-data__value">andrey@gmail.com</p>
+												</li>
+												<li class="personal-data__item">
+													<label class="personal-data__label">Пароль</label>
+													<p class="personal-data__value">
+														•••••••••••••••••••
+													</p>
+												</li>
+											</ul>
+											<div class="personal-data__btn">
+												<button class="btn btn-blue" data-popup="#personal-data-popup">
+													Редактировать
+												</button>
+											</div>
+										</div>
+										<div id="personal-data-popup" aria-hidden="true" class="popup">
+											<div class="popup__wrapper">
+												<div class="popup__content">
+													<div class="popup__content-header">
+														<div class="popup__content-heading">
+															Редактирование
+														</div>
+														<button data-close type="button" class="popup__close">
+															<i class="icon-close"></i>
+														</button>
+													</div>
+													<div class="popup__body">
+														<div class="popup__body-group">
+															<label class="personal-data__label" for="firstName">Ваше имя</label>
+															<input type="text" name="firsName" id="firstName" placeholder="Имя" value="Андрей" class="form-input" />
+														</div>
+														<div class="popup__body-group">
+															<label class="personal-data__label" for="lastName">Фамилия</label>
+															<input type="text" name="lastName" id="lastName" placeholder="Фамилия" value="Петров" class="form-input" />
+														</div>
+														<div class="popup__body-group">
+															<label class="personal-data__label" for="accountPhone">Телефон</label>
+															<input type="text" name="accountPhone" id="accountPhone" placeholder="Телефон" value="+380682224433" class="form-input" />
+														</div>
+														<div class="popup__body-group">
+															<label class="personal-data__label" for="accountEmail">Email</label>
+															<input type="text" name="accountEmail" id="accountEmail" placeholder="Телефон" value="andrey@gmail.com" class="form-input" />
+														</div>
+														<div class="popup__body-group">
+															<label class="personal-data__label" for="accountPassword">Пароль</label>
+															<input type="password" name="accountPassword" id="accountPassword" placeholder="Пароль" value="12345689" class="form-input" />
+														</div>
+													</div>
+													<div class="popup__footer">
+														<button class="btn btn-blue">Сохранить</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
 								</div>
 							</div>
-							<div class="description-quote">
-								Показать аннотацию и основную информацию по препарату «Vidalista 20 mg»
-							</div>
-
-							<div class="description-title">Кратко о Видалисте</div>
-							<p class="section-text">
-								Vidalista – это группа дженериков
-								<a href="#">Сиалиса</a> (одного из самых популярных регуляторов потенции в
-								мире). Среди препаратов под этим брендом можно найти:
-							</p>
-							<ul class="number-list">
-								<li>
-									<span class="number"></span>
-									<p class="section-text">
-										Классические таблетки в разных дозировках (Vidalista 2.5, 20, 40 и 60 мг)
-									</p>
-								</li>
-								<li>
-									<span class="number"></span>
-									<p class="section-text">Жевательные таблетки (Vidalista-CT)</p>
-								</li>
-								<li>
-									<span class="number"></span>
-									<p class="section-text">
-										Комбинированный препарат – таблетки, в которых эректильный стимулятор
-										совмещен с пролонгатором (Super Vidalista)
-									</p>
-								</li>
-							</ul>
-
-							<div class="description-title">
-								Vidalista 20 mg против эректильной дисфункции
-							</div>
-							<p class="section-text">
-								Эректильная дисфункция одна из самых распространенных мужских
-								болезней в XXI веке. Как оказалось, основная причина ее
-								развития - это малоподвижный образ жизни, который ухудшает
-								кровообращение в органах малого таза и приводит к застоям.
-								Окруженные комфортом современного мира, мы и не задумываемся о
-								таком пагубном влиянии, что еще сильней усугубляет проблему.
-								Благо, XXI век принес нам не только прогресс эректильной
-								дисфункции, но и лекарство от нее. Одним из лучших среди таких
-								лекарств является препарат Vidalista.
-							</p>
-							<div class="description-title">
-								Vidalista 20 mg против эректильной дисфункции
-							</div>
-							<p class="section-text">
-								Эректильная дисфункция одна из самых распространенных мужских
-								болезней в XXI веке. Как оказалось, основная причина ее
-								развития - это малоподвижный образ жизни, который ухудшает
-								кровообращение в органах малого таза и приводит к застоям.
-								Окруженные комфортом современного мира, мы и не задумываемся о
-								таком пагубном влиянии, что еще сильней усугубляет проблему.
-								Благо, XXI век принес нам не только прогресс эректильной
-								дисфункции, но и лекарство от нее. Одним из лучших среди таких
-								лекарств является препарат Vidalista.
-							</p>
-						</article>
+						</div>
 					</section>
 				</div>
 			</div>
-			<section class="other-instructions">
-				<div class="__container">
-					<div class="product-slider__wrapper">
-						<div class="main-slider swiper">
-							<div class="main-slider__header">
-								<h2 class="section-title">
-									<i class="icon-flask"></i>
-									<span>Другие инуструкции</span>
-								</h2>
-								<div class="main-slider__nav">
-									<div class="main-slider__nav-btn main-slider__prev">
-										<i class="icon-chevron"></i>
-									</div>
-									<div class="main-slider__nav-btn main-slider__next">
-										<i class="icon-chevron"></i>
-									</div>
-								</div>
-
-							</div>
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="info-card">
-										<a href="instruction-single.html" class="info-card__header">
-											<picture><source srcset="img/instructions/viagra.webp" type="image/webp"><img src="img/instructions/viagra.webp" alt="Viagra" /></picture>
-										</a>
-										<div class="info-card__footer">
-											<a href="instruction-single.html" class="info-card__title text-left">Силденафил инструкция по применению</a>
-											<a href="instruction-single.html" class="btn btn-border">Читать инструкцию</a>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="info-card">
-										<a href="instruction-single.html" class="info-card__header">
-											<picture><source srcset="img/instructions/cialis.webp" type="image/webp"><img src="img/instructions/cialis.webp" alt="Cialis" /></picture>
-										</a>
-										<div class="info-card__footer">
-											<a href="instruction-single.html" class="info-card__title text-left">Тадалафил инструкция по применению
-											</a>
-											<a href="instruction-single.html" class="btn btn-border">Читать инструкцию</a>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="info-card">
-										<a href="instruction-single.html" class="info-card__header">
-											<picture><source srcset="img/instructions/levitra.webp" type="image/webp"><img src="img/instructions/levitra.webp" alt="Levitra" /></picture>
-										</a>
-										<div class="info-card__footer">
-											<a href="instruction-single.html" class="info-card__title text-left">Варденафил инструкция по применению</a>
-											<a href="instruction-single.html" class="btn btn-border">Читать инструкцию</a>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="info-card">
-										<a href="instruction-single.html" class="info-card__header">
-											<picture><source srcset="img/instructions/stendra.webp" type="image/webp"><img src="img/instructions/stendra.webp" alt="Stendra" /></picture>
-										</a>
-										<div class="info-card__footer">
-											<a href="instruction-single.html" class="info-card__title text-left">Аванафил инструкция по применению</a>
-											<a href="instruction-single.html" class="btn btn-border">Читать инструкцию</a>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="info-card">
-										<a href="instruction-single.html" class="info-card__header">
-											<picture><source srcset="img/instructions/stendra.webp" type="image/webp"><img src="img/instructions/stendra.webp" alt="Stendra" /></picture>
-										</a>
-										<div class="info-card__footer">
-											<a href="instruction-single.html" class="info-card__title text-left">Аванафил инструкция по применению</a>
-											<a href="instruction-single.html" class="btn btn-border">Читать инструкцию</a>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="info-card">
-										<a href="instruction-single.html" class="info-card__header">
-											<picture><source srcset="img/instructions/priligy.webp" type="image/webp"><img src="img/instructions/priligy.webp" alt="Priligy" /></picture>
-										</a>
-										<div class="info-card__footer">
-											<a href="instruction-single.html" class="info-card__title text-left">Аванафил инструкция по применению</a>
-											<a href="instruction-single.html" class="btn btn-border">Читать инструкцию</a>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="info-card">
-										<a href="instruction-single.html" class="info-card__header">
-											<picture><source srcset="img/instructions/viagra.webp" type="image/webp"><img src="img/instructions/viagra.webp" alt="Viagra" /></picture>
-										</a>
-										<div class="info-card__footer">
-											<a href="instruction-single.html" class="info-card__title text-left">Дапоксетин инструкция по применению</a>
-											<a href="instruction-single.html" class="btn btn-border">Читать инструкцию</a>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</section>
 			<section class="top-products">
 				<div class="__container">
 					<h2 class="section-title mb-4">
