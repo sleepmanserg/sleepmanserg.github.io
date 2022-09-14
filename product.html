@@ -8,11 +8,11 @@
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220912171709" media="print" onload="this.media='all'" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220914130606" media="print" onload="this.media='all'" />
 	<noscript>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220912171709" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220914130606" />
 	</noscript>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220912171709" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220914130606" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,7 +28,7 @@
 							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.webp" alt="Potency logo" width="325" height="93" /></picture>
 						</a>
 					</div>
-					<div class="topbar-search">
+					<div class="topbar-search" data-da=".header-nav .header__container, 768, first">
 						<form class="search-form" action="" novalidate>
 							<div class="search-form__inner">
 								<div class="search-form__icon">
@@ -41,6 +41,9 @@
 					<div class="topbar-info">
 						<a href="tel:+0681234567" class="topbar-phone">+38 068 123 45 67</a>
 						<span class="topbar-hours">Без выходных 10:00-21:00 (+2 GMT)</span>
+					</div>
+					<div class="icon-menu">
+						<span></span>
 					</div>
 				</div>
 			</div>
@@ -70,7 +73,10 @@
 							</button>
 							<div class="header-account__dropdown header-dropdown account-info">
 								<div class="header-account__dropdown-title account-info__header">
-									Приветствуем, <span>Андрей!</span>
+									<div>Приветствуем, <span>Андрей!</span></div>
+									<button type="button" class="btn-close" data-filter-close>
+										<i class="icon-close"></i>
+									</button>
 								</div>
 								<div class="header-account__dropdown-email account-info__email">
 									Вы вошли как <span>andrey@gmail.com</span>
@@ -151,7 +157,7 @@
 									<h2 class="product-card__subtitle">Sildenafil</h2>
 								</div>
 								<div class="product-card__row">
-									<div class="product-card__col">
+									<div class="product-card__col product-card__col-swiper">
 										<div class="product-card__slider swiper">
 											<div class="swiper-wrapper">
 												<div class="product-card__slider-item swiper-slide">
@@ -174,7 +180,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="product-card__col">
+									<div class="product-card__col product-card__col-characteristics">
 										<div class="product-characteristics">
 											<div class="product-characteristics__title">
 												Характеристики
@@ -256,49 +262,73 @@
 										<div>Сумма</div>
 									</div>
 									<div class="product-card__table-body">
-										<div>5</div>
-										<div>320₴</div>
-										<div>820₴</div>
+										<div class="product-card__table-body-link">
+											<picture><source srcset="img/products/product-slide.webp" type="image/webp"><img src="img/products/product-slide.webp" alt="Pfizer Viagra 25mg" /></picture>
+											<a href="#">Pfizer Viagra 25mg</a>
+										</div>
+										<div data-pill-quant="Количество таблеток">5</div>
+										<div data-pill-price="Цена за таблетку">320₴</div>
+										<div data-pill-sum="Сумма">820₴</div>
 										<div>
 											<button class="btn btn-blue">В корзину</button>
 										</div>
 									</div>
 									<div class="product-card__table-body">
-										<div>10</div>
-										<div>320₴</div>
-										<div>820₴</div>
+										<div class="product-card__table-body-link">
+											<picture><source srcset="img/products/product-slide.webp" type="image/webp"><img src="img/products/product-slide.webp" alt="Pfizer Viagra 25mg" /></picture>
+											<a href="#">Pfizer Viagra 25mg</a>
+										</div>
+										<div data-pill-quant="Количество таблеток">10</div>
+										<div data-pill-price="Цена за таблетку">320₴</div>
+										<div data-pill-sum="Сумма">820₴</div>
 										<div>
 											<button class="btn btn-blue">В корзину</button>
 										</div>
 									</div>
 									<div class="product-card__table-body">
-										<div>20</div>
-										<div>320₴</div>
-										<div>820₴</div>
+										<div class="product-card__table-body-link">
+											<picture><source srcset="img/products/product-slide.webp" type="image/webp"><img src="img/products/product-slide.webp" alt="Pfizer Viagra 25mg" /></picture>
+											<a href="#">Pfizer Viagra 25mg</a>
+										</div>
+										<div data-pill-quant="Количество таблеток">20</div>
+										<div data-pill-price="Цена за таблетку">320₴</div>
+										<div data-pill-sum="Сумма">820₴</div>
 										<div>
 											<button class="btn btn-blue">В корзину</button>
 										</div>
 									</div>
 									<div class="product-card__table-body">
-										<div>30</div>
-										<div>320₴</div>
-										<div>820₴</div>
+										<div class="product-card__table-body-link">
+											<picture><source srcset="img/products/product-slide.webp" type="image/webp"><img src="img/products/product-slide.webp" alt="Pfizer Viagra 25mg" /></picture>
+											<a href="#">Pfizer Viagra 25mg</a>
+										</div>
+										<div data-pill-quant="Количество таблеток">30</div>
+										<div data-pill-price="Цена за таблетку">320₴</div>
+										<div data-pill-sum="Сумма">820₴</div>
 										<div>
 											<button class="btn btn-blue">В корзину</button>
 										</div>
 									</div>
 									<div class="product-card__table-body">
-										<div>50</div>
-										<div>320₴</div>
-										<div>820₴</div>
+										<div class="product-card__table-body-link">
+											<picture><source srcset="img/products/product-slide.webp" type="image/webp"><img src="img/products/product-slide.webp" alt="Pfizer Viagra 25mg" /></picture>
+											<a href="#">Pfizer Viagra 25mg</a>
+										</div>
+										<div data-pill-quant="Количество таблеток">50</div>
+										<div data-pill-price="Цена за таблетку">320₴</div>
+										<div data-pill-sum="Сумма">820₴</div>
 										<div>
 											<button class="btn btn-blue">В корзину</button>
 										</div>
 									</div>
 									<div class="product-card__table-body">
-										<div>100</div>
-										<div>320₴</div>
-										<div>820₴</div>
+										<div class="product-card__table-body-link">
+											<picture><source srcset="img/products/product-slide.webp" type="image/webp"><img src="img/products/product-slide.webp" alt="Pfizer Viagra 25mg" /></picture>
+											<a href="#">Pfizer Viagra 25mg</a>
+										</div>
+										<div data-pill-quant="Количество таблеток">100</div>
+										<div data-pill-price="Цена за таблетку">320₴</div>
+										<div data-pill-sum="Сумма">820₴</div>
 										<div>
 											<button class="btn btn-blue">В корзину</button>
 										</div>
@@ -803,6 +833,12 @@
 								<a href="#" class="social-link">
 									<i class="icon-behance"></i>
 								</a>
+								<a href="#" class="social-link">
+									<i class="icon-behance"></i>
+								</a>
+								<a href="#" class="social-link">
+									<i class="icon-behance"></i>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -810,8 +846,10 @@
 			</div>
 		</footer>
 
+		<div class="backdrop" data-backdrop></div>
+
 	</div>
-	<script src="js/app.min.js?_v=20220912171709"></script>
+	<script src="js/app.min.js?_v=20220914130606"></script>
 </body>
 
 </html>

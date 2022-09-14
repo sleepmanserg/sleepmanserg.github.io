@@ -8,11 +8,11 @@
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220912171709" media="print" onload="this.media='all'" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220914130606" media="print" onload="this.media='all'" />
 	<noscript>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220912171709" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220914130606" />
 	</noscript>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220912171709" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220914130606" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,7 +28,7 @@
 							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.webp" alt="Potency logo" width="325" height="93" /></picture>
 						</a>
 					</div>
-					<div class="topbar-search">
+					<div class="topbar-search" data-da=".header-nav .header__container, 768, first">
 						<form class="search-form" action="" novalidate>
 							<div class="search-form__inner">
 								<div class="search-form__icon">
@@ -41,6 +41,9 @@
 					<div class="topbar-info">
 						<a href="tel:+0681234567" class="topbar-phone">+38 068 123 45 67</a>
 						<span class="topbar-hours">Без выходных 10:00-21:00 (+2 GMT)</span>
+					</div>
+					<div class="icon-menu">
+						<span></span>
 					</div>
 				</div>
 			</div>
@@ -70,7 +73,10 @@
 							</button>
 							<div class="header-account__dropdown header-dropdown account-info">
 								<div class="header-account__dropdown-title account-info__header">
-									Приветствуем, <span>Андрей!</span>
+									<div>Приветствуем, <span>Андрей!</span></div>
+									<button type="button" class="btn-close" data-filter-close>
+										<i class="icon-close"></i>
+									</button>
 								</div>
 								<div class="header-account__dropdown-email account-info__email">
 									Вы вошли как <span>andrey@gmail.com</span>
@@ -145,7 +151,7 @@
 												Количество
 											</div>
 											<div class="checkout-table__header-item">Цена</div>
-											<div class="checkout-table__header-item">Итого</div>
+											<div class="checkout-table__header-item">Итого:</div>
 										</div>
 										<ul class="checkout-table__list">
 											<li class="checkout-table__list-item checkout-product">
@@ -165,8 +171,10 @@
 														</button>
 													</div>
 												</div>
-												<div class="checkout-product__price">320₴</div>
-												<div class="checkout-product__full-price">
+												<div class="checkout-product__price" data-checkout-price="Цена:">
+													320₴
+												</div>
+												<div class="checkout-product__full-price" data-checkout-fullprice="Итого:">
 													1212121₴
 												</div>
 											</li>
@@ -187,8 +195,10 @@
 														</button>
 													</div>
 												</div>
-												<div class="checkout-product__price">320₴</div>
-												<div class="checkout-product__full-price">
+												<div class="checkout-product__price" data-checkout-price="Цена:">
+													320₴
+												</div>
+												<div class="checkout-product__full-price" data-checkout-fullprice="Итого:">
 													1212121₴
 												</div>
 											</li>
@@ -209,12 +219,149 @@
 														</button>
 													</div>
 												</div>
-												<div class="checkout-product__price">320₴</div>
-												<div class="checkout-product__full-price">
+												<div class="checkout-product__price" data-checkout-price="Цена:">
+													320₴
+												</div>
+												<div class="checkout-product__full-price" data-checkout-fullprice="Итого:">
 													1212121₴
 												</div>
 											</li>
 										</ul>
+									</div>
+									<div class="checkout-form__grid">
+										<div class="checkout-form__grid-col">
+											<div class="checkout-form__block checkout-block">
+												<div class="checkout-card__title">Данные покупателя</div>
+												<div class="checkout-block__card checkout-card checkout-card__single">
+													<div class="checkout-card__header checkout-card-group">
+														<div class="checkout-card-group__title">Зарегистрироваться</div>
+														<div class="checkout-card__header-radio">
+															<label class="radio-btn">
+																<input class="radio-btn__input" type="radio" name="register" checked="checked" />
+																<span class="radio-btn__item"></span>
+																<span class="radio-btn__text">Да</span>
+															</label>
+															<label class="radio-btn">
+																<input class="radio-btn__input" type="radio" name="register" />
+																<span class="radio-btn__item"></span>
+																<span class="radio-btn__text">Нет</span>
+															</label>
+														</div>
+														<a href="account.html" class="btn btn-blue">Войти в аккаунт</a>
+													</div>
+													<div class="checkout-card-group">
+														<label for="checkout-mail" class="checkout-card-group__title">
+															Email
+														</label>
+														<input class="form-input" type="text" id="checkout-mail" placeholder="Email" />
+													</div>
+													<div class="checkout-card-group">
+														<label for="checkout-name" class="checkout-card-group__title">
+															Имя
+															<span>*</span>
+														</label>
+														<input class="form-input" type="text" id="checkout-name" placeholder="Имя" />
+													</div>
+													<div class="checkout-card-group">
+														<label for="checkout-surname" class="checkout-card-group__title">
+															Фамилия
+															<span>*</span>
+														</label>
+														<input class="form-input" type="text" id="checkout-surname" placeholder="Фамилия" />
+													</div>
+													<div class="checkout-card-group">
+														<label for="checkout-phone" class="checkout-card-group__title">
+															Телефон
+															<span>*</span>
+														</label>
+														<input class="form-input phone-input" type="text" id="checkout-phone" placeholder="Телефон" />
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="checkout-form__grid-col">
+											<div class="checkout-card__title">Способ доставки</div>
+											<label class="checkout-form__radio-big radio-big checkout-card">
+												<input class="radio-big__input" type="radio" name="delivery" id="delivery" checked="checked" />
+												<div class="radio-big__wrapper">
+													<div class="radio-big__header">
+														<span class="radio-big__checkbox"></span>
+														<span class="radio-big__title">Доставка в отделение новой почты</span>
+														<div class="radio-big__notification">
+															Бесплатная доставка по украине от 1000₴
+														</div>
+													</div>
+													<div class="checkout-card-group">
+														<label for="checkout-city" class="checkout-card-group__title">
+															Город
+														</label>
+														<input class="form-input" type="text" id="checkout-city" placeholder="Город" />
+													</div>
+													<div class="checkout-card-group">
+														<label for="checkout-postOffice" class="checkout-card-group__title">
+															Отделение
+														</label>
+														<input class="form-input" type="text" id="checkout-postOffice" placeholder="Отделение" />
+													</div>
+												</div>
+											</label>
+											<label class="checkout-form__radio-big radio-big checkout-card">
+												<input class="radio-big__input" type="radio" name="delivery" />
+												<div class="radio-big__wrapper">
+													<div class="radio-big__header">
+														<span class="radio-big__checkbox"></span>
+														<span class="radio-big__title">Доставка курьером Новой почты на адрес</span>
+													</div>
+												</div>
+											</label>
+										</div>
+										<div class="checkout-form__grid-col">
+											<div class="checkout-card__title">Способ оплаты</div>
+											<label class="checkout-form__radio-big radio-big checkout-card">
+												<input class="radio-big__input" type="radio" name="payment" checked />
+												<div class="radio-big__wrapper">
+													<div class="radio-big__header">
+														<span class="radio-big__checkbox"></span>
+														<span class="radio-big__title">Наложенный платеж</span>
+														<span class="radio-big__subtitle">Новая Почта дополнительно взымает оплату за отправку денег (20
+															грн+2% от суммы заказа)</span>
+													</div>
+												</div>
+											</label>
+											<label class="checkout-form__radio-big radio-big checkout-card">
+												<input class="radio-big__input" type="radio" name="payment" checked />
+												<div class="radio-big__wrapper">
+													<div class="radio-big__header">
+														<span class="radio-big__checkbox"></span>
+														<span class="radio-big__title">Предоплата на карту</span>
+													</div>
+												</div>
+											</label>
+										</div>
+										<div class="checkout-form__grid-col">
+											<div class="checkout-form__block checkout-block">
+												<div class="checkout-card__title">Сообщение</div>
+												<div class="checkout-card-group">
+													<textarea name="" id="" rows="5" placeholder="Сообщение"></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="checkout-form__footer checkout-footer">
+										<div class="checkout-footer__coupon">
+											<input type="text" name="" id="" class="form-input" placeholder="Купон" />
+											<button class="btn btn-border">Обновить</button>
+										</div>
+										<div class="checkout-footer__total">
+											<div class="checkout-footer__price">
+												<span>Итого::</span>
+												<span>620₴</span>
+											</div>
+											<button type="submit" class="btn btn-blue">
+												Оформить заказ
+											</button>
+										</div>
 									</div>
 								</form>
 							</div>
@@ -298,6 +445,12 @@
 								<a href="#" class="social-link">
 									<i class="icon-behance"></i>
 								</a>
+								<a href="#" class="social-link">
+									<i class="icon-behance"></i>
+								</a>
+								<a href="#" class="social-link">
+									<i class="icon-behance"></i>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -305,8 +458,10 @@
 			</div>
 		</footer>
 
+		<div class="backdrop" data-backdrop></div>
+
 	</div>
-	<script src="js/app.min.js?_v=20220912171709"></script>
+	<script src="js/app.min.js?_v=20220914130606"></script>
 </body>
 
 </html>
