@@ -1962,6 +1962,7 @@ body::after {
 
 .sidebar-categories__item {
   overflow: hidden;
+  min-height: 46px;
 }
 
 .sidebar-categories__item span {
