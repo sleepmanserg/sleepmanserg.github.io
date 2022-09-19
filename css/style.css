@@ -1938,6 +1938,12 @@ body::after {
   margin-bottom: 0;
 }
 
+.sidebar {
+  min-width: 250px;
+  height: 100%;
+  min-height: 100vh;
+}
+
 .sidebar-menu {
   margin-bottom: 52px;
 }
@@ -2322,6 +2328,7 @@ body::after {
 
 .product-item .product-item__btns .btn {
   width: 100%;
+  min-height: 42px;
 }
 
 .product-item .product-item__btns .btn:last-of-type {
