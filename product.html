@@ -8,23 +8,26 @@
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220914205338" media="print" onload="this.media='all'" />
-	<noscript>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220914205338" />
-	</noscript>
-	<link rel="stylesheet" href="css/style.min.css?_v=20220914205338" />
+	<link rel="preload" as="style" href="./fonts/icon-font.css" />
+	<link rel="stylesheet" href="./fonts/icon-font.css?_v=20220919120728" media="print" onload="this.media='all'" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220919120728" media="print" onload="this.media='all'" />
+	<link media="print" onload="this.media='all'" rel="stylesheet" href="css/style.min.css?_v=20220919120728" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220919120728" />
+		<link rel="stylesheet" href="css/style.min.css?_v=20220919120728" />
+	</noscript>
 </head>
 
 <body>
 	<div class="wrapper">
-		<header data-scroll="200" data-scroll-show="100" data-lp class="header">
+		<header data-scroll="200" data-scroll-show="0" data-lp class="header">
 			<div class="header__container">
 				<div class="header-topbar topbar">
 					<div class="topbar-logo">
-						<a href="#">
+						<a href="home.html">
 							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.webp" alt="Potency logo" width="325" height="93" /></picture>
 						</a>
 					</div>
@@ -66,6 +69,16 @@
 						</ul>
 					</nav>
 					<div class="header-nav__actions header-actions">
+						<!-- !Кнопка попапа логина -->
+						<!-- <div
+          class="header-actions__account header-account header-account-login"
+        >
+          <button class="header-btn" data-popup="#login-popup">
+            <i class="icon-account"></i>
+            <span>Аккаунт</span>
+          </button>
+        </div> -->
+						<!-- !Кнопка попапа логина -->
 						<div class="header-actions__account header-account has-child" data-active>
 							<button class="header-btn" data-target>
 								<i class="icon-account"></i>
@@ -95,13 +108,13 @@
 										</a>
 									</li>
 									<li class="header-account__dropdown-list__item account-info__item">
-										<a href="" class="header-account__dropdown-link account-info__link">
+										<a href="account-address.html" class="header-account__dropdown-link account-info__link">
 											<i class="icon-truck"></i>
 											<span>Мои адреса доставки</span>
 										</a>
 									</li>
 									<li class="header-account__dropdown-list__item account-info__item">
-										<a href="" class="header-account__dropdown-link account-info__link">
+										<a href="account-payment.html" class="header-account__dropdown-link account-info__link">
 											<i class="icon-payment"></i>
 											<span>Платежные реквизиты</span>
 										</a>
@@ -121,11 +134,179 @@
 								<span class="cart-quant">23</span>
 								<span class="cart-quant__text">товара</span>
 							</button>
-							<div class="header-cart__dropdown header-dropdown">
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-								natus nulla nam omnis ducimus perferendis expedita deleniti,
-								exercitationem excepturi obcaecati eligendi quas ea ad saepe minima
-								quia ipsum est eum?
+							<div class="header-cart__dropdown header-dropdown cart" id="cart" data-fullscreen>
+								<div class="cart-header">
+									<div class="cart-title">Корзина</div>
+									<button type="button" class="remove-btn" data-filter-close>
+										<i class="icon-close"></i>
+									</button>
+								</div>
+								<!-- !Cart empty -->
+								<!-- <div class="cart-empty">
+              <h2>Нет товаров</h2>
+            </div> -->
+								<!-- !Cart empty -->
+
+								<!-- !Корзина -->
+								<ul class="cart-body">
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+								</ul>
+								<div class="cart-sum">
+									<span>Итого:</span>
+									1280₴
+								</div>
+								<div class="cart-footer">
+									<div class="cart-footer__btns">
+										<div class="cart-footer__btns-item">
+											<button type="button" class="btn btn-border" data-filter-close>
+												Продолжить покупки
+											</button>
+										</div>
+										<div class="cart-footer__btns-item">
+											<a href="order.html" class="btn btn-blue">Оформление заказа</a>
+										</div>
+									</div>
+								</div>
+								<!-- !Корзина -->
 							</div>
 						</div>
 					</div>
@@ -149,10 +330,513 @@
 							</li>
 						</ul>
 					</div>
-					<div class="layout">
+					<div class="layout layout-sidebar">
+						<aside class="sidebar">
+							<div class="sidebar-menu">
+								<div class="sidebar-menu__header">
+									<i class="icon-men"></i>
+									Для Мужчин
+								</div>
+								<ul data-spollers data-one-spoller data-spollers-speed="0" class="sidebar-categories">
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аналоги Виагры</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аналоги Сиалиса</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аналоги Левитры</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аванафил</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аналоги Сиалиса</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аналоги Левитры</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аванафил</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Дапоксетин</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Комбинированные</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Пробные наборы</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Бады для потенции</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="sidebar-menu">
+								<div class="sidebar-menu__header">
+									<i class="icon-women"></i>
+									Для Женщин
+								</div>
+								<ul data-spollers data-spollers-speed="0" class="sidebar-categories">
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аналоги Виагры</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аналоги Сиалиса</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аналоги Левитры</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аванафил</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аналоги Сиалиса</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аналоги Левитры</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Аванафил</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Дапоксетин</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Комбинированные</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Пробные наборы</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="sidebar-categories__item">
+										<button class="sidebar-categories__item-header" type="button" data-spoller>
+											<span>Бады для потенции</span>
+											<i class="icon-chevron"></i>
+										</button>
+										<div class="sidebar-categories__item-body">
+											<ul class="sidebar-categories__item-body-list">
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem1</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem2</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem3</a>
+												</li>
+												<li class="sidebar-categories__item-body-list-item">
+													<a href="catalog.html">Lorem4</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</aside>
+
 						<section class="content">
 							<div class="product-card">
-								<div class="product-card__header">
+								<div class="product-card__header" data-da=".product-card__row, 1024, 1">
 									<h1 class="section-title-big">Pfizer Viagra 25mg</h1>
 									<h2 class="product-card__subtitle">Sildenafil</h2>
 								</div>
@@ -161,13 +845,19 @@
 										<div class="product-card__slider swiper">
 											<div class="swiper-wrapper">
 												<div class="product-card__slider-item swiper-slide">
-													<picture><source srcset="img/products/product-slide.webp" type="image/webp"><img src="img/products/product-slide.webp" alt="Product slide" /></picture>
+													<div class="product-card__image">
+														<picture><source srcset="img/products/product-slide.webp" type="image/webp"><img src="img/products/product-slide.webp" alt="Product slide" width="375" height="375" /></picture>
+													</div>
 												</div>
 												<div class="product-card__slider-item swiper-slide">
-													<picture><source srcset="img/products/product-slide.webp" type="image/webp"><img src="img/products/product-slide.webp" alt="Product slide" /></picture>
+													<div class="product-card__image">
+														<picture><source srcset="img/products/product-slide.webp" type="image/webp"><img src="img/products/product-slide.webp" alt="Product slide" width="375" height="375" /></picture>
+													</div>
 												</div>
 												<div class="product-card__slider-item swiper-slide">
-													<picture><source srcset="img/products/product-slide.webp" type="image/webp"><img src="img/products/product-slide.webp" alt="Product slide" /></picture>
+													<div class="product-card__image">
+														<picture><source srcset="img/products/product-slide.webp" type="image/webp"><img src="img/products/product-slide.webp" alt="Product slide" width="375" height="375" /></picture>
+													</div>
 												</div>
 											</div>
 											<div class="product-card__slider-nav">
@@ -182,9 +872,6 @@
 									</div>
 									<div class="product-card__col product-card__col-characteristics">
 										<div class="product-characteristics">
-											<div class="product-characteristics__title">
-												Характеристики
-											</div>
 											<dl class="product-characteristics__list">
 												<div class="product-characteristics__item">
 													<dt class="product-characteristics__label">
@@ -411,7 +1098,7 @@
 							<div class="swiper-wrapper">
 								<div class="product-item swiper-slide">
 									<a href="product.html" class="product-item__image">
-										<picture><source srcset="img/products/1.webp" type="image/webp"><img src="img/products/1.webp" alt="Product name" /></picture>
+										<picture><source srcset="img/products/1.webp" type="image/webp"><img src="img/products/1.webp" alt="Product name" width="318" height="327" /></picture>
 									</a>
 									<div class="product-item__body">
 										<a href="product.html" class="product-item__name">
@@ -461,7 +1148,7 @@
 								</div>
 								<div class="product-item swiper-slide">
 									<a href="product.html" class="product-item__image">
-										<picture><source srcset="img/products/1.webp" type="image/webp"><img src="img/products/1.webp" alt="Product name" /></picture>
+										<picture><source srcset="img/products/1.webp" type="image/webp"><img src="img/products/1.webp" alt="Product name" width="318" height="327" /></picture>
 									</a>
 									<div class="product-item__body">
 										<a href="product.html" class="product-item__name">
@@ -511,7 +1198,7 @@
 								</div>
 								<div class="product-item swiper-slide">
 									<a href="product.html" class="product-item__image">
-										<picture><source srcset="img/products/2.webp" type="image/webp"><img src="img/products/2.webp" alt="Product name" /></picture>
+										<picture><source srcset="img/products/2.webp" type="image/webp"><img src="img/products/2.webp" alt="Product name" width="318" height="327" /></picture>
 									</a>
 									<div class="product-item__body">
 										<a href="product.html" class="product-item__name">
@@ -561,7 +1248,7 @@
 								</div>
 								<div class="product-item swiper-slide">
 									<a href="product.html" class="product-item__image">
-										<picture><source srcset="img/products/2.webp" type="image/webp"><img src="img/products/2.webp" alt="Product name" /></picture>
+										<picture><source srcset="img/products/2.webp" type="image/webp"><img src="img/products/2.webp" alt="Product name" width="318" height="327" /></picture>
 									</a>
 									<div class="product-item__body">
 										<a href="product.html" class="product-item__name">
@@ -611,7 +1298,7 @@
 								</div>
 								<div class="product-item swiper-slide">
 									<a href="product.html" class="product-item__image">
-										<picture><source srcset="img/products/1.webp" type="image/webp"><img src="img/products/1.webp" alt="Product name" /></picture>
+										<picture><source srcset="img/products/1.webp" type="image/webp"><img src="img/products/1.webp" alt="Product name" width="318" height="327" /></picture>
 									</a>
 									<div class="product-item__body">
 										<a href="product.html" class="product-item__name">
@@ -661,7 +1348,7 @@
 								</div>
 								<div class="product-item swiper-slide">
 									<a href="product.html" class="product-item__image">
-										<picture><source srcset="img/products/1.webp" type="image/webp"><img src="img/products/1.webp" alt="Product name" /></picture>
+										<picture><source srcset="img/products/1.webp" type="image/webp"><img src="img/products/1.webp" alt="Product name" width="318" height="327" /></picture>
 									</a>
 									<div class="product-item__body">
 										<a href="product.html" class="product-item__name">
@@ -802,10 +1489,10 @@
 									</a>
 								</div>
 								<div class="footer-contacts__btn">
-									<a href="mailto:stoi@potency.com" class="btn btn-border">
+									<button type="button" data-popup="#contact-us-popup" class="btn btn-border">
 										<i class="icon-mail"></i>
 										<span>Написать письмо</span>
-									</a>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -848,8 +1535,144 @@
 
 		<div class="backdrop" data-backdrop></div>
 
+		<!-- !Попап логина -->
+
+		<div id="login-popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__content-header">
+						<div class="popup__content-heading">Вход в аккаунт</div>
+						<button data-close type="button" class="popup__close">
+							<i class="icon-close"></i>
+						</button>
+					</div>
+					<div class="popup__body">
+						<div class="popup__body-group">
+							<a href="#" class="btn btn-login">
+								<i class="icon-google-login"></i>
+								<span>Войти с помощью Google</span>
+							</a>
+							<a href="#" class="btn btn-login">
+								<i class="icon-login-facebook"></i>
+								<span>Войти с помощью Facebook</span>
+							</a>
+						</div>
+						<div class="popup-separator">или</div>
+						<div class="popup__body-group error">
+							<label class="personal-data__label" for="loginEmail">Почта или телефон</label>
+							<input type="text" name="loginEmail" id="loginEmail" placeholder="Почта или телефон" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="loginPassword">Пароль</label>
+							<input type="password" name="loginPassword" id="loginPassword" placeholder="Пароль" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<a href="#" class="password-forget">Забыли пароль?</a>
+						</div>
+					</div>
+					<div class="popup__footer">
+						<button class="btn btn-blue">Войти</button>
+						<button class="btn" data-popup="#register-popup" type="button">
+							Зарегистрироваться
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- !Попап регистрации -->
+
+		<div id="register-popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__content-header">
+						<div class="popup__content-heading">Регистриция</div>
+						<button data-close type="button" class="popup__close">
+							<i class="icon-close"></i>
+						</button>
+					</div>
+					<div class="popup__body">
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="registerName">Ваше имя</label>
+							<input type="text" name="registerName" id="registerName" placeholder="Ваше имя" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="registerSurname">Фамилия</label>
+							<input type="text" name="registerSurname" id="registerSurname" placeholder="Фамилия" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group error">
+							<label class="personal-data__label" for="registerEmail">Почта</label>
+							<input type="text" name="registerEmail" id="registerEmail" placeholder="Ваша почта" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="registerPhone">Ваш телефон</label>
+							<input type="text" name="registerPhone" id="registerPhone" placeholder="Ваш телефон" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="loginPassword">Пароль</label>
+							<input type="password" name="loginPassword" id="loginPassword" placeholder="Пароль" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+					</div>
+					<div class="popup__footer">
+						<button class="btn btn-blue">Войти</button>
+						<button class="btn" data-popup="#login-popup" type="button">
+							У меня есть аккаунт
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- !Попап Напишите нам -->
+
+		<div id="contact-us-popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__content-header">
+						<div class="popup__content-heading">Напишите нам</div>
+						<button data-close type="button" class="popup__close">
+							<i class="icon-close"></i>
+						</button>
+					</div>
+					<div class="popup__body">
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="contactName">Ваше имя</label>
+							<input type="text" name="contactName" id="contactName" placeholder="Ваше имя" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="contactEmail">Email</label>
+							<input type="email" name="contactEmail" id="contactEmail" placeholder="Email" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="contactPhone">Ваш телефон</label>
+							<input type="phone" name="contactPhone" id="contactPhone" placeholder="Телефон" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="contactText">Сообщение</label>
+							<textarea name="" id="" rows="3" placeholder="Сообщение"></textarea>
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+					</div>
+					<div class="popup__footer">
+						<button class="btn btn-blue" type="submit">Отправиль</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
-	<script src="js/app.min.js?_v=20220914205338"></script>
+	<script defer src="js/app.min.js?_v=20220919120728"></script>
+
 </body>
 
 </html>
