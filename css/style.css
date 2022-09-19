@@ -1993,6 +1993,7 @@ body::after {
   -webkit-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s;
+  min-height: 46px;
 }
 
 .sidebar-categories__item-header [class^=icon-] {
@@ -3129,6 +3130,9 @@ body::after {
   overflow: hidden;
   background-color: #f5f5f5;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .product-card .product-card__image::before,
