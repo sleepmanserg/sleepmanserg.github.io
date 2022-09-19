@@ -12,10 +12,12 @@
                 if (mediaQuery.matches) bodyLockToggle();
                 currentTarget = e.target.closest("[data-active]");
                 currentTarget.classList.toggle("active");
+                currentTarget.querySelector(".header-btn").setAttribute("aria-expanded", "true");
             }
             document.querySelectorAll("[data-active].active").forEach((item => {
                 if (item == currentTarget) return;
                 item.classList.remove("active");
+                item.querySelector(".header-btn").setAttribute("aria-expanded", "false");
             }));
             isTargetCloseButtons.forEach((btn => {
                 btn.addEventListener("click", (() => {

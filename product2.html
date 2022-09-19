@@ -11,18 +11,18 @@
 	<!-- <link rel="preload" as="style" href="./fonts/icon-font.css" />
   <link
     rel="stylesheet"
-    href="./fonts/icon-font.css?_v=20220919142925"
+    href="./fonts/icon-font.css?_v=20220919212140"
     media="print"
     onload="this.media='all'"
   /> -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220919142925" media="print" onload="this.media='all'" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20220919142925" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220919212140" media="print" onload="this.media='all'" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220919212140" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<noscript>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220919142925" />
-		<link rel="stylesheet" href="css/style.min.css?_v=20220919142925" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220919212140" />
+		<link rel="stylesheet" href="css/style.min.css?_v=20220919212140" />
 	</noscript>
 </head>
 
@@ -85,7 +85,7 @@
         </div> -->
 						<!-- !Кнопка попапа логина -->
 						<div class="header-actions__account header-account has-child" data-active>
-							<button class="header-btn" data-target>
+							<button class="header-btn" data-target aria-label="account-dropdown" aria-expanded="false">
 								<i class="icon-account"></i>
 								<span>Андрей</span>
 							</button>
@@ -134,7 +134,7 @@
 							</div>
 						</div>
 						<div class="header-actions__cart header-cart has-child" data-active>
-							<button class="header-btn" data-target>
+							<button class="header-btn" data-target aria-label="cart dropdown" aria-expanded="false">
 								<i class="icon-cart"></i>
 								<span class="cart-quant">23</span>
 								<span class="cart-quant__text">товара</span>
@@ -1010,22 +1010,22 @@
 						</div>
 						<div class="footer-copyright__column">
 							<div class="footer-copyright__socials">
-								<a href="#" class="social-link">
+								<a href="#" class="social-link" aria-label="Facebook">
 									<i class="icon-facebook"></i>
 								</a>
-								<a href="#" class="social-link">
+								<a href="#" class="social-link" aria-label="Instagrem">
 									<i class="icon-instagram"></i>
 								</a>
-								<a href="#" class="social-link">
+								<a href="#" class="social-link" aria-label="Dribble">
 									<i class="icon-dribble"></i>
 								</a>
-								<a href="#" class="social-link">
+								<a href="#" class="social-link" aria-label="Behance">
 									<i class="icon-behance"></i>
 								</a>
-								<a href="#" class="social-link">
+								<a href="#" class="social-link" aria-label="Behance">
 									<i class="icon-behance"></i>
 								</a>
-								<a href="#" class="social-link">
+								<a href="#" class="social-link" aria-label="Behance">
 									<i class="icon-behance"></i>
 								</a>
 							</div>
@@ -1117,8 +1117,8 @@
 							<span class="error-text">Такой пользователь уже зарегистрирован</span>
 						</div>
 						<div class="popup__body-group">
-							<label class="personal-data__label" for="loginPassword">Пароль</label>
-							<input type="password" name="loginPassword" id="loginPassword" placeholder="Пароль" class="form-input" />
+							<label class="personal-data__label" for="registerPassword">Пароль</label>
+							<input type="password" name="registerPassword" id="registerPassword" placeholder="Пароль" class="form-input" />
 							<span class="error-text">Такой пользователь уже зарегистрирован</span>
 						</div>
 					</div>
@@ -1173,7 +1173,7 @@
 		</div>
 
 	</div>
-	<script defer src="js/app.min.js?_v=20220919142925"></script>
+	<script defer src="js/app.min.js?_v=20220919212140"></script>
 
 </body>
 
