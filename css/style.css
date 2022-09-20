@@ -2736,7 +2736,8 @@ body::after {
 }
 
 .breadcrumbs .breadcrumbs-item::before {
-  content: "";
+  content: "\e905";
+  font-family: "icomoon" !important;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -2754,10 +2755,6 @@ body::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url("data:image/svg+xml,%3Csvg width=%278%27 height=%2714%27 viewBox=%270 0 8 14%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M5.17198 6.99999L0.221985 2.04999L1.63598 0.635986L7.99998 6.99999L1.63598 13.364L0.221985 11.95L5.17198 6.99999Z%27 fill=%27%239CA3AF%27/%3E%3C/svg%3E%0A");
-  background-size: 5px;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .breadcrumbs .breadcrumbs-item:first-of-type {
