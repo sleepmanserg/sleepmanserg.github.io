@@ -22,6 +22,7 @@
             isTargetCloseButtons.forEach((btn => {
                 btn.addEventListener("click", (() => {
                     btn.closest("[data-active]").classList.remove("active");
+                    btn.closest("[data-active]").querySelector(".header-btn").setAttribute("aria-expanded", "false");
                     bodyUnlock();
                 }));
             }));
