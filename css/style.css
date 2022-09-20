@@ -1968,12 +1968,8 @@ body::after {
   margin-bottom: 0;
 }
 
-.sidebar-categories__item-body {
+.sidebar-categories__item-body[hidden] {
   display: none;
-}
-
-._spoller-active + .sidebar-categories__item-body {
-  display: block;
 }
 
 .sidebar-categories {
@@ -6342,8 +6338,12 @@ body::after {
   }
 
   .product-card .product-card__header {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 0;
+    padding-bottom: 1rem;
+  }
+
+  .product-card .product-card__col {
+    margin-bottom: 24px;
   }
 
   .product-characteristics .product-characteristics__list {
@@ -7150,7 +7150,7 @@ body::after {
   }
 
   .product-card .product-card__row {
-    padding-top: 12px;
+    padding-top: 0;
   }
 
   .product-card__table {
