@@ -852,8 +852,12 @@ textarea:focus-within {
 }
 
 .btn.btn-border:hover {
-  background-color: var(--blue-color);
+  background-color: var(--blue-lighter-color);
   color: #fff;
+}
+
+.btn.btn-border:hover::after {
+  border-color: var(--blue-lighter-color);
 }
 
 .btn.btn-account {
