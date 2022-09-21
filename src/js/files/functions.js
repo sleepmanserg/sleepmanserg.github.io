@@ -16,17 +16,17 @@ export function dropdownToggle() {
 			}
 			currentTarget = e.target.closest('[data-active]');
 			currentTarget.classList.toggle('active');
-			currentTarget.querySelector('.header-btn').setAttribute("aria-expanded", "true");
+			currentTarget.querySelector('[data-target]').setAttribute("aria-expanded", "true");
 		}
 		document.querySelectorAll('[data-active].active').forEach(item => {
 			if (item == currentTarget) return;
 			item.classList.remove('active');
-			item.querySelector('.header-btn').setAttribute("aria-expanded", "false");
+			item.querySelector('[data-target]').setAttribute("aria-expanded", "false");
 		});
 		isTargetCloseButtons.forEach(btn => {
 			btn.addEventListener('click', () => {
 				btn.closest('[data-active]').classList.remove('active');
-				btn.closest('[data-active]').querySelector('.header-btn').setAttribute("aria-expanded", "false");
+				btn.closest('[data-active]').querySelector('[data-target]').setAttribute("aria-expanded", "false");
 				bodyUnlock();
 			});
 		});

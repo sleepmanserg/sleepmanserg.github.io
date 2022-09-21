@@ -171,15 +171,17 @@
   .orders-table__item {
     border: 1px solid #e5e7eb;
     border-bottom: 0;
+    &:hover {
+      .btn-account {
+        background-color: var(--blue-color);
+        color: #fff;
+      }
+    }
     &.order-denied {
       * :not(.order-label),
       .orders-table__price,
       .orders-table__quant {
         opacity: 0.5;
-      }
-      .btn,
-      .orders-table__number {
-        pointer-events: none;
       }
     }
     &:last-of-type {
@@ -301,9 +303,6 @@
     flex: 0 0 48px;
     padding: 0 8px;
     transition: 0.25s;
-    &:hover {
-      opacity: 0.7;
-    }
   }
   @media (max-width: 1100px) {
     grid-area: my-order-products;

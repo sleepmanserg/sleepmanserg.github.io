@@ -185,6 +185,9 @@
       font-weight: var(--fw-400);
       border: none;
       padding-right: 10px;
+      @media (max-width: 480px) {
+        display: none;
+      }
     }
     select {
       background-color: #fff;
@@ -193,10 +196,10 @@
       -webkit-appearance: none;
       font-weight: var(--fw-600);
       font-size: 16px;
-      line-height: 22px;
+      line-height: 44px;
+      height: 100%;
       color: #6b7280;
       width: 100%;
-
       text-overflow: ellipsis;
       overflow: hidden;
       -ms-line-clamp: 1;
@@ -206,6 +209,11 @@
       word-wrap: break-word;
       -webkit-box-orient: vertical;
       box-orient: vertical;
+      padding-right: 40px;
+      border-radius: 6px;
+      @media (max-width: 480px) {
+        padding-left: 1rem;
+      }
       &:focus {
         box-shadow: none;
         outline: none;
@@ -214,6 +222,10 @@
     [class^="icon-"] {
       transform: rotate(90deg);
       font-size: 12px;
+      padding: 0;
+      position: absolute;
+      right: 1rem;
+      pointer-events: none;
     }
     &:hover {
       span {
