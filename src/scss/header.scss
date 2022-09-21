@@ -53,6 +53,9 @@
     max-width: 240px;
     width: 100%;
     height: auto;
+    a {
+      display: block;
+    }
     img {
       width: 100%;
       height: auto;
@@ -329,6 +332,8 @@
     color: var(--blue-color);
     font-size: 22px;
     transition: color 0.25s;
+    flex: 0 0 22px;
+    aspect-ratio: 1;
   }
   @media (max-width: 1024px) {
     .cart-quant__text {

@@ -366,6 +366,26 @@ body {
   outline: none;
 }
 
+.search-form__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  aspect-ratio: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-form__icon [class^=icon-] {
+  font-size: 1rem;
+}
+
 .subscribe-form {
   display: -ms-grid;
   display: grid;
@@ -4577,6 +4597,10 @@ body::after {
   height: auto;
 }
 
+.header-topbar .topbar-logo a {
+  display: block;
+}
+
 .header-topbar .topbar-logo img {
   width: 100%;
   height: auto;
@@ -4807,6 +4831,10 @@ body::after {
   -webkit-transition: color 0.25s;
   -o-transition: color 0.25s;
   transition: color 0.25s;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 22px;
+          flex: 0 0 22px;
+  aspect-ratio: 1;
 }
 
 .icon-menu {

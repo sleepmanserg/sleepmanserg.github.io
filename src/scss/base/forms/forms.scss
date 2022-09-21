@@ -36,6 +36,17 @@
   }
 }
 
+.search-form__icon {
+  flex: 0 0 20px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  [class^="icon-"] {
+    font-size: 1rem;
+  }
+}
+
 .subscribe-form {
   display: grid;
   grid-template-columns: 1fr auto;
