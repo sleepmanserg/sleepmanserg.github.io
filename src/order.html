@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Оформление заказа" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page-wrapper">
+        <div class="__container">
+          <div class="layout">
+            <section class="content">
+              <div class="checkout-page checkout">
+                <h1 class="section-title-big">Оформление заказа</h1>
+                <div class="checkout-form-wrapper">
+                  <form action="" class="checkout-form">
+                    <div class="checkout-form__table checkout-table">
+                      <div class="checkout-table__header">
+                        <div class="checkout-table__header-item">Фото</div>
+                        <div class="checkout-table__header-item">
+                          Наименование товара
+                        </div>
+                        <div class="checkout-table__header-item">
+                          Количество
+                        </div>
+                        <div class="checkout-table__header-item">Цена</div>
+                        <div class="checkout-table__header-item">Итого:</div>
+                      </div>
+                      <ul class="checkout-table__list">
+                        <li class="checkout-table__list-item checkout-product">
+                          <a
+                            href="#"
+                            class="checkout-product__img"
+                            target="_blank"
+                          >
+                            <img
+                              src="img/products/product-slide.webp"
+                              alt="Product name"
+                              width="50"
+                              height="50"
+                            />
+                          </a>
+                          <a href="#" class="checkout-product__title"
+                            >Pfizer Viagra 25mg</a
+                          >
+                          <div class="checkout-product__quantity">
+                            <div class="checkout-product__counter">
+                              <input
+                                type="button"
+                                value="-"
+                                data-for="quantity1"
+                                class="count-minus count-btn"
+                              />
+                              <input
+                                type="number"
+                                id="quantity1"
+                                value="1"
+                                min="1"
+                                class="cart-counter__input"
+                              />
+                              <input
+                                type="button"
+                                value="+"
+                                data-for="quantity1"
+                                class="count-plus count-btn"
+                              />
+                            </div>
+                            <div class="checkout-product__remove">
+                              <button type="button" class="remove-btn">
+                                <i class="icon-close"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            class="checkout-product__price"
+                            data-checkout-price="Цена:"
+                          >
+                            320₴
+                          </div>
+                          <div
+                            class="checkout-product__full-price"
+                            data-checkout-fullprice="Итого:"
+                          >
+                            1212121₴
+                          </div>
+                        </li>
+                        <li class="checkout-table__list-item checkout-product">
+                          <a
+                            href="#"
+                            class="checkout-product__img"
+                            target="_blank"
+                          >
+                            <img
+                              src="img/products/product-slide.webp"
+                              alt="Product name"
+                              width="50"
+                              height="50"
+                            />
+                          </a>
+                          <a href="#" class="checkout-product__title"
+                            >Pfizer Viagra 25mg</a
+                          >
+                          <div class="checkout-product__quantity">
+                            <div class="checkout-product__counter">
+                              <input
+                                type="button"
+                                value="-"
+                                data-for="quantity2"
+                                class="count-minus count-btn"
+                              />
+                              <input
+                                type="number"
+                                id="quantity2"
+                                value="1"
+                                min="1"
+                                class="cart-counter__input"
+                              />
+                              <input
+                                type="button"
+                                value="+"
+                                data-for="quantity2"
+                                class="count-plus count-btn"
+                              />
+                            </div>
+                            <div class="checkout-product__remove">
+                              <button type="button" class="remove-btn">
+                                <i class="icon-close"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            class="checkout-product__price"
+                            data-checkout-price="Цена:"
+                          >
+                            320₴
+                          </div>
+                          <div
+                            class="checkout-product__full-price"
+                            data-checkout-fullprice="Итого:"
+                          >
+                            1212121₴
+                          </div>
+                        </li>
+                        <li class="checkout-table__list-item checkout-product">
+                          <a
+                            href="#"
+                            class="checkout-product__img"
+                            target="_blank"
+                          >
+                            <img
+                              src="img/products/product-slide.webp"
+                              alt="Product name"
+                              width="50"
+                              height="50"
+                            />
+                          </a>
+                          <a href="#" class="checkout-product__title"
+                            >Pfizer Viagra 25mg</a
+                          >
+                          <div class="checkout-product__quantity">
+                            <div class="checkout-product__counter">
+                              <input
+                                type="button"
+                                value="-"
+                                data-for="quantity3"
+                                class="count-minus count-btn"
+                              />
+                              <input
+                                type="number"
+                                id="quantity3"
+                                value="1"
+                                min="1"
+                                class="cart-counter__input"
+                              />
+                              <input
+                                type="button"
+                                value="+"
+                                data-for="quantity3"
+                                class="count-plus count-btn"
+                              />
+                            </div>
+                            <div class="checkout-product__remove">
+                              <button type="button" class="remove-btn">
+                                <i class="icon-close"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            class="checkout-product__price"
+                            data-checkout-price="Цена:"
+                          >
+                            320₴
+                          </div>
+                          <div
+                            class="checkout-product__full-price"
+                            data-checkout-fullprice="Итого:"
+                          >
+                            1212121₴
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    @@include('html/_checkout-form.htm',{})
+                    <div class="checkout-form__footer checkout-footer">
+                      <div class="checkout-footer__coupon">
+                        <input
+                          type="text"
+                          name=""
+                          id=""
+                          class="form-input"
+                          placeholder="Купон"
+                        />
+                        <button class="btn btn-border">Обновить</button>
+                      </div>
+                      <div class="checkout-footer__total">
+                        <div class="checkout-footer__price">
+                          <span>Итого::</span>
+                          <span>620₴</span>
+                        </div>
+                        <button type="submit" class="btn btn-blue">
+                          Оформить заказ
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

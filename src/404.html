@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"404" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page-wrapper">
+        <div class="__container">
+          <div class="breadcrumb-wrapper">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs-item">
+                <a href="#" class="breadcrumb-link">Главная</a>
+              </li>
+              <li class="breadcrumbs-item active">
+                <span class="breadcrumb-link">404</span>
+              </li>
+            </ul>
+          </div>
+          <div class="layout">
+            <section class="content">
+              <div class="error-page">
+                <h2 class="error-page__subtitle">Ошибка 404</h2>
+                <h1 class="error-page__title">Страница не найдена</h1>
+                <p class="error-page__text">
+                  Неверно набран адрес или такой страницы на сайте больше не
+                  существует.
+                </p>
+                <a href="#" class="btn btn-blue">Перейти на главную страницу</a>
+              </div>
+            </section>
+          </div>
+        </div>
+        <section class="looked-products">
+          <div class="__container">
+            <div class="product-slider__wrapper">
+              <div class="popular-slider swiper">
+                <div class="main-slider__header">
+                  <h2 class="section-title">
+                    <i class="icon-flask"></i>
+                    <span>Просмотренные товары</span>
+                  </h2>
+                  @@include('html/_slider-popular-nav.htm',{})
+                </div>
+                @@include('html/_slider-popular.htm',{})
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('html/_top-products.htm',{})
+        @@include('html/_delivery.htm',{})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

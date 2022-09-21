@@ -1,0 +1,137 @@
+.masonry-header {
+  margin-bottom: 43px;
+  @media (max-width: 768px) {
+    margin-bottom: 22px;
+  }
+  // Colors of links
+  $colors: $masonry-blue, $masonry-purple, $masonry-green, $masonry-beige,
+    $masonry-rose, $masonry-rose;
+  $colors2: $masonry-lightGreen, $masonry-yellow, $masonry-darkGreen,
+    $masonry-darkGreen;
+
+  .masonry-header__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    .masonry-header__link {
+      @for $i from 1 to length($colors2) {
+        &:nth-of-type(#{$i}) {
+          $color-from-list2: nth($colors2, $i);
+          background-color: $color-from-list2;
+          &:hover {
+            background-color: lighten($color-from-list2, 5%);
+          }
+        }
+      }
+    }
+  }
+  .masonry-header__bottom {
+    margin-top: 24px;
+    @media (max-width: 768px) {
+      margin-top: 1rem;
+    }
+    .masonry-header__link {
+      @for $i from 1 to length($colors) {
+        &:nth-of-type(#{$i}) {
+          $color-from-list: nth($colors, $i);
+          background-color: $color-from-list;
+          &:hover {
+            background-color: lighten($color-from-list, 5%);
+          }
+        }
+      }
+    }
+    @media (min-width: 1081px) {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(155px, 1fr));
+      grid-template-areas:
+        "tall-one small-one small-two tall-two"
+        "tall-one wide wide tall-two";
+      grid-auto-rows: 180px;
+      grid-auto-flow: dense;
+      margin-top: 32px;
+      gap: 32px;
+      > .tall {
+        &:first-of-type {
+          order: 1;
+          grid-area: tall-one;
+        }
+        &:last-of-type {
+          order: 4;
+          grid-area: tall-two;
+        }
+      }
+      > .wide {
+        order: 3;
+        grid-area: wide;
+      }
+      > .small {
+        order: 2;
+        &:first-of-type {
+          grid-area: small-one;
+        }
+        &:last-of-type {
+          grid-area: small-two;
+        }
+      }
+    }
+  }
+  .masonry-header__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: var(--fw-700);
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--heading-color);
+    width: 100%;
+    transition: 0.25s;
+    &.even {
+      height: 155px;
+      @media (max-width: 1080px) {
+        height: 80px;
+      }
+      @media (max-width: 575px) {
+        height: 50px;
+      }
+    }
+    @media (max-width: 575px) {
+      font-size: 17px;
+      line-height: 23px;
+    }
+  }
+  .masonry-header__bottom,
+  .masonry-header__top {
+    @media (max-width: 1080px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 575px) {
+      gap: 1rem;
+    }
+  }
+  @media (max-width: 1080px) {
+    $colors: $masonry-lightGreen, $masonry-yellow, $masonry-darkGreen,
+      $masonry-blue, $masonry-purple, $masonry-green, $masonry-beige,
+      $masonry-rose, $masonry-rose;
+    .masonry-header__link {
+      height: 80px;
+      @for $i from 1 to length($colors) {
+        &:nth-of-type(#{$i}) {
+          $color-from-list: nth($colors, $i);
+          background-color: $color-from-list;
+          &:hover {
+            background-color: lighten($color-from-list, 5%);
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    .masonry-header__link {
+      height: 50px;
+    }
+  }
+}

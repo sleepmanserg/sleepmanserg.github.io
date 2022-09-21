@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Спасибо за заказ" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page-wrapper">
+        <div class="__container">
+          <div class="breadcrumb-wrapper">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs-item">
+                <a href="#" class="breadcrumb-link">Главная</a>
+              </li>
+              <li class="breadcrumbs-item active">
+                <span class="breadcrumb-link">Спасибо за заказ</span>
+              </li>
+            </ul>
+          </div>
+          <div class="layout">
+            <section class="content">
+              <div class="thanks-page">
+                <div class="thanks-page__col">
+                  <h2 class="thanks-page__title">Спасибо за заказ</h2>
+                  <p class="section-text">
+                    Мы максимально упростили процесс возврата товаров. И
+                    большинство покупок можно вернуть бесплатно.
+                  </p>
+                  <hr />
+                  <h3 class="thanks-page__subtitle">Подпишитесь на новости</h3>
+                  <p class="section-text-sm">
+                    Его кусочки, благодаря оригинальной форме и изысканному
+                    вкусу, украсят чайную церемонию.
+                  </p>
+                  <form action="" class="subscribe-form">
+                    <div class="form-group">
+                      <input
+                        class="form-input"
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="E-mail"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-border">
+                        Подписаться
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="thanks-page__col">
+                  <div class="thanks-page__card order-card">
+                    <div class="order-card__header">
+                      <h2 class="order-card__title">
+                        Заказ №<span>123456</span>
+                      </h2>
+                    </div>
+                    <div class="order-card__body">
+                      <div class="order-card__body-title">Детали заказа</div>
+                      <dl class="order-card__list">
+                        <div class="order-card__item">
+                          <dt class="order-card__item-label">Товаров:</dt>
+                          <dd class="order-card__item-value">15 шт.</dd>
+                        </div>
+                        <div class="order-card__item">
+                          <dt class="order-card__item-label">Получатель:</dt>
+                          <dd class="order-card__item-value">
+                            Светлана Громова
+                          </dd>
+                        </div>
+                        <div class="order-card__item">
+                          <dt class="order-card__item-label">
+                            Номер телефона:
+                          </dt>
+                          <dd class="order-card__item-value">+380687653412</dd>
+                        </div>
+                        <div class="order-card__item">
+                          <dt class="order-card__item-label">
+                            Способ доставки:
+                          </dt>
+                          <dd class="order-card__item-value">Самовывоз</dd>
+                        </div>
+                        <div class="order-card__item">
+                          <dt class="order-card__item-label">Оплата:</dt>
+                          <dd class="order-card__item-value">
+                            Безналичная оплата
+                          </dd>
+                        </div>
+                        <div class="order-card__item">
+                          <dt class="order-card__item-label">Адрес:</dt>
+                          <dd class="order-card__item-value">
+                            ул. Пироговский шлях, 34
+                          </dd>
+                        </div>
+                        <div class="order-card__item">
+                          <dt class="order-card__item-label">Комментарий:</dt>
+                          <dd class="order-card__item-value">
+                            Пути Господни неисповедимы
+                          </dd>
+                        </div>
+                        <div class="order-card__item">
+                          <dt class="order-card__item-label">Итого:</dt>
+                          <dd class="order-card__item-value">1478₴</dd>
+                        </div>
+                      </dl>
+                      <div class="order-card__btns">
+                        <a href="#" class="btn btn-blue"
+                          >Перейти в мои заказы</a
+                        >
+                        <a href="#" class="btn btn-border">Детали заказа</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        @@include('html/_top-products.htm',{})
+        @@include('html/_delivery.htm',{})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

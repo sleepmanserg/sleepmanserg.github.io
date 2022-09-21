@@ -1,0 +1,13 @@
+textarea {
+  width: 100%;
+  resize: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 10px 1rem;
+  &::placeholder {
+    color: #9ca3af;
+  }
+  &:focus-within {
+    outline: 1px solid var(--blue-color);
+  }
+}
