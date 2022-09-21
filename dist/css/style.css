@@ -4252,6 +4252,16 @@ body::after {
   border-bottom-right-radius: 8px;
 }
 
+.orders-table .orders-table__item .orders-table__price {
+  font-size: 18px;
+  font-weight: var(--fw-600);
+}
+
+.orders-table .orders-table__item .orders-table__quant {
+  font-size: 18px;
+  font-weight: var(--fw-600);
+}
+
 .orders-table .orders-table__title {
   padding-left: 24px;
 }
@@ -4267,7 +4277,7 @@ body::after {
 .orders-table .orders-table__date {
   color: #9ca3af;
   display: block;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 24px;
 }
 
@@ -4296,7 +4306,7 @@ body::after {
 
 .order-label {
   font-weight: var(--fw-700);
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1;
   text-transform: uppercase;
   padding: 7px;
@@ -5650,7 +5660,6 @@ body::after {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    font-weight: var(--fw-600);
   }
 
   .orders-table .orders-table__item .orders-table__quant {
@@ -5660,7 +5669,6 @@ body::after {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    font-weight: var(--fw-600);
     grid-area: my-order-quant;
   }
 
@@ -6509,7 +6517,7 @@ body::after {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 18px;
     font-weight: var(--fw-600);
   }
@@ -7063,6 +7071,7 @@ body::after {
   .footer-contacts {
     padding-left: 1rem;
     padding-right: 1rem;
+    margin: 0;
   }
 
   .footer-copyright {
@@ -7181,6 +7190,7 @@ body::after {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+    padding: 0;
   }
 }
 
@@ -7337,11 +7347,10 @@ body::after {
 
   .footer-copyright .footer-copyright__socials {
     width: 100%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -7354,10 +7363,26 @@ body::after {
     padding-left: 1rem;
   }
 
+  .my-order-popup .order-slider__actions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .my-order-popup .order-slider__actions .btn {
+    width: 100%;
+  }
+
   .personal-data__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+  }
+
+  .orders-table .orders-table__item .orders-table__price {
+    max-width: 100px;
+    word-wrap: anywhere;
   }
 }
 

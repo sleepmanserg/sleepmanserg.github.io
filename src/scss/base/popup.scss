@@ -210,6 +210,12 @@ body::after {
         color: var(--red-color);
       }
     }
+    @media (max-width: 480px) {
+      flex-direction: column;
+      .btn {
+        width: 100%;
+      }
+    }
   }
   .order-slider__info {
     display: flex;

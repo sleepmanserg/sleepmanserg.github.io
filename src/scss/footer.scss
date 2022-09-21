@@ -92,6 +92,7 @@
   @media (max-width: 768px) {
     padding-left: 1rem;
     padding-right: 1rem;
+    margin: 0;
   }
   @media (max-width: 660px) {
     row-gap: 24px;
@@ -101,6 +102,7 @@
     padding: 0 12px;
     @media (max-width: 660px) {
       flex: 0 0 100%;
+      padding: 0;
     }
   }
   .footer-contacts__phone {
@@ -237,8 +239,8 @@
     }
     @media (max-width: 575px) {
       width: 100%;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
     }
   }
 }
