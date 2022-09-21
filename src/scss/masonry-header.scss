@@ -81,12 +81,14 @@
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    font-weight: var(--fw-700);
-    font-size: 24px;
-    line-height: 33px;
-    color: var(--heading-color);
     width: 100%;
-    transition: 0.25s;
+    transition: background-color 0.25s;
+    span {
+      font-weight: var(--fw-700);
+      font-size: 24px;
+      line-height: 33px;
+      color: var(--heading-color);
+    }
     &.even {
       height: 155px;
       @media (max-width: 1080px) {
@@ -97,8 +99,10 @@
       }
     }
     @media (max-width: 575px) {
-      font-size: 17px;
-      line-height: 23px;
+      span {
+        font-size: 17px;
+        line-height: 23px;
+      }
     }
   }
   .masonry-header__bottom,

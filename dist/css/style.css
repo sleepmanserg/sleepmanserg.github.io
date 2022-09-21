@@ -2616,14 +2616,17 @@ body::after {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 8px;
+  width: 100%;
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+.masonry-header .masonry-header__link span {
   font-weight: var(--fw-700);
   font-size: 24px;
   line-height: 33px;
   color: var(--heading-color);
-  width: 100%;
-  -webkit-transition: 0.25s;
-  -o-transition: 0.25s;
-  transition: 0.25s;
 }
 
 .masonry-header .masonry-header__link.even {
@@ -7223,7 +7226,7 @@ body::after {
     height: 50px;
   }
 
-  .masonry-header .masonry-header__link {
+  .masonry-header .masonry-header__link span {
     font-size: 17px;
     line-height: 23px;
   }
