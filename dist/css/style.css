@@ -5107,6 +5107,7 @@ body::after {
   -webkit-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s;
+  font-size: 20px;
 }
 
 .footer-copyright .footer-copyright__socials .social-link:hover {
@@ -6505,6 +6506,10 @@ body::after {
     width: 100%;
   }
 
+  .product-card__table .product-card__table-body .product-card__table-btn {
+    margin-top: 10px;
+  }
+
   .product-card__table .product-card__table-body [data-pill-quant],
   .product-card__table .product-card__table-body [data-pill-price],
   .product-card__table .product-card__table-body [data-pill-sum] {
@@ -7343,6 +7348,11 @@ body::after {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
+  }
+
+  .footer-copyright .footer-copyright__socials .social-link {
+    width: 42px;
+    height: 42px;
   }
 
   .footer-copyright .footer-copyright__socials {
