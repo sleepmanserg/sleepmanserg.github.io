@@ -18,6 +18,7 @@
   --fw-500: 500;
   --fw-600: 600;
   --fw-700: 700;
+  --ff: "Manrope";
 }
 
 @font-face {
@@ -4255,6 +4256,7 @@ body::after {
 .orders-table .orders-table__item .orders-table__price {
   font-size: 18px;
   font-weight: var(--fw-600);
+  font-family: var(--ff);
 }
 
 .orders-table .orders-table__item .orders-table__quant {

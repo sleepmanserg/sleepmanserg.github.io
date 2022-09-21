@@ -225,6 +225,7 @@
     .orders-table__price {
       font-size: 18px;
       font-weight: var(--fw-600);
+      font-family: var(--ff);
       @media (max-width: 1100px) {
         grid-area: my-order-price;
         display: flex;
