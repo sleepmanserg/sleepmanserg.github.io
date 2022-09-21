@@ -2796,28 +2796,6 @@ body::after {
   position: relative;
 }
 
-.breadcrumbs .breadcrumbs-item::before {
-  content: "\e905";
-  font-family: "icomoon" !important;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: -12px;
-  width: 24px;
-  height: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .breadcrumbs .breadcrumbs-item:first-of-type {
   padding-left: 0;
 }
