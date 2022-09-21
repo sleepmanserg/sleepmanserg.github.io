@@ -2633,6 +2633,14 @@ body::after {
   height: 155px;
 }
 
+.masonry-header__mobile {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
 .home-dosage {
   padding-top: 60px;
 }
@@ -5464,6 +5472,10 @@ body::after {
   .masonry-header .masonry-header__bottom > .small:last-of-type {
     grid-area: small-two;
   }
+
+  .masonry-header__mobile {
+    display: none;
+  }
 }
 
 @media (min-width: 1081px){
@@ -5745,11 +5757,7 @@ body::after {
 
   .masonry-header .masonry-header__bottom,
   .masonry-header .masonry-header__top {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    display: none;
   }
 
   .masonry-header .masonry-header__link {

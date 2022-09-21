@@ -73,6 +73,7 @@
 	},
 	"dependencies": {
 		"masonry-layout": "^4.2.2",
+		"minimasonry": "^1.3.0",
 		"simplebar": "latest"
 	}
 }

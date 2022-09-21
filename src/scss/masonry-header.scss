@@ -108,9 +108,7 @@
   .masonry-header__bottom,
   .masonry-header__top {
     @media (max-width: 1080px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      display: none;
     }
     @media (max-width: 575px) {
       gap: 1rem;
@@ -137,5 +135,14 @@
     .masonry-header__link {
       height: 50px;
     }
+  }
+}
+
+.masonry-header__mobile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  @media (min-width: 1081px) {
+    display: none;
   }
 }
