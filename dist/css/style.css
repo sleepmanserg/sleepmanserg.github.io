@@ -2016,7 +2016,7 @@ body::after {
   margin-bottom: 0;
 }
 
-.sidebar-categories__item-body[hidden] {
+.sidebar-categories__item-body {
   display: none;
 }
 
@@ -2087,6 +2087,10 @@ body::after {
 .sidebar-categories__item-header:hover [class^=icon-],
 .sidebar-categories__item-header._spoller-active [class^=icon-] {
   color: #fff;
+}
+
+.sidebar-categories__item-header._spoller-active + .sidebar-categories__item-body {
+  display: block;
 }
 
 .sidebar-categories__item-header._spoller-active [class^=icon-] {
