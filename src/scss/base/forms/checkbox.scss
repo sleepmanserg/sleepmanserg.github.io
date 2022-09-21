@@ -1,0 +1,33 @@
+input[type="radio"] {
+  visibility: hidden; /* 1 */
+  height: 0; /* 2 */
+  width: 0; /* 2 */
+}
+
+label {
+  display: flex;
+  flex: auto;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  color: var(--text-color);
+  padding: 5px 10px;
+  border-radius: 6px;
+  user-select: none;
+  margin-right: 8px;
+}
+
+label:last-of-type {
+  margin-right: 0;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #e5e7eb;
+}
+
+input[type="radio"]:hover:not(:checked) + label {
+  background-color: var(-superLight-color);
+}

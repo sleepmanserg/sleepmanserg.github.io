@@ -1,0 +1,108 @@
+.sidebar {
+  min-width: 250px;
+}
+
+.sidebar-menu {
+  margin-bottom: 52px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.sidebar-categories__item-body[hidden] {
+  display: none;
+}
+
+.sidebar-categories {
+  display: flex;
+  flex-direction: column;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background-color: var(--light-color);
+  border-radius: 8px;
+}
+.sidebar-categories__item {
+  overflow: hidden;
+  min-height: 46px;
+  span {
+    max-width: 80%;
+    text-align: left;
+  }
+}
+.sidebar-categories__item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  font-weight: var(--fw-400);
+  font-size: 1.1rem;
+  line-height: 22px;
+  background-color: var(--light-color);
+  padding-top: 11px;
+  padding-bottom: 13px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: 0.25s;
+  min-height: 46px;
+  [class^="icon-"] {
+    color: var(--blue-color);
+    transform: rotate(90deg);
+    font-size: 14px;
+  }
+  &:hover,
+  &._spoller-active {
+    color: #fff;
+    background-color: var(--blue-color);
+    [class^="icon-"] {
+      color: #fff;
+    }
+  }
+  &._spoller-active {
+    [class^="icon-"] {
+      transform: rotate(-90deg);
+    }
+  }
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
+}
+.sidebar-categories__item-body {
+  background-color: var(--superLight-color);
+}
+.sidebar-categories__item-body-list {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+}
+.sidebar-categories__item-body-list-item {
+  &.active {
+    > a {
+      background-color: var(--blue-color);
+      color: #fff;
+    }
+  }
+  > a {
+    padding: 10px 1rem;
+    display: block;
+    transition: 0.25s;
+    &:hover {
+      background-color: var(--blue-color);
+      color: #fff;
+    }
+  }
+}
+
+.sidebar-menu__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--heading-color);
+  font-weight: var(--fw-700);
+  font-size: 24px;
+  line-height: 33px;
+  padding-bottom: 1.5rem;
+  [class^="icon-"] {
+    color: var(--blue-color);
+  }
+}

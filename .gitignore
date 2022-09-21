@@ -2,9 +2,7 @@ flsStartTemplate/
 .DS_Store
 */.DS_Store
 .DS_Store?
-*.cfg
 .gitignore
-dist/
 Source/
 version.json
 undefined
@@ -13,12 +11,3 @@ undefined
 phpmailer/
 node_modules/
 package-lock.json
-.vscode
-*.zip
-*.sublime*
-.sass-cache
-.bowerrc
-.grunt
-*.config
-.idea
-.cache

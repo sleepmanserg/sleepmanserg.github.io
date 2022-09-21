@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<!--! Local only, remove on prod -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220920124827" media="print" onload="this.media='all'" />
+	<!--! Local only, remove on prod -->
+
+	<!--? Prod only, uncomment on prod -->
+	<!-- <link rel="preload" as="style" href="./fonts/fonts.css" />
+  <link
+  rel="stylesheet"
+  href="./fonts/fonts.css?_v=20220921181355"
+  media="print"
+  onload="this.media='all'"
+  /> -->
+	<!-- <link rel="preload" as="style" href="./fonts/icon-font.css" />
+  <link
+    rel="stylesheet"
+    href="./fonts/icon-font.css?_v=20220921181355"
+    media="print"
+    onload="this.media='all'"
+  /> -->
+	<!--? Prod only, uncomment on prod -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220921181355" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<noscript>
+		<link rel="stylesheet" href="./fonts/fonts.css?_v=20220921181355" />
+	</noscript>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header data-scroll="200" data-scroll-show="0" data-lp class="header">
+			<div class="header__container">
+				<div class="header-topbar topbar">
+					<div class="topbar-logo">
+						<a href="home.html">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.webp" alt="Potency logo" width="325" height="93" /></picture>
+						</a>
+					</div>
+					<div class="topbar-search">
+						<form class="search-form" action="" novalidate>
+							<div class="search-form__inner">
+								<div class="search-form__icon">
+									<i class="icon-search"></i>
+								</div>
+								<input type="text" class="search-form__input" placeholder="Поиск" />
+							</div>
+						</form>
+					</div>
+					<div class="topbar-info">
+						<a href="tel:+0681234567" class="topbar-phone">+38 068 123 45 67</a>
+						<span class="topbar-hours">Без выходных 10:00-21:00 (+2 GMT)</span>
+					</div>
+					<div class="icon-menu">
+						<span></span>
+					</div>
+				</div>
+			</div>
+			<div class="header-nav">
+				<div class="header__container">
+					<nav class="main-nav">
+						<ul class="main-nav__list">
+							<li class="main-nav__list-item">
+								<a href="catalog.html">Продукция</a>
+							</li>
+							<li class="main-nav__list-item">
+								<a href="manufactures.html">Производители</a>
+							</li>
+							<li class="main-nav__list-item">
+								<a href="instructions.html">Инструкции</a>
+							</li>
+							<li class="main-nav__list-item">
+								<a href="contacts.html">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- !Поиск на телефоне тут -->
+					<div class="topbar-search">
+						<form class="search-form" action="" novalidate>
+							<div class="search-form__inner">
+								<div class="search-form__icon">
+									<i class="icon-search"></i>
+								</div>
+								<input type="text" class="search-form__input" placeholder="Поиск" />
+							</div>
+						</form>
+					</div>
+					<!-- !Поиск на телефоне тут -->
+					<div class="header-nav__actions header-actions">
+						<!-- !Кнопка попапа логина -->
+						<!-- <div
+          class="header-actions__account header-account header-account-login"
+        >
+          <button class="header-btn" data-popup="#login-popup">
+            <i class="icon-account"></i>
+            <span>Аккаунт</span>
+          </button>
+        </div> -->
+						<!-- !Кнопка попапа логина -->
+						<div class="header-actions__account header-account has-child" data-active>
+							<button class="header-btn" data-target aria-label="account-dropdown" aria-expanded="false">
+								<i class="icon-account"></i>
+								<span>Андрей</span>
+							</button>
+							<div class="header-account__dropdown header-dropdown account-info" data-fullscreen>
+								<div class="header-account__dropdown-title account-info__header">
+									<div>Приветствуем, <span>Андрей!</span></div>
+									<button type="button" class="btn-close" data-filter-close>
+										<i class="icon-close"></i>
+									</button>
+								</div>
+								<div class="header-account__dropdown-email account-info__email">
+									Вы вошли как <span>andrey@gmail.com</span>
+								</div>
+								<ul class="header-account__dropdown-list account-info__list">
+									<li class="header-account__dropdown-list__item account-info__item">
+										<a href="account-profile.html" class="header-account__dropdown-link account-info__link">
+											<i class="icon-account"></i>
+											<span>Детали профиля</span>
+										</a>
+									</li>
+									<li class="header-account__dropdown-list__item account-info__item">
+										<a href="account-orders.html" class="header-account__dropdown-link account-info__link">
+											<i class="icon-orders"></i>
+											<span>Мои заказы</span>
+										</a>
+									</li>
+									<li class="header-account__dropdown-list__item account-info__item">
+										<a href="account-address.html" class="header-account__dropdown-link account-info__link">
+											<i class="icon-truck"></i>
+											<span>Мои адреса доставки</span>
+										</a>
+									</li>
+									<li class="header-account__dropdown-list__item account-info__item">
+										<a href="account-payment.html" class="header-account__dropdown-link account-info__link">
+											<i class="icon-payment"></i>
+											<span>Платежные реквизиты</span>
+										</a>
+									</li>
+									<li class="header-account__dropdown-list__item account-info__item">
+										<a href="#" class="header-account__dropdown-link account-info__link">
+											<i class="icon-logout"></i>
+											<span>Выйти</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="header-actions__cart header-cart has-child" data-active>
+							<button class="header-btn" data-target aria-label="cart dropdown" aria-expanded="false">
+								<i class="icon-cart"></i>
+								<span class="cart-quant">23</span>
+								<span class="cart-quant__text">товара</span>
+							</button>
+							<div class="header-cart__dropdown header-dropdown cart" id="cart" data-fullscreen>
+								<div class="cart-header">
+									<div class="cart-title">Корзина</div>
+									<button type="button" class="remove-btn" data-filter-close>
+										<i class="icon-close"></i>
+									</button>
+								</div>
+								<!-- !Cart empty -->
+								<!-- <div class="cart-empty">
+              <h2>Нет товаров</h2>
+            </div> -->
+								<!-- !Cart empty -->
+
+								<!-- !Корзина -->
+								<ul class="cart-body">
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+								</ul>
+								<div class="cart-sum">
+									<span>Итого:</span>
+									1280₴
+								</div>
+								<div class="cart-footer">
+									<div class="cart-footer__btns">
+										<div class="cart-footer__btns-item">
+											<button type="button" class="btn btn-border" data-filter-close>
+												Продолжить покупки
+											</button>
+										</div>
+										<div class="cart-footer__btns-item">
+											<a href="order.html" class="btn btn-blue">Оформление заказа</a>
+										</div>
+									</div>
+								</div>
+								<!-- !Корзина -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page-wrapper">
+			<div class="home-page-catalog">
+				<div class="__container">
+					<div class="layout layout-no-sidebar">
+						<div class="layout-no-sidebar__masonry-header masonry-header">
+							<div class="masonry-header__top">
+								<a href="#" class="masonry-header__link even">Виагра</a>
+								<a href="#" class="masonry-header__link even">Для женщин</a>
+								<a href="#" class="masonry-header__link even">Сиалис</a>
+							</div>
+							<div class="masonry-header__bottom">
+								<a href="#" data-da=".masonry-header__top, 1080, last" class="masonry-header__link tall">Зудена</a>
+								<a href="#" class="masonry-header__link small">Далоксетин</a>
+								<a href="#" class="masonry-header__link small">Стендра</a>
+								<a href="#" class="masonry-header__link wide">Натуральное</a>
+								<a href="#" class="masonry-header__link tall">Левитра</a>
+							</div>
+						</div>
+
+						<div class="product-slider__wrapper">
+							<div class="main-slider swiper swiper-container-0 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+								<div class="main-slider__header">
+									<h2 class="section-title">
+										<i class="icon-flask"></i>
+										<span>Новинки</span>
+									</h2>
+									<div class="main-slider__nav">
+										<div class="main-slider__nav-btn main-slider__prev swiper-button-disabled">
+											<i class="icon-chevron"></i>
+										</div>
+										<div class="main-slider__nav-btn main-slider__next">
+											<i class="icon-chevron"></i>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-wrapper" style="cursor: grab; transform: translate3d(0px, 0px, 0px)">
+									<div class="product-item swiper-slide swiper-slide-active" style="width: 266px; margin-right: 10px">
+										<a href="product.html" class="product-item__image">
+											<picture>
+												<source srcset="img/products/1.webp" type="image/webp" />
+												<img src="img/products/1.webp" alt="Product name" width="227" height="233" />
+											</picture>
+										</a>
+										<div class="product-item__body">
+											<a href="product.html" class="product-item__name">
+												<span>Виагра Профессионал CENFORCE PROFFESIONAL</span>
+											</a>
+											<div class="product-item__dosage">
+												<div class="product-item__dosage-title">
+													Количество таблеток
+												</div>
+												<div class="product-item__dosage-options">
+													<label class="check option">
+														<input class="check__input" value="321₴" type="radio" name="radio" checked="checked" />
+														<span class="check__box"></span>
+														<span class="check__box-text">5</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="500₴" type="radio" name="radio" />
+														<span class="check__box"></span>
+														<span class="check__box-text">10</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="750₴" type="radio" name="radio" />
+														<span class="check__box"></span>
+														<span class="check__box-text">20</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1000₴" type="radio" name="radio" />
+														<span class="check__box"></span>
+														<span class="check__box-text">30</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1200₴" type="radio" name="radio" />
+														<span class="check__box"></span>
+														<span class="check__box-text">50</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1500₴" type="radio" name="radio" />
+														<span class="check__box"></span>
+														<span class="check__box-text">100</span>
+													</label>
+												</div>
+												<div class="product-item__price">321₴</div>
+											</div>
+											<div class="product-item__btns">
+												<button class="btn btn-blue">В корзину</button>
+												<button class="btn btn-border">Быстрый заказ</button>
+											</div>
+										</div>
+									</div>
+									<div class="product-item swiper-slide swiper-slide-next" style="width: 266px; margin-right: 10px">
+										<a href="product.html" class="product-item__image">
+											<picture>
+												<source srcset="img/products/1.webp" type="image/webp" />
+												<img src="img/products/1.webp" alt="Product name" width="227" height="233" />
+											</picture>
+										</a>
+										<div class="product-item__body">
+											<a href="product.html" class="product-item__name">
+												<span>Виагра Профессионал CENFORCE PROFFESIONAL</span>
+											</a>
+											<div class="product-item__dosage">
+												<div class="product-item__dosage-title">
+													Количество таблеток
+												</div>
+												<div class="product-item__dosage-options">
+													<label class="check option">
+														<input class="check__input" value="400₴" type="radio" name="radio2" checked="checked" />
+														<span class="check__box"></span>
+														<span class="check__box-text">5</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="600₴" type="radio" name="radio2" />
+														<span class="check__box"></span>
+														<span class="check__box-text">10</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="800₴" type="radio" name="radio2" />
+														<span class="check__box"></span>
+														<span class="check__box-text">20</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1000₴" type="radio" name="radio2" />
+														<span class="check__box"></span>
+														<span class="check__box-text">30</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1200₴" type="radio" name="radio2" />
+														<span class="check__box"></span>
+														<span class="check__box-text">50</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1400₴" type="radio" name="radio2" />
+														<span class="check__box"></span>
+														<span class="check__box-text">100</span>
+													</label>
+												</div>
+												<div class="product-item__price">400₴</div>
+											</div>
+											<div class="product-item__btns">
+												<button class="btn btn-blue">В корзину</button>
+												<button class="btn btn-border">Быстрый заказ</button>
+											</div>
+										</div>
+									</div>
+									<div class="product-item swiper-slide" style="width: 266px; margin-right: 10px">
+										<a href="product.html" class="product-item__image">
+											<picture>
+												<source srcset="img/products/2.webp" type="image/webp" />
+												<img src="img/products/2.webp" alt="Product name" width="227" height="233" />
+											</picture>
+										</a>
+										<div class="product-item__body">
+											<a href="product.html" class="product-item__name">
+												<span>Виагра Профессионал CENFORCE PROFFESIONAL</span>
+											</a>
+											<div class="product-item__dosage">
+												<div class="product-item__dosage-title">
+													Количество таблеток
+												</div>
+												<div class="product-item__dosage-options">
+													<label class="check option">
+														<input class="check__input" value="400₴" type="radio" name="radio3" checked="checked" />
+														<span class="check__box"></span>
+														<span class="check__box-text">5</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="600₴" type="radio" name="radio3" />
+														<span class="check__box"></span>
+														<span class="check__box-text">10</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="800₴" type="radio" name="radio3" />
+														<span class="check__box"></span>
+														<span class="check__box-text">20</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1000₴" type="radio" name="radio3" />
+														<span class="check__box"></span>
+														<span class="check__box-text">30</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1200₴" type="radio" name="radio3" />
+														<span class="check__box"></span>
+														<span class="check__box-text">50</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1400₴" type="radio" name="radio3" />
+														<span class="check__box"></span>
+														<span class="check__box-text">100</span>
+													</label>
+												</div>
+												<div class="product-item__price">400₴</div>
+											</div>
+											<div class="product-item__btns">
+												<button class="btn btn-blue">В корзину</button>
+												<button class="btn btn-border">Быстрый заказ</button>
+											</div>
+										</div>
+									</div>
+									<div class="product-item swiper-slide" style="width: 266px; margin-right: 10px">
+										<a href="product.html" class="product-item__image">
+											<picture>
+												<source srcset="img/products/2.webp" type="image/webp" />
+												<img src="img/products/2.webp" alt="Product name" width="227" height="233" />
+											</picture>
+										</a>
+										<div class="product-item__body">
+											<a href="product.html" class="product-item__name">
+												<span>Виагра Профессионал CENFORCE PROFFESIONAL</span>
+											</a>
+											<div class="product-item__dosage">
+												<div class="product-item__dosage-title">
+													Количество таблеток
+												</div>
+												<div class="product-item__dosage-options">
+													<label class="check option">
+														<input class="check__input" value="400₴" type="radio" name="radio4" checked="checked" />
+														<span class="check__box"></span>
+														<span class="check__box-text">5</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="600₴" type="radio" name="radio4" />
+														<span class="check__box"></span>
+														<span class="check__box-text">10</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="800₴" type="radio" name="radio4" />
+														<span class="check__box"></span>
+														<span class="check__box-text">20</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1000₴" type="radio" name="radio4" />
+														<span class="check__box"></span>
+														<span class="check__box-text">30</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1200₴" type="radio" name="radio4" />
+														<span class="check__box"></span>
+														<span class="check__box-text">50</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1400₴" type="radio" name="radio4" />
+														<span class="check__box"></span>
+														<span class="check__box-text">100</span>
+													</label>
+												</div>
+												<div class="product-item__price">400₴</div>
+											</div>
+											<div class="product-item__btns">
+												<button class="btn btn-blue">В корзину</button>
+												<button class="btn btn-border">Быстрый заказ</button>
+											</div>
+										</div>
+									</div>
+									<div class="product-item swiper-slide" style="width: 266px; margin-right: 10px">
+										<a href="product.html" class="product-item__image">
+											<picture>
+												<source srcset="img/products/1.webp" type="image/webp" />
+												<img src="img/products/1.webp" alt="Product name" width="227" height="233" />
+											</picture>
+										</a>
+										<div class="product-item__body">
+											<a href="product.html" class="product-item__name">
+												<span>Виагра Профессионал CENFORCE PROFFESIONAL</span>
+											</a>
+											<div class="product-item__dosage">
+												<div class="product-item__dosage-title">
+													Количество таблеток
+												</div>
+												<div class="product-item__dosage-options">
+													<label class="check option">
+														<input class="check__input" value="400₴" type="radio" name="radio5" checked="checked" />
+														<span class="check__box"></span>
+														<span class="check__box-text">5</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="600₴" type="radio" name="radio5" />
+														<span class="check__box"></span>
+														<span class="check__box-text">10</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="800₴" type="radio" name="radio5" />
+														<span class="check__box"></span>
+														<span class="check__box-text">20</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1000₴" type="radio" name="radio5" />
+														<span class="check__box"></span>
+														<span class="check__box-text">30</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1200₴" type="radio" name="radio5" />
+														<span class="check__box"></span>
+														<span class="check__box-text">50</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1400₴" type="radio" name="radio5" />
+														<span class="check__box"></span>
+														<span class="check__box-text">100</span>
+													</label>
+												</div>
+												<div class="product-item__price">400₴</div>
+											</div>
+											<div class="product-item__btns">
+												<button class="btn btn-blue">В корзину</button>
+												<button class="btn btn-border">Быстрый заказ</button>
+											</div>
+										</div>
+									</div>
+									<div class="product-item swiper-slide" style="width: 266px; margin-right: 10px">
+										<a href="product.html" class="product-item__image">
+											<picture>
+												<source srcset="img/products/1.webp" type="image/webp" />
+												<img src="img/products/1.webp" alt="Product name" width="227" height="233" />
+											</picture>
+										</a>
+										<div class="product-item__body">
+											<a href="product.html" class="product-item__name">
+												<span>Виагра Профессионал CENFORCE PROFFESIONAL</span>
+											</a>
+											<div class="product-item__dosage">
+												<div class="product-item__dosage-title">
+													Количество таблеток
+												</div>
+												<div class="product-item__dosage-options">
+													<label class="check option">
+														<input class="check__input" value="400₴" type="radio" name="radio6" />
+														<span class="check__box"></span>
+														<span class="check__box-text">5</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="600₴" type="radio" name="radio6" checked="checked" />
+														<span class="check__box"></span>
+														<span class="check__box-text">10</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="800₴" type="radio" name="radio6" />
+														<span class="check__box"></span>
+														<span class="check__box-text">20</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1000₴" type="radio" name="radio6" />
+														<span class="check__box"></span>
+														<span class="check__box-text">30</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1200₴" type="radio" name="radio6" />
+														<span class="check__box"></span>
+														<span class="check__box-text">50</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1400₴" type="radio" name="radio6" />
+														<span class="check__box"></span>
+														<span class="check__box-text">100</span>
+													</label>
+												</div>
+												<div class="product-item__price">600₴</div>
+											</div>
+											<div class="product-item__btns">
+												<button class="btn btn-blue">В корзину</button>
+												<button class="btn btn-border">Быстрый заказ</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-slider__wrapper">
+							<div class="main-slider swiper swiper-container-1 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+								<div class="main-slider__header">
+									<h2 class="section-title">
+										<i class="icon-gift"></i>
+										<span>Акции</span>
+									</h2>
+									<div class="main-slider__nav">
+										<div class="main-slider__nav-btn main-slider__prev swiper-button-disabled">
+											<i class="icon-chevron"></i>
+										</div>
+										<div class="main-slider__nav-btn main-slider__next">
+											<i class="icon-chevron"></i>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-wrapper" style="cursor: grab; transform: translate3d(0px, 0px, 0px)">
+									<div class="product-item swiper-slide swiper-slide-active" style="width: 266px; margin-right: 10px">
+										<a href="product.html" class="product-item__image">
+											<picture>
+												<source srcset="img/products/1.webp" type="image/webp" />
+												<img src="img/products/1.webp" alt="Product name" width="227" height="233" />
+											</picture>
+										</a>
+										<div class="product-item__body">
+											<a href="product.html" class="product-item__name">
+												<span>Виагра Профессионал CENFORCE PROFFESIONAL</span>
+											</a>
+											<div class="product-item__dosage">
+												<div class="product-item__dosage-title">
+													Количество таблеток
+												</div>
+												<div class="product-item__dosage-options">
+													<label class="check option">
+														<input class="check__input" value="321₴" type="radio" name="radio13" checked="checked" />
+														<span class="check__box"></span>
+														<span class="check__box-text">5</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="500₴" type="radio" name="radio13" />
+														<span class="check__box"></span>
+														<span class="check__box-text">10</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="750₴" type="radio" name="radio13" />
+														<span class="check__box"></span>
+														<span class="check__box-text">20</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1000₴" type="radio" name="radio13" />
+														<span class="check__box"></span>
+														<span class="check__box-text">30</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1200₴" type="radio" name="radio13" />
+														<span class="check__box"></span>
+														<span class="check__box-text">50</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1500₴" type="radio" name="radio13" />
+														<span class="check__box"></span>
+														<span class="check__box-text">100</span>
+													</label>
+												</div>
+												<div class="product-item__price">321₴</div>
+											</div>
+											<div class="product-item__btns">
+												<button class="btn btn-blue">В корзину</button>
+												<button class="btn btn-border">Быстрый заказ</button>
+											</div>
+										</div>
+									</div>
+									<div class="product-item swiper-slide swiper-slide-next" style="width: 266px; margin-right: 10px">
+										<a href="product.html" class="product-item__image">
+											<picture>
+												<source srcset="img/products/1.webp" type="image/webp" />
+												<img src="img/products/1.webp" alt="Product name" width="227" height="233" />
+											</picture>
+										</a>
+										<div class="product-item__body">
+											<a href="product.html" class="product-item__name">
+												<span>Виагра Профессионал CENFORCE PROFFESIONAL</span>
+											</a>
+											<div class="product-item__dosage">
+												<div class="product-item__dosage-title">
+													Количество таблеток
+												</div>
+												<div class="product-item__dosage-options">
+													<label class="check option">
+														<input class="check__input" value="401₴" type="radio" name="radio14" checked="checked" />
+														<span class="check__box"></span>
+														<span class="check__box-text">5</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="600₴" type="radio" name="radio14" />
+														<span class="check__box"></span>
+														<span class="check__box-text">10</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="800₴" type="radio" name="radio14" />
+														<span class="check__box"></span>
+														<span class="check__box-text">20</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1000₴" type="radio" name="radio14" />
+														<span class="check__box"></span>
+														<span class="check__box-text">30</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1200₴" type="radio" name="radio14" />
+														<span class="check__box"></span>
+														<span class="check__box-text">50</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1400₴" type="radio" name="radio14" />
+														<span class="check__box"></span>
+														<span class="check__box-text">100</span>
+													</label>
+												</div>
+												<div class="product-item__price">401₴</div>
+											</div>
+											<div class="product-item__btns">
+												<button class="btn btn-blue">В корзину</button>
+												<button class="btn btn-border">Быстрый заказ</button>
+											</div>
+										</div>
+									</div>
+									<div class="product-item swiper-slide" style="width: 266px; margin-right: 10px">
+										<a href="product.html" class="product-item__image">
+											<picture>
+												<source srcset="img/products/2.webp" type="image/webp" />
+												<img src="img/products/2.webp" alt="Product name" width="227" height="233" />
+											</picture>
+										</a>
+										<div class="product-item__body">
+											<a href="product.html" class="product-item__name">
+												<span>Виагра Профессионал CENFORCE PROFFESIONAL</span>
+											</a>
+											<div class="product-item__dosage">
+												<div class="product-item__dosage-title">
+													Количество таблеток
+												</div>
+												<div class="product-item__dosage-options">
+													<label class="check option">
+														<input class="check__input" value="400₴" type="radio" name="radio15" checked="checked" />
+														<span class="check__box"></span>
+														<span class="check__box-text">5</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="600₴" type="radio" name="radio15" />
+														<span class="check__box"></span>
+														<span class="check__box-text">10</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="800₴" type="radio" name="radio15" />
+														<span class="check__box"></span>
+														<span class="check__box-text">20</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1000₴" type="radio" name="radio15" />
+														<span class="check__box"></span>
+														<span class="check__box-text">30</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1200₴" type="radio" name="radio15" />
+														<span class="check__box"></span>
+														<span class="check__box-text">50</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1400₴" type="radio" name="radio15" />
+														<span class="check__box"></span>
+														<span class="check__box-text">100</span>
+													</label>
+												</div>
+												<div class="product-item__price">400₴</div>
+											</div>
+											<div class="product-item__btns">
+												<button class="btn btn-blue">В корзину</button>
+												<button class="btn btn-border">Быстрый заказ</button>
+											</div>
+										</div>
+									</div>
+									<div class="product-item swiper-slide" style="width: 266px; margin-right: 10px">
+										<a href="product.html" class="product-item__image">
+											<picture>
+												<source srcset="img/products/2.webp" type="image/webp" />
+												<img src="img/products/2.webp" alt="Product name" width="227" height="233" />
+											</picture>
+										</a>
+										<div class="product-item__body">
+											<a href="product.html" class="product-item__name">
+												<span>Виагра Профессионал CENFORCE PROFFESIONAL</span>
+											</a>
+											<div class="product-item__dosage">
+												<div class="product-item__dosage-title">
+													Количество таблеток
+												</div>
+												<div class="product-item__dosage-options">
+													<label class="check option">
+														<input class="check__input" value="400₴" type="radio" name="radio10" checked="checked" />
+														<span class="check__box"></span>
+														<span class="check__box-text">5</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="600₴" type="radio" name="radio10" />
+														<span class="check__box"></span>
+														<span class="check__box-text">10</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="800₴" type="radio" name="radio10" />
+														<span class="check__box"></span>
+														<span class="check__box-text">20</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1000₴" type="radio" name="radio10" />
+														<span class="check__box"></span>
+														<span class="check__box-text">30</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1200₴" type="radio" name="radio10" />
+														<span class="check__box"></span>
+														<span class="check__box-text">50</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1400₴" type="radio" name="radio10" />
+														<span class="check__box"></span>
+														<span class="check__box-text">100</span>
+													</label>
+												</div>
+												<div class="product-item__price">400₴</div>
+											</div>
+											<div class="product-item__btns">
+												<button class="btn btn-blue">В корзину</button>
+												<button class="btn btn-border">Быстрый заказ</button>
+											</div>
+										</div>
+									</div>
+									<div class="product-item swiper-slide" style="width: 266px; margin-right: 10px">
+										<a href="product.html" class="product-item__image">
+											<picture>
+												<source srcset="img/products/1.webp" type="image/webp" />
+												<img src="img/products/1.webp" alt="Product name" width="227" height="233" />
+											</picture>
+										</a>
+										<div class="product-item__body">
+											<a href="product.html" class="product-item__name">
+												<span>Виагра Профессионал CENFORCE PROFFESIONAL</span>
+											</a>
+											<div class="product-item__dosage">
+												<div class="product-item__dosage-title">
+													Количество таблеток
+												</div>
+												<div class="product-item__dosage-options">
+													<label class="check option">
+														<input class="check__input" value="400₴" type="radio" name="radio11" checked="checked" />
+														<span class="check__box"></span>
+														<span class="check__box-text">5</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="600₴" type="radio" name="radio11" />
+														<span class="check__box"></span>
+														<span class="check__box-text">10</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="800₴" type="radio" name="radio11" />
+														<span class="check__box"></span>
+														<span class="check__box-text">20</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1000₴" type="radio" name="radio11" />
+														<span class="check__box"></span>
+														<span class="check__box-text">30</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1200₴" type="radio" name="radio11" />
+														<span class="check__box"></span>
+														<span class="check__box-text">50</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1400₴" type="radio" name="radio11" />
+														<span class="check__box"></span>
+														<span class="check__box-text">100</span>
+													</label>
+												</div>
+												<div class="product-item__price">400₴</div>
+											</div>
+											<div class="product-item__btns">
+												<button class="btn btn-blue">В корзину</button>
+												<button class="btn btn-border">Быстрый заказ</button>
+											</div>
+										</div>
+									</div>
+									<div class="product-item swiper-slide" style="width: 266px; margin-right: 10px">
+										<a href="product.html" class="product-item__image">
+											<picture>
+												<source srcset="img/products/1.webp" type="image/webp" />
+												<img src="img/products/1.webp" alt="Product name" width="227" height="233" />
+											</picture>
+										</a>
+										<div class="product-item__body">
+											<a href="product.html" class="product-item__name">
+												<span>Виагра Профессионал CENFORCE PROFFESIONAL</span>
+											</a>
+											<div class="product-item__dosage">
+												<div class="product-item__dosage-title">
+													Количество таблеток
+												</div>
+												<div class="product-item__dosage-options">
+													<label class="check option">
+														<input class="check__input" value="400₴" type="radio" name="radio12" checked="checked" />
+														<span class="check__box"></span>
+														<span class="check__box-text">5</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="600₴" type="radio" name="radio12" />
+														<span class="check__box"></span>
+														<span class="check__box-text">10</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="800₴" type="radio" name="radio12" />
+														<span class="check__box"></span>
+														<span class="check__box-text">20</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1000₴" type="radio" name="radio12" />
+														<span class="check__box"></span>
+														<span class="check__box-text">30</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1200₴" type="radio" name="radio12" />
+														<span class="check__box"></span>
+														<span class="check__box-text">50</span>
+													</label>
+													<label class="check option">
+														<input class="check__input" value="1400₴" type="radio" name="radio12" />
+														<span class="check__box"></span>
+														<span class="check__box-text">100</span>
+													</label>
+												</div>
+												<div class="product-item__price">400₴</div>
+											</div>
+											<div class="product-item__btns">
+												<button class="btn btn-blue">В корзину</button>
+												<button class="btn btn-border">Быстрый заказ</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="clients bg-section" style="background-image: url('img/clients.webp')">
+				<div class="__container">
+					<h3 class="clients-title">Клиенты Patency всегда довольны</h3>
+					<div class="clients-row">
+						<div class="clients-item">
+							<div class="clients-item__card">
+								<div class="clients-item__icon">
+									<i class="icon-lock"></i>
+								</div>
+								<div class="clients-item__title">Конфиденциальность</div>
+								<div class="clients-item__text">
+									Давно выяснено, что при оценке дизайна и композиции читаемый текст
+									мешает сосредоточиться. Lorem Ipsum используют потому,
+								</div>
+							</div>
+						</div>
+						<div class="clients-item">
+							<div class="clients-item__card">
+								<div class="clients-item__icon">
+									<i class="icon-pin"></i>
+								</div>
+								<div class="clients-item__title">Быстрая доставка</div>
+								<div class="clients-item__text">
+									Давно выяснено, что при оценке дизайна и композиции читаемый текст
+									мешает сосредоточиться. Lorem Ipsum используют потому,
+								</div>
+							</div>
+						</div>
+						<div class="clients-item">
+							<div class="clients-item__card">
+								<div class="clients-item__icon">
+									<i class="icon-award"></i>
+								</div>
+								<div class="clients-item__title">Оригинальная продукция</div>
+								<div class="clients-item__text">
+									Давно выяснено, что при оценке дизайна и композиции читаемый текст
+									мешает сосредоточиться. Lorem Ipsum используют потому,
+								</div>
+							</div>
+						</div>
+						<div class="clients-item">
+							<div class="clients-item__card">
+								<div class="clients-item__icon">
+									<i class="icon-receipt"></i>
+								</div>
+								<div class="clients-item__title">Без рецепта</div>
+								<div class="clients-item__text">
+									Давно выяснено, что при оценке дизайна и композиции читаемый текст
+									мешает сосредоточиться. Lorem Ipsum используют потому,
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="instructions">
+				<div class="__container">
+					<div class="instructions-item">
+						<h2 class="instructions-title">Прежде чем купить Виагру</h2>
+						<p class="section-text">
+							Любой мужчина желает быть неотразимым наедине со своей девушкой! Однако
+							современный ритм жизни зачастую приводит к снижению мужской силы. Ключ к
+							успеху в интимной сфере весьма прост. Это средство появилось почти
+							тридцать лет назад и завоевало сотни миллионов приверженцев по всему
+							миру. Имя ему - препарат Виагра.
+						</p>
+						<p class="section-text">
+							Вокруг Виагры ходит огромное количество слухов с самого появления
+							препарата на рынке. Пожалуй, нет ни одного лекарственного средства,
+							которое имело бы такое большое количество легенд и мифов вокруг себя.
+							Поэтому, прежде чем купить Виагру, очень важно узнать о ней все
+							подробности, очищенные от домыслов и фантазий.
+						</p>
+					</div>
+					<div class="instructions-item">
+						<h2 class="instructions-title">Что такое Виагра?</h2>
+						<p class="section-text">
+							Виагра (анг. Viagra) – это препарат для увеличения потенции, основным
+							действующим веществом которого является Силденафил. Принцип действия
+							этого вещества в том, что оно увеличивает приток крови к половым
+							органам, усиливая тем самым эрекцию и обостряя ощущения от контакта.
+							Огромное количество мужчин предпочитают Виагру из-за высокой
+							эффективности, относительно долгого эффекта (до 24 часов) и минимального
+							количества побочных эффектов.
+						</p>
+					</div>
+					<div class="instructions-item">
+						<h2 class="instructions-title">История создания</h2>
+						<p class="section-text">
+							Оригинальную формулу, которую содержат таблетки Виагра, разработала и
+							запатентовала американская компания Pfizer в 1992. Pfizer считается
+							одной из лучших фармацевтических компаний во всем мире, поскольку их
+							продукция отличается высочайшим качеством, а репутация безукоризненной
+							чистотой. Удивительно, что прежде чем изобрести такие всемирно известные
+							препараты, как Виагра, Превенар, Лирика и Целебрекс, Pfizer производили
+							и продавали средство против паразитов.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="prolongator bg-section" style="background-image: url('img/clients.webp')">
+				<div class="__container">
+					<h2 class="prolongator-title">Пролонгатор врилиджи 60 мг</h2>
+					<p class="prolongator-text">Vriligy 60 MG Dapoxetine</p>
+				</div>
+			</section>
+
+			<section class="top-products">
+				<div class="__container">
+					<h2 class="section-title mb-4">
+						<i class="icon-star"></i>
+						<span>Топ товаров</span>
+					</h2>
+					<div class="top-products__row">
+						<a href="#" class="top-products__item">Malegra</a>
+						<a href="#" class="top-products__item">Cenforce 100</a>
+						<a href="#" class="top-products__item">Vidalista 20</a>
+						<a href="#" class="top-products__item">Poxet 60</a>
+						<a href="#" class="top-products__item">Malegra</a>
+						<a href="#" class="top-products__item">Vidalista 20</a>
+						<a href="#" class="top-products__item">Vidalista 20</a>
+						<a href="#" class="top-products__item">Poxet 60</a>
+						<a href="#" class="top-products__item">Malegra</a>
+						<a href="#" class="top-products__item">Cenforce 100</a>
+						<a href="#" class="top-products__item">Super Vidalista</a>
+						<a href="#" class="top-products__item">Poxet 60</a>
+						<a href="#" class="top-products__item">Malegra</a>
+						<a href="#" class="top-products__item">Cenforce 100</a>
+						<a href="#" class="top-products__item">Vidalista 20</a>
+						<a href="#" class="top-products__item">Poxet 60</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="delivery-section">
+				<div class="__container">
+					<h3 class="section-title mb-4">
+						<i class="icon-car"></i>
+						<span>Заказ с доставкой</span>
+					</h3>
+					<p class="section-text">
+						в Киев, Днепр, Одесса, Хмельницкий, Запорожье, Николаев, Луцк, Херсон,
+						Кривой Рог, Винница, Львов, Краматорск, Харьков, Сумы, Мариуполь,
+						Черновцы, Чернигов, Полтава, Ивано-Франковск, Донецк, Луганск,
+						Кропивницкий, Ровно, Житомир, Тернополь.
+					</p>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer-grid">
+					<div class="footer-logo">
+						<a href="#" class="footer-logo__link">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.webp" alt="Potency shop" width="324" height="93" /></picture>
+						</a>
+						<ul class="footer-links">
+							<li class="footer-links__item">
+								<a href="#" class="footer-links__link">
+									<i class="icon-account"></i>
+									<span>Пользовательское соглашение</span>
+								</a>
+							</li>
+							<li class="footer-links__item">
+								<a href="#" class="footer-links__link">
+									<i class="icon-git"></i>
+									<span>Карта сайта</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-contacts">
+						<div class="footer-contacts__column">
+							<a href="#" class="footer-contacts__phone">
+								<i class="icon-phone"></i>
+								<span>+38 068 123 45 67</span>
+							</a>
+							<span class="footer-contacts__hours">Без выходных 10:00-21:00 (+2 GMT)</span>
+							<span class="footer-contacts__call">Звонок бесплатный</span>
+						</div>
+						<div class="footer-contacts__column">
+							<div class="footer-contacts__actions">
+								<div class="footer-contacts__mail">
+									<i class="icon-mail"></i>
+									<a href="mailto:stoi@potency.com" class="footer-contacts__link">stoi@potency.com</a>
+								</div>
+								<div class="footer-contacts__btn">
+									<a href="tel:+380931234567" class="btn btn-border">
+										<i class="icon-phone"></i>
+										<span>Обратный звонок</span>
+									</a>
+								</div>
+								<div class="footer-contacts__btn">
+									<button type="button" data-popup="#contact-us-popup" class="btn btn-border">
+										<i class="icon-mail"></i>
+										<span>Написать письмо</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="footer__container">
+					<div class="footer-copyright__row">
+						<div class="footer-copyright__column">
+							<span class="footer-copyright__text">2022 Potency</span>
+							<a href="mailto:stoi@potency.com" class="footer-copyright__link">stoi@potency.com</a>
+						</div>
+						<div class="footer-copyright__column">
+							<div class="footer-copyright__socials">
+								<a href="#" class="social-link" aria-label="Facebook">
+									<i class="icon-facebook"></i>
+								</a>
+								<a href="#" class="social-link" aria-label="Instagrem">
+									<i class="icon-instagram"></i>
+								</a>
+								<a href="#" class="social-link" aria-label="Dribble">
+									<i class="icon-dribble"></i>
+								</a>
+								<a href="#" class="social-link" aria-label="Behance">
+									<i class="icon-behance"></i>
+								</a>
+								<a href="#" class="social-link" aria-label="Behance">
+									<i class="icon-behance"></i>
+								</a>
+								<a href="#" class="social-link" aria-label="Behance">
+									<i class="icon-behance"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="backdrop" data-backdrop></div>
+
+		<!-- !Попап логина -->
+
+		<div id="login-popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__content-header">
+						<div class="popup__content-heading">Вход в аккаунт</div>
+						<button data-close type="button" class="popup__close">
+							<i class="icon-close"></i>
+						</button>
+					</div>
+					<div class="popup__body">
+						<div class="popup__body-group">
+							<a href="#" class="btn btn-login">
+								<i class="icon-google-login"></i>
+								<span>Войти с помощью Google</span>
+							</a>
+							<a href="#" class="btn btn-login">
+								<i class="icon-login-facebook"></i>
+								<span>Войти с помощью Facebook</span>
+							</a>
+						</div>
+						<div class="popup-separator">или</div>
+						<div class="popup__body-group error">
+							<label class="personal-data__label" for="loginEmail">Почта или телефон</label>
+							<input type="text" name="loginEmail" id="loginEmail" placeholder="Почта или телефон" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="loginPassword">Пароль</label>
+							<input type="password" name="loginPassword" id="loginPassword" placeholder="Пароль" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<a href="#" class="password-forget">Забыли пароль?</a>
+						</div>
+					</div>
+					<div class="popup__footer">
+						<button class="btn btn-blue">Войти</button>
+						<button class="btn" data-popup="#register-popup" type="button">
+							Зарегистрироваться
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- !Попап регистрации -->
+
+		<div id="register-popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__content-header">
+						<div class="popup__content-heading">Регистриция</div>
+						<button data-close type="button" class="popup__close">
+							<i class="icon-close"></i>
+						</button>
+					</div>
+					<div class="popup__body">
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="registerName">Ваше имя</label>
+							<input type="text" name="registerName" id="registerName" placeholder="Ваше имя" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="registerSurname">Фамилия</label>
+							<input type="text" name="registerSurname" id="registerSurname" placeholder="Фамилия" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group error">
+							<label class="personal-data__label" for="registerEmail">Почта</label>
+							<input type="text" name="registerEmail" id="registerEmail" placeholder="Ваша почта" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="registerPhone">Ваш телефон</label>
+							<input type="text" name="registerPhone" id="registerPhone" placeholder="Ваш телефон" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="registerPassword">Пароль</label>
+							<input type="password" name="registerPassword" id="registerPassword" placeholder="Пароль" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+					</div>
+					<div class="popup__footer">
+						<button class="btn btn-blue">Войти</button>
+						<button class="btn" data-popup="#login-popup" type="button">
+							У меня есть аккаунт
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- !Попап Напишите нам -->
+
+		<div id="contact-us-popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__content-header">
+						<div class="popup__content-heading">Напишите нам</div>
+						<button data-close type="button" class="popup__close">
+							<i class="icon-close"></i>
+						</button>
+					</div>
+					<div class="popup__body">
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="contactName">Ваше имя</label>
+							<input type="text" name="contactName" id="contactName" placeholder="Ваше имя" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="contactEmail">Email</label>
+							<input type="email" name="contactEmail" id="contactEmail" placeholder="Email" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="contactPhone">Ваш телефон</label>
+							<input type="phone" name="contactPhone" id="contactPhone" placeholder="Телефон" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="contactText">Сообщение</label>
+							<textarea name="" id="" rows="3" placeholder="Сообщение"></textarea>
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+					</div>
+					<div class="popup__footer">
+						<button class="btn btn-blue" type="submit">Отправиль</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script defer src="js/app.min.js?_v=20220921181355"></script>
+
+</body>
+
+</html>

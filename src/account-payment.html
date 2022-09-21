@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Мои адреса доставки" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page-wrapper">
+        <div class="__container">
+          <div class="breadcrumb-wrapper">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs-item">
+                <a href="#" class="breadcrumb-link">Главная</a>
+              </li>
+              <li class="breadcrumbs-item active">
+                <span class="breadcrumb-link">Аккаунт</span>
+              </li>
+            </ul>
+          </div>
+          <div class="layout">
+            <section class="content">
+              <div class="account">
+                <div class="account-row">
+                  <div class="account-nav-col">
+                    <div class="account-info">
+                      <div class="account-info__header">
+                        <div>Приветствуем, <span>Андрей!</span></div>
+                      </div>
+                      <div
+                        class="header-account__dropdown-email account-info__email"
+                      >
+                        Вы вошли как <span>andrey@gmail.com</span>
+                      </div>
+                      <ul class="account-info__list">
+                        <li class="account-info__item">
+                          <a
+                            href="account-profile.html"
+                            class="account-info__link"
+                          >
+                            <i class="icon-account"></i>
+                            <span>Детали профиля</span>
+                          </a>
+                        </li>
+                        <li class="account-info__item">
+                          <a
+                            href="account-orders.html"
+                            class="account-info__link"
+                          >
+                            <i class="icon-orders"></i>
+                            <span>Мои заказы</span>
+                          </a>
+                        </li>
+                        <li class="account-info__item">
+                          <a
+                            href="account-adress.html"
+                            class="account-info__link"
+                          >
+                            <i class="icon-truck"></i>
+                            <span>Мои адреса доставки</span>
+                          </a>
+                        </li>
+                        <li class="account-info__item active">
+                          <a
+                            href="account-payment.html"
+                            class="account-info__link"
+                          >
+                            <i class="icon-payment"></i>
+                            <span>Платежные реквизиты</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="account-info-col">
+                    <h1 class="account-heading">Платежные реквизиты</h1>
+                    <form action="">
+                      <div class="account-card-row">
+                        <div class="account-card-col">
+                          <div class="account-card">
+                            <p class="account-card-title">VISA ****1234</p>
+                            <div class="account-card__btns">
+                              <button
+                                class="btn btn-border btn-account"
+                                data-popup="#payment-one-edit-popup"
+                              >
+                                Редактировать
+                              </button>
+                              <button
+                                class="btn btn-border btn-account"
+                                data-popup="#payment-one-delete-popup"
+                              >
+                                Удалить
+                              </button>
+                            </div>
+                            <div
+                              id="payment-one-edit-popup"
+                              aria-hidden="true"
+                              class="popup"
+                            >
+                              <div class="popup__wrapper">
+                                <div class="popup__content">
+                                  <div class="popup__content-header">
+                                    <div class="popup__content-heading">
+                                      Редактирование
+                                    </div>
+                                    <button
+                                      data-close
+                                      type="button"
+                                      class="popup__close"
+                                    >
+                                      <i class="icon-close"></i>
+                                    </button>
+                                  </div>
+                                  <div class="popup__body">
+                                    <div class="popup__body-group">
+                                      <label
+                                        class="personal-data__label"
+                                        for="paymentEditOne"
+                                        >Ваши реквизиты</label
+                                      >
+                                      <input
+                                        type="text"
+                                        name="paymentEditOne"
+                                        id="paymentEditOne"
+                                        placeholder="Номер карты"
+                                        value="VISA ****1234"
+                                        class="form-input"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="popup__footer">
+                                    <button class="btn btn-blue">
+                                      Сохранить
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              id="payment-one-delete-popup"
+                              aria-hidden="true"
+                              class="popup"
+                            >
+                              <div class="popup__wrapper">
+                                <div class="popup__content">
+                                  <div class="popup__content-header">
+                                    <div class="popup__content-heading">
+                                      Удаление реквезитов
+                                    </div>
+                                    <button
+                                      data-close
+                                      type="button"
+                                      class="popup__close"
+                                    >
+                                      <i class="icon-close"></i>
+                                    </button>
+                                  </div>
+                                  <div class="popup__footer">
+                                    <div class="popup__body-group">
+                                      <label class="personal-data__label"
+                                        >Удалить реквизит?</label
+                                      >
+                                      <button class="btn btn-red">
+                                        Удалить
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="account-card-col">
+                          <div class="account-card">
+                            <p class="account-card-title">
+                              MASTERCARD ****1234
+                            </p>
+                            <div class="account-card__btns">
+                              <button
+                                class="btn btn-border btn-account"
+                                data-popup="#payment-two-edit-popup"
+                              >
+                                Редактировать
+                              </button>
+                              <button
+                                class="btn btn-border btn-account"
+                                data-popup="#payment-two-delete-popup"
+                              >
+                                Удалить
+                              </button>
+                            </div>
+                            <div
+                              id="payment-two-edit-popup"
+                              aria-hidden="true"
+                              class="popup"
+                            >
+                              <div class="popup__wrapper">
+                                <div class="popup__content">
+                                  <div class="popup__content-header">
+                                    <div class="popup__content-heading">
+                                      Редактирование
+                                    </div>
+                                    <button
+                                      data-close
+                                      type="button"
+                                      class="popup__close"
+                                    >
+                                      <i class="icon-close"></i>
+                                    </button>
+                                  </div>
+                                  <div class="popup__body">
+                                    <div class="popup__body-group">
+                                      <label
+                                        class="personal-data__label"
+                                        for="paymentEditTwo"
+                                        >Ваши реквизиты</label
+                                      >
+                                      <input
+                                        type="text"
+                                        name="paymentEditTwo"
+                                        id="paymentEditTwo"
+                                        placeholder="Номер карты"
+                                        value="MASTERCARD ****1234"
+                                        class="form-input"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="popup__footer">
+                                    <button class="btn btn-blue">
+                                      Сохранить
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              id="payment-two-delete-popup"
+                              aria-hidden="true"
+                              class="popup"
+                            >
+                              <div class="popup__wrapper">
+                                <div class="popup__content">
+                                  <div class="popup__content-header">
+                                    <div class="popup__content-heading">
+                                      Удаление реквезитов
+                                    </div>
+                                    <button
+                                      data-close
+                                      type="button"
+                                      class="popup__close"
+                                    >
+                                      <i class="icon-close"></i>
+                                    </button>
+                                  </div>
+                                  <div class="popup__footer">
+                                    <div class="popup__body-group">
+                                      <label class="personal-data__label"
+                                        >Удалить реквизит?</label
+                                      >
+                                      <button class="btn btn-red">
+                                        Удалить
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="account-card-col">
+                          <div class="account-card">
+                            <p class="account-card-title">
+                              MASTERCARD ****5678
+                            </p>
+                            <div class="account-card__btns">
+                              <button
+                                class="btn btn-border btn-account"
+                                data-popup="#payment-three-edit-popup"
+                              >
+                                Редактировать
+                              </button>
+                              <button
+                                class="btn btn-border btn-account"
+                                data-popup="#payment-three-delete-popup"
+                              >
+                                Удалить
+                              </button>
+                            </div>
+                            <div
+                              id="payment-three-edit-popup"
+                              aria-hidden="true"
+                              class="popup"
+                            >
+                              <div class="popup__wrapper">
+                                <div class="popup__content">
+                                  <div class="popup__content-header">
+                                    <div class="popup__content-heading">
+                                      Редактирование
+                                    </div>
+                                    <button
+                                      data-close
+                                      type="button"
+                                      class="popup__close"
+                                    >
+                                      <i class="icon-close"></i>
+                                    </button>
+                                  </div>
+                                  <div class="popup__body">
+                                    <div class="popup__body-group">
+                                      <label
+                                        class="personal-data__label"
+                                        for="paymentEditThree"
+                                        >Ваши реквизиты</label
+                                      >
+                                      <input
+                                        type="text"
+                                        name="paymentEditThree"
+                                        id="paymentEditThree"
+                                        placeholder="Номер карты"
+                                        value="MASTERCARD ****5678"
+                                        class="form-input"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="popup__footer">
+                                    <button class="btn btn-blue">
+                                      Сохранить
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              id="payment-three-delete-popup"
+                              aria-hidden="true"
+                              class="popup"
+                            >
+                              <div class="popup__wrapper">
+                                <div class="popup__content">
+                                  <div class="popup__content-header">
+                                    <div class="popup__content-heading">
+                                      Удаление реквезитов
+                                    </div>
+                                    <button
+                                      data-close
+                                      type="button"
+                                      class="popup__close"
+                                    >
+                                      <i class="icon-close"></i>
+                                    </button>
+                                  </div>
+                                  <div class="popup__footer">
+                                    <div class="popup__body-group">
+                                      <label class="personal-data__label"
+                                        >Удалить реквизит?</label
+                                      >
+                                      <button class="btn btn-red">
+                                        Удалить
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-card-add">
+                        <button
+                          class="btn btn-blue"
+                          data-popup="#address-add-payment-popup"
+                        >
+                          Добавить новую карту
+                        </button>
+                        <div
+                          id="address-add-payment-popup"
+                          aria-hidden="true"
+                          class="popup"
+                        >
+                          <div class="popup__wrapper">
+                            <div class="popup__content">
+                              <div class="popup__content-header">
+                                <div class="popup__content-heading">
+                                  Добавление карты
+                                </div>
+                                <button
+                                  data-close
+                                  type="button"
+                                  class="popup__close"
+                                >
+                                  <i class="icon-close"></i>
+                                </button>
+                              </div>
+                              <div class="popup__body">
+                                <div class="popup__body-group error">
+                                  <label
+                                    class="personal-data__label"
+                                    for="cardInput"
+                                    >Номер карты</label
+                                  >
+                                  <input
+                                    type="text"
+                                    name="cardInput"
+                                    id="cardInput"
+                                    placeholder="Номер карты"
+                                    class="form-input"
+                                  />
+                                  <span class="error-text"
+                                    >Такой пользователь уже
+                                    зарегистрирован</span
+                                  >
+                                </div>
+                                <div class="popup__body-group">
+                                  <label
+                                    class="personal-data__label"
+                                    for="termInput"
+                                    >Срок действия</label
+                                  >
+                                  <input
+                                    type="text"
+                                    name="termInput"
+                                    id="termInput"
+                                    placeholder="Срок действия"
+                                    class="form-input"
+                                  />
+                                </div>
+                                <div class="popup__body-group">
+                                  <label
+                                    class="personal-data__label"
+                                    for="cvvInput"
+                                    >CVV</label
+                                  >
+                                  <input
+                                    type="text"
+                                    name="cvvInput"
+                                    id="cvvInput"
+                                    placeholder="CVV"
+                                    class="form-input"
+                                  />
+                                </div>
+                              </div>
+                              <div class="popup__footer">
+                                <button class="btn btn-blue">Добавить</button>
+                                <button class="btn" data-close type="button">
+                                  Отмена
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        @@include('html/_top-products.htm',{})
+        @@include('html/_delivery.htm',{})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

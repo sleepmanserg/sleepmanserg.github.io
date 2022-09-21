@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Мои адреса доставки</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<!--! Local only, remove on prod -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220920124827" media="print" onload="this.media='all'" />
+	<!--! Local only, remove on prod -->
+
+	<!--? Prod only, uncomment on prod -->
+	<!-- <link rel="preload" as="style" href="./fonts/fonts.css" />
+  <link
+  rel="stylesheet"
+  href="./fonts/fonts.css?_v=20220921181355"
+  media="print"
+  onload="this.media='all'"
+  /> -->
+	<!-- <link rel="preload" as="style" href="./fonts/icon-font.css" />
+  <link
+    rel="stylesheet"
+    href="./fonts/icon-font.css?_v=20220921181355"
+    media="print"
+    onload="this.media='all'"
+  /> -->
+	<!--? Prod only, uncomment on prod -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220921181355" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<noscript>
+		<link rel="stylesheet" href="./fonts/fonts.css?_v=20220921181355" />
+	</noscript>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header data-scroll="200" data-scroll-show="0" data-lp class="header">
+			<div class="header__container">
+				<div class="header-topbar topbar">
+					<div class="topbar-logo">
+						<a href="home.html">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.webp" alt="Potency logo" width="325" height="93" /></picture>
+						</a>
+					</div>
+					<div class="topbar-search">
+						<form class="search-form" action="" novalidate>
+							<div class="search-form__inner">
+								<div class="search-form__icon">
+									<i class="icon-search"></i>
+								</div>
+								<input type="text" class="search-form__input" placeholder="Поиск" />
+							</div>
+						</form>
+					</div>
+					<div class="topbar-info">
+						<a href="tel:+0681234567" class="topbar-phone">+38 068 123 45 67</a>
+						<span class="topbar-hours">Без выходных 10:00-21:00 (+2 GMT)</span>
+					</div>
+					<div class="icon-menu">
+						<span></span>
+					</div>
+				</div>
+			</div>
+			<div class="header-nav">
+				<div class="header__container">
+					<nav class="main-nav">
+						<ul class="main-nav__list">
+							<li class="main-nav__list-item">
+								<a href="catalog.html">Продукция</a>
+							</li>
+							<li class="main-nav__list-item">
+								<a href="manufactures.html">Производители</a>
+							</li>
+							<li class="main-nav__list-item">
+								<a href="instructions.html">Инструкции</a>
+							</li>
+							<li class="main-nav__list-item">
+								<a href="contacts.html">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- !Поиск на телефоне тут -->
+					<div class="topbar-search">
+						<form class="search-form" action="" novalidate>
+							<div class="search-form__inner">
+								<div class="search-form__icon">
+									<i class="icon-search"></i>
+								</div>
+								<input type="text" class="search-form__input" placeholder="Поиск" />
+							</div>
+						</form>
+					</div>
+					<!-- !Поиск на телефоне тут -->
+					<div class="header-nav__actions header-actions">
+						<!-- !Кнопка попапа логина -->
+						<!-- <div
+          class="header-actions__account header-account header-account-login"
+        >
+          <button class="header-btn" data-popup="#login-popup">
+            <i class="icon-account"></i>
+            <span>Аккаунт</span>
+          </button>
+        </div> -->
+						<!-- !Кнопка попапа логина -->
+						<div class="header-actions__account header-account has-child" data-active>
+							<button class="header-btn" data-target aria-label="account-dropdown" aria-expanded="false">
+								<i class="icon-account"></i>
+								<span>Андрей</span>
+							</button>
+							<div class="header-account__dropdown header-dropdown account-info" data-fullscreen>
+								<div class="header-account__dropdown-title account-info__header">
+									<div>Приветствуем, <span>Андрей!</span></div>
+									<button type="button" class="btn-close" data-filter-close>
+										<i class="icon-close"></i>
+									</button>
+								</div>
+								<div class="header-account__dropdown-email account-info__email">
+									Вы вошли как <span>andrey@gmail.com</span>
+								</div>
+								<ul class="header-account__dropdown-list account-info__list">
+									<li class="header-account__dropdown-list__item account-info__item">
+										<a href="account-profile.html" class="header-account__dropdown-link account-info__link">
+											<i class="icon-account"></i>
+											<span>Детали профиля</span>
+										</a>
+									</li>
+									<li class="header-account__dropdown-list__item account-info__item">
+										<a href="account-orders.html" class="header-account__dropdown-link account-info__link">
+											<i class="icon-orders"></i>
+											<span>Мои заказы</span>
+										</a>
+									</li>
+									<li class="header-account__dropdown-list__item account-info__item">
+										<a href="account-address.html" class="header-account__dropdown-link account-info__link">
+											<i class="icon-truck"></i>
+											<span>Мои адреса доставки</span>
+										</a>
+									</li>
+									<li class="header-account__dropdown-list__item account-info__item">
+										<a href="account-payment.html" class="header-account__dropdown-link account-info__link">
+											<i class="icon-payment"></i>
+											<span>Платежные реквизиты</span>
+										</a>
+									</li>
+									<li class="header-account__dropdown-list__item account-info__item">
+										<a href="#" class="header-account__dropdown-link account-info__link">
+											<i class="icon-logout"></i>
+											<span>Выйти</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="header-actions__cart header-cart has-child" data-active>
+							<button class="header-btn" data-target aria-label="cart dropdown" aria-expanded="false">
+								<i class="icon-cart"></i>
+								<span class="cart-quant">23</span>
+								<span class="cart-quant__text">товара</span>
+							</button>
+							<div class="header-cart__dropdown header-dropdown cart" id="cart" data-fullscreen>
+								<div class="cart-header">
+									<div class="cart-title">Корзина</div>
+									<button type="button" class="remove-btn" data-filter-close>
+										<i class="icon-close"></i>
+									</button>
+								</div>
+								<!-- !Cart empty -->
+								<!-- <div class="cart-empty">
+              <h2>Нет товаров</h2>
+            </div> -->
+								<!-- !Cart empty -->
+
+								<!-- !Корзина -->
+								<ul class="cart-body">
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+									<li class="cart-item">
+										<a href="product.html" class="cart-item__img">
+											<picture><source srcset="img/products/cart-product.webp" type="image/webp"><img src="img/products/cart-product.webp" alt="Product name" width="81" height="81" /></picture>
+										</a>
+										<div class="cart-item__product">
+											<p class="cart-item__product-name">
+												<span>Товар</span>
+												<a href="product.html">Виагра Malegra Oral Jelly 100 мг</a>
+												<span>добавлен в корзину!</span>
+											</p>
+										</div>
+										<div class="checkout-product__quantity">
+											<div class="checkout-product__counter">
+												<input type="button" value="-" data-for="quantity" class="count-minus count-btn" />
+												<input type="number" id="quantity" value="1" min="1" class="cart-counter__input" />
+												<input type="button" value="+" data-for="quantity" class="count-plus count-btn" />
+											</div>
+										</div>
+										<div class="cart-item__price" data-cart-price="Цена:">320₴</div>
+										<div class="cart-item__full-price" data-cart-fullprice="Итого:">
+											320₴
+										</div>
+										<div class="cart-item__remove">
+											<button type="button" class="remove-btn">
+												<i class="icon-close"></i>
+											</button>
+										</div>
+									</li>
+								</ul>
+								<div class="cart-sum">
+									<span>Итого:</span>
+									1280₴
+								</div>
+								<div class="cart-footer">
+									<div class="cart-footer__btns">
+										<div class="cart-footer__btns-item">
+											<button type="button" class="btn btn-border" data-filter-close>
+												Продолжить покупки
+											</button>
+										</div>
+										<div class="cart-footer__btns-item">
+											<a href="order.html" class="btn btn-blue">Оформление заказа</a>
+										</div>
+									</div>
+								</div>
+								<!-- !Корзина -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page-wrapper">
+			<div class="__container">
+				<div class="breadcrumb-wrapper">
+					<ul class="breadcrumbs">
+						<li class="breadcrumbs-item">
+							<a href="#" class="breadcrumb-link">Главная</a>
+						</li>
+						<li class="breadcrumbs-item active">
+							<span class="breadcrumb-link">Аккаунт</span>
+						</li>
+					</ul>
+				</div>
+				<div class="layout">
+					<section class="content">
+						<div class="account">
+							<div class="account-row">
+								<div class="account-nav-col">
+									<div class="account-info">
+										<div class="account-info__header">
+											<div>Приветствуем, <span>Андрей!</span></div>
+										</div>
+										<div class="header-account__dropdown-email account-info__email">
+											Вы вошли как <span>andrey@gmail.com</span>
+										</div>
+										<ul class="account-info__list">
+											<li class="account-info__item">
+												<a href="account-profile.html" class="account-info__link">
+													<i class="icon-account"></i>
+													<span>Детали профиля</span>
+												</a>
+											</li>
+											<li class="account-info__item">
+												<a href="account-orders.html" class="account-info__link">
+													<i class="icon-orders"></i>
+													<span>Мои заказы</span>
+												</a>
+											</li>
+											<li class="account-info__item">
+												<a href="account-adress.html" class="account-info__link">
+													<i class="icon-truck"></i>
+													<span>Мои адреса доставки</span>
+												</a>
+											</li>
+											<li class="account-info__item active">
+												<a href="account-payment.html" class="account-info__link">
+													<i class="icon-payment"></i>
+													<span>Платежные реквизиты</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="account-info-col">
+									<h1 class="account-heading">Платежные реквизиты</h1>
+									<form action="">
+										<div class="account-card-row">
+											<div class="account-card-col">
+												<div class="account-card">
+													<p class="account-card-title">VISA ****1234</p>
+													<div class="account-card__btns">
+														<button class="btn btn-border btn-account" data-popup="#payment-one-edit-popup">
+															Редактировать
+														</button>
+														<button class="btn btn-border btn-account" data-popup="#payment-one-delete-popup">
+															Удалить
+														</button>
+													</div>
+													<div id="payment-one-edit-popup" aria-hidden="true" class="popup">
+														<div class="popup__wrapper">
+															<div class="popup__content">
+																<div class="popup__content-header">
+																	<div class="popup__content-heading">
+																		Редактирование
+																	</div>
+																	<button data-close type="button" class="popup__close">
+																		<i class="icon-close"></i>
+																	</button>
+																</div>
+																<div class="popup__body">
+																	<div class="popup__body-group">
+																		<label class="personal-data__label" for="paymentEditOne">Ваши реквизиты</label>
+																		<input type="text" name="paymentEditOne" id="paymentEditOne" placeholder="Номер карты" value="VISA ****1234" class="form-input" />
+																	</div>
+																</div>
+																<div class="popup__footer">
+																	<button class="btn btn-blue">
+																		Сохранить
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="payment-one-delete-popup" aria-hidden="true" class="popup">
+														<div class="popup__wrapper">
+															<div class="popup__content">
+																<div class="popup__content-header">
+																	<div class="popup__content-heading">
+																		Удаление реквезитов
+																	</div>
+																	<button data-close type="button" class="popup__close">
+																		<i class="icon-close"></i>
+																	</button>
+																</div>
+																<div class="popup__footer">
+																	<div class="popup__body-group">
+																		<label class="personal-data__label">Удалить реквизит?</label>
+																		<button class="btn btn-red">
+																			Удалить
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="account-card-col">
+												<div class="account-card">
+													<p class="account-card-title">
+														MASTERCARD ****1234
+													</p>
+													<div class="account-card__btns">
+														<button class="btn btn-border btn-account" data-popup="#payment-two-edit-popup">
+															Редактировать
+														</button>
+														<button class="btn btn-border btn-account" data-popup="#payment-two-delete-popup">
+															Удалить
+														</button>
+													</div>
+													<div id="payment-two-edit-popup" aria-hidden="true" class="popup">
+														<div class="popup__wrapper">
+															<div class="popup__content">
+																<div class="popup__content-header">
+																	<div class="popup__content-heading">
+																		Редактирование
+																	</div>
+																	<button data-close type="button" class="popup__close">
+																		<i class="icon-close"></i>
+																	</button>
+																</div>
+																<div class="popup__body">
+																	<div class="popup__body-group">
+																		<label class="personal-data__label" for="paymentEditTwo">Ваши реквизиты</label>
+																		<input type="text" name="paymentEditTwo" id="paymentEditTwo" placeholder="Номер карты" value="MASTERCARD ****1234" class="form-input" />
+																	</div>
+																</div>
+																<div class="popup__footer">
+																	<button class="btn btn-blue">
+																		Сохранить
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="payment-two-delete-popup" aria-hidden="true" class="popup">
+														<div class="popup__wrapper">
+															<div class="popup__content">
+																<div class="popup__content-header">
+																	<div class="popup__content-heading">
+																		Удаление реквезитов
+																	</div>
+																	<button data-close type="button" class="popup__close">
+																		<i class="icon-close"></i>
+																	</button>
+																</div>
+																<div class="popup__footer">
+																	<div class="popup__body-group">
+																		<label class="personal-data__label">Удалить реквизит?</label>
+																		<button class="btn btn-red">
+																			Удалить
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="account-card-col">
+												<div class="account-card">
+													<p class="account-card-title">
+														MASTERCARD ****5678
+													</p>
+													<div class="account-card__btns">
+														<button class="btn btn-border btn-account" data-popup="#payment-three-edit-popup">
+															Редактировать
+														</button>
+														<button class="btn btn-border btn-account" data-popup="#payment-three-delete-popup">
+															Удалить
+														</button>
+													</div>
+													<div id="payment-three-edit-popup" aria-hidden="true" class="popup">
+														<div class="popup__wrapper">
+															<div class="popup__content">
+																<div class="popup__content-header">
+																	<div class="popup__content-heading">
+																		Редактирование
+																	</div>
+																	<button data-close type="button" class="popup__close">
+																		<i class="icon-close"></i>
+																	</button>
+																</div>
+																<div class="popup__body">
+																	<div class="popup__body-group">
+																		<label class="personal-data__label" for="paymentEditThree">Ваши реквизиты</label>
+																		<input type="text" name="paymentEditThree" id="paymentEditThree" placeholder="Номер карты" value="MASTERCARD ****5678" class="form-input" />
+																	</div>
+																</div>
+																<div class="popup__footer">
+																	<button class="btn btn-blue">
+																		Сохранить
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="payment-three-delete-popup" aria-hidden="true" class="popup">
+														<div class="popup__wrapper">
+															<div class="popup__content">
+																<div class="popup__content-header">
+																	<div class="popup__content-heading">
+																		Удаление реквезитов
+																	</div>
+																	<button data-close type="button" class="popup__close">
+																		<i class="icon-close"></i>
+																	</button>
+																</div>
+																<div class="popup__footer">
+																	<div class="popup__body-group">
+																		<label class="personal-data__label">Удалить реквизит?</label>
+																		<button class="btn btn-red">
+																			Удалить
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="account-card-add">
+											<button class="btn btn-blue" data-popup="#address-add-payment-popup">
+												Добавить новую карту
+											</button>
+											<div id="address-add-payment-popup" aria-hidden="true" class="popup">
+												<div class="popup__wrapper">
+													<div class="popup__content">
+														<div class="popup__content-header">
+															<div class="popup__content-heading">
+																Добавление карты
+															</div>
+															<button data-close type="button" class="popup__close">
+																<i class="icon-close"></i>
+															</button>
+														</div>
+														<div class="popup__body">
+															<div class="popup__body-group error">
+																<label class="personal-data__label" for="cardInput">Номер карты</label>
+																<input type="text" name="cardInput" id="cardInput" placeholder="Номер карты" class="form-input" />
+																<span class="error-text">Такой пользователь уже
+																	зарегистрирован</span>
+															</div>
+															<div class="popup__body-group">
+																<label class="personal-data__label" for="termInput">Срок действия</label>
+																<input type="text" name="termInput" id="termInput" placeholder="Срок действия" class="form-input" />
+															</div>
+															<div class="popup__body-group">
+																<label class="personal-data__label" for="cvvInput">CVV</label>
+																<input type="text" name="cvvInput" id="cvvInput" placeholder="CVV" class="form-input" />
+															</div>
+														</div>
+														<div class="popup__footer">
+															<button class="btn btn-blue">Добавить</button>
+															<button class="btn" data-close type="button">
+																Отмена
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<section class="top-products">
+				<div class="__container">
+					<h2 class="section-title mb-4">
+						<i class="icon-star"></i>
+						<span>Топ товаров</span>
+					</h2>
+					<div class="top-products__row">
+						<a href="#" class="top-products__item">Malegra</a>
+						<a href="#" class="top-products__item">Cenforce 100</a>
+						<a href="#" class="top-products__item">Vidalista 20</a>
+						<a href="#" class="top-products__item">Poxet 60</a>
+						<a href="#" class="top-products__item">Malegra</a>
+						<a href="#" class="top-products__item">Vidalista 20</a>
+						<a href="#" class="top-products__item">Vidalista 20</a>
+						<a href="#" class="top-products__item">Poxet 60</a>
+						<a href="#" class="top-products__item">Malegra</a>
+						<a href="#" class="top-products__item">Cenforce 100</a>
+						<a href="#" class="top-products__item">Super Vidalista</a>
+						<a href="#" class="top-products__item">Poxet 60</a>
+						<a href="#" class="top-products__item">Malegra</a>
+						<a href="#" class="top-products__item">Cenforce 100</a>
+						<a href="#" class="top-products__item">Vidalista 20</a>
+						<a href="#" class="top-products__item">Poxet 60</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="delivery-section">
+				<div class="__container">
+					<h3 class="section-title mb-4">
+						<i class="icon-car"></i>
+						<span>Заказ с доставкой</span>
+					</h3>
+					<p class="section-text">
+						в Киев, Днепр, Одесса, Хмельницкий, Запорожье, Николаев, Луцк, Херсон,
+						Кривой Рог, Винница, Львов, Краматорск, Харьков, Сумы, Мариуполь,
+						Черновцы, Чернигов, Полтава, Ивано-Франковск, Донецк, Луганск,
+						Кропивницкий, Ровно, Житомир, Тернополь.
+					</p>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer-grid">
+					<div class="footer-logo">
+						<a href="#" class="footer-logo__link">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.webp" alt="Potency shop" width="324" height="93" /></picture>
+						</a>
+						<ul class="footer-links">
+							<li class="footer-links__item">
+								<a href="#" class="footer-links__link">
+									<i class="icon-account"></i>
+									<span>Пользовательское соглашение</span>
+								</a>
+							</li>
+							<li class="footer-links__item">
+								<a href="#" class="footer-links__link">
+									<i class="icon-git"></i>
+									<span>Карта сайта</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-contacts">
+						<div class="footer-contacts__column">
+							<a href="#" class="footer-contacts__phone">
+								<i class="icon-phone"></i>
+								<span>+38 068 123 45 67</span>
+							</a>
+							<span class="footer-contacts__hours">Без выходных 10:00-21:00 (+2 GMT)</span>
+							<span class="footer-contacts__call">Звонок бесплатный</span>
+						</div>
+						<div class="footer-contacts__column">
+							<div class="footer-contacts__actions">
+								<div class="footer-contacts__mail">
+									<i class="icon-mail"></i>
+									<a href="mailto:stoi@potency.com" class="footer-contacts__link">stoi@potency.com</a>
+								</div>
+								<div class="footer-contacts__btn">
+									<a href="tel:+380931234567" class="btn btn-border">
+										<i class="icon-phone"></i>
+										<span>Обратный звонок</span>
+									</a>
+								</div>
+								<div class="footer-contacts__btn">
+									<button type="button" data-popup="#contact-us-popup" class="btn btn-border">
+										<i class="icon-mail"></i>
+										<span>Написать письмо</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="footer__container">
+					<div class="footer-copyright__row">
+						<div class="footer-copyright__column">
+							<span class="footer-copyright__text">2022 Potency</span>
+							<a href="mailto:stoi@potency.com" class="footer-copyright__link">stoi@potency.com</a>
+						</div>
+						<div class="footer-copyright__column">
+							<div class="footer-copyright__socials">
+								<a href="#" class="social-link" aria-label="Facebook">
+									<i class="icon-facebook"></i>
+								</a>
+								<a href="#" class="social-link" aria-label="Instagrem">
+									<i class="icon-instagram"></i>
+								</a>
+								<a href="#" class="social-link" aria-label="Dribble">
+									<i class="icon-dribble"></i>
+								</a>
+								<a href="#" class="social-link" aria-label="Behance">
+									<i class="icon-behance"></i>
+								</a>
+								<a href="#" class="social-link" aria-label="Behance">
+									<i class="icon-behance"></i>
+								</a>
+								<a href="#" class="social-link" aria-label="Behance">
+									<i class="icon-behance"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="backdrop" data-backdrop></div>
+
+		<!-- !Попап логина -->
+
+		<div id="login-popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__content-header">
+						<div class="popup__content-heading">Вход в аккаунт</div>
+						<button data-close type="button" class="popup__close">
+							<i class="icon-close"></i>
+						</button>
+					</div>
+					<div class="popup__body">
+						<div class="popup__body-group">
+							<a href="#" class="btn btn-login">
+								<i class="icon-google-login"></i>
+								<span>Войти с помощью Google</span>
+							</a>
+							<a href="#" class="btn btn-login">
+								<i class="icon-login-facebook"></i>
+								<span>Войти с помощью Facebook</span>
+							</a>
+						</div>
+						<div class="popup-separator">или</div>
+						<div class="popup__body-group error">
+							<label class="personal-data__label" for="loginEmail">Почта или телефон</label>
+							<input type="text" name="loginEmail" id="loginEmail" placeholder="Почта или телефон" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="loginPassword">Пароль</label>
+							<input type="password" name="loginPassword" id="loginPassword" placeholder="Пароль" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<a href="#" class="password-forget">Забыли пароль?</a>
+						</div>
+					</div>
+					<div class="popup__footer">
+						<button class="btn btn-blue">Войти</button>
+						<button class="btn" data-popup="#register-popup" type="button">
+							Зарегистрироваться
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- !Попап регистрации -->
+
+		<div id="register-popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__content-header">
+						<div class="popup__content-heading">Регистриция</div>
+						<button data-close type="button" class="popup__close">
+							<i class="icon-close"></i>
+						</button>
+					</div>
+					<div class="popup__body">
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="registerName">Ваше имя</label>
+							<input type="text" name="registerName" id="registerName" placeholder="Ваше имя" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="registerSurname">Фамилия</label>
+							<input type="text" name="registerSurname" id="registerSurname" placeholder="Фамилия" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group error">
+							<label class="personal-data__label" for="registerEmail">Почта</label>
+							<input type="text" name="registerEmail" id="registerEmail" placeholder="Ваша почта" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="registerPhone">Ваш телефон</label>
+							<input type="text" name="registerPhone" id="registerPhone" placeholder="Ваш телефон" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="registerPassword">Пароль</label>
+							<input type="password" name="registerPassword" id="registerPassword" placeholder="Пароль" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+					</div>
+					<div class="popup__footer">
+						<button class="btn btn-blue">Войти</button>
+						<button class="btn" data-popup="#login-popup" type="button">
+							У меня есть аккаунт
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- !Попап Напишите нам -->
+
+		<div id="contact-us-popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__content-header">
+						<div class="popup__content-heading">Напишите нам</div>
+						<button data-close type="button" class="popup__close">
+							<i class="icon-close"></i>
+						</button>
+					</div>
+					<div class="popup__body">
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="contactName">Ваше имя</label>
+							<input type="text" name="contactName" id="contactName" placeholder="Ваше имя" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="contactEmail">Email</label>
+							<input type="email" name="contactEmail" id="contactEmail" placeholder="Email" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="contactPhone">Ваш телефон</label>
+							<input type="phone" name="contactPhone" id="contactPhone" placeholder="Телефон" class="form-input" />
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+						<div class="popup__body-group">
+							<label class="personal-data__label" for="contactText">Сообщение</label>
+							<textarea name="" id="" rows="3" placeholder="Сообщение"></textarea>
+							<span class="error-text">Такой пользователь уже зарегистрирован</span>
+						</div>
+					</div>
+					<div class="popup__footer">
+						<button class="btn btn-blue" type="submit">Отправиль</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script defer src="js/app.min.js?_v=20220921181355"></script>
+
+</body>
+
+</html>

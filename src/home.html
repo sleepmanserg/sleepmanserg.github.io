@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Главная" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page-wrapper">
+        <div class="home-page-catalog">
+          <div class="__container">
+            <div class="layout layout-sidebar">
+              @@include('html/_sidebar-home.htm',{})
+              <section class="content">
+                <h1 class="visually-hidden">Продукция</h1>
+                @@include('html/_home-categories-mob.htm',{})
+                @@include('html/_categories-header.htm',{})
+                <div class="product-slider__wrapper">
+                  <div class="main-slider swiper">
+                    <div class="main-slider__header">
+                      <h2 class="section-title">
+                        <i class="icon-flask"></i>
+                        <span>Новинки</span>
+                      </h2>
+                      @@include('html/_slider-nav.htm',{})
+                    </div>
+                    @@include('html/_slider.htm',{})
+                  </div>
+                </div>
+                <div class="product-slider__wrapper">
+                  <div class="main-slider swiper">
+                    <div class="main-slider__header">
+                      <h2 class="section-title">
+                        <i class="icon-gift"></i>
+                        <span>Акции</span>
+                      </h2>
+                      @@include('html/_slider-nav.htm',{})
+                    </div>
+                    @@include('html/_slider-two.htm',{})
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        @@include('html/_clients.htm',{}) @@include('html/_instructions.htm',{})
+        @@include('html/_prolongator.htm',{})
+        @@include('html/_top-products.htm',{})
+        @@include('html/_delivery.htm',{})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

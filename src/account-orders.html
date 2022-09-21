@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Мои заказы" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page-wrapper">
+        <div class="__container">
+          <div class="breadcrumb-wrapper">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs-item">
+                <a href="#" class="breadcrumb-link">Главная</a>
+              </li>
+              <li class="breadcrumbs-item active">
+                <span class="breadcrumb-link">Аккаунт</span>
+              </li>
+            </ul>
+          </div>
+          <div class="layout">
+            <section class="content">
+              <div class="account">
+                <div class="account-row">
+                  <div class="account-nav-col">
+                    <div class="account-info">
+                      <div class="account-info__header">
+                        <div>Приветствуем, <span>Андрей!</span></div>
+                      </div>
+                      <div
+                        class="header-account__dropdown-email account-info__email"
+                      >
+                        Вы вошли как <span>andrey@gmail.com</span>
+                      </div>
+                      <ul class="account-info__list">
+                        <li class="account-info__item">
+                          <a
+                            href="account-profile.html"
+                            class="account-info__link"
+                          >
+                            <i class="icon-account"></i>
+                            <span>Детали профиля</span>
+                          </a>
+                        </li>
+                        <li class="account-info__item active">
+                          <a href="" class="account-info__link">
+                            <i class="icon-orders"></i>
+                            <span>Мои заказы</span>
+                          </a>
+                        </li>
+                        <li class="account-info__item">
+                          <a
+                            href="account-adress.html"
+                            class="account-info__link"
+                          >
+                            <i class="icon-truck"></i>
+                            <span>Мои адреса доставки</span>
+                          </a>
+                        </li>
+                        <li class="account-info__item">
+                          <a
+                            href="account-payment.html"
+                            class="account-info__link"
+                          >
+                            <i class="icon-payment"></i>
+                            <span>Платежные реквизиты</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="account-info-col">
+                    <h1 class="account-heading">Мои заказы</h1>
+                    <div class="account-orders__table orders-table">
+                      <div class="orders-table__header">
+                        <div>Заказ</div>
+                        <div>Статус</div>
+                        <div>Товары</div>
+                        <div>Кол-во</div>
+                        <div>Итого</div>
+                        <div>Посмотреть заказ</div>
+                      </div>
+
+                      <a
+                        href="#"
+                        class="orders-table__item"
+                        data-order-item="0"
+                        data-popup="#order-popup"
+                      >
+                        <div class="orders-table__title">
+                          <!--? Внутри попапа слайдер со всеми заказами. Чтоб открыть тот заказ на который кликнули надо кнопке 'orders-table__number' добавить data-order-item -->
+                          <span class="orders-table__number"> №1 </span>
+                          <span class="orders-table__date">от 17.01.2021</span>
+                        </div>
+                        <div class="orders-table__label">
+                          <span class="order-label" data-order-label="new"
+                            >Новый</span
+                          >
+                        </div>
+                        <div class="orders-table__products orders-products">
+                          <div class="orders-products__item">
+                            <img
+                              src="img/products/1.webp"
+                              alt="Product"
+                              width="48px"
+                              height="48px"
+                            />
+                          </div>
+                          <div class="orders-products__item">
+                            <img
+                              src="img/products/1.webp"
+                              alt="Product"
+                              width="48px"
+                              height="48px"
+                            />
+                          </div>
+                          <div class="orders-products__item">
+                            <img
+                              src="img/products/1.webp"
+                              alt="Product"
+                              width="48px"
+                              height="48px"
+                            />
+                          </div>
+                          <div class="orders-products__item">
+                            <img
+                              src="img/products/1.webp"
+                              alt="Product"
+                              width="48px"
+                              height="48px"
+                            />
+                          </div>
+                        </div>
+                        <div class="orders-table__quant">4 шт.</div>
+                        <div class="orders-table__price">1212121₴</div>
+                        <div class="orders-table__btn">
+                          <span class="btn btn-border btn-account"
+                            >Посмотреть</span
+                          >
+                        </div>
+                      </a>
+                      <a
+                        href="#"
+                        class="orders-table__item"
+                        data-order-item="1"
+                        data-popup="#order-popup"
+                      >
+                        <div class="orders-table__title">
+                          <!--? Внутри попапа слайдер со всеми заказами. Чтоб открыть тот заказ на который кликнули надо кнопке 'orders-table__number' добавить data-order-item -->
+                          <span class="orders-table__number"> №2 </span>
+                          <span class="orders-table__date">от 17.01.2021</span>
+                        </div>
+                        <div class="orders-table__label">
+                          <span class="order-label" data-order-label="completed"
+                            >Выполнен</span
+                          >
+                        </div>
+                        <div class="orders-table__products orders-products">
+                          <div class="orders-products__item">
+                            <img
+                              src="img/products/1.webp"
+                              alt="Product"
+                              width="48px"
+                              height="48px"
+                            />
+                          </div>
+                          <div class="orders-products__item">
+                            <img
+                              src="img/products/1.webp"
+                              alt="Product"
+                              width="48px"
+                              height="48px"
+                            />
+                          </div>
+                          <div class="orders-products__item">
+                            <img
+                              src="img/products/1.webp"
+                              alt="Product"
+                              width="48px"
+                              height="48px"
+                            />
+                          </div>
+                        </div>
+                        <div class="orders-table__quant">4 шт.</div>
+                        <div class="orders-table__price">1212121₴</div>
+                        <div class="orders-table__btn">
+                          <span class="btn btn-border btn-account"
+                            >Посмотреть</span
+                          >
+                        </div>
+                      </a>
+                      <a
+                        href="#"
+                        class="orders-table__item order-denied"
+                        data-order-item="2"
+                        data-popup="#order-popup"
+                      >
+                        <div class="orders-table__title">
+                          <span class="orders-table__number">№3</span>
+                          <span class="orders-table__date">от 17.01.2021</span>
+                        </div>
+                        <div class="orders-table__label">
+                          <span class="order-label" data-order-label="rejected"
+                            >Отменен</span
+                          >
+                        </div>
+                        <div class="orders-table__products orders-products">
+                          <div class="orders-products__item">
+                            <img
+                              src="img/products/1.webp"
+                              alt="Product"
+                              width="48px"
+                              height="48px"
+                            />
+                          </div>
+                          <div class="orders-products__item">
+                            <img
+                              src="img/products/1.webp"
+                              alt="Product"
+                              width="48px"
+                              height="48px"
+                            />
+                          </div>
+                          <div class="orders-products__item">
+                            <img
+                              src="img/products/1.webp"
+                              alt="Product"
+                              width="48px"
+                              height="48px"
+                            />
+                          </div>
+                        </div>
+                        <div class="orders-table__quant">4 шт.</div>
+                        <div class="orders-table__price">1212121₴</div>
+                        <div class="orders-table__btn">
+                          <span class="btn btn-border btn-account"
+                            >Посмотреть</span
+                          >
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        @@include('html/_top-products.htm',{})
+        @@include('html/_delivery.htm',{})
+      </main>
+      <!-- !Попап Мой заказ -->
+      <div id="order-popup" aria-hidden="true" class="popup my-order-popup">
+        <div class="popup__wrapper">
+          <div class="popup__content order-slider swiper">
+            <div class="order-slider__close">
+              <button data-close type="button" class="popup__close">
+                <i class="icon-close"></i>
+              </button>
+            </div>
+            <div class="swiper-wrapper">
+              <!--? Внутри попапа слайдер со всеми заказами. Чтоб открыть тот заказ на который кликнули надо swiper-slide добавить data-order-item -->
+              <div class="swiper-slide" data-order-item="0">
+                <div class="popup__content-header">
+                  <div class="popup__content-heading order-popup__heading">
+                    Заказ №1
+                  </div>
+                  <div class="order-slider__nav">
+                    <button class="order-slider__btn order-slider__nav-prev">
+                      <i class="icon-chevron"></i>
+                    </button>
+                    <button class="order-slider__btn order-slider__nav-next">
+                      <i class="icon-chevron"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="popup__body">
+                  <div class="order-slider__actions">
+                    <button class="btn btn-border-red">Отменить заказ</button>
+                    <button class="btn btn-border">Повторить заказ</button>
+                  </div>
+                  <div class="order-slider__info">
+                    <div class="order-slider__date">
+                      Дата заказа <span>17.01.2021</span>
+                    </div>
+                    <span class="order-label" data-order-label="in-work"
+                      >В работе</span
+                    >
+                  </div>
+                  <div class="order-slider__details order-details">
+                    <div class="order-slider__title">Детали заказа</div>
+                    <div class="order-details__info">
+                      <dl class="order-details__list">
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Получатель:</dt>
+                          <dd class="order-details__value">Светлана Громова</dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Номер телефона:</dt>
+                          <dd class="order-details__value">+380687653412</dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Способ доставки:</dt>
+                          <dd class="order-details__value">Самовывоз</dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Оплата:</dt>
+                          <dd class="order-details__value">
+                            Безналичная оплата
+                          </dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Адрес:</dt>
+                          <dd class="order-details__value">
+                            ул. Пироговский шлях, 34
+                          </dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Комментарий:</dt>
+                          <dd class="order-details__value">
+                            Пути Господни неисповедимы
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="order-slider__products">
+                    <div class="order-slider__title">Товары</div>
+                    <div class="order-slider__products-item order-popup-item">
+                      <div class="order-popup-item__column">
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__img"
+                        >
+                          <img
+                            src="img/products/1.webp"
+                            alt="Product"
+                            width="48px"
+                            height="48px"
+                          />
+                        </a>
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__name"
+                        >
+                          Pfizer Viagra 25mg
+                        </a>
+                      </div>
+                      <div class="order-popup-item__column">
+                        <div class="order-popup-item__quant">1 шт.</div>
+                        <div class="order-popup-item__price">320₴</div>
+                      </div>
+                    </div>
+                    <div class="order-slider__products-item order-popup-item">
+                      <div class="order-popup-item__column">
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__img"
+                        >
+                          <img
+                            src="img/products/1.webp"
+                            alt="Product"
+                            width="48px"
+                            height="48px"
+                          />
+                        </a>
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__name"
+                        >
+                          Pfizer Viagra 25mg
+                        </a>
+                      </div>
+                      <div class="order-popup-item__column">
+                        <div class="order-popup-item__quant">1 шт.</div>
+                        <div class="order-popup-item__price">320₴</div>
+                      </div>
+                    </div>
+                    <div class="order-slider__products-item order-popup-item">
+                      <div class="order-popup-item__column">
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__img"
+                        >
+                          <img
+                            src="img/products/1.webp"
+                            alt="Product"
+                            width="48px"
+                            height="48px"
+                          />
+                        </a>
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__name"
+                        >
+                          Pfizer Viagra 25mg
+                        </a>
+                      </div>
+                      <div class="order-popup-item__column">
+                        <div class="order-popup-item__quant">1 шт.</div>
+                        <div class="order-popup-item__price">320₴</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup__footer order-slider__footer">
+                  <div class="order-slider__footer-info">
+                    <span>Общая сумма</span>
+                    <span class="fw-500">1458₴</span>
+                  </div>
+                  <div class="order-slider__footer-info">
+                    <span>Доставка</span>
+                    <span class="fw-500">Бесплатно</span>
+                  </div>
+                  <div class="order-slider__sum">
+                    <span>Итого</span>
+                    <span>1478₴</span>
+                  </div>
+                </div>
+              </div>
+              <!--? Внутри попапа слайдер со всеми заказами. Чтоб открыть тот заказ на который кликнули надо swiper-slide добавить data-order-item -->
+              <div class="swiper-slide" data-order-item="1">
+                <div class="popup__content-header">
+                  <div class="popup__content-heading order-popup__heading">
+                    Заказ №2
+                  </div>
+                  <div class="order-slider__nav">
+                    <button class="order-slider__btn order-slider__nav-prev">
+                      <i class="icon-chevron"></i>
+                    </button>
+                    <button class="order-slider__btn order-slider__nav-next">
+                      <i class="icon-chevron"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="popup__body">
+                  <div class="order-slider__actions">
+                    <button class="btn btn-border-red">Отменить заказ</button>
+                    <button class="btn btn-border">Повторить заказ</button>
+                  </div>
+                  <div class="order-slider__info">
+                    <div class="order-slider__date">
+                      Дата заказа <span>17.01.2021</span>
+                    </div>
+                    <span class="order-label" data-order-label="in-work"
+                      >В работе</span
+                    >
+                  </div>
+                  <div class="order-slider__details order-details">
+                    <div class="order-slider__title">Детали заказа</div>
+                    <div class="order-details__info">
+                      <dl class="order-details__list">
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Получатель:</dt>
+                          <dd class="order-details__value">Светлана Громова</dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Номер телефона:</dt>
+                          <dd class="order-details__value">+380687653412</dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Способ доставки:</dt>
+                          <dd class="order-details__value">Самовывоз</dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Оплата:</dt>
+                          <dd class="order-details__value">
+                            Безналичная оплата
+                          </dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Адрес:</dt>
+                          <dd class="order-details__value">
+                            ул. Пироговский шлях, 34
+                          </dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Комментарий:</dt>
+                          <dd class="order-details__value">
+                            Пути Господни неисповедимы
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="order-slider__products">
+                    <div class="order-slider__title">Товары</div>
+                    <div class="order-slider__products-item order-popup-item">
+                      <div class="order-popup-item__column">
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__img"
+                        >
+                          <img
+                            src="img/products/2.webp"
+                            alt="Product"
+                            width="48px"
+                            height="48px"
+                          />
+                        </a>
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__name"
+                        >
+                          Pfizer Viagra 25mg
+                        </a>
+                      </div>
+                      <div class="order-popup-item__column">
+                        <div class="order-popup-item__quant">1 шт.</div>
+                        <div class="order-popup-item__price">320₴</div>
+                      </div>
+                    </div>
+                    <div class="order-slider__products-item order-popup-item">
+                      <div class="order-popup-item__column">
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__img"
+                        >
+                          <img
+                            src="img/products/1.webp"
+                            alt="Product"
+                            width="48px"
+                            height="48px"
+                          />
+                        </a>
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__name"
+                        >
+                          Pfizer Viagra 25mg
+                        </a>
+                      </div>
+                      <div class="order-popup-item__column">
+                        <div class="order-popup-item__quant">1 шт.</div>
+                        <div class="order-popup-item__price">320₴</div>
+                      </div>
+                    </div>
+                    <div class="order-slider__products-item order-popup-item">
+                      <div class="order-popup-item__column">
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__img"
+                        >
+                          <img
+                            src="img/products/1.webp"
+                            alt="Product"
+                            width="48px"
+                            height="48px"
+                          />
+                        </a>
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__name"
+                        >
+                          Pfizer Viagra 25mg
+                        </a>
+                      </div>
+                      <div class="order-popup-item__column">
+                        <div class="order-popup-item__quant">1 шт.</div>
+                        <div class="order-popup-item__price">320₴</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup__footer order-slider__footer">
+                  <div class="order-slider__footer-info">
+                    <span>Общая сумма</span>
+                    <span class="fw-500">1458₴</span>
+                  </div>
+                  <div class="order-slider__footer-info">
+                    <span>Доставка</span>
+                    <span class="fw-500">Бесплатно</span>
+                  </div>
+                  <div class="order-slider__sum">
+                    <span>Итого</span>
+                    <span>1478₴</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" data-order-item="2">
+                <div class="popup__content-header">
+                  <div class="popup__content-heading order-popup__heading">
+                    Заказ №3
+                  </div>
+                  <div class="order-slider__nav">
+                    <button class="order-slider__btn order-slider__nav-prev">
+                      <i class="icon-chevron"></i>
+                    </button>
+                    <button class="order-slider__btn order-slider__nav-next">
+                      <i class="icon-chevron"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="popup__body">
+                  <div class="order-slider__actions">
+                    <button class="btn btn-border-red">Отменить заказ</button>
+                    <button class="btn btn-border">Повторить заказ</button>
+                  </div>
+                  <div class="order-slider__info">
+                    <div class="order-slider__date">
+                      Дата заказа <span>17.01.2021</span>
+                    </div>
+                    <span class="order-label" data-order-label="in-work"
+                      >В работе</span
+                    >
+                  </div>
+                  <div class="order-slider__details order-details">
+                    <div class="order-slider__title">Детали заказа</div>
+                    <div class="order-details__info">
+                      <dl class="order-details__list">
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Получатель:</dt>
+                          <dd class="order-details__value">Светлана Громова</dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Номер телефона:</dt>
+                          <dd class="order-details__value">+380687653412</dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Способ доставки:</dt>
+                          <dd class="order-details__value">Самовывоз</dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Оплата:</dt>
+                          <dd class="order-details__value">
+                            Безналичная оплата
+                          </dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Адрес:</dt>
+                          <dd class="order-details__value">
+                            ул. Пироговский шлях, 34
+                          </dd>
+                        </div>
+                        <div class="order-details__item">
+                          <dt class="order-details__label">Комментарий:</dt>
+                          <dd class="order-details__value">
+                            Пути Господни неисповедимы
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                  <div class="order-slider__products">
+                    <div class="order-slider__title">Товары</div>
+                    <div class="order-slider__products-item order-popup-item">
+                      <div class="order-popup-item__column">
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__img"
+                        >
+                          <img
+                            src="img/products/2.webp"
+                            alt="Product"
+                            width="48px"
+                            height="48px"
+                          />
+                        </a>
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__name"
+                        >
+                          Pfizer Viagra 25mg
+                        </a>
+                      </div>
+                      <div class="order-popup-item__column">
+                        <div class="order-popup-item__quant">1 шт.</div>
+                        <div class="order-popup-item__price">320₴</div>
+                      </div>
+                    </div>
+                    <div class="order-slider__products-item order-popup-item">
+                      <div class="order-popup-item__column">
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__img"
+                        >
+                          <img
+                            src="img/products/1.webp"
+                            alt="Product"
+                            width="48px"
+                            height="48px"
+                          />
+                        </a>
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__name"
+                        >
+                          Pfizer Viagra 25mg
+                        </a>
+                      </div>
+                      <div class="order-popup-item__column">
+                        <div class="order-popup-item__quant">1 шт.</div>
+                        <div class="order-popup-item__price">320₴</div>
+                      </div>
+                    </div>
+                    <div class="order-slider__products-item order-popup-item">
+                      <div class="order-popup-item__column">
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__img"
+                        >
+                          <img
+                            src="img/products/1.webp"
+                            alt="Product"
+                            width="48px"
+                            height="48px"
+                          />
+                        </a>
+                        <a
+                          target="_blank"
+                          href="product.html"
+                          class="order-popup-item__name"
+                        >
+                          Pfizer Viagra 25mg
+                        </a>
+                      </div>
+                      <div class="order-popup-item__column">
+                        <div class="order-popup-item__quant">1 шт.</div>
+                        <div class="order-popup-item__price">320₴</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup__footer order-slider__footer">
+                  <div class="order-slider__footer-info">
+                    <span>Общая сумма</span>
+                    <span class="fw-500">1458₴</span>
+                  </div>
+                  <div class="order-slider__footer-info">
+                    <span>Доставка</span>
+                    <span class="fw-500">Бесплатно</span>
+                  </div>
+                  <div class="order-slider__sum">
+                    <span>Итого</span>
+                    <span>1478₴</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

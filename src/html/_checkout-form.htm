@@ -1,0 +1,170 @@
+<div class="checkout-form__grid">
+  <div class="checkout-form__grid-col">
+    <div class="checkout-form__block checkout-block">
+      <div class="checkout-card__title">Данные покупателя</div>
+      <div class="checkout-block__card checkout-card checkout-card__single">
+        <div class="checkout-card__header checkout-card-group">
+          <div class="checkout-card-group__title">Зарегистрироваться</div>
+          <div class="checkout-card__header-radio">
+            <label class="radio-btn">
+              <input
+                class="radio-btn__input"
+                type="radio"
+                name="register"
+                checked="checked"
+              />
+              <span class="radio-btn__item"></span>
+              <span class="radio-btn__text">Да</span>
+            </label>
+            <label class="radio-btn">
+              <input class="radio-btn__input" type="radio" name="register" />
+              <span class="radio-btn__item"></span>
+              <span class="radio-btn__text">Нет</span>
+            </label>
+          </div>
+          <a href="account.html" class="btn btn-blue">Войти в аккаунт</a>
+        </div>
+        <div class="checkout-card-group">
+          <label for="checkout-mail" class="checkout-card-group__title">
+            Email
+          </label>
+          <input
+            class="form-input"
+            type="text"
+            id="checkout-mail"
+            placeholder="Email"
+          />
+          <span class="error-text">Такой пользователь уже зарегистрирован</span>
+        </div>
+        <div class="checkout-card-group error">
+          <label for="checkout-name" class="checkout-card-group__title">
+            Имя
+            <span>*</span>
+          </label>
+          <input
+            class="form-input"
+            type="text"
+            id="checkout-name"
+            placeholder="Имя"
+          />
+          <span class="error-text">Такой пользователь уже зарегистрирован</span>
+        </div>
+        <div class="checkout-card-group">
+          <label for="checkout-surname" class="checkout-card-group__title">
+            Фамилия
+            <span>*</span>
+          </label>
+          <input
+            class="form-input"
+            type="text"
+            id="checkout-surname"
+            placeholder="Фамилия"
+          />
+          <span class="error-text">Такой пользователь уже зарегистрирован</span>
+        </div>
+        <div class="checkout-card-group">
+          <label for="checkout-phone" class="checkout-card-group__title">
+            Телефон
+            <span>*</span>
+          </label>
+          <input
+            class="form-input phone-input"
+            type="text"
+            id="checkout-phone"
+            placeholder="Телефон"
+          />
+          <span class="error-text">Такой пользователь уже зарегистрирован</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="checkout-form__grid-col">
+    <div class="checkout-card__title">Способ доставки</div>
+    <label class="checkout-form__radio-big radio-big checkout-card">
+      <input
+        class="radio-big__input"
+        type="radio"
+        name="delivery"
+        id="delivery"
+        checked="checked"
+      />
+      <div class="radio-big__wrapper">
+        <div class="radio-big__header">
+          <span class="radio-big__checkbox"></span>
+          <span class="radio-big__title">Доставка в отделение новой почты</span>
+          <div class="radio-big__notification">
+            Бесплатная доставка по украине от 1000₴
+          </div>
+        </div>
+        <div class="checkout-card-group">
+          <label for="checkout-city" class="checkout-card-group__title">
+            Город
+          </label>
+          <input
+            class="form-input"
+            type="text"
+            id="checkout-city"
+            placeholder="Город"
+          />
+          <span class="error-text">Такой пользователь уже зарегистрирован</span>
+        </div>
+        <div class="checkout-card-group">
+          <label for="checkout-postOffice" class="checkout-card-group__title">
+            Отделение
+          </label>
+          <input
+            class="form-input"
+            type="text"
+            id="checkout-postOffice"
+            placeholder="Отделение"
+          />
+          <span class="error-text">Такой пользователь уже зарегистрирован</span>
+        </div>
+      </div>
+    </label>
+    <label class="checkout-form__radio-big radio-big checkout-card">
+      <input class="radio-big__input" type="radio" name="delivery" />
+      <div class="radio-big__wrapper">
+        <div class="radio-big__header">
+          <span class="radio-big__checkbox"></span>
+          <span class="radio-big__title"
+            >Доставка курьером Новой почты на адрес</span
+          >
+        </div>
+      </div>
+    </label>
+  </div>
+  <div class="checkout-form__grid-col">
+    <div class="checkout-card__title">Способ оплаты</div>
+    <label class="checkout-form__radio-big radio-big checkout-card">
+      <input class="radio-big__input" type="radio" name="payment" checked />
+      <div class="radio-big__wrapper">
+        <div class="radio-big__header">
+          <span class="radio-big__checkbox"></span>
+          <span class="radio-big__title">Наложенный платеж</span>
+          <span class="radio-big__subtitle"
+            >Новая Почта дополнительно взымает оплату за отправку денег (20
+            грн+2% от суммы заказа)</span
+          >
+        </div>
+      </div>
+    </label>
+    <label class="checkout-form__radio-big radio-big checkout-card">
+      <input class="radio-big__input" type="radio" name="payment" checked />
+      <div class="radio-big__wrapper">
+        <div class="radio-big__header">
+          <span class="radio-big__checkbox"></span>
+          <span class="radio-big__title">Предоплата на карту</span>
+        </div>
+      </div>
+    </label>
+  </div>
+  <div class="checkout-form__grid-col">
+    <div class="checkout-form__block checkout-block">
+      <div class="checkout-card__title">Сообщение</div>
+      <div class="checkout-card-group">
+        <textarea name="" id="" rows="5" placeholder="Сообщение"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
