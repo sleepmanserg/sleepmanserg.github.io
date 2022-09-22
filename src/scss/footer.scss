@@ -247,5 +247,11 @@
       display: grid;
       grid-template-columns: repeat(6, 1fr);
     }
+    @media (max-width: 480px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
   }
 }
