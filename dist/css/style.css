@@ -3507,6 +3507,7 @@ body::after {
   padding: 1rem;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
+  display: block;
   -webkit-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s;
