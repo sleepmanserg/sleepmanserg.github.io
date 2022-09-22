@@ -1,7 +1,11 @@
 .footer__container {
-  @media (max-width: 1024px) {
-    padding: 0;
-  }
+  // @media (max-width: 1024px) {
+  //   padding: 0;
+  // }
+  // @media (max-width: 768px) {
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
 }
 
 .footer-grid {
@@ -10,6 +14,10 @@
   column-gap: 80px;
   @media (max-width: 1150px) {
     grid-template-columns: 1fr;
+  }
+  @media (max-width: 1024px) {
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -24,8 +32,6 @@
     height: auto;
   }
   @media (max-width: 1150px) {
-    padding-left: 30px;
-    padding-right: 30px;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
@@ -33,8 +39,6 @@
   }
   @media (max-width: 768px) {
     row-gap: 25px;
-    padding-left: 1rem;
-    padding-right: 1rem;
     .footer-logo__link {
       max-width: 200px;
     }
@@ -84,14 +88,30 @@
   padding-bottom: 32px;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  @media (max-width: 1024px) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 100%;
+      background-color: var(--light-color);
+      z-index: -1;
+    }
+  }
   @media (max-width: 1150px) {
     padding-left: 30px;
     padding-right: 30px;
     margin: 0 -12px;
   }
+  @media (max-width: 1024px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   @media (max-width: 768px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
     margin: 0;
   }
   @media (max-width: 660px) {
@@ -184,9 +204,9 @@
     padding-left: 30px;
     padding-right: 30px;
   }
-  @media (max-width: 768px) {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  @media (max-width: 1024px) {
+    padding-left: 0;
+    padding-right: 0;
   }
   @media (max-width: 575px) {
     .footer-copyright__column {
@@ -244,14 +264,14 @@
     }
     @media (max-width: 575px) {
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-    }
-    @media (max-width: 480px) {
+      // display: grid;
+      // grid-template-columns: repeat(6, 1fr);
       display: flex;
       flex-wrap: wrap;
+    }
+    @media (max-width: 480px) {
+      gap: 1rem;
       justify-content: space-between;
-      gap: 10px;
     }
   }
 }
