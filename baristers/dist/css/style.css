@@ -501,7 +501,7 @@ a.link-underline {
 
 .header-languages .header-languages__item.active .header-languages__link {
   opacity: 1;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .header-languages .header-languages__link {
