@@ -1,0 +1,54 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  position: relative;
+  font-weight: 400;
+  &.hero-btn {
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    color: #fff;
+    padding-right: 75px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    &::after {
+      content: "\e908";
+      font-family: "icomoon" !important;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) translateX(0);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background-color: var(--dark-clr);
+      color: #fff;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: color 0.25s, background-color 0.25s, transform 0.25s;
+    }
+    &:hover {
+      &::after {
+        background-color: #fff;
+        color: var(--dark-clr);
+        transform: translateY(-50%) translateX(5px);
+      }
+    }
+  }
+}

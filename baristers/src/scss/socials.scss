@@ -1,0 +1,33 @@
+.socials {
+  z-index: 7;
+  &.socials-absolute {
+    position: absolute;
+    right: 20px;
+    bottom: 74px;
+    @media (max-width: 1024px) {
+      position: static;
+      right: 0;
+      bottom: 0;
+      .socials-list {
+        display: flex;
+        padding-bottom: 77px;
+        padding-top: 125px;
+      }
+    }
+  }
+  .socials-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .socials-list__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    font-size: 18px;
+  }
+}
