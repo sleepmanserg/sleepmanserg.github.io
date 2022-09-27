@@ -1,0 +1,121 @@
+.achievements {
+  padding-top: 50px;
+  padding-bottom: 65px;
+  @media (max-width: 1024px) {
+    padding-top: 0;
+  }
+  .swiper-wrapper {
+    @media (min-width: 992px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -1rem;
+      .swiper-slide {
+        flex: 0 0 33.33333333%;
+        padding: 0 1rem;
+        @media (min-width: 1921px) {
+          flex: 0 0 20%;
+        }
+      }
+    }
+  }
+  .achievement-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .achievement-item__img {
+    min-height: 140px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 36px;
+    @media (max-width: 1024px) {
+      min-height: 100px;
+    }
+  }
+  .achievement-item__text {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: #000000;
+    max-width: 280px;
+    margin: 0 auto;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      max-width: 215px;
+    }
+  }
+  .achievement-item__link {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #000000;
+    transition: opacity 0.25s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.achievements-tabs {
+  .tabs {
+    padding-top: 1rem;
+  }
+  .tabs__navigation {
+    display: flex;
+    justify-content: flex-end;
+    gap: 27px;
+    @media (max-width: 1024px) {
+      justify-content: flex-start;
+    }
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+  .tabs__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    color: #939393;
+    padding-right: 12px;
+    position: relative;
+    transition: color 0.25s;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 6px;
+      height: 6px;
+      background-color: #939393;
+    }
+    &._tab-active {
+      color: #1e1e1e;
+      &::after {
+        background-color: #838383;
+      }
+    }
+    &:hover {
+      color: #1e1e1e;
+    }
+  }
+  .tabs__content {
+    padding-top: 40px;
+    @media (max-width: 1024px) {
+      padding-top: 20px;
+    }
+  }
+}

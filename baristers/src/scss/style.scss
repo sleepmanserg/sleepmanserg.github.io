@@ -2,6 +2,9 @@
 :root {
   //? colors
   --dark-clr: #1b1b1b;
+  --dark-secondary-clr: #111111;
+  --grey-light: #fbfbfb;
+  --grey-lighter: #f9f8f8;
 }
 
 // Подключение миксинов ===========================================================================================================================================================================================================================================================================
@@ -39,7 +42,7 @@ $maxWidth: 1920;
 $maxWidthContainer: 100%;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPadding: 90;
+$containerPadding: 180;
 
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
@@ -74,6 +77,35 @@ body {
   }
   // Сайт загружен
   .loaded & {
+    // .body {
+    //   opacity: 1;
+    // }
+  }
+}
+
+.loaded {
+  .hero {
+    .hero-caption__inner {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .hero-bg {
+      animation: heroImgAnim 1s 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+    }
+  }
+  [data-fade-in] {
+    opacity: 0;
+    transform: translateX(-50px);
+    filter: blur(5px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  [data-fade-in]._active {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
   }
 }
 
@@ -153,6 +185,17 @@ body {
   }
 }
 
+[class*="__container"] {
+  @media (max-width: 1024px) {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+  @media (max-width: 768px) {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}
+
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
@@ -169,3 +212,8 @@ body {
 // Подключение стилей отдельных страниц
 @import "home";
 @import "hero";
+@import "about-home";
+@import "achievements";
+@import "clients";
+@import "services";
+@import "team";

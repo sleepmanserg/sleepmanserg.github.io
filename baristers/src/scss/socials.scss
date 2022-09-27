@@ -1,8 +1,11 @@
 .socials {
   z-index: 7;
+  .menu-open & {
+    z-index: 1;
+  }
   &.socials-absolute {
     position: absolute;
-    right: 20px;
+    right: 30px;
     bottom: 74px;
     @media (max-width: 1024px) {
       position: static;
@@ -12,6 +15,23 @@
         display: flex;
         padding-bottom: 77px;
         padding-top: 125px;
+      }
+    }
+    @media (max-width: 768px) {
+      .socials-list {
+        padding-bottom: 36px;
+        padding-top: 50px;
+      }
+    }
+    @media (max-width: 575px) {
+      position: absolute;
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      bottom: 36px;
+      .socials-list {
+        padding-bottom: 0;
+        padding-top: 0;
       }
     }
   }
@@ -29,5 +49,9 @@
     height: 20px;
     color: #fff;
     font-size: 18px;
+    transition: opacity 0.25s;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }

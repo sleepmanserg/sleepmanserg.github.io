@@ -8,6 +8,61 @@
   left: 0;
   width: 100%;
   z-index: 99;
+  &._header-scroll {
+    position: fixed;
+    background-color: var(--grey-light);
+    top: -200%;
+  }
+  &._header-show {
+    transition: top 1s cubic-bezier(0.4, 0, 0.2, 1);
+    top: 0;
+    .header-logo {
+      filter: invert(1);
+    }
+    .header-nav__item {
+      &.active {
+        .header-nav__link {
+          &::after {
+            background-color: #000;
+          }
+        }
+      }
+    }
+    .header-nav__link,
+    .header-languages__link {
+      color: #000;
+    }
+    .header-nav__link {
+      @media (max-width: 1024px) {
+        color: #fff;
+      }
+    }
+    .header-burger .icon-menu::before,
+    .header-burger .icon-menu::after,
+    .header-burger .icon-menu span,
+    .header-burger::after {
+      background-color: #000;
+    }
+    .header-wrapper {
+      padding-top: 22px;
+      padding-bottom: 18px;
+      &::after {
+        display: none;
+      }
+    }
+    .menu-open & {
+      .header-burger .icon-menu::before,
+      .header-burger .icon-menu::after,
+      .header-burger .icon-menu span,
+      .header-burger::after {
+        background-color: #fff;
+      }
+      .header-nav__link,
+      .header-nav__languages .header-languages__link {
+        color: #fff;
+      }
+    }
+  }
   .header-wrapper {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -17,6 +72,10 @@
     position: relative;
     @media (max-width: 1250px) {
       padding-left: 0;
+    }
+    @media (max-width: 575px) {
+      padding-bottom: 15px;
+      padding-top: 15px;
     }
     &::after {
       content: "";
@@ -35,6 +94,10 @@
     @media (max-width: 1250px) {
       margin-right: 45px;
       // padding-left: 0;
+    }
+    @media (max-width: 1024px) {
+      max-width: 140px;
+      margin-right: 20px;
     }
     picture,
     img {
@@ -109,6 +172,26 @@
       height: 57px;
       background-color: #fff;
       opacity: 0.5;
+      @media (max-width: 575px) {
+        height: 40px;
+      }
+    }
+    @media (max-width: 374px) {
+      margin-left: auto;
+    }
+  }
+  .header-languages {
+    @media (max-width: 1250px) {
+      margin-right: 1rem;
+    }
+    @media (max-width: 1024px) {
+      margin-right: 77px;
+    }
+    @media (max-width: 575px) {
+      margin-right: 20px;
+    }
+    @media (max-width: 374px) {
+      display: none;
     }
   }
 }
@@ -116,17 +199,14 @@
 .header-languages {
   margin-left: auto;
   margin-right: 90px;
-  @media (max-width: 1250px) {
-    margin-right: 1rem;
-  }
-  @media (max-width: 1024px) {
-    margin-right: 77px;
-  }
   .header-languages__list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     margin: 0 -11px;
+    @media (max-width: 575px) {
+      margin: 0 -8px;
+    }
   }
   .header-languages__item {
     padding-left: 11px;
@@ -136,6 +216,10 @@
         opacity: 1;
         text-decoration: none;
       }
+    }
+    @media (max-width: 575px) {
+      padding-left: 8px;
+      padding-right: 8px;
     }
   }
   .header-languages__link {
@@ -327,6 +411,14 @@
       color: #ffffff;
       max-width: 520px;
       margin: 0 auto 65px;
+      @media (max-width: 575px) {
+        margin-bottom: 35px;
+        max-width: 80%;
+        font-size: 24px;
+      }
+      @media (max-width: 374px) {
+        max-width: 100%;
+      }
     }
     .header-nav__btn {
       margin-bottom: 66px;
@@ -347,6 +439,15 @@
       .socials-list {
         display: flex;
       }
+    }
+  }
+  @media (max-width: 575px) {
+    .header-nav__list {
+      margin-bottom: 50px;
+    }
+    .header-nav__link {
+      padding-bottom: 15px;
+      padding-top: 15px;
     }
   }
 }
@@ -446,56 +547,12 @@
   to {
     transform: scale(0.8);
     opacity: 0;
+    visibility: hidden;
     height: 0;
     right: 50%;
     top: 50%;
     width: 0;
     left: 50%;
     padding: 0;
-  }
-}
-
-@keyframes right-in {
-  from {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-}
-
-@keyframes left-in {
-  from {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-}
-
-@keyframes bounce-out {
-  0%,
-  100%,
-  20%,
-  40%,
-  60%,
-  80% {
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  0% {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-  20% {
-    transform: scale3d(0.9, 0.9, 0.9);
-  }
-  40% {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-  60% {
-    transform: scale3d(0.8, 0.8, 0.8);
-  }
-  80% {
-    transform: scale3d(1.1, 1.1, 1.1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
   }
 }

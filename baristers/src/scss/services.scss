@@ -1,0 +1,312 @@
+.services {
+  background-color: #202020;
+  color: #fff;
+  padding-bottom: 75px;
+  @media (max-width: 1439px) {
+    > .__container {
+      padding-right: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 36px;
+    > .__container {
+      padding-right: 17px;
+    }
+  }
+  .services-slider__tabs {
+    display: flex;
+    margin: 0 -40px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    @media (min-width: 1921px) {
+      padding-left: 90px;
+    }
+    @media (max-width: 1920px) {
+      max-width: 60%;
+    }
+    @media (max-width: 1439px) {
+      margin: 0 -20px;
+      max-width: 50%;
+    }
+    @media (max-width: 1024px) {
+      max-width: calc(100% - 250px);
+      padding-top: 35px;
+    }
+    @media (max-width: 768px) {
+      max-width: 100%;
+      justify-content: center;
+      padding-left: 17px;
+      margin: 0 -13px;
+    }
+  }
+  .services-slider__tabs-item {
+    padding: 0 40px;
+    @media (max-width: 1439px) {
+      padding: 0 20px;
+    }
+    @media (max-width: 768px) {
+      padding: 0 13px;
+    }
+  }
+  .services-slider__tabs-btn {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+    color: #929292;
+    text-align: left;
+    padding-left: 18px;
+    position: relative;
+    text-decoration: underline;
+    transition: color 0.25s;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background-color: #929292;
+      transition: background-color 0.25s;
+    }
+    @media (min-width: 1921px) {
+      max-width: 70%;
+    }
+    @media (max-width: 1250px) {
+      font-size: 24px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      line-height: 19px;
+      &::before {
+        top: 0;
+      }
+    }
+    &:hover {
+      color: #fff;
+
+      &::before {
+        background-color: #fff;
+      }
+    }
+    &.active {
+      color: #fff;
+      text-decoration: none;
+      &::before {
+        background-color: #fff;
+      }
+    }
+  }
+  .services-slider__item {
+    color: #000;
+  }
+  .services-slider__item-info {
+    background-color: #fff;
+    padding: 50px 75px;
+    max-width: calc(100% - 27%);
+    position: relative;
+    z-index: 2;
+    @media (min-width: 1441px) {
+      min-height: 50vh;
+    }
+    @media (max-width: 1920px) {
+      padding: 50px 36px;
+      max-width: calc(100% - 450px);
+    }
+    @media (max-width: 1439px) {
+      max-width: calc(100% - 300px);
+    }
+    @media (max-width: 1250px) {
+      max-width: calc(100% - 250px);
+    }
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+    @media (max-width: 768px) {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+  .services-slider__item-img {
+    max-width: 30%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 145px;
+    img,
+    picture {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    @media (max-width: 1920px) {
+      max-width: 500px;
+      height: 550px;
+    }
+    @media (max-width: 1250px) {
+      max-width: 350px;
+    }
+    @media (max-width: 1024px) {
+      max-width: 250px;
+      height: 460px;
+      z-index: 7;
+      top: -50px;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+    @media (min-width: 1921px) {
+      height: 50vh;
+    }
+  }
+  .services-slider__item-description {
+    font-size: 22px;
+    line-height: 150%;
+    color: #111111;
+    margin-bottom: 60px;
+    @media (min-width: 1921px) {
+      font-size: 30px;
+      max-width: 80%;
+    }
+    @media (max-width: 1024px) {
+      font-size: 20px;
+      max-width: calc(100% - 300px);
+    }
+    @media (max-width: 768px) {
+      text-align: center;
+      margin: 0 auto 34px;
+      color: #fff;
+      max-width: 300px;
+      font-size: 1rem;
+    }
+  }
+  .services-slider__nav {
+    position: absolute;
+    bottom: 85px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    z-index: 5;
+    .slider-btn {
+      width: 63px;
+      height: 63px;
+      background-color: transparent;
+      border-color: #434343;
+      &:hover {
+        border-color: #fff;
+      }
+      &.swiper-button-disabled {
+        width: 46px;
+        height: 46px;
+        pointer-events: none;
+        &:hover {
+          border-color: #434343;
+        }
+      }
+    }
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+  .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+    @media (min-width: 1921px) {
+      gap: 36px;
+    }
+    @media (max-width: 1920px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 768px) {
+      background-color: #fff;
+      padding: 27px 20px 36px;
+      margin-bottom: 0;
+    }
+  }
+  .services-list__item {
+    flex: 0 0 50%;
+    padding: 0 1rem;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #111111;
+    margin-bottom: 36px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    @media (min-width: 1921px) {
+      flex: 0 0 auto;
+      font-size: 22px;
+    }
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+    }
+  }
+  .services-list__item-inner {
+    padding-left: 1.5rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background-color: #111;
+    }
+  }
+  .services-slider__item-link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #000000;
+    display: block;
+    @media (min-width: 1921px) {
+      font-size: 18px;
+      margin-top: 80px;
+    }
+    @media (max-width: 768px) {
+      background-color: #fff;
+      padding-left: 20px;
+      padding-bottom: 36px;
+    }
+  }
+  .services-slider {
+    padding-bottom: 70px;
+    .swiper-slide {
+      opacity: 0 !important;
+      padding-top: 85px;
+      &.swiper-slide-active {
+        opacity: 1 !important;
+      }
+      @media (min-width: 1921px) {
+        min-height: 50vh;
+      }
+      @media (max-width: 768px) {
+        padding-top: 53px;
+      }
+    }
+    @media (max-width: 1024px) {
+      padding-bottom: 43px;
+    }
+  }
+  .services-all-btn {
+    .btn {
+      max-width: 280px;
+      width: 100%;
+    }
+    @media (max-width: 1024px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

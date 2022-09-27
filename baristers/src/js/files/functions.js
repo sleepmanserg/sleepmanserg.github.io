@@ -29,7 +29,7 @@ export function addLoadedClass() {
 	window.addEventListener("load", function () {
 		setTimeout(function () {
 			document.documentElement.classList.add('loaded');
-		}, 0);
+		}, 750);
 	});
 }
 // Получение хеша в адресе сайта
@@ -430,6 +430,12 @@ export function menuInit() {
 			}
 		});
 	};
+
+	window.addEventListener('resize', () => {
+		if (window.innerWidth > 1024.98) {
+			menuClose();
+		}
+	});
 }
 export function menuOpen() {
 	bodyLock();
@@ -640,4 +646,28 @@ export function dataMediaQueries(array, dataSetValue) {
 		}
 	}
 }
+// ANimate on scroll
+const hiddenElements = document.querySelectorAll('[data-fade-in]');
+
+const options = {
+	root: null,
+	rootMargin: '50px',
+	threshold: .4,
+}
+export function animateOnScroll() {
+	const observerCallback = (entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('_active');
+			}
+		});
+	}
+
+	let observer = new IntersectionObserver(observerCallback, options);
+
+	hiddenElements.forEach(el => {
+		observer.observe(el);
+	})
+}
+
 //================================================================================================================================================================================================================================================================================================================

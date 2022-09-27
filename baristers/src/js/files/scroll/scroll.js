@@ -85,12 +85,12 @@ export function headerScroll() {
 		if (scrollTop >= startPoint) {
 			!header.classList.contains('_header-scroll') ? header.classList.add('_header-scroll') : null;
 			if (headerShow) {
-				if (scrollTop > scrollDirection) {
+				if (!scrollTop > scrollDirection) {
 					// downscroll code
-					header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
+					// header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
+					!header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
 				} else {
 					// upscroll code
-					!header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
 				}
 				timer = setTimeout(() => {
 					!header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
