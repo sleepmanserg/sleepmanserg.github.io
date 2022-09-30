@@ -1,0 +1,117 @@
+.features {
+  background: linear-gradient(0deg, #062d79 0%, #003ea0 100%);
+  padding-top: 93px;
+  padding-bottom: 142px;
+  @media (max-width: 1024px) {
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .features-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    row-gap: 60px;
+    @media (max-width: 1024px) {
+    }
+  }
+  .features-col {
+    flex: 0 0 50%;
+    padding: 0 10px;
+    @media (max-width: 860px) {
+      flex: 0 0 100%;
+    }
+  }
+  .features-card {
+    display: flex;
+    align-items: center;
+    column-gap: 62px;
+    position: relative;
+    color: #fff;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("@img/chars/back.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    @media (max-width: 1400px) {
+      column-gap: 22px;
+    }
+    @media (max-width: 1024px) {
+      &::after {
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+  }
+  .base-text {
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+  }
+  .features-card__title {
+    color: #fff;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+  }
+  .features-card__text,
+  .features-card__img {
+    position: relative;
+    z-index: 2;
+  }
+  .features-card__img {
+    flex: 0 0 106px;
+    img,
+    picture {
+      max-width: 100%;
+    }
+    @media (max-width: 575px) {
+      flex: 0 0 53px;
+    }
+  }
+}
+
+.contact {
+  background-color: #122960;
+  padding-top: 100px;
+  .contact-content {
+    display: flex;
+  }
+  .contact-img {
+    img,
+    picture {
+      max-width: 100%;
+    }
+  }
+}
+
+._error {
+  background-color: red;
+}

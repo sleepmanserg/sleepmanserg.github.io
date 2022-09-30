@@ -1,0 +1,225 @@
+.hero {
+  overflow: hidden;
+  display: flex;
+  @media (min-width: 1025px) {
+    align-items: center;
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #01499e 0%,
+    #00aeed 23.38%,
+    #00a3bf 44.78%,
+    #016fe2 66.52%,
+    #004fb7 85.98%,
+    #003e9d 100%
+  );
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("@img/hero-bg.webp");
+    background-size: cover;
+    opacity: 0.3;
+  }
+  .hero-content {
+    flex: 0 0 100%;
+    @media (max-width: 1024px) {
+      order: 2;
+    }
+    @media (min-width: 1025px) {
+      padding-top: 100px;
+    }
+    @media (min-width: 1024px) {
+      padding-top: 200px;
+      padding-bottom: 100px;
+    }
+    @media (min-width: 1150px) {
+      padding-top: 234px;
+    }
+    @media (min-width: 1680px) {
+      padding-top: 150px;
+    }
+    @media (min-width: 1921px) {
+      padding-top: 0;
+    }
+  }
+  .hero-img {
+    z-index: 3;
+    padding-bottom: 60%;
+    position: relative;
+    img,
+    picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-width: 100%;
+      @media (max-width: 480px) {
+        img,
+        picture {
+          object-fit: contain;
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      transform: translateX(-100%);
+      flex: 0 0 65%;
+    }
+    @media (min-width: 1350px) {
+      flex: 0 0 70%;
+    }
+    @media (max-width: 1024px) {
+      order: 1;
+      padding-top: 300px;
+      display: flex;
+    }
+    @media (max-width: 575px) {
+      padding-top: 400px;
+      max-width: 100%;
+    }
+  }
+  .hero-caption {
+    position: relative;
+    z-index: 4;
+    @media (min-width: 1025px) {
+      width: 55%;
+    }
+    @media (max-width: 1024px) {
+      margin-top: -150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 575px) {
+      margin-top: -120px;
+    }
+  }
+  .hero-title {
+    font-size: 110px;
+    line-height: 100%;
+    letter-spacing: 0.07em;
+    color: #ffffff;
+    filter: drop-shadow(4px 6px 2px rgba(0, 0, 0, 0.15));
+    margin-bottom: 26px;
+    max-width: 525px;
+    width: 100%;
+    @media (max-width: 1350px) {
+      font-size: 90px;
+      max-width: 450px;
+    }
+    @media (max-width: 1150px) {
+      font-size: 72px;
+      max-width: 350px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 60px;
+      max-width: 300px;
+    }
+    @media (max-width: 1024px) {
+      text-align: center;
+    }
+  }
+  .base-text {
+    margin-bottom: 38px;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 4;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    max-width: 525px;
+    width: 100%;
+    @media (max-width: 1024px) {
+      text-align: center;
+      margin: 0 auto 30px;
+      max-width: 90%;
+    }
+    @media (max-width: 575px) {
+      text-align: center;
+    }
+  }
+  .hero-stores {
+    display: flex;
+    gap: 17px;
+    margin-bottom: 55px;
+    @media (max-width: 1024px) {
+      margin-bottom: 24px;
+    }
+    @media (max-width: 575px) {
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+  .hero-store {
+    flex: 0 0 190px;
+    transition: opacity 0.25s;
+    img,
+    picture {
+      max-width: 100%;
+      width: 100%;
+    }
+    &:hover {
+      @media (any-hover: hover) {
+        opacity: 0.7;
+      }
+    }
+    @media (max-width: 1150px) {
+      flex: 0 0 50%;
+    }
+    @media (max-width: 575px) {
+      flex: 0 0 124px;
+    }
+  }
+  .hero-socials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    @media (max-width: 1150px) {
+      column-gap: 15px;
+    }
+    @media (max-width: 575px) {
+      width: 100%;
+      max-width: 275px;
+      column-gap: 0px;
+      justify-content: space-between;
+    }
+  }
+  .hero-socials__item {
+    @media (max-width: 575px) {
+      flex: 0 0 16.6666666667%;
+    }
+  }
+  .hero-socials__link {
+    transition: opacity 0.25s;
+    display: block;
+    text-align: center;
+    &:hover {
+      @media (any-hover: hover) {
+        opacity: 0.7;
+      }
+    }
+    img,
+    picture {
+      max-width: 100%;
+      @media (max-width: 575px) {
+        width: 30px;
+      }
+    }
+  }
+}
