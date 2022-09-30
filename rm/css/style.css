@@ -1479,6 +1479,10 @@ body::after {
 }
 
 @media (max-width: 768px) {
+  .popup__body {
+    max-height: 70vh;
+  }
+
   .features {
     padding-top: 40px;
     padding-bottom: 60px;
