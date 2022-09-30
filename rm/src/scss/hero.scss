@@ -153,73 +153,74 @@
       text-align: center;
     }
   }
-  .hero-stores {
-    display: flex;
-    gap: 17px;
-    margin-bottom: 55px;
-    @media (max-width: 1024px) {
-      margin-bottom: 24px;
-    }
-    @media (max-width: 575px) {
-      justify-content: center;
-      gap: 20px;
+}
+.hero-socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  @media (max-width: 1150px) {
+    column-gap: 15px;
+  }
+  @media (max-width: 575px) {
+    width: 100%;
+    max-width: 275px;
+    column-gap: 0px;
+    justify-content: space-between;
+  }
+}
+.hero-socials__item {
+  @media (max-width: 575px) {
+    flex: 0 0 16.6666666667%;
+  }
+}
+.hero-socials__link {
+  transition: opacity 0.25s;
+  display: block;
+  text-align: center;
+  &:hover {
+    @media (any-hover: hover) {
+      opacity: 0.7;
     }
   }
-  .hero-store {
-    flex: 0 0 190px;
-    transition: opacity 0.25s;
-    img,
-    picture {
-      max-width: 100%;
-      width: 100%;
-    }
-    &:hover {
-      @media (any-hover: hover) {
-        opacity: 0.7;
-      }
-    }
-    @media (max-width: 1150px) {
-      flex: 0 0 50%;
-    }
+  img,
+  picture {
+    max-width: 100%;
     @media (max-width: 575px) {
-      flex: 0 0 124px;
+      width: 30px;
     }
   }
-  .hero-socials {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 25px;
-    @media (max-width: 1150px) {
-      column-gap: 15px;
-    }
-    @media (max-width: 575px) {
-      width: 100%;
-      max-width: 275px;
-      column-gap: 0px;
-      justify-content: space-between;
+}
+
+.hero-stores {
+  display: flex;
+  gap: 17px;
+  margin-bottom: 55px;
+  @media (max-width: 1024px) {
+    margin-bottom: 24px;
+  }
+  @media (max-width: 575px) {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+.hero-store {
+  flex: 0 0 190px;
+  transition: opacity 0.25s;
+  img,
+  picture {
+    max-width: 100%;
+    width: 100%;
+  }
+  &:hover {
+    @media (any-hover: hover) {
+      opacity: 0.7;
     }
   }
-  .hero-socials__item {
-    @media (max-width: 575px) {
-      flex: 0 0 16.6666666667%;
-    }
+  @media (max-width: 1150px) {
+    flex: 0 0 48%;
   }
-  .hero-socials__link {
-    transition: opacity 0.25s;
-    display: block;
-    text-align: center;
-    &:hover {
-      @media (any-hover: hover) {
-        opacity: 0.7;
-      }
-    }
-    img,
-    picture {
-      max-width: 100%;
-      @media (max-width: 575px) {
-        width: 30px;
-      }
-    }
+  @media (max-width: 575px) {
+    flex: 0 0 124px;
   }
 }

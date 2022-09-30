@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/_head.htm',{ "title":"HomePage" })
+  @@include('html/_head.htm',{ "title":"RM - Game" })
   <body>
     <div class="wrapper">
       @@include('html/_header.htm',{})
@@ -8,7 +8,7 @@
         <section class="hero">
           <div class="hero-content">
             <div class="__container">
-              <div class="hero-caption">
+              <div class="hero-caption" id="hero-caption">
                 <h1 class="heading-font hero-title">Let the game begin</h1>
                 <p class="base-text">
                   Sed ut perspiciatis, unde omnis iste natus error sit
@@ -91,7 +91,7 @@
             </picture>
           </div>
         </section>
-        <section class="features">
+        <section class="features" id="features">
           <div class="__container">
             <div class="features-row">
               <div class="features-col">
@@ -248,44 +248,50 @@
                 <img src="@img/contact.webp" />
               </div>
               <div class="contact-form">
-                <div class="contact-form__title heading-font">Contact us</div>
+                <div class="contact-form__title heading-font base-title">
+                  Contact us
+                </div>
                 <p class="base-text">
                   Sed ut perspiciatis, unde omnis iste natus error sit
                   voluptatem accusantium doloremque laudantium, totam rem
                   aperiam eaque ipsa, quae ab illo inventore veritatis...
                 </p>
-                <form class="form" id="form">
-                  <div class="form-group">
-                    <input
-                      data-required
-                      type="text"
-                      name="name"
-                      class="form-input"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input
-                      data-required
-                      type="text"
-                      name="email"
-                      class="form-input email"
-                      placeholder="Your E-mail"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <textarea
-                      name=""
-                      id=""
-                      data-autoheight-min="194"
-                      data-autoheight-max="194"
-                      data-autoheight
-                    ></textarea>
-                  </div>
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-yellow">Send</button>
-                  </div>
-                </form>
+                <div class="form-wrapper">
+                  <form class="form" id="form">
+                    <div class="form-group">
+                      <input
+                        data-required
+                        type="text"
+                        name="name"
+                        class="form-input"
+                        placeholder="Your name"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        data-required
+                        type="text"
+                        name="email"
+                        class="form-input email"
+                        placeholder="Your E-mail"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <textarea
+                        name="text"
+                        id="textarea"
+                        data-autoheight-min="194"
+                        data-autoheight-max="194"
+                        data-autoheight
+                        class="form-input form-textarea"
+                        placeholder="Your message"
+                      ></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-yellow">Send</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
