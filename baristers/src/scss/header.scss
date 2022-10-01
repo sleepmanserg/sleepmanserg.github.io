@@ -162,6 +162,9 @@
   .header-burger {
     position: relative;
     padding-left: 23px;
+    @media (min-width: 1025px) {
+      display: none;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -198,7 +201,7 @@
 
 .header-languages {
   margin-left: auto;
-  margin-right: 90px;
+  // margin-right: 90px;
   .header-languages__list {
     display: flex;
     align-items: center;

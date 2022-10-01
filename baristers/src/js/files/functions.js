@@ -671,3 +671,93 @@ export function animateOnScroll() {
 }
 
 //================================================================================================================================================================================================================================================================================================================
+
+export function materialInputs() {
+	const inputList = document.querySelectorAll(".input-field");
+
+	inputList.forEach(function (elem) {
+		const label = elem.nextElementSibling;
+
+		elem.addEventListener('keydown', (e) => {
+			if (elem.classList.contains('validate')) {
+				if (elem.checkValidity()) {
+					elem.classList.add('valid');
+					label.classList.add('valid');
+					elem.classList.remove('invalid');
+					label.classList.remove('invalid');
+				} else {
+					elem.classList.add('invalid');
+					label.classList.add('invalid');
+					elem.classList.remove('valid');
+					label.classList.remove('valid');
+				}
+
+				if (elem.value === "") {
+					elem.classList.remove('valid');
+					label.classList.remove('valid');
+					elem.classList.remove('invalid');
+					label.classList.remove('invalid');
+				}
+			}
+
+		});
+
+
+		elem.addEventListener('focus', (e) => {
+			label.classList.add('active');
+
+			if (elem.classList.contains('validate')) {
+				if (elem.value !== null) {
+					if (elem.checkValidity()) {
+						elem.classList.add('valid');
+						label.classList.add('valid');
+					} else {
+						elem.classList.remove('valid');
+						elem.classList.add('invalid');
+					}
+				}
+
+				if (elem.value === "") {
+					elem.classList.remove('valid');
+					elem.classList.remove('invalid');
+				}
+			}
+
+		});
+
+		elem.addEventListener('blur', (e) => {
+			if (elem.value === "") {
+				label.classList.remove('active');
+				label.classList.remove('valid');
+				label.classList.remove('invalid');
+			}
+			if (elem.classList.contains('validate')) {
+
+				if (elem.value !== null) {
+					elem.classList.remove('valid');
+					elem.classList.remove('invalid');
+				}
+			}
+
+
+		});
+	});
+}
+
+export function topArrrow() {
+	const toTopArrow = document.querySelector('.footer-top-btn');
+	const breakpoint = 1000
+	if (window.scrollY >= breakpoint) {
+		toTopArrow.classList.add('_active')
+	} else {
+		toTopArrow.classList.remove('_active')
+	}
+	const goToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+	};
+	toTopArrow.addEventListener('click', goToTop);
+}
+window.addEventListener('scroll', topArrrow)

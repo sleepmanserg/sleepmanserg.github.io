@@ -1,6 +1,14 @@
 .team {
   padding-top: 96px;
   padding-bottom: 82px;
+  @media (max-width: 1024px) {
+    padding-top: 75px;
+    padding-bottom: 68px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
   .section-title {
     margin-bottom: 28px;
   }
@@ -15,11 +23,18 @@
   }
   .team-all-btn {
     flex: 0 0 260px;
+    @media (max-width: 1024px) {
+      display: flex;
+      justify-content: center;
+    }
   }
   .section-text {
     font-size: 18px;
     line-height: 150%;
     color: #111111;
+    @media (max-width: 768px) {
+      text-align: center;
+    }
   }
   .team-row {
     display: flex;

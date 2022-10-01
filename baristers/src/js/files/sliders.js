@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination, EffectFade } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectFade, Autoplay } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -33,7 +33,12 @@ function initSliders() {
 		const servicesSlider = new Swiper('.services-slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, EffectFade],
+			modules: [Navigation, EffectFade, Autoplay],
+			// autoplay: {
+			// 	delay: 2500,
+			// 	disableOnInteraction: false,
+			// 	pauseOnMouseEnter: true
+			// },
 			effect: "fade",
 			observer: true,
 			observeParents: true,
@@ -81,6 +86,101 @@ function initSliders() {
 				servicesSlider.slideTo(item.dataset.slide);
 			});
 		});
+
+		//! Product slider
+
+		const productSlider = new Swiper('.products-slider', {
+			modules: [Navigation, Pagination, Autoplay],
+			// autoplay: {
+			// 	delay: 2500,
+			// 	disableOnInteraction: false,
+			// 	pauseOnMouseEnter: true
+			// },
+			slidesPerView: 'auto',
+			spaceBetween: 100,
+			pagination: {
+				el: ".swiper-pagination",
+				type: "progressbar",
+			},
+			breakpoints: {
+				320: {
+					spaceBetween: 50,
+				},
+				992: {
+					spaceBetween: 100,
+				},
+			},
+		});
+
+		//! News slider
+
+		const newsSlider = new Swiper('.news-slider', {
+			modules: [Navigation, Pagination, Autoplay],
+			// autoplay: {
+			// 	delay: 2500,
+			// 	disableOnInteraction: false,
+			// 	pauseOnMouseEnter: true
+			// },
+			slidesPerView: 2.4,
+			pagination: {
+				el: ".swiper-pagination",
+				type: "progressbar",
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					autoHeight: true
+				},
+				480: {
+					slidesPerView: 1.1,
+					autoHeight: false
+				},
+				575: {
+					slidesPerView: 1.5,
+				},
+				575: {
+					slidesPerView: 1.8,
+				},
+				1024: {
+					slidesPerView: 2.1,
+				},
+				1280: {
+					slidesPerView: 2.4,
+				},
+				1600: {
+					slidesPerView: 3.2,
+				},
+				1921: {
+					slidesPerView: 3.8,
+				},
+
+			},
+		});
+
+		// if (!!window.IntersectionObserver) {
+		// 	let observer = new IntersectionObserver(
+		// 		(entries, observer) => {
+		// 			entries.forEach((entry) => {
+		// 				if (entry.isIntersecting) {
+		// 					console.log(entry);
+		// 					servicesSlider.autoplay.start()
+		// 					newsSlider.autoplay.start()
+		// 					productSlider.autoplay.start()
+		// 					// You can remove the observer if you do not need it
+		// 					observer.unobserve(entry.target);
+		// 				}
+		// 			});
+		// 		},
+		// 		{ rootMargin: "0px 0px -200px 0px" }
+		// 	);
+
+		// 	// Add the observer to you swiper
+		// 	observer.observe(document.querySelector('.services-slider'));
+		// 	observer.observe(document.querySelector('.products-slider'));
+		// 	observer.observe(document.querySelector('.news-slider'));
+		// } else {
+		// 	// servicesSlider.autoplay.start();
+		// }
 
 		// breakpoint where swiper will be destroyed
 		// and switches to a dual-column layout
