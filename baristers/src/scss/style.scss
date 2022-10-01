@@ -71,6 +71,7 @@ $responsiveType: 1;
 
 body {
   // Скролл заблокирован
+  overflow: hidden;
   .lock & {
     overflow: hidden;
     touch-action: none;
@@ -78,13 +79,17 @@ body {
   }
   // Сайт загружен
   .loaded & {
-    // .body {
-    //   opacity: 1;
-    // }
+    .preloader {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
   }
 }
 
 .loaded {
+  body {
+    overflow: auto;
+  }
   .hero {
     .hero-caption__inner {
       opacity: 1;
@@ -223,3 +228,4 @@ body {
 @import "news";
 @import "contacts";
 @import "form";
+@import "preloader";
