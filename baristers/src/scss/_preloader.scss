@@ -10,8 +10,11 @@
   align-items: center;
   justify-content: center;
   transition: 0.5s;
+
+  // opacity: 0;
+  // visibility: hidden;
+  // pointer-events: none;
   svg {
-    // transform: scale(1.5);
     display: block;
     width: 320px;
     height: 100px;

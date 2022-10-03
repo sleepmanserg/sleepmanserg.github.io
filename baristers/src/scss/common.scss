@@ -1,5 +1,16 @@
 // Заголовки, общие БЄМ блоки и проче...
 
+@mixin headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @content;
+  }
+}
+
 .link-underline,
 a.link-underline {
   color: #fff;
@@ -21,6 +32,19 @@ a.link-underline {
     text-align: center;
     letter-spacing: 0.03em;
   }
+  &.section-title-xl {
+    font-weight: 300;
+    font-size: 96px;
+    line-height: 116.8%;
+    letter-spacing: 0.03em;
+    color: #000000;
+  }
+  &.section-title-sm {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #111111;
+  }
 }
 .section-subtitle {
   font-weight: 700;
@@ -35,8 +59,36 @@ a.link-underline {
   }
 }
 
+.section-text {
+  font-size: 16px;
+  line-height: 150%;
+  color: #111111;
+}
 .text-white {
   color: #fff;
+}
+
+.inner-hr {
+  border: 1px solid #dddddd;
+}
+
+.mt-5 {
+  margin-top: 3.5rem;
+}
+
+.pt-120 {
+  padding-top: 120px;
+}
+
+.pb-120 {
+  padding-bottom: 120px;
+}
+
+.inner-page-socials.socials {
+  top: 230px;
+  .socials-list__link {
+    color: #5c5c5c;
+  }
 }
 
 @keyframes right-in {
@@ -207,6 +259,58 @@ a.link-underline {
 
 .d-block {
   display: block;
+}
+
+.inner-page-header {
+  padding-bottom: 290px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      183.27deg,
+      rgba(25, 29, 42, 0.92) 7.67%,
+      rgba(4, 4, 4, 0) 57.1%
+    );
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      12.67deg,
+      rgba(25, 29, 42, 0.9) 10.13%,
+      rgba(4, 4, 4, 0) 76.55%
+    );
+    opacity: 0.9;
+  }
+  .inner-page-header__block {
+    position: absolute;
+    left: 0;
+    bottom: 38px;
+    padding: 0 90px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    .hero-btn {
+      margin-left: auto;
+    }
+  }
+  .section-title {
+    color: #fff;
+  }
 }
 
 /***************************************************

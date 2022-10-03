@@ -14,6 +14,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-quotes:before {
+  content: "\e909";
+}
+.icon-search:before {
+  content: "\e90a";
+}
+.icon-download:before {
+  content: "\e90b";
+}
 .icon-arrow-footer:before {
   content: "\e900";
 }

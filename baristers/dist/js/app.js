@@ -3053,7 +3053,7 @@
             window.addEventListener("load", (function() {
                 setTimeout((function() {
                     document.documentElement.classList.add("loaded");
-                }), 3600);
+                }), 3500);
             }));
         }
         function functions_getHash() {
@@ -3129,6 +3129,9 @@
                 }), duration);
             }
         };
+        let _slideToggle = (target, duration = 500) => {
+            if (target.hidden) return _slideDown(target, duration); else return _slideUp(target, duration);
+        };
         let bodyLockStatus = true;
         let bodyLockToggle = (delay = 500) => {
             if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
@@ -3167,6 +3170,86 @@
                 }), delay);
             }
         };
+        function spollers() {
+            const spollersArray = document.querySelectorAll("[data-spollers]");
+            if (spollersArray.length > 0) {
+                const spollersRegular = Array.from(spollersArray).filter((function(item, index, self) {
+                    return !item.dataset.spollers.split(",")[0];
+                }));
+                if (spollersRegular.length) initSpollers(spollersRegular);
+                let mdQueriesArray = dataMediaQueries(spollersArray, "spollers");
+                if (mdQueriesArray && mdQueriesArray.length) mdQueriesArray.forEach((mdQueriesItem => {
+                    mdQueriesItem.matchMedia.addEventListener("change", (function() {
+                        initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+                    }));
+                    initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+                }));
+                function initSpollers(spollersArray, matchMedia = false) {
+                    spollersArray.forEach((spollersBlock => {
+                        spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
+                        if (matchMedia.matches || !matchMedia) {
+                            spollersBlock.classList.add("_spoller-init");
+                            initSpollerBody(spollersBlock);
+                            spollersBlock.addEventListener("click", setSpollerAction);
+                        } else {
+                            spollersBlock.classList.remove("_spoller-init");
+                            initSpollerBody(spollersBlock, false);
+                            spollersBlock.removeEventListener("click", setSpollerAction);
+                        }
+                    }));
+                }
+                function initSpollerBody(spollersBlock, hideSpollerBody = true) {
+                    let spollerTitles = spollersBlock.querySelectorAll("[data-spoller]");
+                    if (spollerTitles.length) {
+                        spollerTitles = Array.from(spollerTitles).filter((item => item.closest("[data-spollers]") === spollersBlock));
+                        spollerTitles.forEach((spollerTitle => {
+                            if (hideSpollerBody) {
+                                spollerTitle.removeAttribute("tabindex");
+                                if (!spollerTitle.classList.contains("_spoller-active")) spollerTitle.nextElementSibling.hidden = true;
+                            } else {
+                                spollerTitle.setAttribute("tabindex", "-1");
+                                spollerTitle.nextElementSibling.hidden = false;
+                            }
+                        }));
+                    }
+                }
+                function setSpollerAction(e) {
+                    const el = e.target;
+                    if (el.closest("[data-spoller]")) {
+                        const spollerTitle = el.closest("[data-spoller]");
+                        const spollersBlock = spollerTitle.closest("[data-spollers]");
+                        const oneSpoller = spollersBlock.hasAttribute("data-one-spoller");
+                        const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
+                        if (!spollersBlock.querySelectorAll("._slide").length) {
+                            if (oneSpoller && !spollerTitle.classList.contains("_spoller-active")) hideSpollersBody(spollersBlock);
+                            spollerTitle.classList.toggle("_spoller-active");
+                            _slideToggle(spollerTitle.nextElementSibling, spollerSpeed);
+                        }
+                        e.preventDefault();
+                    }
+                }
+                function hideSpollersBody(spollersBlock) {
+                    const spollerActiveTitle = spollersBlock.querySelector("[data-spoller]._spoller-active");
+                    const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
+                    if (spollerActiveTitle && !spollersBlock.querySelectorAll("._slide").length) {
+                        spollerActiveTitle.classList.remove("_spoller-active");
+                        _slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed);
+                    }
+                }
+                const spollersClose = document.querySelectorAll("[data-spoller-close]");
+                if (spollersClose.length) document.addEventListener("click", (function(e) {
+                    const el = e.target;
+                    if (!el.closest("[data-spollers]")) spollersClose.forEach((spollerClose => {
+                        const spollersBlock = spollerClose.closest("[data-spollers]");
+                        if (spollersBlock.classList.contains("_spoller-init")) {
+                            const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
+                            spollerClose.classList.remove("_spoller-active");
+                            _slideUp(spollerClose.nextElementSibling, spollerSpeed);
+                        }
+                    }));
+                }));
+            }
+        }
         function tabs() {
             const tabs = document.querySelectorAll("[data-tabs]");
             let tabsActiveHash = [];
@@ -7259,6 +7342,19 @@
                         }
                     }
                 });
+                //! News article slider
+                                new core(".news-article__slider", {
+                    modules: [ Navigation, Pagination, Autoplay ],
+                    slidesPerView: 1,
+                    navigation: {
+                        prevEl: ".slider-btn-prev",
+                        nextEl: ".slider-btn-next"
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        type: "fraction"
+                    }
+                });
                 const breakpoint = window.matchMedia("(min-width:992px)");
                 let achievementSlider;
                 const breakpointChecker = function() {
@@ -7406,6 +7502,56 @@
                 scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
             }));
         }
+        function stickyBlock() {
+            addWindowScrollEvent = true;
+            function stickyBlockInit() {
+                const stickyParents = document.querySelectorAll("[data-sticky]");
+                if (stickyParents.length) stickyParents.forEach((stickyParent => {
+                    let stickyConfig = {
+                        media: stickyParent.dataset.sticky ? parseInt(stickyParent.dataset.sticky) : null,
+                        top: stickyParent.dataset.stickyTop ? parseInt(stickyParent.dataset.stickyTop) : 0,
+                        bottom: stickyParent.dataset.stickyBottom ? parseInt(stickyParent.dataset.stickyBottom) : 0,
+                        header: stickyParent.hasAttribute("data-sticky-header") ? document.querySelector("header.header").offsetHeight : 0
+                    };
+                    stickyBlockItem(stickyParent, stickyConfig);
+                }));
+            }
+            function stickyBlockItem(stickyParent, stickyConfig) {
+                const stickyBlockItem = stickyParent.querySelector("[data-sticky-item]");
+                const headerHeight = stickyConfig.header;
+                const offsetTop = headerHeight + stickyConfig.top;
+                const startPoint = stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop;
+                document.addEventListener("windowScroll", stickyBlockActions);
+                function stickyBlockActions(e) {
+                    const endPoint = stickyParent.offsetHeight + stickyParent.getBoundingClientRect().top + scrollY - (offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom);
+                    let stickyItemValues = {
+                        position: "relative",
+                        bottom: "auto",
+                        top: "0px",
+                        left: "0px",
+                        width: "auto"
+                    };
+                    if (!stickyConfig.media || stickyConfig.media < window.innerWidth) if (offsetTop + stickyConfig.bottom + stickyBlockItem.offsetHeight < window.innerHeight) if (scrollY >= startPoint && scrollY <= endPoint) {
+                        stickyItemValues.position = `fixed`;
+                        stickyItemValues.bottom = `auto`;
+                        stickyItemValues.top = `${offsetTop}px`;
+                        stickyItemValues.left = `${stickyBlockItem.getBoundingClientRect().left}px`;
+                        stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
+                    } else if (scrollY >= endPoint) {
+                        stickyItemValues.position = `absolute`;
+                        stickyItemValues.bottom = `${stickyConfig.bottom}px`;
+                        stickyItemValues.top = `auto`;
+                        stickyItemValues.left = `0px`;
+                        stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
+                    }
+                    stickyBlockType(stickyBlockItem, stickyItemValues);
+                }
+            }
+            function stickyBlockType(stickyBlockItem, stickyItemValues) {
+                stickyBlockItem.style.cssText = `position:${stickyItemValues.position};bottom:${stickyItemValues.bottom};top:${stickyItemValues.top};left:${stickyItemValues.left};width:${stickyItemValues.width};`;
+            }
+            stickyBlockInit();
+        }
         setTimeout((() => {
             if (addWindowScrollEvent) {
                 let windowScroll = new Event("windowScroll");
@@ -7502,6 +7648,7 @@
         isWebp();
         addLoadedClass();
         menuInit();
+        spollers();
         tabs();
         formFieldsInit({
             viewPass: false,
@@ -7509,6 +7656,7 @@
         });
         materialInputs();
         headerScroll();
+        stickyBlock();
         animateOnScroll();
         topArrrow();
     })();

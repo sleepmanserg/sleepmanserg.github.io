@@ -157,6 +157,26 @@ function initSliders() {
 			},
 		});
 
+		//! News article slider
+
+		const newsArticleSlider = new Swiper('.news-article__slider', {
+			modules: [Navigation, Pagination, Autoplay],
+			// autoplay: {
+			// 	delay: 2500,
+			// 	disableOnInteraction: false,
+			// 	pauseOnMouseEnter: true
+			// },
+			slidesPerView: 1,
+			navigation: {
+				prevEl: '.slider-btn-prev',
+				nextEl: '.slider-btn-next',
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				type: "fraction",
+			},
+		});
+
 		// if (!!window.IntersectionObserver) {
 		// 	let observer = new IntersectionObserver(
 		// 		(entries, observer) => {
