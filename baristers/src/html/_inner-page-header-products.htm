@@ -1,0 +1,177 @@
+<div
+  class="inner-page-header"
+  style="background-image: url('@img/inner-page-header05.webp')"
+>
+  <div class="inner-page-header__block">
+    <h2 class="section-title">Наша продукція</h2>
+    <div class="cart-actions">
+      <div class="cart-actions__item">
+        <a href="#" class="cart-action cart-like">
+          <i class="icon-heart"></i>
+          <span>0</span>
+        </a>
+      </div>
+      <div class="cart-actions__item">
+        <a href="#" class="cart-action cart-cart" data-popup="#popup-cart">
+          <i class="icon-cart"></i>
+          <span>0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="popup-cart" aria-hidden="true" class="popup popup-cart">
+  <form class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup-cart__order">
+        <div class="popup-cart__order-header">
+          <div class="popup-cart__title">ВАШЕ ЗАМОВЛЕННЯ</div>
+          <div class="popup-cart__order-header-icon">
+            <i class="icon-cart"></i>
+            <span>2</span>
+          </div>
+          <div class="popup-cart__subtitle">Список вашого замовлення</div>
+        </div>
+        <ul class="popup-cart__order-body">
+          <li class="popup-cart__order-item">
+            <div class="popup-cart__order-image">
+              <img src="@img/books/01.webp" alt="Product name" />
+            </div>
+            <div class="popup-cart__order-name">
+              Тактичні питання захисту в кримінальному провадженні
+            </div>
+            <div class="popup-cart__order-counter">
+              <input
+                type="button"
+                value="-"
+                data-for="quantity1"
+                class="count-minus count-btn"
+              />
+              <input
+                type="number"
+                id="quantity1"
+                value="1"
+                min="1"
+                class="cart-counter__input"
+              />
+              <input
+                type="button"
+                value="+"
+                data-for="quantity1"
+                class="count-plus count-btn"
+              />
+            </div>
+            <div class="popup-cart__order-price">24 999 грн</div>
+            <a href="#" class="popup-cart__order-remove">
+              <i class="icon-close"></i>
+            </a>
+          </li>
+          <li class="popup-cart__order-item">
+            <div class="popup-cart__order-image">
+              <img src="@img/books/01.webp" alt="Product name" />
+            </div>
+            <div class="popup-cart__order-name">
+              Тактичні питання захисту в кримінальному провадженні
+            </div>
+            <div class="popup-cart__order-counter">
+              <input
+                type="button"
+                value="-"
+                data-for="quantity2"
+                class="count-minus count-btn"
+              />
+              <input
+                type="number"
+                id="quantity2"
+                value="1"
+                min="1"
+                class="cart-counter__input"
+              />
+              <input
+                type="button"
+                value="+"
+                data-for="quantity2"
+                class="count-plus count-btn"
+              />
+            </div>
+            <div class="popup-cart__order-price">24 999 грн</div>
+            <a href="#" class="popup-cart__order-remove">
+              <i class="icon-close"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="popup-cart__order-footer">
+          <span>Разом:</span>
+          <div class="popup-cart__order-fullprice">25 999 грн</div>
+        </div>
+      </div>
+      <div class="popup-cart__form">
+        <div class="popup-cart__form-header">
+          <div class="popup-cart__title">Данні для доставки</div>
+          <button data-close type="button" class="popup__close">
+            <i class="icon-close"></i>
+          </button>
+        </div>
+        <div class="cart-form">
+          <div class="form-group">
+            <input
+              autocomplete="off"
+              name="name"
+              id="name"
+              aria-label="Ваше ім’я"
+              type="text"
+              required=""
+              class="input input-field"
+            />
+            <label for="name" class="form-label">Ваше ім’я</label>
+          </div>
+          <div class="form-group">
+            <input
+              autocomplete="off"
+              name="phone"
+              id="form-phone"
+              aria-label="Телефон"
+              type="text"
+              required=""
+              class="input input-field phone-input"
+              data-inputmask="'mask': '+38-999-999-99-99'"
+              inputmode="text"
+              placeholder="+38-___-___-__-__"
+            />
+            <label for="form-phone" class="form-label">Телефон</label>
+          </div>
+          <div class="form-group">
+            <input
+              autocomplete="off"
+              name="email"
+              id="email"
+              aria-label="Email"
+              type="email"
+              required=""
+              class="input input-field"
+            />
+            <label for="name" class="form-label">Email</label>
+          </div>
+          <div class="cart-form__type">Тип доставки:</div>
+          <div class="form-group">
+            <textarea
+              data-autoheight=""
+              data-autoheight-min="65"
+              data-autoheight-max="100"
+              name=""
+              id=""
+              class="input textarea-input input-field"
+              style="height: 65px"
+            ></textarea>
+            <label class="form-label" for="form-txt"
+              >Повідомлення або коментар
+            </label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-black">Відправити</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('html/_head.htm',{ "title":"Baristers - 404" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="error-page">
+          <div class="error__container">
+            <div class="error-page__caption">
+              <div class="error-page__number">404</div>
+              <div class="error-page__text">
+                Нажаль такої сторінки вже немає, але є болгато нових та
+                актуальних
+              </div>
+              <a href="/" class="d-block error-page__link">
+                Перейти на
+                <span>головну сторінку</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer-404.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

@@ -29,7 +29,7 @@ export function addLoadedClass() {
 	window.addEventListener("load", function () {
 		setTimeout(function () {
 			document.documentElement.classList.add('loaded');
-		}, 3500);
+		}, 2200);
 	});
 }
 // Получение хеша в адресе сайта
@@ -761,3 +761,19 @@ export function topArrrow() {
 	toTopArrow.addEventListener('click', goToTop);
 }
 window.addEventListener('scroll', topArrrow)
+
+/** Change count input */
+
+document.addEventListener("click", handle);
+
+function handle(evt) {
+	if (evt.target.matches('.count-btn')) {
+		return handleBtn(evt.target);
+	}
+}
+
+function handleBtn(btn) {
+	const elem = document.querySelector(`#${btn.dataset.for}`);
+	const nwValue = +elem.value + (btn.value === "-" ? -1 : 1);
+	elem.value = nwValue >= +elem.min ? nwValue : elem.min;
+}

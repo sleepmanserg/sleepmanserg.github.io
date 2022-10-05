@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-	<title>Baristers - Команда</title>
+	<title>Baristers - Наша продукція</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -134,281 +134,227 @@
 		</header>
 
 		<main class="page">
-			<div class="inner-page-header" style="background-image: url('img/inner-page-header03.webp')">
-				<div class="inner-page-header__block">
-					<h2 class="section-title">Команда</h2>
-					<a href="#" class="btn hero-btn">
-						<span>Звернутися</span>
-					</a>
+			<div class="cart">
+				<div class="inner-page-header" style="background-image: url('img/inner-page-header05.webp')">
+					<div class="inner-page-header__block">
+						<h2 class="section-title">Наша продукція</h2>
+						<div class="cart-actions">
+							<div class="cart-actions__item">
+								<a href="#" class="cart-action cart-like">
+									<i class="icon-heart"></i>
+									<span>0</span>
+								</a>
+							</div>
+							<div class="cart-actions__item">
+								<a href="#" class="cart-action cart-cart" data-popup="#popup-cart">
+									<i class="icon-cart"></i>
+									<span>0</span>
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
+				<div id="popup-cart" aria-hidden="true" class="popup popup-cart">
+					<form class="popup__wrapper">
+						<div class="popup__content">
+							<div class="popup-cart__order">
+								<div class="popup-cart__order-header">
+									<div class="popup-cart__title">ВАШЕ ЗАМОВЛЕННЯ</div>
+									<div class="popup-cart__order-header-icon">
+										<i class="icon-cart"></i>
+										<span>2</span>
+									</div>
+									<div class="popup-cart__subtitle">Список вашого замовлення</div>
+								</div>
+								<ul class="popup-cart__order-body">
+									<li class="popup-cart__order-item">
+										<div class="popup-cart__order-image">
+											<picture><source srcset="img/books/01.webp" type="image/webp"><img src="img/books/01.webp" alt="Product name" /></picture>
+										</div>
+										<div class="popup-cart__order-name">
+											Тактичні питання захисту в кримінальному провадженні
+										</div>
+										<div class="popup-cart__order-counter">
+											<input type="button" value="-" data-for="quantity1" class="count-minus count-btn" />
+											<input type="number" id="quantity1" value="1" min="1" class="cart-counter__input" />
+											<input type="button" value="+" data-for="quantity1" class="count-plus count-btn" />
+										</div>
+										<div class="popup-cart__order-price">24 999 грн</div>
+										<a href="#" class="popup-cart__order-remove">
+											<i class="icon-close"></i>
+										</a>
+									</li>
+									<li class="popup-cart__order-item">
+										<div class="popup-cart__order-image">
+											<picture><source srcset="img/books/01.webp" type="image/webp"><img src="img/books/01.webp" alt="Product name" /></picture>
+										</div>
+										<div class="popup-cart__order-name">
+											Тактичні питання захисту в кримінальному провадженні
+										</div>
+										<div class="popup-cart__order-counter">
+											<input type="button" value="-" data-for="quantity2" class="count-minus count-btn" />
+											<input type="number" id="quantity2" value="1" min="1" class="cart-counter__input" />
+											<input type="button" value="+" data-for="quantity2" class="count-plus count-btn" />
+										</div>
+										<div class="popup-cart__order-price">24 999 грн</div>
+										<a href="#" class="popup-cart__order-remove">
+											<i class="icon-close"></i>
+										</a>
+									</li>
+								</ul>
+								<div class="popup-cart__order-footer">
+									<span>Разом:</span>
+									<div class="popup-cart__order-fullprice">25 999 грн</div>
+								</div>
+							</div>
+							<div class="popup-cart__form">
+								<div class="popup-cart__form-header">
+									<div class="popup-cart__title">Данні для доставки</div>
+									<button data-close type="button" class="popup__close">
+										<i class="icon-close"></i>
+									</button>
+								</div>
+								<div class="cart-form">
+									<div class="form-group">
+										<input autocomplete="off" name="name" id="name" aria-label="Ваше ім’я" type="text" required="" class="input input-field" />
+										<label for="name" class="form-label">Ваше ім’я</label>
+									</div>
+									<div class="form-group">
+										<input autocomplete="off" name="phone" id="form-phone" aria-label="Телефон" type="text" required="" class="input input-field phone-input" data-inputmask="'mask': '+38-999-999-99-99'" inputmode="text" placeholder="+38-___-___-__-__" />
+										<label for="form-phone" class="form-label">Телефон</label>
+									</div>
+									<div class="form-group">
+										<input autocomplete="off" name="email" id="email" aria-label="Email" type="email" required="" class="input input-field" />
+										<label for="name" class="form-label">Email</label>
+									</div>
+									<div class="cart-form__type">Тип доставки:</div>
+									<div class="form-group">
+										<textarea data-autoheight="" data-autoheight-min="65" data-autoheight-max="100" name="" id="" class="input textarea-input input-field" style="height: 65px"></textarea>
+										<label class="form-label" for="form-txt">Повідомлення або коментар
+										</label>
+									</div>
+									<div class="form-group">
+										<button type="submit" class="btn btn-black">Відправити</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
 
-			<section class="team-inner">
-				<div class="__container">
-					<ul class="team-inner__list">
-						<li class="team-inner__list-item">
-							International Bar Association
-						</li>
-						<li class="team-inner__list-item">
-							European Criminal Bar Association
-						</li>
-						<li class="team-inner__list-item">
-							European Fraud and Compliance Lawyers
-						</li>
-					</ul>
-					<p class="section-text">
-						Команда Barristers налічує понад 55 осіб, серед яких
-						конкурентоспроможні юристи у сфері кримінального процесу з
-						досвідом захисту політиків, високопосадовців та бізнесменів, а
-						також колектив фахівців: юристів, адвокатів, експертів, аудиторів,
-						корпоративних секретарів та бухгалтерів, чий досвід забезпечує
-						максимальну підтримку клієнтів під час ведення господарської
-						діяльності.
-					</p>
-					<div class="team-inner__wrapper">
-						<div class="team-inner__header">
-							Адвокати
-							<hr class="inner-hr" />
-						</div>
-						<div class="team-row">
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/01.webp" type="image/webp"><img src="img/team/01.png" alt="Пономаренко Деніс" /></picture>
+				<section class="products">
+					<div class="__container">
+						<h1 class="section-title section-title-xl section-title-underline">
+							<span class="d-block">Спеціалізована</span>
+							<span class="d-block">література</span>
+							<span class="d-block">від фахівців</span>
+						</h1>
+						<div class="products-tiles-wrapper">
+							<div class="products-tiles">
+								<div class="product-tile products-item">
+									<a href="product-item.html" class="product-tile__header">
+										<picture><source srcset="img/books/01.webp" type="image/webp"><img src="img/books/01.webp" alt="Тактичні питання захисту в кримінальному провадженні" /></picture>
+									</a>
+									<a href="product-item.html" class="product-tile__body d-block products-item__title text-overflow">
+										<span>Тактичні питання захисту в кримінальному
+											провадженні</span>
+									</a>
+									<div class="product-tile__footer products-item__footer">
+										<div class="products-item__price">550 грн</div>
+										<a href="#" class="products-item__buy">Купити</a>
 									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
+								</div>
+								<div class="product-tile products-item">
+									<a href="product-item.html" class="product-tile__header">
+										<picture><source srcset="img/books/02.webp" type="image/webp"><img src="img/books/02.webp" alt="Тактичні питання захисту в кримінальному провадженні" /></picture>
+									</a>
+									<a href="product-item.html" class="product-tile__body d-block products-item__title text-overflow">
+										<span>Тактичні питання захисту в кримінальному
+											провадженні</span>
+									</a>
+									<div class="product-tile__footer products-item__footer">
+										<div class="products-item__price">550 грн</div>
+										<a href="#" class="products-item__buy">Купити</a>
 									</div>
-								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/02.webp" type="image/webp"><img src="img/team/02.png" alt="Пономаренко Деніс" /></picture>
+								</div>
+								<div class="product-tile products-item">
+									<a href="product-item.html" class="product-tile__header">
+										<picture><source srcset="img/books/03.webp" type="image/webp"><img src="img/books/03.webp" alt="Тактичні питання захисту в кримінальному провадженні" /></picture>
+									</a>
+									<a href="product-item.html" class="product-tile__body d-block products-item__title text-overflow">
+										<span>Тактичні питання захисту в кримінальному
+											провадженні</span>
+									</a>
+									<div class="product-tile__footer products-item__footer">
+										<div class="products-item__price">550 грн</div>
+										<a href="#" class="products-item__buy">Купити</a>
 									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
+								</div>
+								<div class="product-tile products-item">
+									<a href="product-item.html" class="product-tile__header">
+										<picture><source srcset="img/books/03.webp" type="image/webp"><img src="img/books/03.webp" alt="Тактичні питання захисту в кримінальному провадженні" /></picture>
+									</a>
+									<a href="product-item.html" class="product-tile__body d-block products-item__title text-overflow">
+										<span>Тактичні питання захисту в кримінальному
+											провадженні</span>
+									</a>
+									<div class="product-tile__footer products-item__footer">
+										<div class="products-item__price">550 грн</div>
+										<a href="#" class="products-item__buy">Купити</a>
 									</div>
-								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/03.webp" type="image/webp"><img src="img/team/03.png" alt="Пономаренко Деніс" /></picture>
+								</div>
+								<div class="product-tile products-item">
+									<a href="product-item.html" class="product-tile__header">
+										<picture><source srcset="img/books/03.webp" type="image/webp"><img src="img/books/03.webp" alt="Тактичні питання захисту в кримінальному провадженні" /></picture>
+									</a>
+									<a href="product-item.html" class="product-tile__body d-block products-item__title text-overflow">
+										<span>Тактичні питання захисту в кримінальному
+											провадженні</span>
+									</a>
+									<div class="product-tile__footer products-item__footer">
+										<div class="products-item__price">550 грн</div>
+										<a href="#" class="products-item__buy">Купити</a>
 									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
-								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/04.webp" type="image/webp"><img src="img/team/04.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
-								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/05.webp" type="image/webp"><img src="img/team/05.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
-								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/01.webp" type="image/webp"><img src="img/team/01.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
-								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/01.webp" type="image/webp"><img src="img/team/01.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
-								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/02.webp" type="image/webp"><img src="img/team/02.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
-								</a>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="team-inner__wrapper">
-						<div class="team-inner__header">
-							Помічники адвокатів
-							<hr class="inner-hr" />
-						</div>
-						<div class="team-row">
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/01.webp" type="image/webp"><img src="img/team/01.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
+					<div class="socials socials-absolute inner-page-socials">
+						<ul class="socials-list">
+							<li class="socials-list__item">
+								<a href="#" class="socials-list__link">
+									<i class="icon-telegram"></i>
 								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/02.webp" type="image/webp"><img src="img/team/02.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
+							</li>
+							<li class="socials-list__item">
+								<a href="#" class="socials-list__link">
+									<i class="icon-youtube"></i>
 								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/03.webp" type="image/webp"><img src="img/team/03.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
+							</li>
+							<li class="socials-list__item">
+								<a href="#" class="socials-list__link">
+									<i class="icon-facebook"></i>
 								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/04.webp" type="image/webp"><img src="img/team/04.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
+							</li>
+							<li class="socials-list__item">
+								<a href="#" class="socials-list__link">
+									<i class="icon-instagram"></i>
 								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/05.webp" type="image/webp"><img src="img/team/05.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
+							</li>
+							<li class="socials-list__item">
+								<a href="#" class="socials-list__link">
+									<i class="icon-w"></i>
 								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/01.webp" type="image/webp"><img src="img/team/01.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
+							</li>
+							<li class="socials-list__item">
+								<a href="#" class="socials-list__link">
+									<i class="icon-git"></i>
 								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/01.webp" type="image/webp"><img src="img/team/01.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
-								</a>
-							</div>
-							<div class="team-col">
-								<a href="team-single.html" class="team-card">
-									<div class="team-card__header">
-										<picture><source srcset="img/team/02.webp" type="image/webp"><img src="img/team/02.png" alt="Пономаренко Деніс" /></picture>
-									</div>
-									<div class="team-card__body">
-										<div class="team-card__name">Пономаренко Деніс</div>
-										<div class="team-card__status">партнер</div>
-										<div class="team-card__city">Одеса</div>
-									</div>
-								</a>
-							</div>
-						</div>
+							</li>
+						</ul>
 					</div>
-				</div>
-				<div class="socials socials-absolute inner-page-socials">
-					<ul class="socials-list">
-						<li class="socials-list__item">
-							<a href="#" class="socials-list__link">
-								<i class="icon-telegram"></i>
-							</a>
-						</li>
-						<li class="socials-list__item">
-							<a href="#" class="socials-list__link">
-								<i class="icon-youtube"></i>
-							</a>
-						</li>
-						<li class="socials-list__item">
-							<a href="#" class="socials-list__link">
-								<i class="icon-facebook"></i>
-							</a>
-						</li>
-						<li class="socials-list__item">
-							<a href="#" class="socials-list__link">
-								<i class="icon-instagram"></i>
-							</a>
-						</li>
-						<li class="socials-list__item">
-							<a href="#" class="socials-list__link">
-								<i class="icon-w"></i>
-							</a>
-						</li>
-						<li class="socials-list__item">
-							<a href="#" class="socials-list__link">
-								<i class="icon-git"></i>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</section>
+				</section>
+			</div>
 		</main>
 		<section class="contacts">
 			<div class="contacts-form">

@@ -68,6 +68,16 @@ $responsiveType: 1;
 @import "base/null";
 
 // Стили тега BODY ============================================================================================================================================================================================================================================================================================================================================================================================
+html.lock {
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
+  body {
+    overflow: hidden;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
+}
 
 body {
   // Скролл заблокирован
@@ -120,7 +130,6 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   position: relative;
   // Прижимаем footer
   > main {
@@ -206,6 +215,7 @@ body {
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
 @import "base/forms/input";
+@import "base/popup";
 
 // Подключение стилей общих элементов проекта
 @import "common";
@@ -233,3 +243,5 @@ body {
 @import "about-us";
 @import "inner-services";
 @import "news-page";
+@import "cart";
+@import "product-single";
