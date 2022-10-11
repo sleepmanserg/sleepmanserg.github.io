@@ -4412,6 +4412,61 @@ a.link-underline {
   padding-left: 44px;
 }
 
+.contacts-cities__col .tabs__navigation {
+  -webkit-column-gap: 57px;
+     -moz-column-gap: 57px;
+          column-gap: 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 20px;
+  margin-bottom: 40px;
+}
+
+.contacts-cities__col .tabs__title._tab-active .contacts-cities__header {
+  padding-left: 0;
+  color: #111;
+}
+
+.contacts-cities__col .tabs__title._tab-active .contacts-cities__header::after {
+  opacity: 1;
+}
+
+.contacts-cities__col .tabs__title._tab-active .contacts-cities__header::before {
+  opacity: 0;
+}
+
+.contacts-cities__col .tabs__title .contacts-cities__header {
+  color: #787878;
+  -webkit-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
+  margin-bottom: 0;
+}
+
+.contacts-cities__col .tabs__title .contacts-cities__header::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -17px;
+  width: 6px;
+  height: 6px;
+  background-color: #d7d7d7;
+  -webkit-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+  opacity: 1;
+}
+
+.contacts-cities__col .tabs__title .contacts-cities__header::after {
+  opacity: 0;
+  -webkit-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
 .contacts-cities__card {
   position: relative;
   z-index: 2;
@@ -6087,6 +6142,10 @@ a.link-underline {
       -ms-flex-align: center;
           align-items: center;
   height: 46px;
+}
+
+.popup-cart .popup-cart__order-counter input[type=number] {
+  pointer-events: none;
 }
 
 .popup-cart .popup-cart__order-counter .count-btn {
@@ -9201,6 +9260,10 @@ button.swiper-pagination-bullet {
             align-items: center;
   }
 
+  .contacts-cities__address {
+    margin: 0 auto 18px;
+  }
+
   .contacts-form .contacts-form__col {
     display: none;
   }
@@ -9770,6 +9833,40 @@ button.swiper-pagination-bullet {
     line-height: 19px;
   }
 
+  .contacts-cities__col .tabs {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .contacts-cities__col .tabs__navigation {
+    -webkit-column-gap: 37px;
+       -moz-column-gap: 37px;
+            column-gap: 37px;
+    margin-bottom: 20px;
+  }
+
+  .contacts-cities__col .tabs__title .contacts-cities__header {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .contacts-cities__col .tabs__title .contacts-cities__header::before {
+    top: 8px;
+  }
+
+  .contacts-cities__col .tabs__title .contacts-cities__header::after {
+    width: 55px;
+  }
+
   .contacts-form .contacts-form__wrapper {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -9863,5 +9960,11 @@ button.swiper-pagination-bullet {
 @media (any-hover: none) {
   .icon-menu {
     cursor: default;
+  }
+}
+
+@media (any-hover: hover) {
+  .contacts-cities__col .tabs__title .contacts-cities__header:hover {
+    color: #111;
   }
 }
