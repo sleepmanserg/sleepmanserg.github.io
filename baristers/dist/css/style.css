@@ -6101,6 +6101,7 @@ a.link-underline {
   cursor: pointer;
   outline: none !important;
   height: 100%;
+  color: #111;
 }
 
 .popup-cart .cart-counter__input {

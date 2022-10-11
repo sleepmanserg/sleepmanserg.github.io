@@ -271,6 +271,7 @@ export function formQuantity() {
 		}
 	});
 }
+formQuantity()
 /* Модуь звездного рейтинга */
 export function formRating() {
 	const ratings = document.querySelectorAll('.rating');

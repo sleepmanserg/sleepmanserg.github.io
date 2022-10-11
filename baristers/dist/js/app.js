@@ -3714,15 +3714,6 @@
             toTopArrow.addEventListener("click", goToTop);
         }
         window.addEventListener("scroll", topArrrow);
-        document.addEventListener("click", handle);
-        function handle(evt) {
-            if (evt.target.matches(".count-btn")) return handleBtn(evt.target);
-        }
-        function handleBtn(btn) {
-            const elem = document.querySelector(`#${btn.dataset.for}`);
-            const nwValue = +elem.value + ("-" === btn.value ? -1 : 1);
-            elem.value = nwValue >= +elem.min ? nwValue : elem.min;
-        }
         class Popup {
             constructor(options) {
                 let config = {
@@ -4196,6 +4187,26 @@
                 FLS(`[Формы]: ${message}`);
             }
         }
+        function formQuantity() {
+            document.addEventListener("click", (function(e) {
+                let targetElement = e.target;
+                if (targetElement.closest("[data-quantity-plus]") || targetElement.closest("[data-quantity-minus]")) {
+                    const valueElement = targetElement.closest("[data-quantity]").querySelector("[data-quantity-value]");
+                    let value = parseInt(valueElement.value);
+                    if (targetElement.hasAttribute("data-quantity-plus")) {
+                        value++;
+                        if (+valueElement.dataset.quantityMax && +valueElement.dataset.quantityMax < value) value = valueElement.dataset.quantityMax;
+                    } else {
+                        --value;
+                        if (+valueElement.dataset.quantityMin) {
+                            if (+valueElement.dataset.quantityMin > value) value = valueElement.dataset.quantityMin;
+                        } else if (value < 1) value = 1;
+                    }
+                    targetElement.closest("[data-quantity]").querySelector("[data-quantity-value]").value = value;
+                }
+            }));
+        }
+        formQuantity();
         class SelectConstructor {
             constructor(props, data = null) {
                 let defaultConfig = {
