@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221005205632">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221011092008">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
 							<img src="img/logo.svg" alt="Baristers" />
 						</a>
 					</div>
-					<div class="header-nav__wrapper">
+					<div class="header-nav__wrapper" data-fullscreen>
 						<nav class="header-nav">
 							<div class="header-nav__logo">
 								<a href="home.html">
@@ -47,7 +47,7 @@
 							</div>
 							<h2 class="header-nav__title">Адвокатське обʼєднання BARRISTERS</h2>
 							<ul class="header-nav__list">
-								<li class="header-nav__item active">
+								<li class="header-nav__item">
 									<a href="about-us.html" class="header-nav__link">Про нас</a>
 								</li>
 								<li class="header-nav__item">
@@ -60,7 +60,7 @@
 									<a href="products.html" class="header-nav__link">Наша продукція</a>
 								</li>
 								<li class="header-nav__item">
-									<a href="#" class="header-nav__link">Контакти</a>
+									<a href="#" class="header-nav__link" data-goto-header data-goto=".contacts" data-goto-speed="600">Контакти</a>
 								</li>
 							</ul>
 							<div class="header-nav__btn">
@@ -160,7 +160,7 @@
 							<picture><source srcset="img/about-img.webp" type="image/webp"><img src="img/about-img.webp" alt="About img" /></picture>
 						</div>
 					</div>
-					<p class="section-text mt-5 about-text">
+					<p class="section-text mt-5 about-text mw-100">
 						Наші адвокати відомі своєю участю в резонансних кримінальних справах. Наші
 						адвокати мають в своєму досьє виправдувальні вироки та судові рішення про
 						закриття кримінальних проваджень, які підтверджені Верховним Судом
@@ -218,6 +218,38 @@
 						<h3 class="achievements-title">
 							Barristers активно бере участь у діяльності бізнес-асоціацій:
 						</h3>
+						<ul class="achievements-list swiper">
+							<div class="swiper-wrapper">
+								<li class="achievements-list__item swiper-slide">
+									<picture><source srcset="img/achievements/achievement01.webp" type="image/webp"><img src="img/achievements/achievement01.webp" alt="" /></picture>
+								</li>
+								<li class="achievements-list__item swiper-slide">
+									<picture><source srcset="img/achievements/achievement02.webp" type="image/webp"><img src="img/achievements/achievement02.webp" alt="" /></picture>
+								</li>
+								<li class="achievements-list__item swiper-slide">
+									<picture><source srcset="img/achievements/achievement01.webp" type="image/webp"><img src="img/achievements/achievement01.webp" alt="" /></picture>
+								</li>
+								<li class="achievements-list__item swiper-slide">
+									<picture><source srcset="img/achievements/achievement01.webp" type="image/webp"><img src="img/achievements/achievement01.webp" alt="" /></picture>
+								</li>
+								<li class="achievements-list__item swiper-slide">
+									<picture><source srcset="img/achievements/achievement02.webp" type="image/webp"><img src="img/achievements/achievement02.webp" alt="" /></picture>
+								</li>
+								<li class="achievements-list__item swiper-slide">
+									<picture><source srcset="img/achievements/achievement01.webp" type="image/webp"><img src="img/achievements/achievement01.webp" alt="" /></picture>
+								</li>
+							</div>
+							<div class="slider-bottom-nav">
+								<div class="slider-bottom-nav-btns">
+									<button class="slider-btn slider-btn-prev swiper-button-disabled" disabled="">
+										<i class="icon-arrow-slider"></i>
+									</button>
+									<button class="slider-btn slider-btn-next">
+										<i class="icon-arrow-slider"></i>
+									</button>
+								</div>
+							</div>
+						</ul>
 					</div>
 				</div>
 			</section>
@@ -232,7 +264,7 @@
 					<div class="about-us-intro__img">
 						<picture><source srcset="img/about-img02.webp" type="image/webp"><img src="img/about-img02.webp" alt="About img" /></picture>
 					</div>
-					<p class="section-text about-text">
+					<p class="section-text about-text mw-100">
 						Окрім юридичної практики адвокати АО «Barristers» активно діляться
 						практичним досвідом з колегами, беруть участь у семінарах,
 						конференціях, тренінгах. Адвокати АО «Barristers» є авторами
@@ -521,17 +553,17 @@
 						</div>
 						<div class="contacts-form__form-col">
 							<div class="contacts-form__wrapper">
-								<form action="" class="form" id="contact-form">
+								<form action="" class="form" id="contact-form" data-dev action="" data-validate="">
 									<div class="form-group">
-										<input autocomplete="off" name="name" id="name" aria-label="Ваше ім’я" type="text" required class="input input-field" />
+										<input autocomplete="off" name="name" id="name" aria-label="Ваше ім’я" type="text" class="input input-field" data-required data-error="Введіть Ваше ім'я" />
 										<label for="name" class="form-label">Ваше ім’я</label>
 									</div>
 									<div class="form-group">
-										<input autocomplete="off" name="phone" id="form-phone" aria-label="Телефон" type="text" required class="input input-field phone-input" id="phoneInput" data-inputmask="'mask': '+38-999-999-99-99'" />
+										<input autocomplete="off" name="phone" id="form-phone" aria-label="Телефон" type="text" class="input input-field phone-input" id="phoneInput" data-inputmask="'mask': '+38-999-999-99-99'" data-required data-error="Введіть Ваш телефон" />
 										<label for="form-phone" class="form-label">Телефон</label>
 									</div>
 									<div class="form-group">
-										<textarea data-autoheight data-autoheight-min="65" data-autoheight-max="100" name="" id="" class="input textarea-input input-field" id="form-txt"></textarea>
+										<textarea data-autoheight data-autoheight-min="65" data-autoheight-max="100" name="" id="" class="input textarea-input input-field" id="form-txt" data-required data-error="Напишіть Ваш запит"></textarea>
 										<label class="form-label" for="form-txt">Напишить сюди ваш запит
 										</label>
 									</div>
@@ -542,7 +574,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<button type="submit" class="btn hero-btn hero-btn-invert">
+										<button type="submit" value="SEND" id="submit" class="btn hero-btn hero-btn-invert">
 											<span>Надіслати</span>
 										</button>
 									</div>
@@ -698,7 +730,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221005205632"></script>
+	<script src="js/app.min.js?_v=20221011092008"></script>
 </body>
 
 </html>

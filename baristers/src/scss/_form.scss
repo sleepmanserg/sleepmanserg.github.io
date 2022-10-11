@@ -52,6 +52,28 @@
     transform: translateY(-40px);
   }
 }
+._form-error {
+  .input {
+    border-color: #ff1a0c;
+  }
+  .form-label {
+    &.active {
+      transform: translateY(-40px);
+    }
+  }
+  .form__error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    color: #ff1a0c;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.03em;
+    margin-top: 6px;
+  }
+}
 
 .form-input-wrapper > .input:focus {
   outline: none !important;

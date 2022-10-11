@@ -291,10 +291,18 @@
     z-index: 5;
     pointer-events: none;
     opacity: 0;
-    transition: none;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
+    .header-nav__languages {
+      margin-right: -12px;
+      .header-languages__link {
+        color: #fff;
+      }
+    }
     .menu-open & {
-      animation: visible-custom-menu 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+      // animation: visible-custom-menu 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+      opacity: 1;
+      visibility: visible;
       pointer-events: all;
       overflow-y: scroll;
       .header-nav__logo,
@@ -326,7 +334,7 @@
       }
     }
     .menu-out & {
-      animation: close-custom-menu 0.3s 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+      // animation: close-custom-menu 0.3s 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
       .header-nav__item,
       .header-nav__logo,
       .header-nav__languages,

@@ -8,19 +8,24 @@
     right: 30px;
     bottom: 74px;
     @media (max-width: 1024px) {
-      position: static;
-      right: 0;
-      bottom: 0;
-      .socials-list {
-        display: flex;
-        padding-bottom: 77px;
-        padding-top: 125px;
+      .hero & {
+        position: static;
+        right: 0;
+        bottom: 0;
+        transform: translateX(0);
+        .socials-list {
+          display: flex;
+          padding-bottom: 77px;
+          padding-top: 125px;
+        }
       }
     }
     @media (max-width: 768px) {
-      .socials-list {
-        padding-bottom: 36px;
-        padding-top: 50px;
+      .hero & {
+        .socials-list {
+          padding-bottom: 36px;
+          padding-top: 50px;
+        }
       }
     }
     @media (max-width: 575px) {

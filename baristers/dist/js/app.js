@@ -3021,6 +3021,176 @@
                     }(), a;
                 }();
             }));
+        },
+        2: function(module, exports, __webpack_require__) {
+            var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+ /*! smooth-scroll v16.1.3 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll */            window.Element && !Element.prototype.closest && (Element.prototype.closest = function(e) {
+                var t, n = (this.document || this.ownerDocument).querySelectorAll(e), o = this;
+                do {
+                    for (t = n.length; 0 <= --t && n.item(t) !== o; ) ;
+                } while (t < 0 && (o = o.parentElement));
+                return o;
+            }), function() {
+                if ("function" == typeof window.CustomEvent) return;
+                function e(e, t) {
+                    t = t || {
+                        bubbles: !1,
+                        cancelable: !1,
+                        detail: void 0
+                    };
+                    var n = document.createEvent("CustomEvent");
+                    return n.initCustomEvent(e, t.bubbles, t.cancelable, t.detail), n;
+                }
+                e.prototype = window.Event.prototype, window.CustomEvent = e;
+            }(), function() {
+                for (var r = 0, e = [ "ms", "moz", "webkit", "o" ], t = 0; t < e.length && !window.requestAnimationFrame; ++t) window.requestAnimationFrame = window[e[t] + "RequestAnimationFrame"], 
+                window.cancelAnimationFrame = window[e[t] + "CancelAnimationFrame"] || window[e[t] + "CancelRequestAnimationFrame"];
+                window.requestAnimationFrame || (window.requestAnimationFrame = function(e, t) {
+                    var n = (new Date).getTime(), o = Math.max(0, 16 - (n - r)), a = window.setTimeout((function() {
+                        e(n + o);
+                    }), o);
+                    return r = n + o, a;
+                }), window.cancelAnimationFrame || (window.cancelAnimationFrame = function(e) {
+                    clearTimeout(e);
+                });
+            }(), function(e, t) {
+                true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+                    return t(e);
+                }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), void 0 !== __WEBPACK_AMD_DEFINE_RESULT__ && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : 0;
+            }("undefined" != typeof __webpack_require__.g ? __webpack_require__.g : "undefined" != typeof window ? window : this, (function(M) {
+                "use strict";
+                var q = {
+                    ignore: "[data-scroll-ignore]",
+                    header: null,
+                    topOnEmptyHash: !0,
+                    speed: 500,
+                    speedAsDuration: !1,
+                    durationMax: null,
+                    durationMin: null,
+                    clip: !0,
+                    offset: 0,
+                    easing: "easeInOutCubic",
+                    customEasing: null,
+                    updateURL: !0,
+                    popstate: !0,
+                    emitEvents: !0
+                }, I = function() {
+                    var n = {};
+                    return Array.prototype.forEach.call(arguments, (function(e) {
+                        for (var t in e) {
+                            if (!e.hasOwnProperty(t)) return;
+                            n[t] = e[t];
+                        }
+                    })), n;
+                }, r = function(e) {
+                    "#" === e.charAt(0) && (e = e.substr(1));
+                    for (var t, n = String(e), o = n.length, a = -1, r = "", i = n.charCodeAt(0); ++a < o; ) {
+                        if (0 === (t = n.charCodeAt(a))) throw new InvalidCharacterError("Invalid character: the input contains U+0000.");
+                        1 <= t && t <= 31 || 127 == t || 0 === a && 48 <= t && t <= 57 || 1 === a && 48 <= t && t <= 57 && 45 === i ? r += "\\" + t.toString(16) + " " : r += 128 <= t || 45 === t || 95 === t || 48 <= t && t <= 57 || 65 <= t && t <= 90 || 97 <= t && t <= 122 ? n.charAt(a) : "\\" + n.charAt(a);
+                    }
+                    return "#" + r;
+                }, F = function() {
+                    return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
+                }, L = function(e) {
+                    return e ? (t = e, parseInt(M.getComputedStyle(t).height, 10) + e.offsetTop) : 0;
+                    var t;
+                }, x = function(e, t, n) {
+                    0 === e && document.body.focus(), n || (e.focus(), document.activeElement !== e && (e.setAttribute("tabindex", "-1"), 
+                    e.focus(), e.style.outline = "none"), M.scrollTo(0, t));
+                }, H = function(e, t, n, o) {
+                    if (t.emitEvents && "function" == typeof M.CustomEvent) {
+                        var a = new CustomEvent(e, {
+                            bubbles: !0,
+                            detail: {
+                                anchor: n,
+                                toggle: o
+                            }
+                        });
+                        document.dispatchEvent(a);
+                    }
+                };
+                return function(o, e) {
+                    var b, a, A, O, C = {};
+                    C.cancelScroll = function(e) {
+                        cancelAnimationFrame(O), O = null, e || H("scrollCancel", b);
+                    }, C.animateScroll = function(a, r, e) {
+                        C.cancelScroll();
+                        var i = I(b || q, e || {}), c = "[object Number]" === Object.prototype.toString.call(a), t = c || !a.tagName ? null : a;
+                        if (c || t) {
+                            var s = M.pageYOffset;
+                            i.header && !A && (A = document.querySelector(i.header));
+                            var n, o, u, l, m, d, f, h, p = L(A), g = c ? a : function(e, t, n, o) {
+                                var a = 0;
+                                if (e.offsetParent) for (;a += e.offsetTop, e = e.offsetParent; ) ;
+                                return a = Math.max(a - t - n, 0), o && (a = Math.min(a, F() - M.innerHeight)), 
+                                a;
+                            }(t, p, parseInt("function" == typeof i.offset ? i.offset(a, r) : i.offset, 10), i.clip), y = g - s, v = F(), w = 0, S = (n = y, 
+                            u = (o = i).speedAsDuration ? o.speed : Math.abs(n / 1e3 * o.speed), o.durationMax && u > o.durationMax ? o.durationMax : o.durationMin && u < o.durationMin ? o.durationMin : parseInt(u, 10)), E = function(e) {
+                                var t, n, o;
+                                l || (l = e), w += e - l, d = s + y * (n = m = 1 < (m = 0 === S ? 0 : w / S) ? 1 : m, 
+                                "easeInQuad" === (t = i).easing && (o = n * n), "easeOutQuad" === t.easing && (o = n * (2 - n)), 
+                                "easeInOutQuad" === t.easing && (o = n < .5 ? 2 * n * n : (4 - 2 * n) * n - 1), 
+                                "easeInCubic" === t.easing && (o = n * n * n), "easeOutCubic" === t.easing && (o = --n * n * n + 1), 
+                                "easeInOutCubic" === t.easing && (o = n < .5 ? 4 * n * n * n : (n - 1) * (2 * n - 2) * (2 * n - 2) + 1), 
+                                "easeInQuart" === t.easing && (o = n * n * n * n), "easeOutQuart" === t.easing && (o = 1 - --n * n * n * n), 
+                                "easeInOutQuart" === t.easing && (o = n < .5 ? 8 * n * n * n * n : 1 - 8 * --n * n * n * n), 
+                                "easeInQuint" === t.easing && (o = n * n * n * n * n), "easeOutQuint" === t.easing && (o = 1 + --n * n * n * n * n), 
+                                "easeInOutQuint" === t.easing && (o = n < .5 ? 16 * n * n * n * n * n : 1 + 16 * --n * n * n * n * n), 
+                                t.customEasing && (o = t.customEasing(n)), o || n), M.scrollTo(0, Math.floor(d)), 
+                                function(e, t) {
+                                    var n = M.pageYOffset;
+                                    if (e == t || n == t || (s < t && M.innerHeight + n) >= v) return C.cancelScroll(!0), 
+                                    x(a, t, c), H("scrollStop", i, a, r), !(O = l = null);
+                                }(d, g) || (O = M.requestAnimationFrame(E), l = e);
+                            };
+                            0 === M.pageYOffset && M.scrollTo(0, 0), f = a, h = i, c || history.pushState && h.updateURL && history.pushState({
+                                smoothScroll: JSON.stringify(h),
+                                anchor: f.id
+                            }, document.title, f === document.documentElement ? "#top" : "#" + f.id), "matchMedia" in M && M.matchMedia("(prefers-reduced-motion)").matches ? x(a, Math.floor(g), !1) : (H("scrollStart", i, a, r), 
+                            C.cancelScroll(!0), M.requestAnimationFrame(E));
+                        }
+                    };
+                    var t = function(e) {
+                        if (!e.defaultPrevented && !(0 !== e.button || e.metaKey || e.ctrlKey || e.shiftKey) && "closest" in e.target && (a = e.target.closest(o)) && "a" === a.tagName.toLowerCase() && !e.target.closest(b.ignore) && a.hostname === M.location.hostname && a.pathname === M.location.pathname && /#/.test(a.href)) {
+                            var t, n;
+                            try {
+                                t = r(decodeURIComponent(a.hash));
+                            } catch (e) {
+                                t = r(a.hash);
+                            }
+                            if ("#" === t) {
+                                if (!b.topOnEmptyHash) return;
+                                n = document.documentElement;
+                            } else n = document.querySelector(t);
+                            (n = n || "#top" !== t ? n : document.documentElement) && (e.preventDefault(), function(e) {
+                                if (history.replaceState && e.updateURL && !history.state) {
+                                    var t = M.location.hash;
+                                    t = t || "", history.replaceState({
+                                        smoothScroll: JSON.stringify(e),
+                                        anchor: t || M.pageYOffset
+                                    }, document.title, t || M.location.href);
+                                }
+                            }(b), C.animateScroll(n, a));
+                        }
+                    }, n = function(e) {
+                        if (null !== history.state && history.state.smoothScroll && history.state.smoothScroll === JSON.stringify(b)) {
+                            var t = history.state.anchor;
+                            "string" == typeof t && t && !(t = document.querySelector(r(history.state.anchor))) || C.animateScroll(t, null, {
+                                updateURL: !1
+                            });
+                        }
+                    };
+                    C.destroy = function() {
+                        b && (document.removeEventListener("click", t, !1), M.removeEventListener("popstate", n, !1), 
+                        C.cancelScroll(), O = A = a = b = null);
+                    };
+                    return function() {
+                        if (!("querySelector" in document && "addEventListener" in M && "requestAnimationFrame" in M && "closest" in M.Element.prototype)) throw "Smooth Scroll: This browser does not support the required JavaScript methods and browser APIs.";
+                        C.destroy(), b = I(q, e || {}), A = b.header ? document.querySelector(b.header) : null, 
+                        document.addEventListener("click", t, !1), b.updateURL && b.popstate && M.addEventListener("popstate", n, !1);
+                    }(), C;
+                };
+            }));
         }
     };
     var __webpack_module_cache__ = {};
@@ -3030,12 +3200,22 @@
         var module = __webpack_module_cache__[moduleId] = {
             exports: {}
         };
-        __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+        __webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
         return module.exports;
     }
     (() => {
+        __webpack_require__.g = function() {
+            if ("object" === typeof globalThis) return globalThis;
+            try {
+                return this || new Function("return this")();
+            } catch (e) {
+                if ("object" === typeof window) return window;
+            }
+        }();
+    })();
+    (() => {
         "use strict";
-        const modules_flsModules = {};
+        const flsModules = {};
         function isWebp() {
             function testWebP(callback) {
                 let webP = new Image;
@@ -3049,19 +3229,51 @@
                 document.documentElement.classList.add(className);
             }));
         }
+        let isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+            }
+        };
         function addLoadedClass() {
             window.addEventListener("load", (function() {
                 setTimeout((function() {
                     document.documentElement.classList.add("loaded");
-                }), 2200);
-            }));
+                }), 2300);
+ //!2200
+                        }));
         }
-        function functions_getHash() {
+        function getHash() {
             if (location.hash) return location.hash.replace("#", "");
         }
         function setHash(hash) {
             hash = hash ? `#${hash}` : window.location.href.split("#")[0];
             history.pushState("", "", hash);
+        }
+        function fullVHfix() {
+            const fullScreens = document.querySelectorAll("[data-fullscreen]");
+            if (fullScreens.length && isMobile.any()) {
+                window.addEventListener("resize", fixHeight);
+                function fixHeight() {
+                    let vh = .01 * window.innerHeight;
+                    document.documentElement.style.setProperty("--vh", `${vh}px`);
+                }
+                fixHeight();
+            }
         }
         let _slideUp = (target, duration = 500, showmore = 0) => {
             if (!target.classList.contains("_slide")) {
@@ -3254,7 +3466,7 @@
             const tabs = document.querySelectorAll("[data-tabs]");
             let tabsActiveHash = [];
             if (tabs.length > 0) {
-                const hash = functions_getHash();
+                const hash = getHash();
                 if (hash && hash.startsWith("tab-")) tabsActiveHash = hash.replace("tab-", "").split("-");
                 tabs.forEach(((tabsBlock, index) => {
                     tabsBlock.classList.add("_tab-init");
@@ -3356,22 +3568,21 @@
                     }), 0);
                     document.documentElement.classList.toggle("menu-open");
                 }
-                if (e.target.closest(".burger-active")) {
-                    document.documentElement.classList.toggle("menu-out");
-                    setTimeout((() => {
-                        document.documentElement.classList.remove("menu-out");
-                    }), 750);
-                }
+                if (e.target.closest(".burger-active")) setTimeout((() => {}), 750);
             }));
             window.addEventListener("resize", (() => {
-                if (window.innerWidth > 1024.98) functions_menuClose();
+                if (window.innerWidth > 1024.98) menuClose();
             }));
         }
-        function functions_menuClose() {
+        function menuOpen() {
+            bodyLock();
+            document.documentElement.classList.add("menu-open");
+        }
+        function menuClose() {
             bodyUnlock();
             document.documentElement.classList.remove("menu-open");
         }
-        function functions_FLS(message) {
+        function FLS(message) {
             setTimeout((() => {
                 if (window.FLS) console.log(message);
             }), 0);
@@ -3753,10 +3964,49 @@
                 if (!this.isOpen && this.lastFocusEl) this.lastFocusEl.focus(); else focusable[0].focus();
             }
             popupLogging(message) {
-                this.options.logging ? functions_FLS(`[Попапос]: ${message}`) : null;
+                this.options.logging ? FLS(`[Попапос]: ${message}`) : null;
             }
         }
-        modules_flsModules.popup = new Popup({});
+        flsModules.popup = new Popup({});
+        var smooth_scroll_polyfills_min = __webpack_require__(2);
+        let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
+            const targetBlockElement = document.querySelector(targetBlock);
+            if (targetBlockElement) {
+                let headerItem = "";
+                let headerItemHeight = 0;
+                if (noHeader) {
+                    headerItem = "header.header";
+                    const headerElement = document.querySelector(headerItem);
+                    if (!headerElement.classList.contains("_header-scroll")) {
+                        headerElement.style.cssText = `transition-duration: 0s;`;
+                        headerElement.classList.add("_header-scroll");
+                        headerItemHeight = headerElement.offsetHeight;
+                        headerElement.classList.remove("_header-scroll");
+                        setTimeout((() => {
+                            headerElement.style.cssText = ``;
+                        }), 0);
+                    } else headerItemHeight = headerElement.offsetHeight;
+                }
+                let options = {
+                    speedAsDuration: true,
+                    speed,
+                    header: headerItem,
+                    offset: offsetTop,
+                    easing: "easeOutQuad"
+                };
+                document.documentElement.classList.contains("menu-open") ? menuClose() : null;
+                if ("undefined" !== typeof smooth_scroll_polyfills_min) (new smooth_scroll_polyfills_min).animateScroll(targetBlockElement, "", options); else {
+                    let targetBlockElementPosition = targetBlockElement.getBoundingClientRect().top + scrollY;
+                    targetBlockElementPosition = headerItemHeight ? targetBlockElementPosition - headerItemHeight : targetBlockElementPosition;
+                    targetBlockElementPosition = offsetTop ? targetBlockElementPosition - offsetTop : targetBlockElementPosition;
+                    window.scrollTo({
+                        top: targetBlockElementPosition,
+                        behavior: "smooth"
+                    });
+                }
+                FLS(`[gotoBlock]: Юхуу...едем к ${targetBlock}`);
+            } else FLS(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${targetBlock}`);
+        };
         function formFieldsInit(options = {
             viewPass: false,
             autoHeight: false
@@ -3868,11 +4118,11 @@
                         const checkbox = checkboxes[index];
                         checkbox.checked = false;
                     }
-                    if (modules_flsModules.select) {
+                    if (flsModules.select) {
                         let selects = form.querySelectorAll(".select");
                         if (selects.length) for (let index = 0; index < selects.length; index++) {
                             const select = selects[index].querySelector("select");
-                            modules_flsModules.select.selectBuild(select);
+                            flsModules.select.selectBuild(select);
                         }
                     }
                 }), 0);
@@ -3881,9 +4131,388 @@
                 return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
             }
         };
+        function formSubmit() {
+            const forms = document.forms;
+            if (forms.length) for (const form of forms) {
+                form.addEventListener("submit", (function(e) {
+                    const form = e.target;
+                    formSubmitAction(form, e);
+                }));
+                form.addEventListener("reset", (function(e) {
+                    const form = e.target;
+                    formValidate.formClean(form);
+                }));
+            }
+            async function formSubmitAction(form, e) {
+                const error = !form.hasAttribute("data-no-validate") ? formValidate.getErrors(form) : 0;
+                if (0 === error) {
+                    const ajax = form.hasAttribute("data-ajax");
+                    if (ajax) {
+                        e.preventDefault();
+                        const formAction = form.getAttribute("action") ? form.getAttribute("action").trim() : "#";
+                        const formMethod = form.getAttribute("method") ? form.getAttribute("method").trim() : "GET";
+                        const formData = new FormData(form);
+                        form.classList.add("_sending");
+                        const response = await fetch(formAction, {
+                            method: formMethod,
+                            body: formData
+                        });
+                        if (response.ok) {
+                            let responseResult = await response.json();
+                            form.classList.remove("_sending");
+                            formSent(form, responseResult);
+                        } else {
+                            alert("Ошибка");
+                            form.classList.remove("_sending");
+                        }
+                    } else if (form.hasAttribute("data-dev")) {
+                        e.preventDefault();
+                        formSent(form);
+                    }
+                } else {
+                    e.preventDefault();
+                    if (form.querySelector("._form-error") && form.hasAttribute("data-goto-error")) {
+                        const formGoToErrorClass = form.dataset.gotoError ? form.dataset.gotoError : "._form-error";
+                        gotoBlock(formGoToErrorClass, true, 1e3);
+                    }
+                }
+            }
+            function formSent(form, responseResult = ``) {
+                document.dispatchEvent(new CustomEvent("formSent", {
+                    detail: {
+                        form
+                    }
+                }));
+                setTimeout((() => {
+                    if (flsModules.popup) {
+                        const popup = form.dataset.popupMessage;
+                        popup ? flsModules.popup.open(popup) : null;
+                    }
+                }), 0);
+                formValidate.formClean(form);
+                formLogging(`Форма отправлена!`);
+            }
+            function formLogging(message) {
+                FLS(`[Формы]: ${message}`);
+            }
+        }
+        class SelectConstructor {
+            constructor(props, data = null) {
+                let defaultConfig = {
+                    init: true,
+                    logging: true
+                };
+                this.config = Object.assign(defaultConfig, props);
+                this.selectClasses = {
+                    classSelect: "select",
+                    classSelectBody: "select__body",
+                    classSelectTitle: "select__title",
+                    classSelectValue: "select__value",
+                    classSelectLabel: "select__label",
+                    classSelectInput: "select__input",
+                    classSelectText: "select__text",
+                    classSelectLink: "select__link",
+                    classSelectOptions: "select__options",
+                    classSelectOptionsScroll: "select__scroll",
+                    classSelectOption: "select__option",
+                    classSelectContent: "select__content",
+                    classSelectRow: "select__row",
+                    classSelectData: "select__asset",
+                    classSelectDisabled: "_select-disabled",
+                    classSelectTag: "_select-tag",
+                    classSelectOpen: "_select-open",
+                    classSelectActive: "_select-active",
+                    classSelectFocus: "_select-focus",
+                    classSelectMultiple: "_select-multiple",
+                    classSelectCheckBox: "_select-checkbox",
+                    classSelectOptionSelected: "_select-selected",
+                    classSelectPseudoLabel: "_select-pseudo-label"
+                };
+                this._this = this;
+                if (this.config.init) {
+                    const selectItems = data ? document.querySelectorAll(data) : document.querySelectorAll("select");
+                    if (selectItems.length) {
+                        this.selectsInit(selectItems);
+                        this.setLogging(`Проснулся, построил селектов: (${selectItems.length})`);
+                    } else this.setLogging("Сплю, нет ни одного select zzZZZzZZz");
+                }
+            }
+            getSelectClass(className) {
+                return `.${className}`;
+            }
+            getSelectElement(selectItem, className) {
+                return {
+                    originalSelect: selectItem.querySelector("select"),
+                    selectElement: selectItem.querySelector(this.getSelectClass(className))
+                };
+            }
+            selectsInit(selectItems) {
+                selectItems.forEach(((originalSelect, index) => {
+                    this.selectInit(originalSelect, index + 1);
+                }));
+                document.addEventListener("click", function(e) {
+                    this.selectsActions(e);
+                }.bind(this));
+                document.addEventListener("keydown", function(e) {
+                    this.selectsActions(e);
+                }.bind(this));
+                document.addEventListener("focusin", function(e) {
+                    this.selectsActions(e);
+                }.bind(this));
+                document.addEventListener("focusout", function(e) {
+                    this.selectsActions(e);
+                }.bind(this));
+            }
+            selectInit(originalSelect, index) {
+                const _this = this;
+                let selectItem = document.createElement("div");
+                selectItem.classList.add(this.selectClasses.classSelect);
+                originalSelect.parentNode.insertBefore(selectItem, originalSelect);
+                selectItem.appendChild(originalSelect);
+                originalSelect.hidden = true;
+                index ? originalSelect.dataset.id = index : null;
+                if (this.getSelectPlaceholder(originalSelect)) {
+                    originalSelect.dataset.placeholder = this.getSelectPlaceholder(originalSelect).value;
+                    if (this.getSelectPlaceholder(originalSelect).label.show) {
+                        const selectItemTitle = this.getSelectElement(selectItem, this.selectClasses.classSelectTitle).selectElement;
+                        selectItemTitle.insertAdjacentHTML("afterbegin", `<span class="${this.selectClasses.classSelectLabel}">${this.getSelectPlaceholder(originalSelect).label.text ? this.getSelectPlaceholder(originalSelect).label.text : this.getSelectPlaceholder(originalSelect).value}</span>`);
+                    }
+                }
+                selectItem.insertAdjacentHTML("beforeend", `<div class="${this.selectClasses.classSelectBody}"><div hidden class="${this.selectClasses.classSelectOptions}"></div></div>`);
+                this.selectBuild(originalSelect);
+                originalSelect.dataset.speed = originalSelect.dataset.speed ? originalSelect.dataset.speed : "150";
+                originalSelect.addEventListener("change", (function(e) {
+                    _this.selectChange(e);
+                }));
+            }
+            selectBuild(originalSelect) {
+                const selectItem = originalSelect.parentElement;
+                selectItem.dataset.id = originalSelect.dataset.id;
+                originalSelect.dataset.classModif ? selectItem.classList.add(`select_${originalSelect.dataset.classModif}`) : null;
+                originalSelect.multiple ? selectItem.classList.add(this.selectClasses.classSelectMultiple) : selectItem.classList.remove(this.selectClasses.classSelectMultiple);
+                originalSelect.hasAttribute("data-checkbox") && originalSelect.multiple ? selectItem.classList.add(this.selectClasses.classSelectCheckBox) : selectItem.classList.remove(this.selectClasses.classSelectCheckBox);
+                this.setSelectTitleValue(selectItem, originalSelect);
+                this.setOptions(selectItem, originalSelect);
+                originalSelect.hasAttribute("data-search") ? this.searchActions(selectItem) : null;
+                originalSelect.hasAttribute("data-open") ? this.selectAction(selectItem) : null;
+                this.selectDisabled(selectItem, originalSelect);
+            }
+            selectsActions(e) {
+                const targetElement = e.target;
+                const targetType = e.type;
+                if (targetElement.closest(this.getSelectClass(this.selectClasses.classSelect)) || targetElement.closest(this.getSelectClass(this.selectClasses.classSelectTag))) {
+                    const selectItem = targetElement.closest(".select") ? targetElement.closest(".select") : document.querySelector(`.${this.selectClasses.classSelect}[data-id="${targetElement.closest(this.getSelectClass(this.selectClasses.classSelectTag)).dataset.selectId}"]`);
+                    const originalSelect = this.getSelectElement(selectItem).originalSelect;
+                    if ("click" === targetType) {
+                        if (!originalSelect.disabled) if (targetElement.closest(this.getSelectClass(this.selectClasses.classSelectTag))) {
+                            const targetTag = targetElement.closest(this.getSelectClass(this.selectClasses.classSelectTag));
+                            const optionItem = document.querySelector(`.${this.selectClasses.classSelect}[data-id="${targetTag.dataset.selectId}"] .select__option[data-value="${targetTag.dataset.value}"]`);
+                            this.optionAction(selectItem, originalSelect, optionItem);
+                        } else if (targetElement.closest(this.getSelectClass(this.selectClasses.classSelectTitle))) this.selectAction(selectItem); else if (targetElement.closest(this.getSelectClass(this.selectClasses.classSelectOption))) {
+                            const optionItem = targetElement.closest(this.getSelectClass(this.selectClasses.classSelectOption));
+                            this.optionAction(selectItem, originalSelect, optionItem);
+                        }
+                    } else if ("focusin" === targetType || "focusout" === targetType) {
+                        if (targetElement.closest(this.getSelectClass(this.selectClasses.classSelect))) "focusin" === targetType ? selectItem.classList.add(this.selectClasses.classSelectFocus) : selectItem.classList.remove(this.selectClasses.classSelectFocus);
+                    } else if ("keydown" === targetType && "Escape" === e.code) this.selectsСlose();
+                } else this.selectsСlose();
+            }
+            selectsСlose(selectOneGroup) {
+                const selectsGroup = selectOneGroup ? selectOneGroup : document;
+                const selectActiveItems = selectsGroup.querySelectorAll(`${this.getSelectClass(this.selectClasses.classSelect)}${this.getSelectClass(this.selectClasses.classSelectOpen)}`);
+                if (selectActiveItems.length) selectActiveItems.forEach((selectActiveItem => {
+                    this.selectСlose(selectActiveItem);
+                }));
+            }
+            selectСlose(selectItem) {
+                const originalSelect = this.getSelectElement(selectItem).originalSelect;
+                const selectOptions = this.getSelectElement(selectItem, this.selectClasses.classSelectOptions).selectElement;
+                if (!selectOptions.classList.contains("_slide")) {
+                    selectItem.classList.remove(this.selectClasses.classSelectOpen);
+                    _slideUp(selectOptions, originalSelect.dataset.speed);
+                }
+            }
+            selectAction(selectItem) {
+                const originalSelect = this.getSelectElement(selectItem).originalSelect;
+                const selectOptions = this.getSelectElement(selectItem, this.selectClasses.classSelectOptions).selectElement;
+                if (originalSelect.closest("[data-one-select]")) {
+                    const selectOneGroup = originalSelect.closest("[data-one-select]");
+                    this.selectsСlose(selectOneGroup);
+                }
+                if (!selectOptions.classList.contains("_slide")) {
+                    selectItem.classList.toggle(this.selectClasses.classSelectOpen);
+                    _slideToggle(selectOptions, originalSelect.dataset.speed);
+                }
+            }
+            setSelectTitleValue(selectItem, originalSelect) {
+                const selectItemBody = this.getSelectElement(selectItem, this.selectClasses.classSelectBody).selectElement;
+                const selectItemTitle = this.getSelectElement(selectItem, this.selectClasses.classSelectTitle).selectElement;
+                if (selectItemTitle) selectItemTitle.remove();
+                selectItemBody.insertAdjacentHTML("afterbegin", this.getSelectTitleValue(selectItem, originalSelect));
+            }
+            getSelectTitleValue(selectItem, originalSelect) {
+                let selectTitleValue = this.getSelectedOptionsData(originalSelect, 2).html;
+                if (originalSelect.multiple && originalSelect.hasAttribute("data-tags")) {
+                    selectTitleValue = this.getSelectedOptionsData(originalSelect).elements.map((option => `<span role="button" data-select-id="${selectItem.dataset.id}" data-value="${option.value}" class="_select-tag">${this.getSelectElementContent(option)}</span>`)).join("");
+                    if (originalSelect.dataset.tags && document.querySelector(originalSelect.dataset.tags)) {
+                        document.querySelector(originalSelect.dataset.tags).innerHTML = selectTitleValue;
+                        if (originalSelect.hasAttribute("data-search")) selectTitleValue = false;
+                    }
+                }
+                selectTitleValue = selectTitleValue.length ? selectTitleValue : originalSelect.dataset.placeholder ? originalSelect.dataset.placeholder : "";
+                let pseudoAttribute = "";
+                let pseudoAttributeClass = "";
+                if (originalSelect.hasAttribute("data-pseudo-label")) {
+                    pseudoAttribute = originalSelect.dataset.pseudoLabel ? ` data-pseudo-label="${originalSelect.dataset.pseudoLabel}"` : ` data-pseudo-label="Заполните атрибут"`;
+                    pseudoAttributeClass = ` ${this.selectClasses.classSelectPseudoLabel}`;
+                }
+                this.getSelectedOptionsData(originalSelect).values.length ? selectItem.classList.add(this.selectClasses.classSelectActive) : selectItem.classList.remove(this.selectClasses.classSelectActive);
+                if (originalSelect.hasAttribute("data-search")) return `<div class="${this.selectClasses.classSelectTitle}"><span${pseudoAttribute} class="${this.selectClasses.classSelectValue}"><input autocomplete="off" type="text" placeholder="${selectTitleValue}" data-placeholder="${selectTitleValue}" class="${this.selectClasses.classSelectInput}"></span></div>`; else {
+                    const customClass = this.getSelectedOptionsData(originalSelect).elements.length && this.getSelectedOptionsData(originalSelect).elements[0].dataset.class ? ` ${this.getSelectedOptionsData(originalSelect).elements[0].dataset.class}` : "";
+                    return `<button type="button" class="${this.selectClasses.classSelectTitle}"><span${pseudoAttribute} class="${this.selectClasses.classSelectValue}${pseudoAttributeClass}"><span class="${this.selectClasses.classSelectContent}${customClass}">${selectTitleValue}</span></span></button>`;
+                }
+            }
+            getSelectElementContent(selectOption) {
+                const selectOptionData = selectOption.dataset.asset ? `${selectOption.dataset.asset}` : "";
+                const selectOptionDataHTML = selectOptionData.indexOf("img") >= 0 ? `<img src="${selectOptionData}" alt="">` : selectOptionData;
+                let selectOptionContentHTML = ``;
+                selectOptionContentHTML += selectOptionData ? `<span class="${this.selectClasses.classSelectRow}">` : "";
+                selectOptionContentHTML += selectOptionData ? `<span class="${this.selectClasses.classSelectData}">` : "";
+                selectOptionContentHTML += selectOptionData ? selectOptionDataHTML : "";
+                selectOptionContentHTML += selectOptionData ? `</span>` : "";
+                selectOptionContentHTML += selectOptionData ? `<span class="${this.selectClasses.classSelectText}">` : "";
+                selectOptionContentHTML += selectOption.textContent;
+                selectOptionContentHTML += selectOptionData ? `</span>` : "";
+                selectOptionContentHTML += selectOptionData ? `</span>` : "";
+                return selectOptionContentHTML;
+            }
+            getSelectPlaceholder(originalSelect) {
+                const selectPlaceholder = Array.from(originalSelect.options).find((option => !option.value));
+                if (selectPlaceholder) return {
+                    value: selectPlaceholder.textContent,
+                    show: selectPlaceholder.hasAttribute("data-show"),
+                    label: {
+                        show: selectPlaceholder.hasAttribute("data-label"),
+                        text: selectPlaceholder.dataset.label
+                    }
+                };
+            }
+            getSelectedOptionsData(originalSelect, type) {
+                let selectedOptions = [];
+                if (originalSelect.multiple) selectedOptions = Array.from(originalSelect.options).filter((option => option.value)).filter((option => option.selected)); else selectedOptions.push(originalSelect.options[originalSelect.selectedIndex]);
+                return {
+                    elements: selectedOptions.map((option => option)),
+                    values: selectedOptions.filter((option => option.value)).map((option => option.value)),
+                    html: selectedOptions.map((option => this.getSelectElementContent(option)))
+                };
+            }
+            getOptions(originalSelect) {
+                let selectOptionsScroll = originalSelect.hasAttribute("data-scroll") ? `data-simplebar` : "";
+                let selectOptionsScrollHeight = originalSelect.dataset.scroll ? `style="max-height:${originalSelect.dataset.scroll}px"` : "";
+                let selectOptions = Array.from(originalSelect.options);
+                if (selectOptions.length > 0) {
+                    let selectOptionsHTML = ``;
+                    if (this.getSelectPlaceholder(originalSelect) && !this.getSelectPlaceholder(originalSelect).show || originalSelect.multiple) selectOptions = selectOptions.filter((option => option.value));
+                    selectOptionsHTML += selectOptionsScroll ? `<div ${selectOptionsScroll} ${selectOptionsScrollHeight} class="${this.selectClasses.classSelectOptionsScroll}">` : "";
+                    selectOptions.forEach((selectOption => {
+                        selectOptionsHTML += this.getOption(selectOption, originalSelect);
+                    }));
+                    selectOptionsHTML += selectOptionsScroll ? `</div>` : "";
+                    return selectOptionsHTML;
+                }
+            }
+            getOption(selectOption, originalSelect) {
+                const selectOptionSelected = selectOption.selected && originalSelect.multiple ? ` ${this.selectClasses.classSelectOptionSelected}` : "";
+                const selectOptionHide = selectOption.selected && !originalSelect.hasAttribute("data-show-selected") && !originalSelect.multiple ? `hidden` : ``;
+                const selectOptionClass = selectOption.dataset.class ? ` ${selectOption.dataset.class}` : "";
+                const selectOptionLink = selectOption.dataset.href ? selectOption.dataset.href : false;
+                const selectOptionLinkTarget = selectOption.hasAttribute("data-href-blank") ? `target="_blank"` : "";
+                let selectOptionHTML = ``;
+                selectOptionHTML += selectOptionLink ? `<a ${selectOptionLinkTarget} ${selectOptionHide} href="${selectOptionLink}" data-value="${selectOption.value}" class="${this.selectClasses.classSelectOption}${selectOptionClass}${selectOptionSelected}">` : `<button ${selectOptionHide} class="${this.selectClasses.classSelectOption}${selectOptionClass}${selectOptionSelected}" data-value="${selectOption.value}" type="button">`;
+                selectOptionHTML += this.getSelectElementContent(selectOption);
+                selectOptionHTML += selectOptionLink ? `</a>` : `</button>`;
+                return selectOptionHTML;
+            }
+            setOptions(selectItem, originalSelect) {
+                const selectItemOptions = this.getSelectElement(selectItem, this.selectClasses.classSelectOptions).selectElement;
+                selectItemOptions.innerHTML = this.getOptions(originalSelect);
+            }
+            optionAction(selectItem, originalSelect, optionItem) {
+                if (originalSelect.multiple) {
+                    optionItem.classList.toggle(this.selectClasses.classSelectOptionSelected);
+                    const originalSelectSelectedItems = this.getSelectedOptionsData(originalSelect).elements;
+                    originalSelectSelectedItems.forEach((originalSelectSelectedItem => {
+                        originalSelectSelectedItem.removeAttribute("selected");
+                    }));
+                    const selectSelectedItems = selectItem.querySelectorAll(this.getSelectClass(this.selectClasses.classSelectOptionSelected));
+                    selectSelectedItems.forEach((selectSelectedItems => {
+                        originalSelect.querySelector(`option[value="${selectSelectedItems.dataset.value}"]`).setAttribute("selected", "selected");
+                    }));
+                } else {
+                    if (!originalSelect.hasAttribute("data-show-selected")) {
+                        if (selectItem.querySelector(`${this.getSelectClass(this.selectClasses.classSelectOption)}[hidden]`)) selectItem.querySelector(`${this.getSelectClass(this.selectClasses.classSelectOption)}[hidden]`).hidden = false;
+                        optionItem.hidden = true;
+                    }
+                    originalSelect.value = optionItem.hasAttribute("data-value") ? optionItem.dataset.value : optionItem.textContent;
+                    this.selectAction(selectItem);
+                }
+                this.setSelectTitleValue(selectItem, originalSelect);
+                this.setSelectChange(originalSelect);
+            }
+            selectChange(e) {
+                const originalSelect = e.target;
+                this.selectBuild(originalSelect);
+                this.setSelectChange(originalSelect);
+            }
+            setSelectChange(originalSelect) {
+                if (originalSelect.hasAttribute("data-validate")) formValidate.validateInput(originalSelect);
+                if (originalSelect.hasAttribute("data-submit") && originalSelect.value) {
+                    let tempButton = document.createElement("button");
+                    tempButton.type = "submit";
+                    originalSelect.closest("form").append(tempButton);
+                    tempButton.click();
+                    tempButton.remove();
+                }
+                const selectItem = originalSelect.parentElement;
+                this.selectCallback(selectItem, originalSelect);
+            }
+            selectDisabled(selectItem, originalSelect) {
+                if (originalSelect.disabled) {
+                    selectItem.classList.add(this.selectClasses.classSelectDisabled);
+                    this.getSelectElement(selectItem, this.selectClasses.classSelectTitle).selectElement.disabled = true;
+                } else {
+                    selectItem.classList.remove(this.selectClasses.classSelectDisabled);
+                    this.getSelectElement(selectItem, this.selectClasses.classSelectTitle).selectElement.disabled = false;
+                }
+            }
+            searchActions(selectItem) {
+                this.getSelectElement(selectItem).originalSelect;
+                const selectInput = this.getSelectElement(selectItem, this.selectClasses.classSelectInput).selectElement;
+                const selectOptions = this.getSelectElement(selectItem, this.selectClasses.classSelectOptions).selectElement;
+                const selectOptionsItems = selectOptions.querySelectorAll(`.${this.selectClasses.classSelectOption}`);
+                const _this = this;
+                selectInput.addEventListener("input", (function() {
+                    selectOptionsItems.forEach((selectOptionsItem => {
+                        if (selectOptionsItem.textContent.toUpperCase().indexOf(selectInput.value.toUpperCase()) >= 0) selectOptionsItem.hidden = false; else selectOptionsItem.hidden = true;
+                    }));
+                    true === selectOptions.hidden ? _this.selectAction(selectItem) : null;
+                }));
+            }
+            selectCallback(selectItem, originalSelect) {
+                document.dispatchEvent(new CustomEvent("selectCallback", {
+                    detail: {
+                        select: originalSelect
+                    }
+                }));
+            }
+            setLogging(message) {
+                this.config.logging ? FLS(`[select]: ${message}`) : null;
+            }
+        }
+        flsModules.select = new SelectConstructor({});
         __webpack_require__(125);
         const inputMasks = document.querySelectorAll("input");
-        if (inputMasks.length) modules_flsModules.inputmask = Inputmask().mask(inputMasks);
+        if (inputMasks.length) flsModules.inputmask = Inputmask().mask(inputMasks);
         function ssr_window_esm_isObject(obj) {
             return null !== obj && "object" === typeof obj && "constructor" in obj && obj.constructor === Object;
         }
@@ -7614,6 +8243,25 @@
                         type: "fraction"
                     }
                 });
+                new core(".achievements-list", {
+                    modules: [ Navigation, Pagination, Autoplay ],
+                    slidesPerView: 4,
+                    navigation: {
+                        prevEl: ".slider-btn-prev",
+                        nextEl: ".slider-btn-next"
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1
+                        },
+                        575: {
+                            slidesPerView: 2
+                        },
+                        1024: {
+                            slidesPerView: 3
+                        }
+                    }
+                });
                 const breakpoint = window.matchMedia("(min-width:992px)");
                 let achievementSlider;
                 const breakpointChecker = function() {
@@ -7735,6 +8383,50 @@
             initSliders();
         }));
         let addWindowScrollEvent = false;
+        function pageNavigation() {
+            document.addEventListener("click", pageNavigationAction);
+            document.addEventListener("watcherCallback", pageNavigationAction);
+            function pageNavigationAction(e) {
+                if ("click" === e.type) {
+                    const targetElement = e.target;
+                    if (targetElement.closest("[data-goto]")) {
+                        const gotoLink = targetElement.closest("[data-goto]");
+                        const gotoLinkSelector = gotoLink.dataset.goto ? gotoLink.dataset.goto : "";
+                        const noHeader = gotoLink.hasAttribute("data-goto-header") ? true : false;
+                        const gotoSpeed = gotoLink.dataset.gotoSpeed ? gotoLink.dataset.gotoSpeed : 500;
+                        const offsetTop = gotoLink.dataset.gotoTop ? parseInt(gotoLink.dataset.gotoTop) : 0;
+                        if (menuOpen) {
+                            console.log("hello");
+                            menuClose();
+                            setTimeout((() => {
+                                gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop);
+                            }), 550);
+                        }
+                        e.preventDefault();
+                    }
+                } else if ("watcherCallback" === e.type && e.detail) {
+                    const entry = e.detail.entry;
+                    const targetElement = entry.target;
+                    if ("navigator" === targetElement.dataset.watch) {
+                        document.querySelector(`[data-goto]._navigator-active`);
+                        let navigatorCurrentItem;
+                        if (targetElement.id && document.querySelector(`[data-goto="#${targetElement.id}"]`)) navigatorCurrentItem = document.querySelector(`[data-goto="#${targetElement.id}"]`); else if (targetElement.classList.length) for (let index = 0; index < targetElement.classList.length; index++) {
+                            const element = targetElement.classList[index];
+                            if (document.querySelector(`[data-goto=".${element}"]`)) {
+                                navigatorCurrentItem = document.querySelector(`[data-goto=".${element}"]`);
+                                break;
+                            }
+                        }
+                        if (entry.isIntersecting) navigatorCurrentItem ? navigatorCurrentItem.classList.add("_navigator-active") : null; else navigatorCurrentItem ? navigatorCurrentItem.classList.remove("_navigator-active") : null;
+                    }
+                }
+            }
+            if (getHash()) {
+                let goToHash;
+                if (document.querySelector(`#${getHash()}`)) goToHash = `#${getHash()}`; else if (document.querySelector(`.${getHash()}`)) goToHash = `.${getHash()}`;
+                goToHash ? gotoBlock(goToHash, true, 500, 20) : null;
+            }
+        }
         function headerScroll() {
             addWindowScrollEvent = true;
             const header = document.querySelector("header.header");
@@ -7760,56 +8452,6 @@
                 }
                 scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
             }));
-        }
-        function stickyBlock() {
-            addWindowScrollEvent = true;
-            function stickyBlockInit() {
-                const stickyParents = document.querySelectorAll("[data-sticky]");
-                if (stickyParents.length) stickyParents.forEach((stickyParent => {
-                    let stickyConfig = {
-                        media: stickyParent.dataset.sticky ? parseInt(stickyParent.dataset.sticky) : null,
-                        top: stickyParent.dataset.stickyTop ? parseInt(stickyParent.dataset.stickyTop) : 0,
-                        bottom: stickyParent.dataset.stickyBottom ? parseInt(stickyParent.dataset.stickyBottom) : 0,
-                        header: stickyParent.hasAttribute("data-sticky-header") ? document.querySelector("header.header").offsetHeight : 0
-                    };
-                    stickyBlockItem(stickyParent, stickyConfig);
-                }));
-            }
-            function stickyBlockItem(stickyParent, stickyConfig) {
-                const stickyBlockItem = stickyParent.querySelector("[data-sticky-item]");
-                const headerHeight = stickyConfig.header;
-                const offsetTop = headerHeight + stickyConfig.top;
-                const startPoint = stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop;
-                document.addEventListener("windowScroll", stickyBlockActions);
-                function stickyBlockActions(e) {
-                    const endPoint = stickyParent.offsetHeight + stickyParent.getBoundingClientRect().top + scrollY - (offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom);
-                    let stickyItemValues = {
-                        position: "relative",
-                        bottom: "auto",
-                        top: "0px",
-                        left: "0px",
-                        width: "auto"
-                    };
-                    if (!stickyConfig.media || stickyConfig.media < window.innerWidth) if (offsetTop + stickyConfig.bottom + stickyBlockItem.offsetHeight < window.innerHeight) if (scrollY >= startPoint && scrollY <= endPoint) {
-                        stickyItemValues.position = `fixed`;
-                        stickyItemValues.bottom = `auto`;
-                        stickyItemValues.top = `${offsetTop}px`;
-                        stickyItemValues.left = `${stickyBlockItem.getBoundingClientRect().left}px`;
-                        stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
-                    } else if (scrollY >= endPoint) {
-                        stickyItemValues.position = `absolute`;
-                        stickyItemValues.bottom = `${stickyConfig.bottom}px`;
-                        stickyItemValues.top = `auto`;
-                        stickyItemValues.left = `0px`;
-                        stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
-                    }
-                    stickyBlockType(stickyBlockItem, stickyItemValues);
-                }
-            }
-            function stickyBlockType(stickyBlockItem, stickyItemValues) {
-                stickyBlockItem.style.cssText = `position:${stickyItemValues.position};bottom:${stickyItemValues.bottom};top:${stickyItemValues.top};left:${stickyItemValues.left};width:${stickyItemValues.width};`;
-            }
-            stickyBlockInit();
         }
         setTimeout((() => {
             if (addWindowScrollEvent) {
@@ -7903,10 +8545,16 @@
         }
         const da = new DynamicAdapt("max");
         da.init();
+        var path = window.location.href;
+        const headerLinks = document.querySelectorAll(".header-nav__link");
+        headerLinks.forEach((link => {
+            if (link.href === path) link.parentElement.classList.add("active");
+        }));
         window["FLS"] = true;
         isWebp();
         addLoadedClass();
         menuInit();
+        fullVHfix();
         spollers();
         tabs();
         formFieldsInit({
@@ -7914,8 +8562,9 @@
             autoHeight: true
         });
         materialInputs();
+        formSubmit();
+        pageNavigation();
         headerScroll();
-        stickyBlock();
         animateOnScroll();
         topArrrow();
     })();

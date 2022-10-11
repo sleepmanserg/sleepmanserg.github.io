@@ -136,6 +136,9 @@
       height: 20px;
       background-color: #000;
     }
+    @media (max-width: 1080px) {
+      padding-left: 30px;
+    }
   }
   .products-item__buy {
     font-size: 20px;

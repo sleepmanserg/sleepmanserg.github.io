@@ -29,7 +29,7 @@ export function addLoadedClass() {
 	window.addEventListener("load", function () {
 		setTimeout(function () {
 			document.documentElement.classList.add('loaded');
-		}, 2200);
+		}, 2300); //!2200
 	});
 }
 // Получение хеша в адресе сайта
@@ -423,9 +423,9 @@ export function menuInit() {
 				document.documentElement.classList.toggle("menu-open");
 			}
 			if (e.target.closest('.burger-active')) {
-				document.documentElement.classList.toggle("menu-out");
+				// document.documentElement.classList.toggle("menu-out");
 				setTimeout(() => {
-					document.documentElement.classList.remove("menu-out");
+					// document.documentElement.classList.remove("menu-out");
 				}, 750);
 			}
 		});

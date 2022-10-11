@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221005205632">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221011092008">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
 							<img src="img/logo.svg" alt="Baristers" />
 						</a>
 					</div>
-					<div class="header-nav__wrapper">
+					<div class="header-nav__wrapper" data-fullscreen>
 						<nav class="header-nav">
 							<div class="header-nav__logo">
 								<a href="home.html">
@@ -47,7 +47,7 @@
 							</div>
 							<h2 class="header-nav__title">Адвокатське обʼєднання BARRISTERS</h2>
 							<ul class="header-nav__list">
-								<li class="header-nav__item active">
+								<li class="header-nav__item">
 									<a href="about-us.html" class="header-nav__link">Про нас</a>
 								</li>
 								<li class="header-nav__item">
@@ -60,7 +60,7 @@
 									<a href="products.html" class="header-nav__link">Наша продукція</a>
 								</li>
 								<li class="header-nav__item">
-									<a href="#" class="header-nav__link">Контакти</a>
+									<a href="#" class="header-nav__link" data-goto-header data-goto=".contacts" data-goto-speed="600">Контакти</a>
 								</li>
 							</ul>
 							<div class="header-nav__btn">
@@ -155,7 +155,7 @@
 					</div>
 				</div>
 				<div id="popup-cart" aria-hidden="true" class="popup popup-cart">
-					<form class="popup__wrapper">
+					<form class="popup__wrapper" data-dev action="" data-validate="" data-popup-message="#cart-form-thanks">
 						<div class="popup__content">
 							<div class="popup-cart__order">
 								<div class="popup-cart__order-header">
@@ -216,18 +216,25 @@
 								</div>
 								<div class="cart-form">
 									<div class="form-group">
-										<input autocomplete="off" name="name" id="name" aria-label="Ваше ім’я" type="text" required="" class="input input-field" />
+										<input autocomplete="off" name="name" id="name" aria-label="Ваше ім’я" type="text" class="input input-field" data-required data-error="Введіть Ваше ім'я" />
 										<label for="name" class="form-label">Ваше ім’я</label>
 									</div>
 									<div class="form-group">
-										<input autocomplete="off" name="phone" id="form-phone" aria-label="Телефон" type="text" required="" class="input input-field phone-input" data-inputmask="'mask': '+38-999-999-99-99'" inputmode="text" placeholder="+38-___-___-__-__" />
+										<input autocomplete="off" name="phone" id="form-phone" aria-label="Телефон" type="text" class="input input-field phone-input" data-inputmask="'mask': '+38-999-999-99-99'" inputmode="text" placeholder="+38-___-___-__-__" data-required data-error="Введіть Ваш телефон" />
 										<label for="form-phone" class="form-label">Телефон</label>
 									</div>
 									<div class="form-group">
-										<input autocomplete="off" name="email" id="email" aria-label="Email" type="email" required="" class="input input-field" />
+										<input autocomplete="off" name="email" id="email" aria-label="Email" type="email" class="input input-field" data-required="email" data-error="Введіть Ваш E-mail" />
 										<label for="name" class="form-label">Email</label>
 									</div>
 									<div class="cart-form__type">Тип доставки:</div>
+									<div class="form-group">
+										<select name="" id="" data-required data-error="Оберіть тип доставки">
+											<option value="novaposhta">Нова пошта</option>
+											<option value="samovyviz">Самовивіз</option>
+											<option value="eshechtoto">Ще якась доставка</option>
+										</select>
+									</div>
 									<div class="form-group">
 										<textarea data-autoheight="" data-autoheight-min="65" data-autoheight-max="100" name="" id="" class="input textarea-input input-field" style="height: 65px"></textarea>
 										<label class="form-label" for="form-txt">Повідомлення або коментар
@@ -241,8 +248,29 @@
 						</div>
 					</form>
 				</div>
+				<div id="cart-form-thanks" aria-hidden="true" class="popup thanks-popup">
+					<div class="popup__wrapper">
+						<div class="popup__content">
+							<button data-close type="button" class="popup__close">
+								<i class="icon-close"></i>
+							</button>
+							<div class="thanks-popup__caption">
+								<div class="thanks-popup__icon">
+									<svg width="41" height="34" viewBox="0 0 41 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M36.139 0.0390625L13.4219 26.2627L4.63889 17.142L0.359375 21.5891L11.4002 33.0624C11.9692 33.6536 12.7379 33.9807 13.543 33.9807C13.5672 33.9807 13.5974 33.9807 13.6216 33.9807C14.457 33.9556 15.2439 33.5844 15.7947 32.9428L40.6425 4.25346L36.139 0.0390625Z" fill="#0C0C0C" />
+									</svg>
+								</div>
+								<div class="thanks-popup__title">Ваше замовлення оформленно</div>
+								<div class="thanks-popup__text">
+									Якщо у нас виникнуть додаткові питання, ми з вами зв’яжимось для
+									уточнення та підтвердження
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-				<section class="products">
+				<section class="products-page">
 					<div class="__container">
 						<h1 class="section-title section-title-xl section-title-underline">
 							<span class="d-block">Спеціалізована</span>
@@ -367,17 +395,17 @@
 						</div>
 						<div class="contacts-form__form-col">
 							<div class="contacts-form__wrapper">
-								<form action="" class="form" id="contact-form">
+								<form action="" class="form" id="contact-form" data-dev action="" data-validate="">
 									<div class="form-group">
-										<input autocomplete="off" name="name" id="name" aria-label="Ваше ім’я" type="text" required class="input input-field" />
+										<input autocomplete="off" name="name" id="name" aria-label="Ваше ім’я" type="text" class="input input-field" data-required data-error="Введіть Ваше ім'я" />
 										<label for="name" class="form-label">Ваше ім’я</label>
 									</div>
 									<div class="form-group">
-										<input autocomplete="off" name="phone" id="form-phone" aria-label="Телефон" type="text" required class="input input-field phone-input" id="phoneInput" data-inputmask="'mask': '+38-999-999-99-99'" />
+										<input autocomplete="off" name="phone" id="form-phone" aria-label="Телефон" type="text" class="input input-field phone-input" id="phoneInput" data-inputmask="'mask': '+38-999-999-99-99'" data-required data-error="Введіть Ваш телефон" />
 										<label for="form-phone" class="form-label">Телефон</label>
 									</div>
 									<div class="form-group">
-										<textarea data-autoheight data-autoheight-min="65" data-autoheight-max="100" name="" id="" class="input textarea-input input-field" id="form-txt"></textarea>
+										<textarea data-autoheight data-autoheight-min="65" data-autoheight-max="100" name="" id="" class="input textarea-input input-field" id="form-txt" data-required data-error="Напишіть Ваш запит"></textarea>
 										<label class="form-label" for="form-txt">Напишить сюди ваш запит
 										</label>
 									</div>
@@ -388,7 +416,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<button type="submit" class="btn hero-btn hero-btn-invert">
+										<button type="submit" value="SEND" id="submit" class="btn hero-btn hero-btn-invert">
 											<span>Надіслати</span>
 										</button>
 									</div>
@@ -544,7 +572,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221005205632"></script>
+	<script src="js/app.min.js?_v=20221011092008"></script>
 </body>
 
 </html>

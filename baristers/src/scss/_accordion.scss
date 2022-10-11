@@ -24,6 +24,9 @@
     padding-top: 42px;
     padding-bottom: 55px;
     position: relative;
+    .spollers__title-name {
+      max-width: 70%;
+    }
     &::after {
       content: "";
       position: absolute;

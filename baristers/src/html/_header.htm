@@ -6,7 +6,7 @@
           <img src="@img/logo.svg" alt="Baristers" />
         </a>
       </div>
-      <div class="header-nav__wrapper">
+      <div class="header-nav__wrapper" data-fullscreen>
         <nav class="header-nav">
           <div class="header-nav__logo">
             <a href="home.html">
@@ -31,7 +31,7 @@
           </div>
           <h2 class="header-nav__title">Адвокатське обʼєднання BARRISTERS</h2>
           <ul class="header-nav__list">
-            <li class="header-nav__item active">
+            <li class="header-nav__item">
               <a href="about-us.html" class="header-nav__link">Про нас</a>
             </li>
             <li class="header-nav__item">
@@ -46,7 +46,14 @@
               >
             </li>
             <li class="header-nav__item">
-              <a href="#" class="header-nav__link">Контакти</a>
+              <a
+                href="#"
+                class="header-nav__link"
+                data-goto-header
+                data-goto=".contacts"
+                data-goto-speed="600"
+                >Контакти</a
+              >
             </li>
           </ul>
           <div class="header-nav__btn">

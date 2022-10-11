@@ -24,6 +24,9 @@ body::after {
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
   pointer-events: none;
+  @media (max-width: 575px) {
+    padding: 0 5px;
+  }
 }
 .popup_show {
   z-index: 150;
@@ -58,5 +61,61 @@ body::after {
   opacity: 0;
   .lock & {
     visibility: visible;
+  }
+}
+
+.thanks-popup {
+  .thanks-popup__caption {
+    text-align: center;
+  }
+  .popup__content {
+    background-color: #fff;
+    padding: 100px;
+    @media (max-width: 768px) {
+      padding: 50px;
+    }
+  }
+  .popup__close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 32px;
+    @media (max-width: 768px) {
+      right: 15px;
+      top: 15px;
+    }
+  }
+  .thanks-popup__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(150, 150, 150, 0.94);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 18px;
+  }
+  .thanks-popup__title {
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 78px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #060606;
+    max-width: 610px;
+    margin: 0 auto 40px;
+    @media (max-width: 1024px) {
+      font-size: 42px;
+      line-height: 115%;
+    }
+  }
+  .thanks-popup__text {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #000000;
+    max-width: 330px;
+    margin: 0 auto;
   }
 }

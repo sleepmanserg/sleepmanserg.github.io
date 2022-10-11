@@ -1,5 +1,5 @@
 // Подключение функционала "Чертогов Фрилансера"
-import { isMobile, getHash } from "../functions.js";
+import { isMobile, getHash, menuOpen, menuClose } from "../functions.js";
 import { flsModules } from "../../files/modules.js";
 // Модуль прокрутки к блоку
 import { gotoBlock } from "./gotoblock.js";
@@ -27,7 +27,13 @@ export function pageNavigation() {
 				const noHeader = gotoLink.hasAttribute('data-goto-header') ? true : false;
 				const gotoSpeed = gotoLink.dataset.gotoSpeed ? gotoLink.dataset.gotoSpeed : 500;
 				const offsetTop = gotoLink.dataset.gotoTop ? parseInt(gotoLink.dataset.gotoTop) : 0;
-				gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop);
+				if (menuOpen) {
+					console.log('hello')
+					menuClose();
+					setTimeout(() => {
+						gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop);
+					}, 550);
+				}
 				e.preventDefault();
 			}
 		} else if (e.type === "watcherCallback" && e.detail) {

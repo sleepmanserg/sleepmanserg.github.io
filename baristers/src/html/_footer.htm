@@ -12,7 +12,14 @@
         </div>
         <div class="contacts-form__form-col">
           <div class="contacts-form__wrapper">
-            <form action="" class="form" id="contact-form">
+            <form
+              action=""
+              class="form"
+              id="contact-form"
+              data-dev
+              action=""
+              data-validate=""
+            >
               <div class="form-group">
                 <input
                   autocomplete="off"
@@ -20,8 +27,9 @@
                   id="name"
                   aria-label="Ваше ім’я"
                   type="text"
-                  required
                   class="input input-field"
+                  data-required
+                  data-error="Введіть Ваше ім'я"
                 />
                 <label for="name" class="form-label">Ваше ім’я</label>
               </div>
@@ -32,10 +40,11 @@
                   id="form-phone"
                   aria-label="Телефон"
                   type="text"
-                  required
                   class="input input-field phone-input"
                   id="phoneInput"
                   data-inputmask="'mask': '+38-999-999-99-99'"
+                  data-required
+                  data-error="Введіть Ваш телефон"
                 />
                 <label for="form-phone" class="form-label">Телефон</label>
               </div>
@@ -48,6 +57,8 @@
                   id=""
                   class="input textarea-input input-field"
                   id="form-txt"
+                  data-required
+                  data-error="Напишіть Ваш запит"
                 ></textarea>
                 <label class="form-label" for="form-txt"
                   >Напишить сюди ваш запит
@@ -60,7 +71,12 @@
                 </div>
               </div>
               <div class="form-group">
-                <button type="submit" class="btn hero-btn hero-btn-invert">
+                <button
+                  type="submit"
+                  value="SEND"
+                  id="submit"
+                  class="btn hero-btn hero-btn-invert"
+                >
                   <span>Надіслати</span>
                 </button>
               </div>

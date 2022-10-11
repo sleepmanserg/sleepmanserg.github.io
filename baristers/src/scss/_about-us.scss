@@ -1,8 +1,20 @@
 .about-us-intro {
   padding-top: 65px;
   position: relative;
+  overflow: hidden;
   .section-title {
     max-width: 860px;
+    @media (max-width: 768px) {
+      max-width: 550px;
+    }
+  }
+  @media (max-width: 1024px) {
+    .section-text.about-text {
+      max-width: 680px;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 40px;
   }
   .about-us-intro__img {
     position: relative;
@@ -15,6 +27,12 @@
       height: 100%;
       max-width: 100%;
       object-fit: cover;
+    }
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+    @media (max-width: 768px) {
+      height: 160px;
     }
   }
   .about-us-intro__info {
@@ -33,32 +51,68 @@
     .section-text {
       margin-bottom: 53px;
     }
+    @media (max-width: 768px) {
+      padding-top: 40px;
+    }
   }
 }
 
 .about-achievements {
   padding-top: 75px;
+  text-align: center;
+  overflow: hidden;
   .section-title {
     margin-bottom: 21px;
   }
   .about-achievements__header {
     margin-bottom: 60px;
+    text-align: left;
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 40px;
   }
 }
 
 .about-achievements__info {
-  padding-top: 90px;
-  padding-bottom: 90px;
-  .__container {
-    display: flex;
-    align-items: center;
-  }
+  padding-top: 60px;
+  padding-bottom: 40px;
   .achievements-title {
     font-weight: 600;
     font-size: 28px;
     line-height: 34px;
     color: #000000;
     flex: 0 0 400px;
+  }
+  .achievements-list {
+    padding-top: 40px;
+    max-width: 1280px;
+    // padding-left: 60px;
+    // padding-right: 60px;
+    .achievements-list__item {
+      // max-width: 220px;
+    }
+    .slider-bottom-nav {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 0;
+      z-index: 3;
+      pointer-events: none;
+    }
+    .slider-bottom-nav-btns {
+      width: 100%;
+      justify-content: space-between;
+    }
+    .slider-btn {
+      // pointer-events: all;
+    }
   }
 }
 
@@ -68,17 +122,23 @@
   z-index: 2;
   @media (min-width: 1900px) {
     max-width: 80%;
+    font-size: 24px;
   }
 }
 
 .about-info {
   padding-top: 77px;
   padding-bottom: 82px;
+  overflow: hidden;
   .section-text {
     margin-bottom: 34px;
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+  @media (max-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .about-us-intro__img {
     margin-bottom: 62px;
@@ -88,10 +148,17 @@
       max-width: 100%;
       width: 100%;
     }
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
   }
 }
 
 .support {
+  overflow: hidden;
   .support-title {
     font-weight: 600;
     font-size: 36px;
@@ -109,6 +176,9 @@
       width: 10%;
       height: 70vh;
       background-color: #f8f8f8;
+      @media (max-width: 1024px) {
+        display: none;
+      }
     }
     &::before {
       content: "";
@@ -122,6 +192,9 @@
       background-repeat: no-repeat;
       background-position: center center;
       z-index: 3;
+      @media (max-width: 1100px) {
+        display: none;
+      }
     }
   }
 }
@@ -138,6 +211,13 @@
   @media (min-width: 1900px) {
     max-width: 80%;
   }
+  @media (max-width: 768px) {
+    padding-bottom: 40px;
+    padding-top: 30px;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
   &:last-of-type {
     border-bottom: none;
   }
@@ -147,12 +227,22 @@
     line-height: 150%;
     color: #111111;
     margin-bottom: 10px;
+    @media (max-width: 768px) {
+      text-align: center;
+      margin-bottom: 25px;
+    }
   }
   .support-info__text {
     flex: 0 0 624px;
     padding: 0 11px;
     @media (min-width: 1900px) {
       flex: 0 0 70%;
+    }
+    @media (max-width: 1024px) {
+      flex: 0 0 100%;
+    }
+    @media (max-width: 768px) {
+      order: 2;
     }
   }
   .support-info__img {
@@ -164,6 +254,12 @@
       display: block;
       max-width: 100%;
       width: 100%;
+    }
+    @media (max-width: 768px) {
+      margin: 0 auto;
+      flex: 0 0 auto;
+      margin-bottom: 24px;
+      order: 1;
     }
   }
   .support-info__list-item {
@@ -189,6 +285,11 @@
   }
   .support-info__descr {
     margin-top: 43px;
+    @media (max-width: 768px) {
+      text-align: center;
+      max-width: 90%;
+      margin: 0 auto;
+    }
   }
 }
 .support-info__descr {
@@ -199,6 +300,9 @@
   @media (min-width: 1900px) {
     max-width: 70%;
     width: 100%;
+  }
+  @media (max-width: 768px) {
+    order: 3;
   }
 }
 
@@ -211,6 +315,13 @@
 .support-footer__header {
   display: flex;
   margin-bottom: 110px;
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
   .support-footer__img {
     position: relative;
     z-index: 2;
@@ -222,6 +333,15 @@
     @media (min-width: 1900px) {
       flex: 0 0 30%;
     }
+    @media (max-width: 1024px) {
+      padding-left: 21px;
+      padding-right: 21px;
+      img,
+      picture {
+        height: 389px;
+        object-fit: cover;
+      }
+    }
   }
   .support-footer__about {
     padding-top: 115px;
@@ -229,6 +349,17 @@
     padding-right: 70px;
     padding-bottom: 70px;
     position: relative;
+    @media (max-width: 1024px) {
+      padding-top: 70px;
+      padding-left: 80px;
+    }
+    @media (max-width: 768px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -240,6 +371,33 @@
       background-color: #f5f5f5;
       @media (min-width: 1900px) {
         width: 60vw;
+      }
+      @media (max-width: 1024px) {
+        width: 85%;
+        left: 21px;
+        height: 100%;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+        left: 0;
+      }
+    }
+    &::before {
+      @media (max-width: 1024px) {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: 0;
+        width: 200px;
+        height: calc(100% + 30px);
+        background-image: url("@img/chess.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 3;
+      }
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }
@@ -260,4 +418,7 @@
 
 .about-accordion {
   margin-top: 80px;
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
 }

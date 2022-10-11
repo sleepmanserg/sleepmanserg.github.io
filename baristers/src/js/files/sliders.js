@@ -177,6 +177,33 @@ function initSliders() {
 			},
 		});
 
+		// ! Achievements slider
+
+		const achievementsSlider = new Swiper('.achievements-list', {
+			modules: [Navigation, Pagination, Autoplay],
+			// autoplay: {
+			// 	delay: 2500,
+			// 	disableOnInteraction: false,
+			// 	pauseOnMouseEnter: true
+			// },
+			slidesPerView: 4,
+			navigation: {
+				prevEl: '.slider-btn-prev',
+				nextEl: '.slider-btn-next',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				575: {
+					slidesPerView: 2,
+				},
+				1024: {
+					slidesPerView: 3
+				},
+			},
+		});
+
 		// if (!!window.IntersectionObserver) {
 		// 	let observer = new IntersectionObserver(
 		// 		(entries, observer) => {
