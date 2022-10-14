@@ -3356,6 +3356,7 @@ a.link-underline {
 
 .achievements-specialists .achievement-slider .slider-bottom-nav {
   padding-top: 35px;
+  display: none;
 }
 
 .achievements-specialists .achievement-slider .swiper-wrapper {
@@ -9257,6 +9258,12 @@ button.swiper-pagination-bullet {
     display: -ms-flexbox;
     display: flex;
   }
+
+  .achievements-specialists .achievement-slider .slider-bottom-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media (max-width: 900px) {
@@ -9481,6 +9488,10 @@ button.swiper-pagination-bullet {
 
   .about .about-btn .btn {
     max-width: 100%;
+  }
+
+  .achievements {
+    padding-bottom: 30px;
   }
 
   .achievements .achievement-item__text {
