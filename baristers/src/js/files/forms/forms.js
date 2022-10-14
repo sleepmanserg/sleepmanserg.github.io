@@ -374,3 +374,31 @@ export function formRating() {
 		}
 	}
 }
+
+//! Search input dropdown
+
+export function searchInputDropdown() {
+	const inputDropdowns = document.querySelectorAll('[data-search]');
+	if (inputDropdowns) {
+		inputDropdowns.forEach(input => {
+			input.addEventListener('input', performSearch);
+		});
+		function performSearch() {
+			if (this === document.activeElement && this.value.length > 2) {
+				this.parentElement.classList.add('search-active');
+				return;
+			} else {
+				this.parentElement.classList.remove('search-active');
+			}
+			this.addEventListener('focusout', () => {
+				this.parentElement.classList.remove('search-active');
+			});
+		}
+	}
+
+
+
+
+
+}
+

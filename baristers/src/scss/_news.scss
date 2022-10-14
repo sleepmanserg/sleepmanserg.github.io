@@ -142,6 +142,15 @@
     margin-bottom: 10px;
     max-width: 460px;
     transition: opacity 0.25s;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 19px;
+      &.text-overflow {
+        -ms-line-clamp: 4;
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+      }
+    }
   }
   .news-item__date {
     margin-bottom: 32px;

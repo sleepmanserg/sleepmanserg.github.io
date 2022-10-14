@@ -3254,7 +3254,7 @@
                 setTimeout((function() {
                     document.documentElement.classList.add("loaded");
                 }), 2300);
- //!2200
+ //!2300
                         }));
         }
         function getHash() {
@@ -4207,6 +4207,24 @@
             }));
         }
         formQuantity();
+        //! Search input dropdown
+        function searchInputDropdown() {
+            const inputDropdowns = document.querySelectorAll("[data-search]");
+            if (inputDropdowns) {
+                inputDropdowns.forEach((input => {
+                    input.addEventListener("input", performSearch);
+                }));
+                function performSearch() {
+                    if (this === document.activeElement && this.value.length > 2) {
+                        this.parentElement.classList.add("search-active");
+                        return;
+                    } else this.parentElement.classList.remove("search-active");
+                    this.addEventListener("focusout", (() => {
+                        this.parentElement.classList.remove("search-active");
+                    }));
+                }
+            }
+        }
         class SelectConstructor {
             constructor(props, data = null) {
                 let defaultConfig = {
@@ -8366,12 +8384,16 @@
                         achievementSliders[i].classList.add("swiper-container-" + i);
                         if (achievementSliderWrapper) {
                             new core(".swiper-container-" + i, {
-                                modules: [ Navigation ],
+                                modules: [ Navigation, Pagination ],
                                 slidesPerView: 2,
                                 spaceBetween: 40,
                                 navigation: {
                                     nextEl: ".achievement-slider__next",
                                     prevEl: ".achievement-slider__prev"
+                                },
+                                pagination: {
+                                    el: ".swiper-pagination",
+                                    type: "progressbar"
                                 },
                                 breakpoints: {
                                     319: {
@@ -8574,6 +8596,7 @@
         });
         materialInputs();
         formSubmit();
+        searchInputDropdown();
         pageNavigation();
         headerScroll();
         animateOnScroll();

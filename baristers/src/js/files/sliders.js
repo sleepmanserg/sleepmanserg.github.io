@@ -351,13 +351,17 @@ function initSliders() {
 
 				if (achievementSliderWrapper) {
 					const achievementSlider = new Swiper('.swiper-container-' + i, {
-						modules: [Navigation],
+						modules: [Navigation, Pagination],
 						slidesPerView: 2,
 						spaceBetween: 40,
 						// grabCursor: true,
 						navigation: {
 							nextEl: '.achievement-slider__next',
 							prevEl: '.achievement-slider__prev',
+						},
+						pagination: {
+							el: ".swiper-pagination",
+							type: "progressbar",
 						},
 						breakpoints: {
 							319: {

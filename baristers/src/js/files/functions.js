@@ -29,7 +29,7 @@ export function addLoadedClass() {
 	window.addEventListener("load", function () {
 		setTimeout(function () {
 			document.documentElement.classList.add('loaded');
-		}, 2300); //!2200
+		}, 2300); //!2300
 	});
 }
 // Получение хеша в адресе сайта

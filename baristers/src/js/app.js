@@ -95,6 +95,10 @@ flsForms.formSubmit();
 /* Модуль звездного рейтинга */
 // flsForms.formRating();
 
+/* Search input dropdown */
+
+flsForms.searchInputDropdown();
+
 /* Модуль работы с select. */
 import './libs/select.js'
 

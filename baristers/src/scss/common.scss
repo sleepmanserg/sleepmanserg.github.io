@@ -112,6 +112,30 @@ a.link-underline {
   top: 50px;
 }
 
+.arrow-link {
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+  position: relative;
+  transition: 0.25s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: #5c5c5c;
+    }
+  }
+  &::after {
+    content: "\e901";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    font-family: "icomoon" !important;
+    font-size: 8px;
+    color: #c0c0c0;
+  }
+}
+
 .inner-page-socials.socials {
   top: 230px;
   .socials-list__link {
