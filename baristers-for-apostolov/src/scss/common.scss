@@ -1,0 +1,1386 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+@mixin headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @content;
+  }
+}
+
+.link-underline,
+a.link-underline {
+  color: #fff;
+  display: block;
+  font-size: 1rem;
+  line-height: 19px;
+  text-decoration: underline;
+}
+
+.section-title {
+  font-weight: 400;
+  font-size: 62px;
+  line-height: 76px;
+  color: var(--dark-secondary-clr);
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  &.section-title-xl {
+    font-weight: 300;
+    font-size: 96px;
+    line-height: 116.8%;
+    letter-spacing: 0.03em;
+    color: #000000;
+    @media (max-width: 1080px) {
+      font-size: 64px;
+      letter-spacing: 0.03em;
+    }
+    @media (max-width: 768px) {
+      text-align: left;
+      font-size: 42px;
+    }
+    @media (max-width: 575px) {
+      font-size: 32px;
+      text-align: left;
+    }
+  }
+  &.section-title-sm {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #111111;
+  }
+}
+.section-subtitle {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0.03em;
+  color: #111111;
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.section-text {
+  font-size: 16px;
+  line-height: 150%;
+  color: #111111;
+  &.mw-100 {
+    @media (max-width: 1024px) {
+      max-width: 100% !important;
+    }
+  }
+}
+.text-white {
+  color: #fff;
+}
+
+.inner-hr {
+  border: 1px solid #dddddd;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.mt-5 {
+  margin-top: 3.5rem;
+}
+
+.pt-120 {
+  padding-top: 120px;
+  @media (max-width: 1024px) {
+    padding-top: 40px;
+  }
+}
+
+.pb-120 {
+  padding-bottom: 120px;
+}
+
+.sticky {
+  position: sticky;
+  top: 50px;
+}
+
+.arrow-link {
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+  position: relative;
+  transition: 0.25s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: #5c5c5c;
+    }
+  }
+  &::after {
+    content: "\e901";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+    font-family: "icomoon" !important;
+    font-size: 8px;
+    color: #c0c0c0;
+  }
+}
+
+.inner-page-socials.socials {
+  top: 230px;
+  .socials-list__link {
+    color: #5c5c5c;
+  }
+  @media (max-width: 1024px) {
+    top: 75px;
+  }
+  @media (max-width: 780px) {
+    display: none;
+  }
+}
+
+@keyframes right-in {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes left-in {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}
+
+@keyframes left-in-blur {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+    filter: blur(5px);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes bounce-out {
+  0%,
+  100%,
+  20%,
+  40%,
+  60%,
+  80% {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  40% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  60% {
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  [data-fade-in] {
+    transition: none;
+  }
+}
+
+@keyframes heroImgAnim {
+  from {
+    transform: scale(1.1);
+    filter: blur(5px);
+  }
+  to {
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+.swiper {
+  position: relative;
+}
+
+.slider-nav {
+  display: none;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 3;
+  @media (max-width: 991.98px) {
+    display: flex;
+  }
+}
+
+.slider-btn {
+  width: 46px;
+  height: 46px;
+  background-color: #838383;
+  border: 1px solid #838383;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: #fff;
+  pointer-events: all;
+  transition: 0.25s;
+  &.slider-btn-prev {
+    transform: rotate(180deg);
+  }
+  &.swiper-button-disabled {
+    border-color: #f1f1f1;
+    background-color: #fff;
+    color: #b1b1b1;
+  }
+}
+
+.slider-bottom-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  .swiper-pagination {
+    position: relative;
+    height: 3px !important;
+    flex: 0 0 70%;
+    --swiper-theme-color: #000000;
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+  .slider-bottom-nav-btns {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    @media (max-width: 480px) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      justify-content: space-between;
+      z-index: 3;
+      pointer-events: none;
+      .slider-btn {
+        pointer-events: all;
+      }
+    }
+  }
+}
+
+.bg-grey {
+  background-color: var(--grey-light-secondary);
+}
+
+.text-overflow {
+  ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.d-block {
+  display: block;
+}
+
+.section-title-underline {
+  position: relative;
+  span {
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #b9b9b9;
+    }
+  }
+}
+
+.inner-page-header {
+  padding-bottom: 290px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  @media (max-width: 768px) {
+    padding-bottom: 175px;
+    background-position-x: -40px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      183.27deg,
+      rgba(25, 29, 42, 0.92) 7.67%,
+      rgba(4, 4, 4, 0) 57.1%
+    );
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      12.67deg,
+      rgba(25, 29, 42, 0.9) 10.13%,
+      rgba(4, 4, 4, 0) 76.55%
+    );
+    opacity: 0.9;
+  }
+  .inner-page-header__block {
+    position: absolute;
+    left: 0;
+    bottom: 38px;
+    padding: 0 90px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    .hero-btn {
+      margin-left: auto;
+    }
+    @media (max-width: 1024px) {
+      padding: 0 42px;
+      .hero-btn {
+        display: none;
+      }
+    }
+    @media (max-width: 768px) {
+      padding-left: 17px;
+      padding-right: 17px;
+      bottom: 15px;
+    }
+  }
+  .section-title {
+    color: #fff;
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+  }
+}
+
+/***************************************************
+ * Generated by SVG Artista on 10/5/2022, 8:35:58 PM
+ * MIT license (https://opensource.org/licenses/MIT)
+ * W. https://svgartista.net
+ **************************************************/
+
+@-webkit-keyframes animate-svg-fill-1 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-1 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-1 {
+  -webkit-animation: animate-svg-fill-1 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0s both;
+  animation: animate-svg-fill-1 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+}
+
+@-webkit-keyframes animate-svg-fill-2 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-2 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-2 {
+  -webkit-animation: animate-svg-fill-2 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.04s both;
+  animation: animate-svg-fill-2 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.04s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-3 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-3 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-3 {
+  -webkit-animation: animate-svg-fill-3 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.08s both;
+  animation: animate-svg-fill-3 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.08s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-4 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-4 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-4 {
+  -webkit-animation: animate-svg-fill-4 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.12s both;
+  animation: animate-svg-fill-4 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-5 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-5 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-5 {
+  -webkit-animation: animate-svg-fill-5 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.16s both;
+  animation: animate-svg-fill-5 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.16s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-6 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-6 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-6 {
+  -webkit-animation: animate-svg-fill-6 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.2s both;
+  animation: animate-svg-fill-6 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.2s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-7 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-7 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-7 {
+  -webkit-animation: animate-svg-fill-7 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.24s both;
+  animation: animate-svg-fill-7 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-8 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-8 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-8 {
+  -webkit-animation: animate-svg-fill-8 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.28s both;
+  animation: animate-svg-fill-8 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.28s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-9 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-9 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-9 {
+  -webkit-animation: animate-svg-fill-9 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+    0.32s both;
+  animation: animate-svg-fill-9 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.32s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-10 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-10 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-10 {
+  -webkit-animation: animate-svg-fill-10 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s both;
+  animation: animate-svg-fill-10 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-11 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-11 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-11 {
+  -webkit-animation: animate-svg-fill-11 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.4s both;
+  animation: animate-svg-fill-11 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.4s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-12 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-12 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-12 {
+  -webkit-animation: animate-svg-fill-12 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.44s both;
+  animation: animate-svg-fill-12 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.44s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-13 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-13 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-13 {
+  -webkit-animation: animate-svg-fill-13 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s both;
+  animation: animate-svg-fill-13 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-14 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-14 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-14 {
+  -webkit-animation: animate-svg-fill-14 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.52s both;
+  animation: animate-svg-fill-14 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.52s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-15 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-15 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-15 {
+  -webkit-animation: animate-svg-fill-15 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.56s both;
+  animation: animate-svg-fill-15 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.56s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-16 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-16 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-16 {
+  -webkit-animation: animate-svg-fill-16 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s both;
+  animation: animate-svg-fill-16 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-17 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-17 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-17 {
+  -webkit-animation: animate-svg-fill-17 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.64s both;
+  animation: animate-svg-fill-17 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.64s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-18 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-18 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-18 {
+  -webkit-animation: animate-svg-fill-18 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.68s both;
+  animation: animate-svg-fill-18 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.68s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-19 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-19 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-19 {
+  -webkit-animation: animate-svg-fill-19 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s both;
+  animation: animate-svg-fill-19 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-20 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-20 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-20 {
+  -webkit-animation: animate-svg-fill-20 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.76s both;
+  animation: animate-svg-fill-20 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.76s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-21 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-21 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-21 {
+  -webkit-animation: animate-svg-fill-21 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+  animation: animate-svg-fill-21 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-22 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-22 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-22 {
+  -webkit-animation: animate-svg-fill-22 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.84s both;
+  animation: animate-svg-fill-22 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.84s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-23 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-23 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-23 {
+  -webkit-animation: animate-svg-fill-23 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.88s both;
+  animation: animate-svg-fill-23 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.88s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-24 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-24 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-24 {
+  -webkit-animation: animate-svg-fill-24 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.92s both;
+  animation: animate-svg-fill-24 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.92s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-25 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-25 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-25 {
+  -webkit-animation: animate-svg-fill-25 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 0.96s both;
+  animation: animate-svg-fill-25 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.96s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-26 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-26 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-26 {
+  -webkit-animation: animate-svg-fill-26 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 1s both;
+  animation: animate-svg-fill-26 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-27 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-27 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-27 {
+  -webkit-animation: animate-svg-fill-27 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 1.04s both;
+  animation: animate-svg-fill-27 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.04s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-28 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-28 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-28 {
+  -webkit-animation: animate-svg-fill-28 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 1.08s both;
+  animation: animate-svg-fill-28 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.08s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-29 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-29 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-29 {
+  -webkit-animation: animate-svg-fill-29 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 1.12s both;
+  animation: animate-svg-fill-29 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.12s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-30 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-30 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-30 {
+  -webkit-animation: animate-svg-fill-30 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 1.16s both;
+  animation: animate-svg-fill-30 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.16s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-31 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-31 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-31 {
+  -webkit-animation: animate-svg-fill-31 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s both;
+  animation: animate-svg-fill-31 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-32 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+@keyframes animate-svg-fill-32 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(55, 52, 53);
+  }
+}
+
+.preloader-logo-32 {
+  -webkit-animation: animate-svg-fill-32 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 1.24s both;
+  animation: animate-svg-fill-32 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.24s
+    both;
+}
+
+@-webkit-keyframes animate-svg-fill-33 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 255, 255);
+  }
+}
+
+@keyframes animate-svg-fill-33 {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(255, 255, 255);
+  }
+}
+
+.preloader-logo-33 {
+  -webkit-animation: animate-svg-fill-33 0.5s
+    cubic-bezier(0.47, 0, 0.745, 0.715) 1.28s both;
+  animation: animate-svg-fill-33 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1.28s
+    both;
+}
+
+.error-page {
+  background-image: url("@img/404.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      183.27deg,
+      rgba(25, 29, 42, 0.92) 7.67%,
+      rgba(4, 4, 4, 0) 57.1%
+    );
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      12.67deg,
+      rgba(25, 29, 42, 0.9) 10.13%,
+      rgba(4, 4, 4, 0) 76.55%
+    );
+  }
+  > .error__container {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 70%;
+    @media (max-width: 768px) {
+      max-width: 90%;
+    }
+  }
+  .error-page__caption {
+    color: #fff;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+    z-index: 2;
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+  .error-page__number {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 116.8%;
+    letter-spacing: 0.03em;
+    margin-bottom: 34px;
+  }
+  .error-page__text {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    max-width: 570px;
+    margin-bottom: 27px;
+    @media (max-width: 768px) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+  .error-page__link {
+    font-size: 24px;
+    line-height: 29px;
+    span {
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
