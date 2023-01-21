@@ -1,0 +1,77 @@
+// Font family styles
+// .tk-meno-banner {
+//   font-family: $fontMeno, serif;
+// }
+// .tk-futura-pt {
+//   font-family: $fontFutura, sans-serif;
+// }
+// .tk-proxima-nova {
+//   font-family: $fontFamily, sans-serif;
+// }
+// Font weights
+.fw-100 {
+  font-weight: $fontWeight100;
+}
+.fw-300 {
+  font-weight: $fontWeight300;
+}
+.fw-400 {
+  font-weight: $fontWeight400;
+}
+.fw-500 {
+  font-weight: $fontWeight500;
+}
+.fw-600 {
+  font-weight: $fontWeight600;
+}
+.fw-700 {
+  font-weight: $fontWeight700;
+}
+.fw-800 {
+  font-weight: $fontWeight800;
+}
+.fw-900 {
+  font-weight: $fontWeight900;
+}
+// Font size styles
+[class*="text-"] {
+  line-height: 1.5;
+}
+.text-xs {
+  @include adaptive-font(17, 16);
+}
+.text-sm {
+  @include adaptive-font(20, 18);
+}
+.text-md {
+  @include adaptive-font(22, 18);
+}
+.text-lg {
+  @include adaptive-font(32, 24);
+}
+.text-xl {
+  @include adaptive-font(40, 30);
+}
+.text-xxl {
+  @include adaptive-font(45, 35);
+}
+// Text styles
+.text-center {
+  text-align: center;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+// Text colors
+.text-white {
+  color: $clr-white;
+}
+.text-grey {
+  color: $grey;
+}
+.text-accent {
+  color: $blue-accent;
+}
