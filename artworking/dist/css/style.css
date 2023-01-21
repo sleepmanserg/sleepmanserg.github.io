@@ -718,15 +718,25 @@ textarea.input {
 
 .header._header-scroll {
   position: fixed;
-  top: -200%;
+  -webkit-transform: translateY(-200%);
+      -ms-transform: translateY(-200%);
+          transform: translateY(-200%);
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.header._header-scroll .header__container::before {
+  display: none;
+}
+
 .header._header-show {
-  top: 0;
-  -webkit-transition: top 0.5s ease 0s;
-  -o-transition: top 0.5s ease 0s;
-  transition: top 0.5s ease 0s;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
   z-index: 101;
 }
 

@@ -6,12 +6,17 @@
   width: 100%;
   &._header-scroll {
     position: fixed;
-    top: -200%;
+    transform: translateY(-200%);
     background-color: rgba(0, 0, 0, 0.8);
+    .header__container {
+      &::before {
+        display: none;
+      }
+    }
   }
   &._header-show {
-    top: 0;
-    transition: top 0.5s ease 0s;
+    transform: translateY(0);
+    transition: transform 0.5s ease 0s;
     z-index: 101;
     .header-logo {
       width: rem(40);
