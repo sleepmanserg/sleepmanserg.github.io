@@ -136,7 +136,7 @@
   @media (max-width: $tablet) {
     width: 70%;
   }
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     width: 100%;
   }
 }

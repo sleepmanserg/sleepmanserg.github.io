@@ -1125,12 +1125,6 @@ textarea.input {
   }
 }
 
-@media (max-width: 768px) {
-  .header-nav--offset {
-    width: 100%;
-  }
-}
-
 @media (max-width: 767px) {
   .text-xs {
     font-size: calc(
@@ -1210,6 +1204,10 @@ textarea.input {
     -webkit-transition: height 0.2s;
     -o-transition: height 0.2s;
     transition: height 0.2s;
+  }
+
+  .header-nav--offset {
+    width: 100%;
   }
 }
 
