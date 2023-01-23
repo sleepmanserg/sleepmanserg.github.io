@@ -632,7 +632,7 @@ textarea.input {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: calc(100vh - env(safe-area-inset-bottom, 0) - env(safe-area-inset-top, 0));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -643,10 +643,16 @@ textarea.input {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
-  z-index: 101;
+  z-index: 151;
   -webkit-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .preloader {
+    min-height: -webkit-fill-available;
+  }
 }
 
 .preloader .preloader-logo {
@@ -790,6 +796,7 @@ textarea.input {
   position: relative;
   padding-top: 3.875rem;
   padding-bottom: 1.4375rem;
+  max-width: 100%;
 }
 
 .header .header__container::before {
@@ -882,9 +889,7 @@ textarea.input {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  min-height: calc(100vh - env(safe-area-inset-bottom, 0) - env(safe-area-inset-top, 0));
   overflow: auto;
   width: 40%;
   background-color: #fff;

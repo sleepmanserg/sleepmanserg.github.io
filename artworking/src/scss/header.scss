@@ -47,6 +47,7 @@
     position: relative;
     padding-top: rem(62);
     padding-bottom: rem(23);
+    max-width: 100%;
     @media (max-width: $tablet) {
       padding-top: rem(25);
       padding-bottom: rem(25);
@@ -133,9 +134,9 @@
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  min-height: calc(
+    100vh - env(safe-area-inset-bottom, 0) - env(safe-area-inset-top, 0)
+  );
   overflow: auto;
   width: 40%;
   background-color: $clr-white;
