@@ -65,6 +65,10 @@ h6 {
   font-size: inherit;
 }
 
+.menu-open.touch body::before {
+  display: none;
+}
+
 body {
   position: relative;
 }
@@ -717,35 +721,49 @@ textarea.input {
 }
 
 .header._header-scroll {
-  position: fixed;
-  -webkit-transform: translateY(-200%);
-      -ms-transform: translateY(-200%);
-          transform: translateY(-200%);
   background-color: rgba(0, 0, 0, 0.8);
+  -webkit-animation: header 0.5s ease 0.5s 1 forwards;
+          animation: header 0.5s ease 0.5s 1 forwards;
+  z-index: 101;
+  height: 80px;
+}
+
+@-webkit-keyframes header {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    position: fixed;
+  }
+}
+
+@keyframes header {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    position: fixed;
+  }
 }
 
 .header._header-scroll .header__container::before {
   display: none;
 }
 
-.header._header-show {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: -webkit-transform 0.5s ease 0s;
-  transition: -webkit-transform 0.5s ease 0s;
-  -o-transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
-  z-index: 101;
-}
-
-.header._header-show .header-logo {
+.header._header-scroll .header-logo {
   width: 2.5rem;
   height: 5rem;
 }
 
-.header._header-show .header__container {
+.header._header-scroll .header__container {
   padding-top: 0rem;
   padding-bottom: 0rem;
   -webkit-box-align: center;
@@ -753,11 +771,11 @@ textarea.input {
           align-items: center;
 }
 
-.header._header-show .header__container::before {
+.header._header-scroll .header__container::before {
   display: none;
 }
 
-.header._header-show .header-menu {
+.header._header-scroll .header-menu {
   margin-top: 0rem;
 }
 
@@ -1195,7 +1213,7 @@ textarea.input {
   }
 
   .header-nav--offset {
-    width: 70%;
+    width: 100%;
   }
 
   .hero .hero-caption {
@@ -1214,10 +1232,6 @@ textarea.input {
     -webkit-transition: height 0.2s;
     -o-transition: height 0.2s;
     transition: height 0.2s;
-  }
-
-  .header-nav--offset {
-    width: 100%;
   }
 }
 
