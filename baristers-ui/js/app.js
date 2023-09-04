@@ -3474,7 +3474,7 @@
             window.addEventListener("load", (function() {
                 setTimeout((function() {
                     document.documentElement.classList.add("loaded");
-                }), 0);
+                }), 2e3);
  //!2300
                         }));
         }
@@ -3923,8 +3923,8 @@
             }));
         }
         function topArrrow() {
-            const toTopArrow = document.querySelector(".footer-top-btn");
-            const breakpoint = 1e3;
+            const toTopArrow = document.querySelector(".floating-buttons");
+            const breakpoint = 500;
             if (!toTopArrow) return;
             if (window.scrollY >= breakpoint) toTopArrow.classList.add("_active"); else toTopArrow.classList.remove("_active");
             const goToTop = () => {
@@ -3936,6 +3936,11 @@
             toTopArrow.addEventListener("click", goToTop);
         }
         if (document.querySelector(".footer-top-btn")) window.addEventListener("scroll", topArrrow);
+        function getFullYear() {
+            const date = new Date;
+            const year = date.getFullYear();
+            document.querySelector(".footer__year").innerHTML = year;
+        }
         class Popup {
             constructor(options) {
                 let config = {
@@ -8409,6 +8414,7 @@
                 new core(".about-slider", {
                     modules: [ Navigation, Pagination, Autoplay ],
                     spaceBetween: 40,
+                    speed: 800,
                     autoplay: {
                         delay: 2500,
                         disableOnInteraction: false,
@@ -8454,7 +8460,7 @@
                         },
                         1280: {
                             slidesPerView: 4,
-                            spaceBetween: 70
+                            spaceBetween: 60
                         }
                     }
                 });
@@ -8525,10 +8531,6 @@
                                 },
                                 1024: {
                                     slidesPerView: 5,
-                                    spaceBetween: 60
-                                },
-                                1921: {
-                                    slidesPerView: 7,
                                     spaceBetween: 60
                                 }
                             }
@@ -8748,6 +8750,7 @@
         addLoadedClass();
         menuInit();
         fullVHfix();
+        getFullYear();
         spollers();
         tabs();
         formFieldsInit({
