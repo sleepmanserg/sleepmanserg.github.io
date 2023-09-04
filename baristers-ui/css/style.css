@@ -2997,18 +2997,12 @@ a.link-underline {
 }
 
 .hero-section .hero-slider__caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   z-index: 5;
   color: var(--white-clr);
   text-align: center;
   max-width: 875px;
   width: 100%;
-  padding: 120px 40px;
+  padding: 160px 40px;
 }
 
 .hero-section .hero-slider__buttons {
@@ -9245,6 +9239,20 @@ button.swiper-pagination-bullet {
     display: none;
   }
 
+  .socials {
+    display: none;
+  }
+
+  .hero-section .socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: none;
+  }
+
   .header._header-show .header-nav__link {
     color: #fff;
   }
@@ -10231,19 +10239,6 @@ button.swiper-pagination-bullet {
 
   .btn.btn-grey {
     padding: 16px 25px 17px;
-  }
-
-  .socials {
-    display: none;
-  }
-
-  .hero-section .socials {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 
   .hero .socials.socials-absolute .socials-list {
