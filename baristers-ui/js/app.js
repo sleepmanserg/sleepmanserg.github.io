@@ -3474,9 +3474,15 @@
             window.addEventListener("load", (function() {
                 setTimeout((function() {
                     document.documentElement.classList.add("loaded");
-                }), 2e3);
+                }), 1e3);
  //!2300
-                        }));
+                                setTimeout((() => {
+                    const _$documentWidth = document.documentElement.clientWidth;
+                    const _$windowWidth = window.innerWidth;
+                    const _$scrollBarWidth = _$windowWidth - _$documentWidth;
+                    document.documentElement.style.setProperty("--scrollBarWidth", _$scrollBarWidth + "px");
+                }), 2e3);
+            }));
         }
         function getHash() {
             if (location.hash) return location.hash.replace("#", "");
