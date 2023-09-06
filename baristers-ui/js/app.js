@@ -3929,10 +3929,11 @@
             }));
         }
         function topArrrow() {
-            const toTopArrow = document.querySelector(".floating-buttons");
+            const floatingButtons = document.querySelector(".floating-buttons");
+            const toTopArrow = document.querySelector(".footer-top-btn");
             const breakpoint = 500;
-            if (!toTopArrow) return;
-            if (window.scrollY >= breakpoint) toTopArrow.classList.add("_active"); else toTopArrow.classList.remove("_active");
+            if (!floatingButtons) return;
+            if (window.scrollY >= breakpoint) floatingButtons.classList.add("_active"); else floatingButtons.classList.remove("_active");
             const goToTop = () => {
                 window.scrollTo({
                     top: 0,
