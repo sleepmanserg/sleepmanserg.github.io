@@ -1254,6 +1254,7 @@ body::after {
   -webkit-column-gap: 15px;
      -moz-column-gap: 15px;
           column-gap: 15px;
+  word-wrap: break-word;
 }
 
 .spollers__body-address svg {
