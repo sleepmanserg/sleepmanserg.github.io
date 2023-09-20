@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230906103315">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230920150318">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header" data-scroll="300" data-scroll-show="0">
+		<header class="header" data-scroll="150" data-scroll-show="0">
 			<div class="header__container">
 				<div class="header-wrapper" data-lp>
 					<div class="header-logo">
@@ -138,7 +138,6 @@
 				</div>
 			</div>
 		</header>
-
 		<main class="page">
 			<section class="hero-section">
 				<div class="hero-slider__caption">
@@ -482,106 +481,175 @@
 						<a href="#" class="btn btn-border ">Всі клієнти</a>
 					</div>
 					<div class="slider-wrapper">
-						<div class="inner-slider__header">
-							<ul>
-								<li class="active">
-									<a href="#">Провідні компанії</a>
+						<div data-tabs class="tabs inner-slider__header">
+							<nav data-tabs-titles class="tabs__navigation">
+								<button type="button" class="tabs__title _tab-active">
+									Провідні компанії
 									<span class="achievement-slider__count">0</span>
-								</li>
-								<li>
-									<a href="#">Публічні діячі та бізнесмени</a>
+								</button>
+								<button type="button" class="tabs__title">
+									Публічні діячі та бізнесмени
 									<span class="achievement-slider__count">0</span>
-								</li>
-							</ul>
-						</div>
-						<div class="swiper clients-slider">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="clients-slider__item clients-company">
-										<div class="clients-slider__img">
-											<picture><source srcset="img/clients/pumb.webp" type="image/webp"><img src="img/clients/pumb.png" alt="Пумб" /></picture>
+								</button>
+							</nav>
+							<div data-tabs-body class="tabs__content">
+								<div class="tabs__body">
+									<div class="swiper clients-slider">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="clients-slider__item clients-company">
+													<div class="clients-slider__img">
+														<picture><source srcset="img/clients/pumb.webp" type="image/webp"><img src="img/clients/pumb.png" alt="Пумб" /></picture>
+													</div>
+													<div class="clients-slider__title">ПУМБ</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item clients-company">
+													<div class="clients-slider__img">
+														<picture><source srcset="img/clients/vodokanal.webp" type="image/webp"><img src="img/clients/vodokanal.png" alt="Київводоканал" /></picture>
+													</div>
+													<div class="clients-slider__title">Київводоканал</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item clients-company">
+													<div class="clients-slider__img">
+														<picture><source srcset="img/clients/uz.webp" type="image/webp"><img src="img/clients/uz.png" alt="УКРзалізниця" /></picture>
+													</div>
+													<div class="clients-slider__title">УКРзалізниця</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item clients-company">
+													<div class="clients-slider__img">
+														<picture><source srcset="img/clients/privat.webp" type="image/webp"><img src="img/clients/privat.png" alt="АКБ ПриватБанк" /></picture>
+													</div>
+													<div class="clients-slider__title">АКБ ПриватБанк</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item clients-company">
+													<div class="clients-slider__img">
+														<picture><source srcset="img/clients/asociantion.webp" type="image/webp"><img src="img/clients/asociantion.png" alt="Асоціація Адвокатів України" /></picture>
+													</div>
+													<div class="clients-slider__title">
+														Асоціація Адвокатів України
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item clients-company">
+													<div class="clients-slider__img">
+														<picture><source srcset="img/clients/vodokanal.webp" type="image/webp"><img src="img/clients/vodokanal.png" alt="Київводоканал" /></picture>
+													</div>
+													<div class="clients-slider__title">Київводоканал</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item clients-company">
+													<div class="clients-slider__img">
+														<picture><source srcset="img/clients/uz.webp" type="image/webp"><img src="img/clients/uz.png" alt="УКРзалізниця" /></picture>
+													</div>
+													<div class="clients-slider__title">УКРзалізниця</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item clients-company">
+													<div class="clients-slider__img">
+														<picture><source srcset="img/clients/privat.webp" type="image/webp"><img src="img/clients/privat.png" alt="АКБ ПриватБанк" /></picture>
+													</div>
+													<div class="clients-slider__title">АКБ ПриватБанк</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item clients-company">
+													<div class="clients-slider__img">
+														<picture><source srcset="img/clients/asociantion.webp" type="image/webp"><img src="img/clients/asociantion.png" alt="Асоціація Адвокатів України" /></picture>
+													</div>
+													<div class="clients-slider__title">
+														Асоціація Адвокатів України
+													</div>
+												</div>
+											</div>
 										</div>
-										<div class="clients-slider__title">ПУМБ</div>
+										<div class="clients-slider-nav slider-bottom-nav">
+											<div class="swiper-pagination slider-bottom-pagination"></div>
+											<div class="slider-bottom-nav-btns">
+												<button class="slider-btn slider-btn-prev clients-slider__prev">
+													<i class="icon-arrow-slider"></i>
+												</button>
+												<button class="slider-btn slider-btn-next clients-slider__next">
+													<i class="icon-arrow-slider"></i>
+												</button>
+											</div>
+										</div>
 									</div>
 								</div>
-								<div class="swiper-slide">
-									<div class="clients-slider__item clients-company">
-										<div class="clients-slider__img">
-											<picture><source srcset="img/clients/vodokanal.webp" type="image/webp"><img src="img/clients/vodokanal.png" alt="Київводоканал" /></picture>
+								<div class="tabs__body">
+									<div class="swiper clients-slider">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="clients-slider__item">
+													<div class="clients-slider__title">Геннадій Корбан</div>
+													<div class="clients-slider__subtitle">Провідний бізнесмен</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item">
+													<div class="clients-slider__title">Надія Савченко</div>
+													<div class="clients-slider__subtitle">Провідний бізнесмен</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item">
+													<div class="clients-slider__title">Тетяна Чорновол</div>
+													<div class="clients-slider__subtitle">Провідний бізнесмен</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item">
+													<div class="clients-slider__title">Віталій Кличко</div>
+													<div class="clients-slider__subtitle">Провідний бізнесмен</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item">
+													<div class="clients-slider__title">Владислав Мангер</div>
+													<div class="clients-slider__subtitle">Провідний бізнесмен</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item">
+													<div class="clients-slider__title">Тетяна Чорновол</div>
+													<div class="clients-slider__subtitle">Провідний бізнесмен</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item">
+													<div class="clients-slider__title">Віталій Кличко</div>
+													<div class="clients-slider__subtitle">Провідний бізнесмен</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="clients-slider__item">
+													<div class="clients-slider__title">Владислав Мангер</div>
+													<div class="clients-slider__subtitle">Провідний бізнесмен</div>
+												</div>
+											</div>
 										</div>
-										<div class="clients-slider__title">Київводоканал</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="clients-slider__item clients-company">
-										<div class="clients-slider__img">
-											<picture><source srcset="img/clients/uz.webp" type="image/webp"><img src="img/clients/uz.png" alt="УКРзалізниця" /></picture>
-										</div>
-										<div class="clients-slider__title">УКРзалізниця</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="clients-slider__item clients-company">
-										<div class="clients-slider__img">
-											<picture><source srcset="img/clients/privat.webp" type="image/webp"><img src="img/clients/privat.png" alt="АКБ ПриватБанк" /></picture>
-										</div>
-										<div class="clients-slider__title">АКБ ПриватБанк</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="clients-slider__item clients-company">
-										<div class="clients-slider__img">
-											<picture><source srcset="img/clients/asociantion.webp" type="image/webp"><img src="img/clients/asociantion.png" alt="Асоціація Адвокатів України" /></picture>
-										</div>
-										<div class="clients-slider__title">
-											Асоціація Адвокатів України
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="clients-slider__item clients-company">
-										<div class="clients-slider__img">
-											<picture><source srcset="img/clients/vodokanal.webp" type="image/webp"><img src="img/clients/vodokanal.png" alt="Київводоканал" /></picture>
-										</div>
-										<div class="clients-slider__title">Київводоканал</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="clients-slider__item clients-company">
-										<div class="clients-slider__img">
-											<picture><source srcset="img/clients/uz.webp" type="image/webp"><img src="img/clients/uz.png" alt="УКРзалізниця" /></picture>
-										</div>
-										<div class="clients-slider__title">УКРзалізниця</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="clients-slider__item clients-company">
-										<div class="clients-slider__img">
-											<picture><source srcset="img/clients/privat.webp" type="image/webp"><img src="img/clients/privat.png" alt="АКБ ПриватБанк" /></picture>
-										</div>
-										<div class="clients-slider__title">АКБ ПриватБанк</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="clients-slider__item clients-company">
-										<div class="clients-slider__img">
-											<picture><source srcset="img/clients/asociantion.webp" type="image/webp"><img src="img/clients/asociantion.png" alt="Асоціація Адвокатів України" /></picture>
-										</div>
-										<div class="clients-slider__title">
-											Асоціація Адвокатів України
+										<div class="clients-slider-nav slider-bottom-nav">
+											<div class="swiper-pagination slider-bottom-pagination"></div>
+											<div class="slider-bottom-nav-btns">
+												<button class="slider-btn slider-btn-prev clients-slider__prev">
+													<i class="icon-arrow-slider"></i>
+												</button>
+												<button class="slider-btn slider-btn-next clients-slider__next">
+													<i class="icon-arrow-slider"></i>
+												</button>
+											</div>
 										</div>
 									</div>
-								</div>
-							</div>
-							<div class="clients-slider-nav slider-bottom-nav">
-								<div class="swiper-pagination slider-bottom-pagination"></div>
-								<div class="slider-bottom-nav-btns">
-									<button class="slider-btn slider-btn-prev clients-slider__prev">
-										<i class="icon-arrow-slider"></i>
-									</button>
-									<button class="slider-btn slider-btn-next clients-slider__next">
-										<i class="icon-arrow-slider"></i>
-									</button>
 								</div>
 							</div>
 						</div>
@@ -601,137 +669,258 @@
 						<a href="#" class="btn btn-border">Всі досягнення</a>
 					</div>
 					<div class="achievement-slider-wrapper">
-						<div class="inner-slider__header">
-							<ul>
-								<li class="active">
-									<a href="#">Міжнародні</a>
+						<div data-tabs class="tabs inner-slider__header">
+							<nav data-tabs-titles class="tabs__navigation">
+								<button type="button" class="tabs__title _tab-active">
+									Міжнародні
 									<span class="achievement-slider__count">0</span>
-								</li>
-								<li>
-									<a href="#">Національні</a>
+								</button>
+								<button type="button" class="tabs__title">
+									Національні
 									<span class="achievement-slider__count">0</span>
-								</li>
-								<li>
-									<a href="#">Наших спеціалістів</a>
-									<span class="achievement-slider__count">0</span>
-								</li>
-							</ul>
-						</div>
-						<div class="swiper achievement-slider">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<a href="#" data-popup="#achievement-popup-01" class="achievement-item">
-										<div class="achievement-item__img">
-											<picture><source srcset="img/achievements/01.webp" type="image/webp"><img src="img/achievements/01.png" alt="Адвокат року 2019" /></picture>
+								</button>
+							</nav>
+							<div data-tabs-body class="tabs__content">
+								<div class="tabs__body">
+									<div class="swiper achievement-slider">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<a href="#" data-popup="#achievement-popup-01" class="achievement-item">
+													<div class="achievement-item__img">
+														<picture><source srcset="img/achievements/01.webp" type="image/webp"><img src="img/achievements/01.png" alt="Адвокат року 2019" /></picture>
+													</div>
+													<div class="achievement-item__text">
+														Визнані міжнародними дослідженнями юридичного ринку
+														<div class="link link-underline">Modal Here</div>
+													</div>
+												</a>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievements-card" data-square>
+													<p class="achievements-card__text">
+														Партнер BARRISTERS
+														<strong>Тарас Пошиванюк</strong> увійшов до списку
+														міжнародних лідерів у практиці захисту бізнесу. Lorem
+														ipsum dolor sit amet consectetur adipisicing elit.
+														Corporis molestias nemo, accusamus quas doloremque
+														dolorem?
+													</p>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievement-item">
+													<div class="achievement-item__img">
+														<picture><source srcset="img/achievements/03.webp" type="image/webp"><img src="img/achievements/03.png" alt="Адвокат року 2019" /></picture>
+													</div>
+													<div class="achievement-item__text">
+														Визнані міжнародними дослідженнями юридичного ринку
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievements-card" data-photo>
+													<div class="achievements-card__photo">
+														<picture><source srcset="img/achievements/ava.webp" type="image/webp"><img src="img/achievements/ava.webp" alt="Avatar" /></picture>
+													</div>
+													<p class="achievements-card__text">
+														Партнер BARRISTERS
+														<strong>Тарас Пошиванюк</strong> увійшов до списку
+														міжнародних лідерів у практиці захисту бізнесу.
+													</p>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievements-card" data-square>
+													<p class="achievements-card__text">
+														BARRISTERS визнана ТОП-5 провідних юридичних фірм
+														України у 2020 році за версією видання Юридична
+														практика, ТОП-50 юридичних фірм України; BARRISTERS
+														визнана ТОП-5 провідних юридичних фірм України у 2020
+														році за версією видання Юридична практика, ТОП-50
+														юридичних фірм України;
+													</p>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievement-item">
+													<div class="achievement-item__img">
+														<picture><source srcset="img/achievements/02.webp" type="image/webp"><img src="img/achievements/02.png" alt="Legal 500" /></picture>
+													</div>
+													<div class="achievement-item__text">
+														The Legal 500 EMEA в практиці White-collar crime
+														<a class="achievement-item__link" href="#">профіль в Лігал 500</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievements-card" data-photo>
+													<div class="achievements-card__photo">
+														<picture><source srcset="img/achievements/ava02.webp" type="image/webp"><img src="img/achievements/ava02.webp" alt="Avatar" /></picture>
+													</div>
+													<p class="achievements-card__text">
+														Партнер BARRISTERS
+														<strong>Тарас Пошиванюк</strong> увійшов до списку
+														міжнародних лідерів у практиці захисту бізнесу.
+													</p>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievement-item">
+													<div class="achievement-item__img">
+														<picture><source srcset="img/achievements/04.webp" type="image/webp"><img src="img/achievements/04.png" alt="Legal 500" /></picture>
+													</div>
+													<div class="achievement-item__text">
+														The Legal 500 EMEA в практиці White-collar crime
+														<a class="achievement-item__link" href="#">профіль в Лігал 500</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievements-card" data-photo>
+													<div class="achievements-card__photo">
+														<picture><source srcset="img/achievements/ava03.webp" type="image/webp"><img src="img/achievements/ava03.webp" alt="Avatar" /></picture>
+													</div>
+													<p class="achievements-card__text">
+														BARRISTERS визнана ТОП-5 провідних юридичних фірм
+														України у 2020 році за версією видання Юридична
+														практика, ТОП-50 юридичних фірм України;
+													</p>
+												</div>
+											</div>
 										</div>
-										<div class="achievement-item__text">
-											Визнані міжнародними дослідженнями юридичного ринку
-											<div class="link link-underline">Modal Here</div>
+										<div class="achievement-slider__nav slider-bottom-nav">
+											<div class="swiper-pagination slider-bottom-pagination"></div>
+											<div class="slider-bottom-nav-btns">
+												<button class="slider-btn slider-btn-prev achievement-slider__prev">
+													<i class="icon-arrow-slider"></i>
+												</button>
+												<button class="slider-btn slider-btn-next achievement-slider__next">
+													<i class="icon-arrow-slider"></i>
+												</button>
+											</div>
 										</div>
-									</a>
-								</div>
-								<div class="swiper-slide">
-									<div class="achievements-card" data-square>
-										<p class="achievements-card__text">
-											Партнер BARRISTERS
-											<strong>Тарас Пошиванюк</strong> увійшов до списку
-											міжнародних лідерів у практиці захисту бізнесу. Lorem
-											ipsum dolor sit amet consectetur adipisicing elit.
-											Corporis molestias nemo, accusamus quas doloremque
-											dolorem?
-										</p>
 									</div>
 								</div>
-								<div class="swiper-slide">
-									<div class="achievement-item">
-										<div class="achievement-item__img">
-											<picture><source srcset="img/achievements/03.webp" type="image/webp"><img src="img/achievements/03.png" alt="Адвокат року 2019" /></picture>
+								<div class="tabs__body">
+									<div class="swiper achievement-slider">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="achievements-card" data-square>
+													<p class="achievements-card__text">
+														Партнер BARRISTERS
+														<strong>Тарас Пошиванюк</strong> увійшов до списку
+														міжнародних лідерів у практиці захисту бізнесу. Lorem
+														ipsum dolor sit amet consectetur adipisicing elit.
+														Corporis molestias nemo, accusamus quas doloremque
+														dolorem?
+													</p>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<a href="#" data-popup="#achievement-popup-01" class="achievement-item">
+													<div class="achievement-item__img">
+														<picture><source srcset="img/achievements/01.webp" type="image/webp"><img src="img/achievements/01.png" alt="Адвокат року 2019" /></picture>
+													</div>
+													<div class="achievement-item__text">
+														Визнані міжнародними дослідженнями юридичного ринку
+														<div class="link link-underline">Modal Here</div>
+													</div>
+												</a>
+											</div>
+
+											<div class="swiper-slide">
+												<div class="achievement-item">
+													<div class="achievement-item__img">
+														<picture><source srcset="img/achievements/03.webp" type="image/webp"><img src="img/achievements/03.png" alt="Адвокат року 2019" /></picture>
+													</div>
+													<div class="achievement-item__text">
+														Визнані міжнародними дослідженнями юридичного ринку
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievements-card" data-photo>
+													<div class="achievements-card__photo">
+														<picture><source srcset="img/achievements/ava.webp" type="image/webp"><img src="img/achievements/ava.webp" alt="Avatar" /></picture>
+													</div>
+													<p class="achievements-card__text">
+														Партнер BARRISTERS
+														<strong>Тарас Пошиванюк</strong> увійшов до списку
+														міжнародних лідерів у практиці захисту бізнесу.
+													</p>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievements-card" data-square>
+													<p class="achievements-card__text">
+														BARRISTERS визнана ТОП-5 провідних юридичних фірм
+														України у 2020 році за версією видання Юридична
+														практика, ТОП-50 юридичних фірм України; BARRISTERS
+														визнана ТОП-5 провідних юридичних фірм України у 2020
+														році за версією видання Юридична практика, ТОП-50
+														юридичних фірм України;
+													</p>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievement-item">
+													<div class="achievement-item__img">
+														<picture><source srcset="img/achievements/02.webp" type="image/webp"><img src="img/achievements/02.png" alt="Legal 500" /></picture>
+													</div>
+													<div class="achievement-item__text">
+														The Legal 500 EMEA в практиці White-collar crime
+														<a class="achievement-item__link" href="#">профіль в Лігал 500</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievements-card" data-photo>
+													<div class="achievements-card__photo">
+														<picture><source srcset="img/achievements/ava02.webp" type="image/webp"><img src="img/achievements/ava02.webp" alt="Avatar" /></picture>
+													</div>
+													<p class="achievements-card__text">
+														Партнер BARRISTERS
+														<strong>Тарас Пошиванюк</strong> увійшов до списку
+														міжнародних лідерів у практиці захисту бізнесу.
+													</p>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievement-item">
+													<div class="achievement-item__img">
+														<picture><source srcset="img/achievements/04.webp" type="image/webp"><img src="img/achievements/04.png" alt="Legal 500" /></picture>
+													</div>
+													<div class="achievement-item__text">
+														The Legal 500 EMEA в практиці White-collar crime
+														<a class="achievement-item__link" href="#">профіль в Лігал 500</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="achievements-card" data-photo>
+													<div class="achievements-card__photo">
+														<picture><source srcset="img/achievements/ava03.webp" type="image/webp"><img src="img/achievements/ava03.webp" alt="Avatar" /></picture>
+													</div>
+													<p class="achievements-card__text">
+														BARRISTERS визнана ТОП-5 провідних юридичних фірм
+														України у 2020 році за версією видання Юридична
+														практика, ТОП-50 юридичних фірм України;
+													</p>
+												</div>
+											</div>
 										</div>
-										<div class="achievement-item__text">
-											Визнані міжнародними дослідженнями юридичного ринку
+										<div class="achievement-slider__nav slider-bottom-nav">
+											<div class="swiper-pagination slider-bottom-pagination"></div>
+											<div class="slider-bottom-nav-btns">
+												<button class="slider-btn slider-btn-prev achievement-slider__prev">
+													<i class="icon-arrow-slider"></i>
+												</button>
+												<button class="slider-btn slider-btn-next achievement-slider__next">
+													<i class="icon-arrow-slider"></i>
+												</button>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="achievements-card" data-photo>
-										<div class="achievements-card__photo">
-											<picture><source srcset="img/achievements/ava.webp" type="image/webp"><img src="img/achievements/ava.webp" alt="Avatar" /></picture>
-										</div>
-										<p class="achievements-card__text">
-											Партнер BARRISTERS
-											<strong>Тарас Пошиванюк</strong> увійшов до списку
-											міжнародних лідерів у практиці захисту бізнесу.
-										</p>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="achievements-card" data-square>
-										<p class="achievements-card__text">
-											BARRISTERS визнана ТОП-5 провідних юридичних фірм
-											України у 2020 році за версією видання Юридична
-											практика, ТОП-50 юридичних фірм України; BARRISTERS
-											визнана ТОП-5 провідних юридичних фірм України у 2020
-											році за версією видання Юридична практика, ТОП-50
-											юридичних фірм України;
-										</p>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="achievement-item">
-										<div class="achievement-item__img">
-											<picture><source srcset="img/achievements/02.webp" type="image/webp"><img src="img/achievements/02.png" alt="Legal 500" /></picture>
-										</div>
-										<div class="achievement-item__text">
-											The Legal 500 EMEA в практиці White-collar crime
-											<a class="achievement-item__link" href="#">профіль в Лігал 500</a>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="achievements-card" data-photo>
-										<div class="achievements-card__photo">
-											<picture><source srcset="img/achievements/ava02.webp" type="image/webp"><img src="img/achievements/ava02.webp" alt="Avatar" /></picture>
-										</div>
-										<p class="achievements-card__text">
-											Партнер BARRISTERS
-											<strong>Тарас Пошиванюк</strong> увійшов до списку
-											міжнародних лідерів у практиці захисту бізнесу.
-										</p>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="achievement-item">
-										<div class="achievement-item__img">
-											<picture><source srcset="img/achievements/04.webp" type="image/webp"><img src="img/achievements/04.png" alt="Legal 500" /></picture>
-										</div>
-										<div class="achievement-item__text">
-											The Legal 500 EMEA в практиці White-collar crime
-											<a class="achievement-item__link" href="#">профіль в Лігал 500</a>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="achievements-card" data-photo>
-										<div class="achievements-card__photo">
-											<picture><source srcset="img/achievements/ava03.webp" type="image/webp"><img src="img/achievements/ava03.webp" alt="Avatar" /></picture>
-										</div>
-										<p class="achievements-card__text">
-											BARRISTERS визнана ТОП-5 провідних юридичних фірм
-											України у 2020 році за версією видання Юридична
-											практика, ТОП-50 юридичних фірм України;
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="achievement-slider__nav slider-bottom-nav">
-								<div class="swiper-pagination slider-bottom-pagination"></div>
-								<div class="slider-bottom-nav-btns">
-									<button class="slider-btn slider-btn-prev achievement-slider__prev">
-										<i class="icon-arrow-slider"></i>
-									</button>
-									<button class="slider-btn slider-btn-next achievement-slider__next">
-										<i class="icon-arrow-slider"></i>
-									</button>
 								</div>
 							</div>
 						</div>
@@ -969,7 +1158,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 	<!-- <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
@@ -981,7 +1169,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230906103315"></script>
+	<script src="js/app.min.js?_v=20230920150318"></script>
 </body>
 
 </html>
