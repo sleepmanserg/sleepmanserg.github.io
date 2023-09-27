@@ -1963,6 +1963,10 @@ a.link-underline {
   font-family: ProximaNova;
 }
 
+.btn:hover {
+  text-decoration: none;
+}
+
 .btn.hero-btn {
   font-size: 32px;
   line-height: 100%;
@@ -3281,7 +3285,7 @@ a.link-underline {
   width: 38px;
 }
 
-.section-header a:hover {
+.section-header a:not(.btn):hover {
   text-decoration: underline;
 }
 
