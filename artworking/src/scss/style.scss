@@ -1,0 +1,208 @@
+@use "sass:math";
+
+// Mixins turn on ===========================================================================================================================================================================================================================================================================
+@import "base/mixins";
+// Fonts turn on=============================================================================================
+//&display=swap - add when fonr plugin adding
+// If local fonts
+//@import "fonts/fonts";
+// Icon fonts=================================================================================================
+//
+//@import "fonts/icons";
+// ============================================================================================================================================================================================================================================================================================================================================================================================
+// Template settings============================================================================================================================================================================================================================================================================================================================================================================================
+// ============================================================================================================================================================================================================================================================================================================================================================================================
+// Base font family==============================================================================================================================================================================================================================================================================
+$fontFamily: "proxima-nova";
+$fontMeno: "meno-banner";
+$fontFutura: "futura-pt";
+$fontSize: rem(17); // where 14(px) - base font size
+
+$fontWeight100: 100;
+$fontWeight300: 300;
+$fontWeight400: 400;
+$fontWeight500: 500;
+$fontWeight600: 600;
+$fontWeight700: 700;
+$fontWeight800: 800;
+$fontWeight900: 900;
+
+$clr-white: #fff;
+
+// Main colors
+$mainColor: #000; // Main text color
+
+$blue-accent: #002a5c;
+$grey: #8c8c8c;
+
+// Adaptive grid settings===============================================================================================================================================================================================================================================================================================
+
+// Min page size
+$minWidth: 320;
+// Canvas size
+$maxWidth: 1920;
+// Container width
+$maxWidthContainer: 1400;
+// Base gap for container
+// (30 = 15px left and right, 0 = no gap)
+$containerPadding: 60;
+
+// Width for first breakpoint
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Break points
+$pc: em($containerWidth); // PC, laptops, some tablets in horizontal
+$tablet: em(991.98); // Tabs, some phones horizontal
+$mobile: em(767.98); // Phones L
+$mobileSmall: em(479.98); // Phones S
+
+// Adaptive type
+// 1 = Responsiveness (container has no breakpoints),
+// 2 = по брейк-поїнт (container changes width on breakpoint)
+$responsiveType: 1;
+
+// ============================================================================================================================================================================================================================================================================================================================================================================================
+// ============================================================================================================================================================================================================================================================================================================================================================================================
+
+// Normalize css ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
+@import "base/null";
+
+// Body styles ============================================================================================================================================================================================================================================================================================================================================================================================
+
+.menu-open.touch {
+  body {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+body {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 14;
+    cursor: url("@img/close.svg") 4 14, auto;
+    transition: 0.5s ease 0s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  // scroll locked
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
+  // Website loaded
+  .loaded & {
+    .preloader {
+      opacity: 0;
+      transform: scale(1.5);
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+}
+
+// Wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  @supports (overflow: clip) {
+    overflow: clip;
+  }
+  // footer always bottom
+  > main {
+    flex: 1 1 auto;
+  }
+  // Fix for sliders
+  > * {
+    min-width: 0;
+  }
+}
+
+// Container ======================================================================================================================================================================================================================
+
+/*
+Styles woll work with all classes which include *__container
+For example header__container, main__container etc....
+*/
+@if ($responsiveType==1) {
+  // Responsive
+  [class*="__container"] {
+    @if ($maxWidthContainer>0) {
+      max-width: rem($containerWidth);
+      margin: 0 auto;
+      width: 100%;
+    }
+    @if ($containerPadding>0) {
+      @if ($maxWidthContainer>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      } @else {
+        @include adaptiveValue(
+          "padding-left",
+          math.div($containerPadding, 2),
+          15
+        );
+        @include adaptiveValue(
+          "padding-right",
+          math.div($containerPadding, 2),
+          15
+        );
+      }
+    }
+  }
+} @else {
+  // Breakpoints
+  [class*="__container"] {
+    margin: 0 auto;
+    @if ($maxWidthContainer>0) {
+      max-width: rem($containerWidth);
+    } @else {
+      @if ($containerPadding>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+    @media (max-width: $pc) {
+      max-width: rem(970);
+    }
+    @media (max-width: $tablet) {
+      max-width: rem(750);
+    }
+    @media (max-width: $mobile) {
+      max-width: none;
+      @if ($containerPadding>0 and $maxWidthContainer>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+  }
+}
+
+// Basic styles import, templates and helpers
+// For turning on/off exact styles look base.scss
+@import "base";
+@import "base/typography";
+@import "base/utilities";
+@import "base/button";
+@import "base/popup";
+@import "base/forms/input";
+
+// Common elements styles
+@import "preloader";
+@import "common";
+
+// Import styles for block elements
+@import "header";
+@import "footer";
+
+// Import styles for separate pages
+@import "hero";

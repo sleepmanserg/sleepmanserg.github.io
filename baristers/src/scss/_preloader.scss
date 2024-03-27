@@ -1,0 +1,22 @@
+.preloader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+
+  // opacity: 0;
+  // visibility: hidden;
+  // pointer-events: none;
+  svg {
+    display: block;
+    width: 320px;
+    height: 100px;
+  }
+}
