@@ -6,34 +6,28 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<!--! Local only, remove on prod -->
-	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220920124827" media="print" onload="this.media='all'" />
-	<!--! Local only, remove on prod -->
+	<!--? Fonts -->
+	<link rel="preload" as="style" href="./fonts/fonts.css" />
+	<link rel="stylesheet" href="./fonts/fonts.css?_v=20240327204136" media="print" onload="this.media='all'" />
+	<link rel="preload" as="style" href="./fonts/icon-font.css" />
+	<link rel="stylesheet" href="./fonts/icon-font.css?_v=20240327204136" media="print" onload="this.media='all'" />
+	<!--? Fonts -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240327204136" />
 
-	<!--? Prod only, uncomment on prod -->
-	<!-- <link rel="preload" as="style" href="./fonts/fonts.css" />
-  <link
-  rel="stylesheet"
-  href="./fonts/fonts.css?_v=20220921153627"
-  media="print"
-  onload="this.media='all'"
-  /> -->
-	<!-- <link rel="preload" as="style" href="./fonts/icon-font.css" />
-  <link
-    rel="stylesheet"
-    href="./fonts/icon-font.css?_v=20220921153627"
-    media="print"
-    onload="this.media='all'"
-  /> -->
-	<!--? Prod only, uncomment on prod -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220921153627" />
+	<!-- Favicon -->
 	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+	<link rel="manifest" href="site.webmanifest" />
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+	<meta name="theme-color" content="#ffffff" />
+	<!-- Favicon -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#73b6da" />
 	<noscript>
-		<link rel="stylesheet" href="./fonts/fonts.css?_v=20220921153627" />
+		<link rel="stylesheet" href="./fonts/fonts.css?_v=20240327204136" />
 	</noscript>
 </head>
 
@@ -44,7 +38,7 @@
 				<div class="header-topbar topbar">
 					<div class="topbar-logo">
 						<a href="home.html">
-							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.webp" alt="Potency logo" width="325" height="93" /></picture>
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.webp" alt="Potency logo" width="240" height="68" /></picture>
 						</a>
 					</div>
 					<div class="topbar-search">
@@ -112,7 +106,7 @@
 								<i class="icon-account"></i>
 								<span>Андрей</span>
 							</button>
-							<div class="header-account__dropdown header-dropdown account-info">
+							<div class="header-account__dropdown header-dropdown account-info" data-fullscreen>
 								<div class="header-account__dropdown-title account-info__header">
 									<div>Приветствуем, <span>Андрей!</span></div>
 									<button type="button" class="btn-close" data-filter-close>
@@ -136,7 +130,7 @@
 										</a>
 									</li>
 									<li class="header-account__dropdown-list__item account-info__item">
-										<a href="account-address.html" class="header-account__dropdown-link account-info__link">
+										<a href="account-adress.html" class="header-account__dropdown-link account-info__link">
 											<i class="icon-truck"></i>
 											<span>Мои адреса доставки</span>
 										</a>
@@ -1053,477 +1047,479 @@
 
 						<section class="content">
 							<h1 class="catalog-title">Продукция</h1>
-							<div class="catalog-header__mobile">
-								<div class="catalog-header__mobile-buttons">
-									<div class="catalog-header__mobile-btn" data-active="">
-										<button type="button" class="catalog-header__btn" data-target="">
-											<i class="icon-flask"></i>
-											Фильтры
-										</button>
-										<div class="catalog-header__dropdown">
-											<div class="catalog-header__dropdown-title">
-												<span>Фильтры</span>
-												<button type="button" class="btn-close" data-filter-close>
-													<i class="icon-close"></i>
-												</button>
+							<div class="catalog-header">
+								<div class="catalog-header__mobile">
+									<div class="catalog-header__mobile-buttons">
+										<div class="catalog-header__mobile-btn" data-active="">
+											<button type="button" class="catalog-header__btn" data-target="" aria-expanded="false">
+												<i class="icon-flask"></i>
+												Фильтры
+											</button>
+											<div class="catalog-header__dropdown" data-fullscreen>
+												<div class="catalog-header__dropdown-title">
+													<span>Фильтры</span>
+													<button type="button" class="btn-close" data-filter-close>
+														<i class="icon-close"></i>
+													</button>
+												</div>
+												<div class="sidebar-filters__title">Для кого</div>
+												<ul class="sidebar-filters__list">
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Для мужчины</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Для женщины</span>
+														</label>
+													</li>
+												</ul>
+												<div class="sidebar-filters__title">Тип продукта</div>
+												<ul class="sidebar-filters__list">
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Аналоги Виагры</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Аналоги Сиалиса</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Аналоги Левитры</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Дапоксетин</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Комбинированные</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Пробные наборы</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">БАДы для потенции</span>
+														</label>
+													</li>
+												</ul>
+												<div class="sidebar-filters__title">
+													Количество таблеток
+												</div>
+												<ul class="sidebar-filters__list">
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">5</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">10</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">30</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">50</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">100</span>
+														</label>
+													</li>
+												</ul>
+												<div class="sidebar-filters__title">
+													Производитель
+												</div>
+												<ul class="sidebar-filters__list">
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Poxet</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Suhagra</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Tadacip</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Vilitra</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Tadarise</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">Malegra</span>
+														</label>
+													</li>
+												</ul>
+												<div class="sidebar-filters__title">
+													Действующее вещество
+												</div>
+												<ul class="sidebar-filters__list">
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">10 мг.</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">25 мг.</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">35 мг.</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">45 мг.</span>
+														</label>
+													</li>
+													<li class="sidebar-filters__item">
+														<label class="check option">
+															<input class="check__input" value="" type="checkbox" name="checkbox" />
+															<span class="check__box"></span>
+															<span class="check__box-text">50 мг.</span>
+														</label>
+													</li>
+												</ul>
 											</div>
-											<div class="sidebar-filters__title">Для кого</div>
-											<ul class="sidebar-filters__list">
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Для мужчины</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Для женщины</span>
-													</label>
-												</li>
-											</ul>
-											<div class="sidebar-filters__title">Тип продукта</div>
-											<ul class="sidebar-filters__list">
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Аналоги Виагры</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Аналоги Сиалиса</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Аналоги Левитры</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Дапоксетин</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Комбинированные</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Пробные наборы</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">БАДы для потенции</span>
-													</label>
-												</li>
-											</ul>
-											<div class="sidebar-filters__title">
-												Количество таблеток
-											</div>
-											<ul class="sidebar-filters__list">
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">5</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">10</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">30</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">50</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">100</span>
-													</label>
-												</li>
-											</ul>
-											<div class="sidebar-filters__title">Производитель</div>
-											<ul class="sidebar-filters__list">
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Poxet</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Suhagra</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Tadacip</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Vilitra</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Tadarise</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">Malegra</span>
-													</label>
-												</li>
-											</ul>
-											<div class="sidebar-filters__title">
-												Действующее вещество
-											</div>
-											<ul class="sidebar-filters__list">
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">10 мг.</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">25 мг.</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">35 мг.</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">45 мг.</span>
-													</label>
-												</li>
-												<li class="sidebar-filters__item">
-													<label class="check option">
-														<input class="check__input" value="" type="checkbox" name="checkbox" />
-														<span class="check__box"></span>
-														<span class="check__box-text">50 мг.</span>
-													</label>
-												</li>
-											</ul>
 										</div>
-									</div>
-									<div class="catalog-header__mobile-btn" data-active>
-										<button type="button" class="catalog-header__btn" data-target>
-											<i class="icon-flask"></i>
-											Категории
-										</button>
-										<div class="sidebar-menu catalog-header__dropdown" data-fullscreen>
-											<div class="catalog-header__dropdown-title">
-												<span>Категории</span>
-												<button type="button" class="btn-close" data-filter-close>
-													<i class="icon-close"></i>
-												</button>
+										<div class="catalog-header__mobile-btn" data-active>
+											<button type="button" class="catalog-header__btn" data-target aria-expanded="false">
+												<i class="icon-flask"></i>
+												Категории
+											</button>
+											<div class="sidebar-menu catalog-header__dropdown" data-fullscreen>
+												<div class="catalog-header__dropdown-title">
+													<span>Категории</span>
+													<button type="button" class="btn-close" data-filter-close>
+														<i class="icon-close"></i>
+													</button>
+												</div>
+												<ul data-spollers data-one-spoller data-spollers-speed="0" class="sidebar-categories">
+													<li class="sidebar-categories__item">
+														<button class="sidebar-categories__item-header" type="button" data-spoller>
+															<span>Аналоги Виагры</span>
+															<i class="icon-chevron"></i>
+														</button>
+														<div class="sidebar-categories__item-body">
+															<ul class="sidebar-categories__item-body-list">
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem1</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem2</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem3</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem4</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="sidebar-categories__item">
+														<button class="sidebar-categories__item-header" type="button" data-spoller>
+															<span>Аналоги Сиалиса</span>
+															<i class="icon-chevron"></i>
+														</button>
+														<div class="sidebar-categories__item-body">
+															<ul class="sidebar-categories__item-body-list">
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem1</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem2</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem3</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem4</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="sidebar-categories__item">
+														<button class="sidebar-categories__item-header" type="button" data-spoller>
+															<span>Аналоги Левитры</span>
+															<i class="icon-chevron"></i>
+														</button>
+														<div class="sidebar-categories__item-body">
+															<ul class="sidebar-categories__item-body-list">
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem1</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem2</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem3</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem4</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="sidebar-categories__item">
+														<button class="sidebar-categories__item-header" type="button" data-spoller>
+															<span>Аванафил</span>
+															<i class="icon-chevron"></i>
+														</button>
+														<div class="sidebar-categories__item-body">
+															<ul class="sidebar-categories__item-body-list">
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem1</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem2</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem3</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem4</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="sidebar-categories__item">
+														<button class="sidebar-categories__item-header" type="button" data-spoller>
+															<span>Аналоги Сиалиса</span>
+															<i class="icon-chevron"></i>
+														</button>
+														<div class="sidebar-categories__item-body">
+															<ul class="sidebar-categories__item-body-list">
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem1</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem2</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem3</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem4</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="sidebar-categories__item">
+														<button class="sidebar-categories__item-header" type="button" data-spoller>
+															<span>Аналоги Левитры</span>
+															<i class="icon-chevron"></i>
+														</button>
+														<div class="sidebar-categories__item-body">
+															<ul class="sidebar-categories__item-body-list">
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem1</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem2</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem3</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem4</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="sidebar-categories__item">
+														<button class="sidebar-categories__item-header" type="button" data-spoller>
+															<span>Аванафил</span>
+															<i class="icon-chevron"></i>
+														</button>
+														<div class="sidebar-categories__item-body">
+															<ul class="sidebar-categories__item-body-list">
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem1</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem2</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem3</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem4</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="sidebar-categories__item">
+														<button class="sidebar-categories__item-header" type="button" data-spoller>
+															<span>Дапоксетин</span>
+															<i class="icon-chevron"></i>
+														</button>
+														<div class="sidebar-categories__item-body">
+															<ul class="sidebar-categories__item-body-list">
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem1</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem2</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem3</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem4</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="sidebar-categories__item">
+														<button class="sidebar-categories__item-header" type="button" data-spoller>
+															<span>Комбинированные</span>
+															<i class="icon-chevron"></i>
+														</button>
+														<div class="sidebar-categories__item-body">
+															<ul class="sidebar-categories__item-body-list">
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem1</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem2</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem3</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem4</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="sidebar-categories__item">
+														<button class="sidebar-categories__item-header" type="button" data-spoller>
+															<span>Пробные наборы</span>
+															<i class="icon-chevron"></i>
+														</button>
+														<div class="sidebar-categories__item-body">
+															<ul class="sidebar-categories__item-body-list">
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem1</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem2</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem3</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem4</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="sidebar-categories__item">
+														<button class="sidebar-categories__item-header" type="button" data-spoller>
+															<span>Бады для потенции</span>
+															<i class="icon-chevron"></i>
+														</button>
+														<div class="sidebar-categories__item-body">
+															<ul class="sidebar-categories__item-body-list">
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem1</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem2</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem3</a>
+																</li>
+																<li class="sidebar-categories__item-body-list-item">
+																	<a href="catalog.html">Lorem4</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+												</ul>
 											</div>
-											<ul data-spollers data-one-spoller data-spollers-speed="0" class="sidebar-categories">
-												<li class="sidebar-categories__item">
-													<button class="sidebar-categories__item-header" type="button" data-spoller>
-														<span>Аналоги Виагры</span>
-														<i class="icon-chevron"></i>
-													</button>
-													<div class="sidebar-categories__item-body">
-														<ul class="sidebar-categories__item-body-list">
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem1</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem2</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem3</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem4</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="sidebar-categories__item">
-													<button class="sidebar-categories__item-header" type="button" data-spoller>
-														<span>Аналоги Сиалиса</span>
-														<i class="icon-chevron"></i>
-													</button>
-													<div class="sidebar-categories__item-body">
-														<ul class="sidebar-categories__item-body-list">
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem1</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem2</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem3</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem4</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="sidebar-categories__item">
-													<button class="sidebar-categories__item-header" type="button" data-spoller>
-														<span>Аналоги Левитры</span>
-														<i class="icon-chevron"></i>
-													</button>
-													<div class="sidebar-categories__item-body">
-														<ul class="sidebar-categories__item-body-list">
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem1</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem2</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem3</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem4</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="sidebar-categories__item">
-													<button class="sidebar-categories__item-header" type="button" data-spoller>
-														<span>Аванафил</span>
-														<i class="icon-chevron"></i>
-													</button>
-													<div class="sidebar-categories__item-body">
-														<ul class="sidebar-categories__item-body-list">
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem1</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem2</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem3</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem4</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="sidebar-categories__item">
-													<button class="sidebar-categories__item-header" type="button" data-spoller>
-														<span>Аналоги Сиалиса</span>
-														<i class="icon-chevron"></i>
-													</button>
-													<div class="sidebar-categories__item-body">
-														<ul class="sidebar-categories__item-body-list">
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem1</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem2</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem3</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem4</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="sidebar-categories__item">
-													<button class="sidebar-categories__item-header" type="button" data-spoller>
-														<span>Аналоги Левитры</span>
-														<i class="icon-chevron"></i>
-													</button>
-													<div class="sidebar-categories__item-body">
-														<ul class="sidebar-categories__item-body-list">
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem1</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem2</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem3</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem4</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="sidebar-categories__item">
-													<button class="sidebar-categories__item-header" type="button" data-spoller>
-														<span>Аванафил</span>
-														<i class="icon-chevron"></i>
-													</button>
-													<div class="sidebar-categories__item-body">
-														<ul class="sidebar-categories__item-body-list">
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem1</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem2</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem3</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem4</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="sidebar-categories__item">
-													<button class="sidebar-categories__item-header" type="button" data-spoller>
-														<span>Дапоксетин</span>
-														<i class="icon-chevron"></i>
-													</button>
-													<div class="sidebar-categories__item-body">
-														<ul class="sidebar-categories__item-body-list">
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem1</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem2</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem3</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem4</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="sidebar-categories__item">
-													<button class="sidebar-categories__item-header" type="button" data-spoller>
-														<span>Комбинированные</span>
-														<i class="icon-chevron"></i>
-													</button>
-													<div class="sidebar-categories__item-body">
-														<ul class="sidebar-categories__item-body-list">
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem1</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem2</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem3</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem4</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="sidebar-categories__item">
-													<button class="sidebar-categories__item-header" type="button" data-spoller>
-														<span>Пробные наборы</span>
-														<i class="icon-chevron"></i>
-													</button>
-													<div class="sidebar-categories__item-body">
-														<ul class="sidebar-categories__item-body-list">
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem1</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem2</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem3</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem4</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="sidebar-categories__item">
-													<button class="sidebar-categories__item-header" type="button" data-spoller>
-														<span>Бады для потенции</span>
-														<i class="icon-chevron"></i>
-													</button>
-													<div class="sidebar-categories__item-body">
-														<ul class="sidebar-categories__item-body-list">
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem1</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem2</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem3</a>
-															</li>
-															<li class="sidebar-categories__item-body-list-item">
-																<a href="catalog.html">Lorem4</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-											</ul>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="catalog-header">
 								<div class="catalog-header__filters">
 									<a href="#" class="catalog-header__filter-btn">
 										<span>10</span>
@@ -1544,7 +1540,7 @@
 									<a href="#" class="catalog-header__filter-btn filter-clear-btn">
 										<span>Очистить фильтры</span></a>
 								</div>
-								<div class="catalog-header__sorting catalog-header__filter-btn" data-da=".catalog-header__mobile, 1024, last">
+								<div class="catalog-header__sorting catalog-header__filter-btn">
 									<span>Сортировка:</span>
 									<select name="" id="">
 										<option value="">От дорогих к дешевым</option>
@@ -2757,7 +2753,7 @@
 		</div>
 
 	</div>
-	<script defer src="js/app.min.js?_v=20220921153627"></script>
+	<script defer src="js/app.min.js?_v=20240327204136"></script>
 
 </body>
 

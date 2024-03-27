@@ -6,34 +6,28 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<!--! Local only, remove on prod -->
-	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20220920124827" media="print" onload="this.media='all'" />
-	<!--! Local only, remove on prod -->
+	<!--? Fonts -->
+	<link rel="preload" as="style" href="./fonts/fonts.css" />
+	<link rel="stylesheet" href="./fonts/fonts.css?_v=20240327204136" media="print" onload="this.media='all'" />
+	<link rel="preload" as="style" href="./fonts/icon-font.css" />
+	<link rel="stylesheet" href="./fonts/icon-font.css?_v=20240327204136" media="print" onload="this.media='all'" />
+	<!--? Fonts -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240327204136" />
 
-	<!--? Prod only, uncomment on prod -->
-	<!-- <link rel="preload" as="style" href="./fonts/fonts.css" />
-  <link
-  rel="stylesheet"
-  href="./fonts/fonts.css?_v=20220921153627"
-  media="print"
-  onload="this.media='all'"
-  /> -->
-	<!-- <link rel="preload" as="style" href="./fonts/icon-font.css" />
-  <link
-    rel="stylesheet"
-    href="./fonts/icon-font.css?_v=20220921153627"
-    media="print"
-    onload="this.media='all'"
-  /> -->
-	<!--? Prod only, uncomment on prod -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220921153627" />
+	<!-- Favicon -->
 	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+	<link rel="manifest" href="site.webmanifest" />
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+	<meta name="theme-color" content="#ffffff" />
+	<!-- Favicon -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#73b6da" />
 	<noscript>
-		<link rel="stylesheet" href="./fonts/fonts.css?_v=20220921153627" />
+		<link rel="stylesheet" href="./fonts/fonts.css?_v=20240327204136" />
 	</noscript>
 </head>
 
@@ -44,7 +38,7 @@
 				<div class="header-topbar topbar">
 					<div class="topbar-logo">
 						<a href="home.html">
-							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.webp" alt="Potency logo" width="325" height="93" /></picture>
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.webp" alt="Potency logo" width="240" height="68" /></picture>
 						</a>
 					</div>
 					<div class="topbar-search">
@@ -112,7 +106,7 @@
 								<i class="icon-account"></i>
 								<span>Андрей</span>
 							</button>
-							<div class="header-account__dropdown header-dropdown account-info">
+							<div class="header-account__dropdown header-dropdown account-info" data-fullscreen>
 								<div class="header-account__dropdown-title account-info__header">
 									<div>Приветствуем, <span>Андрей!</span></div>
 									<button type="button" class="btn-close" data-filter-close>
@@ -136,7 +130,7 @@
 										</a>
 									</li>
 									<li class="header-account__dropdown-list__item account-info__item">
-										<a href="account-address.html" class="header-account__dropdown-link account-info__link">
+										<a href="account-adress.html" class="header-account__dropdown-link account-info__link">
 											<i class="icon-truck"></i>
 											<span>Мои адреса доставки</span>
 										</a>
@@ -481,7 +475,7 @@
 										<div data-pill-quant="Количество таблеток">5</div>
 										<div data-pill-price="Цена за таблетку">320₴</div>
 										<div data-pill-sum="Сумма">820₴</div>
-										<div>
+										<div class="product-card__table-btn">
 											<button class="btn btn-blue">В корзину</button>
 										</div>
 									</div>
@@ -493,7 +487,7 @@
 										<div data-pill-quant="Количество таблеток">10</div>
 										<div data-pill-price="Цена за таблетку">320₴</div>
 										<div data-pill-sum="Сумма">820₴</div>
-										<div>
+										<div class="product-card__table-btn">
 											<button class="btn btn-blue">В корзину</button>
 										</div>
 									</div>
@@ -505,7 +499,7 @@
 										<div data-pill-quant="Количество таблеток">20</div>
 										<div data-pill-price="Цена за таблетку">320₴</div>
 										<div data-pill-sum="Сумма">820₴</div>
-										<div>
+										<div class="product-card__table-btn">
 											<button class="btn btn-blue">В корзину</button>
 										</div>
 									</div>
@@ -517,7 +511,7 @@
 										<div data-pill-quant="Количество таблеток">30</div>
 										<div data-pill-price="Цена за таблетку">320₴</div>
 										<div data-pill-sum="Сумма">820₴</div>
-										<div>
+										<div class="product-card__table-btn">
 											<button class="btn btn-blue">В корзину</button>
 										</div>
 									</div>
@@ -529,7 +523,7 @@
 										<div data-pill-quant="Количество таблеток">50</div>
 										<div data-pill-price="Цена за таблетку">320₴</div>
 										<div data-pill-sum="Сумма">820₴</div>
-										<div>
+										<div class="product-card__table-btn">
 											<button class="btn btn-blue">В корзину</button>
 										</div>
 									</div>
@@ -541,7 +535,7 @@
 										<div data-pill-quant="Количество таблеток">100</div>
 										<div data-pill-price="Цена за таблетку">320₴</div>
 										<div data-pill-sum="Сумма">820₴</div>
-										<div>
+										<div class="product-card__table-btn">
 											<button class="btn btn-blue">В корзину</button>
 										</div>
 									</div>
@@ -569,7 +563,7 @@
 										Показать аннотацию и основную информацию по препарату «Vidalista 20 mg»
 									</div>
 
-									<div class="description-title">Кратко о Видалисте</div>
+									<h2 class="description-title">Кратко о Видалисте</h2>
 									<p class="section-text">
 										Vidalista – это группа дженериков
 										<a href="#">Сиалиса</a> (одного из самых популярных регуляторов потенции в
@@ -1196,7 +1190,7 @@
 		</div>
 
 	</div>
-	<script defer src="js/app.min.js?_v=20220921153627"></script>
+	<script defer src="js/app.min.js?_v=20240327204136"></script>
 
 </body>
 

@@ -171,15 +171,17 @@
   .orders-table__item {
     border: 1px solid #e5e7eb;
     border-bottom: 0;
+    &:hover {
+      .btn-account {
+        background-color: var(--blue-color);
+        color: #fff;
+      }
+    }
     &.order-denied {
       * :not(.order-label),
       .orders-table__price,
       .orders-table__quant {
         opacity: 0.5;
-      }
-      .btn,
-      .orders-table__number {
-        pointer-events: none;
       }
     }
     &:last-of-type {
@@ -221,21 +223,28 @@
       }
     }
     .orders-table__price {
+      font-size: 18px;
+      font-weight: var(--fw-600);
+      font-family: var(--ff);
       @media (max-width: 1100px) {
         grid-area: my-order-price;
         display: flex;
         justify-content: flex-end;
-        font-weight: var(--fw-600);
       }
       @media (max-width: 768px) {
         justify-content: flex-start;
       }
+      @media (max-width: 480px) {
+        max-width: 100px;
+        word-wrap: anywhere;
+      }
     }
     .orders-table__quant {
+      font-size: 18px;
+      font-weight: var(--fw-600);
       @media (max-width: 1100px) {
         display: flex;
         justify-content: flex-end;
-        font-weight: var(--fw-600);
         grid-area: my-order-quant;
       }
       @media (max-width: 768px) {
@@ -271,7 +280,7 @@
   .orders-table__date {
     color: #9ca3af;
     display: block;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 24px;
   }
   .orders-table__btn {
@@ -301,9 +310,6 @@
     flex: 0 0 48px;
     padding: 0 8px;
     transition: 0.25s;
-    &:hover {
-      opacity: 0.7;
-    }
   }
   @media (max-width: 1100px) {
     grid-area: my-order-products;
@@ -315,7 +321,7 @@
 
 .order-label {
   font-weight: var(--fw-700);
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1;
   text-transform: uppercase;
   padding: 7px;

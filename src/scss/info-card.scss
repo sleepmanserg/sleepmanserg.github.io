@@ -33,6 +33,7 @@
   padding: 1rem;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
+  display: block;
   transition: 0.25s;
   .btn {
     background-color: var(--superLight-color);
@@ -89,6 +90,7 @@
   }
   &:hover {
     background-color: var(--blue-color);
+
     .info-card__title {
       color: #fff;
     }

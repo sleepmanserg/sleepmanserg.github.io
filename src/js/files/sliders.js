@@ -120,16 +120,12 @@ function initSliders() {
 			},
 		});
 
-		const myOrderItems = document.querySelectorAll('.orders-table .orders-table__number');
+		const myOrderItems = document.querySelectorAll('.orders-table .orders-table__item');
 
 		myOrderItems.forEach(item => {
 			item.addEventListener('click', () => {
 				orderSLider.slideTo(item.dataset.orderItem)
 			});
-		});
-
-		orderSLider.on('slideChange', function (e) {
-
 		});
 
 	}
